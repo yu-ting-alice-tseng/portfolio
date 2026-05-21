@@ -1,0 +1,17 @@
+{
+  "name": "yu-ting-tseng-portfolio",
+  "version": "1.0.0",
+  "description": "Site personnel (portfolio) de Yu-Ting Tseng – marketing digital et analyse de données.",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "marketing-digital",
+    "cv",
+    "yu-ting-tseng"
+  ],
+  "author": "Yu-Ting Tseng",
+  "license": "MIT"
+}
+
