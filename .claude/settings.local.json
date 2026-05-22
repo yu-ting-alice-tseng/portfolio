@@ -9,7 +9,11 @@
       "Bash(python -c \"import pdfplumber; print\\('ok'\\)\")",
       "PowerShell(python --version)",
       "PowerShell(pip --version)",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(git show-ref *)",
+      "Bash(rm \".git/refs/tags/desktop.ini\")",
+      "Bash(attrib +S .git)",
+      "Bash(attrib .git)"
     ]
   }
 }
