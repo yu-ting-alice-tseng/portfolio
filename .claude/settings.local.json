@@ -8,7 +8,8 @@
       "Bash(python -m pip install pdfplumber)",
       "Bash(python -c \"import pdfplumber; print\\('ok'\\)\")",
       "PowerShell(python --version)",
-      "PowerShell(pip --version)"
+      "PowerShell(pip --version)",
+      "Bash(python3 -)"
     ]
   }
 }

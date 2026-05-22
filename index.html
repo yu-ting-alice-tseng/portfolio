@@ -50,12 +50,15 @@
           <a href="#skills" data-i18n="nav.skills">Compétences</a>
           <a href="#education" data-i18n="nav.education">Formation</a>
           <a href="#experience" data-i18n="nav.experience">Expériences Professionnelles</a>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
           <a href="#extracurricular" data-i18n="nav.extracurricular">Expériences Extra-scolaires</a>
           <a href="#volunteer" data-i18n="nav.volunteer">Bénévolat</a>
           <a href="#honors" data-i18n="nav.honors">Distinctions</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
+        <div class="page-switch" aria-label="Choisir la page">
+          <a href="index.html" class="page-btn is-active" data-i18n="pageSwitcher.business">Business</a>
+          <a href="teaching.html" class="page-btn" data-i18n="pageSwitcher.teaching">Enseignement</a>
+        </div>
         <div class="lang-switch" aria-label="Choisir la langue">
           <button class="lang-btn is-active" data-lang="fr" type="button">
             FR
@@ -72,12 +75,15 @@
 
     <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
       <div class="mobile-nav-inner">
+        <div class="page-switch" style="margin-bottom: 0.75rem;">
+          <a href="index.html" class="page-btn is-active" data-i18n="pageSwitcher.business">Business</a>
+          <a href="teaching.html" class="page-btn" data-i18n="pageSwitcher.teaching">Enseignement</a>
+        </div>
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
           <a href="#about" data-i18n="nav.about">À propos</a>
           <a href="#skills" data-i18n="nav.skills">Compétences</a>
           <a href="#education" data-i18n="nav.education">Formation</a>
           <a href="#experience" data-i18n="nav.experience">Expériences Professionnelles</a>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
           <a href="#extracurricular" data-i18n="nav.extracurricular">Expériences Extra-scolaires</a>
           <a href="#volunteer" data-i18n="nav.volunteer">Bénévolat</a>
           <a href="#honors" data-i18n="nav.honors">Distinctions</a>
@@ -211,13 +217,13 @@
               <div class="skills-subgroup">
                 <p class="skills-subtitle">Langages & requêtes</p>
                 <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-core">
+                  <button type="button" class="skill-card" data-skill="data-r">
                     R
                   </button>
-                  <button type="button" class="skill-card" data-skill="data-core">
+                  <button type="button" class="skill-card" data-skill="data-python">
                     Python
                   </button>
-                  <button type="button" class="skill-card" data-skill="data-core">
+                  <button type="button" class="skill-card" data-skill="data-sql">
                     SQL
                   </button>
                 </div>
@@ -225,10 +231,10 @@
               <div class="skills-subgroup">
                 <p class="skills-subtitle">Dashboards & data visualisation</p>
                 <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-bi">
+                  <button type="button" class="skill-card" data-skill="data-powerbi">
                     Power BI
                   </button>
-                  <button type="button" class="skill-card" data-skill="data-bi">
+                  <button type="button" class="skill-card" data-skill="data-tableau">
                     Tableau
                   </button>
                   <button type="button" class="skill-card" data-skill="data-excel">
@@ -264,6 +270,9 @@
                 <div class="skills-cards">
                   <button type="button" class="skill-card" data-skill="mkt-social">
                     Social media (Xiaohongshu, Meta)
+                  </button>
+                  <button type="button" class="skill-card" data-skill="mkt-design">
+                    Création de contenu & design visuel
                   </button>
                 </div>
               </div>
@@ -433,9 +442,17 @@
                   <li data-i18n="education.emlyon.point2">Projets de groupe avec des entreprises partenaires.</li>
                 </ul>
                 <p class="education-extra">
-                  <span data-i18n="education.emlyon.gpa">GPA : en cours.</span><br>
-                  <span data-i18n="education.emlyon.courses">Cours pertinents : Digital Marketing, Data Science &amp; AI for Business, Brand Strategy, Marketing Analytics.</span>
+                  <span data-i18n="education.emlyon.gpa">GPA : en cours.</span>
                 </p>
+                <div class="edu-courses">
+                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
+                  <div class="course-chips">
+                    <span class="course-chip">Digital Marketing</span>
+                    <span class="course-chip">Data Science &amp; AI for Business</span>
+                    <span class="course-chip">Brand Strategy</span>
+                    <span class="course-chip">Marketing Analytics</span>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -464,9 +481,19 @@
                   <li data-i18n="education.nccu.point2">Travaux de recherche sur les enjeux économiques et géopolitiques.</li>
                 </ul>
                 <p class="education-extra">
-                  <span data-i18n="education.nccu.gpa">GPA : 4,22 / 4,3 (3,99 / 4,0).</span><br>
-                  <span data-i18n="education.nccu.courses">Cours pertinents : Management; Introduction to Data Analysis and Programming (Excel VBA &amp; Access); Programming 101 (Python); Introduction to Qualitative and Quantitative Research Methods (R, Statistics); Marketing Research (R, Decanter AI); International Finance.</span>
+                  <span data-i18n="education.nccu.gpa">GPA : 4,22 / 4,3 (3,99 / 4,0).</span>
                 </p>
+                <div class="edu-courses">
+                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
+                  <div class="course-chips">
+                    <span class="course-chip">Management</span>
+                    <span class="course-chip">Data Analysis &amp; Programming (VBA &amp; Access)</span>
+                    <span class="course-chip">Programming 101 (Python)</span>
+                    <span class="course-chip">Research Methods (R &amp; Statistics)</span>
+                    <span class="course-chip">Marketing Research (R, Decanter AI)</span>
+                    <span class="course-chip">International Finance</span>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -491,9 +518,14 @@
                   <li data-i18n="education.paris1.point1">Approfondissement des politiques européennes et internationales.</li>
                   <li data-i18n="education.paris1.point2">Immersion académique et culturelle en France.</li>
                 </ul>
-                <p class="education-extra">
-                  <span data-i18n="education.paris1.courses">Cours pertinents : science politique, relations internationales, politiques européennes.</span>
-                </p>
+                <div class="edu-courses">
+                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
+                  <div class="course-chips">
+                    <span class="course-chip" data-i18n="education.paris1.course1">Science politique</span>
+                    <span class="course-chip" data-i18n="education.paris1.course2">Relations internationales</span>
+                    <span class="course-chip" data-i18n="education.paris1.course3">Politiques européennes</span>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
@@ -586,6 +618,29 @@
                   <li data-i18n="experience.engoo.point2">Veille concurrentielle, analyse d’audience et adaptation des visuels par sous-segment cible.</li>
                   <li data-i18n="experience.engoo.point3">Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.</li>
                 </ul>
+                <div class="exp-stats">
+                  <div class="exp-stat">
+                    <span class="stat-value">+93.3%</span>
+                    <span class="stat-label" data-i18n="experience.engoo.stat1">Vues</span>
+                  </div>
+                  <div class="exp-stat">
+                    <span class="stat-value">+69.7%</span>
+                    <span class="stat-label" data-i18n="experience.engoo.stat2">Abonnés</span>
+                  </div>
+                  <div class="exp-stat">
+                    <span class="stat-value">+89.1%</span>
+                    <span class="stat-label" data-i18n="experience.engoo.stat3">Interactions</span>
+                  </div>
+                </div>
+                <div class="exp-portfolio-row">
+                  <a
+                    href="assets/250508_作品集_社群經營與設計_c.pdf"
+                    class="exp-portfolio-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n="experience.engoo.portfolioLink"
+                  >Voir les créations (PDF) →</a>
+                </div>
                 <span class="tag">Marketing</span>
                 <span class="tag">Social media</span>
                 <span class="tag">Xiaohongshu</span>
@@ -631,88 +686,6 @@
                 <span class="tag">Research</span>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="portfolio">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="portfolio.title">Portfolio – Social Media &amp; Design</h2>
-            <p data-i18n="portfolio.subtitle">
-              Exemples concrets de contenus créés, de campagnes gérées et de travaux visuels.
-            </p>
-          </header>
-          <div class="portfolio-actions" data-reveal>
-            <a
-              href="assets/250508_作品集_社群經營與設計_c.pdf"
-              class="btn btn-ghost"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-i18n="portfolio.viewPdf"
-            >Voir le portfolio complet (PDF)</a>
-          </div>
-          <div class="portfolio-grid">
-
-            <article class="portfolio-card portfolio-card--featured" data-reveal>
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag" data-i18n="portfolio.engoo.tag">Social Media</span>
-                <span class="portfolio-platform">小紅書 · Xiaohongshu</span>
-              </div>
-              <h3 data-i18n="portfolio.engoo.title">Engoo – Campagne Xiaohongshu</h3>
-              <p class="portfolio-period">Nov. 2024 – Fév. 2025</p>
-              <p class="portfolio-desc" data-i18n="portfolio.engoo.desc">
-                Reprise et développement du compte Xiaohongshu d'Engoo sur le marché chinois simplifié. Stratégie de contenu fondée sur le modèle STP, A/B testing des visuels et des textes, ciblage de sous-segments selon leur profil.
-              </p>
-              <div class="portfolio-stats">
-                <div class="portfolio-stat">
-                  <span class="stat-value">+93.3%</span>
-                  <span class="stat-label" data-i18n="portfolio.engoo.stat1">Vues</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">+69.7%</span>
-                  <span class="stat-label" data-i18n="portfolio.engoo.stat2">Abonnés</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">+89.1%</span>
-                  <span class="stat-label" data-i18n="portfolio.engoo.stat3">Interactions</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="portfolio-card" data-reveal>
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
-                <span class="portfolio-platform">Facebook</span>
-              </div>
-              <h3 data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h3>
-              <p class="portfolio-desc" data-i18n="portfolio.guzheng.desc">
-                Gestion de la page Facebook du club de guzheng (cithare chinoise) de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.
-              </p>
-            </article>
-
-            <article class="portfolio-card" data-reveal>
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag" data-i18n="portfolio.instagram.tag">Content Creation</span>
-                <span class="portfolio-platform">Instagram</span>
-              </div>
-              <h3 data-i18n="portfolio.instagram.title">Compte lectures personnelles</h3>
-              <p class="portfolio-desc" data-i18n="portfolio.instagram.desc">
-                Création de contenus visuels et rédactionnels pour un compte Instagram dédié aux comptes rendus de lecture. Narration visuelle originale, mise en scène soignée et analyse littéraire accessible – ex. <em>Des fleurs pour Algernon</em>.
-              </p>
-            </article>
-
-            <article class="portfolio-card" data-reveal>
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag" data-i18n="portfolio.design.tag">Photographie &amp; Design</span>
-                <span class="portfolio-platform">Print · Promotion</span>
-              </div>
-              <h3 data-i18n="portfolio.design.title">Photographie &amp; supports promotionnels</h3>
-              <p class="portfolio-desc" data-i18n="portfolio.design.desc">
-                Photographie de paysages, portraits et architecture – recherche d'angles et d'éléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d'autres activités.
-              </p>
-            </article>
-
           </div>
         </div>
       </section>
@@ -768,6 +741,9 @@
                 <p class="timeline-company" data-i18n="extracurricular.guzheng.text">
                   Organisation des campagnes de recrutement, gestion de la communauté et des réseaux sociaux, adaptation des cours et coordination d’événements.
                 </p>
+                <div class="exp-portfolio-row">
+                  <a href="assets/250508_作品集_社群經營與設計_c.pdf" class="exp-portfolio-link" target="_blank" rel="noopener noreferrer" data-i18n="extracurricular.guzheng.portfolioLink">Voir les créations (PDF) →</a>
+                </div>
                 <span class="tag">Leadership</span>
                 <span class="tag">Marketing</span>
               </div>
@@ -786,6 +762,12 @@
                 <p class="timeline-company" data-i18n="extracurricular.camps.text">
                   Organisation de cinq camps d’été, élaboration du business plan, suivi financier et études de marché pour ajuster l’offre et la stratégie marketing.
                 </p>
+                <div class="exp-stats">
+                  <div class="exp-stat">
+                    <span class="stat-value">5</span>
+                    <span class="stat-label" data-i18n="extracurricular.camps.stat1">Camps organisés</span>
+                  </div>
+                </div>
                 <span class="tag">Entrepreneuriat</span>
                 <span class="tag">Stratégie</span>
               </div>
@@ -848,111 +830,23 @@
                     internationaux sur des programmes de volontariat.
                   </li>
                 </ul>
+                <div class="exp-stats">
+                  <div class="exp-stat">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label" data-i18n="volunteer.aiesec.stat1">Volontaires recrutés</span>
+                  </div>
+                  <div class="exp-stat">
+                    <span class="stat-value">60+</span>
+                    <span class="stat-label" data-i18n="volunteer.aiesec.stat2">Participants</span>
+                  </div>
+                  <div class="exp-stat">
+                    <span class="stat-value">+53.7%</span>
+                    <span class="stat-label" data-i18n="volunteer.aiesec.stat3">Objectif budgétaire</span>
+                  </div>
+                </div>
               </div>
             </article>
 
-            <article class="timeline-item" data-reveal>
-              <div class="timeline-meta">
-                <span
-                  class="timeline-period"
-                  data-i18n="volunteer.usr.period"
-                  >09/2024 – Présent</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.usr.title">
-                  Volontaire – Projet University Social Responsibility
-                </h3>
-                <p class="timeline-company" data-i18n="volunteer.usr.org">
-                  NCCU · Office of University Responsibility
-                </p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.usr.point1">
-                    Accompagnement d’élèves issus de familles transnationales
-                    dans l’apprentissage de la langue et l’intégration
-                    culturelle.
-                  </li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal>
-              <div class="timeline-meta">
-                <span
-                  class="timeline-period"
-                  data-i18n="volunteer.flagship.period"
-                  >09/2023 – Présent</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.flagship.title">
-                  Volontaire – Programme de compagnonnage linguistique
-                </h3>
-                <p class="timeline-company" data-i18n="volunteer.flagship.org">
-                  Chinese Overseas Flagship Center in Taiwan
-                </p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.flagship.point1">
-                    Facilitation de l’immersion linguistique et culturelle
-                    d’étudiants américains via des événements et visites.
-                  </li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal>
-              <div class="timeline-meta">
-                <span
-                  class="timeline-period"
-                  data-i18n="volunteer.buddy.period"
-                  >09/2023 – 01/2025</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.buddy.title">
-                  Étudiante‑référente – Buddy Program
-                </h3>
-                <p class="timeline-company" data-i18n="volunteer.buddy.org">
-                  NCCU · Office of International Cooperation
-                </p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.buddy.point1">
-                    Accompagnement de trois étudiants en échange (France, États‑Unis,
-                    Corée du Sud) dans leur installation et leur vie quotidienne
-                    à Taïwan.
-                  </li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal>
-              <div class="timeline-meta">
-                <span
-                  class="timeline-period"
-                  data-i18n="volunteer.nuit.period"
-                  >12/2023</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.nuit.title">
-                  Déléguée – Nuit des Idées (français‑mandarin)
-                </h3>
-                <p class="timeline-company" data-i18n="volunteer.nuit.org">
-                  Bureau français de Taipei, Institut Français & Département de
-                  la Culture de Taipei
-                </p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.nuit.point1">
-                    Présentation de points de vue sur des sujets de durabilité
-                    devant plus de 350 participants, en français et en chinois.
-                  </li>
-                </ul>
-              </div>
-            </article>
           </div>
         </div>
       </section>

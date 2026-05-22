@@ -49,6 +49,10 @@
         honors: "Distinctions",
         projects: "Projets",
         contact: "Contact",
+        teaching: {
+          languages: "Langues",
+          engagement: "Engagement",
+        },
       },
       hero: {
         kicker: "Marketing digital · Analyse de données",
@@ -87,7 +91,6 @@
           point1: "Spécialisation en marketing, data et stratégie.",
           point2: "Projets de groupe avec des entreprises partenaires.",
           gpa: "GPA : en cours.",
-          courses: "Cours pertinents : Digital Marketing, Data Science & AI for Business, Brand Strategy, Marketing Analytics.",
         },
         nccu: {
           period: "09/2020 – 06/2025",
@@ -96,7 +99,6 @@
           point1: "Double majeure : langues européennes (français) & diplomatie. Mineures : économie et droit.",
           point2: "Travaux de recherche sur les enjeux économiques et géopolitiques.",
           gpa: "GPA : 4,22 / 4,3 (3,99 / 4,0).",
-          courses: "Cours pertinents : Management ; Introduction to Data Analysis and Programming (Excel VBA & Access) ; Programming 101 (Python) ; Introduction to Qualitative and Quantitative Research Methods (R, Statistics) ; Marketing Research (R, Decanter AI) ; International Finance.",
         },
         paris1: {
           period: "01/2024 – 06/2024",
@@ -104,10 +106,32 @@
           school: "Université Paris 1 Panthéon‑Sorbonne",
           point1: "Approfondissement des politiques européennes et internationales.",
           point2: "Immersion académique et culturelle en France.",
-          courses: "Cours pertinents : science politique, relations internationales, politiques européennes.",
+          course1: "Science politique",
+          course2: "Relations internationales",
+          course3: "Politiques européennes",
         },
+        coursesLabel: "Cours pertinents",
       },
-      experience: {
+      pageSwitcher: {
+        business: "Business",
+        teaching: "Enseignement",
+      },
+      teachingHero: {
+        kicker: "Langues & engagement international",
+        title1: "Immersion linguistique &",
+        title2: "échange interculturel",
+        summary: "Locutrice native en mandarin, certifiée DALF C1 (français), IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des programmes d’accompagnement linguistique et d’échange culturel à Taïwan.",
+        ctaSecondary: "Voir mes engagements",
+      },
+      teachingLanguages: {
+        title: "Compétences linguistiques",
+        subtitle: "Certifications officielles et pratique quotidienne dans quatre langues.",
+      },
+      teachingEngagement: {
+        title: "Engagement linguistique & international",
+        subtitle: "Programmes de mentorat linguistique, immersion culturelle et échanges internationaux.",
+      },
+            experience: {
         title: "Expériences professionnelles",
         subtitle:
           "Une sélection de mes expériences en marketing digital, analyse de données et gestion de projet.",
@@ -300,6 +324,10 @@
         honors: "Honors",
         projects: "Projects",
         contact: "Contact",
+        teaching: {
+          languages: "Languages",
+          engagement: "Engagement",
+        },
       },
       hero: {
         kicker: "Digital marketing · Data analytics",
@@ -338,7 +366,6 @@
           point1: "Specialisation in marketing, data and strategy.",
           point2: "Group projects with partner companies.",
           gpa: "GPA: ongoing.",
-          courses: "Relevant courses: Digital Marketing, Data Science & AI for Business, Brand Strategy, Marketing Analytics.",
         },
         nccu: {
           period: "09/2020 – 06/2025",
@@ -347,7 +374,6 @@
           point1: "Double major: European languages (French) & Diplomacy. Minors: Economics and Law.",
           point2: "Research work on economic and geopolitical issues.",
           gpa: "GPA: 4.22/4.3 (3.99/4.0).",
-          courses: "Relevant courses: Management; Introduction to Data Analysis and Programming (Excel VBA & Access); Programming 101 (Python); Introduction to Qualitative and Quantitative Research Methods (R, Statistics); Marketing Research (R, Decanter AI); International Finance.",
         },
         paris1: {
           period: "01/2024 – 06/2024",
@@ -355,10 +381,32 @@
           school: "Université Paris 1 Panthéon‑Sorbonne",
           point1: "Deepened knowledge of European and international policies.",
           point2: "Academic and cultural immersion in France.",
-          courses: "Relevant courses: Political Science, International Relations, European Politics.",
+          course1: "Political Science",
+          course2: "International Relations",
+          course3: "European Politics",
         },
+        coursesLabel: "Relevant courses",
       },
-      experience: {
+      pageSwitcher: {
+        business: "Business",
+        teaching: "Teaching",
+      },
+      teachingHero: {
+        kicker: "Languages & international engagement",
+        title1: "Language immersion &",
+        title2: "intercultural exchange",
+        summary: "Native Mandarin speaker, certified DALF C1 (French), IELTS 8.0 (English) and JLPT N1 (Japanese). Engaged in language mentoring and cultural exchange programmes in Taiwan.",
+        ctaSecondary: "See my engagement",
+      },
+      teachingLanguages: {
+        title: "Language skills",
+        subtitle: "Official certifications and daily use in four languages.",
+      },
+      teachingEngagement: {
+        title: "Language & international engagement",
+        subtitle: "Language mentoring, cultural immersion and international exchange programmes.",
+      },
+            experience: {
         title: "Professional experience",
         subtitle:
           "A selection of my experience in digital marketing, data analysis and project coordination.",
@@ -552,6 +600,10 @@
         honors: "獎學金與榮譽",
         projects: "專案作品",
         contact: "聯絡方式",
+        teaching: {
+          languages: "語言能力",
+          engagement: "國際參與",
+        },
       },
       hero: {
         kicker: "數位行銷 · 數據分析",
@@ -588,7 +640,6 @@
           point1: "主修行銷、數據與策略。",
           point2: "與合作企業進行小組專案。",
           gpa: "GPA：進行中。",
-          courses: "相關課程：Digital Marketing、Data Science & AI for Business、Brand Strategy、Marketing Analytics。",
         },
         nccu: {
           period: "2020/09 – 2025/06（預計）",
@@ -597,7 +648,6 @@
           point1: "雙主修：歐洲語文（法文）與外交學；輔系：經濟與法律。",
           point2: "從事經濟與地緣政治議題的學術研究。",
           gpa: "GPA：4.22/4.3（3.99/4.0）。",
-          courses: "相關課程：Management、資料分析與程式設計導論（Excel VBA & Access）、程式設計（Python）、質性與量化研究方法（R、統計學）、行銷研究（R、Decanter AI）、國際金融。",
         },
         paris1: {
           period: "2024/01 – 2024/06",
@@ -605,10 +655,32 @@
           school: "巴黎第一大學龐岱榮商學院（Paris 1 Panthéon‑Sorbonne）",
           point1: "深化對歐洲及國際政治的理解。",
           point2: "在法國進行學術與文化沉浸。",
-          courses: "相關課程：政治學、國際關係、歐洲政策。",
+          course1: "政治學",
+          course2: "國際關係",
+          course3: "歐洲政策",
         },
+        coursesLabel: "相關課程",
       },
-      experience: {
+      pageSwitcher: {
+        business: "商務",
+        teaching: "教學",
+      },
+      teachingHero: {
+        kicker: "語言 · 教學 · 國際交流",
+        title1: "跨語言連結，",
+        title2: "促進文化交流",
+        summary: "中文母語使用者，持有 DALF C1（法語）、IELTS 8.0（英語）、JLPT N1（日語）認證。深度參與語言夥伴計畫與跨文化交流活動。",
+        ctaSecondary: "查看我的參與紀錄",
+      },
+      teachingLanguages: {
+        title: "語言能力",
+        subtitle: "四語認證與日常應用。",
+      },
+      teachingEngagement: {
+        title: "語言教學與國際參與",
+        subtitle: "語言輔導、文化沉浸與國際交流計畫。",
+      },
+            experience: {
         title: "實習與工作經驗",
         subtitle: "涵蓋數位行銷、數據分析與研究助理等多元角色。",
         kpn: {

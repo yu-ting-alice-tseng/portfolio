@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yu-Ting Tseng · Langues & Enseignement</title>
+    <meta
+      name="description"
+      content="Portfolio de Yu-Ting Tseng – langues, enseignement et engagement international."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <a class="skip-link" href="#about">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark"> </span>
+          <span class="brand-text" data-i18n="brandName">Yu‑Ting Tseng</span>
+        </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="#about" data-i18n="nav.about">À propos</a>
+          <a href="#skills" data-i18n="nav.teaching.languages">Langues</a>
+          <a href="#education" data-i18n="nav.education">Formation</a>
+          <a href="#engagement" data-i18n="nav.teaching.engagement">Engagement</a>
+          <a href="#honors" data-i18n="nav.honors">Distinctions</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="page-switch" aria-label="Choisir la page">
+          <a href="index.html" class="page-btn" data-i18n="pageSwitcher.business">Business</a>
+          <a href="teaching.html" class="page-btn is-active" data-i18n="pageSwitcher.teaching">Enseignement</a>
+        </div>
+        <div class="lang-switch" aria-label="Choisir la langue">
+          <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="zh" type="button">CN</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+      <div class="mobile-nav-inner">
+        <div class="page-switch" style="margin-bottom: 0.75rem;">
+          <a href="index.html" class="page-btn" data-i18n="pageSwitcher.business">Business</a>
+          <a href="teaching.html" class="page-btn is-active" data-i18n="pageSwitcher.teaching">Enseignement</a>
+        </div>
+        <nav class="mobile-nav-links" aria-label="Navigation mobile">
+          <a href="#about" data-i18n="nav.about">À propos</a>
+          <a href="#skills" data-i18n="nav.teaching.languages">Langues</a>
+          <a href="#education" data-i18n="nav.education">Formation</a>
+          <a href="#engagement" data-i18n="nav.teaching.engagement">Engagement</a>
+          <a href="#honors" data-i18n="nav.honors">Distinctions</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- ── Hero ──────────────────────────────────────────── -->
+      <section class="hero" id="about">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="hero-kicker" data-i18n="teachingHero.kicker">
+              Langues & engagement international
+            </p>
+            <h1>
+              <span data-i18n="teachingHero.title1">Immersion linguistique &</span>
+              <span class="accent" data-i18n="teachingHero.title2">échange interculturel</span>.
+            </h1>
+            <p class="hero-summary" data-i18n="teachingHero.summary">
+              Locutrice native en mandarin, certifiée DALF C1 (français),
+              IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des
+              programmes d'accompagnement linguistique et d'échange culturel
+              à Taïwan.
+            </p>
+            <div class="hero-meta">
+              <div>
+                <span class="meta-label" data-i18n="hero.locationLabel">Basée à</span>
+                <span class="meta-value" data-i18n="hero.locationValue">Lyon, France</span>
+              </div>
+              <div>
+                <span class="meta-label" data-i18n="hero.availabilityLabel">Disponible à partir de</span>
+                <span class="meta-value" data-i18n="hero.availabilityValue">Juillet 2026 / Janvier 2027</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Me contacter</a>
+              <a href="#engagement" class="btn btn-ghost" data-i18n="teachingHero.ctaSecondary">Voir mes engagements</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Informations principales">
+            <img
+              class="avatar"
+              src="assets/profile.png"
+              alt="Portrait de Yu‑Ting Tseng"
+              width="240"
+              height="280"
+              loading="eager"
+              decoding="async"
+            />
+            <h2 data-i18n="hero.cardName">Yu‑Ting Tseng</h2>
+            <p class="hero-role" data-i18n="hero.cardRole">Marketing digital & Data</p>
+            <ul class="hero-list">
+              <li>
+                <span class="label" data-i18n="hero.cardEmailLabel">Email</span>
+                <span class="value">yuting.alice.tseng@gmail.com</span>
+              </li>
+              <li>
+                <span class="label" data-i18n="hero.cardPhoneLabel">Téléphone</span>
+                <span class="value">+33 (0)6 51 96 28 64</span>
+              </li>
+              <li>
+                <span class="label">LinkedIn</span>
+                <span class="value">
+                  <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon" target="_blank" rel="noopener noreferrer">Yu-Ting Tseng</a>
+                </span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ── Language skills ───────────────────────────────── -->
+      <section class="section" id="skills">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="teachingLanguages.title">Compétences linguistiques</h2>
+            <p data-i18n="teachingLanguages.subtitle">
+              Certifications officielles et pratique quotidienne dans quatre langues.
+            </p>
+          </header>
+
+          <div class="skills-grid" style="grid-template-columns: minmax(0, 1fr);">
+            <div class="skills-block" data-skill-area="languages">
+              <h3>Languages</h3>
+              <div class="skills-cards">
+                <a
+                  href="certificates/IELTS%208_20241215.pdf"
+                  class="skill-card"
+                  data-skill="lang-english"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >English – IELTS 8.0 (C1)</a
+                >
+                <a
+                  href="certificates/DALF%20C1_Certificate.pdf"
+                  class="skill-card"
+                  data-skill="lang-french"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Français – DALF C1</a
+                >
+                <a
+                  href="certificates/JLPT%20N1.jpg"
+                  class="skill-card"
+                  data-skill="lang-japanese"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >日本語 – JLPT N1</a
+                >
+                <a
+                  href="#engagement"
+                  class="skill-card"
+                  data-skill="lang-mandarin"
+                  >中文 – langue maternelle</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-preview" aria-live="polite">
+            <h3 class="skill-preview-title" data-i18n="skills.previewTitle">
+              Détail d'une compétence
+            </h3>
+            <p class="skill-preview-text" data-i18n="skills.previewText">
+              Survolez une compétence pour voir des preuves (projets, cours,
+              expériences) avec le contexte, ce qui a été fait et les résultats.
+            </p>
+            <div class="skill-preview-proofs"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Education ─────────────────────────────────────── -->
+      <section class="section" id="education">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="education.title">Formation académique</h2>
+            <p data-i18n="education.subtitle">
+              Un parcours international entre la France et Taïwan, à l'interface
+              du management, de la finance et des langues.
+            </p>
+          </header>
+          <div class="timeline">
+            <article class="timeline-item" id="edu-emlyon-t" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="education.emlyon.period">09/2023 – Aujourd'hui</span>
+                <span class="timeline-location">Lyon · France</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="education.emlyon.title">Master in Management (Programme Grande École)</h3>
+                <p class="timeline-company" data-i18n="education.emlyon.school">emlyon business school</p>
+                <ul class="timeline-points">
+                  <li data-i18n="education.emlyon.point1">Spécialisation en marketing, data et stratégie.</li>
+                  <li data-i18n="education.emlyon.point2">Projets de groupe avec des entreprises partenaires.</li>
+                </ul>
+                <p class="education-extra">
+                  <span data-i18n="education.emlyon.gpa">GPA : en cours.</span>
+                </p>
+                <div class="edu-courses">
+                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
+                  <div class="course-chips">
+                    <span class="course-chip">Digital Marketing</span>
+                    <span class="course-chip">Data Science &amp; AI for Business</span>
+                    <span class="course-chip">Brand Strategy</span>
+                    <span class="course-chip">Marketing Analytics</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item" id="edu-nccu-t" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="education.nccu.period">09/2020 – 06/2025</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="education.nccu.title">Bachelor en français &amp; diplomatie</h3>
+                <p class="timeline-company" data-i18n="education.nccu.school">Université Nationale Chengchi (NCCU)</p>
+                <ul class="timeline-points">
+                  <li data-i18n="education.nccu.point1">Double majeure : langues européennes (français) &amp; diplomatie. Mineures : économie et droit.</li>
+                  <li data-i18n="education.nccu.point2">Travaux de recherche sur les enjeux économiques et géopolitiques.</li>
+                </ul>
+                <p class="education-extra">
+                  <span data-i18n="education.nccu.gpa">GPA : 4,22 / 4,3 (3,99 / 4,0).</span>
+                </p>
+                <div class="edu-courses">
+                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
+                  <div class="course-chips">
+                    <span class="course-chip">Management</span>
+                    <span class="course-chip">Data Analysis &amp; Programming (VBA &amp; Access)</span>
+                    <span class="course-chip">Programming 101 (Python)</span>
+                    <span class="course-chip">Research Methods (R &amp; Statistics)</span>
+                    <span class="course-chip">Marketing Research (R, Decanter AI)</span>
+                    <span class="course-chip">International Finance</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item" id="edu-paris1-t" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="education.paris1.period">01/2024 – 06/2024</span>
+                <span class="timeline-location">Paris · France</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="education.paris1.title">Programme d'échange en science politique</h3>
+                <p class="timeline-company" data-i18n="education.paris1.school">Université Paris 1 Panthéon‑Sorbonne</p>
+                <ul class="timeline-points">
+                  <li data-i18n="education.paris1.point1">Approfondissement des politiques européennes et internationales.</li>
+                  <li data-i18n="education.paris1.point2">Immersion académique et culturelle en France.</li>
+                </ul>
+                <div class="edu-courses">
+                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
+                  <div class="course-chips">
+                    <span class="course-chip" data-i18n="education.paris1.course1">Science politique</span>
+                    <span class="course-chip" data-i18n="education.paris1.course2">Relations internationales</span>
+                    <span class="course-chip" data-i18n="education.paris1.course3">Politiques européennes</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Language & International Engagement ──────────── -->
+      <section class="section section-alt" id="engagement">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="teachingEngagement.title">Engagement linguistique & international</h2>
+            <p data-i18n="teachingEngagement.subtitle">
+              Programmes de mentorat linguistique, immersion culturelle et échanges internationaux.
+            </p>
+          </header>
+          <div class="timeline">
+
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.usr.period">09/2024 – Présent</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.usr.title">Volontaire – Projet University Social Responsibility</h3>
+                <p class="timeline-company" data-i18n="volunteer.usr.org">NCCU · Office of University Responsibility</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.usr.point1">
+                    Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.
+                  </li>
+                </ul>
+                <span class="tag">Langue</span>
+                <span class="tag">Mentorat</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.flagship.period">09/2023 – Présent</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.flagship.title">Volontaire – Programme de compagnonnage linguistique</h3>
+                <p class="timeline-company" data-i18n="volunteer.flagship.org">Chinese Overseas Flagship Center in Taiwan</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.flagship.point1">
+                    Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.
+                  </li>
+                </ul>
+                <span class="tag">Immersion</span>
+                <span class="tag">Interculturel</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.buddy.period">09/2023 – 01/2025</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.buddy.title">Étudiante‑référente – Buddy Program</h3>
+                <p class="timeline-company" data-i18n="volunteer.buddy.org">NCCU · Office of International Cooperation</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.buddy.point1">
+                    Accompagnement de trois étudiants en échange (France, États‑Unis, Corée du Sud) dans leur installation et leur vie quotidienne à Taïwan.
+                  </li>
+                </ul>
+                <span class="tag">Échange</span>
+                <span class="tag">International</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.nuit.period">12/2023</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.nuit.title">Déléguée – Nuit des Idées (français‑mandarin)</h3>
+                <p class="timeline-company" data-i18n="volunteer.nuit.org">Bureau français de Taipei, Institut Français &amp; Département de la Culture de Taipei</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.nuit.point1">
+                    Présentation de points de vue sur des sujets de durabilité devant plus de 350 participants, en français et en chinois.
+                  </li>
+                </ul>
+                <div class="exp-stats">
+                  <div class="exp-stat">
+                    <span class="stat-value">350+</span>
+                    <span class="stat-label" data-i18n="volunteer.nuit.stat1">Participants</span>
+                  </div>
+                  <div class="exp-stat">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="volunteer.nuit.stat2">Langues</span>
+                  </div>
+                </div>
+                <span class="tag">Prise de parole</span>
+                <span class="tag">Bilingue</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Honors ─────────────────────────────────────────── -->
+      <section class="section" id="honors">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="honors.title">Distinctions & bourses</h2>
+            <p data-i18n="honors.subtitle">
+              Reconnaissance académique pour mes résultats et mon engagement.
+            </p>
+          </header>
+          <div class="award-grid">
+            <article class="award-card" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge" data-i18n="honors.exchange.year">2024</span>
+              </div>
+              <h3 class="award-title" data-i18n="honors.exchange.title">
+                Bourse d'échange – Ministère de l'Éducation (Taïwan)
+              </h3>
+              <p class="award-text" data-i18n="honors.exchange.text">
+                Bourse au mérite pour un programme d'échange international en France.
+              </p>
+            </article>
+
+            <article class="award-card" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge" data-i18n="honors.short.year">2024</span>
+              </div>
+              <h3 class="award-title" data-i18n="honors.short.title">
+                Bourse d'études à court terme – NCCU
+              </h3>
+              <p class="award-text" data-i18n="honors.short.text">
+                Financement au mérite pour un séjour d'études à l'étranger.
+              </p>
+            </article>
+
+            <article class="award-card award-card--featured" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge" data-i18n="honors.excellence.year">2021, 2023</span>
+              </div>
+              <h3 class="award-title" data-i18n="honors.excellence.title">
+                Certificate of Excellence – Top 5% GPA
+              </h3>
+              <p class="award-text" data-i18n="honors.excellence.text">
+                Récompense académique pour résultats parmi les 5&nbsp;% des meilleurs étudiants à NCCU.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Contact ────────────────────────────────────────── -->
+      <section class="section section-alt" id="contact">
+        <div class="container contact-grid">
+          <div data-reveal>
+            <header class="section-header">
+              <h2 data-i18n="contact.heading">Entrons en contact</h2>
+              <p data-i18n="contact.intro">
+                Intéressé·e par un stage, un projet ou une collaboration ?
+                Envoyez‑moi un message, je vous répondrai avec plaisir.
+              </p>
+            </header>
+            <ul class="contact-list">
+              <li>
+                <span class="label" data-i18n="contact.labelEmail">Email</span>
+                <a href="mailto:yuting.alice.tseng@gmail.com">yuting.alice.tseng@gmail.com</a>
+              </li>
+              <li>
+                <span class="label" data-i18n="contact.labelPhone">Téléphone</span>
+                <a href="tel:+33651962864">+33 (0)6 51 96 28 64</a>
+              </li>
+              <li>
+                <span class="label" data-i18n="contact.labelLocation">Localisation</span>
+                <span>Lyon, France</span>
+              </li>
+              <li>
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon" target="_blank" rel="noopener noreferrer">yu-ting-tseng-emlyon</a>
+              </li>
+            </ul>
+          </div>
+          <form class="contact-form" autocomplete="on" data-reveal>
+            <div class="field">
+              <label for="name-t" data-i18n="contact.formName">Nom</label>
+              <input id="name-t" name="name" type="text" placeholder="Votre nom" data-i18n-placeholder="contact.namePlaceholder" required />
+            </div>
+            <div class="field">
+              <label for="email-t" data-i18n="contact.formEmail">Email</label>
+              <input id="email-t" name="email" type="email" placeholder="vous@exemple.com" data-i18n-placeholder="contact.emailPlaceholder" required />
+            </div>
+            <div class="field">
+              <label for="message-t" data-i18n="contact.formMessage">Message</label>
+              <textarea id="message-t" name="message" rows="4" placeholder="Expliquez brièvement votre besoin ou votre projet." data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" data-i18n="contact.submit">Envoyer le message</button>
+            <p class="form-note" data-i18n="contact.formNote">
+              Ce formulaire est une démonstration front‑end. Connectez‑le à Formspree ou Netlify Forms pour l'activer.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Yu‑Ting Tseng. Tous droits réservés.</p>
+        <p class="footer-extra">Site personnel conçu pour présenter mon parcours et mes projets.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
