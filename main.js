@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         education: "Formation",
         experience: "Expériences",
         portfolio: "Portfolio",
-        extracurricular: "Expériences extra‑scolaires",
+        extracurricular: "Activités & Bénévolat",
         volunteer: "Bénévolat",
         honors: "Distinctions",
         projects: "Projets",
@@ -86,28 +86,26 @@ document.addEventListener("DOMContentLoaded", () => {
           "Un parcours international entre la France et Taïwan, à l’interface du management, de la finance et des langues.",
         emlyon: {
           period: "09/2023 – Aujourd’hui",
-          title: "Master in Management (Programme Grande École)",
+          title: "Master en Gestion (Programme Grande École)",
           school: "emlyon business school",
-          point1: "Spécialisation en marketing, data et stratégie.",
-          point2: "Projets de groupe avec des entreprises partenaires.",
-          gpa: "GPA : en cours.",
+          point1: "Spécialisation en Finance et Compatibilité.",
+          gpa: "4,0/4,0",
         },
         nccu: {
           period: "09/2020 – 06/2025",
-          title: "Bachelor en français & diplomatie",
+          title: "Bachelor en Français & Diplomatie",
           school: "Université Nationale Chengchi (NCCU)",
           majorLabel: "Majeure",
           minorLabel: "Mineure",
-          major1: "Langues européennes (français)",
+          major1: "Langues et Cultures Européennes : Parcours Français",
           major2: "Diplomatie",
           minor1: "Économie",
-          minor2: "Droit",
           point2: "Travaux de recherche sur les enjeux économiques et géopolitiques.",
-          gpa: "GPA : 4,22 / 4,3 (3,99 / 4,0).",
+          gpa: "3,99 / 4,0",
         },
         paris1: {
           period: "01/2024 – 06/2024",
-          title: "Programme d’échange en science politique",
+          title: "Programme d’échange en Science Politique",
           school: "Université Paris 1 Panthéon‑Sorbonne",
           point1: "Approfondissement des politiques européennes et internationales.",
           point2: "Immersion académique et culturelle en France.",
@@ -166,8 +164,23 @@ document.addEventListener("DOMContentLoaded", () => {
           point1: "Collecte, nettoyage et analyse de données pour des travaux de recherche.",
           point2: "Préparation de synthèses et supports pour séminaires.",
         },
+        tutorABC: {
+          period: "08/2024 – Présent",
+          title: "Professeure particulière d'anglais en ligne",
+          point1: "Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).",
+          point2: "Préparation aux certifications IELTS et Cambridge English (YLE, A2 Key, B1 Preliminary, B2 First).",
+          coursesLabel: "Cours dispensés",
+          courseGradeSchool: "Anglais (primaire)",
+          courseMiddle: "Anglais (collège)",
+          courseHigh: "Anglais (lycée)",
+          stat1: "Jours",
+          stat2: "Élèves",
+          stat3: "Sessions",
+          stat4: "Abonnés",
+          stat5: "TTT",
+        },
         filterAll: "Toutes",
-        filterTeaching: "Teaching",
+        filterTeaching: "Enseignement",
         filterFinance: "Finance",
         filterMarketing: "Marketing",
         viewAll: "Voir tout",
@@ -226,10 +239,18 @@ document.addEventListener("DOMContentLoaded", () => {
             "Participation à International College Exchange, Toastmasters, Kyudo, Kendo et Ikebana (art floral).",
         },
         filterAll: "Toutes",
+        filterVolunteer: "Bénévolat",
         periodTBD: "Période à préciser",
         filterEntrepreneurship: "Entrepreneuriat",
         filterClubs: "Clubs & culture",
         viewAll: "Voir tout",
+        restoCoeur: {
+          period: "10/2024 – Présent",
+          title: "Bénévole – Restos du Cœur",
+          org: "Les Restos du Cœur · Association humanitaire",
+          point1: "Distribution alimentaire et accueil de bénéficiaires en situation de précarité.",
+          point2: "Tri et conditionnement des denrées alimentaires.",
+        },
       },
       volunteer: {
         title: "Expériences de bénévolat & engagement",
@@ -324,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
         education: "Education",
         experience: "Experience",
         portfolio: "Portfolio",
-        extracurricular: "Activities",
+        extracurricular: "Activities & Volunteering",
         volunteer: "Volunteering",
         honors: "Honors",
         projects: "Projects",
@@ -357,20 +378,19 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle:
           "A structured skill set combining data analysis, digital marketing and an international profile.",
         filterAll: "All",
-        previewTitle: "Skill detail",
+        previewTitle: "Skill Detail",
         previewText: "Hover over a skill to see evidence (projects, courses, experience) with context, what was done and the outcomes.",
       },
       education: {
-        title: "Academic background",
+        title: "Academic Background",
         subtitle:
           "An international path between France and Taiwan, at the crossroads of management, finance and languages.",
         emlyon: {
           period: "09/2023 – Present",
           title: "Master in Management (Grande École Programme)",
           school: "emlyon business school",
-          point1: "Specialisation in marketing, data and strategy.",
-          point2: "Group projects with partner companies.",
-          gpa: "GPA: ongoing.",
+          point1: "Specialisation in Finance and Accounting.",
+          gpa: "4.0/4.0",
         },
         nccu: {
           period: "09/2020 – 06/2025",
@@ -378,16 +398,15 @@ document.addEventListener("DOMContentLoaded", () => {
           school: "National Chengchi University (NCCU)",
           majorLabel: "Major",
           minorLabel: "Minor",
-          major1: "European Languages (French)",
+          major1: "European Languages and Cultures: French Track",
           major2: "Diplomacy",
           minor1: "Economics",
-          minor2: "Law",
           point2: "Research work on economic and geopolitical issues.",
-          gpa: "GPA: 4.22/4.3 (3.99/4.0).",
+          gpa: "4.22 / 4.3 (3.99 / 4.0)",
         },
         paris1: {
           period: "01/2024 – 06/2024",
-          title: "Exchange programme in Political Science",
+          title: "Exchange Programme in Political Science",
           school: "Université Paris 1 Panthéon‑Sorbonne",
           point1: "Deepened knowledge of European and international policies.",
           point2: "Academic and cultural immersion in France.",
@@ -409,15 +428,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaSecondary: "See my engagement",
       },
       teachingLanguages: {
-        title: "Language skills",
+        title: "Language Skills",
         subtitle: "Official certifications and daily use in four languages.",
       },
       teachingEngagement: {
-        title: "Language & international engagement",
+        title: "Language & International Engagement",
         subtitle: "Language mentoring, cultural immersion and international exchange programmes.",
       },
             experience: {
-        title: "Professional experience",
+        title: "Professional Experience",
         subtitle:
           "A selection of my experience in digital marketing, data analysis and project coordination.",
         kpn: {
@@ -439,6 +458,21 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Teaching Assistant",
           point1: "Course support (finance, risk management) and student follow-up.",
           point2: "Prepared course materials and handled logistics.",
+        },
+        tutorABC: {
+          period: "08/2024 – Present",
+          title: "Online English Tutor",
+          point1: "One-on-one online English tutoring for learners from primary to high school level.",
+          point2: "IELTS and Cambridge English exam preparation (YLE, A2 Key, B1 Preliminary, B2 First).",
+          coursesLabel: "Courses taught",
+          courseGradeSchool: "English (primary)",
+          courseMiddle: "English (secondary)",
+          courseHigh: "English (high school)",
+          stat1: "Days",
+          stat2: "Students",
+          stat3: "Sessions",
+          stat4: "Followers",
+          stat5: "TTT",
         },
         research: {
           period: "06/2023 – 12/2023",
@@ -471,48 +505,56 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         instagram: {
           tag: "Content Creation",
-          title: "Personal book review account",
+          title: "Personal Book Review Account",
           desc: "Created visual and written content for a personal Instagram account dedicated to book reviews. Original visual storytelling and accessible literary analysis – e.g. Flowers for Algernon.",
         },
         design: {
           tag: "Photography & Design",
-          title: "Photography & promotional materials",
+          title: "Photography & Promotional Materials",
           desc: "Photography of landscapes, portraits and architecture – exploring unexpected angles. Designed communication materials for events: name badges, posters and posts for the kyudo club and other activities.",
         },
       },
       projects: {
-        title: "Selected projects",
+        title: "Selected Projects",
         subtitle:
           "A few academic and personal projects that reflect how I work and what I care about.",
       },
       extracurricular: {
-        title: "Extracurricular activities",
+        title: "Extracurricular Activities",
         subtitle:
           "Clubs and initiatives that complement my academic path.",
         guzheng: {
           title:
-            "Marketing & Membership Director – Guzheng (Chinese zither) Club",
+            "Marketing & Membership Director – Guzheng (Chinese Zither) Club",
           text:
             "Led recruitment campaigns, managed social media, adjusted course structure based on feedback and coordinated events and performances.",
         },
         camps: {
-          title: "Co‑founder – Sora Education (youth camps)",
+          title: "Co‑Founder – Sora Education (Youth Camps)",
           text:
             "Co‑ran five week‑long summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
         },
         clubs: {
-          title: "Other student clubs",
+          title: "Other Student Clubs",
           text:
             "Member of International College Exchange, Toastmasters, Kyudo, Kendo and Flower Arrangement club.",
         },
         filterAll: "All",
+        filterVolunteer: "Volunteering",
         periodTBD: "Dates TBC",
         filterEntrepreneurship: "Entrepreneurship",
         filterClubs: "Clubs & culture",
         viewAll: "View all",
+        restoCoeur: {
+          period: "10/2024 – Present",
+          title: "Volunteer – Restos du Cœur",
+          org: "Les Restos du Cœur · Humanitarian association",
+          point1: "Food distribution and support for people in precarious situations.",
+          point2: "Sorting and packaging of food donations.",
+        },
       },
       volunteer: {
-        title: "Volunteer & leadership experience",
+        title: "Volunteer & Leadership Experience",
         subtitle:
           "Initiatives focused on education, international exchange and social impact.",
         aiesec: {
@@ -556,18 +598,18 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       honors: {
-        title: "Honors & awards",
+        title: "Honors & Awards",
         subtitle: "Academic recognition for performance and engagement.",
         exchange: {
           title:
-            "Exchange Student Scholarship (Merit‑based) – Ministry of Education, Taiwan",
+            "Exchange Student Scholarship (Merit‑Based) – Ministry of Education, Taiwan",
           text:
             "Merit scholarship for international exchange studies in France.",
           year: "2024",
         },
         short: {
           title:
-            "Short‑term Study Abroad Scholarship (Merit‑based) – NCCU",
+            "Short‑term Study Abroad Scholarship (Merit‑Based) – NCCU",
           text:
             "Funding for short‑term study abroad based on academic excellence.",
           year: "2024",
@@ -605,7 +647,7 @@ document.addEventListener("DOMContentLoaded", () => {
         education: "學歷背景",
         experience: "實習與工作",
         portfolio: "作品集",
-        extracurricular: "課外活動",
+        extracurricular: "課外活動與志工",
         volunteer: "志工與領導",
         honors: "獎學金與榮譽",
         projects: "專案作品",
@@ -647,34 +689,32 @@ document.addEventListener("DOMContentLoaded", () => {
           period: "2023/09 – 至今",
           title: "管理學碩士（Grande École 計畫）",
           school: "emlyon business school",
-          point1: "主修行銷、數據與策略。",
-          point2: "與合作企業進行小組專案。",
-          gpa: "GPA：進行中。",
+          point1: "主修金融與會計。",
+          gpa: "4.0/4.0",
         },
         nccu: {
-          period: "2020/09 – 2025/06（預計）",
-          title: "歐洲語文學系法文組、外交學系雙主修；經濟、法律輔系",
+          period: "2020/09 – 2025/06",
+          title: "歐洲語文學系法文組、外交學系雙主修；經濟系輔系",
           school: "國立政治大學（NCCU）",
           majorLabel: "主修",
           minorLabel: "輔系",
-          major1: "歐洲語文（法文）",
+          major1: "歐洲語文學系法文組",
           major2: "外交學",
           minor1: "經濟",
-          minor2: "法律",
           point2: "從事經濟與地緣政治議題的學術研究。",
-          gpa: "GPA：4.22/4.3（3.99/4.0）。",
+          gpa: "4.22 / 4.3",
         },
         paris1: {
           period: "2024/01 – 2024/06",
           title: "政治學交換學生",
-          school: "巴黎第一大學龐岱榮商學院（Paris 1 Panthéon‑Sorbonne）",
+          school: "巴黎第一大學（Paris 1 Panthéon‑Sorbonne）",
           point1: "深化對歐洲及國際政治的理解。",
           point2: "在法國進行學術與文化沉浸。",
           course1: "政治學",
           course2: "國際關係",
           course3: "歐洲政策",
         },
-        coursesLabel: "相關課程",
+        coursesLabel: "修習課程",
       },
       pageSwitcher: {
         business: "商務",
@@ -717,6 +757,21 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "課程助教",
           point1: "協助金融與風險管理課程教學及學生輔導。",
           point2: "製作教材並負責行政協調。",
+        },
+        tutorABC: {
+          period: "2024/08 – 至今",
+          title: "線上英語家教老師",
+          point1: "一對一線上英語課程，服務國小至高中各年段學生。",
+          point2: "備考 IELTS 與劍橋英語認證（YLE、A2 Key、B1 Preliminary、B2 First）。",
+          coursesLabel: "授課科目",
+          courseGradeSchool: "英文（國小）",
+          courseMiddle: "英文（國中）",
+          courseHigh: "英文（高中）",
+          stat1: "授課天數",
+          stat2: "學生人數",
+          stat3: "課堂數",
+          stat4: "追蹤人數",
+          stat5: "教師發言比（TTT）",
         },
         research: {
           period: "2023/06 – 2023/12",
@@ -781,10 +836,18 @@ document.addEventListener("DOMContentLoaded", () => {
             "曾參與國際書院交流社、英語演講社（Toastmasters）、弓道社、劍道社與花道社。",
         },
         filterAll: "全部",
+        filterVolunteer: "志工服務",
         periodTBD: "時間待確認",
         filterEntrepreneurship: "創業",
         filterClubs: "社團與文化",
         viewAll: "顯示全部",
+        restoCoeur: {
+          period: "2024/10 – 至今",
+          title: "義工 – Restos du Cœur（愛心餐廳）",
+          org: "Les Restos du Cœur · 法國人道關懷協會",
+          point1: "參與食物發放，協助弱勢族群獲得日常飲食支援。",
+          point2: "食物分類與包裝作業。",
+        },
       },
       volunteer: {
         title: "志工與領導經驗",
@@ -916,22 +979,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Skill preview on hover
   const skillData = {
-    "data-core": {
-      title: "Python · R · SQL",
-      text:
-        "Analyse de données marketing et socio‑économiques avec Python, R et SQL, pour passer des tableaux de bord à des recommandations concrètes.",
+    "data-r": {
+      title: "R – Analyse statistique",
+      text: "Utilisation de R pour l’analyse statistique, la visualisation et les études marketing et académiques.",
       proofs: [
+        {
+          type: "Cours",
+          title: "Marketing Research & Research Methods (R)",
+          org: "NCCU",
+          meta: ["Cours académique"],
+          points: ["Méthodes quantitatives, régressions et visualisation appliquée."],
+          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
+        },
         {
           type: "Expérience",
           title: "Assistante de recherche",
           org: "Institut des Relations Internationales (NCCU)",
           meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
-          points: [
-            "Collecte, nettoyage et analyse de données pour des travaux de recherche.",
-            "Synthèses et supports pour séminaires.",
-          ],
+          points: ["Analyse statistique et visualisation pour des travaux de recherche."],
           actions: [{ label: "Voir l’expérience", href: "#exp-research" }],
         },
+      ],
+    },
+    "data-python": {
+      title: "Python – Analyse de données",
+      text: "Scripts Python pour nettoyer les données, calculer des indicateurs et automatiser des analyses.",
+      proofs: [
+        {
+          type: "Cours",
+          title: "Programming 101 (Python)",
+          org: "NCCU",
+          meta: ["Cours académique"],
+          points: ["Bases de la programmation et application à l’analyse de données."],
+          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
+        },
+        {
+          type: "Expérience",
+          title: "Assistante de recherche",
+          org: "Institut des Relations Internationales (NCCU)",
+          meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
+          points: ["Collecte, nettoyage et traitement de données pour la recherche."],
+          actions: [{ label: "Voir l’expérience", href: "#exp-research" }],
+        },
+      ],
+    },
+    "data-sql": {
+      title: "SQL – Requêtes & agrégation",
+      text: "Écriture de requêtes SQL pour interroger, filtrer et agréger des bases de données.",
+      links: [
+        {
+          label: "Cours Data Analysis & Programming (VBA & Access) – NCCU",
+          href: "#edu-nccu",
+        },
+      ],
+    },
+    "data-powerbi": {
+      title: "Power BI – Tableaux de bord",
+      text: "Construction de tableaux de bord interactifs pour suivre les performances marketing et financières.",
+      proofs: [
+        {
+          type: "Projet",
+          title: "Dashboard marketing orienté business",
+          org: "Projet académique",
+          meta: ["Power BI · Excel avancé · Python"],
+          points: [
+            "Suivi d'acquisition, d'engagement et de rétention sur un seul tableau de bord.",
+            "Structuration des KPIs pour aider la prise de décision.",
+          ],
+        },
+      ],
+    },
+    "data-tableau": {
+      title: "Tableau – Visualisation de données",
+      text: "Création de visualisations interactives pour explorer et communiquer des indicateurs clés.",
+      proofs: [
+        {
+          type: "Projet",
+          title: "Dashboard marketing orienté business",
+          org: "Projet académique",
+          meta: ["Tableau · Power BI"],
+          points: ["Visualisation de KPIs et tendances pour l'aide à la décision."],
+        },
+      ],
+    },
+    "data-statistics": {
+      title: "Statistiques & méthodes quantitatives",
+      text: "Méthodes quantitatives (R, statistiques) et qualitatives pour la recherche académique et les études de marché.",
+      proofs: [
         {
           type: "Cours",
           title: "Méthodes de recherche (R & statistiques)",
@@ -940,54 +1074,40 @@ document.addEventListener("DOMContentLoaded", () => {
           points: ["Méthodes quantitatives et visualisation pour analyses appliquées."],
           actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
         },
-      ],
-    },
-    "data-bi": {
-      title: "Tableau · Power BI",
-      text:
-        "Construction de tableaux de bord interactifs pour suivre les performances marketing et financières.",
-      proofs: [
         {
-          type: "Projet",
-          title: "Tableau de bord marketing orienté business",
-          org: "Projet académique",
-          meta: ["Power BI · Excel avancé · Python"],
-          points: [
-            "Création d’un dashboard pour suivre acquisition, engagement et rétention.",
-            "Structuration des KPIs pour aider la prise de décision.",
-          ],
-        },
-      ],
-    },
-    "data-statistics": {
-      title: "Statistiques & méthodes quantitatives",
-      text:
-        "Méthodes quantitatives (R, statistiques) et qualitatives pour la recherche académique et les études de marché.",
-      links: [
-        {
-          label: "Cours de recherche – NCCU (méthodes qualitatives et quantitatives)",
-          href: "#edu-nccu",
+          type: "Certification",
+          title: "Data Literacy",
+          org: "—",
+          meta: ["05/2026"],
+          points: ["Compréhension et interprétation des données pour la prise de décision."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }],
         },
       ],
     },
     "data-excel": {
-      title: "Modélisation & dashboards Excel",
+      title: "Modélisation & Dashboards Excel",
       text:
         "Modèles Excel avancés, suivi de KPIs et automatisation de reportings.",
       proofs: [
         {
           type: "Expérience",
-          title: "Assistante d’enseignement",
-          org: "College of Global Banking and Finance (NCCU)",
-          meta: ["Taipei · Taïwan", "07/2023 – 12/2023 · 07/2024 – 04/2025"],
-          points: ["Préparation de supports, suivi et coordination."],
-          actions: [{ label: "Voir l’expérience", href: "#exp-teaching" }],
+          title: "Assistante Marketing",
+          org: "Engoo",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: ["Dashboard de suivi de performance marketing et automatisation de rapports."],
+          actions: [{ label: "Voir l’expérience", href: "#exp-engoo" }],
         },
         {
           type: "Projet",
           title: "Dashboard marketing orienté business",
           org: "Projet académique",
           meta: ["Excel · Power BI"],
+          points: ["Modélisation, KPIs et visualisation."],
+        },
+        {
+          type: "Certification",
+          title: "TOSA 950/1000",
+          meta: ["10/2025"],
           points: ["Modélisation, KPIs et visualisation."],
         },
       ],
@@ -1018,16 +1138,51 @@ document.addEventListener("DOMContentLoaded", () => {
             "Suivi des indicateurs clés (trafic organique, CTR, conversions).",
           ],
         },
+        {
+          type: "Certification",
+          title: "Google – Programme Marketing Digital",
+          org: "Google 數位人才探索計畫",
+          meta: ["Marketing digital"],
+          points: ["Certification SEO, SEA, analytics et stratégie de contenu."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google數位人才探索計畫_證照.pdf" }],
+        },
       ],
     },
     "mkt-sea": {
       title: "SEA · Google Ads",
-      text:
-        "Gestion de campagnes Google Ads orientées performance (CTR, CVR) et optimisation budgétaire.",
-      links: [
+      text: "Gestion de campagnes Google Ads orientées performance (CTR, CVR) et optimisation budgétaire.",
+      proofs: [
         {
-          label: "Stage KPN – campagnes Google Ads",
-          href: "#exp-kpn",
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Campagnes Google Ads, suivi CTR et conversions."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+        {
+          type: "Certification",
+          title: "Google Ads – Annonces de Recherche",
+          org: "Google",
+          meta: ["Google Ads"],
+          points: ["Certification officielle Google Ads Recherche."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20搜尋廣告認證.png" }],
+        },
+        {
+          type: "Certification",
+          title: "Google Ads – Annonces Vidéo",
+          org: "Google",
+          meta: ["Google Ads"],
+          points: ["Certification officielle Google Ads Vidéo."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20影片廣告認證.png" }],
+        },
+        {
+          type: "Certification",
+          title: "Publicité efficace assistée par l'IA",
+          org: "Google",
+          meta: ["Google Ads · IA"],
+          points: ["Certification Google Ads – exploitation de l'IA pour la performance publicitaire."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/AI%20技術輔助高效廣告認證.png" }],
         },
       ],
     },
@@ -1071,7 +1226,59 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    "prog-python": {
+    "mkt-analytics": {
+      title: "Google Analytics",
+      text: "Analyse du trafic web, segmentation des audiences et suivi des conversions via Google Analytics.",
+      proofs: [
+        {
+          type: "Certification",
+          title: "Google Analytics",
+          org: "Google",
+          meta: ["Analytics"],
+          points: ["Certification officielle Google Analytics – analyse d'audience et suivi des performances."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Analytics%20Certificate.pdf" }],
+        },
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Suivi de performance et analyse du trafic web (Google Analytics + Search Console)."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+    },
+        "mkt-design": {
+      title: "Création de contenu & design visuel",
+      text: "Conception de visuels pour les réseaux sociaux, événements et supports de communication.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo / DMM.com",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: ["A/B testing de visuels et adaptation des créas par sous-segment cible."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+        {
+          type: "Portfolio",
+          title: "Photographie & supports promotionnels",
+          org: "Portfolio",
+          meta: ["Canva · Photoshop"],
+          points: ["Affiches, badges et publications pour des clubs et événements."],
+          actions: [{ label: "Voir le portfolio", href: "#portfolio" }],
+        },
+        {
+          type: "Certification",
+          title: "Google Ads – Créations publicitaires",
+          org: "Google",
+          meta: ["Google Ads"],
+          points: ["Certification Google Ads sur la conception de créas publicitaires performantes."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20廣告素材認證.png" }],
+        },
+      ],
+    },
+        "prog-python": {
       title: "Python pour l’analyse de données",
       text:
         "Scripts Python pour nettoyer les données, produire des indicateurs et automatiser certaines analyses.",
@@ -1228,6 +1435,14 @@ document.addEventListener("DOMContentLoaded", () => {
           points: ["Cours et projets en environnement international."],
           actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
         },
+        {
+          type: "Certification",
+          title: "TEFL – 120 heures",
+          org: "TEFL UK",
+          meta: ["Enseignement de l'anglais langue étrangère"],
+          points: ["Certification internationale pour l'enseignement de l'anglais (120h)."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/120%20hour%20TEFL%20Certificate_TEFL%20UK.png" }],
+        },
       ],
     },
     "lang-french": {
@@ -1279,17 +1494,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "lang-mandarin": {
-      title: "中文 – langue maternelle",
-      text:
-        "Mandarin langue maternelle, utilisé pour des projets académiques, des présentations et des activités bénévoles.",
-      proofs: [
-        {
-          type: "Langue",
-          title: "Mandarin (langue maternelle)",
-          org: "—",
-          meta: ["Mandarin"],
-          points: ["Utilisé au quotidien et dans des contextes académiques/bénévoles."],
-          actions: [{ label: "Voir bénévolat", href: "#volunteer" }],
+      title: "Mandarin  – Langue Maternelle"
         },
       ],
     },
@@ -1426,8 +1631,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     applySkillArea("all");
-    setActiveSkill("data-core");
-    updateSkillPreview("data-core");
+    setActiveSkill("data-r");
+    updateSkillPreview("data-r");
   }
 
   // Experience filters

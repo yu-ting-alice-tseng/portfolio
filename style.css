@@ -829,9 +829,10 @@ a { color: inherit; text-decoration: none; }
 /* Two-column: skills list left, preview panel right (sticky) */
 .skills-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
   align-items: start;
+  margin-top: 1rem;
 }
 
 .skills-right {
@@ -841,8 +842,8 @@ a { color: inherit; text-decoration: none; }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.4rem 1.6rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.2rem;
 }
 
 .skills-toolbar { margin-bottom: 1rem; }
@@ -962,7 +963,7 @@ a { color: inherit; text-decoration: none; }
 
 .skill-preview-proofs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.8rem;
   margin-top: 0.9rem;
 }
@@ -1371,7 +1372,7 @@ a { color: inherit; text-decoration: none; }
   .award-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skills-layout { grid-template-columns: minmax(0, 1fr); }
   .skills-right { position: static; }
-  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skills-grid { grid-template-columns: minmax(0, 1fr); }
   .contact-grid { grid-template-columns: minmax(0, 1fr); }
 
   .timeline-item {
