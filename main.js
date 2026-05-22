@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = String(new Date().getFullYear());
@@ -96,7 +96,12 @@
           period: "09/2020 – 06/2025",
           title: "Bachelor en français & diplomatie",
           school: "Université Nationale Chengchi (NCCU)",
-          point1: "Double majeure : langues européennes (français) & diplomatie. Mineures : économie et droit.",
+          majorLabel: "Majeure",
+          minorLabel: "Mineure",
+          major1: "Langues européennes (français)",
+          major2: "Diplomatie",
+          minor1: "Économie",
+          minor2: "Droit",
           point2: "Travaux de recherche sur les enjeux économiques et géopolitiques.",
           gpa: "GPA : 4,22 / 4,3 (3,99 / 4,0).",
         },
@@ -371,7 +376,12 @@
           period: "09/2020 – 06/2025",
           title: "Bachelor in French & Diplomacy",
           school: "National Chengchi University (NCCU)",
-          point1: "Double major: European languages (French) & Diplomacy. Minors: Economics and Law.",
+          majorLabel: "Major",
+          minorLabel: "Minor",
+          major1: "European Languages (French)",
+          major2: "Diplomacy",
+          minor1: "Economics",
+          minor2: "Law",
           point2: "Research work on economic and geopolitical issues.",
           gpa: "GPA: 4.22/4.3 (3.99/4.0).",
         },
@@ -645,7 +655,12 @@
           period: "2020/09 – 2025/06（預計）",
           title: "歐洲語文學系法文組、外交學系雙主修；經濟、法律輔系",
           school: "國立政治大學（NCCU）",
-          point1: "雙主修：歐洲語文（法文）與外交學；輔系：經濟與法律。",
+          majorLabel: "主修",
+          minorLabel: "輔系",
+          major1: "歐洲語文（法文）",
+          major2: "外交學",
+          minor1: "經濟",
+          minor2: "法律",
           point2: "從事經濟與地緣政治議題的學術研究。",
           gpa: "GPA：4.22/4.3（3.99/4.0）。",
         },

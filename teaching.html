@@ -46,10 +46,6 @@
           <a href="#honors" data-i18n="nav.honors">Distinctions</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
-        <div class="page-switch" aria-label="Choisir la page">
-          <a href="index.html" class="page-btn" data-i18n="pageSwitcher.business">Business</a>
-          <a href="teaching.html" class="page-btn is-active" data-i18n="pageSwitcher.teaching">Enseignement</a>
-        </div>
         <div class="lang-switch" aria-label="Choisir la langue">
           <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
           <button class="lang-btn" data-lang="en" type="button">EN</button>
@@ -60,10 +56,6 @@
 
     <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
       <div class="mobile-nav-inner">
-        <div class="page-switch" style="margin-bottom: 0.75rem;">
-          <a href="index.html" class="page-btn" data-i18n="pageSwitcher.business">Business</a>
-          <a href="teaching.html" class="page-btn is-active" data-i18n="pageSwitcher.teaching">Enseignement</a>
-        </div>
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
           <a href="#about" data-i18n="nav.about">À propos</a>
           <a href="#skills" data-i18n="nav.teaching.languages">Langues</a>
@@ -150,6 +142,8 @@
             </p>
           </header>
 
+          <div class="skills-layout">
+          <div class="skills-left">
           <div class="skills-grid" style="grid-template-columns: minmax(0, 1fr);">
             <div class="skills-block" data-skill-area="languages">
               <h3>Languages</h3>
@@ -187,17 +181,20 @@
               </div>
             </div>
           </div>
-
-          <div class="skill-preview" aria-live="polite">
-            <h3 class="skill-preview-title" data-i18n="skills.previewTitle">
-              Détail d'une compétence
-            </h3>
-            <p class="skill-preview-text" data-i18n="skills.previewText">
-              Survolez une compétence pour voir des preuves (projets, cours,
-              expériences) avec le contexte, ce qui a été fait et les résultats.
-            </p>
-            <div class="skill-preview-proofs"></div>
-          </div>
+          </div><!-- /.skills-left -->
+          <div class="skills-right">
+            <div class="skill-preview" aria-live="polite">
+              <h3 class="skill-preview-title" data-i18n="skills.previewTitle">
+                Détail d'une compétence
+              </h3>
+              <p class="skill-preview-text" data-i18n="skills.previewText">
+                Survolez une compétence pour voir des preuves (projets, cours,
+                expériences) avec le contexte, ce qui a été fait et les résultats.
+              </p>
+              <div class="skill-preview-proofs"></div>
+            </div>
+          </div><!-- /.skills-right -->
+          </div><!-- /.skills-layout -->
         </div>
       </section>
 
@@ -224,16 +221,19 @@
                   <li data-i18n="education.emlyon.point1">Spécialisation en marketing, data et stratégie.</li>
                   <li data-i18n="education.emlyon.point2">Projets de groupe avec des entreprises partenaires.</li>
                 </ul>
-                <p class="education-extra">
-                  <span data-i18n="education.emlyon.gpa">GPA : en cours.</span>
-                </p>
-                <div class="edu-courses">
-                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
-                  <div class="course-chips">
-                    <span class="course-chip">Digital Marketing</span>
-                    <span class="course-chip">Data Science &amp; AI for Business</span>
-                    <span class="course-chip">Brand Strategy</span>
-                    <span class="course-chip">Marketing Analytics</span>
+                <div class="edu-info">
+                  <div class="edu-info-row">
+                    <span class="edu-info-key">GPA</span>
+                    <span data-i18n="education.emlyon.gpa">en cours</span>
+                  </div>
+                  <div class="edu-info-row">
+                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
+                    <div class="course-chips">
+                      <span class="course-chip">Digital Marketing</span>
+                      <span class="course-chip">Data Science &amp; AI for Business</span>
+                      <span class="course-chip">Brand Strategy</span>
+                      <span class="course-chip">Marketing Analytics</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -247,22 +247,36 @@
               <div class="timeline-body">
                 <h3 data-i18n="education.nccu.title">Bachelor en français &amp; diplomatie</h3>
                 <p class="timeline-company" data-i18n="education.nccu.school">Université Nationale Chengchi (NCCU)</p>
+                <div class="edu-degree-section">
+                  <div class="edu-degree-row">
+                    <span class="edu-degree-label" data-i18n="education.nccu.majorLabel">Majeure</span>
+                    <span class="edu-degree-chip" data-i18n="education.nccu.major1">Langues européennes (français)</span>
+                    <span class="edu-degree-chip" data-i18n="education.nccu.major2">Diplomatie</span>
+                  </div>
+                  <div class="edu-degree-row">
+                    <span class="edu-degree-label" data-i18n="education.nccu.minorLabel">Mineure</span>
+                    <span class="edu-degree-chip edu-degree-chip--minor" data-i18n="education.nccu.minor1">Économie</span>
+                    <span class="edu-degree-chip edu-degree-chip--minor" data-i18n="education.nccu.minor2">Droit</span>
+                  </div>
+                </div>
                 <ul class="timeline-points">
-                  <li data-i18n="education.nccu.point1">Double majeure : langues européennes (français) &amp; diplomatie. Mineures : économie et droit.</li>
                   <li data-i18n="education.nccu.point2">Travaux de recherche sur les enjeux économiques et géopolitiques.</li>
                 </ul>
-                <p class="education-extra">
-                  <span data-i18n="education.nccu.gpa">GPA : 4,22 / 4,3 (3,99 / 4,0).</span>
-                </p>
-                <div class="edu-courses">
-                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
-                  <div class="course-chips">
-                    <span class="course-chip">Management</span>
-                    <span class="course-chip">Data Analysis &amp; Programming (VBA &amp; Access)</span>
-                    <span class="course-chip">Programming 101 (Python)</span>
-                    <span class="course-chip">Research Methods (R &amp; Statistics)</span>
-                    <span class="course-chip">Marketing Research (R, Decanter AI)</span>
-                    <span class="course-chip">International Finance</span>
+                <div class="edu-info">
+                  <div class="edu-info-row">
+                    <span class="edu-info-key">GPA</span>
+                    <span data-i18n="education.nccu.gpa">4,22 / 4,3 (3,99 / 4,0).</span>
+                  </div>
+                  <div class="edu-info-row">
+                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
+                    <div class="course-chips">
+                      <span class="course-chip">Management</span>
+                      <span class="course-chip">Data Analysis &amp; Programming (VBA &amp; Access)</span>
+                      <span class="course-chip">Programming 101 (Python)</span>
+                      <span class="course-chip">Research Methods (R &amp; Statistics)</span>
+                      <span class="course-chip">Marketing Research (R, Decanter AI)</span>
+                      <span class="course-chip">International Finance</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -280,12 +294,14 @@
                   <li data-i18n="education.paris1.point1">Approfondissement des politiques européennes et internationales.</li>
                   <li data-i18n="education.paris1.point2">Immersion académique et culturelle en France.</li>
                 </ul>
-                <div class="edu-courses">
-                  <p class="edu-courses-label" data-i18n="education.coursesLabel">Cours pertinents</p>
-                  <div class="course-chips">
-                    <span class="course-chip" data-i18n="education.paris1.course1">Science politique</span>
-                    <span class="course-chip" data-i18n="education.paris1.course2">Relations internationales</span>
-                    <span class="course-chip" data-i18n="education.paris1.course3">Politiques européennes</span>
+                <div class="edu-info">
+                  <div class="edu-info-row">
+                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
+                    <div class="course-chips">
+                      <span class="course-chip" data-i18n="education.paris1.course1">Science politique</span>
+                      <span class="course-chip" data-i18n="education.paris1.course2">Relations internationales</span>
+                      <span class="course-chip" data-i18n="education.paris1.course3">Politiques européennes</span>
+                    </div>
                   </div>
                 </div>
               </div>
