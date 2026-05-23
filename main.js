@@ -278,6 +278,8 @@ document.addEventListener("DOMContentLoaded", () => {
           point2: "Veille concurrentielle, analyse d’audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
           portfolioLink: "Voir les créations (PDF)",
+          excelLink: "Télécharger le tableau de bord XHS (Excel)",
+          excelHref: "assets/Engoo_XHS Dashboard_FR.xlsx",
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
@@ -710,6 +712,8 @@ document.addEventListener("DOMContentLoaded", () => {
           point2: "Competitive monitoring, audience analysis and visual adaptation by target sub-segment.",
           point3: "Created Meta content (Facebook & Instagram) aligned with trends and brand identity.",
           portfolioLink: "View creations (PDF)",
+          excelLink: "Download XHS Dashboard (Excel)",
+          excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",
           stat1: "Views",
           stat2: "Followers",
           stat3: "Interactions",
@@ -1135,6 +1139,8 @@ document.addEventListener("DOMContentLoaded", () => {
           point2: "競品監測、受眾分析，針對不同子客群調整視覺素材。",
           point3: "製作 Meta 平台（Facebook & Instagram）內容，融合品牌調性與趨勢熱點。",
           portfolioLink: "查看作品集 (PDF)",
+          excelLink: "下載小紅書數據儀表板（Excel）",
+          excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",
           stat1: "瀏覽量",
           stat2: "粉絲數",
           stat3: "互動量",
@@ -1356,6 +1362,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!key) return;
       const val = getTranslation(dict, key);
       if (val !== null) el.setAttribute("placeholder", val);
+    });
+
+    document.querySelectorAll("[data-i18n-href]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-href");
+      if (!key) return;
+      const val = getTranslation(dict, key);
+      if (val !== null) el.setAttribute("href", val);
     });
 
     // HTML-rich elements (use innerHTML, not textContent)
