@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     yearSpan.textContent = String(new Date().getFullYear());
   }
 
+  // Fix corrupted PDF hrefs (encoding artifact from prior file operation)
+  document.querySelectorAll('a[href*="250508_"]').forEach(a => {
+    if (!a.href.includes("作品集")) {
+      a.setAttribute("href", "assets/250508_作品集_社群經營與設計_c.pdf");
+    }
+  });
+
   // Mobile nav
   const navToggle = document.querySelector("[data-nav-toggle]");
   const mobileNav = document.querySelector("[data-mobile-nav]");
@@ -51,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
         contact: "Contact",
         teaching: {
           languages: "Langues",
+          services: "Services",
+          expTeaching: "Expériences",
           engagement: "Engagement",
         },
       },
@@ -79,6 +88,73 @@ document.addEventListener("DOMContentLoaded", () => {
         filterAll: "Tout",
         previewTitle: "Détail d’une compétence",
         previewText: "Survolez une compétence pour voir des preuves (projets, cours, expériences) avec le contexte, ce qui a été fait et les résultats.",
+        chipEnglish: "Anglais – IELTS 8.0 (C1)",
+        chipFrench: "Français – DALF C1",
+        chipJapanese: "Japonais – JLPT N1",
+        chipMandarin: "Mandarin",
+        chipMandarinNative: "Mandarin – Langue maternelle",
+        filterData: "Data & Analytics",
+        filterMarketing: "Marketing Digital",
+        filterConsulting: "Consulting & Stratégie",
+        filterFinance: "Finance",
+        filterSoft: "Soft Skills",
+        filterLanguages: "Langues",
+        blockData: "Data & Analytics",
+        blockMarketing: "Marketing Digital",
+        blockConsulting: "Consulting & Stratégie",
+        blockFinance: "Finance",
+        blockSoft: "Soft Skills",
+        blockLanguages: "Langues",
+        subData1: "Langages & Requêtes",
+        subData2: "Dashboards & Visualisation",
+        subData3: "Méthodes & Analyse",
+        subData4: "AI & Outils",
+        subMkt1: "Acquisition & Performance",
+        subMkt2: "Social Media & Contenu",
+        subMkt3: "Stratégie & Planification",
+        subCons1: "Analyse Stratégique",
+        subCons2: "Business & Présentation",
+        subFin1: "Cours & Fondamentaux",
+        subSoft1: "Collaboration",
+        subSoft2: "Leadership & Organisation",
+        subSoft3: "Communication",
+        chipStatistics: "Statistiques & Méthodes Quantitatives",
+        chipDesign: "Création De Contenu & Design Visuel",
+        chipResearch: "Études De Marché & Positionnement",
+        chipCampaign: "Planification De Campagnes",
+        chipIntercultural: "Travail Interculturel",
+        chipLeadership: "Leadership & Gestion D'Équipe",
+        chipProject: "Gestion De Projet & Organisation",
+        chipComm: "Communication & Prise De Parole",
+        chipAiTools: "Outils IA (ChatGPT, Claude, Gemini)",
+        chipAiAds: "Publicité Assistée par l'IA",
+        chipAiBusiness: "IA Pour Les Affaires",
+      },
+      tags: {
+        teaching: "Enseignement",
+        online: "En ligne",
+        translation: "Traduction",
+        proofreading: "Correction",
+        language: "Langue",
+        mentoring: "Mentorat",
+        immersion: "Immersion",
+        intercultural: "Interculturel",
+        exchange: "Échange",
+        speaking: "Prise de parole",
+        bilingual: "Bilingue",
+        volunteer: "Bénévolat",
+        social: "Impact social",
+        entrepreneurship: "Entrepreneuriat",
+        strategy: "Stratégie",
+        leadership: "Leadership",
+        marketing: "Marketing",
+        clubs: "Clubs",
+        culture: "Culture",
+        data: "Data",
+        research: "Recherche",
+      },
+      locations: {
+        online: "En ligne · Taïwan",
       },
       education: {
         title: "Formation académique",
@@ -125,10 +201,60 @@ document.addEventListener("DOMContentLoaded", () => {
         title2: "échange interculturel",
         summary: "Locutrice native en mandarin, certifiée DALF C1 (français), IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des programmes d’accompagnement linguistique et d’échange culturel à Taïwan.",
         ctaSecondary: "Voir mes engagements",
+        availabilityLabel: "Enseignement",
+        availabilityValue: "En ligne · Disponible",
       },
       teachingLanguages: {
         title: "Compétences linguistiques",
         subtitle: "Certifications officielles et pratique quotidienne dans quatre langues.",
+      },
+      teachingServices: {
+        title: "Services d'Enseignement",
+        subtitle: "Des cours personnalisés, dans un environnement détendu et bienveillant, pour progresser à son propre rythme.",
+        philosophy: "Dans chaque cours, j'adapte mes méthodes à l'élève : <strong>jeux</strong>, <strong>exercices ciblés</strong> et <strong>échanges interactifs</strong> pour rendre l'apprentissage naturel et durable.",
+        ielts: {
+          title: "Préparation à l'IELTS",
+          desc: "Coaching complet pour les 4 modules. Stratégies de test, entraînement intensif et simulations d'examen, avec un suivi personnalisé de la progression.",
+          tag1: "Reading & Writing",
+          tag2: "Speaking & Listening",
+          tag3: "Stratégies d'Examen",
+          tag4: "Score Visé 6.0 – 8.0+",
+        },
+        grades: {
+          title: "Anglais Tous Niveaux",
+          desc: "Cours adaptés au programme scolaire taïwanais pour élèves du primaire au lycée. Grammaire, vocabulaire, compréhension et expression.",
+          tag1: "Primaire",
+          tag2: "Collège",
+          tag3: "Lycée",
+          tag4: "Renforcement Scolaire",
+        },
+        exams: {
+          title: "Certifications Cambridge & 英檢",
+          desc: "Préparation structurée aux examens officiels Cambridge et au GEPT (全民英檢). Entraînement sur annales et méthodes pour chaque épreuve.",
+          tag1: "YLE (Children)",
+          tag2: "A2 Key / B1 Preliminary",
+          tag3: "B2 First",
+          tag4: "全民英檢 GEPT",
+        },
+        skills: {
+          title: "Renforcement D'Une Compétence Ciblée",
+          desc: "Travail ciblé sur une compétence spécifique : rédaction, lecture, expression orale, grammaire ou préparation aux rédactions scolaires.",
+          tag1: "Writing",
+          tag2: "Reading",
+          tag3: "Speaking",
+          tag4: "Grammaire & Vocabulaire",
+        },
+      },
+      teachingExp: {
+        title: "Expériences D'Enseignement",
+        subtitle: "Cours en ligne, préparation aux certifications et services de traduction.",
+        translation: {
+          period: "2022 – 2024",
+          title: "Traductrice & Correctrice (Freelance)",
+          company: "Freelance · Projets Académiques & Éditoriaux",
+          point1: "Traduction de documents académiques et de contenus professionnels entre le chinois, l'anglais et le français.",
+          point2: "Correction et relecture de thèses, articles et supports de communication pour des étudiants et entreprises.",
+        },
       },
       teachingEngagement: {
         title: "Engagement linguistique & international",
@@ -151,6 +277,10 @@ document.addEventListener("DOMContentLoaded", () => {
           point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing – +89.1% d’interactions et +69.7% d’abonnés en 3 mois.",
           point2: "Veille concurrentielle, analyse d’audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
+          portfolioLink: "Voir les créations (PDF)",
+          stat1: "Vues",
+          stat2: "Abonnés",
+          stat3: "Interactions",
         },
         teaching: {
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
@@ -227,11 +357,13 @@ document.addEventListener("DOMContentLoaded", () => {
             "Directrice marketing & adhésions – Club de guzheng (cithare chinoise)",
           text:
             "Organisation des campagnes de recrutement, gestion des réseaux sociaux, adaptation des cours en fonction des retours et coordination des événements et performances.",
+          portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
           title: "Co‑fondatrice – Sora Education (camps de jeunesse)",
           text:
             "Organisation de cinq camps d’été d’une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l’offre de cours et la stratégie marketing.",
+          stat1: "Camps organisés",
         },
         clubs: {
           title: "Autres clubs étudiants",
@@ -245,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
         filterClubs: "Clubs & culture",
         viewAll: "Voir tout",
         restoCoeur: {
-          period: "10/2024 – Présent",
+          period: "10/2025 – Présent",
           title: "Bénévole – Restos du Cœur",
           org: "Les Restos du Cœur · Association humanitaire",
           point1: "Distribution alimentaire et accueil de bénéficiaires en situation de précarité.",
@@ -265,6 +397,9 @@ document.addEventListener("DOMContentLoaded", () => {
             "Pilotage d’une équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d’anglais, au‑delà de l’objectif budgétaire.",
           point2:
             "Collaboration avec des partenaires locaux et internationaux sur des programmes de volontariat.",
+          stat1: "Volontaires recrutés",
+          stat2: "Participants",
+          stat3: "Objectif dépassé",
         },
         usr: {
           period: "09/2024 – Présent",
@@ -301,19 +436,22 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle:
           "Reconnaissance académique pour mes résultats et mon engagement.",
         exchange: {
-          title: "Bourse d’échange – Ministère de l’Éducation (Taïwan)",
+          title: "Bourse d’échange",
+          org: "Ministère de l’Éducation (Taïwan)",
           text:
             "Bourse au mérite pour un programme d’échange international en France.",
           year: "2024",
         },
         short: {
-          title: "Bourse d’études à court terme – NCCU",
+          title: "Bourse d’études à court terme",
+          org: "NCCU – Université Nationale Chengchi",
           text:
             "Financement au mérite pour un séjour d’études à l’étranger.",
           year: "2024",
         },
         excellence: {
           title: "Certificate of Excellence – Top 5% GPA",
+          org: "NCCU – Université Nationale Chengchi",
           text:
             "Récompense académique pour des résultats parmi les 5 % meilleurs étudiants de NCCU.",
           year: "2021, 2023",
@@ -352,6 +490,8 @@ document.addEventListener("DOMContentLoaded", () => {
         contact: "Contact",
         teaching: {
           languages: "Languages",
+          services: "Services",
+          expTeaching: "Experience",
           engagement: "Engagement",
         },
       },
@@ -380,6 +520,73 @@ document.addEventListener("DOMContentLoaded", () => {
         filterAll: "All",
         previewTitle: "Skill Detail",
         previewText: "Hover over a skill to see evidence (projects, courses, experience) with context, what was done and the outcomes.",
+        chipEnglish: "English – IELTS 8.0 (C1)",
+        chipFrench: "French – DALF C1",
+        chipJapanese: "Japanese – JLPT N1",
+        chipMandarin: "Mandarin",
+        chipMandarinNative: "Mandarin – Native Language",
+        filterData: "Data & Analytics",
+        filterMarketing: "Marketing",
+        filterConsulting: "Consulting & Strategy",
+        filterFinance: "Finance",
+        filterSoft: "Soft Skills",
+        filterLanguages: "Languages",
+        blockData: "Data & Analytics",
+        blockMarketing: "Digital Marketing",
+        blockConsulting: "Consulting & Strategy",
+        blockFinance: "Finance",
+        blockSoft: "Soft Skills",
+        blockLanguages: "Languages",
+        subData1: "Languages & Queries",
+        subData2: "Dashboards & Visualisation",
+        subData3: "Methods & Analysis",
+        subData4: "AI & Tools",
+        subMkt1: "Acquisition & Performance",
+        subMkt2: "Social Media & Content",
+        subMkt3: "Strategy & Planning",
+        subCons1: "Strategic Analysis",
+        subCons2: "Business & Presentations",
+        subFin1: "Courses & Fundamentals",
+        subSoft1: "Collaboration",
+        subSoft2: "Leadership & Organisation",
+        subSoft3: "Communication",
+        chipStatistics: "Statistics & Quantitative Methods",
+        chipDesign: "Content Creation & Visual Design",
+        chipResearch: "Market Research & Positioning",
+        chipCampaign: "Campaign Planning",
+        chipIntercultural: "Cross-cultural Collaboration",
+        chipLeadership: "Leadership & Team Management",
+        chipProject: "Project Management & Organisation",
+        chipComm: "Communication & Public Speaking",
+        chipAiTools: "AI Tools (ChatGPT, Claude, Gemini)",
+        chipAiAds: "AI-Powered Advertising",
+        chipAiBusiness: "AI for Business",
+      },
+      tags: {
+        teaching: "Teaching",
+        online: "Online",
+        translation: "Translation",
+        proofreading: "Proofreading",
+        language: "Language",
+        mentoring: "Mentoring",
+        immersion: "Immersion",
+        intercultural: "Intercultural",
+        exchange: "Exchange",
+        speaking: "Public Speaking",
+        bilingual: "Bilingual",
+        volunteer: "Volunteering",
+        social: "Social Impact",
+        entrepreneurship: "Entrepreneurship",
+        strategy: "Strategy",
+        leadership: "Leadership",
+        marketing: "Marketing",
+        clubs: "Clubs",
+        culture: "Culture",
+        data: "Data",
+        research: "Research",
+      },
+      locations: {
+        online: "Online · Taiwan",
       },
       education: {
         title: "Academic Background",
@@ -426,10 +633,60 @@ document.addEventListener("DOMContentLoaded", () => {
         title2: "intercultural exchange",
         summary: "Native Mandarin speaker, certified DALF C1 (French), IELTS 8.0 (English) and JLPT N1 (Japanese). Engaged in language mentoring and cultural exchange programmes in Taiwan.",
         ctaSecondary: "See my engagement",
+        availabilityLabel: "Teaching",
+        availabilityValue: "Online · Available",
       },
       teachingLanguages: {
         title: "Language Skills",
         subtitle: "Official certifications and daily use in four languages.",
+      },
+      teachingServices: {
+        title: "Teaching Services",
+        subtitle: "Personalised lessons in a relaxed and supportive environment, so every learner can progress at their own pace.",
+        philosophy: "In every lesson, I adapt to the student: <strong>games</strong>, <strong>targeted exercises</strong> and <strong>interactive conversation</strong> to make learning natural and lasting.",
+        ielts: {
+          title: "IELTS Preparation",
+          desc: "Full coaching across all 4 modules. Test strategies, intensive practice and mock exams, with personalised progress tracking.",
+          tag1: "Reading & Writing",
+          tag2: "Speaking & Listening",
+          tag3: "Exam Strategies",
+          tag4: "Target Band 6.0 – 8.0+",
+        },
+        grades: {
+          title: "English For All Levels",
+          desc: "Lessons aligned with the Taiwanese school curriculum from primary to high school. Grammar, vocabulary, comprehension and expression.",
+          tag1: "Primary School",
+          tag2: "Middle School",
+          tag3: "High School",
+          tag4: "School Support",
+        },
+        exams: {
+          title: "Cambridge English & GEPT",
+          desc: "Structured preparation for official Cambridge and GEPT exams. Past paper practice and techniques tailored to each test component.",
+          tag1: "YLE (Children)",
+          tag2: "A2 Key / B1 Preliminary",
+          tag3: "B2 First",
+          tag4: "GEPT 全民英檢",
+        },
+        skills: {
+          title: "Targeted Skill Reinforcement",
+          desc: "Focused work on a specific skill: writing, reading, speaking, grammar, or essay preparation for school exams.",
+          tag1: "Writing",
+          tag2: "Reading",
+          tag3: "Speaking",
+          tag4: "Grammar & Vocabulary",
+        },
+      },
+      teachingExp: {
+        title: "Teaching Experience",
+        subtitle: "Online tutoring, exam preparation and translation & proofreading services.",
+        translation: {
+          period: "2022 – 2024",
+          title: "Translator & Proofreader (Freelance)",
+          company: "Freelance · Academic & Editorial Projects",
+          point1: "Translation of academic documents and professional content between Chinese, English and French.",
+          point2: "Proofreading and editing of theses, articles and communication materials for students and businesses.",
+        },
       },
       teachingEngagement: {
         title: "Language & International Engagement",
@@ -452,6 +709,10 @@ document.addEventListener("DOMContentLoaded", () => {
           point1: "Xiaohongshu content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
           point2: "Competitive monitoring, audience analysis and visual adaptation by target sub-segment.",
           point3: "Created Meta content (Facebook & Instagram) aligned with trends and brand identity.",
+          portfolioLink: "View creations (PDF)",
+          stat1: "Views",
+          stat2: "Followers",
+          stat3: "Interactions",
         },
         teaching: {
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
@@ -528,11 +789,13 @@ document.addEventListener("DOMContentLoaded", () => {
             "Marketing & Membership Director – Guzheng (Chinese Zither) Club",
           text:
             "Led recruitment campaigns, managed social media, adjusted course structure based on feedback and coordinated events and performances.",
+          portfolioLink: "View creations (PDF)",
         },
         camps: {
           title: "Co‑Founder – Sora Education (Youth Camps)",
           text:
             "Co‑ran five week‑long summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
+          stat1: "Camps organised",
         },
         clubs: {
           title: "Other Student Clubs",
@@ -546,7 +809,7 @@ document.addEventListener("DOMContentLoaded", () => {
         filterClubs: "Clubs & culture",
         viewAll: "View all",
         restoCoeur: {
-          period: "10/2024 – Present",
+          period: "10/2025 – Present",
           title: "Volunteer – Restos du Cœur",
           org: "Les Restos du Cœur · Humanitarian association",
           point1: "Food distribution and support for people in precarious situations.",
@@ -566,6 +829,9 @@ document.addEventListener("DOMContentLoaded", () => {
             "Led a marketing team of four to recruit 15 volunteers and over 60 participants for an English camp, exceeding the balanced‑budget target by 53.7%.",
           point2:
             "Collaborated with local and international partners on global volunteer programmes.",
+          stat1: "Volunteers recruited",
+          stat2: "Participants",
+          stat3: "Above target",
         },
         usr: {
           period: "Sep. 2024 – Present",
@@ -601,23 +867,21 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Honors & Awards",
         subtitle: "Academic recognition for performance and engagement.",
         exchange: {
-          title:
-            "Exchange Student Scholarship (Merit‑Based) – Ministry of Education, Taiwan",
-          text:
-            "Merit scholarship for international exchange studies in France.",
+          title: "Exchange Student Scholarship",
+          org: "Ministry of Education, Taiwan",
+          text: "Merit scholarship for international exchange studies in France.",
           year: "2024",
         },
         short: {
-          title:
-            "Short‑term Study Abroad Scholarship (Merit‑Based) – NCCU",
-          text:
-            "Funding for short‑term study abroad based on academic excellence.",
+          title: "Short‑term Study Abroad Scholarship",
+          org: "NCCU – National Chengchi University",
+          text: "Funding for short‑term study abroad based on academic excellence.",
           year: "2024",
         },
         excellence: {
-          title: "Certificate of Excellence (Top 5% GPA) – NCCU",
-          text:
-            "Awarded for maintaining a GPA within the top 5% of the cohort.",
+          title: "Certificate of Excellence – Top 5% GPA",
+          org: "NCCU – National Chengchi University",
+          text: "Awarded for maintaining a GPA within the top 5% of the cohort.",
           year: "2021, 2023",
         },
       },
@@ -654,6 +918,8 @@ document.addEventListener("DOMContentLoaded", () => {
         contact: "聯絡方式",
         teaching: {
           languages: "語言能力",
+          services: "教學服務",
+          expTeaching: "教學經歷",
           engagement: "國際參與",
         },
       },
@@ -681,6 +947,73 @@ document.addEventListener("DOMContentLoaded", () => {
         filterAll: "全部",
         previewTitle: "技能詳情",
         previewText: "將滑鼠移至技能標籤，查看相關佐證（專案、課程、經歷）及成果說明。",
+        chipEnglish: "英語 – IELTS 8.0 (C1)",
+        chipFrench: "法語 – DALF C1",
+        chipJapanese: "日本語 – JLPT N1",
+        chipMandarin: "中文",
+        chipMandarinNative: "中文 – 母語",
+        filterData: "數據分析",
+        filterMarketing: "行銷",
+        filterConsulting: "顧問策略",
+        filterFinance: "財務金融",
+        filterSoft: "軟實力",
+        filterLanguages: "語言",
+        blockData: "數據分析",
+        blockMarketing: "數位行銷",
+        blockConsulting: "顧問策略",
+        blockFinance: "財務金融",
+        blockSoft: "軟實力",
+        blockLanguages: "語言",
+        subData1: "程式語言",
+        subData2: "數據視覺化",
+        subData3: "分析方法",
+        subData4: "AI 工具",
+        subMkt1: "廣告投放",
+        subMkt2: "社群媒體與內容",
+        subMkt3: "策略規劃",
+        subCons1: "策略分析",
+        subCons2: "商業提案",
+        subFin1: "課程與基礎",
+        subSoft1: "跨文化合作",
+        subSoft2: "領導與組織",
+        subSoft3: "溝通",
+        chipStatistics: "統計與量化方法",
+        chipDesign: "內容創作與視覺設計",
+        chipResearch: "市場調研與定位",
+        chipCampaign: "行銷活動規劃",
+        chipIntercultural: "跨文化協作",
+        chipLeadership: "領導與團隊管理",
+        chipProject: "專案管理與組織",
+        chipComm: "溝通與公眾演講",
+        chipAiTools: "AI 工具（ChatGPT、Claude、Gemini）",
+        chipAiAds: "AI 輔助廣告",
+        chipAiBusiness: "AI 商業應用",
+      },
+      tags: {
+        teaching: "教學",
+        online: "線上",
+        translation: "翻譯",
+        proofreading: "校稿",
+        language: "語言",
+        mentoring: "導師",
+        immersion: "語言沉浸",
+        intercultural: "跨文化",
+        exchange: "交流",
+        speaking: "公眾演講",
+        bilingual: "雙語",
+        volunteer: "志工",
+        social: "社會影響",
+        entrepreneurship: "創業",
+        strategy: "策略",
+        leadership: "領導力",
+        marketing: "行銷",
+        clubs: "社團",
+        culture: "文化",
+        data: "數據",
+        research: "研究",
+      },
+      locations: {
+        online: "線上 · 台灣",
       },
       education: {
         title: "學歷背景",
@@ -726,10 +1059,60 @@ document.addEventListener("DOMContentLoaded", () => {
         title2: "促進文化交流",
         summary: "中文母語使用者，持有 DALF C1（法語）、IELTS 8.0（英語）、JLPT N1（日語）認證。深度參與語言夥伴計畫與跨文化交流活動。",
         ctaSecondary: "查看我的參與紀錄",
+        availabilityLabel: "線上教學",
+        availabilityValue: "線上 · 開課中",
       },
       teachingLanguages: {
         title: "語言能力",
         subtitle: "四語認證與日常應用。",
+      },
+      teachingServices: {
+        title: "教學服務",
+        subtitle: "量身打造的課程，在輕鬆友善的環境中，讓每位學生以自己的步調穩定進步。",
+        philosophy: "每堂課我都會根據學生需求調整方式：<strong>遊戲</strong>、<strong>針對性練習</strong>與<strong>互動對話</strong>，讓學習自然又有效。",
+        ielts: {
+          title: "IELTS 備考",
+          desc: "四大項目全面訓練：閱讀、寫作、口說、聽力。搭配考試策略、模擬測驗與個人化進度追蹤。",
+          tag1: "閱讀與寫作",
+          tag2: "口說與聽力",
+          tag3: "考試策略",
+          tag4: "目標 Band 6.0 – 8.0+",
+        },
+        grades: {
+          title: "各年段英語課程",
+          desc: "依照台灣學校課綱，提供國小至高中各年段英語課程。涵蓋文法、字彙、閱讀理解與英語表達。",
+          tag1: "國小",
+          tag2: "國中",
+          tag3: "高中",
+          tag4: "課業輔導",
+        },
+        exams: {
+          title: "全民英檢 & 劍橋英語認證",
+          desc: "針對全民英檢（GEPT）與劍橋英語系列考試的系統備考，搭配歷屆試題演練與各項目解題技巧。",
+          tag1: "YLE（兒童英檢）",
+          tag2: "A2 Key / B1 Preliminary",
+          tag3: "B2 First",
+          tag4: "全民英檢 GEPT",
+        },
+        skills: {
+          title: "單項能力加強",
+          desc: "針對單一技能深度訓練：寫作、閱讀、口說、文法，或學校作文與英語小考的衝刺準備。",
+          tag1: "寫作",
+          tag2: "閱讀",
+          tag3: "口說",
+          tag4: "文法與字彙",
+        },
+      },
+      teachingExp: {
+        title: "教學經歷",
+        subtitle: "線上英語家教、考試備考輔導，以及翻譯與校對服務。",
+        translation: {
+          period: "2022 – 2024",
+          title: "翻譯與校對（自由接案）",
+          company: "自由接案 · 學術與編輯專案",
+          point1: "中英法三語學術文件與專業內容翻譯。",
+          point2: "學術論文、文章與宣傳資料的校對與潤稿服務。",
+        },
       },
       teachingEngagement: {
         title: "語言教學與國際參與",
@@ -751,6 +1134,10 @@ document.addEventListener("DOMContentLoaded", () => {
           point1: "以 STP 模型規劃小紅書內容策略，搭配 A/B 測試優化文案與設計，3 個月內互動量提升 89.1%、粉絲數增加 69.7%。",
           point2: "競品監測、受眾分析，針對不同子客群調整視覺素材。",
           point3: "製作 Meta 平台（Facebook & Instagram）內容，融合品牌調性與趨勢熱點。",
+          portfolioLink: "查看作品集 (PDF)",
+          stat1: "瀏覽量",
+          stat2: "粉絲數",
+          stat3: "互動量",
         },
         teaching: {
           period: "2023/07 – 2023/12；2024/07 – 2025/04",
@@ -824,11 +1211,13 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "國樂古箏社 行銷與會員長",
           text:
             "負責招生與迎新活動、經營社群平台，依回饋調整課程安排，並籌辦演出與期末成果發表。",
+          portfolioLink: "查看作品集 (PDF)",
         },
         camps: {
           title: "Sora Education 青少年營隊 共同創辦人",
           text:
             "與兩位夥伴共同規劃並營運五梯次一週營隊，撰寫商業計畫、管理財務與資產，並進行市場調查優化課程與行銷策略。",
+          stat1: "營隊場次",
         },
         clubs: {
           title: "其他校園社團參與",
@@ -842,7 +1231,7 @@ document.addEventListener("DOMContentLoaded", () => {
         filterClubs: "社團與文化",
         viewAll: "顯示全部",
         restoCoeur: {
-          period: "2024/10 – 至今",
+          period: "2025/10 – 至今",
           title: "義工 – Restos du Cœur（愛心餐廳）",
           org: "Les Restos du Cœur · 法國人道關懷協會",
           point1: "參與食物發放，協助弱勢族群獲得日常飲食支援。",
@@ -860,6 +1249,9 @@ document.addEventListener("DOMContentLoaded", () => {
             "帶領四人行銷團隊，為英語夏令營招募 15 位志工與 60 多名學員，收入較收支平衡目標高出 53.7%。",
           point2:
             "與國內外合作夥伴協作，推動海外志工與交流專案。",
+          stat1: "志工招募人數",
+          stat2: "學員人數",
+          stat3: "超出目標",
         },
         usr: {
           period: "2024/09 – 至今",
@@ -895,16 +1287,19 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle: "以成績與表現獲得的獎助與肯定。",
         exchange: {
           title: "教育部公費交換獎學金",
+          org: "中華民國教育部",
           text: "以優異成績獲頒，支持赴法交換學習。",
           year: "2024",
         },
         short: {
           title: "政治大學短期出國進修獎學金",
+          org: "國立政治大學",
           text: "因學業表現優良，獲補助短期出國進修經費。",
           year: "2024",
         },
         excellence: {
           title: "政治大學書卷獎（前 5% GPA）",
+          org: "國立政治大學",
           text: "多次以班系前 5% 的成績獲頒書卷獎。",
           year: "2021, 2023",
         },
@@ -962,6 +1357,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const val = getTranslation(dict, key);
       if (val !== null) el.setAttribute("placeholder", val);
     });
+
+    // HTML-rich elements (use innerHTML, not textContent)
+    const philEl = document.getElementById("services-philosophy-text");
+    if (philEl && dict.teachingServices?.philosophy) {
+      philEl.innerHTML = dict.teachingServices.philosophy;
+    }
   }
 
   const langButtons = document.querySelectorAll(".lang-btn");
@@ -980,7 +1381,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Skill preview on hover
   const skillData = {
     "data-r": {
-      title: "R – Analyse statistique",
+      title: "R – Analyse Statistique",
       text: "Utilisation de R pour l’analyse statistique, la visualisation et les études marketing et académiques.",
       proofs: [
         {
@@ -1002,7 +1403,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-python": {
-      title: "Python – Analyse de données",
+      title: "Python – Analyse De Données",
       text: "Scripts Python pour nettoyer les données, calculer des indicateurs et automatiser des analyses.",
       proofs: [
         {
@@ -1024,7 +1425,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-sql": {
-      title: "SQL – Requêtes & agrégation",
+      title: "SQL – Requêtes & Agrégation",
       text: "Écriture de requêtes SQL pour interroger, filtrer et agréger des bases de données.",
       links: [
         {
@@ -1034,7 +1435,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-powerbi": {
-      title: "Power BI – Tableaux de bord",
+      title: "Power BI – Tableaux De Bord",
       text: "Construction de tableaux de bord interactifs pour suivre les performances marketing et financières.",
       proofs: [
         {
@@ -1050,7 +1451,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-tableau": {
-      title: "Tableau – Visualisation de données",
+      title: "Tableau – Visualisation De Données",
       text: "Création de visualisations interactives pour explorer et communiquer des indicateurs clés.",
       proofs: [
         {
@@ -1063,7 +1464,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-statistics": {
-      title: "Statistiques & méthodes quantitatives",
+      title: "Statistiques & Méthodes Quantitatives",
       text: "Méthodes quantitatives (R, statistiques) et qualitatives pour la recherche académique et les études de marché.",
       proofs: [
         {
@@ -1113,7 +1514,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "mkt-seo": {
-      title: "SEO on‑page & technique",
+      title: "SEO On‑Page & Technique",
       text:
         "Audit SEO, optimisation de contenus et recherche de facteurs de classement Google.",
       proofs: [
@@ -1187,7 +1588,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "mkt-social": {
-      title: "Social media (Xiaohongshu, Meta)",
+      title: "Social Media (Xiaohongshu, Meta)",
       text:
         "Création de contenu et optimisation de la visibilité sur Xiaohongshu (RED) et les réseaux sociaux Meta.",
       proofs: [
@@ -1202,7 +1603,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "mkt-research": {
-      title: "Études de marché & positionnement",
+      title: "Études De Marché & Positionnement",
       text:
         "Analyses de marché pour des marques B2C, avec segmentation, cartographie concurrentielle et recommandations.",
       proofs: [
@@ -1248,8 +1649,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-        "mkt-design": {
-      title: "Création de contenu & design visuel",
+    "mkt-design": {
+      title: "Création De Contenu & Design Visuel",
       text: "Conception de visuels pour les réseaux sociaux, événements et supports de communication.",
       proofs: [
         {
@@ -1278,8 +1679,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-        "prog-python": {
-      title: "Python pour l’analyse de données",
+    "prog-python": {
+      title: "Python Pour L’Analyse De Données",
       text:
         "Scripts Python pour nettoyer les données, produire des indicateurs et automatiser certaines analyses.",
       links: [
@@ -1323,7 +1724,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "fin-green": {
-      title: "Green finance & risk management",
+      title: "Green Finance & Risk Management",
       text:
         "Compréhension des enjeux de finance verte, de gestion des risques et de régulation.",
       links: [
@@ -1334,7 +1735,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "fin-decision": {
-      title: "Operational decision analysis",
+      title: "Operational Decision Analysis",
       text:
         "Analyse de décisions pour les institutions financières, avec modélisation des risques et de la performance.",
       links: [
@@ -1346,7 +1747,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "fin-international": {
-      title: "International finance",
+      title: "International Finance",
       text:
         "Fondamentaux de la finance internationale et des marchés de capitaux.",
       links: [
@@ -1357,7 +1758,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "soft-communication": {
-      title: "Communication & prise de parole",
+      title: "Communication & Prise De Parole",
       text:
         "Prise de parole en public en français, anglais et mandarin pour des événements académiques et culturels.",
       links: [
@@ -1372,7 +1773,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "soft-leadership": {
-      title: "Leadership & gestion d’équipe",
+      title: "Leadership & Gestion D’Équipe",
       text:
         "Encadrement de petites équipes marketing et animation de groupes d’étudiants.",
       links: [
@@ -1387,7 +1788,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "soft-project": {
-      title: "Gestion de projet & organisation",
+      title: "Gestion De Projet & Organisation",
       text:
         "Planification, coordination et suivi de projets académiques, d’événements et de camps.",
       links: [
@@ -1402,7 +1803,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "soft-intercultural": {
-      title: "Travail interculturel",
+      title: "Travail Interculturel",
       text:
         "Collaboration dans des équipes et environnements multiculturels en France et à Taïwan.",
       links: [
@@ -1494,7 +1895,357 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "lang-mandarin": {
-      title: "Mandarin  – Langue Maternelle"
+      title: "Mandarin – Langue Maternelle",
+      text: "Mandarin en tant que langue maternelle, utilisé dans tous les contextes professionnels et personnels.",
+      proofs: [
+        {
+          type: "Langue maternelle",
+          title: "Mandarin – Langue Maternelle",
+          org: "—",
+          meta: ["Natif"],
+          points: ["Langue maternelle – communication native dans tous les contextes professionnels et académiques."],
+        },
+      ],
+    },
+    "lang-mandarin-teaching": {
+      title: "Mandarin – Langue Maternelle",
+      text: "Mandarin en tant que langue maternelle, avec une expérience de bénévolat auprès d'élèves issus de familles pluriculturelles.",
+      proofs: [
+        {
+          type: "Langue maternelle",
+          title: "Mandarin – Langue Maternelle",
+          org: "—",
+          meta: ["Natif"],
+          points: ["Langue maternelle – communication native dans tous les contextes professionnels et académiques."],
+        },
+        {
+          type: "Bénévolat",
+          title: "Bénévole – Projet USR (Responsabilité Sociale Universitaire)",
+          org: "Université Nationale Chengchi · Bureau USR",
+          meta: ["Taipei · Taïwan", "09/2024 – Présent"],
+          points: [
+            "Soutien linguistique et culturel auprès d'élèves issus de familles transnationales (新住民二代 / enfants de migrants).",
+          ],
+          actions: [{ label: "Voir l'engagement", href: "#engagement" }],
+        },
+      ],
+    },
+
+    // ── Data & Analytics (nouvelles entrées) ─────────────────────────
+    "data-kpi": {
+      title: "KPI Tracking & Reporting",
+      text: "Suivi de KPIs marketing et business, construction de tableaux de bord et reporting périodique.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo / DMM.com",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: [
+            "Construction et suivi de dashboards KPIs (acquisition, engagement, rétention).",
+            "Reporting hebdomadaire et analyse des tendances de performance.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Suivi mensuel de KPIs SEO/SEA (trafic, CTR, conversions) et reporting client."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+    },
+    "data-segmentation": {
+      title: "Customer Segmentation",
+      text: "Segmentation d'audiences et de marchés pour orienter les décisions marketing et commerciales.",
+      proofs: [
+        {
+          type: "Projet",
+          title: "Étude De Marché – Marque Lifestyle",
+          org: "Projet académique",
+          meta: ["Europe · Asie"],
+          points: [
+            "Segmentation des cibles et définition de personas.",
+            "Recommandations stratégiques différenciées par segment.",
+          ],
+        },
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo / DMM.com",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: [
+            "A/B testing de créas par sous-segment cible.",
+            "Analyse comportementale des audiences sur les plateformes sociales.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+      ],
+    },
+    "data-ab": {
+      title: "A/B Testing",
+      text: "Conception et analyse de tests A/B pour optimiser les créas, messages et parcours utilisateur.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo / DMM.com",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: [
+            "Tests A/B sur visuels publicitaires et copies par sous-segment.",
+            "Analyse des résultats et recommandations d'optimisation.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+      ],
+    },
+
+    // ── Marketing Digital (nouvelles entrées) ────────────────────────
+    "mkt-email": {
+      title: "Emailing & Automation Marketing",
+      text: "Conception de newsletters, séquences emails et workflows d'automation pour la fidélisation et le nurturing.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo / DMM.com",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: [
+            "Rédaction et envoi de newsletters segmentées.",
+            "Mise en place de séquences d'automation pour le nurturing.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+      ],
+    },
+    "mkt-campaign": {
+      title: "Planification De Campagnes",
+      text: "Planification, coordination et suivi de campagnes marketing multicanal (SEO, SEA, social media, emailing).",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: [
+            "Planification et coordination de campagnes digitales multicanal.",
+            "Suivi budgétaire et reporting de performance.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+        {
+          type: "Activité",
+          title: "Co‑Fondatrice – Sora Education",
+          org: "Projet entrepreneurial",
+          meta: ["Camps de jeunesse"],
+          points: ["Planification et exécution de campagnes de recrutement pour 5 camps d'été."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
+        },
+      ],
+    },
+    "mkt-crm": {
+      title: "CRM & Parcours Client",
+      text: "Gestion de la relation client, cartographie du parcours client (customer journey) et suivi des interactions.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: [
+            "Gestion et mise à jour de la base de données clients.",
+            "Analyse du parcours client pour optimiser les taux de conversion.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+        {
+          type: "Cours",
+          title: "Customer Relationship Management",
+          org: "emlyon business school",
+          meta: ["Cours académique"],
+          points: ["Stratégies de fidélisation, segmentation client et gestion de la valeur vie client (CLV)."],
+          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+        },
+      ],
+    },
+
+    // ── Consulting & Strategy (nouvelles entrées) ────────────────────
+    "cons-strategy": {
+      title: "Analyse Stratégique (SWOT, PESTEL, Porter)",
+      text: "Analyse d'entreprises et de marchés via les frameworks SWOT, PESTEL et les 5 forces de Porter.",
+      proofs: [
+        {
+          type: "Cours",
+          title: "Strategic Management",
+          org: "emlyon business school",
+          meta: ["Cours académique"],
+          points: [
+            "Application des outils stratégiques (SWOT, PESTEL, Porter) à des cas réels.",
+            "Analyse concurrentielle et formulation de recommandations.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+        },
+        {
+          type: "Projet",
+          title: "Étude De Marché – Marque Lifestyle",
+          org: "Projet",
+          meta: ["Europe · Asie"],
+          points: ["Analyse PESTEL et concurrentielle, définition du positionnement stratégique."],
+        },
+      ],
+    },
+    "cons-benchmark": {
+      title: "Benchmarking Concurrentiel",
+      text: "Analyse comparative des acteurs du marché pour identifier des opportunités de positionnement et de différenciation.",
+      proofs: [
+        {
+          type: "Projet",
+          title: "Analyse De Performance SEO – Marque E‑Commerce",
+          org: "Projet",
+          meta: ["SEMrush · Search Console"],
+          points: [
+            "Benchmarking SEO des concurrents directs.",
+            "Identification des opportunités de mots-clés et de contenu.",
+          ],
+        },
+        {
+          type: "Projet",
+          title: "Étude De Marché – Marque Lifestyle",
+          org: "Projet",
+          meta: ["Europe · Asie"],
+          points: ["Cartographie concurrentielle sur deux marchés géographiques."],
+        },
+      ],
+    },
+    "cons-business-case": {
+      title: "Business Case & Recommandations",
+      text: "Structuration et présentation de business cases avec recommandations actionnables et chiffrage.",
+      proofs: [
+        {
+          type: "Cours",
+          title: "Case Studies & Consulting Projects",
+          org: "emlyon business school",
+          meta: ["Cours académique"],
+          points: [
+            "Résolution de cas d'entreprise et formulation de recommandations stratégiques.",
+            "Structuration de livrables et soutenance devant des jurys professionnels.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+        },
+        {
+          type: "Activité",
+          title: "Co‑Fondatrice – Sora Education",
+          org: "Projet entrepreneurial",
+          meta: ["Camps de jeunesse"],
+          points: ["Business plan, modèle économique et pitch pour 5 camps d'été."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
+        },
+      ],
+    },
+    "cons-storytelling": {
+      title: "Storytelling & Présentations",
+      text: "Conception de présentations impactantes (slides, pitch, soutenance) pour convaincre des audiences professionnelles.",
+      proofs: [
+        {
+          type: "Activité",
+          title: "Toastmasters – Prise De Parole",
+          org: "Clubs étudiants – NCCU",
+          meta: ["Anglais · Mandarin"],
+          points: ["Prise de parole structurée et storytelling en anglais et mandarin."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
+        },
+        {
+          type: "Expérience",
+          title: "Déléguée – Nuit Des Idées",
+          org: "Institut Français de Taïwan",
+          meta: ["2022"],
+          points: ["Présentation et animation en contexte interculturel franco-taïwanais."],
+          actions: [{ label: "Voir activités", href: "#volunteer" }],
+        },
+        {
+          type: "Cours",
+          title: "Business Presentations & Case Pitching",
+          org: "emlyon business school",
+          meta: ["Lyon · France"],
+          points: ["Présentations de business cases devant des jurys professionnels."],
+          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+        },
+      ],
+    },
+    "ai-tools": {
+      title: "Outils IA (ChatGPT, Claude, Gemini)",
+      text: "Utilisation quotidienne des principaux modèles d'IA générative pour la rédaction, l'analyse, la génération de code et la productivité.",
+      proofs: [
+        {
+          type: "Cours",
+          title: "Data Science & AI for Business",
+          org: "emlyon business school",
+          meta: ["Lyon · France"],
+          points: [
+            "Fondements du machine learning appliqués au contexte business.",
+            "Cas d'usage de l'IA pour la prise de décision et l'automatisation.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+        },
+        {
+          type: "Pratique",
+          title: "Utilisation quotidienne – Production & Analyse",
+          org: "Usage professionnel & académique",
+          meta: ["ChatGPT · Claude · Gemini · Perplexity"],
+          points: [
+            "Génération et optimisation de contenus marketing.",
+            "Analyse de données et synthèse de recherches.",
+            "Automatisation de tâches répétitives.",
+          ],
+        },
+      ],
+    },
+    "ai-ads": {
+      title: "Publicité Assistée par l'IA",
+      text: "Exploitation des fonctionnalités IA de Google Ads pour optimiser les campagnes publicitaires (Performance Max, Smart Bidding).",
+      proofs: [
+        {
+          type: "Certification",
+          title: "Publicité efficace assistée par l'IA",
+          org: "Google",
+          meta: ["Google Ads · IA"],
+          points: ["Certification Google Ads – exploitation de l'IA pour la performance publicitaire."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/AI%20技術輔助高效廣告認證.png" }],
+        },
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Campagnes Google Ads avec optimisation automatique (Smart Bidding, Performance Max)."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+    },
+    "ai-business": {
+      title: "IA Pour Les Affaires",
+      text: "Compréhension des enjeux stratégiques de l'IA pour les entreprises : transformation digitale, automatisation et nouveaux modèles de valeur.",
+      proofs: [
+        {
+          type: "Cours",
+          title: "Data Science & AI for Business",
+          org: "emlyon business school",
+          meta: ["Lyon · France"],
+          points: [
+            "Applications business du machine learning : prédiction, segmentation, recommandation.",
+            "Analyse de l'impact de l'IA sur les stratégies d'entreprise.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+        },
+        {
+          type: "Certification",
+          title: "Publicité efficace assistée par l'IA",
+          org: "Google",
+          meta: ["Google Ads · IA"],
+          points: ["Mise en pratique de l'IA pour la performance marketing."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/AI%20技術輔助高效廣告認證.png" }],
         },
       ],
     },
@@ -1607,6 +2358,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ── Shared filter animation helper ────────────────
+  const FADE_DURATION = 190; // ms — must match CSS .filter-fade-out transition
+
+  function animateFilterItem(el, show) {
+    if (show) {
+      // If currently hidden, reveal with fade-in animation
+      if (el.style.display === "none" || el.hidden) {
+        el.style.display = "";
+        el.hidden = false;
+        // Allow display change to paint before animating
+        requestAnimationFrame(() => {
+          el.classList.remove("filter-fade-out");
+          el.classList.add("filter-fade-in");
+          el.addEventListener(
+            "animationend",
+            () => el.classList.remove("filter-fade-in"),
+            { once: true }
+          );
+        });
+      }
+    } else {
+      // Fade out, then hide after transition
+      el.classList.remove("filter-fade-in");
+      el.classList.add("filter-fade-out");
+      setTimeout(() => {
+        // Only hide if still marked for fade-out (guard against rapid clicks)
+        if (el.classList.contains("filter-fade-out")) {
+          el.style.display = "none";
+          el.classList.remove("filter-fade-out");
+        }
+      }, FADE_DURATION);
+    }
+  }
+
+  // ── Reset preview to default placeholder ──────────
+  function resetSkillPreview() {
+    if (!previewContainer || !previewTitle || !previewText || !previewProofs) return;
+    const lang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
+    const dict = translations[lang];
+    previewTitle.textContent = getTranslation(dict, "skills.previewTitle") || "Détail d'une compétence";
+    previewText.textContent = getTranslation(dict, "skills.previewText") || "";
+    previewProofs.innerHTML = "";
+    skillChips.forEach((c) => c.classList.remove("is-skill-active"));
+  }
+
   // Skill area filters (inside #skills)
   const skillsSection = document.getElementById("skills");
   const skillAreaFilters = skillsSection?.querySelectorAll("[data-skill-area]") || [];
@@ -1616,7 +2412,7 @@ document.addEventListener("DOMContentLoaded", () => {
     skillsBlocks.forEach((block) => {
       const blockArea = block.getAttribute("data-skill-area") || "all";
       const show = area === "all" || blockArea === area;
-      block.style.display = show ? "" : "none";
+      animateFilterItem(block, show);
     });
   }
 
@@ -1627,6 +2423,7 @@ document.addEventListener("DOMContentLoaded", () => {
         skillAreaFilters.forEach((b) => b.classList.remove("is-active"));
         btn.classList.add("is-active");
         applySkillArea(area);
+        resetSkillPreview(); // ← clear preview when switching category
       });
     });
 
@@ -1648,7 +2445,7 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((item) => {
       const itemVibe = item.getAttribute("data-vibe") || "all";
       const shouldShow = vibe === "all" || itemVibe === vibe;
-      item.style.display = shouldShow ? "" : "none";
+      animateFilterItem(item, shouldShow);
     });
 
     if (viewAllBtn) {
@@ -1689,7 +2486,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const items = Array.from(extraList.querySelectorAll(".timeline-item"));
     items.forEach((item) => {
       const vibe = item.getAttribute("data-extra") || "all";
-      item.style.display = key === "all" || vibe === key ? "" : "none";
+      animateFilterItem(item, key === "all" || vibe === key);
     });
 
     if (extraViewAllBtn) extraViewAllBtn.hidden = key === "all";
@@ -1753,7 +2550,7 @@ document.addEventListener("DOMContentLoaded", () => {
           (c) => c.hasAttribute("data-reveal")
         );
         const idx = siblings.indexOf(el);
-        if (idx > 0) el.style.transitionDelay = idx * 75 + "ms";
+        if (idx > 0) el.style.transitionDelay = idx * 100 + "ms";
         revealObserver.observe(el);
       });
     }

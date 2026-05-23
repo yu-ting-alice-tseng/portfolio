@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="page-teaching">
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#about">Aller au contenu</a>
 
@@ -41,6 +41,8 @@
         <nav class="site-nav" aria-label="Navigation principale">
           <a href="#about" data-i18n="nav.about">À propos</a>
           <a href="#skills" data-i18n="nav.teaching.languages">Langues</a>
+          <a href="#services" data-i18n="nav.teaching.services">Services</a>
+          <a href="#exp-teaching" data-i18n="nav.teaching.expTeaching">Expériences</a>
           <a href="#education" data-i18n="nav.education">Formation</a>
           <a href="#engagement" data-i18n="nav.teaching.engagement">Engagement</a>
           <a href="#honors" data-i18n="nav.honors">Distinctions</a>
@@ -59,6 +61,8 @@
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
           <a href="#about" data-i18n="nav.about">À propos</a>
           <a href="#skills" data-i18n="nav.teaching.languages">Langues</a>
+          <a href="#services" data-i18n="nav.teaching.services">Services</a>
+          <a href="#exp-teaching" data-i18n="nav.teaching.expTeaching">Expériences</a>
           <a href="#education" data-i18n="nav.education">Formation</a>
           <a href="#engagement" data-i18n="nav.teaching.engagement">Engagement</a>
           <a href="#honors" data-i18n="nav.honors">Distinctions</a>
@@ -91,8 +95,8 @@
                 <span class="meta-value" data-i18n="hero.locationValue">Lyon, France</span>
               </div>
               <div>
-                <span class="meta-label" data-i18n="hero.availabilityLabel">Disponible à partir de</span>
-                <span class="meta-value" data-i18n="hero.availabilityValue">Juillet 2026 / Janvier 2027</span>
+                <span class="meta-label" data-i18n="teachingHero.availabilityLabel">Enseignement</span>
+                <span class="meta-value" data-i18n="teachingHero.availabilityValue">En ligne · Disponible</span>
               </div>
             </div>
             <div class="hero-actions">
@@ -154,12 +158,14 @@
                       data-skill="lang-english"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >English – IELTS 8.0 (C1)</a
+                      data-i18n="skills.chipEnglish"
+                      >Anglais – IELTS 8.0 (C1)</a
                     >
                     <a
                       href="certificates/DALF%20C1_Certificate.pdf"
                       class="skill-card"
                       data-skill="lang-french"
+                      data-i18n="skills.chipFrench"
                       target="_blank"
                       rel="noopener noreferrer"
                       >Français – DALF C1</a
@@ -168,23 +174,17 @@
                       href="certificates/JLPT%20N1.jpg"
                       class="skill-card"
                       data-skill="lang-japanese"
+                      data-i18n="skills.chipJapanese"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >日本語 – JLPT N1</a
+                      >Japonais – JLPT N1</a
                     >
                     <a
                       href="#engagement"
                       class="skill-card"
-                      data-skill="lang-mandarin"
-                      >中文 – langue maternelle</a
-                    >
-                    <a
-                      href="certificates/120%20hour%20TEFL%20Certificate_TEFL%20UK.png"
-                      class="skill-card"
-                      data-skill="lang-english"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >TEFL – 120h (TEFL UK)</a
+                      data-skill="lang-mandarin-teaching"
+                      data-i18n="skills.chipMandarinNative"
+                      >Mandarin – langue maternelle</a
                     >
                   </div>
                 </div>
@@ -206,6 +206,168 @@
         </div>
       </section>
 
+      <!-- ── Teaching Services ────────────────────────────── -->
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="teachingServices.title">Services d'Enseignement</h2>
+            <p data-i18n="teachingServices.subtitle">
+              Des cours personnalisés, dans un environnement détendu et bienveillant, pour progresser à son propre rythme.
+            </p>
+          </header>
+
+          <div class="services-grid">
+
+            <!-- IELTS -->
+            <article class="service-card service-card--ielts" data-reveal>
+              <div class="service-icon">📋</div>
+              <h3 data-i18n="teachingServices.ielts.title">Préparation à l'IELTS</h3>
+              <p data-i18n="teachingServices.ielts.desc">
+                Coaching complet pour les 4 modules. Stratégies de test, entraînement intensif et simulations d'examen, avec un suivi personnalisé de la progression.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag" data-i18n="teachingServices.ielts.tag1">Reading & Writing</span>
+                <span class="service-tag" data-i18n="teachingServices.ielts.tag2">Speaking & Listening</span>
+                <span class="service-tag" data-i18n="teachingServices.ielts.tag3">Stratégies d'Examen</span>
+                <span class="service-tag" data-i18n="teachingServices.ielts.tag4">Score Visé 6.0 – 8.0+</span>
+              </div>
+            </article>
+
+            <!-- All Grades -->
+            <article class="service-card service-card--grades" data-reveal>
+              <div class="service-icon">📚</div>
+              <h3 data-i18n="teachingServices.grades.title">Anglais Tous Niveaux</h3>
+              <p data-i18n="teachingServices.grades.desc">
+                Cours adaptés au programme scolaire taïwanais pour élèves du primaire au lycée. Grammaire, vocabulaire, compréhension et expression.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag" data-i18n="teachingServices.grades.tag1">Primaire</span>
+                <span class="service-tag" data-i18n="teachingServices.grades.tag2">Collège</span>
+                <span class="service-tag" data-i18n="teachingServices.grades.tag3">Lycée</span>
+                <span class="service-tag" data-i18n="teachingServices.grades.tag4">Renforcement Scolaire</span>
+              </div>
+            </article>
+
+            <!-- Cambridge & GEPT -->
+            <article class="service-card service-card--exams" data-reveal>
+              <div class="service-icon">🎓</div>
+              <h3 data-i18n="teachingServices.exams.title">Certifications Cambridge & 英檢</h3>
+              <p data-i18n="teachingServices.exams.desc">
+                Préparation structurée aux examens officiels Cambridge et au GEPT (全民英檢). Entraînement sur annales et méthodes pour chaque épreuve.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag" data-i18n="teachingServices.exams.tag1">YLE (Children)</span>
+                <span class="service-tag" data-i18n="teachingServices.exams.tag2">A2 Key / B1 Preliminary</span>
+                <span class="service-tag" data-i18n="teachingServices.exams.tag3">B2 First</span>
+                <span class="service-tag" data-i18n="teachingServices.exams.tag4">全民英檢 GEPT</span>
+              </div>
+            </article>
+
+            <!-- Skill Focus -->
+            <article class="service-card service-card--skills" data-reveal>
+              <div class="service-icon">✏️</div>
+              <h3 data-i18n="teachingServices.skills.title">Renforcement D'Une Compétence Ciblée</h3>
+              <p data-i18n="teachingServices.skills.desc">
+                Travail ciblé sur une compétence spécifique : rédaction, lecture, expression orale, grammaire ou préparation aux rédactions scolaires.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag" data-i18n="teachingServices.skills.tag1">Writing</span>
+                <span class="service-tag" data-i18n="teachingServices.skills.tag2">Reading</span>
+                <span class="service-tag" data-i18n="teachingServices.skills.tag3">Speaking</span>
+                <span class="service-tag" data-i18n="teachingServices.skills.tag4">Grammaire & Vocabulaire</span>
+              </div>
+            </article>
+
+          </div><!-- /.services-grid -->
+
+          <div class="services-philosophy" data-reveal>
+            <p id="services-philosophy-text">
+              Dans chaque cours, j'adapte mes méthodes à l'élève : <strong>jeux</strong>, <strong>exercices ciblés</strong> et <strong>échanges interactifs</strong> pour rendre l'apprentissage naturel et durable.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Teaching Experience ───────────────────────── -->
+      <section class="section" id="exp-teaching">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="teachingExp.title">Expériences D'Enseignement</h2>
+            <p data-i18n="teachingExp.subtitle">
+              Cours en ligne, préparation aux certifications et services de traduction.
+            </p>
+          </header>
+          <div class="timeline">
+
+            <!-- TutorABC -->
+            <article class="timeline-item" id="exp-tutorABC" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="experience.tutorABC.period">08/2024 – Présent</span>
+                <span class="timeline-location" data-i18n="locations.online">En ligne · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="experience.tutorABC.title">Professeure Particulière D'Anglais En Ligne</h3>
+                <p class="timeline-company">TutorABC</p>
+                <ul class="timeline-points">
+                  <li data-i18n="experience.tutorABC.point1">
+                    Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).
+                  </li>
+                  <li data-i18n="experience.tutorABC.point2">
+                    Préparation aux certifications IELTS et Cambridge English (YLE, A2 Key, B1 Preliminary, B2 First).
+                  </li>
+                </ul>
+                <div class="edu-info" style="margin-top:0.8rem;">
+                  <div class="edu-info-row">
+                    <span class="edu-info-key" data-i18n="experience.tutorABC.coursesLabel">Cours dispensés</span>
+                    <div class="course-chips">
+                      <span class="course-chip" data-i18n="experience.tutorABC.courseGradeSchool">Anglais (primaire)</span>
+                      <span class="course-chip" data-i18n="experience.tutorABC.courseMiddle">Anglais (collège)</span>
+                      <span class="course-chip" data-i18n="experience.tutorABC.courseHigh">Anglais (lycée)</span>
+                      <span class="course-chip">IELTS</span>
+                      <span class="course-chip">Cambridge English</span>
+                      <span class="course-chip">
+                        <a href="certificates/120%20hour%20TEFL%20Certificate_TEFL%20UK.png" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">🎓 TEFL – 120h (TEFL UK) ↗</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <span class="tag" data-i18n="tags.teaching">Enseignement</span>
+                <span class="tag">IELTS</span>
+                <span class="tag">Cambridge</span>
+                <span class="tag" data-i18n="tags.online">En Ligne</span>
+              </div>
+            </article>
+
+            <!-- Translation & Proofreading -->
+            <article class="timeline-item" id="exp-translation" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="teachingExp.translation.period">2022 – 2024</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="teachingExp.translation.title">Traductrice & Correctrice (Freelance)</h3>
+                <p class="timeline-company" data-i18n="teachingExp.translation.company">
+                  Freelance · Projets Académiques & Éditoriaux
+                </p>
+                <ul class="timeline-points">
+                  <li data-i18n="teachingExp.translation.point1">
+                    Traduction de documents académiques et de contenus professionnels entre le chinois, l'anglais et le français.
+                  </li>
+                  <li data-i18n="teachingExp.translation.point2">
+                    Correction et relecture de thèses, articles et supports de communication pour des étudiants et entreprises.
+                  </li>
+                </ul>
+                <span class="tag" data-i18n="tags.translation">Traduction</span>
+                <span class="tag" data-i18n="tags.proofreading">Correction</span>
+                <span class="tag">ZH · EN · FR</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
       <!-- ── Education ─────────────────────────────────────── -->
       <section class="section" id="education">
         <div class="container">
@@ -217,7 +379,7 @@
             </p>
           </header>
           <div class="timeline">
-            <article class="timeline-item" id="edu-emlyon-t" data-reveal>
+            <article class="timeline-item" id="edu-emlyon-t" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="education.emlyon.period">09/2023 – Aujourd'hui</span>
                 <span class="timeline-location">Lyon · France</span>
@@ -231,7 +393,7 @@
                 <div class="edu-info">
                   <div class="edu-info-row">
                     <span class="edu-info-key">GPA</span>
-                    <span data-i18n="education.emlyon.gpa">en cours</span>
+                    <span data-i18n="education.emlyon.gpa">4,0/4,0</span>
                   </div>
                   <div class="edu-info-row">
                     <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
@@ -246,7 +408,7 @@
               </div>
             </article>
 
-            <article class="timeline-item" id="edu-nccu-t" data-reveal>
+            <article class="timeline-item" id="edu-nccu-t" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="education.nccu.period">09/2020 – 06/2025</span>
                 <span class="timeline-location">Taipei · Taïwan</span>
@@ -288,7 +450,7 @@
               </div>
             </article>
 
-            <article class="timeline-item" id="edu-paris1-t" data-reveal>
+            <article class="timeline-item" id="edu-paris1-t" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="education.paris1.period">01/2024 – 06/2024</span>
                 <span class="timeline-location">Paris · France</span>
@@ -327,7 +489,7 @@
           </header>
           <div class="timeline">
 
-            <article class="timeline-item" data-reveal>
+            <article class="timeline-item" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="volunteer.usr.period">09/2024 – Présent</span>
                 <span class="timeline-location">Taipei · Taïwan</span>
@@ -340,12 +502,12 @@
                     Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.
                   </li>
                 </ul>
-                <span class="tag">Langue</span>
-                <span class="tag">Mentorat</span>
+                <span class="tag" data-i18n="tags.language">Langue</span>
+                <span class="tag" data-i18n="tags.mentoring">Mentorat</span>
               </div>
             </article>
 
-            <article class="timeline-item" data-reveal>
+            <article class="timeline-item" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="volunteer.flagship.period">09/2023 – Présent</span>
                 <span class="timeline-location">Taipei · Taïwan</span>
@@ -358,12 +520,12 @@
                     Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.
                   </li>
                 </ul>
-                <span class="tag">Immersion</span>
-                <span class="tag">Interculturel</span>
+                <span class="tag" data-i18n="tags.immersion">Immersion</span>
+                <span class="tag" data-i18n="tags.intercultural">Interculturel</span>
               </div>
             </article>
 
-            <article class="timeline-item" data-reveal>
+            <article class="timeline-item" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="volunteer.buddy.period">09/2023 – 01/2025</span>
                 <span class="timeline-location">Taipei · Taïwan</span>
@@ -376,12 +538,12 @@
                     Accompagnement de trois étudiants en échange (France, États‑Unis, Corée du Sud) dans leur installation et leur vie quotidienne à Taïwan.
                   </li>
                 </ul>
-                <span class="tag">Échange</span>
+                <span class="tag" data-i18n="tags.exchange">Échange</span>
                 <span class="tag">International</span>
               </div>
             </article>
 
-            <article class="timeline-item" data-reveal>
+            <article class="timeline-item" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="volunteer.nuit.period">12/2023</span>
                 <span class="timeline-location">Taipei · Taïwan</span>
@@ -404,8 +566,25 @@
                     <span class="stat-label" data-i18n="volunteer.nuit.stat2">Langues</span>
                   </div>
                 </div>
-                <span class="tag">Prise de parole</span>
-                <span class="tag">Bilingue</span>
+                <span class="tag" data-i18n="tags.speaking">Prise de parole</span>
+                <span class="tag" data-i18n="tags.bilingual">Bilingue</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="extracurricular.restoCoeur.period">10/2025 – Présent</span>
+                <span class="timeline-location">Lyon · France</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="extracurricular.restoCoeur.title">Bénévole – Restos du Cœur</h3>
+                <p class="timeline-company" data-i18n="extracurricular.restoCoeur.org">Les Restos du Cœur · Association humanitaire</p>
+                <ul class="timeline-points">
+                  <li data-i18n="extracurricular.restoCoeur.point1">Distribution alimentaire et accueil de bénéficiaires en situation de précarité.</li>
+                  <li data-i18n="extracurricular.restoCoeur.point2">Tri et conditionnement des denrées alimentaires.</li>
+                </ul>
+                <span class="tag" data-i18n="tags.volunteer">Bénévolat</span>
+                <span class="tag" data-i18n="tags.social">Impact social</span>
               </div>
             </article>
 
