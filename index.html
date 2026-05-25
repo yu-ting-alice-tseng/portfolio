@@ -103,6 +103,28 @@
       </div>
     </div>
 
+    <!-- ── Page type navigation bar ───────────────── -->
+    <nav class="page-type-bar" aria-label="Type de page">
+      <div class="container page-type-inner">
+        <a href="index.html" class="page-type-link is-current">
+          <span class="page-type-icon">🌐</span>
+          <span data-i18n="pageNav.overview">Vue générale</span>
+        </a>
+        <a href="finance.html" class="page-type-link">
+          <span class="page-type-icon">📊</span>
+          <span data-i18n="pageNav.finance">Finance &amp; Conseil</span>
+        </a>
+        <a href="marketing.html" class="page-type-link">
+          <span class="page-type-icon">✦</span>
+          <span data-i18n="pageNav.marketing">Marketing</span>
+        </a>
+        <a href="teaching.html" class="page-type-link">
+          <span class="page-type-icon">🎓</span>
+          <span data-i18n="pageNav.teaching">Enseignement</span>
+        </a>
+      </div>
+    </nav>
+
     <main>
       <section class="hero" id="about">
         <div class="container hero-grid">
@@ -662,27 +684,51 @@
                     data-i18n-href="experience.engoo.excelHref"
                   >Télécharger le tableau de bord XHS (Excel)</a>
                 </div>
-                <div class="exp-screenshots">
-                  <a href="assets/Engoo Dashboard_FR.png" target="_blank" rel="noopener noreferrer" data-i18n-href="experience.engoo.screenshot1" class="exp-screenshot-link">
-                    <img
-                      src="assets/Engoo Dashboard_FR.png"
-                      data-i18n-src="experience.engoo.screenshot1"
-                      alt="Tableau de bord de performance – Engoo XHS"
-                      data-i18n-alt="experience.engoo.screenshotAlt1"
-                      class="exp-screenshot"
-                      loading="lazy"
-                    >
-                  </a>
-                  <a href="assets/Engoo Data_FR.png" target="_blank" rel="noopener noreferrer" data-i18n-href="experience.engoo.screenshot2" class="exp-screenshot-link">
-                    <img
-                      src="assets/Engoo Data_FR.png"
-                      data-i18n-src="experience.engoo.screenshot2"
-                      alt="Données brutes – Engoo XHS"
-                      data-i18n-alt="experience.engoo.screenshotAlt2"
-                      class="exp-screenshot"
-                      loading="lazy"
-                    >
-                  </a>
+                <div class="exp-showcase">
+                  <span class="exp-showcase-eyebrow" data-i18n="experience.engoo.showcaseLabel">Livrables · Dashboard XHS</span>
+                  <div class="exp-showcase-figures">
+
+                    <figure class="showcase-figure showcase-figure--primary">
+                      <a href="assets/Engoo Dashboard_FR.png"
+                         data-i18n-href="experience.engoo.screenshot1"
+                         target="_blank" rel="noopener noreferrer"
+                         class="showcase-img-wrap">
+                        <img src="assets/Engoo Dashboard_FR.png"
+                             data-i18n-src="experience.engoo.screenshot1"
+                             alt="Tableau de bord de performance Engoo XHS"
+                             data-i18n-alt="experience.engoo.screenshotAlt1"
+                             class="showcase-img" loading="lazy">
+                        <span class="showcase-zoom" aria-hidden="true">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </span>
+                      </a>
+                      <figcaption class="showcase-caption">
+                        <strong data-i18n="experience.engoo.showcaseTitle1">Tableau de bord de performance</strong>
+                        <span data-i18n="experience.engoo.showcaseDesc1">Suivi des KPIs, comparaison de périodes A/B et graphiques d'évolution</span>
+                      </figcaption>
+                    </figure>
+
+                    <figure class="showcase-figure showcase-figure--secondary">
+                      <a href="assets/Engoo Data_FR.png"
+                         data-i18n-href="experience.engoo.screenshot2"
+                         target="_blank" rel="noopener noreferrer"
+                         class="showcase-img-wrap">
+                        <img src="assets/Engoo Data_FR.png"
+                             data-i18n-src="experience.engoo.screenshot2"
+                             alt="Données brutes Engoo XHS"
+                             data-i18n-alt="experience.engoo.screenshotAlt2"
+                             class="showcase-img" loading="lazy">
+                        <span class="showcase-zoom" aria-hidden="true">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </span>
+                      </a>
+                      <figcaption class="showcase-caption">
+                        <strong data-i18n="experience.engoo.showcaseTitle2">Données d'origine</strong>
+                        <span data-i18n="experience.engoo.showcaseDesc2">Métriques quotidiennes collectées et structurées pour l'analyse</span>
+                      </figcaption>
+                    </figure>
+
+                  </div>
                 </div>
                 <span class="tag" data-i18n="tags.marketing">Marketing</span>
                 <span class="tag">Social media</span>
