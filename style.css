@@ -52,6 +52,14 @@ body::before { left: 0; border-radius: 0 2px 2px 0; }
 body::after  { right: 0; border-radius: 2px 0 0 2px; }
 
 section[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
+/* Pages with the page-type-bar need extra scroll offset */
+.page-finance section[id],
+.page-marketing section[id] { scroll-margin-top: calc(var(--header-h) + 42px + 14px); }
+.page-teaching section[id]  { scroll-margin-top: calc(var(--header-h) + 42px + 14px); }
+/* index.html also has the bar — target via body default since no body class */
+body:not(.page-finance):not(.page-marketing):not(.page-teaching) section[id] {
+  scroll-margin-top: calc(var(--header-h) + 42px + 14px);
+}
 
 img { max-width: 100%; display: block; }
 
@@ -2712,13 +2720,13 @@ body {
    ════════════════════════════════════════════════════ */
 .page-type-bar {
   position: sticky;
-  top: 0;
-  z-index: 200;
-  background: rgba(255, 255, 255, 0.96);
+  top: var(--header-h); /* stick just below the site-header */
+  z-index: 15;          /* below site-header z-index: 20 */
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.07);
-  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 .page-type-inner {
   display: flex;
@@ -2939,3 +2947,279 @@ body {
   color: var(--text-soft);
   font-weight: 500;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CHAPTER BANNERS  (teaching.html section dividers)
+═══════════════════════════════════════════════════════════════ */
+.chapter-banner {
+  background: linear-gradient(135deg, var(--surface) 0%, #eef2ff 100%);
+  border-top: 3px solid var(--accent);
+  padding: 2.5rem 0 2rem;
+  scroll-margin-top: 72px;
+}
+.chapter-banner--alt {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-top-color: #16a34a;
+}
+.chapter-banner--accent {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  border-top-color: #ca8a04;
+}
+.chapter-banner .container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.chapter-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.18;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.chapter-banner--alt  .chapter-number { color: #16a34a; }
+.chapter-banner--accent .chapter-number { color: #ca8a04; }
+.chapter-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+.chapter-desc {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin: 0;
+  width: 100%;
+  padding-left: calc(3rem + 1.25rem); /* align under title */
+}
+
+/* nav CTA pill */
+.site-nav .nav-cta {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.15s;
+}
+.site-nav .nav-cta:hover {
+  background: var(--accent-dark, #1e3a8a);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING SECTION
+═══════════════════════════════════════════════════════════════ */
+.booking-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LEARNING RESOURCES SECTION
+═══════════════════════════════════════════════════════════════ */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.resource-category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+.resource-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.resource-cat-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.resource-cat-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.resource-item {}
+.resource-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.resource-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px rgba(30,58,138,0.1);
+  transform: translateY(-1px);
+}
+.resource-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+.resource-desc {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+/* Study tips list */
+.resource-list--tips { gap: 1rem; }
+.tip-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 0.85rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.tip-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+.tip-item strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+.tip-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  line-height: 1.45;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING FORM LAYOUT
+═══════════════════════════════════════════════════════════════ */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.booking-info {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.booking-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.booking-info-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1.35;
+}
+.booking-info-item strong {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+.booking-info-item span:not(.booking-info-icon) {
+  font-size: 0.79rem;
+  color: var(--text-soft);
+  display: block;
+  line-height: 1.4;
+}
+.booking-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.6rem;
+}
+.booking-form select {
+  width: 100%;
+  padding: 0.55rem 2rem 0.55rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 0.85rem center;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--text);
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+.booking-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(30,58,138,0.1);
+}
+.btn.full-width { width: 100%; }
+@media (max-width: 768px) {
+  .booking-layout { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESOURCE LANGUAGE TABS
+═══════════════════════════════════════════════════════════════ */
+.resource-lang-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.resource-lang-tab {
+  padding: 0.45rem 1.3rem;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: border-color 0.18s, color 0.18s, background 0.18s;
+}
+.resource-lang-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.resource-lang-tab.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.resource-lang-panel { display: none; }
+.resource-lang-panel.is-active { display: block; }
