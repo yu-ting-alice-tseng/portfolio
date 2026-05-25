@@ -283,6 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
+          screenshot1: "assets/Engoo Dashboard_FR.png",
+          screenshot2: "assets/Engoo Data_FR.png",
+          screenshotAlt1: "Tableau de bord de performance – Engoo XHS",
+          screenshotAlt2: "Données brutes – Engoo XHS",
         },
         teaching: {
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
@@ -717,6 +721,10 @@ document.addEventListener("DOMContentLoaded", () => {
           stat1: "Views",
           stat2: "Followers",
           stat3: "Interactions",
+          screenshot1: "assets/Engoo Dashboard_EN.png",
+          screenshot2: "assets/Engoo Data_EN.png",
+          screenshotAlt1: "Performance Dashboard – Engoo XHS",
+          screenshotAlt2: "Raw Data – Engoo XHS",
         },
         teaching: {
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
@@ -1144,6 +1152,10 @@ document.addEventListener("DOMContentLoaded", () => {
           stat1: "瀏覽量",
           stat2: "粉絲數",
           stat3: "互動量",
+          screenshot1: "assets/Engoo Dashboard_EN.png",
+          screenshot2: "assets/Engoo Data_EN.png",
+          screenshotAlt1: "Performance Dashboard – Engoo XHS",
+          screenshotAlt2: "Raw Data – Engoo XHS",
         },
         teaching: {
           period: "2023/07 – 2023/12；2024/07 – 2025/04",
@@ -1371,6 +1383,24 @@ document.addEventListener("DOMContentLoaded", () => {
       if (val !== null) el.setAttribute("href", val);
     });
 
+    document.querySelectorAll("[data-i18n-src]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-src");
+      if (!key) return;
+      const val = getTranslation(dict, key);
+      if (val !== null) el.setAttribute("src", val);
+      // keep the parent <a> href in sync if present
+      if (val !== null && el.parentElement && el.parentElement.tagName === "A") {
+        el.parentElement.setAttribute("href", val);
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-alt");
+      if (!key) return;
+      const val = getTranslation(dict, key);
+      if (val !== null) el.setAttribute("alt", val);
+    });
+
     // HTML-rich elements (use innerHTML, not textContent)
     const philEl = document.getElementById("services-philosophy-text");
     if (philEl && dict.teachingServices?.philosophy) {
@@ -1385,6 +1415,9 @@ document.addEventListener("DOMContentLoaded", () => {
       langButtons.forEach((b) => b.classList.remove("is-active"));
       btn.classList.add("is-active");
       applyTranslations(lang);
+      // Re-render skill panel if one is open so images swap to the new language
+      const activeChip = document.querySelector(".skill-card.is-skill-active[data-skill]");
+      if (activeChip) updateSkillPreview(activeChip.getAttribute("data-skill"));
     });
   });
 
@@ -1499,7 +1532,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-excel": {
-      title: "Modélisation & Dashboards Excel",
+      title: "Excel · TOSA 950/1000",
       text:
         "Modèles Excel avancés, suivi de KPIs et automatisation de reportings.",
       proofs: [
@@ -1525,6 +1558,20 @@ document.addEventListener("DOMContentLoaded", () => {
           points: ["Modélisation, KPIs et visualisation."],
         },
       ],
+      imagesByLang: {
+        fr: [
+          { src: "assets/Engoo Dashboard_FR.png", alt: "Tableau de bord de performance – Engoo XHS" },
+          { src: "assets/Engoo Data_FR.png",      alt: "Données brutes – Engoo XHS" },
+        ],
+        en: [
+          { src: "assets/Engoo Dashboard_EN.png", alt: "Performance Dashboard – Engoo XHS" },
+          { src: "assets/Engoo Data_EN.png",      alt: "Raw Data – Engoo XHS" },
+        ],
+        zh: [
+          { src: "assets/Engoo Dashboard_EN.png", alt: "Performance Dashboard – Engoo XHS" },
+          { src: "assets/Engoo Data_EN.png",      alt: "Raw Data – Engoo XHS" },
+        ],
+      },
     },
     "mkt-seo": {
       title: "SEO On‑Page & Technique",
@@ -2351,6 +2398,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
       previewProofs.appendChild(card);
     });
+
+    // Render screenshots if defined for this skill
+    const activeLang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
+    const images = data.imagesByLang?.[activeLang] ?? data.imagesByLang?.fr ?? [];
+    if (images.length) {
+      const gallery = document.createElement("div");
+      gallery.className = "proof-images";
+      images.forEach(({ src, alt }) => {
+        const a = document.createElement("a");
+        a.href = src;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.className = "proof-img-link";
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = alt;
+        img.className = "proof-img";
+        img.loading = "lazy";
+        a.appendChild(img);
+        gallery.appendChild(a);
+      });
+      previewProofs.appendChild(gallery);
+    }
   }
 
   const skillChips = document.querySelectorAll(".skill-card[data-skill]");
