@@ -1552,10 +1552,30 @@ document.addEventListener("DOMContentLoaded", () => {
           points: ["Modélisation, KPIs et visualisation."],
         },
         {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN Consulting",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: [
+            "Suivi mensuel des KPIs SEO/SEA (trafic, CTR, conversions) et consolidation des rapports clients sous Excel.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+        {
+          type: "Cours",
+          title: "Introduction to Data Analysis and Programming (VBA & Access)",
+          org: "NCCU – Université Nationale Chengchi",
+          meta: ["Cours académique"],
+          points: [
+            "Modélisation avancée, fonctions complexes et gestion de larges volumes de données.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
+        },
+        {
           type: "Certification",
           title: "TOSA 950/1000",
           meta: ["10/2025"],
-          points: ["Modélisation, KPIs et visualisation."],
+          points: ["Score 950/1000 – niveau expert en modélisation, tableaux croisés dynamiques et automatisation."],
         },
       ],
       imagesByLang: {
@@ -1572,6 +1592,23 @@ document.addEventListener("DOMContentLoaded", () => {
           { src: "assets/Engoo Data_EN.png",      alt: "Raw Data – Engoo XHS" },
         ],
       },
+    },
+    "data-access": {
+      title: "Microsoft Access – Bases de Données",
+      text: "Création et gestion de bases de données relationnelles, requêtes SQL et automatisation de rapports dans Access.",
+      proofs: [
+        {
+          type: "Cours",
+          title: "Introduction to Data Analysis and Programming (VBA & Access)",
+          org: "NCCU – Université Nationale Chengchi",
+          meta: ["Cours académique"],
+          points: [
+            "Modélisation de bases de données relationnelles, rédaction de requêtes SQL dans Access.",
+            "Création de formulaires et automatisation de rapports.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
+        },
+      ],
     },
     "mkt-seo": {
       title: "SEO On‑Page & Technique",
@@ -1762,13 +1799,28 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "prog-vba": {
-      title: "Automatisation VBA & Excel",
-      text:
-        "Macros VBA et Access pour automatiser le traitement de données et les rapports.",
-      links: [
+      title: "VBA – Macros & Automatisation",
+      text: "Macros VBA pour automatiser le traitement de données, la mise à jour de dashboards et la génération de rapports.",
+      proofs: [
         {
-          label: "Introduction to Data Analysis and Programming (Excel VBA & Access)",
-          href: "#edu-nccu",
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo / DMM.com",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: [
+            "Développement de macros VBA pour automatiser la mise à jour du dashboard de performance XHS et la génération de rapports hebdomadaires.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+        {
+          type: "Cours",
+          title: "Introduction to Data Analysis and Programming (VBA & Access)",
+          org: "NCCU – Université Nationale Chengchi",
+          meta: ["Cours académique"],
+          points: [
+            "Conception et exécution de macros VBA pour automatiser l'analyse de données et le reporting.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
         },
       ],
     },
