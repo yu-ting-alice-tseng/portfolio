@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <!-- Google Tag Manager -->
@@ -20,1179 +20,804 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yu-Ting Tseng · Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio de Yu-Ting Tseng ??marketing digital, analyse de données et projets."
-    />
+    <meta name="description" content="Portfolio de Yu-Ting Tseng – marketing digital, analyse de données, consulting." />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ── Resume page layout ─────────────────────────── */
+      .intro-card {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+        background: var(--bg-card, #fff);
+        border: 1px solid var(--border, #e5e7eb);
+        border-radius: var(--radius-card, 1rem);
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+      .intro-card .avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .intro-card-text { flex: 1; min-width: 200px; }
+      .intro-card-text h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 0.2rem;
+      }
+      .intro-card-text .intro-role {
+        font-size: 0.9rem;
+        color: var(--accent, #6366f1);
+        font-weight: 500;
+        margin: 0 0 0.5rem;
+      }
+      .intro-card-text .intro-meta {
+        font-size: 0.82rem;
+        color: var(--text-soft, #6b7280);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+      }
+      .intro-card-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-shrink: 0;
+      }
+
+      /* Resume two-column grid */
+      .resume-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 3.5rem;
+        align-items: start;
+      }
+      @media (max-width: 860px) {
+        .resume-grid { grid-template-columns: 1fr; gap: 2rem; }
+      }
+
+      .resume-col-title {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-soft, #6b7280);
+        margin: 0 0 1.25rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--border, #e5e7eb);
+      }
+      .resume-col + .resume-col-title,
+      .resume-aside-block + .resume-aside-block { margin-top: 2.25rem; }
+      .resume-aside-block { margin-bottom: 2rem; }
+
+      /* Condensed timeline for resume */
+      .resume-timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+      .resume-entry {}
+      .resume-entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin-bottom: 0.15rem;
+      }
+      .resume-entry-header h3 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      .resume-entry-period {
+        font-size: 0.78rem;
+        color: var(--text-soft, #6b7280);
+        white-space: nowrap;
+      }
+      .resume-entry-company {
+        font-size: 0.82rem;
+        color: var(--text-soft, #6b7280);
+        margin: 0 0 0.4rem;
+      }
+      .resume-entry ul {
+        margin: 0.3rem 0 0.4rem 1rem;
+        padding: 0;
+        font-size: 0.85rem;
+        color: var(--text-body, #374151);
+        line-height: 1.55;
+      }
+      .resume-entry ul li { margin-bottom: 0.15rem; }
+      .resume-entry .tags { margin-top: 0.4rem; }
+      .resume-entry .tag {
+        font-size: 0.72rem;
+        padding: 0.15rem 0.55rem;
+      }
+
+      /* Education condensed */
+      .edu-entry { margin-bottom: 1.1rem; }
+      .edu-entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+      }
+      .edu-entry-header h3 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      .edu-entry-period {
+        font-size: 0.78rem;
+        color: var(--text-soft, #6b7280);
+      }
+      .edu-entry-school {
+        font-size: 0.82rem;
+        color: var(--text-soft, #6b7280);
+        margin: 0.1rem 0 0.2rem;
+      }
+      .edu-entry-detail {
+        font-size: 0.8rem;
+        color: var(--text-body, #374151);
+      }
+
+      /* Skills simple list */
+      .skills-simple { display: flex; flex-direction: column; gap: 0.6rem; }
+      .skills-row {
+        display: flex;
+        gap: 0.6rem;
+        align-items: baseline;
+        font-size: 0.83rem;
+        flex-wrap: wrap;
+      }
+      .skills-row-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent, #6366f1);
+        min-width: 82px;
+        flex-shrink: 0;
+      }
+      .skills-row-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+      }
+      .skills-row-chips .tag {
+        font-size: 0.72rem;
+        padding: 0.15rem 0.55rem;
+      }
+
+      /* Languages grid */
+      .lang-list { display: flex; flex-direction: column; gap: 0.55rem; }
+      .lang-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        padding: 0.35rem 0;
+        border-bottom: 1px dashed var(--border, #e5e7eb);
+      }
+      .lang-item:last-child { border-bottom: none; }
+      .lang-name { font-weight: 600; }
+      .lang-cert {
+        font-size: 0.78rem;
+        color: var(--text-soft, #6b7280);
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .lang-cert a {
+        color: var(--accent, #6366f1);
+        text-decoration: none;
+        font-size: 0.75rem;
+      }
+      .lang-cert a:hover { text-decoration: underline; }
+
+      /* Portfolio section label */
+      .portfolio-tag-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent, #6366f1);
+      }
+
+      /* Deep-dive links in portfolio cards */
+      .card-links { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    </style>
   </head>
+
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4HC6D6D"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-    <a class="skip-link" href="#about">Aller au contenu</a>
+    <a class="skip-link" href="#resume">Aller au contenu</a>
+
+    <!-- ── Header ───────────────────────────────── -->
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
           <span class="brand-mark"> </span>
-          <span class="brand-text" data-i18n="brandName">Yu-ing Tseng</span>
+          <span class="brand-text" data-i18n="brandName">Yu‑Ting Tseng</span>
         </div>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Ouvrir le menu"
-          aria-controls="mobile-nav"
-          aria-expanded="false"
-          data-nav-toggle
-        >
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu"
+          aria-controls="mobile-nav" aria-expanded="false" data-nav-toggle>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </button>
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="#about" data-i18n="nav.about">? propos</a>
-          <a href="#skills" data-i18n="nav.skills">Compétences</a>
-          <a href="#education" data-i18n="nav.education">Formation</a>
-          <a href="#experience" data-i18n="nav.experience">Expériences Professionnelles</a>
-          <a href="#extracurricular" data-i18n="nav.extracurricular">Expériences Extra-scolaires</a>
-          <a href="#volunteer" data-i18n="nav.volunteer">Bénévolat</a>
-          <a href="#honors" data-i18n="nav.honors">Distinctions</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#resume"    data-i18n="simpleNav.resume">Résumé</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
-          <button class="lang-btn is-active" data-lang="fr" type="button">
-            FR
-          </button>
-          <button class="lang-btn" data-lang="en" type="button">
-            EN
-          </button>
-          <button class="lang-btn" data-lang="zh" type="button">
-            CN
-          </button>
+          <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="zh" type="button">CN</button>
         </div>
       </div>
     </header>
 
+    <!-- ── Mobile nav ──────────────────────────── -->
     <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
       <div class="mobile-nav-inner">
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
-          <a href="#about" data-i18n="nav.about">? propos</a>
-          <a href="#skills" data-i18n="nav.skills">Compétences</a>
-          <a href="#education" data-i18n="nav.education">Formation</a>
-          <a href="#experience" data-i18n="nav.experience">Expériences Professionnelles</a>
-          <a href="#extracurricular" data-i18n="nav.extracurricular">Expériences Extra-scolaires</a>
-          <a href="#volunteer" data-i18n="nav.volunteer">Bénévolat</a>
-          <a href="#honors" data-i18n="nav.honors">Distinctions</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#resume"    data-i18n="simpleNav.resume">Résumé</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
     </div>
 
-    <!-- ── Page type navigation bar ───────────────── -->
-    <nav class="page-type-bar" aria-label="Type de page">
-      <div class="container page-type-inner">
-        <a href="index.html" class="page-type-link is-current">
-          <span class="page-type-icon">🌐</span>
-          <span data-i18n="pageNav.overview">Vue générale</span>
-        </a>
-        <a href="finance.html" class="page-type-link">
-          <span class="page-type-icon">📊</span>
-          <span data-i18n="pageNav.finance">Finance &amp; Conseil</span>
-        </a>
-        <a href="marketing.html" class="page-type-link">
-          <span class="page-type-icon">✦</span>
-          <span data-i18n="pageNav.marketing">Marketing</span>
-        </a>
-        <a href="teaching.html" class="page-type-link">
-          <span class="page-type-icon">🎓</span>
-          <span data-i18n="pageNav.teaching">Enseignement</span>
-        </a>
-        <a href="data.html" class="page-type-link">
-          <span class="page-type-icon">📈</span>
-          <span data-i18n="pageNav.data">Data &amp; Recherche</span>
-        </a>
-      </div>
-    </nav>
-
     <main>
-      <section class="hero" id="about">
-        <div class="container hero-grid">
-          <div class="hero-text">
-            <p class="hero-kicker" data-i18n="hero.kicker">
-              Marketing digital · Analyse de données
-            </p>
-            <h1>
-              <span data-i18n="hero.title1">Je transforme les données en</span>
-              <span class="accent" data-i18n="hero.title2">décisions marketing</span>.
-            </h1>
-            <p class="hero-summary" data-i18n="hero.summary">
-              ?tudiante en Master ? emlyon business school, je combine une
-              solide expertise analytique et une forte sensibilité pour
-              le marché. 
-            </p>
-            <div class="hero-meta">
-              <div>
-                <span class="meta-label" data-i18n="hero.locationLabel"
-                  >Basée à</span>
-                <span class="meta-value" data-i18n="hero.locationValue"
-                  >Lyon, France</span>
-              </div>
-              <div>
-                <span class="meta-label" data-i18n="hero.availabilityLabel"
-                  >Disponible à partir de</span>
-                <span class="meta-value" data-i18n="hero.availabilityValue"
-                  >Juillet 2026 / Janvier 2027 (stage de césure de 6 mois)</span>
-              </div>
-            </div>
-            <div class="hero-actions">
-              <a
-                href="#contact"
-                class="btn btn-primary"
-                data-i18n="hero.ctaPrimary"
-                >Me contacter</a>
-              <a
-                href="#experience"
-                class="btn btn-ghost"
-                data-i18n="hero.ctaSecondary"
-                >Voir mes Expériences Professionnelles</a>
-            </div>
-          </div>
-          <aside class="hero-card" aria-label="Informations principales">
-            <img
-              class="avatar"
-              src="assets/profile.png"
-              alt="Portrait de Yu-ing Tseng"
-              width="240"
-              height="280"
-              loading="eager"
-              decoding="async"
-            />
-            <h2 data-i18n="hero.cardName">Yu-ing Tseng</h2>
-            <p class="hero-role" data-i18n="hero.cardRole">
-              Marketing digital & Data
-            </p>
-            <ul class="hero-list">
-              <li>
-                <span class="label" data-i18n="hero.cardEmailLabel">Email</span
-                ><span class="value">yuting.alice.tseng@gmail.com</span>
-              </li>
-              <li>
-                <span class="label">LinkedIn</span>
-                <span class="value">
-                  <a
-                    href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Yu-Ting Tseng</a
-                  >
-                </span>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </section>
 
-      <section class="section" id="skills">
+      <!-- ══════════════════════════════════════════
+           SECTION 1 · RÉSUMÉ
+      ══════════════════════════════════════════ -->
+      <section class="section" id="resume">
         <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="skills.title">Compétences</h2>
-            <p data-i18n="skills.subtitle">
-              Un socle structuré autour de l'analyse de données, du marketing
-              digital et d'un profil international.
-            </p>
-          </header>
 
-          <div class="experience-toolbar skills-toolbar">
-            <div class="experience-filters skills-filters" aria-label="Filtrer les compétences">
-              <button type="button" class="experience-filter is-active" data-skill-area="all">
-                <span data-i18n="skills.filterAll">Tout</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="data">
-                <span data-i18n="skills.filterData">Data & Analytics</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="marketing">
-                <span data-i18n="skills.filterMarketing">Marketing Digital</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="consulting">
-                <span data-i18n="skills.filterConsulting">Consulting & Stratégie</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="finance">
-                <span data-i18n="skills.filterFinance">Finance</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="soft">
-                <span data-i18n="skills.filterSoft">Soft Skills</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="languages">
-                <span data-i18n="skills.filterLanguages">Langues</span>
-              </button>
+          <!-- Intro card -->
+          <div class="intro-card" data-reveal>
+            <img class="avatar" src="assets/profile.png"
+              alt="Portrait de Yu-Ting Tseng" width="88" height="88"
+              loading="eager" decoding="async" />
+            <div class="intro-card-text">
+              <h1 data-i18n="hero.cardName">Yu‑Ting Tseng</h1>
+              <p class="intro-role" data-i18n="hero.kicker">Marketing digital · Analyse de données</p>
+              <div class="intro-meta">
+                <span>📍 <span data-i18n="hero.locationValue">Lyon, France</span></span>
+                <span>📅 <span data-i18n="hero.availabilityValue">Juillet 2026 / Janvier 2027</span></span>
+                <span>✉️ yuting.alice.tseng@gmail.com</span>
+                <span>🔗 <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
+                  target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+              </div>
+            </div>
+            <div class="intro-card-actions">
+              <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Me contacter</a>
+              <a href="assets/250508_作品集_社群經營與設計_c.pdf"
+                class="btn btn-ghost" style="font-size:0.8rem;"
+                target="_blank" rel="noopener noreferrer"
+                data-i18n="simpleNav.viewPortfolioPdf">Voir le portfolio (PDF)</a>
             </div>
           </div>
 
-          <div class="skills-layout">
-          <div class="skills-left">
-          <div class="skills-grid">
+          <!-- Two-column resume grid -->
+          <div class="resume-grid">
 
-            <!-- DATA & ANALYTICS -->
-            <div class="skills-block" data-skill-area="data" data-reveal>
-              <h3 data-i18n="skills.blockData">Data & Analytics</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subData1">Langages & Requêtes</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-r">R</button>
-                  <button type="button" class="skill-card" data-skill="data-python">Python</button>
-                  <button type="button" class="skill-card" data-skill="data-sql">SQL</button>
-                  <button type="button" class="skill-card" data-skill="prog-vba">VBA</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subDataTools">Outils & Applications</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
-                  <button type="button" class="skill-card" data-skill="data-access">Access</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subData2">Dashboards & Visualisation</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-powerbi">Power BI</button>
-                  <button type="button" class="skill-card" data-skill="data-tableau">Tableau</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subData3">Méthodes & Analyse</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-statistics" data-i18n="skills.chipStatistics">Statistiques & Méthodes Quantitatives</button>
-                  <button type="button" class="skill-card" data-skill="data-kpi">KPI Tracking & Reporting</button>
-                  <button type="button" class="skill-card" data-skill="data-segmentation">Customer Segmentation</button>
-                  <button type="button" class="skill-card" data-skill="data-ab">A/B Testing</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subData4">AI & Outils</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="ai-tools" data-i18n="skills.chipAiTools">Outils IA (ChatGPT, Claude, Gemini)</button>
-                  <button type="button" class="skill-card" data-skill="ai-ads" data-i18n="skills.chipAiAds">Publicité Assistée par l'IA</button>
-                  <button type="button" class="skill-card" data-skill="ai-business" data-i18n="skills.chipAiBusiness">IA Pour Les Affaires</button>
-                </div>
-              </div>
-            </div>
+            <!-- ── LEFT : EXPERIENCE ─────────────── -->
+            <div class="resume-col">
+              <h2 class="resume-col-title" data-i18n="experience.title">Expériences professionnelles</h2>
+              <div class="resume-timeline">
 
-            <!-- MARKETING DIGITAL -->
-            <div class="skills-block" data-skill-area="marketing" data-reveal>
-              <h3 data-i18n="skills.blockMarketing">Marketing Digital</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMkt1">Acquisition & Performance</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-seo">SEO On-Page & Technique</button>
-                  <button type="button" class="skill-card" data-skill="mkt-sea">SEA · Google Ads</button>
-                  <button type="button" class="skill-card" data-skill="mkt-analytics">Google Analytics</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMkt2">Social Media & Contenu</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-social">Social Media (Xiaohongshu, Meta)</button>
-                  <button type="button" class="skill-card" data-skill="mkt-design" data-i18n="skills.chipDesign">Création De Contenu & Design Visuel</button>
-                  <button type="button" class="skill-card" data-skill="mkt-email">Emailing & Automation</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMkt3">Stratégie & Planification</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-research" data-i18n="skills.chipResearch">?tudes De Marché & Positionnement</button>
-                  <button type="button" class="skill-card" data-skill="mkt-campaign" data-i18n="skills.chipCampaign">Planification De Campagnes</button>
-                  <button type="button" class="skill-card" data-skill="mkt-crm">CRM & Parcours Client</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- CONSULTING & STRATEGY -->
-            <div class="skills-block" data-skill-area="consulting" data-reveal>
-              <h3 data-i18n="skills.blockConsulting">Consulting & Stratégie</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subCons1">Analyse Stratégique</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="cons-strategy">Analyse Stratégique (SWOT, PESTEL, Porter)</button>
-                  <button type="button" class="skill-card" data-skill="cons-benchmark">Benchmarking Concurrentiel</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subCons2">Business & Présentation</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="cons-business-case">Business Case & Recommandations</button>
-                  <button type="button" class="skill-card" data-skill="cons-storytelling">Storytelling & Présentations</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- FINANCE -->
-            <div class="skills-block" data-skill-area="finance" data-reveal>
-              <h3 data-i18n="skills.blockFinance">Finance</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subFin1">Cours & Fondamentaux</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="fin-green">Green Finance & Risk Management</button>
-                  <button type="button" class="skill-card" data-skill="fin-decision">Operational Decision Analysis</button>
-                  <button type="button" class="skill-card" data-skill="fin-international">International Finance</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- SOFT SKILLS -->
-            <div class="skills-block" data-skill-area="soft" data-reveal>
-              <h3 data-i18n="skills.blockSoft">Soft Skills</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subSoft1">Collaboration</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="soft-intercultural" data-i18n="skills.chipIntercultural">Travail Interculturel</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subSoft2">Leadership & Organisation</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="soft-leadership" data-i18n="skills.chipLeadership">Leadership & Gestion d'équipe</button>
-                  <button type="button" class="skill-card" data-skill="soft-project" data-i18n="skills.chipProject">Gestion De Projet & Organisation</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subSoft3">Communication</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="soft-communication" data-i18n="skills.chipComm">Communication & Prise De Parole</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- LANGUAGES -->
-            <div class="skills-block" data-skill-area="languages" data-reveal>
-              <h3 data-i18n="skills.blockLanguages">Langues</h3>
-              <div class="skills-cards">
-                <a
-                  href="certificates/IELTS%208_20241215.pdf"
-                  class="skill-card"
-                  data-skill="lang-english"
-                  data-i18n="skills.chipEnglish"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Anglais ??IELTS 8.0 (C1)</a
-                >
-                <a
-                  href="certificates/DALF%20C1_Certificate.pdf"
-                  class="skill-card"
-                  data-skill="lang-french"
-                  data-i18n="skills.chipFrench"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Français ??DALF C1</a
-                >
-                <a
-                  href="certificates/JLPT%20N1.jpg"
-                  class="skill-card"
-                  data-skill="lang-japanese"
-                  data-i18n="skills.chipJapanese"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Japonais ??JLPT N1</a
-                >
-                <a
-                  href="#volunteer"
-                  class="skill-card"
-                  data-skill="lang-mandarin"
-                  data-i18n="skills.chipMandarin"
-                  >Mandarin ??langue maternelle</a
-                >
-              </div>
-            </div>
-
-          </div>
-          </div><!-- /.skills-left -->
-          <div class="skills-right">
-            <div class="skill-preview" aria-live="polite">
-              <h3 class="skill-preview-title" data-i18n="skills.previewTitle">
-                Détail d'une compétence
-              </h3>
-              <p class="skill-preview-text" data-i18n="skills.previewText">
-                Survolez une compétence pour voir des preuves (projets, cours,
-                expériences) avec le contexte, ce qui a été fait et les résultats.
-              </p>
-              <div class="skill-preview-proofs"></div>
-            </div>
-          </div><!-- /.skills-right -->
-          </div><!-- /.skills-layout -->
-        </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="education.title">Formation académique</h2>
-            <p data-i18n="education.subtitle">
-              Un parcours international entre la France et Taïwan, à l'interface
-              du management, de la finance et des langues.
-            </p>
-          </header>
-          <div class="timeline">
-            <article class="timeline-item" id="edu-emlyon" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="education.emlyon.period"
-                  >09/2023 ??Aujourd'hui</span
-                >
-                <span class="timeline-location">Lyon · France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="education.emlyon.title">
-                  Master en Gestion (Programme Grande ?cole)
-                </h3>
-                <p
-                  class="timeline-company"
-                  data-i18n="education.emlyon.school"
-                >
-                  emlyon business school
-                </p>
-                <div class="edu-degree-section">
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.emlyon.specLabel">Spécialisation</span>
-                    <span class="edu-degree-chip" data-i18n="education.emlyon.spec1">Finance &amp; Comptabilité</span>
+                <article class="resume-entry" data-reveal="slide-left">
+                  <div class="resume-entry-header">
+                    <h3 data-i18n="experience.kpn.title">Assistante Marketing Digital</h3>
+                    <span class="resume-entry-period" data-i18n="experience.kpn.period">01/2025 – 06/2025</span>
                   </div>
-                </div>
-                <ul class="timeline-points">
-                  <li data-i18n="education.emlyon.pointEn">Programme dispensé entièrement en anglais.</li>
-                </ul>
-                <div class="edu-info">
-                  <div class="edu-info-row">
-                    <span class="edu-info-key">GPA</span>
-                    <span data-i18n="education.emlyon.gpa">4,0/4,0</span>
+                  <p class="resume-entry-company">KPN · Taipei, Taïwan</p>
+                  <ul>
+                    <li data-i18n="experience.kpn.point1">Optimisation SEO (on-page / technique) et recommandations de contenus.</li>
+                    <li data-i18n="experience.kpn.point2">Suivi de KPIs et analyse de performance (trafic, CTR, conversions).</li>
+                    <li data-i18n="experience.kpn.point3">Campagnes SEA et reporting.</li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">SEO</span>
+                    <span class="tag">SEA</span>
+                    <span class="tag">Google Analytics</span>
+                    <span class="tag">KPI</span>
                   </div>
-                  <div class="edu-info-row">
-                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
-                    <div class="course-chips">
-                      <span class="course-chip">Digital Marketing</span>
-                      <span class="course-chip">Data Science &amp; AI for Business</span>
-                      <span class="course-chip">Brand Strategy</span>
-                      <span class="course-chip">Marketing Analytics</span>
+                </article>
+
+                <article class="resume-entry" data-reveal="slide-left">
+                  <div class="resume-entry-header">
+                    <h3 data-i18n="experience.engoo.title">Assistante Marketing</h3>
+                    <span class="resume-entry-period" data-i18n="experience.engoo.period">10/2024 – 02/2025</span>
+                  </div>
+                  <p class="resume-entry-company">Engoo (DMM.com Group) · Taipei, Taïwan</p>
+                  <ul>
+                    <li data-i18n="experience.engoo.point1">Stratégie de contenu Xiaohongshu (STP + A/B testing) — +89.1% d'interactions, +69.7% d'abonnés en 3 mois.</li>
+                    <li data-i18n="experience.engoo.point2">Veille concurrentielle, analyse d'audience et segmentation cible.</li>
+                    <li>Dashboard Excel – 12 métriques quotidiennes, comparaison A/B de périodes.</li>
+                  </ul>
+                  <div class="exp-stats" style="margin:0.5rem 0 0.4rem;">
+                    <div class="exp-stat"><span class="stat-value">+93.3%</span><span class="stat-label" data-i18n="experience.engoo.stat1">Vues</span></div>
+                    <div class="exp-stat"><span class="stat-value">+69.7%</span><span class="stat-label" data-i18n="experience.engoo.stat2">Abonnés</span></div>
+                    <div class="exp-stat"><span class="stat-value">+89.1%</span><span class="stat-label" data-i18n="experience.engoo.stat3">Interactions</span></div>
+                  </div>
+                  <div class="tags">
+                    <span class="tag">Xiaohongshu</span>
+                    <span class="tag">A/B Testing</span>
+                    <span class="tag">Excel Dashboard</span>
+                  </div>
+                </article>
+
+                <article class="resume-entry" data-reveal="slide-left">
+                  <div class="resume-entry-header">
+                    <h3 data-i18n="experience.tutorABC.title">Professeure d'anglais en ligne</h3>
+                    <span class="resume-entry-period" data-i18n="experience.tutorABC.period">08/2024 – Présent</span>
+                  </div>
+                  <p class="resume-entry-company">TutorABC · En ligne</p>
+                  <ul>
+                    <li data-i18n="experience.tutorABC.point1">Cours particuliers pour apprenants de niveaux variés (primaire au lycée).</li>
+                    <li data-i18n="experience.tutorABC.point2">Préparation aux certifications IELTS et Cambridge English.</li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">IELTS</span>
+                    <span class="tag">Cambridge</span>
+                  </div>
+                </article>
+
+                <article class="resume-entry" data-reveal="slide-left">
+                  <div class="resume-entry-header">
+                    <h3 data-i18n="experience.teaching.title">Assistante d'enseignement</h3>
+                    <span class="resume-entry-period" data-i18n="experience.teaching.period">07/2023 – 04/2025</span>
+                  </div>
+                  <p class="resume-entry-company">College of Global Banking and Finance, NCCU · Taipei</p>
+                  <ul>
+                    <li data-i18n="experience.teaching.point1">Support de cours (finance, risk management, VBA/Access) et suivi des étudiants.</li>
+                    <li data-i18n="experience.teaching.point2">Préparation de supports et coordination logistique.</li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">Finance</span>
+                    <span class="tag">VBA</span>
+                    <span class="tag" data-i18n="tags.teaching">Enseignement</span>
+                  </div>
+                </article>
+
+                <article class="resume-entry" data-reveal="slide-left">
+                  <div class="resume-entry-header">
+                    <h3 data-i18n="experience.research.title">Assistante de recherche</h3>
+                    <span class="resume-entry-period" data-i18n="experience.research.period">06/2023 – 12/2023</span>
+                  </div>
+                  <p class="resume-entry-company">Institut des Relations Internationales, NCCU · Taipei</p>
+                  <ul>
+                    <li data-i18n="experience.research.point1">Collecte, nettoyage et analyse de données (R, Python) pour des travaux de recherche.</li>
+                    <li data-i18n="experience.research.point2">Préparation de synthèses et supports pour séminaires.</li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">R</span>
+                    <span class="tag">Python</span>
+                    <span class="tag" data-i18n="tags.research">Recherche</span>
+                  </div>
+                </article>
+
+                <article class="resume-entry" data-reveal="slide-left">
+                  <div class="resume-entry-header">
+                    <h3 data-i18n="teachingExp.translation.title">Traductrice &amp; Correctrice (Freelance)</h3>
+                    <span class="resume-entry-period" data-i18n="teachingExp.translation.period">2022 – 2024</span>
+                  </div>
+                  <p class="resume-entry-company" data-i18n="teachingExp.translation.company">Freelance · Projets Académiques &amp; Éditoriaux</p>
+                  <ul>
+                    <li data-i18n="teachingExp.translation.point1">Traduction entre le chinois, l'anglais et le français (documents académiques, contenus pro).</li>
+                  </ul>
+                  <div class="tags">
+                    <span class="tag">ZH · EN · FR</span>
+                    <span class="tag" data-i18n="tags.translation">Traduction</span>
+                  </div>
+                </article>
+
+              </div><!-- /.resume-timeline -->
+            </div><!-- /.resume-col -->
+
+            <!-- ── RIGHT : EDUCATION + SKILLS + LANGUAGES ── -->
+            <div class="resume-col">
+
+              <!-- Education -->
+              <div class="resume-aside-block" data-reveal>
+                <h2 class="resume-col-title" data-i18n="education.title">Formation académique</h2>
+
+                <div class="edu-entry">
+                  <div class="edu-entry-header">
+                    <h3 data-i18n="education.emlyon.title">Master en Gestion – Grande École</h3>
+                    <span class="edu-entry-period" data-i18n="education.emlyon.period">09/2023 – Aujourd'hui</span>
+                  </div>
+                  <p class="edu-entry-school" data-i18n="education.emlyon.school">emlyon business school · Lyon, France</p>
+                  <p class="edu-entry-detail">
+                    <span data-i18n="education.emlyon.specLabel">Spécialisation</span> :
+                    <span data-i18n="education.emlyon.spec1">Finance &amp; Comptabilité</span> ·
+                    GPA <span data-i18n="education.emlyon.gpa">4,0/4,0</span>
+                  </p>
+                </div>
+
+                <div class="edu-entry">
+                  <div class="edu-entry-header">
+                    <h3 data-i18n="education.nccu.title">Bachelor Français &amp; Diplomatie</h3>
+                    <span class="edu-entry-period" data-i18n="education.nccu.period">09/2020 – 06/2025</span>
+                  </div>
+                  <p class="edu-entry-school" data-i18n="education.nccu.school">Université Nationale Chengchi (NCCU) · Taipei, Taïwan</p>
+                  <p class="edu-entry-detail">
+                    <span data-i18n="education.nccu.majorLabel">Majeure</span> :
+                    <span data-i18n="education.nccu.major1">Français</span> +
+                    <span data-i18n="education.nccu.major2">Diplomatie</span> ·
+                    GPA <span data-i18n="education.nccu.gpa">3,99/4,0</span>
+                  </p>
+                </div>
+
+                <div class="edu-entry">
+                  <div class="edu-entry-header">
+                    <h3 data-i18n="education.paris1.title">Programme d'échange – Science Politique</h3>
+                    <span class="edu-entry-period" data-i18n="education.paris1.period">01/2024 – 06/2024</span>
+                  </div>
+                  <p class="edu-entry-school" data-i18n="education.paris1.school">Université Paris 1 Panthéon‑Sorbonne · Paris, France</p>
+                </div>
+              </div>
+
+              <!-- Skills -->
+              <div class="resume-aside-block" data-reveal>
+                <h2 class="resume-col-title" data-i18n="skills.title">Compétences</h2>
+                <div class="skills-simple">
+
+                  <div class="skills-row">
+                    <span class="skills-row-label" data-i18n="skills.blockData">Data</span>
+                    <div class="skills-row-chips">
+                      <span class="tag">R</span>
+                      <span class="tag">Python</span>
+                      <span class="tag">SQL</span>
+                      <span class="tag">VBA</span>
+                      <span class="tag">Excel · TOSA 950</span>
+                      <span class="tag">Power BI</span>
+                      <span class="tag">Tableau</span>
                     </div>
                   </div>
-                </div>
-              </div>
-            </article>
 
-            <article class="timeline-item" id="edu-nccu" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="education.nccu.period"
-                  >09/2020 ??06/2025</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="education.nccu.title">
-                  Bachelor en Français & Diplomatie
-                </h3>
-                <p
-                  class="timeline-company"
-                  data-i18n="education.nccu.school"
-                >
-                  Université Nationale Chengchi (NCCU)
-                </p>
-                <div class="edu-degree-section">
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.nccu.majorLabel">Majeure</span>
-                    <span class="edu-degree-chip" data-i18n="education.nccu.major1">Français (L. européennes)</span>
-                    <span class="edu-degree-chip" data-i18n="education.nccu.major2">Diplomatie</span>
-                  </div>
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.nccu.minorLabel">Mineure</span>
-                    <span class="edu-degree-chip edu-degree-chip--minor" data-i18n="education.nccu.minor1">?conomie</span>
-                  </div>
-                </div>
-                <ul class="timeline-points">
-                  <li data-i18n="education.nccu.point2">Travaux de recherche sur les enjeux économiques et géopolitiques.</li>
-                </ul>
-                <div class="edu-info">
-                  <div class="edu-info-row">
-                    <span class="edu-info-key">GPA</span>
-                    <span data-i18n="education.nccu.gpa">4,22 / 4,3 (3,99 / 4,0).</span>
-                  </div>
-                  <div class="edu-info-row">
-                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
-                    <div class="course-chips">
-                      <span class="course-chip">Management</span>
-                      <span class="course-chip">Data Analysis &amp; Programming (VBA &amp; Access)</span>
-                      <span class="course-chip">Programming 101 (Python)</span>
-                      <span class="course-chip">Research Methods (R &amp; Statistics)</span>
-                      <span class="course-chip">Marketing Research (R, Decanter AI)</span>
-                      <span class="course-chip">International Finance</span>
+                  <div class="skills-row">
+                    <span class="skills-row-label" data-i18n="skills.blockMarketing">Marketing</span>
+                    <div class="skills-row-chips">
+                      <span class="tag">SEO / SEA</span>
+                      <span class="tag">Google Analytics</span>
+                      <span class="tag">Social Media</span>
+                      <span class="tag">Xiaohongshu</span>
+                      <span class="tag">A/B Testing</span>
                     </div>
                   </div>
-                </div>
-              </div>
-            </article>
 
-            <article class="timeline-item" id="edu-paris1" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="education.paris1.period"
-                  >01/2024 ??06/2024</span
-                >
-                <span class="timeline-location">Paris · France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="education.paris1.title">
-                  Programme d'ééhange en science politique
-                </h3>
-                <p
-                  class="timeline-company"
-                  data-i18n="education.paris1.school"
-                >
-                  Université Paris 1 Panthéon-Sorbonne
-                </p>
-                <div class="edu-degree-section">
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.paris1.typeLabel">Échange</span>
-                    <span class="edu-degree-chip" data-i18n="education.paris1.typeDomain">Science politique &amp; Relations internationales</span>
-                  </div>
-                </div>
-                <ul class="timeline-points">
-                  <li data-i18n="education.paris1.point1">Approfondissement des politiques européennes et internationales.</li>
-                  <li data-i18n="education.paris1.point2">Immersion académique et culturelle en France.</li>
-                </ul>
-                <div class="edu-info">
-                  <div class="edu-info-row">
-                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
-                    <div class="course-chips">
-                      <span class="course-chip" data-i18n="education.paris1.course1">Science politique</span>
-                      <span class="course-chip" data-i18n="education.paris1.course2">Relations internationales</span>
-                      <span class="course-chip" data-i18n="education.paris1.course3">Politiques européennes</span>
+                  <div class="skills-row">
+                    <span class="skills-row-label" data-i18n="skills.blockConsulting">Consulting</span>
+                    <div class="skills-row-chips">
+                      <span class="tag">SWOT · PESTEL</span>
+                      <span class="tag">Benchmarking</span>
+                      <span class="tag">Business Case</span>
                     </div>
                   </div>
+
+                  <div class="skills-row">
+                    <span class="skills-row-label">AI</span>
+                    <div class="skills-row-chips">
+                      <span class="tag">ChatGPT</span>
+                      <span class="tag">Claude</span>
+                      <span class="tag">Gemini</span>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </article>
-          </div>
-        </div>
+
+              <!-- Languages -->
+              <div class="resume-aside-block" data-reveal>
+                <h2 class="resume-col-title" data-i18n="skills.blockLanguages">Langues</h2>
+                <div class="lang-list">
+                  <div class="lang-item">
+                    <span class="lang-name" data-i18n="simpleNav.langMandarin">Mandarin (中文)</span>
+                    <span class="lang-cert" data-i18n="simpleNav.langMandarinCert">Langue maternelle</span>
+                  </div>
+                  <div class="lang-item">
+                    <span class="lang-name" data-i18n="simpleNav.langFrench">Français</span>
+                    <span class="lang-cert">
+                      DALF C1
+                      <a href="certificates/DALF%20C1_Certificate.pdf" target="_blank" rel="noopener noreferrer">📄</a>
+                    </span>
+                  </div>
+                  <div class="lang-item">
+                    <span class="lang-name" data-i18n="simpleNav.langEnglish">Anglais</span>
+                    <span class="lang-cert">
+                      IELTS 8.0 (C1)
+                      <a href="certificates/IELTS%208_20241215.pdf" target="_blank" rel="noopener noreferrer">📄</a>
+                    </span>
+                  </div>
+                  <div class="lang-item">
+                    <span class="lang-name" data-i18n="simpleNav.langJapanese">Japonais (日本語)</span>
+                    <span class="lang-cert">
+                      JLPT N1
+                      <a href="certificates/JLPT%20N1.jpg" target="_blank" rel="noopener noreferrer">📄</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Distinctions -->
+              <div class="resume-aside-block" data-reveal>
+                <h2 class="resume-col-title" data-i18n="honors.title">Distinctions</h2>
+                <div class="resume-timeline" style="gap:0.75rem;">
+                  <div class="resume-entry">
+                    <div class="resume-entry-header">
+                      <h3 data-i18n="honors.excellence.title">Certificate of Excellence – Top 5% GPA</h3>
+                      <span class="resume-entry-period" data-i18n="honors.excellence.year">2021, 2023</span>
+                    </div>
+                    <p class="resume-entry-company" data-i18n="honors.excellence.org">NCCU</p>
+                  </div>
+                  <div class="resume-entry">
+                    <div class="resume-entry-header">
+                      <h3 data-i18n="honors.exchange.title">Bourse d'échange</h3>
+                      <span class="resume-entry-period" data-i18n="honors.exchange.year">2024</span>
+                    </div>
+                    <p class="resume-entry-company" data-i18n="honors.exchange.org">Ministère de l'Éducation (Taïwan)</p>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /.resume-col (aside) -->
+          </div><!-- /.resume-grid -->
+
+        </div><!-- /.container -->
       </section>
 
-      <section class="section" id="experience">
+
+      <!-- ══════════════════════════════════════════
+           SECTION 2 · PORTFOLIO
+      ══════════════════════════════════════════ -->
+      <section class="section section-alt" id="portfolio">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 data-i18n="experience.title">Expériences professionnelles</h2>
-            <p data-i18n="experience.subtitle">
-              Une sélection de mes Expériences Professionnelles en marketing digital, analyse de
-              données et gestion de projet.
-            </p>
-          </header>
-          <div class="experience-toolbar">
-            <div class="experience-filters" aria-label="Filtrer les Expériences Professionnelles">
-              <button
-                type="button"
-                class="experience-filter is-active"
-                data-vibe="all"
-              >
-                <span data-i18n="experience.filterAll">Toutes</span>
-              </button>
-              <button
-                type="button"
-                class="experience-filter"
-                data-vibe="teaching"
-              >
-                <span data-i18n="experience.filterTeaching">Teaching</span>
-              </button>
-              <button
-                type="button"
-                class="experience-filter"
-                data-vibe="finance"
-              >
-                <span data-i18n="experience.filterFinance">Finance</span>
-              </button>
-              <button
-                type="button"
-                class="experience-filter"
-                data-vibe="marketing"
-              >
-                <span data-i18n="experience.filterMarketing">Marketing</span>
-              </button>
-            </div>
-            <button
-              type="button"
-              class="experience-view-all btn btn-ghost"
-              data-view-all
-              hidden
-            >
-              <span data-i18n="experience.viewAll">Voir tout</span>
-            </button>
-          </div>
-          <div class="timeline" data-experience-list>
-            <article class="timeline-item" id="exp-kpn" data-vibe="marketing" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.kpn.period"
-                  >01/2025 ??06/2025</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.kpn.title">Assistante Marketing Digital</h3>
-                <p class="timeline-company">KPN</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.kpn.point1">Optimisation SEO (on-page / technique) et recommandations de contenus.</li>
-                  <li data-i18n="experience.kpn.point2">Suivi de KPIs et analyse de performance (trafic, CTR, conversions).</li>
-                  <li data-i18n="experience.kpn.point3">Campagnes SEA et reporting.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.marketing">Marketing</span>
-                <span class="tag">SEO</span>
-                <span class="tag">SEA</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-engoo" data-vibe="marketing" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.engoo.period"
-                  >10/2024 ??02/2025</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.engoo.title">Assistante Marketing</h3>
-                <p class="timeline-company">Engoo <small style="font-weight:400;color:var(--text-soft)">(DMM.com Group)</small></p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.engoo.point1">Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing ??+89.1% d'interactions et +69.7% d'abonnés en 3 mois.</li>
-                  <li data-i18n="experience.engoo.point2">Veille concurrentielle, analyse d'audience et adaptation des visuels par sous-segment cible.</li>
-                  <li data-i18n="experience.engoo.point3">Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat">
-                    <span class="stat-value">+93.3%</span>
-                    <span class="stat-label" data-i18n="experience.engoo.stat1">Vues</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value">+69.7%</span>
-                    <span class="stat-label" data-i18n="experience.engoo.stat2">Abonnés</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value">+89.1%</span>
-                    <span class="stat-label" data-i18n="experience.engoo.stat3">Interactions</span>
-                  </div>
-                </div>
-                <div class="exp-portfolio-row">
-                  <a
-                    href="assets/250508_雿??蝷曄黎蝬??身閮c.pdf"
-                    class="exp-portfolio-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-i18n="experience.engoo.portfolioLink"
-                  >Voir les créations (PDF)</a>
-                  <a
-                    href="assets/Engoo_XHS Dashboard_FR.xlsx"
-                    class="exp-portfolio-link"
-                    download
-                    data-i18n="experience.engoo.excelLink"
-                    data-i18n-href="experience.engoo.excelHref"
-                  >Télécharger le tableau de bord XHS (Excel)</a>
-                </div>
-                <div class="exp-showcase">
-                  <span class="exp-showcase-eyebrow" data-i18n="experience.engoo.showcaseLabel">Livrables · Dashboard XHS</span>
-                  <div class="exp-showcase-figures">
-
-                    <!-- Left section: general performance evaluation -->
-                    <figure class="showcase-figure showcase-figure--primary">
-                      <a href="assets/Engoo Dashboard_FR.png"
-                         data-i18n-href="experience.engoo.screenshot1"
-                         target="_blank" rel="noopener noreferrer"
-                         class="showcase-img-wrap crop-panel crop-left">
-                        <img src="assets/Engoo Dashboard_FR.png"
-                             data-i18n-src="experience.engoo.screenshot1"
-                             alt="Tableau de bord de performance Engoo XHS – vue d'ensemble"
-                             data-i18n-alt="experience.engoo.screenshotAlt1"
-                             class="showcase-img" loading="lazy">
-                        <span class="showcase-zoom" aria-hidden="true">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                        </span>
-                      </a>
-                      <figcaption class="showcase-caption">
-                        <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge1">📊 Évaluation générale</span>
-                        <strong data-i18n="experience.engoo.showcaseTitle1">Vue d'ensemble · 30 derniers jours</strong>
-                        <span data-i18n="experience.engoo.showcaseDesc1">Section gauche : KPIs principaux et graphiques d'évolution sur la période sélectionnée.</span>
-                      </figcaption>
-                    </figure>
-
-                    <!-- Right section: A/B period comparison -->
-                    <figure class="showcase-figure showcase-figure--secondary">
-                      <a href="assets/Engoo Dashboard_FR.png"
-                         data-i18n-href="experience.engoo.screenshot1"
-                         target="_blank" rel="noopener noreferrer"
-                         class="showcase-img-wrap crop-panel crop-right">
-                        <img src="assets/Engoo Dashboard_FR.png"
-                             data-i18n-src="experience.engoo.screenshot1"
-                             alt="Tableau de bord de performance Engoo XHS – comparaison A/B"
-                             class="showcase-img" loading="lazy">
-                        <span class="showcase-zoom" aria-hidden="true">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                        </span>
-                      </a>
-                      <figcaption class="showcase-caption">
-                        <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge2">⚖️ Comparaison A/B</span>
-                        <strong data-i18n="experience.engoo.showcaseTitle2">30 jours vs 30 jours précédents</strong>
-                        <span data-i18n="experience.engoo.showcaseDesc2">Section droite : courbe Période A vs Période B pour identifier tendances et impact des actions.</span>
-                      </figcaption>
-                    </figure>
-
-                    <!-- Raw data table (full width) -->
-                    <figure class="showcase-figure showcase-figure--data">
-                      <a href="assets/Engoo Data_FR.png"
-                         data-i18n-href="experience.engoo.screenshot2"
-                         target="_blank" rel="noopener noreferrer"
-                         class="showcase-img-wrap crop-data">
-                        <img src="assets/Engoo Data_FR.png"
-                             data-i18n-src="experience.engoo.screenshot2"
-                             alt="Données brutes quotidiennes Engoo XHS"
-                             data-i18n-alt="experience.engoo.screenshotAlt2"
-                             class="showcase-img" loading="lazy">
-                        <span class="showcase-zoom" aria-hidden="true">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                        </span>
-                      </a>
-                      <figcaption class="showcase-caption">
-                        <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge3">📋 Données brutes</span>
-                        <strong data-i18n="experience.engoo.showcaseTitle3">Jeu de données quotidiennes</strong>
-                        <span data-i18n="experience.engoo.showcaseDesc3">12 métriques par jour — base structurée de toutes les visualisations.</span>
-                      </figcaption>
-                    </figure>
-
-                  </div>
-                </div>
-                <span class="tag" data-i18n="tags.marketing">Marketing</span>
-                <span class="tag">Social media</span>
-                <span class="tag">Xiaohongshu</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-tutorABC" data-vibe="teaching" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.tutorABC.period">08/2024 – Présent</span>
-                <span class="timeline-location" data-i18n="locations.online">En ligne · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.tutorABC.title">Professeure Particulière D'Anglais En Ligne</h3>
-                <p class="timeline-company">TutorABC</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.tutorABC.point1">Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).</li>
-                  <li data-i18n="experience.tutorABC.point2">Préparation aux certifications IELTS et Cambridge English (YLE, A2 Key, B1 Preliminary, B2 First).</li>
-                </ul>
-                <span class="tag" data-i18n="tags.teaching">Teaching</span>
-                <span class="tag">IELTS</span>
-                <span class="tag">Cambridge</span>
-                <span class="tag" data-i18n="tags.online">En Ligne</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-translation" data-vibe="teaching" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="teachingExp.translation.period">2022 – 2024</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="teachingExp.translation.title">Traductrice & Correctrice (Freelance)</h3>
-                <p class="timeline-company" data-i18n="teachingExp.translation.company">Freelance · Projets Académiques & Éditoriaux</p>
-                <ul class="timeline-points">
-                  <li data-i18n="teachingExp.translation.point1">Traduction de documents académiques et de contenus professionnels entre le chinois, l'anglais et le français.</li>
-                  <li data-i18n="teachingExp.translation.point2">Correction et relecture de thèses, articles et supports de communication pour des étudiants et entreprises.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.translation">Traduction</span>
-                <span class="tag" data-i18n="tags.proofreading">Correction</span>
-                <span class="tag">ZH · EN · FR</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-teaching" data-vibe="teaching" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span
-                  class="timeline-period"
-                  data-i18n="experience.teaching.period"
-                  >07/2023 ??12/2023 · 07/2024 ??04/2025</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.teaching.title">Assistante dd'ennseignement</h3>
-                <p class="timeline-company">College of Global Banking and Finance (NCCU)</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.teaching.point1">Support de cours (finance, risk management) et suivi des étudiants.</li>
-                  <li data-i18n="experience.teaching.point2">Préparation de supports et coordination logistique.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.teaching">Teaching</span>
-                <span class="tag">Finance</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-research" data-vibe="finance" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.research.period"
-                  >06/2023 ??12/2023</span
-                >
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.research.title">Assistante de recherche</h3>
-                <p class="timeline-company">Institut des Relations Internationales (NCCU)</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.research.point1">Collecte, nettoyage et analyse de données pour des travaux de recherche.</li>
-                  <li data-i18n="experience.research.point2">Préparation de synthèses et supports pour séminaires.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.data">Data</span>
-                <span class="tag" data-i18n="tags.research">Research</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="extracurricular">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="extracurricular.title">
-              Expériences Extra-scolaires
-            </h2>
-            <p data-i18n="extracurricular.subtitle">
-              Engagements dans des clubs et associations qui complètent mon
-              parcours académique.
-            </p>
+            <h2 data-i18n="nav.portfolio">Portfolio</h2>
+            <p data-i18n="portfolio.subtitle">Projets en marketing digital, analyse de données et gestion de communauté.</p>
           </header>
 
-          <div class="experience-toolbar" aria-label="Filtrer les Expériences Extra-scolaires">
-            <div class="experience-filters" data-extra-filters>
-              <button type="button" class="experience-filter is-active" data-extra="all">
-                <span data-i18n="extracurricular.filterAll">Toutes</span>
-              </button>
-              <button type="button" class="experience-filter" data-extra="leadership">
-                Leadership
-              </button>
-              <button type="button" class="experience-filter" data-extra="entrepreneurship">
-                <span data-i18n="extracurricular.filterEntrepreneurship">Entrepreneuriat</span>
-              </button>
-              <button type="button" class="experience-filter" data-extra="clubs">
-                <span data-i18n="extracurricular.filterClubs">Clubs & culture</span>
-              </button>
-            </div>
-            <button
-              type="button"
-              class="experience-view-all btn btn-ghost"
-              data-extra-view-all
-              hidden
-            >
-              <span data-i18n="extracurricular.viewAll">Voir tout</span>
-            </button>
-          </div>
+          <div class="portfolio-grid" data-reveal>
 
-          <div class="timeline" data-extracurricular-list>
-            <article class="timeline-item" id="extra-guzheng" data-extra="leadership" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="extracurricular.periodTBD">Période ? préciser</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
+            <!-- Engoo XHS Campaign -->
+            <article class="portfolio-card">
+              <div class="portfolio-card-header">
+                <span class="portfolio-tag">Social Media · Data</span>
+                <h3 data-i18n="portfolio.engoo.title">Engoo – Campagne Xiaohongshu</h3>
               </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.guzheng.title">
-                  Directrice marketing & adhésions ??Club de guzheng (cithare chinoise)
-                </h3>
-                <p class="timeline-company">NCCU</p>
-                <p class="timeline-company" data-i18n="extracurricular.guzheng.text">
-                  Organisation des campagnes de recrutement, gestion de la communauté et des réseaux sociaux, adaptation des cours et coordination d'éévénements.
-                </p>
-                                <div class="exp-portfolio-row">
-                  <a href="assets/250508_作品集_社群經營與設計_c.pdf" class="exp-portfolio-link" target="_blank" rel="noopener noreferrer" data-i18n="extracurricular.guzheng.portfolioLink">Voir les créations (PDF)</a>
+              <p data-i18n="portfolio.engoo.desc">Stratégie de contenu STP sur Xiaohongshu, A/B testing visuel et textuel, ciblage par sous-segments. Dashboard Excel de suivi avec 12 métriques quotidiennes et comparaison A/B de périodes.</p>
+              <div class="portfolio-stats">
+                <div class="portfolio-stat">
+                  <span class="stat-value">+93.3%</span>
+                  <span class="stat-label" data-i18n="portfolio.engoo.stat1">Vues</span>
                 </div>
-                <!-- Guzheng club visuals -->
-                <div class="exp-showcase" data-lang-show="zh" style="margin-top:0.9rem;">
-                  <span class="exp-showcase-eyebrow">Visuels de recrutement &amp; événements</span>
-                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.5rem;">
-                    <a href="assets/5.png" target="_blank" rel="noopener noreferrer"
-                       class="showcase-img-wrap" style="aspect-ratio:1/1;">
-                      <img src="assets/5.png" alt="政大古箏社 Affiche de recrutement" class="showcase-img" loading="lazy">
-                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                <div class="portfolio-stat">
+                  <span class="stat-value">+69.7%</span>
+                  <span class="stat-label" data-i18n="portfolio.engoo.stat2">Abonnés</span>
+                </div>
+                <div class="portfolio-stat">
+                  <span class="stat-value">+89.1%</span>
+                  <span class="stat-label" data-i18n="portfolio.engoo.stat3">Interactions</span>
+                </div>
+              </div>
+              <div class="card-links">
+                <a href="assets/250508_作品集_社群經營與設計_c.pdf"
+                   class="btn btn-primary" style="font-size:0.78rem;padding:0.35rem 0.9rem;"
+                   target="_blank" rel="noopener noreferrer"
+                   data-i18n="portfolio.viewPdf">Voir le portfolio (PDF)</a>
+                <a href="assets/Engoo_XHS Dashboard_FR.xlsx"
+                   class="btn btn-ghost" style="font-size:0.78rem;padding:0.35rem 0.9rem;"
+                   download data-i18n="experience.engoo.excelLink"
+                   data-i18n-href="experience.engoo.excelHref">Dashboard Excel</a>
+              </div>
+              <div style="margin-top:0.6rem;">
+                <a href="marketing.html" style="font-size:0.78rem;color:var(--accent);text-decoration:none;" data-i18n="simpleNav.deepDiveMarketing">→ Page Marketing</a>
+                &nbsp;·&nbsp;
+                <a href="data.html" style="font-size:0.78rem;color:var(--accent);text-decoration:none;" data-i18n="simpleNav.deepDiveData">→ Page Data</a>
+              </div>
+            </article>
+
+            <!-- Engoo XHS Dashboard (visual showcase) -->
+            <article class="portfolio-card">
+              <div class="portfolio-card-header">
+                <span class="portfolio-tag">Dashboard Excel · Analytics</span>
+                <h3>Engoo – Dashboard XHS</h3>
+              </div>
+              <div class="exp-showcase" style="margin:0.75rem 0;">
+                <div class="exp-showcase-figures">
+                  <figure class="showcase-figure showcase-figure--primary">
+                    <a href="assets/Engoo Dashboard_FR.png"
+                       data-i18n-href="experience.engoo.screenshot1"
+                       target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap crop-panel crop-left">
+                      <img src="assets/Engoo Dashboard_FR.png"
+                           data-i18n-src="experience.engoo.screenshot1"
+                           alt="Dashboard Engoo XHS – vue d'ensemble"
+                           class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                      </span>
                     </a>
-                    <a href="assets/112-1政大古箏社期末聚會.png" target="_blank" rel="noopener noreferrer"
-                       class="showcase-img-wrap" style="aspect-ratio:1/1;">
-                      <img src="assets/112-1政大古箏社期末聚會.png" alt="政大古箏社 Rassemblement fin semestre" class="showcase-img" loading="lazy">
-                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                    <figcaption class="showcase-caption">
+                      <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge1">📊 KPIs</span>
+                      <strong data-i18n="experience.engoo.showcaseTitle1">Vue d'ensemble</strong>
+                    </figcaption>
+                  </figure>
+                  <figure class="showcase-figure showcase-figure--secondary">
+                    <a href="assets/Engoo Data_FR.png"
+                       data-i18n-href="experience.engoo.screenshot2"
+                       target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap crop-data">
+                      <img src="assets/Engoo Data_FR.png"
+                           data-i18n-src="experience.engoo.screenshot2"
+                           alt="Données brutes quotidiennes Engoo XHS"
+                           class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                      </span>
                     </a>
-                  </div>
+                    <figcaption class="showcase-caption">
+                      <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge3">📋 Données</span>
+                      <strong data-i18n="experience.engoo.showcaseTitle3">Données brutes</strong>
+                    </figcaption>
+                  </figure>
                 </div>
+              </div>
+              <p style="font-size:0.83rem;">12 métriques / jour · Séries temporelles · Comparaison A/B de périodes.</p>
+              <div class="card-links">
+                <a href="assets/Engoo_XHS Dashboard_FR.xlsx"
+                   class="btn btn-primary" style="font-size:0.78rem;padding:0.35rem 0.9rem;"
+                   download data-i18n="experience.engoo.excelLink"
+                   data-i18n-href="experience.engoo.excelHref">Télécharger (Excel)</a>
+              </div>
+            </article>
+
+            <!-- AIESEC YOLO Camp -->
+            <article class="portfolio-card">
+              <div class="portfolio-card-header">
+                <span class="portfolio-tag">Campagne · Leadership</span>
+                <h3>AIESEC – Camp international YOLO</h3>
+              </div>
+              <div data-lang-show="zh" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.35rem;margin:0.75rem 0;">
+                <a href="assets/主視覺_英文標語.png" target="_blank" rel="noopener noreferrer"
+                   class="showcase-img-wrap" style="aspect-ratio:3/4;">
+                  <img src="assets/主視覺_英文標語.png" alt="AIESEC YOLO Camp EN" class="showcase-img" loading="lazy">
+                  <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+                <a href="assets/主視覺_中文標語.png" target="_blank" rel="noopener noreferrer"
+                   class="showcase-img-wrap" style="aspect-ratio:3/4;">
+                  <img src="assets/主視覺_中文標語.png" alt="AIESEC YOLO Camp ZH" class="showcase-img" loading="lazy">
+                  <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+                <a href="assets/2.png" target="_blank" rel="noopener noreferrer"
+                   class="showcase-img-wrap" style="aspect-ratio:3/4;">
+                  <img src="assets/2.png" alt="AIESEC Recruitment" class="showcase-img" loading="lazy">
+                  <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+              </div>
+              <p data-i18n="simpleNav.aiesecDesc">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO. Création des visuels principaux (affiches, publications) pour le recrutement de volontaires et de participants.</p>
+              <div class="exp-stats" style="margin:0.5rem 0 0.4rem;">
+                <div class="exp-stat"><span class="stat-value">15</span><span class="stat-label" data-i18n="volunteer.aiesec.stat1">Volontaires</span></div>
+                <div class="exp-stat"><span class="stat-value">60+</span><span class="stat-label" data-i18n="volunteer.aiesec.stat2">Participants</span></div>
+                <div class="exp-stat"><span class="stat-value">+53.7%</span><span class="stat-label" data-i18n="volunteer.aiesec.stat3">Objectif</span></div>
+              </div>
+              <div class="tags">
                 <span class="tag" data-i18n="tags.leadership">Leadership</span>
                 <span class="tag" data-i18n="tags.marketing">Marketing</span>
+                <span class="tag">Design visuel</span>
               </div>
             </article>
 
-            <article class="timeline-item" id="extra-sora" data-extra="entrepreneurship" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="extracurricular.periodTBD">Période ? préciser</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
+            <!-- Guzheng Club -->
+            <article class="portfolio-card">
+              <div class="portfolio-card-header">
+                <span class="portfolio-tag">Community Management · Design</span>
+                <h3 data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h3>
               </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.camps.title">
-                  CoCo-fondatriceondatrice ??Sora Education (camps de jeunesse)
-                </h3>
-                <p class="timeline-company">Sora Education</p>
-                <p class="timeline-company" data-i18n="extracurricular.camps.text">
-                  Organisation de cinq camps d'éét, élaboration du business plan, suivi financier et études de marché pour ajuster ll'offreffre et la stratégie marketing.
-                </p>
-                <div class="exp-stats">
-                  <div class="exp-stat">
-                    <span class="stat-value">5</span>
-                    <span class="stat-label" data-i18n="extracurricular.camps.stat1">Camps organisés</span>
-                  </div>
-                </div>
-                <span class="tag" data-i18n="tags.entrepreneurship">Entrepreneuriat</span>
-                <span class="tag" data-i18n="tags.strategy">Stratégie</span>
+              <div data-lang-show="zh" style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin:0.75rem 0;">
+                <a href="assets/5.png" target="_blank" rel="noopener noreferrer"
+                   class="showcase-img-wrap" style="aspect-ratio:1/1;">
+                  <img src="assets/5.png" alt="政大古箏社 Recrutement" class="showcase-img" loading="lazy">
+                  <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+                <a href="assets/112-1政大古箏社期末聚會.png" target="_blank" rel="noopener noreferrer"
+                   class="showcase-img-wrap" style="aspect-ratio:1/1;">
+                  <img src="assets/112-1政大古箏社期末聚會.png" alt="政大古箏社 Événement" class="showcase-img" loading="lazy">
+                  <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </a>
+              </div>
+              <p data-i18n="portfolio.guzheng.desc">Directrice marketing &amp; adhésions du club de guzheng de NCCU. Gestion de la page Facebook, campagnes de recrutement, visuels pour annonces d'activités et événements de fin d'année.</p>
+              <div class="card-links">
+                <a href="assets/250508_作品集_社群經營與設計_c.pdf"
+                   class="btn btn-ghost" style="font-size:0.78rem;padding:0.35rem 0.9rem;"
+                   target="_blank" rel="noopener noreferrer"
+                   data-i18n="extracurricular.guzheng.portfolioLink">Voir les créations (PDF)</a>
+              </div>
+              <div class="tags" style="margin-top:0.5rem;">
+                <span class="tag">Community</span>
+                <span class="tag">Facebook</span>
+                <span class="tag">Design</span>
               </div>
             </article>
 
-            <article class="timeline-item" id="extra-clubs" data-extra="clubs" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="extracurricular.periodTBD">Période ? préciser</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
+            <!-- KPN SEO/SEA -->
+            <article class="portfolio-card">
+              <div class="portfolio-card-header">
+                <span class="portfolio-tag">SEO · SEA · Analytics</span>
+                <h3 data-i18n="experience.kpn.title">KPN – Marketing Digital</h3>
               </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.clubs.title">Autres clubs étudiants</h3>
-                <p class="timeline-company">NCCU</p>
-                <p class="timeline-company" data-i18n="extracurricular.clubs.text">
-                  Participation ? International College Exchange, Toastmasters, Kyudo, Kendo et Ikebana.
-                </p>
-                <span class="tag" data-i18n="tags.clubs">Clubs</span>
-                <span class="tag" data-i18n="tags.culture">Culture</span>
+              <p data-i18n="simpleNav.kpnDesc">Optimisation SEO on-page et technique, recommandations de contenus basées sur l'analyse de mots-clés. Suivi de KPIs (trafic, CTR, conversions) via Google Analytics et reporting de campagnes SEA.</p>
+              <div class="tags" style="margin-top:0.5rem;">
+                <span class="tag">SEO</span>
+                <span class="tag">SEA</span>
+                <span class="tag">Google Analytics</span>
+                <span class="tag">Reporting</span>
+              </div>
+              <div style="margin-top:0.6rem;">
+                <a href="marketing.html" style="font-size:0.78rem;color:var(--accent);text-decoration:none;" data-i18n="simpleNav.deepDiveMarketing">→ Page Marketing</a>
               </div>
             </article>
+
+            <!-- Packaging Design Competition -->
+            <article class="portfolio-card">
+              <div class="portfolio-card-header">
+                <span class="portfolio-tag">Design</span>
+                <h3 data-i18n="portfolio.packaging.title">Packaging Design – 18th Penwards</h3>
+              </div>
+              <a data-lang-show="zh" href="assets/1.png" target="_blank" rel="noopener noreferrer"
+                 class="showcase-img-wrap" style="aspect-ratio:16/9;display:block;margin:0.75rem 0;">
+                <img src="assets/1.png" alt="包裝設計競賽 18th Penwards" class="showcase-img" loading="lazy">
+                <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+              </a>
+              <p data-i18n="portfolio.packaging.desc">Participation à la 18e édition du concours Penwards (2024). Création de visuels promotionnels pour l'appel à participation.</p>
+              <div class="tags" style="margin-top:0.5rem;">
+                <span class="tag">Design</span>
+                <span class="tag">Concours</span>
+                <span class="tag">Packaging</span>
+              </div>
+            </article>
+
+          </div><!-- /.portfolio-grid -->
+
+          <!-- Link to specialized pages -->
+          <div style="text-align:center;margin-top:2.5rem;" data-reveal>
+            <p style="font-size:0.85rem;color:var(--text-soft);margin-bottom:1rem;" data-i18n="simpleNav.deepDiveLabel">Pages détaillées par domaine :</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+              <a href="marketing.html" class="btn btn-ghost" style="font-size:0.82rem;">✦ Marketing</a>
+              <a href="data.html"      class="btn btn-ghost" style="font-size:0.82rem;">📈 Data &amp; Recherche</a>
+              <a href="finance.html"   class="btn btn-ghost" style="font-size:0.82rem;">📊 Finance &amp; Conseil</a>
+              <a href="teaching.html"  class="btn btn-ghost" style="font-size:0.82rem;">🎓 Enseignement</a>
+            </div>
           </div>
-        </div>
+
+        </div><!-- /.container -->
       </section>
 
-      <section class="section section-alt" id="volunteer">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="volunteer.title">
-              Expériences de bénévolat & engagement
-            </h2>
-            <p data-i18n="volunteer.subtitle">
-              Des initiatives centrées sur l'ééucation, l'international et
-              l'impact social.
-            </p>
-          </header>
-          <div class="timeline">
 
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="extracurricular.restoCoeur.period">10/2025 – Présent</span>
-                <span class="timeline-location">Lyon · France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.restoCoeur.title">Bénévole – Restos du Cœur</h3>
-                <p class="timeline-company" data-i18n="extracurricular.restoCoeur.org">Les Restos du Cœur · Association humanitaire</p>
-                <ul class="timeline-points">
-                  <li data-i18n="extracurricular.restoCoeur.point1">Distribution alimentaire et accueil de bénéficiaires en situation de précarité.</li>
-                  <li data-i18n="extracurricular.restoCoeur.point2">Tri et conditionnement des denrées alimentaires.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.volunteer">Bénévolat</span>
-                <span class="tag" data-i18n="tags.social">Impact social</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.aiesec.period">09/2024 – Présent</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.aiesec.title">Membre – AIESEC in NCCU</h3>
-                <p class="timeline-company" data-i18n="volunteer.aiesec.org">AIESEC · Organisation internationale de développement du leadership</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.aiesec.point1">Pilotage d'une équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d'anglais, au‑delà de l'objectif budgétaire.</li>
-                  <li data-i18n="volunteer.aiesec.point2">Collaboration avec des partenaires locaux et internationaux sur des programmes de volontariat.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat">
-                    <span class="stat-value">15</span>
-                    <span class="stat-label" data-i18n="volunteer.aiesec.stat1">Volontaires recrutés</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value">60+</span>
-                    <span class="stat-label" data-i18n="volunteer.aiesec.stat2">Participants</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value">+53.7%</span>
-                    <span class="stat-label" data-i18n="volunteer.aiesec.stat3">Objectif budgétaire</span>
-                  </div>
-                </div>
-                <!-- AIESEC camp visuals -->
-                <div class="exp-showcase" data-lang-show="zh" style="margin-top:1rem;">
-                  <span class="exp-showcase-eyebrow">Visuels de campagne · YOLO Camp</span>
-                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-top:0.5rem;">
-                    <a href="assets/主視覺_英文標語.png" target="_blank" rel="noopener noreferrer"
-                       class="showcase-img-wrap" style="aspect-ratio:3/4;">
-                      <img src="assets/主視覺_英文標語.png" alt="AIESEC YOLO Camp – English slogan" class="showcase-img" loading="lazy">
-                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                    </a>
-                    <a href="assets/主視覺_中文標語.png" target="_blank" rel="noopener noreferrer"
-                       class="showcase-img-wrap" style="aspect-ratio:3/4;">
-                      <img src="assets/主視覺_中文標語.png" alt="AIESEC YOLO Camp – Chinese slogan" class="showcase-img" loading="lazy">
-                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                    </a>
-                    <a href="assets/2.png" target="_blank" rel="noopener noreferrer"
-                       class="showcase-img-wrap" style="aspect-ratio:3/4;">
-                      <img src="assets/2.png" alt="AIESEC – Campus Ambassador Recruitment" class="showcase-img" loading="lazy">
-                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.usr.period">09/2024 – Présent</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.usr.title">Volontaire – Projet University Social Responsibility</h3>
-                <p class="timeline-company" data-i18n="volunteer.usr.org">NCCU · Office of University Responsibility</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.usr.point1">Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.language">Langue</span>
-                <span class="tag" data-i18n="tags.mentoring">Mentorat</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.flagship.period">09/2023 – Présent</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.flagship.title">Volontaire – Programme de compagnonnage linguistique</h3>
-                <p class="timeline-company" data-i18n="volunteer.flagship.org">Chinese Overseas Flagship Center in Taiwan</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.flagship.point1">Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.immersion">Immersion</span>
-                <span class="tag" data-i18n="tags.intercultural">Interculturel</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.buddy.period">09/2023 – 01/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.buddy.title">Étudiante-référente – Buddy Program</h3>
-                <p class="timeline-company" data-i18n="volunteer.buddy.org">NCCU · Office of International Cooperation</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.buddy.point1">Accompagnement de trois étudiants en échange (France, États-Unis, Corée du Sud) dans leur installation et leur vie quotidienne à Taïwan.</li>
-                </ul>
-                <span class="tag" data-i18n="tags.exchange">Échange</span>
-                <span class="tag">International</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.nuit.period">12/2023</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.nuit.title">Déléguée – Nuit des Idées (français-mandarin)</h3>
-                <p class="timeline-company" data-i18n="volunteer.nuit.org">Bureau français de Taipei, Institut Français &amp; Département de la Culture de Taipei</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.nuit.point1">Présentation de points de vue sur des sujets de durabilité devant plus de 350 participants, en français et en chinois.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat">
-                    <span class="stat-value">350+</span>
-                    <span class="stat-label" data-i18n="volunteer.nuit.stat1">Participants</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value">2</span>
-                    <span class="stat-label" data-i18n="volunteer.nuit.stat2">Langues</span>
-                  </div>
-                </div>
-                <span class="tag" data-i18n="tags.speaking">Prise de parole</span>
-                <span class="tag" data-i18n="tags.bilingual">Bilingue</span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="honors">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="honors.title">Distinctions & bourses</h2>
-            <p data-i18n="honors.subtitle">
-              Reconnaissance académique pour mes résultats et mon engagement.
-            </p>
-          </header>
-          <div class="award-grid">
-            <article class="award-card" data-reveal="scale">
-              <div class="award-top">
-                <span class="award-badge" data-i18n="honors.exchange.year">2024</span>
-              </div>
-              <h3 class="award-title" data-i18n="honors.exchange.title">
-                Bourse d'échange
-              </h3>
-              <p class="award-org" data-i18n="honors.exchange.org">Ministère de l'Éducation (Taïwan)</p>
-              <p class="award-text" data-i18n="honors.exchange.text">
-                Bourse au mérite pour un programme d'ééhange international en France.
-              </p>
-            </article>
-
-            <article class="award-card" data-reveal="scale">
-              <div class="award-top">
-                <span class="award-badge" data-i18n="honors.short.year">2024</span>
-              </div>
-              <h3 class="award-title" data-i18n="honors.short.title">
-                Bourse d'études à court terme
-              </h3>
-              <p class="award-org" data-i18n="honors.short.org">NCCU – Université Nationale Chengchi</p>
-              <p class="award-text" data-i18n="honors.short.text">
-                Financement au mérite pour un séjour d'études ? l'é孤ranger.
-              </p>
-            </article>
-
-            <article class="award-card award-card--featured" data-reveal="scale">
-              <div class="award-top">
-                <span class="award-badge" data-i18n="honors.excellence.year">2021, 2023</span>
-              </div>
-              <h3 class="award-title" data-i18n="honors.excellence.title">
-                Certificate of Excellence – Top 5% GPA
-              </h3>
-              <p class="award-org" data-i18n="honors.excellence.org">NCCU – Université Nationale Chengchi</p>
-              <p class="award-text" data-i18n="honors.excellence.text">
-                Récompense académique pour résultats parmi les 5&nbsp;% des meilleurs étudiants ? NCCU.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="contact">
+      <!-- ══════════════════════════════════════════
+           SECTION 3 · CONTACT
+      ══════════════════════════════════════════ -->
+      <section class="section" id="contact">
         <div class="container contact-grid">
           <div data-reveal>
             <header class="section-header">
               <h2 data-i18n="contact.heading">Entrons en contact</h2>
-              <p data-i18n="contact.intro">
-                Intéressé·e par un stage, un projet ou une collaboration ?
-                Envoyez?oi un message, je vous répondrai avec plaisir.
-              </p>
+              <p data-i18n="contact.intro">Intéressé·e par un stage, un projet ou une collaboration ? Envoyez‑moi un message, je vous répondrai avec plaisir.</p>
             </header>
             <ul class="contact-list">
               <li>
@@ -1205,68 +830,47 @@
               </li>
               <li>
                 <span class="label">LinkedIn</span>
-                <a
-                  href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >yu-ting-tseng-emlyon</a
-                >
+                <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
+                  target="_blank" rel="noopener noreferrer">yu-ting-tseng-emlyon</a>
               </li>
             </ul>
           </div>
           <form class="contact-form" autocomplete="on" data-reveal>
             <div class="field">
               <label for="name" data-i18n="contact.formName">Nom</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Votre nom"
-                data-i18n-placeholder="contact.namePlaceholder"
-                required
-              />
+              <input id="name" name="name" type="text"
+                placeholder="Votre nom" data-i18n-placeholder="contact.namePlaceholder" required />
             </div>
             <div class="field">
               <label for="email" data-i18n="contact.formEmail">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="vous@exemple.com"
-                data-i18n-placeholder="contact.emailPlaceholder"
-                required
-              />
+              <input id="email" name="email" type="email"
+                placeholder="vous@exemple.com" data-i18n-placeholder="contact.emailPlaceholder" required />
             </div>
             <div class="field">
               <label for="message" data-i18n="contact.formMessage">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
+              <textarea id="message" name="message" rows="4"
                 placeholder="Expliquez brièvement votre besoin ou votre projet."
-                data-i18n-placeholder="contact.messagePlaceholder"
-                required
-              ></textarea>
+                data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary full-width" data-i18n="contact.submit">
               Envoyer le message
             </button>
             <p class="form-note" data-i18n="contact.formNote">
-              Ce formulaire est une démonstration front?nd. Connectez?e ? Formspree ou Netlify Forms pour l'activer.
+              Ce formulaire est une démonstration front‑end.
             </p>
           </form>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> Yu-ing Tseng. Tous droits réservés.</p>
-        <p class="footer-extra">Site personnel conçu pour présenter mon parcours et mes projets.</p>
+        <p>© <span id="year"></span> Yu‑Ting Tseng. Tous droits réservés.</p>
+        <p class="footer-extra" data-i18n="simpleNav.footerExtra">Marketing digital · Data · Consulting</p>
       </div>
     </footer>
 
     <script src="main.js"></script>
   </body>
 </html>
-

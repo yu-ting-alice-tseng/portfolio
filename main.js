@@ -45,6 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     fr: {
       brandName: "Yu‑Ting Tseng",
+      simpleNav: {
+        resume: "Résumé",
+        viewPortfolioPdf: "Portfolio (PDF)",
+        langMandarin: "Mandarin (中文)",
+        langMandarinCert: "Langue maternelle",
+        langFrench: "Français",
+        langEnglish: "Anglais",
+        langJapanese: "Japonais (日本語)",
+        deepDiveMarketing: "→ Page Marketing",
+        deepDiveData: "→ Page Data",
+        deepDiveLabel: "Pages détaillées par domaine :",
+        aiesecDesc: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO. Création des visuels principaux pour le recrutement de volontaires et de participants.",
+        kpnDesc: "Optimisation SEO on-page et technique, suivi de KPIs (trafic, CTR, conversions) via Google Analytics et reporting de campagnes SEA.",
+        footerExtra: "Marketing digital · Data · Consulting",
+      },
       nav: {
         about: "À propos",
         skills: "Compétences",
@@ -621,6 +636,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     en: {
       brandName: "Yu‑Ting Tseng",
+      simpleNav: {
+        resume: "Resume",
+        viewPortfolioPdf: "Portfolio (PDF)",
+        langMandarin: "Mandarin (中文)",
+        langMandarinCert: "Native language",
+        langFrench: "French",
+        langEnglish: "English",
+        langJapanese: "Japanese (日本語)",
+        deepDiveMarketing: "→ Marketing page",
+        deepDiveData: "→ Data page",
+        deepDiveLabel: "Detailed pages by domain:",
+        aiesecDesc: "Led a 4-person marketing team for the international YOLO camp. Created main campaign visuals (posters, posts) for volunteer and participant recruitment.",
+        kpnDesc: "On-page & technical SEO optimisation, KPI tracking (traffic, CTR, conversions) via Google Analytics and SEA campaign reporting.",
+        footerExtra: "Digital Marketing · Data · Consulting",
+      },
       nav: {
         about: "About",
         skills: "Skills",
@@ -1193,6 +1223,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     zh: {
       brandName: "曾郁庭 Yu‑Ting Tseng",
+      simpleNav: {
+        resume: "履歷",
+        viewPortfolioPdf: "作品集（PDF）",
+        langMandarin: "中文（普通話）",
+        langMandarinCert: "母語",
+        langFrench: "法語",
+        langEnglish: "英語",
+        langJapanese: "日語",
+        deepDiveMarketing: "→ 行銷專頁",
+        deepDiveData: "→ 數據專頁",
+        deepDiveLabel: "各領域詳細頁面：",
+        aiesecDesc: "帶領四人行銷小組，負責 AIESEC YOLO 國際志工營的招募宣傳，製作主視覺與活動海報，超額完成招募目標。",
+        kpnDesc: "執行 SEO 優化、透過 Google Analytics 追蹤 KPI（流量、CTR、轉換率），並進行 SEA 廣告成效報告。",
+        footerExtra: "數位行銷 · 數據分析 · 顧問",
+      },
       nav: {
         about: "關於我",
         skills: "技能專長",
