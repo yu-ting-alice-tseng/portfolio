@@ -58,11 +58,10 @@
           <span aria-hidden="true"></span>
         </button>
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="#chapter-about"    data-i18n="chapters.aboutMe">About Me</a>
-          <a href="#chapter-service"  data-i18n="chapters.teachingService">Teaching Service</a>
-          <a href="#booking"          class="nav-cta" data-i18n="booking.navCta">Book a Lesson</a>
+          <a href="#chapter-about"     data-i18n="chapters.aboutMe">About Me</a>
+          <a href="#chapter-service"   data-i18n="chapters.teachingService">Teaching Service</a>
           <a href="#chapter-resources" data-i18n="chapters.learningResources">Learning Resources</a>
-          <a href="#contact"          data-i18n="nav.contact">Contact</a>
+          <a href="#booking"           class="nav-cta nav-cta--right" data-i18n="booking.navCta">Book a Lesson</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
           <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
@@ -77,34 +76,12 @@
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
           <a href="#chapter-about"     data-i18n="chapters.aboutMe">About Me</a>
           <a href="#chapter-service"   data-i18n="chapters.teachingService">Teaching Service</a>
-          <a href="#booking"           data-i18n="booking.navCta">Book a Lesson</a>
           <a href="#chapter-resources" data-i18n="chapters.learningResources">Learning Resources</a>
-          <a href="#contact"           data-i18n="nav.contact">Contact</a>
+          <a href="#booking"           data-i18n="booking.navCta">Book a Lesson</a>
         </nav>
       </div>
     </div>
 
-    <!-- ── Page type navigation bar ───────────────── -->
-    <nav class="page-type-bar" aria-label="Type de page">
-      <div class="container page-type-inner">
-        <a href="index.html" class="page-type-link">
-          <span class="page-type-icon">🌐</span>
-          <span data-i18n="pageNav.overview">Vue générale</span>
-        </a>
-        <a href="finance.html" class="page-type-link">
-          <span class="page-type-icon">📊</span>
-          <span data-i18n="pageNav.finance">Finance &amp; Conseil</span>
-        </a>
-        <a href="marketing.html" class="page-type-link">
-          <span class="page-type-icon">✦</span>
-          <span data-i18n="pageNav.marketing">Marketing</span>
-        </a>
-        <a href="teaching.html" class="page-type-link is-current">
-          <span class="page-type-icon">🎓</span>
-          <span data-i18n="pageNav.teaching">Enseignement</span>
-        </a>
-      </div>
-    </nav>
 
     <main>
             <!-- ════════════════════════════════════════════
@@ -145,7 +122,7 @@
               </div>
             </div>
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Me contacter</a>
+              <a href="#booking" class="btn btn-primary" data-i18n="booking.navCta">Book a Lesson</a>
               <a href="#engagement" class="btn btn-ghost" data-i18n="teachingHero.ctaSecondary">Voir mes engagements</a>
             </div>
           </div>
@@ -717,7 +694,14 @@
                 <span class="booking-info-icon">⏱</span>
                 <div>
                   <strong data-i18n="booking.durationLabel">Durée</strong>
-                  <span data-i18n="booking.durationValue">30 min · 45 min · 60 min</span>
+                  <span data-i18n="booking.durationValue">Personnalisable — 30 / 45 / 60 / 90 min selon vos besoins</span>
+                </div>
+              </div>
+              <div class="booking-info-item">
+                <span class="booking-info-icon">📚</span>
+                <div>
+                  <strong data-i18n="booking.materialsLabel">Matériaux pédagogiques</strong>
+                  <span data-i18n="booking.materialsValue">Supports créés par moi-même, ou matériaux choisis par l'élève — c'est vous qui décidez.</span>
                 </div>
               </div>
               <div class="booking-info-item">
@@ -738,7 +722,7 @@
                 <span class="booking-info-icon">⚡</span>
                 <div>
                   <strong data-i18n="booking.responseLabel">Réponse</strong>
-                  <span data-i18n="booking.responseValue">Sous 24h par email</span>
+                  <span data-i18n="booking.responseValue">Sous 24h via email ou Line</span>
                 </div>
               </div>
             </div>
@@ -749,11 +733,36 @@
                 <input id="book-name" name="name" type="text"
                   placeholder="Alice Martin" data-i18n-placeholder="booking.fieldNamePh" required />
               </div>
+
+              <!-- Contact method picker -->
               <div class="field">
+                <label data-i18n="booking.fieldContact">Méthode de contact préférée</label>
+                <div class="contact-method-row">
+                  <label class="contact-method-opt">
+                    <input type="radio" name="contactMethod" value="email" checked
+                      onchange="document.getElementById('bk-email-wrap').hidden=false;document.getElementById('bk-line-wrap').hidden=true" />
+                    <span>✉️ Email</span>
+                  </label>
+                  <label class="contact-method-opt">
+                    <input type="radio" name="contactMethod" value="line"
+                      onchange="document.getElementById('bk-email-wrap').hidden=true;document.getElementById('bk-line-wrap').hidden=false" />
+                    <span>💬 Line</span>
+                  </label>
+                </div>
+                <p class="field-hint" data-i18n="booking.contactHint">Laissez votre email ou votre ID Line — je vous répondrai sous 24h.</p>
+              </div>
+
+              <div class="field" id="bk-email-wrap">
                 <label for="book-email" data-i18n="booking.fieldEmail">Email</label>
                 <input id="book-email" name="email" type="email"
-                  placeholder="alice@exemple.com" data-i18n-placeholder="booking.fieldEmailPh" required />
+                  placeholder="alice@exemple.com" data-i18n-placeholder="booking.fieldEmailPh" />
               </div>
+              <div class="field" id="bk-line-wrap" hidden>
+                <label for="book-line" data-i18n="booking.fieldLine">Line ID</label>
+                <input id="book-line" name="line_id" type="text"
+                  placeholder="votre_line_id" data-i18n-placeholder="booking.fieldLinePh" />
+              </div>
+
               <div class="field">
                 <label for="book-type" data-i18n="booking.fieldType">Type de cours souhaité</label>
                 <select id="book-type" name="type">
@@ -765,6 +774,28 @@
                   <option value="other" data-i18n="booking.optionOther">Autre</option>
                 </select>
               </div>
+
+              <div class="field">
+                <label for="book-duration" data-i18n="booking.fieldDuration">Durée souhaitée</label>
+                <select id="book-duration" name="duration">
+                  <option value="" data-i18n="booking.optionSelect">-- Choisir --</option>
+                  <option value="30" data-i18n="booking.dur30">30 min</option>
+                  <option value="45" data-i18n="booking.dur45">45 min</option>
+                  <option value="60" data-i18n="booking.dur60">60 min (recommandé)</option>
+                  <option value="90" data-i18n="booking.dur90">90 min</option>
+                  <option value="custom" data-i18n="booking.durCustom">Autre durée — je précise dans le message</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="book-materials" data-i18n="booking.fieldMaterials">Matériaux préférés</label>
+                <select id="book-materials" name="materials">
+                  <option value="teacher" data-i18n="booking.matTeacher">Supports préparés par l'enseignante</option>
+                  <option value="student" data-i18n="booking.matStudent">Matériaux que j'apporte moi-même</option>
+                  <option value="both" data-i18n="booking.matBoth">Combinaison des deux</option>
+                </select>
+              </div>
+
               <div class="field">
                 <label for="book-slot" data-i18n="booking.fieldSlot">Créneaux préférés</label>
                 <input id="book-slot" name="slot" type="text"
@@ -780,7 +811,7 @@
               <button type="submit" class="btn btn-primary full-width" data-i18n="booking.submit">
                 Envoyer la demande
               </button>
-              <p class="form-note" data-i18n="contact.formNote">
+              <p class="form-note" data-i18n="booking.formNote">
                 Ce formulaire est une démonstration front‑end. Connectez‑le à Formspree ou Netlify Forms pour l'activer.
               </p>
             </form>
@@ -1127,52 +1158,7 @@
 
         </div>
       </section>
-      <!-- ── Contact ────────────────────────────────────────── -->
-      <section class="section section-alt" id="contact">
-        <div class="container contact-grid">
-          <div data-reveal>
-            <header class="section-header">
-              <h2 data-i18n="contact.heading">Entrons en contact</h2>
-              <p data-i18n="contact.intro">
-                Intéressé·e par un stage, un projet ou une collaboration ?
-                Envoyez‑moi un message, je vous répondrai avec plaisir.
-              </p>
-            </header>
-            <ul class="contact-list">
-              <li>
-                <span class="label" data-i18n="contact.labelEmail">Email</span>
-                <a href="mailto:yuting.alice.tseng@gmail.com">yuting.alice.tseng@gmail.com</a>
-              </li>
-              <li>
-                <span class="label" data-i18n="contact.labelLocation">Localisation</span>
-                <span>Lyon, France</span>
-              </li>
-              <li>
-                <span class="label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon" target="_blank" rel="noopener noreferrer">yu-ting-tseng-emlyon</a>
-              </li>
-            </ul>
-          </div>
-          <form class="contact-form" autocomplete="on" data-reveal>
-            <div class="field">
-              <label for="name-t" data-i18n="contact.formName">Nom</label>
-              <input id="name-t" name="name" type="text" placeholder="Votre nom" data-i18n-placeholder="contact.namePlaceholder" required />
-            </div>
-            <div class="field">
-              <label for="email-t" data-i18n="contact.formEmail">Email</label>
-              <input id="email-t" name="email" type="email" placeholder="vous@exemple.com" data-i18n-placeholder="contact.emailPlaceholder" required />
-            </div>
-            <div class="field">
-              <label for="message-t" data-i18n="contact.formMessage">Message</label>
-              <textarea id="message-t" name="message" rows="4" placeholder="Expliquez brièvement votre besoin ou votre projet." data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary full-width" data-i18n="contact.submit">Envoyer le message</button>
-            <p class="form-note" data-i18n="contact.formNote">
-              Ce formulaire est une démonstration front‑end. Connectez‑le à Formspree ou Netlify Forms pour l'activer.
-            </p>
-          </form>
-        </div>
-      </section>
+
     
     </main>
 

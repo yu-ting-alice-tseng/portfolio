@@ -253,6 +253,12 @@
                   <button type="button" class="skill-card" data-skill="data-python">Python</button>
                   <button type="button" class="skill-card" data-skill="data-sql">SQL</button>
                   <button type="button" class="skill-card" data-skill="prog-vba">VBA</button>
+                </div>
+              </div>
+              <div class="skills-subgroup">
+                <p class="skills-subtitle" data-i18n="skills.subDataTools">Outils & Applications</p>
+                <div class="skills-cards">
+                  <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
                   <button type="button" class="skill-card" data-skill="data-access">Access</button>
                 </div>
               </div>
@@ -261,7 +267,6 @@
                 <div class="skills-cards">
                   <button type="button" class="skill-card" data-skill="data-powerbi">Power BI</button>
                   <button type="button" class="skill-card" data-skill="data-tableau">Tableau</button>
-                  <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
                 </div>
               </div>
               <div class="skills-subgroup">
@@ -695,14 +700,15 @@
                   <span class="exp-showcase-eyebrow" data-i18n="experience.engoo.showcaseLabel">Livrables · Dashboard XHS</span>
                   <div class="exp-showcase-figures">
 
+                    <!-- Left section: general performance evaluation -->
                     <figure class="showcase-figure showcase-figure--primary">
                       <a href="assets/Engoo Dashboard_FR.png"
                          data-i18n-href="experience.engoo.screenshot1"
                          target="_blank" rel="noopener noreferrer"
-                         class="showcase-img-wrap">
+                         class="showcase-img-wrap crop-panel crop-left">
                         <img src="assets/Engoo Dashboard_FR.png"
                              data-i18n-src="experience.engoo.screenshot1"
-                             alt="Tableau de bord de performance Engoo XHS"
+                             alt="Tableau de bord de performance Engoo XHS – vue d'ensemble"
                              data-i18n-alt="experience.engoo.screenshotAlt1"
                              class="showcase-img" loading="lazy">
                         <span class="showcase-zoom" aria-hidden="true">
@@ -710,19 +716,42 @@
                         </span>
                       </a>
                       <figcaption class="showcase-caption">
-                        <strong data-i18n="experience.engoo.showcaseTitle1">Tableau de bord de performance</strong>
-                        <span data-i18n="experience.engoo.showcaseDesc1">Suivi des KPIs, comparaison de périodes A/B et graphiques d'évolution</span>
+                        <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge1">📊 Évaluation générale</span>
+                        <strong data-i18n="experience.engoo.showcaseTitle1">Vue d'ensemble · 30 derniers jours</strong>
+                        <span data-i18n="experience.engoo.showcaseDesc1">Section gauche : KPIs principaux et graphiques d'évolution sur la période sélectionnée.</span>
                       </figcaption>
                     </figure>
 
+                    <!-- Right section: A/B period comparison -->
                     <figure class="showcase-figure showcase-figure--secondary">
+                      <a href="assets/Engoo Dashboard_FR.png"
+                         data-i18n-href="experience.engoo.screenshot1"
+                         target="_blank" rel="noopener noreferrer"
+                         class="showcase-img-wrap crop-panel crop-right">
+                        <img src="assets/Engoo Dashboard_FR.png"
+                             data-i18n-src="experience.engoo.screenshot1"
+                             alt="Tableau de bord de performance Engoo XHS – comparaison A/B"
+                             class="showcase-img" loading="lazy">
+                        <span class="showcase-zoom" aria-hidden="true">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </span>
+                      </a>
+                      <figcaption class="showcase-caption">
+                        <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge2">⚖️ Comparaison A/B</span>
+                        <strong data-i18n="experience.engoo.showcaseTitle2">30 jours vs 30 jours précédents</strong>
+                        <span data-i18n="experience.engoo.showcaseDesc2">Section droite : courbe Période A vs Période B pour identifier tendances et impact des actions.</span>
+                      </figcaption>
+                    </figure>
+
+                    <!-- Raw data table (full width) -->
+                    <figure class="showcase-figure showcase-figure--data">
                       <a href="assets/Engoo Data_FR.png"
                          data-i18n-href="experience.engoo.screenshot2"
                          target="_blank" rel="noopener noreferrer"
-                         class="showcase-img-wrap">
+                         class="showcase-img-wrap crop-data">
                         <img src="assets/Engoo Data_FR.png"
                              data-i18n-src="experience.engoo.screenshot2"
-                             alt="Données brutes Engoo XHS"
+                             alt="Données brutes quotidiennes Engoo XHS"
                              data-i18n-alt="experience.engoo.screenshotAlt2"
                              class="showcase-img" loading="lazy">
                         <span class="showcase-zoom" aria-hidden="true">
@@ -730,8 +759,9 @@
                         </span>
                       </a>
                       <figcaption class="showcase-caption">
-                        <strong data-i18n="experience.engoo.showcaseTitle2">Données d'origine</strong>
-                        <span data-i18n="experience.engoo.showcaseDesc2">Métriques quotidiennes collectées et structurées pour l'analyse</span>
+                        <span class="showcase-badge" data-i18n="experience.engoo.showcaseBadge3">📋 Données brutes</span>
+                        <strong data-i18n="experience.engoo.showcaseTitle3">Jeu de données quotidiennes</strong>
+                        <span data-i18n="experience.engoo.showcaseDesc3">12 métriques par jour — base structurée de toutes les visualisations.</span>
                       </figcaption>
                     </figure>
 
@@ -740,6 +770,43 @@
                 <span class="tag" data-i18n="tags.marketing">Marketing</span>
                 <span class="tag">Social media</span>
                 <span class="tag">Xiaohongshu</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" id="exp-tutorABC" data-vibe="teaching" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="experience.tutorABC.period">08/2024 – Présent</span>
+                <span class="timeline-location" data-i18n="locations.online">En ligne · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="experience.tutorABC.title">Professeure Particulière D'Anglais En Ligne</h3>
+                <p class="timeline-company">TutorABC</p>
+                <ul class="timeline-points">
+                  <li data-i18n="experience.tutorABC.point1">Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).</li>
+                  <li data-i18n="experience.tutorABC.point2">Préparation aux certifications IELTS et Cambridge English (YLE, A2 Key, B1 Preliminary, B2 First).</li>
+                </ul>
+                <span class="tag" data-i18n="tags.teaching">Teaching</span>
+                <span class="tag">IELTS</span>
+                <span class="tag">Cambridge</span>
+                <span class="tag" data-i18n="tags.online">En Ligne</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" id="exp-translation" data-vibe="teaching" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="teachingExp.translation.period">2022 – 2024</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="teachingExp.translation.title">Traductrice & Correctrice (Freelance)</h3>
+                <p class="timeline-company" data-i18n="teachingExp.translation.company">Freelance · Projets Académiques & Éditoriaux</p>
+                <ul class="timeline-points">
+                  <li data-i18n="teachingExp.translation.point1">Traduction de documents académiques et de contenus professionnels entre le chinois, l'anglais et le français.</li>
+                  <li data-i18n="teachingExp.translation.point2">Correction et relecture de thèses, articles et supports de communication pour des étudiants et entreprises.</li>
+                </ul>
+                <span class="tag" data-i18n="tags.translation">Traduction</span>
+                <span class="tag" data-i18n="tags.proofreading">Correction</span>
+                <span class="tag">ZH · EN · FR</span>
               </div>
             </article>
 
@@ -837,8 +904,24 @@
                 <p class="timeline-company" data-i18n="extracurricular.guzheng.text">
                   Organisation des campagnes de recrutement, gestion de la communauté et des réseaux sociaux, adaptation des cours et coordination d'éévénements.
                 </p>
-                <div class="exp-portfolio-row">
-                  <a href="assets/250508_雿??蝷曄黎蝬??身閮c.pdf" class="exp-portfolio-link" target="_blank" rel="noopener noreferrer" data-i18n="extracurricular.guzheng.portfolioLink">Voir les créations (PDF)</a>
+                                <div class="exp-portfolio-row">
+                  <a href="assets/250508_作品集_社群經營與設計_c.pdf" class="exp-portfolio-link" target="_blank" rel="noopener noreferrer" data-i18n="extracurricular.guzheng.portfolioLink">Voir les créations (PDF)</a>
+                </div>
+                <!-- Guzheng club visuals -->
+                <div class="exp-showcase" style="margin-top:0.9rem;">
+                  <span class="exp-showcase-eyebrow">Visuels de recrutement &amp; événements</span>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.5rem;">
+                    <a href="assets/5.png" target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap" style="aspect-ratio:1/1;">
+                      <img src="assets/5.png" alt="政大古箏社 Affiche de recrutement" class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                    </a>
+                    <a href="assets/112-1政大古箏社期末聚會.png" target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap" style="aspect-ratio:1/1;">
+                      <img src="assets/112-1政大古箏社期末聚會.png" alt="政大古箏社 Rassemblement fin semestre" class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                    </a>
+                  </div>
                 </div>
                 <span class="tag" data-i18n="tags.leadership">Leadership</span>
                 <span class="tag" data-i18n="tags.marketing">Marketing</span>
@@ -944,6 +1027,101 @@
                     <span class="stat-label" data-i18n="volunteer.aiesec.stat3">Objectif budgétaire</span>
                   </div>
                 </div>
+                <!-- AIESEC camp visuals -->
+                <div class="exp-showcase" style="margin-top:1rem;">
+                  <span class="exp-showcase-eyebrow">Visuels de campagne · YOLO Camp</span>
+                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-top:0.5rem;">
+                    <a href="assets/主視覺_英文標語.png" target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap" style="aspect-ratio:3/4;">
+                      <img src="assets/主視覺_英文標語.png" alt="AIESEC YOLO Camp – English slogan" class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                    </a>
+                    <a href="assets/主視覺_中文標語.png" target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap" style="aspect-ratio:3/4;">
+                      <img src="assets/主視覺_中文標語.png" alt="AIESEC YOLO Camp – Chinese slogan" class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                    </a>
+                    <a href="assets/2.png" target="_blank" rel="noopener noreferrer"
+                       class="showcase-img-wrap" style="aspect-ratio:3/4;">
+                      <img src="assets/2.png" alt="AIESEC – Campus Ambassador Recruitment" class="showcase-img" loading="lazy">
+                      <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.usr.period">09/2024 – Présent</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.usr.title">Volontaire – Projet University Social Responsibility</h3>
+                <p class="timeline-company" data-i18n="volunteer.usr.org">NCCU · Office of University Responsibility</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.usr.point1">Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.</li>
+                </ul>
+                <span class="tag" data-i18n="tags.language">Langue</span>
+                <span class="tag" data-i18n="tags.mentoring">Mentorat</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.flagship.period">09/2023 – Présent</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.flagship.title">Volontaire – Programme de compagnonnage linguistique</h3>
+                <p class="timeline-company" data-i18n="volunteer.flagship.org">Chinese Overseas Flagship Center in Taiwan</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.flagship.point1">Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.</li>
+                </ul>
+                <span class="tag" data-i18n="tags.immersion">Immersion</span>
+                <span class="tag" data-i18n="tags.intercultural">Interculturel</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.buddy.period">09/2023 – 01/2025</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.buddy.title">Étudiante-référente – Buddy Program</h3>
+                <p class="timeline-company" data-i18n="volunteer.buddy.org">NCCU · Office of International Cooperation</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.buddy.point1">Accompagnement de trois étudiants en échange (France, États-Unis, Corée du Sud) dans leur installation et leur vie quotidienne à Taïwan.</li>
+                </ul>
+                <span class="tag" data-i18n="tags.exchange">Échange</span>
+                <span class="tag">International</span>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="volunteer.nuit.period">12/2023</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="volunteer.nuit.title">Déléguée – Nuit des Idées (français-mandarin)</h3>
+                <p class="timeline-company" data-i18n="volunteer.nuit.org">Bureau français de Taipei, Institut Français &amp; Département de la Culture de Taipei</p>
+                <ul class="timeline-points">
+                  <li data-i18n="volunteer.nuit.point1">Présentation de points de vue sur des sujets de durabilité devant plus de 350 participants, en français et en chinois.</li>
+                </ul>
+                <div class="exp-stats">
+                  <div class="exp-stat">
+                    <span class="stat-value">350+</span>
+                    <span class="stat-label" data-i18n="volunteer.nuit.stat1">Participants</span>
+                  </div>
+                  <div class="exp-stat">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label" data-i18n="volunteer.nuit.stat2">Langues</span>
+                  </div>
+                </div>
+                <span class="tag" data-i18n="tags.speaking">Prise de parole</span>
+                <span class="tag" data-i18n="tags.bilingual">Bilingue</span>
               </div>
             </article>
 
