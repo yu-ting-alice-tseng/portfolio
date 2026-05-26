@@ -285,6 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
         finance: "Finance & Conseil",
         marketing: "Marketing",
         teaching: "Enseignement",
+        data: "Data & Recherche",
       },
       financeHero: {
         kicker: "Analyse de données · Conseil stratégique · Finance",
@@ -305,6 +306,18 @@ document.addEventListener("DOMContentLoaded", () => {
         caseStudyLabel: "Étude de cas · Engoo XHS",
         caseStudyTitle: "Croissance organique sur Xiaohongshu",
         caseStudyDesc: "Reprise et développement du compte Xiaohongshu d'Engoo (marché chinois simplifié) : stratégie de contenu STP, A/B testing visuel et textuel, ciblage par sous-segments.",
+      },
+      dataHero: {
+        kicker: "Analyse de données · Recherche de marché · Méthodes quantitatives",
+        title1: "Des données brutes aux",
+        title2: "insights stratégiques",
+        summary: "Étudiante en Master à emlyon business school, je transforme des ensembles de données complexes en décisions actionnables. Maîtrise de R, Python, SQL, Excel (TOSA 950/1000), Power BI et Tableau — appliquée à la recherche de marché et à l'analyse de performance.",
+        ctaPrimary: "Télécharger le dashboard (Excel)",
+        ctaSecondary: "Voir mes expériences",
+        cardRole: "Analyse de données & Recherche marché",
+        caseStudyLabel: "Étude de cas · Dashboard XHS",
+        caseStudyTitle: "Dashboard Excel – Performance Xiaohongshu",
+        caseStudyDesc: "Construction d'un tableau de bord Excel complet pour suivre 12 métriques quotidiennes du compte Xiaohongshu d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.",
       },
       teachingHero: {
         kicker: "Langues & engagement international",
@@ -848,6 +861,7 @@ document.addEventListener("DOMContentLoaded", () => {
         finance: "Finance & Consulting",
         marketing: "Marketing",
         teaching: "Teaching",
+        data: "Data & Research",
       },
       financeHero: {
         kicker: "Data analysis · Strategic consulting · Finance",
@@ -868,6 +882,18 @@ document.addEventListener("DOMContentLoaded", () => {
         caseStudyLabel: "Case Study · Engoo XHS",
         caseStudyTitle: "Organic growth on Xiaohongshu",
         caseStudyDesc: "Took over and grew Engoo's Xiaohongshu account (simplified Chinese market): STP content strategy, visual and textual A/B testing, sub-segment targeting.",
+      },
+      dataHero: {
+        kicker: "Data analysis · Market research · Quantitative methods",
+        title1: "From raw data to",
+        title2: "strategic insights",
+        summary: "Master's student at emlyon business school, I turn complex datasets into actionable decisions. Proficient in R, Python, SQL, Excel (TOSA 950/1000), Power BI and Tableau — applied to market research and performance analytics.",
+        ctaPrimary: "Download dashboard (Excel)",
+        ctaSecondary: "View my experience",
+        cardRole: "Data Analysis & Market Research",
+        caseStudyLabel: "Case Study · XHS Dashboard",
+        caseStudyTitle: "Excel Dashboard – Xiaohongshu Performance",
+        caseStudyDesc: "Built a comprehensive Excel dashboard to track 12 daily metrics for Engoo's Xiaohongshu account: KPIs overview, time-series trends and A/B period comparison.",
       },
       teachingHero: {
         kicker: "Languages & international engagement",
@@ -1405,6 +1431,7 @@ document.addEventListener("DOMContentLoaded", () => {
         finance: "財務與顧問",
         marketing: "行銷",
         teaching: "教學",
+        data: "數據與研究",
       },
       financeHero: {
         kicker: "數據分析 · 策略顧問 · 財務",
@@ -1425,6 +1452,18 @@ document.addEventListener("DOMContentLoaded", () => {
         caseStudyLabel: "案例研究 · Engoo 小紅書",
         caseStudyTitle: "小紅書有機增長策略",
         caseStudyDesc: "接手並發展 Engoo 小紅書帳號（簡體中文市場）：STP 內容策略、視覺與文案 A/B 測試、細分受眾定向。",
+      },
+      dataHero: {
+        kicker: "數據分析 · 市場研究 · 量化方法",
+        title1: "從原始數據到",
+        title2: "策略洞察",
+        summary: "就讀 emlyon business school 碩士班，擅長將複雜數據集轉化為可執行的決策建議。熟練使用 R、Python、SQL、Excel（TOSA 950/1000）、Power BI 與 Tableau，應用於市場研究與績效分析。",
+        ctaPrimary: "下載儀表板（Excel）",
+        ctaSecondary: "查看我的經歷",
+        cardRole: "數據分析 & 市場研究",
+        caseStudyLabel: "案例研究 · 小紅書儀表板",
+        caseStudyTitle: "Excel 儀表板 – 小紅書績效追蹤",
+        caseStudyDesc: "為 Engoo 小紅書帳號建立完整的 Excel 儀表板，追蹤 12 項每日指標：KPI 概覽、時間序列趨勢與 A/B 週期比較。",
       },
       teachingHero: {
         kicker: "語言 · 教學 · 國際交流",
@@ -1774,6 +1813,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!key) return;
       const val = getTranslation(dict, key);
       if (val !== null) el.setAttribute("alt", val);
+    });
+
+    // Show/hide elements that only make sense in a specific language
+    // Usage: data-lang-show="zh"  → visible only when ZH is active
+    document.querySelectorAll("[data-lang-show]").forEach((el) => {
+      const targetLang = el.getAttribute("data-lang-show");
+      el.style.display = targetLang === lang ? "" : "none";
     });
 
     // HTML-rich elements (use innerHTML, not textContent)
