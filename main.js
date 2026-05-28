@@ -51,6 +51,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Desktop nav dropdown — click-toggle
+  document.querySelectorAll(".nav-item--has-dropdown").forEach((item) => {
+    const btn = item.querySelector(".nav-dropdown-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = item.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", String(isOpen));
+      // close others
+      document.querySelectorAll(".nav-item--has-dropdown").forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("is-open");
+          const otherBtn = other.querySelector(".nav-dropdown-toggle");
+          if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    // close on outside click
+    document.addEventListener("click", () => {
+      item.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+    });
+    // close on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        item.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+    // close when a dropdown link is clicked
+    item.querySelectorAll(".nav-dropdown a").forEach((link) => {
+      link.addEventListener("click", () => {
+        item.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  });
+
   // Language switcher (FR / EN)
   const translations = {
     fr: {
