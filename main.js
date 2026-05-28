@@ -323,8 +323,13 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaSecondary: "Me contacter",
         cardRole: "Marketing digital & Création",
         caseStudyLabel: "Étude de cas · Engoo XHS",
-        caseStudyTitle: "Croissance organique sur Xiaohongshu",
-        caseStudyDesc: "Reprise et développement du compte Xiaohongshu d'Engoo (marché chinois simplifié) : stratégie de contenu STP, A/B testing visuel et textuel, ciblage par sous-segments.",
+        caseStudyTitle: "Dashboard Analytics & Croissance Xiaohongshu",
+        caseStudyS: "Situation : Engoo gérait son compte Xiaohongshu sans outil de mesure centralisé, rendant impossible la quantification de l'engagement et l'optimisation du ROI du contenu.",
+        caseStudyA: "Action : Conception d'un dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) permettant une comparaison A/B automatique des périodes pour piloter la stratégie STP.",
+        caseStudyR: "Résultat : Automatisation du reporting (gain de 5h/semaine) et croissance de 89% des interactions grâce à l'identification des formats visuels gagnants.",
+        caseStudyInsight1: "• Les miniatures de type 'Educational Tips' génèrent un CTR 25% supérieur aux 'Life Hacks'.",
+        caseStudyInsight2: "• Le 'Golden Time' de publication pour le segment cible se situe entre 19h et 21h.",
+        caseStudyTemplate: "Consulter le modèle interactif (Excel)",
       },
       dataHero: {
         kicker: "Analyse de données · Recherche de marché · Méthodes quantitatives",
@@ -918,8 +923,13 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaSecondary: "Contact me",
         cardRole: "Digital Marketing & Content Creation",
         caseStudyLabel: "Case Study · Engoo XHS",
-        caseStudyTitle: "Organic growth on Xiaohongshu",
-        caseStudyDesc: "Took over and grew Engoo's Xiaohongshu account (simplified Chinese market): STP content strategy, visual and textual A/B testing, sub-segment targeting.",
+        caseStudyTitle: "Analytics Dashboard & Xiaohongshu Growth",
+        caseStudyS: "Situation: Engoo lacked a centralized tool to track Xiaohongshu performance, making it difficult to quantify engagement and optimize content ROI.",
+        caseStudyA: "Action: Developed a dynamic Excel dashboard (Pivot Tables, Nested Formulas) featuring automated A/B period comparison to drive the STP strategy.",
+        caseStudyR: "Result: Automated reporting saved 5h/week and led to an 89% interaction increase by identifying winning visual styles.",
+        caseStudyInsight1: "• 'Educational Tips' thumbnails deliver a 25% higher CTR than 'Life Hacks' style.",
+        caseStudyInsight2: "• The optimal posting 'Golden Time' for the target segment is 7:00 PM – 9:00 PM.",
+        caseStudyTemplate: "View Interactive Excel Template",
       },
       dataHero: {
         kicker: "Data analysis · Market research · Quantitative methods",
@@ -1507,8 +1517,13 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaSecondary: "聯繫我",
         cardRole: "數位行銷 & 內容創作",
         caseStudyLabel: "案例研究 · Engoo 小紅書",
-        caseStudyTitle: "小紅書有機增長策略",
-        caseStudyDesc: "接手並發展 Engoo 小紅書帳號（簡體中文市場）：STP 內容策略、視覺與文案 A/B 測試、細分受眾定向。",
+        caseStudyTitle: "小紅書社群成效動態儀表板 | Excel Analytics",
+        caseStudyS: "背景 (Situation)：品牌在小紅書的數據分散，難以量化互動成效、計算真實的粉絲轉化率與內容投資報酬率。",
+        caseStudyA: "行動 (Action)：清洗原始數據，利用樞紐分析與進階公式構建動態儀表板，實現「當月 vs 上月」的自動化指標對比。",
+        caseStudyR: "成果 (Result)：報表自動化節省了每週 5 小時的人力，並透過數據找出互動率最高的視覺風格，使互動量提升 89%。",
+        caseStudyInsight1: "• 「教學類」主視覺的點擊率 (CTR) 比「生活感」風格高出 25%。",
+        caseStudyInsight2: "• 目標客群的黃金互動時段集中在晚間 7 點至 9 點。",
+        caseStudyTemplate: "查看互動式 Excel 範本",
       },
       dataHero: {
         kicker: "數據分析 · 市場研究 · 量化方法",
@@ -3189,4 +3204,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-
