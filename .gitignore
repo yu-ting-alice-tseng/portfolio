@@ -5,3 +5,7 @@ ehthumbs.db
 
 # macOS
 .DS_Store
+
+# Large research data packages (not needed for website deployment)
+assets/**/Replication*
+assets/**/Replication-Package/
