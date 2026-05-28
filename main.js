@@ -39,6 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileNav.querySelectorAll("a[href^='#']").forEach((link) => {
       link.addEventListener("click", () => setMobileNavOpen(false));
     });
+
+    // Mobile nav sub-dropdown toggle
+    mobileNav.querySelectorAll(".mobile-nav-toggle-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const sub = btn.nextElementSibling;
+        if (!sub) return;
+        const open = sub.classList.toggle("is-open");
+        btn.classList.toggle("is-open", open);
+      });
+    });
   }
 
   // Language switcher (FR / EN)

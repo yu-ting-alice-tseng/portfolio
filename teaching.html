@@ -58,9 +58,22 @@
           <span aria-hidden="true"></span>
         </button>
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="#chapter-about"     data-i18n="chapters.aboutMe">About Me</a>
-          <a href="#chapter-service"   data-i18n="chapters.teachingService">Teaching Service</a>
-          <a href="#booking"           class="nav-cta nav-cta--right" data-i18n="booking.navCta">Book a Lesson</a>
+          <div class="nav-item--has-dropdown">
+            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
+              <span data-i18n="chapters.aboutMe">About Me</span>
+              <span class="nav-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#skills"       role="menuitem"><span class="dd-icon">🌐</span><span data-i18n="nav.teaching.languages">Langues</span></a>
+              <a href="#exp-teaching" role="menuitem"><span class="dd-icon">💼</span><span data-i18n="nav.teaching.expTeaching">Expériences</span></a>
+              <a href="#education"    role="menuitem"><span class="dd-icon">🎓</span><span data-i18n="nav.education">Formation</span></a>
+              <a href="#engagement"   role="menuitem"><span class="dd-icon">🌱</span><span data-i18n="nav.teaching.engagement">Engagement</span></a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="#honors"       role="menuitem"><span class="dd-icon">🏆</span><span data-i18n="nav.honors">Distinctions</span></a>
+            </div>
+          </div>
+          <a href="#chapter-service" data-i18n="chapters.teachingService">Teaching Service</a>
+          <a href="#booking" class="nav-cta nav-cta--right" data-i18n="booking.navCta">Book a Lesson</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
           <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
@@ -73,9 +86,19 @@
     <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
       <div class="mobile-nav-inner">
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
-          <a href="#chapter-about"     data-i18n="chapters.aboutMe">About Me</a>
-          <a href="#chapter-service"   data-i18n="chapters.teachingService">Teaching Service</a>
-          <a href="#booking"           data-i18n="booking.navCta">Book a Lesson</a>
+          <button class="mobile-nav-toggle-btn" type="button">
+            <span data-i18n="chapters.aboutMe">About Me</span>
+            <span class="nav-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="mobile-nav-sub">
+            <a href="#skills"       data-i18n="nav.teaching.languages">Langues</a>
+            <a href="#exp-teaching" data-i18n="nav.teaching.expTeaching">Expériences</a>
+            <a href="#education"    data-i18n="nav.education">Formation</a>
+            <a href="#engagement"   data-i18n="nav.teaching.engagement">Engagement</a>
+            <a href="#honors"       data-i18n="nav.honors">Distinctions</a>
+          </div>
+          <a href="#chapter-service" data-i18n="chapters.teachingService">Teaching Service</a>
+          <a href="#booking"         data-i18n="booking.navCta">Book a Lesson</a>
         </nav>
       </div>
     </div>

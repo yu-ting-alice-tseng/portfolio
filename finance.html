@@ -39,12 +39,22 @@
           <span aria-hidden="true"></span>
         </button>
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="#about" data-i18n="nav.about">À propos</a>
-          <a href="#skills" data-i18n="nav.skills">Compétences</a>
-          <a href="#education" data-i18n="nav.education">Formation</a>
-          <a href="#experience" data-i18n="nav.experience">Expériences</a>
+          <div class="nav-item--has-dropdown">
+            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
+              <span data-i18n="nav.about">À propos</span>
+              <span class="nav-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#skills"    role="menuitem"><span class="dd-icon">⚡</span><span data-i18n="nav.skills">Compétences</span></a>
+              <a href="#education" role="menuitem"><span class="dd-icon">🎓</span><span data-i18n="nav.education">Formation</span></a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="#experience" role="menuitem"><span class="dd-icon">💼</span><span data-i18n="nav.experience">Expériences</span></a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="#honors"    role="menuitem"><span class="dd-icon">🏆</span><span data-i18n="nav.honors">Distinctions</span></a>
+            </div>
+          </div>
           <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
           <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
@@ -58,12 +68,22 @@
     <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
       <div class="mobile-nav-inner">
         <nav class="mobile-nav-links" aria-label="Navigation mobile">
-          <a href="#about" data-i18n="nav.about">À propos</a>
-          <a href="#skills" data-i18n="nav.skills">Compétences</a>
-          <a href="#education" data-i18n="nav.education">Formation</a>
-          <a href="#experience" data-i18n="nav.experience">Expériences</a>
+          <div class="nav-item--has-dropdown">
+            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
+              <span data-i18n="nav.about">À propos</span>
+              <span class="nav-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#skills"    role="menuitem"><span class="dd-icon">⚡</span><span data-i18n="nav.skills">Compétences</span></a>
+              <a href="#education" role="menuitem"><span class="dd-icon">🎓</span><span data-i18n="nav.education">Formation</span></a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="#experience" role="menuitem"><span class="dd-icon">💼</span><span data-i18n="nav.experience">Expériences</span></a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="#honors"    role="menuitem"><span class="dd-icon">🏆</span><span data-i18n="nav.honors">Distinctions</span></a>
+            </div>
+          </div>
           <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
     </div>
@@ -359,8 +379,53 @@
         </div>
       </section>
 
+      <!-- ── Honors ────────────────────────────────── -->
+      <section class="section section-alt" id="honors">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 data-i18n="honors.title">Distinctions &amp; Bourses</h2>
+            <p data-i18n="honors.subtitle">Reconnaissance académique pour mes résultats et mon engagement.</p>
+          </header>
+          <div class="award-grid">
+
+            <article class="award-card award-card--featured" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge" data-i18n="honors.excellence.year">2021, 2023</span>
+              </div>
+              <h3 class="award-title" data-i18n="honors.excellence.title">Certificate of Excellence – Top 5% GPA</h3>
+              <p class="award-text" data-i18n="honors.excellence.text">Récompense académique pour résultats parmi les 5 % des meilleurs étudiants à NCCU.</p>
+            </article>
+
+            <article class="award-card" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge" data-i18n="honors.exchange.year">2024</span>
+              </div>
+              <h3 class="award-title" data-i18n="honors.exchange.title">Bourse d'échange – Ministère de l'Éducation</h3>
+              <p class="award-text" data-i18n="honors.exchange.text">Bourse au mérite pour un programme d'échange international en France.</p>
+            </article>
+
+            <article class="award-card" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge">GPA</span>
+              </div>
+              <h3 class="award-title">emlyon business school – GPA 4,0 / 4,0</h3>
+              <p class="award-text">Master Grande École · Spécialisation Finance &amp; Comptabilité.</p>
+            </article>
+
+            <article class="award-card" data-reveal="scale">
+              <div class="award-top">
+                <span class="award-badge">TOSA</span>
+              </div>
+              <h3 class="award-title">TOSA Excel – 950 / 1000</h3>
+              <p class="award-text">Certification internationale de maîtrise avancée d'Excel.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
       <!-- ── Portfolio ──────────────────────────────── -->
-      <section class="section section-alt" id="portfolio">
+      <section class="section" id="portfolio">
         <div class="container">
           <header class="section-header" data-reveal>
             <h2>Portfolio – Finance &amp; Analyse</h2>
@@ -582,7 +647,7 @@
       </section>
 
       <!-- ── Contact ────────────────────────────────── -->
-      <section class="section" id="contact">
+      <section class="section section-alt" id="contact">
         <div class="container contact-grid">
           <div data-reveal>
             <header class="section-header">
