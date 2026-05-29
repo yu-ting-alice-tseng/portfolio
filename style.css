@@ -59,15 +59,8 @@ body::before, body::after {
 body::before { left: 0; border-radius: 0 2px 2px 0; }
 body::after  { right: 0; border-radius: 2px 0 0 2px; }
 
-section[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
-/* Only index.html keeps the page-type-bar — add 42px offset there only */
-body:not(.page-finance):not(.page-marketing):not(.page-teaching) section[id] {
-  scroll-margin-top: calc(var(--header-h) + 42px + 14px);
-}
-/* Specialized pages have no page-type-bar — use base offset */
-.page-finance section[id],
-.page-marketing section[id],
-.page-teaching section[id]  { scroll-margin-top: calc(var(--header-h) + 14px); }
+/* All pages now have the sticky page-type-bar (~42px) below the header */
+section[id] { scroll-margin-top: calc(var(--header-h) + 42px + 14px); }
 
 img { max-width: 100%; display: block; }
 

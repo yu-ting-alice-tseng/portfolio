@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ted: "Écoute avancée sur des sujets passionnants — utilisez la fonction transcription.",
       },
       pageNav: {
+        home: "Accueil",
         overview: "Vue générale",
         finance: "Finance & Conseil",
         marketing: "Marketing",
@@ -944,6 +945,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ted: "Advanced listening practice on fascinating topics — use the transcript feature.",
       },
       pageNav: {
+        home: "Home",
         overview: "Overview",
         finance: "Finance & Consulting",
         marketing: "Marketing",
@@ -1538,6 +1540,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ted: "以精彩主題進行進階聽力練習，善用逐字稿功能。",
       },
       pageNav: {
+        home: "首頁",
         overview: "總覽",
         finance: "財務與顧問",
         marketing: "行銷",
