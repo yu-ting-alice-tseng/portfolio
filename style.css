@@ -3775,6 +3775,15 @@ a, button, [role="button"],
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
   z-index: 400;
 }
+/* Transparent bridge fills the gap between toggle and dropdown so hover isn't lost */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -0.7rem;
+  left: -12px;
+  right: -12px;
+  height: 0.7rem;
+}
 .nav-item--has-dropdown:hover .nav-dropdown,
 .nav-item--has-dropdown:focus-within .nav-dropdown,
 .nav-item--has-dropdown.is-open .nav-dropdown {

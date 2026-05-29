@@ -46,15 +46,41 @@
             </button>
             <div class="nav-dropdown" role="menu">
               <a href="#about"     role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav.about">À propos</span></a>
-              <span class="nav-dropdown-label">Parcours</span>
               <a href="#skills"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span data-i18n="nav.skills">Compétences</span></a>
               <a href="#education" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg></span><span data-i18n="nav.education">Formation</span></a>
               <a href="#experience" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span data-i18n="nav.experience">Expériences</span></a>
-              <span class="nav-dropdown-label">Réalisations</span>
               <a href="#honors"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span data-i18n="nav.honors">Distinctions</span></a>
             </div>
           </div>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <div class="nav-item--has-dropdown">
+            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
+              <span data-i18n="nav.portfolio">Portfolio</span>
+              <span class="nav-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="all">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                <span>Tous les projets</span>
+              </a>
+              <span class="nav-dropdown-label">Catégories</span>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="formation">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg></span>
+                <span>Formation</span>
+              </a>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="analyse">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+                <span>Analyse</span>
+              </a>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="recherche">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+                <span>Recherche</span>
+              </a>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="distinction">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+                <span>Distinctions</span>
+              </a>
+            </div>
+          </div>
           <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
@@ -76,15 +102,23 @@
             </button>
             <div class="nav-dropdown" role="menu">
               <a href="#about"     role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav.about">À propos</span></a>
-              <span class="nav-dropdown-label">Parcours</span>
               <a href="#skills"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span data-i18n="nav.skills">Compétences</span></a>
               <a href="#education" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg></span><span data-i18n="nav.education">Formation</span></a>
               <a href="#experience" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span data-i18n="nav.experience">Expériences</span></a>
-              <span class="nav-dropdown-label">Réalisations</span>
               <a href="#honors"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span data-i18n="nav.honors">Distinctions</span></a>
             </div>
           </div>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <button class="mobile-nav-toggle-btn" type="button">
+            <span data-i18n="nav.portfolio">Portfolio</span>
+            <span class="nav-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="mobile-nav-sub">
+            <a href="#portfolio" data-portfolio-filter="all">Tous les projets</a>
+            <a href="#portfolio" data-portfolio-filter="formation">Formation</a>
+            <a href="#portfolio" data-portfolio-filter="analyse">Analyse</a>
+            <a href="#portfolio" data-portfolio-filter="recherche">Recherche</a>
+            <a href="#portfolio" data-portfolio-filter="distinction">Distinctions</a>
+          </div>
           <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
@@ -461,10 +495,18 @@
             <p>Projets académiques, analyses quantitatives et distinctions.</p>
           </header>
 
+          <div class="portfolio-filter-bar" data-reveal>
+            <button class="filter-btn is-active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="formation">Formation</button>
+            <button class="filter-btn" data-filter="analyse">Analyse</button>
+            <button class="filter-btn" data-filter="recherche">Recherche</button>
+            <button class="filter-btn" data-filter="distinction">Distinctions</button>
+          </div>
+
           <div class="portfolio-grid" data-reveal>
 
             <!-- Case Study: Finance & Teaching (moved from casestudy section) -->
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="formation">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag" data-i18n="financeHero.caseStudyLabel">Expérience clé · Finance &amp; Enseignement</span>
                 <h3 data-i18n="financeHero.caseStudyTitle">Assistante d'enseignement – Finance &amp; Risk Management</h3>
@@ -490,7 +532,7 @@
             </article>
 
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="formation">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Finance &amp; Comptabilité</span>
                 <h3>Spécialisation emlyon – Finance &amp; Accounting</h3>
@@ -511,7 +553,7 @@
               <span class="tag">Risk Management</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="analyse">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Analyse quantitative</span>
                 <h3>Data Analysis &amp; Programming – VBA &amp; Access</h3>
@@ -522,7 +564,7 @@
               <span class="tag">Automatisation</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="recherche">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Recherche académique</span>
                 <h3>Assistante de recherche – Analyse économique</h3>
@@ -533,7 +575,7 @@
               <span class="tag">Recherche</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="distinction">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag award-card--featured">Distinctions</span>
                 <h3 data-i18n="honors.excellence.title">Certificate of Excellence – Top 5% GPA</h3>
@@ -553,7 +595,7 @@
               <span class="tag">NCCU</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="distinction">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Entrepreneuriat</span>
                 <h3 data-i18n="extracurricular.camps.title">Co-fondatrice – Sora Education</h3>
@@ -570,7 +612,7 @@
               <span class="tag">Stratégie</span>
             </article>
 
-            <article class="portfolio-card" style="grid-column: 1 / -1;">
+            <article class="portfolio-card" data-cat="recherche featured">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag" style="background:var(--accent); color:#fff;">Research · R · Finance quantitative</span>
                 <h3>Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h3>
@@ -732,5 +774,38 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+      function applyPortfolioFilter(f) {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("is-active"));
+        const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
+        if (activeBtn) activeBtn.classList.add("is-active");
+        document.querySelectorAll(".portfolio-card[data-cat]").forEach(card => {
+          const cats = card.dataset.cat.split(" ");
+          if (f === "all" || cats.includes(f)) {
+            card.classList.remove("is-hidden");
+            card.style.gridColumn = cats.includes("featured") && f === "all" ? "1 / -1" : "";
+          } else {
+            card.classList.add("is-hidden");
+          }
+        });
+      }
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => applyPortfolioFilter(btn.dataset.filter));
+      });
+      document.querySelectorAll("[data-portfolio-filter]").forEach(link => {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const f = link.dataset.portfolioFilter;
+          const section = document.querySelector("#portfolio");
+          document.querySelectorAll(".nav-item--has-dropdown").forEach(item => {
+            item.classList.remove("is-open");
+            const btn = item.querySelector(".nav-dropdown-toggle");
+            if (btn) btn.setAttribute("aria-expanded", "false");
+          });
+          applyPortfolioFilter(f);
+          if (section) section.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
   </body>
 </html>

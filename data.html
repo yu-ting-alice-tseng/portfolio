@@ -46,15 +46,41 @@
             </button>
             <div class="nav-dropdown" role="menu">
               <a href="#about"     role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav.about">À propos</span></a>
-              <span class="nav-dropdown-label">Parcours</span>
               <a href="#skills"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span data-i18n="nav.skills">Compétences</span></a>
               <a href="#education" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg></span><span data-i18n="nav.education">Formation</span></a>
               <a href="#experience" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span data-i18n="nav.experience">Expériences</span></a>
-              <span class="nav-dropdown-label">Réalisations</span>
               <a href="#honors"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span data-i18n="nav.honors">Distinctions</span></a>
             </div>
           </div>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <div class="nav-item--has-dropdown">
+            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
+              <span data-i18n="nav.portfolio">Portfolio</span>
+              <span class="nav-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="all">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                <span>Tous les projets</span>
+              </a>
+              <span class="nav-dropdown-label">Catégories</span>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="dashboard">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+                <span>Dashboard</span>
+              </a>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="analyse">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+                <span>Analyse</span>
+              </a>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="recherche">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+                <span>Recherche</span>
+              </a>
+              <a href="#portfolio" role="menuitem" data-portfolio-filter="reporting">
+                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+                <span>Reporting</span>
+              </a>
+            </div>
+          </div>
           <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
@@ -76,15 +102,23 @@
             </button>
             <div class="nav-dropdown" role="menu">
               <a href="#about"     role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav.about">À propos</span></a>
-              <span class="nav-dropdown-label">Parcours</span>
               <a href="#skills"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span data-i18n="nav.skills">Compétences</span></a>
               <a href="#education" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg></span><span data-i18n="nav.education">Formation</span></a>
               <a href="#experience" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span data-i18n="nav.experience">Expériences</span></a>
-              <span class="nav-dropdown-label">Réalisations</span>
               <a href="#honors"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span data-i18n="nav.honors">Distinctions</span></a>
             </div>
           </div>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <button class="mobile-nav-toggle-btn" type="button">
+            <span data-i18n="nav.portfolio">Portfolio</span>
+            <span class="nav-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="mobile-nav-sub">
+            <a href="#portfolio" data-portfolio-filter="all">Tous les projets</a>
+            <a href="#portfolio" data-portfolio-filter="dashboard">Dashboard</a>
+            <a href="#portfolio" data-portfolio-filter="analyse">Analyse</a>
+            <a href="#portfolio" data-portfolio-filter="recherche">Recherche</a>
+            <a href="#portfolio" data-portfolio-filter="reporting">Reporting</a>
+          </div>
           <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
@@ -501,10 +535,18 @@
             <p>Tableaux de bord, analyses quantitatives et études de marché.</p>
           </header>
 
+          <div class="portfolio-filter-bar" data-reveal>
+            <button class="filter-btn is-active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+            <button class="filter-btn" data-filter="analyse">Analyse</button>
+            <button class="filter-btn" data-filter="recherche">Recherche</button>
+            <button class="filter-btn" data-filter="reporting">Reporting</button>
+          </div>
+
           <div class="portfolio-grid" data-reveal>
 
             <!-- Case Study: Dashboard XHS (moved from casestudy section) -->
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="dashboard featured">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag" data-i18n="dataHero.caseStudyLabel">Étude de cas · Dashboard XHS</span>
                 <h3 data-i18n="dataHero.caseStudyTitle">Dashboard Excel – Performance Xiaohongshu</h3>
@@ -537,29 +579,8 @@
               <span class="tag">Dashboard</span>
             </article>
 
-            <article class="portfolio-card">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag">Dashboard Excel</span>
-                <h3>Engoo – Tableau de bord Xiaohongshu</h3>
-              </div>
-              <p>Tableau de bord Excel automatisé avec 12 métriques quotidiennes (vues, abonnés, interactions, CTR…). Graphiques KPI, analyse de séries temporelles et comparaison A/B pour piloter la stratégie de contenu.</p>
-              <div class="portfolio-stats">
-                <div class="portfolio-stat">
-                  <span class="stat-value">12</span>
-                  <span class="stat-label">Métriques / jour</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">A/B</span>
-                  <span class="stat-label">Comparaison périodes</span>
-                </div>
-              </div>
-              <a href="assets/Engoo_XHS Dashboard_FR.xlsx"
-                 class="btn btn-primary" style="font-size:0.8rem;padding:0.4rem 1rem;margin-top:0.75rem;"
-                 download data-i18n="experience.engoo.excelLink"
-                 data-i18n-href="experience.engoo.excelHref">Télécharger le dashboard (Excel)</a>
-            </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="analyse">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Recherche de marché</span>
                 <h3>Segmentation d'audience &amp; stratégie STP – Engoo</h3>
@@ -570,7 +591,7 @@
               <span class="tag">Audience Analysis</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="recherche">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Recherche académique</span>
                 <h3 data-i18n="experience.research.title">Assistante de recherche – NCCU</h3>
@@ -581,7 +602,7 @@
               <span class="tag">Statistiques</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="recherche">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">Méthodes quantitatives</span>
                 <h3>Marketing Research – NCCU &amp; emlyon</h3>
@@ -592,7 +613,7 @@
               <span class="tag">Régression</span>
             </article>
 
-            <article class="portfolio-card">
+            <article class="portfolio-card" data-cat="reporting">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag">KPI &amp; Reporting</span>
                 <h3>Analyse de performance – KPN</h3>
@@ -603,7 +624,7 @@
               <span class="tag">SEO / SEA</span>
             </article>
 
-            <article class="portfolio-card" style="grid-column: 1 / -1;">
+            <article class="portfolio-card" data-cat="recherche featured">
               <div class="portfolio-card-header">
                 <span class="portfolio-tag" style="background:var(--accent); color:#fff;">Research · R · Finance quantitative</span>
                 <h3>Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h3>
@@ -765,5 +786,38 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+      function applyPortfolioFilter(f) {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("is-active"));
+        const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
+        if (activeBtn) activeBtn.classList.add("is-active");
+        document.querySelectorAll(".portfolio-card[data-cat]").forEach(card => {
+          const cats = card.dataset.cat.split(" ");
+          if (f === "all" || cats.includes(f)) {
+            card.classList.remove("is-hidden");
+            card.style.gridColumn = cats.includes("featured") && f === "all" ? "1 / -1" : "";
+          } else {
+            card.classList.add("is-hidden");
+          }
+        });
+      }
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => applyPortfolioFilter(btn.dataset.filter));
+      });
+      document.querySelectorAll("[data-portfolio-filter]").forEach(link => {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const f = link.dataset.portfolioFilter;
+          const section = document.querySelector("#portfolio");
+          document.querySelectorAll(".nav-item--has-dropdown").forEach(item => {
+            item.classList.remove("is-open");
+            const btn = item.querySelector(".nav-dropdown-toggle");
+            if (btn) btn.setAttribute("aria-expanded", "false");
+          });
+          applyPortfolioFilter(f);
+          if (section) section.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
   </body>
 </html>
