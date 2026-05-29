@@ -3998,3 +3998,19 @@ a, button, [role="button"],
 .showcase-badge svg      { width: 0.75rem; height: 0.75rem; vertical-align: -0.05em; }
 .page-type-link svg      { width: 0.82rem; height: 0.82rem; vertical-align: -0.1em; flex-shrink: 0; }
 .btn svg.btn-icon        { width: 0.85rem; height: 0.85rem; vertical-align: -0.1em; }
+
+/* ── Finance page typography overrides ───────────── */
+/* All headings use formal Libre Baskerville instead of Cormorant */
+body.page-finance .section-header h2,
+body.page-finance .hero h1,
+body.page-finance h2,
+body.page-finance h3,
+body.page-finance .award-title,
+body.page-finance .timeline-item h3,
+body.page-finance .portfolio-card h3 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 700;
+}
+body.page-finance .section-header h2 {
+  font-size: 1.55rem; /* Baskerville slightly larger optically */
+}
