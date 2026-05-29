@@ -3773,8 +3773,8 @@ a, button, [role="button"],
   background: var(--card-bg, #fff);
   border: 1px solid var(--border);
   border-radius: 10px;
-  min-width: 240px;
-  padding: 0.35rem 0;
+  min-width: 200px;
+  padding: 0.4rem 0 0.45rem;
   box-shadow: 0 8px 28px rgba(0,0,0,0.11);
   opacity: 0;
   visibility: hidden;
@@ -3794,7 +3794,7 @@ a, button, [role="button"],
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.52rem 1.1rem;
+  padding: 0.44rem 1.1rem;
   font-size: 0.82rem;
   font-weight: 400;
   color: var(--text-soft);
@@ -3808,15 +3808,22 @@ a, button, [role="button"],
 /* Dropdown group labels */
 .nav-dropdown-label {
   display: block;
-  font-size: 0.6rem;
+  font-size: 0.59rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--text-soft);
-  opacity: 0.45;
-  padding: 0.65rem 1.1rem 0.15rem;
+  opacity: 0.5;
+  padding: 0.45rem 1.1rem 0.08rem;
+  margin-top: 0.1rem;
+  border-top: 1px solid var(--border);
   pointer-events: none;
   user-select: none;
+}
+.nav-dropdown-label:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0.15rem;
 }
 .nav-dropdown a:hover { color: var(--accent); background: rgba(99,102,241,0.05); }
 .nav-dropdown a::after { display: none !important; }
