@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Finance & Analyse · Yu-Ting Tseng</title>
+  <meta name="description" content="Portfolio Finance & Analyse – Yu-Ting Tseng. Projets quantitatifs, modèles financiers et recherche empirique." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Page transition ───────────────────────────────── */
+    body {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    body.is-visible { opacity: 1; transform: translateY(0); }
+    body.is-leaving { opacity: 0; transform: translateY(-12px); transition-duration: 0.32s; }
+
+    /* ── Finance formal palette ────────────────────────── */
+    :root {
+      --fi-bg:          #f8f9fb;
+      --fi-surface:     #ffffff;
+      --fi-accent:      #1e3a5f;
+      --fi-accent2:     #2d5186;
+      --fi-accent-pale: #eef2f8;
+      --fi-accent-soft: #b8c9e0;
+      --fi-text:        #111827;
+      --fi-muted:       #6b7280;
+      --fi-border:      #e5e7eb;
+      --fi-border2:     #d1d5db;
+      --fi-green:       #065f46;
+      --fi-green-pale:  #ecfdf5;
+      --fi-blue-mid:    #1d4ed8;
+    }
+
+    body.page-portfolio-finance {
+      background: var(--fi-bg);
+      color: var(--fi-text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* ── Top navigation bar ────────────────────────────── */
+    .pf-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(248, 249, 251, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--fi-border);
+    }
+    .pf-topbar-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .pf-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.74rem;
+      font-weight: 500;
+      color: var(--fi-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .pf-back:hover { color: var(--fi-accent); }
+    .pf-back svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .pf-topbar-sep { width: 1px; height: 14px; background: var(--fi-border); flex-shrink: 0; }
+    .pf-topbar-label {
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fi-muted);
+      opacity: 0.65;
+      flex: 1;
+    }
+    .pf-topbar .lang-switch { display: flex; gap: 0.2rem; }
+    .pf-topbar .lang-btn {
+      background: none;
+      border: 1px solid transparent;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      padding: 0.18rem 0.45rem;
+      cursor: pointer;
+      color: var(--fi-muted);
+      border-radius: 3px;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .pf-topbar .lang-btn.is-active { color: var(--fi-accent); border-color: var(--fi-accent); background: var(--fi-accent-pale); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--fi-text); border-color: var(--fi-border2); }
+
+    /* ── Hero ──────────────────────────────────────────── */
+    .pf-hero {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+      border-bottom: 1px solid var(--fi-border);
+    }
+    .pf-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: end;
+    }
+    .pf-hero-eyebrow {
+      font-size: 0.63rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fi-accent2);
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-hero-title {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--fi-text);
+      margin: 0 0 1rem;
+    }
+    .pf-hero-desc {
+      font-size: 0.86rem;
+      line-height: 1.75;
+      color: var(--fi-muted);
+      max-width: 480px;
+      margin: 0;
+    }
+    .pf-hero-stats-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pf-hero-kpi {
+      padding: 0.9rem 1.25rem;
+      background: var(--fi-surface);
+      border: 1px solid var(--fi-border);
+      border-left: 3px solid var(--fi-accent);
+      border-radius: 0 4px 4px 0;
+      min-width: 160px;
+    }
+    .pf-hero-kpi-val {
+      display: block;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--fi-accent);
+      line-height: 1;
+    }
+    .pf-hero-kpi-lbl {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fi-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* ── Filter bar ────────────────────────────────────── */
+    .pf-filters {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .pf-filters .filter-btn {
+      background: var(--fi-surface);
+      border: 1px solid var(--fi-border);
+      padding: 0.38rem 0.9rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.71rem;
+      letter-spacing: 0.03em;
+      font-weight: 500;
+      color: var(--fi-muted);
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.18s;
+    }
+    .pf-filters .filter-btn:hover { border-color: var(--fi-accent2); color: var(--fi-accent); }
+    .pf-filters .filter-btn.is-active {
+      background: var(--fi-accent);
+      border-color: var(--fi-accent);
+      color: #fff;
+    }
+
+    /* ── Grid ──────────────────────────────────────────── */
+    .pf-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    /* ── Card base ─────────────────────────────────────── */
+    .pf-card {
+      background: var(--fi-surface);
+      border: 1px solid var(--fi-border);
+      border-radius: 4px;
+      padding: 1.75rem;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .pf-card:hover {
+      box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
+      border-color: var(--fi-border2);
+    }
+    .pf-card.is-hidden { display: none !important; }
+    .pf-card--featured {
+      grid-column: 1 / -1;
+      padding: 2.25rem;
+    }
+
+    .pf-card-num {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fi-accent2);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      opacity: 0.7;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-card-tag {
+      display: inline-flex;
+      font-size: 0.59rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--fi-accent);
+      background: var(--fi-accent-pale);
+      border: 1px solid var(--fi-accent-soft);
+      padding: 0.18rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.75rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-card-tag--featured {
+      background: var(--fi-accent);
+      color: #fff;
+      border-color: var(--fi-accent);
+    }
+    .pf-card-title {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--fi-text);
+      margin: 0 0 0.85rem;
+    }
+    .pf-card--featured .pf-card-title {
+      font-size: 1.55rem;
+    }
+    .pf-card-body {
+      font-size: 0.83rem;
+      line-height: 1.75;
+      color: var(--fi-muted);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── STAR sections ─────────────────────────────────── */
+    .pf-star {
+      padding: 0.8rem 1rem;
+      border-left: 3px solid var(--fi-accent);
+      background: var(--fi-accent-pale);
+      border-radius: 0 3px 3px 0;
+      margin: 1rem 0;
+    }
+    .pf-star--action { border-left-color: var(--fi-accent2); background: var(--fi-bg); }
+    .pf-star--result { border-left-color: var(--fi-green); background: var(--fi-green-pale); }
+    .pf-star-lbl {
+      font-size: 0.59rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fi-accent);
+      margin-bottom: 0.4rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-star--action .pf-star-lbl { color: var(--fi-accent2); }
+    .pf-star--result .pf-star-lbl { color: var(--fi-green); }
+    .pf-star-txt {
+      font-size: 0.82rem;
+      line-height: 1.75;
+      color: var(--fi-muted);
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-star-txt strong { color: var(--fi-text); }
+    .pf-star-txt ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .pf-star-txt li { margin-bottom: 0.35rem; }
+
+    /* ── Image grids ───────────────────────────────────── */
+    .pf-imgs { display: grid; gap: 0.5rem; margin: 1.25rem 0; }
+    .pf-imgs--2x2 { grid-template-columns: 1fr 1fr; }
+    .pf-img-wrap {
+      display: block;
+      overflow: hidden;
+      border-radius: 3px;
+      background: var(--fi-bg);
+      border: 1px solid var(--fi-border);
+    }
+    .pf-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .pf-img-wrap:hover img { transform: scale(1.03); }
+
+    /* ── Stats ─────────────────────────────────────────── */
+    .pf-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.1rem 0;
+      border-top: 1px solid var(--fi-border);
+      border-bottom: 1px solid var(--fi-border);
+      margin: 1.1rem 0;
+    }
+    .pf-stat-val {
+      display: block;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--fi-accent);
+      line-height: 1;
+    }
+    .pf-stat-lbl {
+      display: block;
+      font-size: 0.59rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--fi-muted);
+      margin-top: 0.25rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Tags ──────────────────────────────────────────── */
+    .pf-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 1rem; }
+    .pf-tag {
+      font-size: 0.61rem;
+      color: var(--fi-muted);
+      background: var(--fi-bg);
+      border: 1px solid var(--fi-border);
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Buttons ───────────────────────────────────────── */
+    .pf-btns { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+    .pf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pf-btn--primary { background: var(--fi-accent); color: #fff; }
+    .pf-btn--primary:hover { background: #152d4a; color: #fff; }
+
+    /* ── Results callout ───────────────────────────────── */
+    .pf-result-callout {
+      padding: 0.85rem 1rem;
+      background: var(--fi-green-pale);
+      border: 1px solid #a7f3d0;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    .pf-result-callout-lbl {
+      font-size: 0.59rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fi-green);
+      margin-bottom: 0.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-result-callout ul {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--fi-muted);
+      margin: 0;
+      padding-left: 1.1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-result-callout li { margin-bottom: 0.3rem; }
+
+    /* ── Page footer ───────────────────────────────────── */
+    .pf-footer {
+      border-top: 1px solid var(--fi-border);
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .pf-footer-link {
+      font-size: 0.74rem;
+      font-weight: 500;
+      color: var(--fi-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .pf-footer-link:hover { color: var(--fi-accent); }
+    .pf-footer-credit {
+      font-size: 0.69rem;
+      color: var(--fi-muted);
+      opacity: 0.55;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .pf-grid { grid-template-columns: 1fr; }
+      .pf-card--featured { grid-column: 1; }
+      .pf-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .pf-hero-stats-col { flex-direction: row; flex-wrap: wrap; }
+      .pf-topbar-label { display: none; }
+    }
+    @media (max-width: 520px) {
+      .pf-hero { padding: 3rem 1.25rem 2rem; }
+      .pf-grid { padding: 1.5rem 1.25rem 3rem; }
+      .pf-filters { padding: 1.25rem 1.25rem 0; }
+      .pf-footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+      .pf-topbar-inner { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body class="page-portfolio-finance">
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Top navigation bar ──────────────────────────── -->
+  <header class="pf-topbar">
+    <div class="pf-topbar-inner">
+      <a href="finance.html" class="pf-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Finance &amp; Conseil</span>
+      </a>
+      <div class="pf-topbar-sep"></div>
+      <span class="pf-topbar-label">Portfolio · Finance &amp; Analyse</span>
+      <div class="lang-switch" aria-label="Choisir la langue">
+        <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="zh" type="button">CN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ────────────────────────────────────────── -->
+  <section class="pf-hero">
+    <div class="pf-hero-inner">
+      <div>
+        <p class="pf-hero-eyebrow">Yu-Ting Tseng · Finance &amp; Analyse Quantitative</p>
+        <h1 class="pf-hero-title">Finance &amp;<br>Analyse</h1>
+        <p class="pf-hero-desc">
+          Projets académiques, analyses quantitatives et modélisation financière.
+          Rigueur analytique, données empiriques et insights actionnables.
+        </p>
+      </div>
+      <div class="pf-hero-stats-col">
+        <div class="pf-hero-kpi">
+          <span class="pf-hero-kpi-val">1</span>
+          <span class="pf-hero-kpi-lbl">Projet</span>
+        </div>
+        <div class="pf-hero-kpi">
+          <span class="pf-hero-kpi-val">2000–2024</span>
+          <span class="pf-hero-kpi-lbl">Données M&amp;A</span>
+        </div>
+        <div class="pf-hero-kpi">
+          <span class="pf-hero-kpi-val">3</span>
+          <span class="pf-hero-kpi-lbl">Hypothèses testées</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Filter bar ──────────────────────────────────── -->
+  <div class="pf-filters">
+    <button class="filter-btn is-active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="analyse">Analyse</button>
+    <button class="filter-btn" data-filter="recherche">Recherche</button>
+    <button class="filter-btn" data-filter="distinction">Distinctions</button>
+  </div>
+
+  <!-- ── Projects ────────────────────────────────────── -->
+  <main class="pf-grid">
+
+    <!-- ── 01 · M&A Research (featured) ─────────────── -->
+    <article class="pf-card pf-card--featured" data-cat="recherche">
+      <div class="pf-card-num">01 · Recherche empirique · Finance quantitative</div>
+      <span class="pf-card-tag pf-card-tag--featured">Research · R · Finance quantitative</span>
+      <h2 class="pf-card-title">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
+      <p style="font-style:italic; font-size:0.82rem; color:var(--fi-muted); margin-bottom:1.25rem; font-family:'Inter',sans-serif;">
+        Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
+      </p>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Situation</div>
+        <p class="pf-star-txt">
+          L'Amérique Latine attire les capitaux étrangers mais son instabilité politique chronique génère un risque difficilement quantifiable. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong>
+        </p>
+      </div>
+
+      <div class="pf-star pf-star--action">
+        <div class="pf-star-lbl">Méthodologie</div>
+        <p class="pf-star-txt">
+          <ul>
+            <li><strong>H1 – Volume :</strong> Régression OLS sur panel data — WGI prédit-il le nombre d'opérations M&amp;A annuelles ?</li>
+            <li><strong>H2 – Abandon :</strong> Modèle Logit — la dégradation du WGI augmente-t-elle la probabilité d'annulation ?</li>
+            <li><strong>H3 – Prime :</strong> Régression OLS — prime plus élevée pour compenser le risque politique ?</li>
+            <li><strong>Sources :</strong> LSEG Workspace / Refinitiv (2000–2024), WGI, POLCON III, FSI.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="pf-imgs pf-imgs--2x2">
+        <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
+               alt="Score POLCON moyen par région" loading="lazy">
+        </a>
+        <a href="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
+               alt="Volume M&A vs WGI – H1" loading="lazy">
+        </a>
+        <a href="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
+               alt="Logit – Abandon M&A vs WGI – H2" loading="lazy">
+        </a>
+        <a href="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
+               alt="Prime M&A vs WGI – H3" loading="lazy">
+        </a>
+      </div>
+
+      <div class="pf-result-callout">
+        <div class="pf-result-callout-lbl">Résultats clés</div>
+        <ul>
+          <li>WGI ↑ corrélé à un <strong>volume M&amp;A plus élevé</strong> (H1 confirmée).</li>
+          <li>Dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — actionnable pour due diligence (H2 confirmée).</li>
+          <li>Acquéreurs intègrent risque politique dans la <strong>prime d'acquisition</strong> (H3 partiellement confirmée).</li>
+          <li>Implication : <strong>le risque politique est un levier de négociation</strong>, pas seulement un frein.</li>
+        </ul>
+      </div>
+
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl">Hypothèses testées</span></div>
+        <div><span class="pf-stat-val">2000–2024</span><span class="pf-stat-lbl">Période analysée</span></div>
+        <div><span class="pf-stat-val">WGI · FSI · POLCON</span><span class="pf-stat-lbl">Indices politiques</span></div>
+      </div>
+      <div class="pf-btns">
+        <a href="assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf"
+           target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--primary">Lire le rapport complet (PDF)</a>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">R</span>
+        <span class="pf-tag">M&amp;A</span>
+        <span class="pf-tag">Régression OLS</span>
+        <span class="pf-tag">Logit</span>
+        <span class="pf-tag">Finance quantitative</span>
+        <span class="pf-tag">Risque politique</span>
+        <span class="pf-tag">LSEG · Refinitiv</span>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ── Page footer ─────────────────────────────────── -->
+  <footer class="pf-footer">
+    <a href="portfolio-data.html" class="pf-footer-link">← Portfolio Data &amp; Recherche</a>
+    <p class="pf-footer-credit">© <span id="year"></span> Yu-Ting Tseng &nbsp;·&nbsp; Finance &amp; Analyse</p>
+    <a href="index.html" class="pf-footer-link">Accueil →</a>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('is-visible');
+      });
+    });
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
+          href.startsWith('http') || href.startsWith('//') ||
+          link.hasAttribute('download') ||
+          link.getAttribute('target') === '_blank') return;
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.classList.add('is-leaving');
+        setTimeout(() => { window.location.href = href; }, 350);
+      });
+    });
+
+    function applyFilter(f) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
+      if (activeBtn) activeBtn.classList.add('is-active');
+      document.querySelectorAll('.pf-card[data-cat]').forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        card.classList.toggle('is-hidden', f !== 'all' && !cats.includes(f));
+      });
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+  </script>
+</body>
+</html>

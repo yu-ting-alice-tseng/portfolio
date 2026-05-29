@@ -52,35 +52,7 @@
               <a href="#honors"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span data-i18n="nav.honors">Distinctions</span></a>
             </div>
           </div>
-          <div class="nav-item--has-dropdown">
-            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
-              <span data-i18n="nav.portfolio">Portfolio</span>
-              <span class="nav-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="nav-dropdown" role="menu">
-              <a href="#portfolio" role="menuitem" data-portfolio-filter="all">
-                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
-                <span>Tous les projets</span>
-              </a>
-              <span class="nav-dropdown-label">Catégories</span>
-              <a href="#portfolio" role="menuitem" data-portfolio-filter="dashboard">
-                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
-                <span>Dashboard</span>
-              </a>
-              <a href="#portfolio" role="menuitem" data-portfolio-filter="analyse">
-                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
-                <span>Analyse</span>
-              </a>
-              <a href="#portfolio" role="menuitem" data-portfolio-filter="recherche">
-                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-                <span>Recherche</span>
-              </a>
-              <a href="#portfolio" role="menuitem" data-portfolio-filter="reporting">
-                <span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
-                <span>Reporting</span>
-              </a>
-            </div>
-          </div>
+          <a href="portfolio-data.html" data-i18n="nav.portfolio">Portfolio</a>
           <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="lang-switch" aria-label="Choisir la langue">
@@ -108,17 +80,7 @@
               <a href="#honors"    role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span data-i18n="nav.honors">Distinctions</span></a>
             </div>
           </div>
-          <button class="mobile-nav-toggle-btn" type="button">
-            <span data-i18n="nav.portfolio">Portfolio</span>
-            <span class="nav-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="mobile-nav-sub">
-            <a href="#portfolio" data-portfolio-filter="all">Tous les projets</a>
-            <a href="#portfolio" data-portfolio-filter="dashboard">Dashboard</a>
-            <a href="#portfolio" data-portfolio-filter="analyse">Analyse</a>
-            <a href="#portfolio" data-portfolio-filter="recherche">Recherche</a>
-            <a href="#portfolio" data-portfolio-filter="reporting">Reporting</a>
-          </div>
+          <a href="portfolio-data.html" data-i18n="nav.portfolio">Portfolio</a>
           <a href="#contact"   data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
@@ -323,6 +285,12 @@
               <div class="timeline-body">
                 <h3 data-i18n="education.emlyon.title">Master en Gestion (Programme Grande École)</h3>
                 <p class="timeline-company" data-i18n="education.emlyon.school">emlyon business school</p>
+                <div class="edu-degree-section">
+                  <div class="edu-degree-row">
+                    <span class="edu-degree-label" data-i18n="education.emlyon.specLabel">Spécialisation</span>
+                    <span class="edu-degree-chip" data-i18n="education.emlyon.spec1">Finance &amp; Comptabilité</span>
+                  </div>
+                </div>
                 <ul class="timeline-points">
                   <li>Spécialisation : Finance &amp; Comptabilité · GPA 4,0/4,0</li>
                   <li data-i18n="education.emlyon.pointEn">Programme dispensé entièrement en anglais.</li>
@@ -337,6 +305,20 @@
                     <span class="stat-label">Spécialisation</span>
                   </div>
                 </div>
+                <div class="edu-info">
+                  <div class="edu-info-row">
+                    <span class="edu-info-key">GPA</span>
+                    <span data-i18n="education.emlyon.gpa">4,0/4,0</span>
+                  </div>
+                  <div class="edu-info-row">
+                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
+                    <div class="course-chips">
+                      <span class="course-chip">Data Science &amp; AI for Business</span>
+                      <span class="course-chip">Operational Decision Analysis</span>
+                      <span class="course-chip">Marketing Analytics</span>
+                    </div>
+                  </div>
+                </div>
                 <span class="tag">emlyon</span>
                 <span class="tag">Finance &amp; Comptabilité</span>
                 <span class="tag">GPA 4.0</span>
@@ -349,8 +331,19 @@
                 <span class="timeline-location">Taipei, Taïwan</span>
               </div>
               <div class="timeline-body">
-                <h3 data-i18n="education.nccu.title">Licence en Gestion des Entreprises Internationales</h3>
-                <p class="timeline-company" data-i18n="education.nccu.school">National Chengchi University (NCCU)</p>
+                <h3 data-i18n="education.nccu.title">Bachelor en Français &amp; Diplomatie</h3>
+                <p class="timeline-company" data-i18n="education.nccu.school">Université Nationale Chengchi (NCCU)</p>
+                <div class="edu-degree-section">
+                  <div class="edu-degree-row">
+                    <span class="edu-degree-label" data-i18n="education.nccu.majorLabel">Majeure</span>
+                    <span class="edu-degree-chip" data-i18n="education.nccu.major1">Langues européennes (français)</span>
+                    <span class="edu-degree-chip" data-i18n="education.nccu.major2">Diplomatie</span>
+                  </div>
+                  <div class="edu-degree-row">
+                    <span class="edu-degree-label" data-i18n="education.nccu.minorLabel">Mineure</span>
+                    <span class="edu-degree-chip edu-degree-chip--minor" data-i18n="education.nccu.minor1">Économie</span>
+                  </div>
+                </div>
                 <ul class="timeline-points">
                   <li data-i18n="education.nccu.point1">Certificate of Excellence (Top 5% GPA) – 2021, 2023.</li>
                   <li data-i18n="education.nccu.point2">Vice-présidente AIESEC Local Committee.</li>
@@ -365,8 +358,23 @@
                     <span class="stat-label">Classement</span>
                   </div>
                 </div>
+                <div class="edu-info">
+                  <div class="edu-info-row">
+                    <span class="edu-info-key">GPA</span>
+                    <span data-i18n="education.nccu.gpa">4,22 / 4,3 (3,99 / 4,0)</span>
+                  </div>
+                  <div class="edu-info-row">
+                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
+                    <div class="course-chips">
+                      <span class="course-chip">Data Analysis &amp; Programming (VBA &amp; Access)</span>
+                      <span class="course-chip">Programming 101 (Python)</span>
+                      <span class="course-chip">Research Methods (R &amp; Statistics)</span>
+                      <span class="course-chip">Marketing Research (R, Decanter AI)</span>
+                    </div>
+                  </div>
+                </div>
                 <span class="tag">NCCU</span>
-                <span class="tag">International Business</span>
+                <span class="tag">Français &amp; Diplomatie</span>
                 <span class="tag">Top 5% GPA</span>
               </div>
             </article>
@@ -497,7 +505,7 @@
 
           </div>
           <div style="text-align:center;margin-top:2rem" data-reveal>
-            <a href="#portfolio" class="btn btn-outline" data-i18n="nav.portfolio">Voir le portfolio →</a>
+            <a href="portfolio-data.html" class="btn btn-outline" data-i18n="nav.portfolio">Voir le portfolio →</a>
           </div>
         </div>
       </section>
@@ -532,207 +540,6 @@
         </div>
       </section>
 
-      <!-- ── Portfolio ──────────────────────────────── -->
-      <section class="section" id="portfolio">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2>Portfolio – Data &amp; Market Research</h2>
-            <p>Tableaux de bord, analyses quantitatives et études de marché.</p>
-          </header>
-
-          <div class="portfolio-filter-bar" data-reveal>
-            <button class="filter-btn is-active" data-filter="all">Tous</button>
-            <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-            <button class="filter-btn" data-filter="analyse">Analyse</button>
-            <button class="filter-btn" data-filter="recherche">Recherche</button>
-            <button class="filter-btn" data-filter="reporting">Reporting</button>
-          </div>
-
-          <div class="portfolio-grid" data-reveal>
-
-            <!-- Case Study: Dashboard XHS (moved from casestudy section) -->
-            <article class="portfolio-card" data-cat="dashboard featured">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag" data-i18n="dataHero.caseStudyLabel">Étude de cas · Dashboard XHS</span>
-                <h3 data-i18n="dataHero.caseStudyTitle">Dashboard Excel – Performance Xiaohongshu</h3>
-              </div>
-              <p data-i18n="dataHero.caseStudyDesc">Construction d'un tableau de bord Excel complet pour suivre 12 métriques quotidiennes du compte Xiaohongshu d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.</p>
-              <div class="portfolio-stats">
-                <div class="portfolio-stat">
-                  <span class="stat-value">12</span>
-                  <span class="stat-label">Métriques / jour</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">+93.3%</span>
-                  <span class="stat-label" data-i18n="experience.engoo.stat1">Vues</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">A/B</span>
-                  <span class="stat-label">Comparaison de périodes</span>
-                </div>
-              </div>
-              <p style="margin-top:1rem;font-size:0.84rem;">
-                <a href="#portfolio" style="color:var(--accent);text-decoration:none;font-weight:500;">→ Voir les visuels du dashboard dans le portfolio</a>
-              </p>
-              <div style="margin-top:1.25rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
-                <a href="assets/Engoo_XHS Dashboard_FR.xlsx"
-                   class="btn btn-primary" style="font-size:0.82rem;padding:0.45rem 1.1rem;"
-                   download data-i18n="experience.engoo.excelLink"
-                   data-i18n-href="experience.engoo.excelHref">Télécharger le dashboard Excel</a>
-              </div>
-              <span class="tag">Excel</span>
-              <span class="tag">Dashboard</span>
-            </article>
-
-
-            <article class="portfolio-card" data-cat="analyse">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag">Recherche de marché</span>
-                <h3>Segmentation d'audience &amp; stratégie STP – Engoo</h3>
-              </div>
-              <p>Analyse d'audience et segmentation des sous-profils cibles sur Xiaohongshu à partir des données de performance et de veille concurrentielle. Identification de trois segments principaux, adaptation des contenus par profil pour maximiser l'engagement.</p>
-              <span class="tag">STP</span>
-              <span class="tag">Segmentation</span>
-              <span class="tag">Audience Analysis</span>
-            </article>
-
-            <article class="portfolio-card" data-cat="recherche">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag">Recherche académique</span>
-                <h3 data-i18n="experience.research.title">Assistante de recherche – NCCU</h3>
-              </div>
-              <p>Collecte et traitement de données quantitatives pour des travaux en relations internationales. Nettoyage de jeux de données, analyses statistiques sous R et Python, et synthèses visuelles pour séminaires académiques.</p>
-              <span class="tag">R</span>
-              <span class="tag">Python</span>
-              <span class="tag">Statistiques</span>
-            </article>
-
-            <article class="portfolio-card" data-cat="recherche">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag">Méthodes quantitatives</span>
-                <h3>Marketing Research – NCCU &amp; emlyon</h3>
-              </div>
-              <p>Application des méthodes de recherche quantitative (cours Marketing Research à NCCU avec R et Decanter AI, Marketing Analytics à emlyon). Études de marché, analyse factorielle et modèles de régression pour le positionnement de marque.</p>
-              <span class="tag">R</span>
-              <span class="tag">Decanter AI</span>
-              <span class="tag">Régression</span>
-            </article>
-
-            <article class="portfolio-card" data-cat="reporting">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag">KPI &amp; Reporting</span>
-                <h3>Analyse de performance – KPN</h3>
-              </div>
-              <p>Suivi régulier des KPIs de campagnes digitales (trafic, CTR, conversions) via Google Analytics. Reporting analytique hebdomadaire et recommandations d'optimisation basées sur les données pour les campagnes SEO et SEA.</p>
-              <span class="tag">Google Analytics</span>
-              <span class="tag">Reporting</span>
-              <span class="tag">SEO / SEA</span>
-            </article>
-
-            <article class="portfolio-card" data-cat="recherche featured">
-              <div class="portfolio-card-header">
-                <span class="portfolio-tag" style="background:var(--accent); color:#fff;">Research · R · Finance quantitative</span>
-                <h3>Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h3>
-              </div>
-              <p style="font-style:italic; font-size:0.88rem; color:var(--text-soft); margin-bottom:1rem;">
-                Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
-              </p>
-
-              <div style="border-left:3px solid #3b82f6; padding:0.75rem 1rem; background:#eff6ff; border-radius:0 6px 6px 0; margin-bottom:1rem;">
-                <p style="font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:#3b82f6; margin-bottom:0.4rem;">Situation</p>
-                <p style="font-size:0.88rem; line-height:1.65; margin:0;">
-                  L'Amérique Latine présente un paradoxe pour les acquéreurs : ses ressources naturelles et son potentiel de croissance attirent les capitaux étrangers, mais son instabilité politique chronique — coups d'état, populisme, fragilité institutionnelle — génère un risque difficilement quantifiable. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong>
-                </p>
-              </div>
-
-              <div style="border-left:3px solid var(--accent); padding:0.75rem 1rem; background:var(--bg-soft,#f8fafc); border-radius:0 6px 6px 0; margin-bottom:1rem;">
-                <p style="font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--accent); margin-bottom:0.6rem;">Action — Méthodologie</p>
-                <ul style="font-size:0.87rem; line-height:1.7; margin:0; padding-left:1.2rem;">
-                  <li><strong>H1 – Volume :</strong> Régression OLS sur panel data — l'indice WGI prédit-il le nombre d'opérations M&amp;A annuelles ?</li>
-                  <li><strong>H2 – Abandon :</strong> Modèle Logit — la dégradation du score WGI augmente-t-elle la probabilité qu'une transaction soit annulée ?</li>
-                  <li><strong>H3 – Prime :</strong> Régression OLS — les acheteurs paient-ils une prime plus élevée pour compenser le risque politique ?</li>
-                  <li><strong>Sources :</strong> LSEG Workspace / Refinitiv (transactions 2000–2024), World Governance Indicators (WGI), POLCON III, Fragile States Index (FSI).</li>
-                </ul>
-              </div>
-
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1rem;">
-                <figure style="margin:0;">
-                  <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
-                     target="_blank" rel="noopener noreferrer" class="showcase-img-wrap" style="aspect-ratio:4/3;">
-                    <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
-                         alt="POLCON – Score moyen par région" class="showcase-img" loading="lazy">
-                    <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                  </a>
-                  <figcaption style="font-size:0.72rem; color:var(--text-soft); margin-top:4px; line-height:1.4;"><strong>Score POLCON moyen par région.</strong> L'Amérique Latine affiche des contraintes institutionnelles nettement plus faibles qu'Asie-Pacifique ou Amérique du Nord — signal structurel de risque de gouvernance élevé.</figcaption>
-                </figure>
-                <figure style="margin:0;">
-                  <a href="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
-                     target="_blank" rel="noopener noreferrer" class="showcase-img-wrap" style="aspect-ratio:4/3;">
-                    <img src="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
-                         alt="Volume M&A vs WGI – H1" class="showcase-img" loading="lazy">
-                    <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                  </a>
-                  <figcaption style="font-size:0.72rem; color:var(--text-soft); margin-top:4px; line-height:1.4;"><strong>H1 — Volume M&amp;A vs WGI.</strong> Co-évolution visible : quand la gouvernance s'améliore (WGI ↑), les transactions augmentent. Les creux de 2008–2010 et 2020 correspondent aux chocs macro (crise financière, COVID).</figcaption>
-                </figure>
-                <figure style="margin:0;">
-                  <a href="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
-                     target="_blank" rel="noopener noreferrer" class="showcase-img-wrap" style="aspect-ratio:4/3;">
-                    <img src="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
-                         alt="Logit Régression – Abandon M&A vs WGI – H2" class="showcase-img" loading="lazy">
-                    <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                  </a>
-                  <figcaption style="font-size:0.72rem; color:var(--text-soft); margin-top:4px; line-height:1.4;"><strong>H2 — Logit : abandon vs WGI.</strong> Coefficient WGI négatif et significatif (p &lt; 0.05) : une dégradation de la gouvernance augmente la probabilité d'abandon. Résultat directement actionnable pour la due diligence politique.</figcaption>
-                </figure>
-                <figure style="margin:0;">
-                  <a href="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
-                     target="_blank" rel="noopener noreferrer" class="showcase-img-wrap" style="aspect-ratio:4/3;">
-                    <img src="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
-                         alt="Prime M&A vs WGI – H3" class="showcase-img" loading="lazy">
-                    <span class="showcase-zoom" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
-                  </a>
-                  <figcaption style="font-size:0.72rem; color:var(--text-soft); margin-top:4px; line-height:1.4;"><strong>H3 — Prime d'acquisition vs WGI.</strong> Les acheteurs intègrent le risque politique dans leur valorisation : prime plus élevée dans les pays à faible gouvernance — le risque institutionnel a un prix.</figcaption>
-                </figure>
-              </div>
-
-              <div style="border-left:3px solid #10b981; padding:0.75rem 1rem; background:#ecfdf5; border-radius:0 6px 6px 0; margin-bottom:1rem;">
-                <p style="font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:#10b981; margin-bottom:0.6rem;">Résultats clés</p>
-                <ul style="font-size:0.87rem; line-height:1.7; margin:0; padding-left:1.2rem;">
-                  <li>Une meilleure gouvernance (WGI ↑) est corrélée à un <strong>volume M&amp;A plus élevé</strong> en Amérique Latine (H1 confirmée).</li>
-                  <li>La dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — résultat actionnable pour la due diligence (H2 confirmée).</li>
-                  <li>Les acquéreurs intègrent le risque politique dans la <strong>prime d'acquisition</strong> — ils paient davantage pour compenser l'incertitude institutionnelle (H3 partiellement confirmée).</li>
-                  <li>Implication business : <strong>le risque politique est un levier de négociation tarifaire</strong>, pas seulement un frein à l'investissement.</li>
-                </ul>
-              </div>
-
-              <div class="portfolio-stats" style="margin-bottom:0.75rem;">
-                <div class="portfolio-stat">
-                  <span class="stat-value">3</span>
-                  <span class="stat-label">Hypothèses testées</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">2000–2024</span>
-                  <span class="stat-label">Période analysée</span>
-                </div>
-                <div class="portfolio-stat">
-                  <span class="stat-value">WGI · FSI · POLCON</span>
-                  <span class="stat-label">Indices politiques</span>
-                </div>
-              </div>
-              <div style="margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
-                <a href="assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.78rem; padding:0.4rem 0.9rem;">Lire le rapport complet (PDF)</a>
-              </div>
-              <div style="margin-top:0.75rem;">
-                <span class="tag">R</span>
-                <span class="tag">M&amp;A</span>
-                <span class="tag">Régression</span>
-                <span class="tag">Finance quantitative</span>
-                <span class="tag">Risque politique</span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
 
       <!-- ── Contact ────────────────────────────────── -->
       <section class="section section-alt" id="contact">
@@ -792,35 +599,15 @@
 
     <script src="main.js"></script>
     <script>
-      function applyPortfolioFilter(f) {
-        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("is-active"));
-        const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
-        if (activeBtn) activeBtn.classList.add("is-active");
-        document.querySelectorAll(".portfolio-card[data-cat]").forEach(card => {
-          const cats = card.dataset.cat.split(" ");
-          if (f === "all" || cats.includes(f)) {
-            card.classList.remove("is-hidden");
-            card.style.gridColumn = cats.includes("featured") && f === "all" ? "1 / -1" : "";
-          } else {
-            card.classList.add("is-hidden");
-          }
-        });
-      }
-      document.querySelectorAll(".filter-btn").forEach(btn => {
-        btn.addEventListener("click", () => applyPortfolioFilter(btn.dataset.filter));
-      });
-      document.querySelectorAll("[data-portfolio-filter]").forEach(link => {
-        link.addEventListener("click", e => {
+      document.querySelectorAll('a[href^="portfolio-"]').forEach(link => {
+        link.addEventListener('click', e => {
+          const href = link.getAttribute('href');
+          if (!href || href.startsWith('#')) return;
           e.preventDefault();
-          const f = link.dataset.portfolioFilter;
-          const section = document.querySelector("#portfolio");
-          document.querySelectorAll(".nav-item--has-dropdown").forEach(item => {
-            item.classList.remove("is-open");
-            const btn = item.querySelector(".nav-dropdown-toggle");
-            if (btn) btn.setAttribute("aria-expanded", "false");
-          });
-          applyPortfolioFilter(f);
-          if (section) section.scrollIntoView({ behavior: "smooth" });
+          document.body.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          document.body.style.opacity = '0';
+          document.body.style.transform = 'translateY(-8px)';
+          setTimeout(() => { window.location.href = href; }, 310);
         });
       });
     </script>

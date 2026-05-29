@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Marketing & Design · Yu-Ting Tseng</title>
+  <meta name="description" content="Portfolio Marketing & Design Créatif – Yu-Ting Tseng. Campagnes, dashboards, direction artistique." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Page transition ───────────────────────────────── */
+    body {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    body.is-visible { opacity: 1; transform: translateY(0); }
+    body.is-leaving { opacity: 0; transform: translateY(-12px); transition-duration: 0.32s; }
+
+    /* ── Editorial palette ─────────────────────────────── */
+    :root {
+      --ed-bg:           #f5ede0;
+      --ed-card:         #fefaf5;
+      --ed-card-hover:   #fffdf9;
+      --ed-accent:       #b8903a;
+      --ed-accent-soft:  #eedfc2;
+      --ed-accent-pale:  #faf3e4;
+      --ed-text:         #2a1f14;
+      --ed-muted:        #8b7355;
+      --ed-border:       #dfd0b8;
+      --ed-line:         #c9b99a;
+      --ed-green:        #3d9970;
+    }
+
+    /* ── Base ──────────────────────────────────────────── */
+    body.page-portfolio-marketing {
+      background: var(--ed-bg);
+      color: var(--ed-text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* ── Top navigation bar ────────────────────────────── */
+    .pf-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(245, 237, 224, 0.93);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--ed-border);
+    }
+    .pf-topbar-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .pf-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--ed-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .pf-back:hover { color: var(--ed-accent); }
+    .pf-back svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .pf-topbar-sep { width: 1px; height: 14px; background: var(--ed-border); flex-shrink: 0; }
+    .pf-topbar-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ed-text);
+      opacity: 0.45;
+      flex: 1;
+    }
+    .pf-topbar .lang-switch { display: flex; gap: 0.2rem; }
+    .pf-topbar .lang-btn {
+      background: none;
+      border: 1px solid transparent;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      padding: 0.18rem 0.45rem;
+      cursor: pointer;
+      color: var(--ed-muted);
+      border-radius: 2px;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .pf-topbar .lang-btn.is-active { color: var(--ed-accent); border-color: var(--ed-accent); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--ed-text); border-color: var(--ed-border); }
+
+    /* ── Hero ──────────────────────────────────────────── */
+    .pf-hero {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 4.5rem 2rem 3rem;
+    }
+    .pf-hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ed-accent);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    .pf-hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--ed-accent);
+      flex-shrink: 0;
+    }
+    .pf-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.8rem, 8vw, 7rem);
+      font-weight: 300;
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      color: var(--ed-text);
+      margin: 0 0 2.5rem;
+    }
+    .pf-hero-title em {
+      font-style: italic;
+      color: var(--ed-accent);
+    }
+    .pf-hero-foot {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 3rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--ed-border);
+    }
+    .pf-hero-desc {
+      font-size: 0.87rem;
+      line-height: 1.8;
+      color: var(--ed-muted);
+      max-width: 500px;
+      margin: 0;
+    }
+    .pf-hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-shrink: 0;
+    }
+    .pf-hero-stat { text-align: right; }
+    .pf-hero-stat-num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--ed-accent);
+    }
+    .pf-hero-stat-label {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ed-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* ── Filter bar ────────────────────────────────────── */
+    .pf-filters {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border-bottom: 1px solid var(--ed-border);
+      overflow-x: auto;
+    }
+    .pf-filters .filter-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0.7rem 1.2rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--ed-muted);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      margin-bottom: -1px;
+      border-radius: 0;
+      white-space: nowrap;
+    }
+    .pf-filters .filter-btn:hover { color: var(--ed-text); }
+    .pf-filters .filter-btn.is-active {
+      color: var(--ed-accent);
+      border-bottom-color: var(--ed-accent);
+    }
+
+    /* ── Grid ──────────────────────────────────────────── */
+    .pf-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    /* ── Card base ─────────────────────────────────────── */
+    .pf-card {
+      background: var(--ed-card);
+      border: 1px solid var(--ed-border);
+      border-radius: 2px;
+      padding: 2rem;
+      transition: box-shadow 0.28s ease, transform 0.28s ease;
+      position: relative;
+    }
+    .pf-card:hover {
+      box-shadow: 0 10px 40px rgba(42, 31, 20, 0.09);
+      transform: translateY(-2px);
+    }
+    .pf-card.is-hidden { display: none !important; }
+
+    /* Featured card spans full width */
+    .pf-card--featured {
+      grid-column: 1 / -1;
+      padding: 2.5rem 3rem;
+    }
+
+    /* Card inner elements */
+    .pf-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ed-muted);
+      margin-bottom: 0.65rem;
+      opacity: 0.7;
+    }
+    .pf-card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ed-accent);
+      background: var(--ed-accent-pale);
+      border: 1px solid var(--ed-accent-soft);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.85rem;
+    }
+    .pf-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ed-text);
+      margin: 0 0 1rem;
+    }
+    .pf-card:not(.pf-card--featured) .pf-card-title { font-size: 1.5rem; }
+    .pf-card--featured .pf-card-title { font-size: 2.1rem; }
+
+    .pf-card-body {
+      font-size: 0.84rem;
+      line-height: 1.78;
+      color: var(--ed-muted);
+    }
+
+    /* ── STAR sections ─────────────────────────────────── */
+    .pf-star {
+      padding: 0.85rem 1.1rem;
+      border-left: 2px solid var(--ed-accent);
+      background: rgba(184, 144, 58, 0.04);
+      border-radius: 0 2px 2px 0;
+      margin: 1.1rem 0;
+    }
+    .pf-star--result {
+      border-left-color: var(--ed-green);
+      background: rgba(61, 153, 112, 0.04);
+    }
+    .pf-star-lbl {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ed-accent);
+      margin-bottom: 0.45rem;
+    }
+    .pf-star--result .pf-star-lbl { color: var(--ed-green); }
+    .pf-star-txt {
+      font-size: 0.83rem;
+      line-height: 1.75;
+      color: var(--ed-muted);
+    }
+    .pf-star-txt strong { color: var(--ed-text); }
+    .pf-star-txt ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .pf-star-txt li { margin-bottom: 0.35rem; }
+
+    /* ── Image grids ───────────────────────────────────── */
+    .pf-imgs { display: grid; gap: 0.5rem; margin: 1.25rem 0; }
+    .pf-imgs--2 { grid-template-columns: 1fr 1fr; }
+    .pf-imgs--3 { grid-template-columns: 2fr 1fr 1fr; }
+    .pf-img-wrap {
+      display: block;
+      overflow: hidden;
+      border-radius: 2px;
+      background: var(--ed-accent-pale);
+      position: relative;
+    }
+    .pf-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .pf-img-wrap:hover img { transform: scale(1.04); }
+
+    /* ── Stats row ─────────────────────────────────────── */
+    .pf-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--ed-border);
+      border-bottom: 1px solid var(--ed-border);
+      margin: 1.25rem 0;
+    }
+    .pf-stat-val {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--ed-accent);
+      line-height: 1;
+    }
+    .pf-stat-lbl {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--ed-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ── Tags ──────────────────────────────────────────── */
+    .pf-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1.1rem; }
+    .pf-tag {
+      font-size: 0.62rem;
+      color: var(--ed-muted);
+      background: rgba(184, 144, 58, 0.07);
+      border: 1px solid var(--ed-border);
+      padding: 0.15rem 0.55rem;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Buttons ───────────────────────────────────────── */
+    .pf-btns { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1rem; }
+    .pf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.5rem 1.1rem;
+      border-radius: 2px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pf-btn--primary { background: var(--ed-accent); color: #fff; }
+    .pf-btn--primary:hover { background: #9e7a2e; color: #fff; }
+    .pf-btn--ghost { background: transparent; color: var(--ed-accent); border-color: var(--ed-accent); }
+    .pf-btn--ghost:hover { background: var(--ed-accent-pale); }
+
+    /* ── Divider with ornament ─────────────────────────── */
+    .pf-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      color: var(--ed-line);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+    }
+    .pf-divider::before, .pf-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--ed-border);
+    }
+
+    /* ── Page footer ───────────────────────────────────── */
+    .pf-footer {
+      border-top: 1px solid var(--ed-border);
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .pf-footer-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ed-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pf-footer-link:hover { color: var(--ed-accent); }
+    .pf-footer-credit {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem;
+      color: var(--ed-muted);
+      opacity: 0.55;
+      text-align: center;
+    }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .pf-grid { grid-template-columns: 1fr; }
+      .pf-card--featured { grid-column: 1; padding: 1.75rem; }
+      .pf-hero-title { font-size: clamp(2.8rem, 11vw, 4.5rem); }
+      .pf-hero-foot { flex-direction: column; gap: 1.5rem; }
+      .pf-hero-stats { justify-content: flex-start; }
+      .pf-hero-stat { text-align: left; }
+      .pf-topbar-label { display: none; }
+      .pf-imgs--3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .pf-hero { padding: 3rem 1.25rem 2rem; }
+      .pf-grid { padding: 2rem 1.25rem 3rem; }
+      .pf-filters { padding: 0 1.25rem 0; }
+      .pf-footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+      .pf-topbar-inner { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body class="page-portfolio-marketing">
+
+  <!-- ── Scroll progress ─────────────────────────────── -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Top navigation bar ──────────────────────────── -->
+  <header class="pf-topbar">
+    <div class="pf-topbar-inner">
+      <a href="marketing.html" class="pf-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Marketing</span>
+      </a>
+      <div class="pf-topbar-sep"></div>
+      <span class="pf-topbar-label">Portfolio · Marketing &amp; Design</span>
+      <div class="lang-switch" aria-label="Choisir la langue">
+        <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="zh" type="button">CN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ────────────────────────────────────────── -->
+  <section class="pf-hero">
+    <p class="pf-hero-eyebrow">Yu-Ting Tseng &nbsp;·&nbsp; Projets sélectionnés &nbsp;·&nbsp; 2024–2025</p>
+    <h1 class="pf-hero-title">
+      Marketing<br>
+      <em>&amp; Design créatif</em>
+    </h1>
+    <div class="pf-hero-foot">
+      <p class="pf-hero-desc">
+        Campagnes data-driven, direction artistique et community management.
+        Des projets où créativité visuelle et analyse de performance se croisent.
+      </p>
+      <div class="pf-hero-stats">
+        <div class="pf-hero-stat">
+          <span class="pf-hero-stat-num">4</span>
+          <span class="pf-hero-stat-label">Projets</span>
+        </div>
+        <div class="pf-hero-stat">
+          <span class="pf-hero-stat-num">+93%</span>
+          <span class="pf-hero-stat-label">Croissance XHS</span>
+        </div>
+        <div class="pf-hero-stat">
+          <span class="pf-hero-stat-num">60+</span>
+          <span class="pf-hero-stat-label">Participants AIESEC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Filter bar ──────────────────────────────────── -->
+  <div class="pf-filters">
+    <button class="filter-btn is-active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="dashboard">Dashboard &amp; Data</button>
+    <button class="filter-btn" data-filter="campagne">Campagnes</button>
+    <button class="filter-btn" data-filter="design">Design visuel</button>
+    <button class="filter-btn" data-filter="community">Community</button>
+  </div>
+
+  <!-- ── Projects ────────────────────────────────────── -->
+  <main class="pf-grid">
+
+    <!-- ── 01 · Engoo Dashboard (featured) ──────────── -->
+    <article class="pf-card pf-card--featured" data-cat="dashboard">
+      <div class="pf-card-num">01 &nbsp;·&nbsp; Étude de cas complète</div>
+      <span class="pf-card-tag">Dashboard Excel &nbsp;·&nbsp; Social Analytics &nbsp;·&nbsp; A/B Testing</span>
+      <h2 class="pf-card-title">
+        Engoo (DMM.com Group) —<br>Dashboard de performance Xiaohongshu
+      </h2>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Situation · Contexte &amp; Défi</div>
+        <p class="pf-star-txt">
+          Engoo (groupe DMM.com) cible les apprenants sinophones via <strong>Xiaohongshu (小红书)</strong> — réseau de 300 M+ utilisateurs actifs, mi-Instagram mi-Pinterest. À mon arrivée : présence sporadique, aucun outil de suivi structuré, décisions basées sur l'intuition.
+          <strong>Le défi :</strong> mesurer objectivement quel contenu génère de l'engagement, sans budget analytics tiers — XHS n'expose pas d'API publique.
+        </p>
+      </div>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Action · Construction du dashboard</div>
+        <p class="pf-star-txt">
+          Conception d'un <strong>classeur Excel à 3 feuilles</strong> entièrement autonome :
+          <ul>
+            <li><strong>Données brutes :</strong> 12 métriques quotidiennes — vues, likes, sauvegardes, partages, commentaires, abonnés, taux d'engagement, CTR, taux de complétion vidéo, portée.</li>
+            <li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI, graphiques de comparaison des formats, moyennes mobiles. Zéro mise à jour manuelle.</li>
+            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour sélectionner n'importe quelles deux périodes — calcul automatique des écarts en % pour chaque KPI.</li>
+          </ul>
+          Mise en forme conditionnelle pour les outliers, formules DÉCALER+INDIRECT pour fenêtres glissantes.
+        </p>
+      </div>
+
+      <!-- Screenshots -->
+      <div class="pf-imgs pf-imgs--3">
+        <a href="assets/Engoo Dashboard_FR.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/Engoo Dashboard_FR.png"
+               data-i18n-src="experience.engoo.screenshot1"
+               alt="Dashboard KPIs – Vue d'ensemble Engoo XHS" loading="lazy">
+        </a>
+        <a href="assets/Engoo Dashboard_FR.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/Engoo Dashboard_FR.png"
+               data-i18n-src="experience.engoo.screenshot1"
+               alt="Module A/B – Comparaison de périodes Engoo XHS" loading="lazy">
+        </a>
+        <a href="assets/Engoo Data_FR.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/Engoo Data_FR.png"
+               data-i18n-src="experience.engoo.screenshot2"
+               alt="Données brutes – 12 métriques quotidiennes Engoo XHS" loading="lazy">
+        </a>
+      </div>
+
+      <div class="pf-star pf-star--result">
+        <div class="pf-star-lbl">Résultats · Impact sur 3 mois</div>
+        <p class="pf-star-txt">
+          <strong>+93.3% de vues · +89.1% d'interactions · +69.7% d'abonnés</strong> — mesurés et documentés via le dashboard.<br>
+          Le contenu éducatif surperforme le promotionnel (2–3× plus de sauvegardes). Le module A/B a validé +34% CTR et +28% engagement après pivot vers un format tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.
+        </p>
+      </div>
+
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl">Métriques / jour</span></div>
+        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl">Vues · 3 mois</span></div>
+        <div><span class="pf-stat-val">+89.1%</span><span class="pf-stat-lbl">Interactions</span></div>
+        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl">Module comparaison dynamique</span></div>
+      </div>
+
+      <div class="pf-btns">
+        <a href="assets/250508_作品集_社群經營與設計_c.pdf"
+           class="pf-btn pf-btn--primary" target="_blank" rel="noopener noreferrer"
+           data-i18n="portfolio.viewPdf">Voir le portfolio créatif (PDF)</a>
+        <a href="assets/Engoo_XHS Dashboard_FR.xlsx"
+           class="pf-btn pf-btn--ghost" download
+           data-i18n="experience.engoo.excelLink"
+           data-i18n-href="experience.engoo.excelHref">Télécharger le dashboard (Excel)</a>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Excel</span>
+        <span class="pf-tag">Dashboard</span>
+        <span class="pf-tag">TCD · Pivot Tables</span>
+        <span class="pf-tag">A/B Testing</span>
+        <span class="pf-tag">KPI Tracking</span>
+        <span class="pf-tag">Xiaohongshu</span>
+        <span class="pf-tag">Data Storytelling</span>
+      </div>
+    </article>
+
+    <!-- ── 02 · AIESEC ───────────────────────────────── -->
+    <article class="pf-card" data-cat="campagne">
+      <div class="pf-card-num">02 &nbsp;·&nbsp; Campagne Marketing</div>
+      <span class="pf-card-tag">Campagne &nbsp;·&nbsp; Direction artistique</span>
+      <h2 class="pf-card-title">AIESEC – Camp international YOLO</h2>
+      <div data-lang-show="zh" class="pf-imgs pf-imgs--2">
+        <a href="assets/主視覺_英文標語.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:3/4;">
+          <img src="assets/主視覺_英文標語.png" alt="AIESEC YOLO Camp visual EN" loading="lazy">
+        </a>
+        <a href="assets/主視覺_中文標語.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:3/4;">
+          <img src="assets/主視覺_中文標語.png" alt="AIESEC YOLO Camp visual ZH" loading="lazy">
+        </a>
+      </div>
+      <p class="pf-card-body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Création des visuels principaux de campagne — affiches et publications — pour le recrutement de volontaires et de participants.</p>
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">15</span><span class="pf-stat-lbl">Volontaires recrutés</span></div>
+        <div><span class="pf-stat-val">60+</span><span class="pf-stat-lbl">Participants</span></div>
+        <div><span class="pf-stat-val">+53.7%</span><span class="pf-stat-lbl">Objectif budgétaire</span></div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Campagne</span>
+        <span class="pf-tag">Design visuel</span>
+        <span class="pf-tag">AIESEC</span>
+        <span class="pf-tag">Direction artistique</span>
+      </div>
+    </article>
+
+    <!-- ── 03 · 政大古箏社 ──────────────────────────────── -->
+    <article class="pf-card" data-cat="community">
+      <div class="pf-card-num">03 &nbsp;·&nbsp; Community Management</div>
+      <span class="pf-card-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
+      <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
+      <div data-lang-show="zh" class="pf-imgs pf-imgs--2">
+        <a href="assets/5.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:1/1;">
+          <img src="assets/5.png" alt="政大古箏社 Club display" loading="lazy">
+        </a>
+        <a href="assets/112-1政大古箏社期末聚會.png" target="_blank" rel="noopener noreferrer"
+           class="pf-img-wrap" style="aspect-ratio:1/1;">
+          <img src="assets/112-1政大古箏社期末聚會.png" alt="政大古箏社 Year-end gathering" loading="lazy">
+        </a>
+      </div>
+      <p class="pf-card-body" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p>
+      <div class="pf-tags">
+        <span class="pf-tag">Community Management</span>
+        <span class="pf-tag">Facebook</span>
+        <span class="pf-tag">Design</span>
+      </div>
+    </article>
+
+    <!-- ── 04 · Packaging Design ─────────────────────── -->
+    <article class="pf-card" data-cat="design">
+      <div class="pf-card-num">04 &nbsp;·&nbsp; Design Visuel</div>
+      <span class="pf-card-tag">Design &nbsp;·&nbsp; Concours</span>
+      <h2 class="pf-card-title" data-i18n="portfolio.packaging.title">包裝設計競賽 – 18th Penwards</h2>
+      <a data-lang-show="zh" href="assets/1.png" target="_blank" rel="noopener noreferrer"
+         class="pf-img-wrap" style="aspect-ratio:16/9; display:block; margin:1.25rem 0;">
+        <img src="assets/1.png" alt="18th Penwards Packaging Design Competition" loading="lazy">
+      </a>
+      <p class="pf-card-body" data-i18n="portfolio.packaging.desc">Participation à la 18e édition du concours de design d'emballage Penwards (2024). Création de visuels promotionnels pour l'appel à participation.</p>
+      <div class="pf-tags">
+        <span class="pf-tag">Design</span>
+        <span class="pf-tag">Packaging</span>
+        <span class="pf-tag">Concours</span>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ── Page footer ─────────────────────────────────── -->
+  <footer class="pf-footer">
+    <a href="marketing.html" class="pf-footer-link">← Retour à Marketing</a>
+    <p class="pf-footer-credit">© <span id="year"></span> Yu-Ting Tseng &nbsp;·&nbsp; Portfolio Marketing &amp; Design</p>
+    <a href="portfolio-data.html" class="pf-footer-link">Portfolio Data &amp; Recherche →</a>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // ── Page entry animation ──────────────────────────
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('is-visible');
+      });
+    });
+
+    // ── Page exit animation (fade + up) ───────────────
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
+          href.startsWith('http') || href.startsWith('//') ||
+          link.hasAttribute('download') ||
+          link.getAttribute('target') === '_blank') return;
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.classList.add('is-leaving');
+        setTimeout(() => { window.location.href = href; }, 350);
+      });
+    });
+
+    // ── Filter logic ──────────────────────────────────
+    function applyFilter(f) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
+      if (activeBtn) activeBtn.classList.add('is-active');
+      document.querySelectorAll('.pf-card[data-cat]').forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        card.classList.toggle('is-hidden', f !== 'all' && !cats.includes(f));
+      });
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+  </script>
+</body>
+</html>

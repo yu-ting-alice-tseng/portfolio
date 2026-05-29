@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Data & Recherche · Yu-Ting Tseng</title>
+  <meta name="description" content="Portfolio Data & Market Research – Yu-Ting Tseng. Tableaux de bord, analyses quantitatives et études de marché." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Page transition ───────────────────────────────── */
+    body {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    body.is-visible { opacity: 1; transform: translateY(0); }
+    body.is-leaving { opacity: 0; transform: translateY(-12px); transition-duration: 0.32s; }
+
+    /* ── Minimal clean palette ─────────────────────────── */
+    :root {
+      --cl-bg:        #f8fafc;
+      --cl-surface:   #ffffff;
+      --cl-accent:    #2563eb;
+      --cl-accent2:   #3b82f6;
+      --cl-accent-pale: #eff6ff;
+      --cl-accent-soft: #bfdbfe;
+      --cl-text:      #0f172a;
+      --cl-muted:     #64748b;
+      --cl-border:    #e2e8f0;
+      --cl-border2:   #cbd5e1;
+      --cl-green:     #059669;
+      --cl-green-pale:#ecfdf5;
+    }
+
+    body.page-portfolio-data {
+      background: var(--cl-bg);
+      color: var(--cl-text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* ── Top navigation bar ────────────────────────────── */
+    .pf-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--cl-border);
+    }
+    .pf-topbar-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .pf-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--cl-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .pf-back:hover { color: var(--cl-accent); }
+    .pf-back svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .pf-topbar-sep { width: 1px; height: 14px; background: var(--cl-border); flex-shrink: 0; }
+    .pf-topbar-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cl-muted);
+      opacity: 0.65;
+      flex: 1;
+    }
+    .pf-topbar .lang-switch { display: flex; gap: 0.2rem; }
+    .pf-topbar .lang-btn {
+      background: none;
+      border: 1px solid transparent;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      padding: 0.18rem 0.45rem;
+      cursor: pointer;
+      color: var(--cl-muted);
+      border-radius: 3px;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .pf-topbar .lang-btn.is-active { color: var(--cl-accent); border-color: var(--cl-accent); background: var(--cl-accent-pale); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--cl-text); border-color: var(--cl-border2); }
+
+    /* ── Hero ──────────────────────────────────────────── */
+    .pf-hero {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: end;
+    }
+    .pf-hero-left {}
+    .pf-hero-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cl-accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .pf-hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--cl-text);
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .pf-hero-title span { color: var(--cl-accent); }
+    .pf-hero-desc {
+      font-size: 0.87rem;
+      line-height: 1.75;
+      color: var(--cl-muted);
+      max-width: 480px;
+      margin: 0;
+    }
+    .pf-hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: flex-end;
+    }
+    .pf-hero-stat-block {
+      text-align: right;
+      padding: 1rem 1.5rem;
+      background: var(--cl-surface);
+      border: 1px solid var(--cl-border);
+      border-radius: 6px;
+      border-left: 3px solid var(--cl-accent);
+    }
+    .pf-hero-stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cl-accent);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .pf-hero-stat-label {
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cl-muted);
+      margin-top: 0.3rem;
+    }
+    .pf-hero-divider {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .pf-hero-divider hr {
+      border: none;
+      border-top: 1px solid var(--cl-border);
+      margin: 0;
+    }
+
+    /* ── Filter bar ────────────────────────────────────── */
+    .pf-filters {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .pf-filters .filter-btn {
+      background: var(--cl-surface);
+      border: 1px solid var(--cl-border);
+      padding: 0.4rem 1rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      color: var(--cl-muted);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.18s;
+    }
+    .pf-filters .filter-btn:hover { border-color: var(--cl-accent2); color: var(--cl-accent); }
+    .pf-filters .filter-btn.is-active {
+      background: var(--cl-accent);
+      border-color: var(--cl-accent);
+      color: #fff;
+    }
+
+    /* ── Grid ──────────────────────────────────────────── */
+    .pf-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    /* ── Card base ─────────────────────────────────────── */
+    .pf-card {
+      background: var(--cl-surface);
+      border: 1px solid var(--cl-border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .pf-card:hover {
+      box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
+      border-color: var(--cl-border2);
+    }
+    .pf-card.is-hidden { display: none !important; }
+    .pf-card--featured {
+      grid-column: 1 / -1;
+      padding: 2.25rem;
+    }
+
+    /* Card inner */
+    .pf-card-num {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cl-accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      opacity: 0.7;
+    }
+    .pf-card-tag {
+      display: inline-flex;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--cl-accent);
+      background: var(--cl-accent-pale);
+      border: 1px solid var(--cl-accent-soft);
+      padding: 0.18rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    .pf-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--cl-text);
+      margin: 0 0 0.85rem;
+      letter-spacing: -0.01em;
+    }
+    .pf-card--featured .pf-card-title { font-size: 1.55rem; }
+    .pf-card-body {
+      font-size: 0.84rem;
+      line-height: 1.75;
+      color: var(--cl-muted);
+    }
+
+    /* ── STAR sections ─────────────────────────────────── */
+    .pf-star {
+      padding: 0.8rem 1rem;
+      border-left: 3px solid var(--cl-accent);
+      background: var(--cl-accent-pale);
+      border-radius: 0 4px 4px 0;
+      margin: 1rem 0;
+    }
+    .pf-star--action { border-left-color: var(--cl-accent2); background: var(--cl-bg); }
+    .pf-star--result { border-left-color: var(--cl-green); background: var(--cl-green-pale); }
+    .pf-star-lbl {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cl-accent);
+      margin-bottom: 0.4rem;
+    }
+    .pf-star--action .pf-star-lbl { color: var(--cl-accent2); }
+    .pf-star--result .pf-star-lbl { color: var(--cl-green); }
+    .pf-star-txt {
+      font-size: 0.83rem;
+      line-height: 1.75;
+      color: var(--cl-muted);
+    }
+    .pf-star-txt strong { color: var(--cl-text); }
+    .pf-star-txt ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .pf-star-txt li { margin-bottom: 0.35rem; }
+
+    /* ── Image grids ───────────────────────────────────── */
+    .pf-imgs { display: grid; gap: 0.5rem; margin: 1.25rem 0; }
+    .pf-imgs--2 { grid-template-columns: 1fr 1fr; }
+    .pf-imgs--2x2 { grid-template-columns: 1fr 1fr; }
+    .pf-img-wrap {
+      display: block;
+      overflow: hidden;
+      border-radius: 4px;
+      background: var(--cl-bg);
+      border: 1px solid var(--cl-border);
+    }
+    .pf-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .pf-img-wrap:hover img { transform: scale(1.03); }
+
+    /* ── Stats ─────────────────────────────────────────── */
+    .pf-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.1rem 0;
+      border-top: 1px solid var(--cl-border);
+      border-bottom: 1px solid var(--cl-border);
+      margin: 1.1rem 0;
+    }
+    .pf-stat-val {
+      display: block;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--cl-accent);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .pf-stat-lbl {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cl-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ── Tags ──────────────────────────────────────────── */
+    .pf-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 1rem; }
+    .pf-tag {
+      font-size: 0.62rem;
+      color: var(--cl-muted);
+      background: var(--cl-bg);
+      border: 1px solid var(--cl-border);
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+    }
+
+    /* ── Buttons ───────────────────────────────────────── */
+    .pf-btns { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+    .pf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      padding: 0.48rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pf-btn--primary { background: var(--cl-accent); color: #fff; }
+    .pf-btn--primary:hover { background: #1d4ed8; color: #fff; }
+    .pf-btn--ghost { background: transparent; color: var(--cl-accent); border-color: var(--cl-accent); }
+    .pf-btn--ghost:hover { background: var(--cl-accent-pale); }
+
+    /* ── Results callout ───────────────────────────────── */
+    .pf-result-callout {
+      padding: 0.85rem 1rem;
+      background: var(--cl-green-pale);
+      border: 1px solid #a7f3d0;
+      border-radius: 5px;
+      margin: 1rem 0;
+    }
+    .pf-result-callout-lbl {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cl-green);
+      margin-bottom: 0.5rem;
+    }
+    .pf-result-callout ul {
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: var(--cl-muted);
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+    .pf-result-callout li { margin-bottom: 0.3rem; }
+
+    /* ── Page footer ───────────────────────────────────── */
+    .pf-footer {
+      border-top: 1px solid var(--cl-border);
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .pf-footer-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--cl-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pf-footer-link:hover { color: var(--cl-accent); }
+    .pf-footer-credit {
+      font-size: 0.7rem;
+      color: var(--cl-muted);
+      opacity: 0.55;
+    }
+
+    /* ── Responsive ────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .pf-grid { grid-template-columns: 1fr; }
+      .pf-card--featured { grid-column: 1; }
+      .pf-hero { grid-template-columns: 1fr; gap: 2rem; }
+      .pf-hero-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+      .pf-hero-stat-block { text-align: left; }
+      .pf-topbar-label { display: none; }
+    }
+    @media (max-width: 520px) {
+      .pf-hero { padding: 3rem 1.25rem 2rem; }
+      .pf-grid { padding: 1.5rem 1.25rem 3rem; }
+      .pf-filters { padding: 1.25rem 1.25rem 0; }
+      .pf-footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+      .pf-topbar-inner { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body class="page-portfolio-data">
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Top navigation bar ──────────────────────────── -->
+  <header class="pf-topbar">
+    <div class="pf-topbar-inner">
+      <a href="data.html" class="pf-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Data &amp; Recherche</span>
+      </a>
+      <div class="pf-topbar-sep"></div>
+      <span class="pf-topbar-label">Portfolio · Data &amp; Market Research</span>
+      <div class="lang-switch" aria-label="Choisir la langue">
+        <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="zh" type="button">CN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ────────────────────────────────────────── -->
+  <section class="pf-hero">
+    <div class="pf-hero-left">
+      <p class="pf-hero-eyebrow">Yu-Ting Tseng · Data & Market Research</p>
+      <h1 class="pf-hero-title">Data &amp;<br><span>Market Research</span></h1>
+      <p class="pf-hero-desc">
+        Tableaux de bord Excel, analyses quantitatives et études de marché.
+        Des projets où la rigueur analytique produit des insights actionnables.
+      </p>
+    </div>
+    <div class="pf-hero-right">
+      <div class="pf-hero-stat-block">
+        <span class="pf-hero-stat-num">2</span>
+        <span class="pf-hero-stat-label">Projets</span>
+      </div>
+      <div class="pf-hero-stat-block">
+        <span class="pf-hero-stat-num">+93%</span>
+        <span class="pf-hero-stat-label">Croissance XHS</span>
+      </div>
+      <div class="pf-hero-stat-block">
+        <span class="pf-hero-stat-num">3</span>
+        <span class="pf-hero-stat-label">Hypothèses M&amp;A</span>
+      </div>
+    </div>
+  </section>
+  <div class="pf-hero-divider"><hr /></div>
+
+  <!-- ── Filter bar ──────────────────────────────────── -->
+  <div class="pf-filters">
+    <button class="filter-btn is-active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+    <button class="filter-btn" data-filter="analyse">Analyse</button>
+    <button class="filter-btn" data-filter="recherche">Recherche</button>
+    <button class="filter-btn" data-filter="reporting">Reporting</button>
+  </div>
+
+  <!-- ── Projects ────────────────────────────────────── -->
+  <main class="pf-grid">
+
+    <!-- ── 01 · Dashboard XHS (featured) ────────────── -->
+    <article class="pf-card pf-card--featured" data-cat="dashboard featured">
+      <div class="pf-card-num">01 · Dashboard · Étude de cas</div>
+      <span class="pf-card-tag" data-i18n="dataHero.caseStudyLabel">Étude de cas · Dashboard XHS</span>
+      <h2 class="pf-card-title" data-i18n="dataHero.caseStudyTitle">Dashboard Excel – Performance Xiaohongshu</h2>
+
+      <p class="pf-card-body" data-i18n="dataHero.caseStudyDesc">
+        Construction d'un tableau de bord Excel complet pour suivre 12 métriques quotidiennes du compte Xiaohongshu d'Engoo — KPIs, évolution temporelle et comparaison A/B de périodes.
+      </p>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Situation · Problème analytique</div>
+        <p class="pf-star-txt">
+          Aucun outil de suivi structuré pour le compte Xiaohongshu d'Engoo (groupe DMM.com). Décisions de contenu basées sur l'intuition. <strong>Objectif :</strong> mesurer objectivement l'impact des décisions éditoriales sur 12 KPIs, sans outil analytics tiers (XHS n'expose pas d'API publique).
+        </p>
+      </div>
+
+      <div class="pf-star pf-star--action">
+        <div class="pf-star-lbl">Action · Architecture du dashboard</div>
+        <p class="pf-star-txt">
+          <strong>Classeur Excel à 3 feuilles :</strong>
+          <ul>
+            <li><strong>Données brutes :</strong> saisie quotidienne de 12 métriques (vues, likes, sauvegardes, partages, commentaires, abonnés, taux d'engagement, CTR, taux de complétion vidéo, portée). Mise en forme conditionnelle pour les jours outliers.</li>
+            <li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI avec fenêtres glissantes (formules DÉCALER+INDIRECT), graphiques de comparaison des formats de contenu. Zéro mise à jour manuelle.</li>
+            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour sélectionner n'importe quelles deux périodes — calcul automatique des écarts en % pour chaque KPI.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="pf-star pf-star--result">
+        <div class="pf-star-lbl">Résultats · Impact mesuré sur 3 mois</div>
+        <p class="pf-star-txt">
+          <strong>+93.3% vues · +89.1% interactions · +69.7% abonnés</strong> — documentés via le dashboard. Module A/B : +34% CTR et +28% engagement après pivot vers tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.
+        </p>
+      </div>
+
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl">Métriques / jour</span></div>
+        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl">Vues · 3 mois</span></div>
+        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl">Comparaison dynamique</span></div>
+      </div>
+
+      <div class="pf-btns">
+        <a href="assets/Engoo_XHS Dashboard_FR.xlsx"
+           class="pf-btn pf-btn--primary" download
+           data-i18n="experience.engoo.excelLink"
+           data-i18n-href="experience.engoo.excelHref">Télécharger le dashboard Excel</a>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Excel</span>
+        <span class="pf-tag">Dashboard</span>
+        <span class="pf-tag">TCD · Pivot Tables</span>
+        <span class="pf-tag">A/B Testing</span>
+        <span class="pf-tag">KPI Tracking</span>
+        <span class="pf-tag">Formules avancées</span>
+      </div>
+    </article>
+
+    <!-- ── 02 · M&A Research (featured) ─────────────── -->
+    <article class="pf-card pf-card--featured" data-cat="recherche">
+      <div class="pf-card-num">02 · Recherche empirique · Finance quantitative</div>
+      <span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">Research · R · Finance quantitative</span>
+      <h2 class="pf-card-title">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
+      <p style="font-style:italic; font-size:0.84rem; color:var(--cl-muted); margin-bottom:1.25rem;">
+        Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
+      </p>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Situation</div>
+        <p class="pf-star-txt">
+          L'Amérique Latine présente un paradoxe pour les acquéreurs : ses ressources naturelles et son potentiel de croissance attirent les capitaux étrangers, mais son instabilité politique chronique génère un risque difficilement quantifiable. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong>
+        </p>
+      </div>
+
+      <div class="pf-star pf-star--action">
+        <div class="pf-star-lbl">Action — Méthodologie</div>
+        <p class="pf-star-txt">
+          <ul>
+            <li><strong>H1 – Volume :</strong> Régression OLS sur panel data — l'indice WGI prédit-il le nombre d'opérations M&amp;A annuelles ?</li>
+            <li><strong>H2 – Abandon :</strong> Modèle Logit — la dégradation du WGI augmente-t-elle la probabilité d'annulation de transaction ?</li>
+            <li><strong>H3 – Prime :</strong> Régression OLS — les acheteurs paient-ils une prime plus élevée pour compenser le risque politique ?</li>
+            <li><strong>Sources :</strong> LSEG Workspace / Refinitiv (2000–2024), WGI, POLCON III, FSI.</li>
+          </ul>
+        </p>
+      </div>
+
+      <!-- Charts 2×2 -->
+      <div class="pf-imgs pf-imgs--2x2">
+        <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
+               alt="Score POLCON moyen par région" loading="lazy">
+        </a>
+        <a href="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
+               alt="Volume M&A vs WGI – H1" loading="lazy">
+        </a>
+        <a href="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
+               alt="Logit – Abandon M&A vs WGI – H2" loading="lazy">
+        </a>
+        <a href="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
+           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+          <img src="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
+               alt="Prime M&A vs WGI – H3" loading="lazy">
+        </a>
+      </div>
+
+      <div class="pf-result-callout">
+        <div class="pf-result-callout-lbl">Résultats clés</div>
+        <ul>
+          <li>Une meilleure gouvernance (WGI ↑) est corrélée à un <strong>volume M&amp;A plus élevé</strong> en Amérique Latine (H1 confirmée).</li>
+          <li>La dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — actionnable pour la due diligence (H2 confirmée).</li>
+          <li>Les acquéreurs intègrent le risque politique dans la <strong>prime d'acquisition</strong> (H3 partiellement confirmée).</li>
+          <li>Implication business : <strong>le risque politique est un levier de négociation tarifaire</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl">Hypothèses testées</span></div>
+        <div><span class="pf-stat-val">2000–2024</span><span class="pf-stat-lbl">Période analysée</span></div>
+        <div><span class="pf-stat-val">WGI · FSI · POLCON</span><span class="pf-stat-lbl">Indices politiques</span></div>
+      </div>
+      <div class="pf-btns">
+        <a href="assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf"
+           target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--primary">Lire le rapport complet (PDF)</a>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">R</span>
+        <span class="pf-tag">M&amp;A</span>
+        <span class="pf-tag">Régression OLS</span>
+        <span class="pf-tag">Logit</span>
+        <span class="pf-tag">Finance quantitative</span>
+        <span class="pf-tag">Risque politique</span>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ── Page footer ─────────────────────────────────── -->
+  <footer class="pf-footer">
+    <a href="portfolio-marketing.html" class="pf-footer-link">← Portfolio Marketing</a>
+    <p class="pf-footer-credit">© <span id="year"></span> Yu-Ting Tseng &nbsp;·&nbsp; Data &amp; Market Research</p>
+    <a href="portfolio-finance.html" class="pf-footer-link">Portfolio Finance →</a>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('is-visible');
+      });
+    });
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
+          href.startsWith('http') || href.startsWith('//') ||
+          link.hasAttribute('download') ||
+          link.getAttribute('target') === '_blank') return;
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.classList.add('is-leaving');
+        setTimeout(() => { window.location.href = href; }, 350);
+      });
+    });
+
+    function applyFilter(f) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
+      if (activeBtn) activeBtn.classList.add('is-active');
+      document.querySelectorAll('.pf-card[data-cat]').forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        card.classList.toggle('is-hidden', f !== 'all' && !cats.includes(f));
+      });
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+  </script>
+</body>
+</html>
