@@ -3802,7 +3802,8 @@ a, button, [role="button"],
   transition: color 0.15s, background 0.15s;
   white-space: nowrap;
 }
-.nav-dropdown a .dd-icon { font-size: 0.9rem; opacity: 0.7; }
+.nav-dropdown a .dd-icon { opacity: 0.65; display: inline-flex; align-items: center; flex-shrink: 0; }
+.nav-dropdown a .dd-icon svg { width: 0.875rem; height: 0.875rem; }
 .nav-dropdown a:hover { color: var(--accent); background: rgba(99,102,241,0.05); }
 .nav-dropdown a::after { display: none !important; }
 .nav-dropdown-divider {
@@ -3842,3 +3843,15 @@ a, button, [role="button"],
 }
 .mobile-nav-toggle-btn .nav-chevron { transition: transform 0.2s; font-size: 0.75rem; }
 .mobile-nav-toggle-btn.is-open .nav-chevron { transform: rotate(180deg); }
+
+/* ── SVG icon sizing ──────────────────────────────── */
+.service-icon svg        { width: 1.15rem; height: 1.15rem; }
+.booking-info-icon       { display: inline-flex; align-items: center; }
+.booking-info-icon svg   { width: 1.15rem; height: 1.15rem; }
+.resource-cat-icon       { display: inline-flex; align-items: center; }
+.resource-cat-icon svg   { width: 1.35rem; height: 1.35rem; }
+.tip-icon                { display: inline-flex; align-items: center; }
+.tip-icon svg            { width: 1.15rem; height: 1.15rem; }
+.showcase-badge svg      { width: 0.75rem; height: 0.75rem; vertical-align: -0.05em; }
+.page-type-link svg      { width: 0.82rem; height: 0.82rem; vertical-align: -0.1em; flex-shrink: 0; }
+.btn svg.btn-icon        { width: 0.85rem; height: 0.85rem; vertical-align: -0.1em; }
