@@ -387,10 +387,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero h1 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-size: 2.5rem;
   line-height: 1.15;
   margin: 0 0 1.2rem;
+}
+body.page-finance .hero h1 {
+  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .accent {
