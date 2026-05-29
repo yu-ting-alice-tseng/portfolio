@@ -1855,7 +1855,7 @@ body {
   z-index: 0;
 }
 
-/* ── 17. Stat numbers — Playfair serif style intact  */
+/* ── 17. Stat numbers — serif style intact  */
 .stat-value {
   letter-spacing: -0.02em;
 }
