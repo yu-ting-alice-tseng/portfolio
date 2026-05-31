@@ -185,29 +185,31 @@
                 <div class="skills-cards">
                   <button type="button" class="skill-card" data-skill="data-r">R</button>
                   <button type="button" class="skill-card" data-skill="data-python">Python</button>
-                  <button type="button" class="skill-card" data-skill="data-sql">MySQL</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subDataTools">Outils &amp; Applications</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
-                  <button type="button" class="skill-card" data-skill="data-rstudio">RStudio</button>
-                  <button type="button" class="skill-card" data-skill="data-access">Access</button>
+                  <button type="button" class="skill-card" data-skill="data-sql">SQL</button>
+                  <button type="button" class="skill-card" data-skill="data-access">Access (VBA)</button>
                 </div>
               </div>
               <div class="skills-subgroup">
                 <p class="skills-subtitle" data-i18n="skills.subData2">Dashboards &amp; Visualisation</p>
                 <div class="skills-cards">
+                  <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
                   <button type="button" class="skill-card" data-skill="data-powerbi">Power BI</button>
                   <button type="button" class="skill-card" data-skill="data-tableau">Tableau</button>
+                  <button type="button" class="skill-card" data-skill="data-rstudio">RStudio</button>
                 </div>
               </div>
               <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subData3">Méthodes &amp; Analyse</p>
+                <p class="skills-subtitle" data-i18n="skills.subDataQuant">Méthodes Quantitatives</p>
                 <div class="skills-cards">
                   <button type="button" class="skill-card" data-skill="data-statistics" data-i18n="skills.chipStatistics">Statistiques &amp; Méthodes Quantitatives</button>
+                  <button type="button" class="skill-card" data-skill="data-ab">A/B Testing</button>
+                </div>
+              </div>
+              <div class="skills-subgroup">
+                <p class="skills-subtitle" data-i18n="skills.subDataQual">Méthodes Qualitatives &amp; Analyse</p>
+                <div class="skills-cards">
                   <button type="button" class="skill-card" data-skill="data-kpi">KPI Tracking &amp; Reporting</button>
+                  <button type="button" class="skill-card" data-skill="data-segmentation">Customer Segmentation</button>
                 </div>
               </div>
             </div>
@@ -349,12 +351,8 @@
                 </div>
                 <div class="edu-info">
                   <div class="edu-info-row">
-                    <span class="edu-info-key">GPA</span>
-                    <span data-i18n="education.nccu.gpa">4,22 / 4,3 (3,99 / 4,0)</span>
-                  </div>
-                  <div class="edu-info-row">
                     <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
-                    <div class="course-chips">
+                    <div class="course-chips course-chips--white">
                       <span class="course-chip" data-i18n="education.nccu.courseFinance">International Finance</span>
                       <span class="course-chip" data-i18n="education.nccu.courseDataAnalysis">Data Analysis &amp; Programming (VBA &amp; Access)</span>
                       <span class="course-chip" data-i18n="education.nccu.courseResearch">Research Methods (R &amp; Statistics)</span>
@@ -375,8 +373,6 @@
                 <ul class="timeline-points">
                   <li data-i18n="education.paris1.point1">Spécialisation : Économie internationale &amp; Relations internationales.</li>
                 </ul>
-                <span class="tag">Paris 1</span>
-                <span class="tag">Relations internationales</span>
               </div>
             </article>
 
@@ -388,10 +384,25 @@
       <section class="section" id="experience">
         <div class="container">
           <header class="section-header" data-reveal>
-            <h2 data-i18n="experience.title">Expériences professionnelles</h2>
+            <h2 data-i18n="experience.title">Expériences Professionnelles</h2>
             <p>Finance, analyse de données et conseil stratégique.</p>
           </header>
           <div class="timeline">
+
+            <article class="timeline-item" data-reveal="slide-left">
+              <div class="timeline-meta">
+                <span class="timeline-period" data-i18n="experience.kpn.period">01/2025 – 06/2025</span>
+                <span class="timeline-location">Taipei · Taïwan</span>
+              </div>
+              <div class="timeline-body">
+                <h3 data-i18n="experience.kpn.title">Assistante Marketing Digital</h3>
+                <p class="timeline-company">KPN</p>
+                <ul class="timeline-points">
+                  <li data-i18n="experience.kpn.point2">Suivi de KPIs et analyse de performance (trafic, CTR, conversions).</li>
+                  <li data-i18n="experience.kpn.point3">Campagnes SEA et reporting analytique.</li>
+                </ul>
+              </div>
+            </article>
 
             <article class="timeline-item" data-reveal="slide-left">
               <div class="timeline-meta">
@@ -405,9 +416,6 @@
                   <li data-i18n="experience.teaching.point1">Support de cours (finance, risk management) et suivi des étudiants.</li>
                   <li data-i18n="experience.teaching.point2">Préparation de supports et coordination logistique.</li>
                 </ul>
-                <span class="tag">Finance</span>
-                <span class="tag">Risk Management</span>
-                <span class="tag">Enseignement</span>
               </div>
             </article>
 
@@ -423,27 +431,6 @@
                   <li data-i18n="experience.research.point1">Collecte, nettoyage et analyse de données pour des travaux de recherche.</li>
                   <li data-i18n="experience.research.point2">Préparation de synthèses et supports pour séminaires.</li>
                 </ul>
-                <span class="tag" data-i18n="tags.data">Data</span>
-                <span class="tag" data-i18n="tags.research">Recherche</span>
-                <span class="tag">Analyse quantitative</span>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.kpn.period">01/2025 – 06/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.kpn.title">Assistante Marketing Digital</h3>
-                <p class="timeline-company">KPN</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.kpn.point2">Suivi de KPIs et analyse de performance (trafic, CTR, conversions).</li>
-                  <li data-i18n="experience.kpn.point3">Campagnes SEA et reporting analytique.</li>
-                </ul>
-                <span class="tag">Conseil</span>
-                <span class="tag">KPI Reporting</span>
-                <span class="tag">Analyse</span>
               </div>
             </article>
 
