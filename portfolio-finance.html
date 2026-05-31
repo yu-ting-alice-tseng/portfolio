@@ -294,6 +294,8 @@
     }
     .pf-star--action .pf-star-lbl { color: var(--fi-accent2); }
     .pf-star--result .pf-star-lbl { color: var(--fi-green); }
+    .pf-star--insight { border-left-color: #7c3aed; background: rgba(124,58,237,0.04); }
+    .pf-star--insight .pf-star-lbl { color: #7c3aed; }
     .pf-star-txt {
       font-size: 0.82rem;
       line-height: 1.75;
@@ -484,23 +486,22 @@
       <div>
         <p class="pf-hero-eyebrow">Yu-Ting Tseng · Finance &amp; Analyse Quantitative</p>
         <h1 class="pf-hero-title">Finance &amp;<br>Analyse</h1>
-        <p class="pf-hero-desc">
-          Projets académiques, analyses quantitatives et modélisation financière.
-          Rigueur analytique, données empiriques et insights actionnables.
+        <p class="pf-hero-desc" data-i18n="portfolio.fin.heroDesc">
+          Recherche académique en finance quantitative et modélisation empirique — rigueur analytique et insights actionnables pour les décisions d'investissement.
         </p>
       </div>
       <div class="pf-hero-stats-col">
         <div class="pf-hero-kpi">
           <span class="pf-hero-kpi-val">1</span>
-          <span class="pf-hero-kpi-lbl">Projet</span>
+          <span class="pf-hero-kpi-lbl" data-i18n="portfolio.fin.heroStatProj">Projet</span>
         </div>
         <div class="pf-hero-kpi">
           <span class="pf-hero-kpi-val">2000–2024</span>
-          <span class="pf-hero-kpi-lbl">Données M&amp;A</span>
+          <span class="pf-hero-kpi-lbl" data-i18n="portfolio.fin.heroStatData">Données M&amp;A</span>
         </div>
         <div class="pf-hero-kpi">
           <span class="pf-hero-kpi-val">3</span>
-          <span class="pf-hero-kpi-lbl">Hypothèses testées</span>
+          <span class="pf-hero-kpi-lbl" data-i18n="portfolio.fin.heroStatHypo">Hypothèses testées</span>
         </div>
       </div>
     </div>
@@ -508,10 +509,10 @@
 
   <!-- ── Filter bar ──────────────────────────────────── -->
   <div class="pf-filters">
-    <button class="filter-btn is-active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="analyse">Analyse</button>
-    <button class="filter-btn" data-filter="recherche">Recherche</button>
-    <button class="filter-btn" data-filter="distinction">Distinctions</button>
+    <button class="filter-btn is-active" data-filter="all" data-i18n="portfolio.fin.filterAll">Tous</button>
+    <button class="filter-btn" data-filter="analyse" data-i18n="portfolio.fin.filterAnalyse">Analyse</button>
+    <button class="filter-btn" data-filter="recherche" data-i18n="portfolio.fin.filterRecherche">Recherche</button>
+    <button class="filter-btn" data-filter="distinction" data-i18n="portfolio.fin.filterDistinction">Distinctions</button>
   </div>
 
   <!-- ── Projects ────────────────────────────────────── -->
@@ -519,81 +520,147 @@
 
     <!-- ── 01 · M&A Research (featured) ─────────────── -->
     <article class="pf-card pf-card--featured" data-cat="recherche">
-      <div class="pf-card-num">01 · Recherche empirique · Finance quantitative</div>
-      <span class="pf-card-tag pf-card-tag--featured">Research · R · Finance quantitative</span>
+      <div class="pf-card-num" data-i18n="portfolio.fin.ma.num">01 · Recherche empirique · Finance quantitative</div>
+      <span class="pf-card-tag pf-card-tag--featured">R · Quantitative Finance · Empirical Research</span>
       <h2 class="pf-card-title">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
-      <p style="font-style:italic; font-size:0.82rem; color:var(--fi-muted); margin-bottom:1.25rem; font-family:'Inter',sans-serif;">
+      <p class="pf-card-body" style="font-style:italic; font-family:'Inter',sans-serif;" data-i18n="portfolio.fin.ma.subtitle">
         Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
       </p>
 
       <div class="pf-star">
-        <div class="pf-star-lbl">Situation</div>
-        <p class="pf-star-txt">
-          L'Amérique Latine attire les capitaux étrangers mais son instabilité politique chronique génère un risque difficilement quantifiable. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong>
-        </p>
+        <div class="pf-star-lbl" data-i18n="portfolio.fin.ma.sitLbl">Situation</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">L'Amérique Latine attire les capitaux étrangers grâce à ses ressources naturelles et son potentiel de croissance, mais son instabilité politique chronique — coups d'état, populisme, fragilité institutionnelle — génère un risque difficile à quantifier. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong></p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">Latin America attracts foreign capital through its natural resources and growth potential, yet chronic political instability — coups, populism, institutional fragility — generates risk that is hard to price. <strong>How does political instability concretely influence cross-border M&amp;A decisions?</strong></p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">拉丁美洲憑藉豐富的自然資源與成長潛力吸引外資，然而長期的政治動盪 — 政變、民粹主義、制度脆弱性 — 產生難以定價的風險。<strong>政治不穩定性究竟如何影響跨境 M&amp;A 決策？</strong></p>
+        </div>
       </div>
 
       <div class="pf-star pf-star--action">
-        <div class="pf-star-lbl">Méthodologie</div>
-        <p class="pf-star-txt">
-          <ul>
-            <li><strong>H1 – Volume :</strong> Régression OLS sur panel data — WGI prédit-il le nombre d'opérations M&amp;A annuelles ?</li>
-            <li><strong>H2 – Abandon :</strong> Modèle Logit — la dégradation du WGI augmente-t-elle la probabilité d'annulation ?</li>
-            <li><strong>H3 – Prime :</strong> Régression OLS — prime plus élevée pour compenser le risque politique ?</li>
+        <div class="pf-star-lbl" data-i18n="portfolio.fin.ma.actLbl">Méthodologie</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>H1 – Volume :</strong> Régression OLS sur panel data — l'indice WGI prédit-il le nombre d'opérations M&amp;A annuelles ?</li>
+            <li><strong>H2 – Abandon :</strong> Modèle Logit — la dégradation du WGI augmente-t-elle la probabilité d'annulation de transaction ?</li>
+            <li><strong>H3 – Prime :</strong> Régression OLS — les acheteurs paient-ils une prime plus élevée pour compenser le risque politique ?</li>
             <li><strong>Sources :</strong> LSEG Workspace / Refinitiv (2000–2024), WGI, POLCON III, FSI.</li>
           </ul>
-        </p>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>H1 – Volume:</strong> OLS regression on panel data — does the WGI index predict annual M&amp;A deal volume?</li>
+            <li><strong>H2 – Abandonment:</strong> Logit model — does WGI deterioration increase the probability of deal cancellation?</li>
+            <li><strong>H3 – Premium:</strong> OLS regression — do acquirers pay a higher premium to compensate for political risk?</li>
+            <li><strong>Data sources:</strong> LSEG Workspace / Refinitiv (2000–2024), WGI, POLCON III, FSI.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>H1 – 交易量：</strong>面板資料 OLS 迴歸 — WGI 指數能否預測年度 M&amp;A 交易數量？</li>
+            <li><strong>H2 – 交易取消：</strong>Logit 模型 — WGI 惡化是否提高交易取消概率？</li>
+            <li><strong>H3 – 收購溢價：</strong>OLS 迴歸 — 收購方是否支付更高溢價以補償政治風險？</li>
+            <li><strong>資料來源：</strong>LSEG Workspace / Refinitiv（2000–2024）、WGI、POLCON III、FSI。</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pf-imgs pf-imgs--2x2">
         <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
-               alt="Score POLCON moyen par région" loading="lazy">
+               alt="POLCON – Average political constraints by region" loading="lazy">
         </a>
         <a href="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
-               alt="Volume M&A vs WGI – H1" loading="lazy">
+               alt="M&A Volume vs WGI – H1" loading="lazy">
         </a>
         <a href="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
-               alt="Logit – Abandon M&A vs WGI – H2" loading="lazy">
+               alt="Logit – M&A Abandonment vs WGI – H2" loading="lazy">
         </a>
         <a href="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
-               alt="Prime M&A vs WGI – H3" loading="lazy">
+               alt="M&A Premium vs WGI – H3" loading="lazy">
         </a>
       </div>
 
       <div class="pf-result-callout">
-        <div class="pf-result-callout-lbl">Résultats clés</div>
-        <ul>
-          <li>WGI ↑ corrélé à un <strong>volume M&amp;A plus élevé</strong> (H1 confirmée).</li>
-          <li>Dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — actionnable pour due diligence (H2 confirmée).</li>
-          <li>Acquéreurs intègrent risque politique dans la <strong>prime d'acquisition</strong> (H3 partiellement confirmée).</li>
-          <li>Implication : <strong>le risque politique est un levier de négociation</strong>, pas seulement un frein.</li>
-        </ul>
+        <div class="pf-result-callout-lbl" data-i18n="portfolio.fin.ma.resLbl">Résultats clés</div>
+        <div data-lang-show="fr">
+          <ul>
+            <li>Une meilleure gouvernance (WGI ↑) est corrélée à un <strong>volume M&amp;A plus élevé</strong> en Amérique Latine (H1 confirmée).</li>
+            <li>La dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — directement actionnable pour la due diligence politique (H2 confirmée).</li>
+            <li>Les acquéreurs intègrent le risque politique dans la <strong>prime d'acquisition</strong> (H3 partiellement confirmée).</li>
+            <li>Implication : <strong>le risque politique est un levier de négociation tarifaire</strong>, pas seulement un frein à l'investissement.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul>
+            <li>Stronger governance (WGI ↑) correlates with higher <strong>M&amp;A deal volume</strong> in Latin America (H1 confirmed).</li>
+            <li>Political deterioration significantly predicts <strong>deal abandonment</strong> (p &lt; 0.05) — directly actionable for political due diligence (H2 confirmed).</li>
+            <li>Acquirers integrate political risk into the <strong>acquisition premium</strong> (H3 partially confirmed).</li>
+            <li>Implication: <strong>political risk is a pricing negotiation lever</strong>, not merely an investment deterrent.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul>
+            <li>治理水準提升（WGI ↑）與拉丁美洲 <strong>M&amp;A 交易量</strong>正相關（H1 確認）。</li>
+            <li>政治治理惡化顯著預測<strong>交易取消</strong>（p &lt; 0.05）— 可直接應用於政治盡職調查（H2 確認）。</li>
+            <li>收購方將政治風險納入<strong>收購溢價</strong>定價（H3 部分確認）。</li>
+            <li>意涵：<strong>政治風險是價格談判的槓桿</strong>，而非單純的投資阻力。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Le risque politique est un gradient continu :</strong> même une légère dégradation du WGI suffit à déclencher des comportements d'évitement — ce qui plaide pour un monitoring continu des indices de gouvernance plutôt qu'une due diligence ponctuelle.</li>
+            <li><strong>La prime d'acquisition comme proxy de valorisation du risque :</strong> les acquéreurs intègrent implicitement le risque institutionnel dans leur offre sans le quantifier formellement — une lacune que des modèles de risk-pricing structurés pourraient combler.</li>
+            <li><strong>Applications pratiques pour les fonds et équipes M&A :</strong> WGI et POLCON III constituent des indicateurs avancés exploitables pour anticiper les fenêtres d'acquisition favorables en Amérique Latine.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Political risk as a continuous gradient:</strong> even marginal WGI deterioration triggers deal avoidance — arguing for ongoing governance index monitoring rather than point-in-time due diligence.</li>
+            <li><strong>The acquisition premium as a risk-valuation proxy:</strong> acquirers implicitly price institutional risk into their bids without formally quantifying it — a gap that structured risk-pricing models could address.</li>
+            <li><strong>Actionable applications for funds and M&A teams:</strong> WGI and POLCON III serve as leading indicators for anticipating favourable acquisition windows in Latin America.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>政治風險是連續梯度：</strong>即使 WGI 輕微惡化也足以觸發迴避行為 — 支持以持續監測治理指數取代一次性盡職調查。</li>
+            <li><strong>收購溢價作為風險估值代理指標：</strong>收購方在未正式量化的情況下已將制度風險隱性納入報價 — 結構化的風險定價模型可填補此缺口。</li>
+            <li><strong>對基金與 M&A 團隊的實際應用：</strong>WGI 與 POLCON III 可作為預測拉丁美洲有利收購時機的領先指標。</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pf-stats">
-        <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl">Hypothèses testées</span></div>
-        <div><span class="pf-stat-val">2000–2024</span><span class="pf-stat-lbl">Période analysée</span></div>
-        <div><span class="pf-stat-val">WGI · FSI · POLCON</span><span class="pf-stat-lbl">Indices politiques</span></div>
+        <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl" data-i18n="portfolio.fin.ma.statHypo">Hypothèses testées</span></div>
+        <div><span class="pf-stat-val">2000–2024</span><span class="pf-stat-lbl" data-i18n="portfolio.fin.ma.statPeriod">Période analysée</span></div>
+        <div><span class="pf-stat-val">WGI · FSI · POLCON</span><span class="pf-stat-lbl" data-i18n="portfolio.fin.ma.statIndices">Indices politiques</span></div>
       </div>
       <div class="pf-btns">
         <a href="assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf"
-           target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--primary">Lire le rapport complet (PDF)</a>
+           target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--primary"
+           data-i18n="portfolio.fin.ma.btn">Lire le rapport complet (PDF)</a>
       </div>
       <div class="pf-tags">
         <span class="pf-tag">R</span>
         <span class="pf-tag">M&amp;A</span>
-        <span class="pf-tag">Régression OLS</span>
+        <span class="pf-tag">OLS Regression</span>
         <span class="pf-tag">Logit</span>
-        <span class="pf-tag">Finance quantitative</span>
-        <span class="pf-tag">Risque politique</span>
+        <span class="pf-tag">Quantitative Finance</span>
+        <span class="pf-tag">Political Risk</span>
         <span class="pf-tag">LSEG · Refinitiv</span>
       </div>
     </article>
@@ -602,9 +669,9 @@
 
   <!-- ── Page footer ─────────────────────────────────── -->
   <footer class="pf-footer">
-    <a href="portfolio-data.html" class="pf-footer-link">← Portfolio Data &amp; Recherche</a>
+    <a href="portfolio-data.html" class="pf-footer-link" data-i18n="portfolio.fin.footerBack">← Portfolio Data &amp; Recherche</a>
     <p class="pf-footer-credit">© <span id="year"></span> Yu-Ting Tseng &nbsp;·&nbsp; Finance &amp; Analyse</p>
-    <a href="index.html" class="pf-footer-link">Accueil →</a>
+    <a href="index.html" class="pf-footer-link" data-i18n="portfolio.fin.footerNext">Accueil →</a>
   </footer>
 
   <script src="main.js"></script>

@@ -294,6 +294,8 @@
     }
     .pf-star--action .pf-star-lbl { color: var(--cl-accent2); }
     .pf-star--result .pf-star-lbl { color: var(--cl-green); }
+    .pf-star--insight { border-left-color: #7c3aed; background: rgba(124,58,237,0.04); }
+    .pf-star--insight .pf-star-lbl { color: #7c3aed; }
     .pf-star-txt {
       font-size: 0.83rem;
       line-height: 1.75;
@@ -478,25 +480,24 @@
   <!-- ── Hero ────────────────────────────────────────── -->
   <section class="pf-hero">
     <div class="pf-hero-left">
-      <p class="pf-hero-eyebrow">Yu-Ting Tseng · Data & Market Research</p>
+      <p class="pf-hero-eyebrow">Yu-Ting Tseng · Data &amp; Market Research</p>
       <h1 class="pf-hero-title">Data &amp;<br><span>Market Research</span></h1>
-      <p class="pf-hero-desc">
-        Tableaux de bord Excel, analyses quantitatives et études de marché.
-        Des projets où la rigueur analytique produit des insights actionnables.
+      <p class="pf-hero-desc" data-i18n="portfolio.data.heroDesc">
+        Tableaux de bord Excel, analyses quantitatives et études de marché — la rigueur analytique au service de décisions actionnables.
       </p>
     </div>
     <div class="pf-hero-right">
       <div class="pf-hero-stat-block">
         <span class="pf-hero-stat-num">2</span>
-        <span class="pf-hero-stat-label">Projets</span>
+        <span class="pf-hero-stat-label" data-i18n="portfolio.data.heroStatProjets">Projets</span>
       </div>
       <div class="pf-hero-stat-block">
         <span class="pf-hero-stat-num">+93%</span>
-        <span class="pf-hero-stat-label">Croissance XHS</span>
+        <span class="pf-hero-stat-label" data-i18n="portfolio.data.heroStatGrowth">Croissance XHS</span>
       </div>
       <div class="pf-hero-stat-block">
         <span class="pf-hero-stat-num">3</span>
-        <span class="pf-hero-stat-label">Hypothèses M&amp;A</span>
+        <span class="pf-hero-stat-label" data-i18n="portfolio.data.heroStatHypo">Hypothèses M&amp;A</span>
       </div>
     </div>
   </section>
@@ -504,11 +505,11 @@
 
   <!-- ── Filter bar ──────────────────────────────────── -->
   <div class="pf-filters">
-    <button class="filter-btn is-active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-    <button class="filter-btn" data-filter="analyse">Analyse</button>
-    <button class="filter-btn" data-filter="recherche">Recherche</button>
-    <button class="filter-btn" data-filter="reporting">Reporting</button>
+    <button class="filter-btn is-active" data-filter="all" data-i18n="portfolio.data.filterAll">Tous</button>
+    <button class="filter-btn" data-filter="dashboard" data-i18n="portfolio.data.filterDashboard">Dashboard</button>
+    <button class="filter-btn" data-filter="analyse" data-i18n="portfolio.data.filterAnalyse">Analyse</button>
+    <button class="filter-btn" data-filter="recherche" data-i18n="portfolio.data.filterRecherche">Recherche</button>
+    <button class="filter-btn" data-filter="reporting" data-i18n="portfolio.data.filterReporting">Reporting</button>
   </div>
 
   <!-- ── Projects ────────────────────────────────────── -->
@@ -516,7 +517,7 @@
 
     <!-- ── 01 · Dashboard XHS (featured) ────────────── -->
     <article class="pf-card pf-card--featured" data-cat="dashboard featured">
-      <div class="pf-card-num">01 · Dashboard · Étude de cas</div>
+      <div class="pf-card-num" data-i18n="portfolio.data.dashboard.num">01 · Dashboard · Étude de cas</div>
       <span class="pf-card-tag" data-i18n="dataHero.caseStudyLabel">Étude de cas · Dashboard XHS</span>
       <h2 class="pf-card-title" data-i18n="dataHero.caseStudyTitle">Dashboard Excel – Performance Xiaohongshu</h2>
 
@@ -525,35 +526,88 @@
       </p>
 
       <div class="pf-star">
-        <div class="pf-star-lbl">Situation · Problème analytique</div>
-        <p class="pf-star-txt">
-          Aucun outil de suivi structuré pour le compte Xiaohongshu d'Engoo (groupe DMM.com). Décisions de contenu basées sur l'intuition. <strong>Objectif :</strong> mesurer objectivement l'impact des décisions éditoriales sur 12 KPIs, sans outil analytics tiers (XHS n'expose pas d'API publique).
-        </p>
+        <div class="pf-star-lbl" data-i18n="portfolio.data.dashboard.sitLbl">Situation · Problème analytique</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">Aucun outil de suivi structuré pour le compte Xiaohongshu d'Engoo (groupe DMM.com). Décisions de contenu fondées sur l'intuition. <strong>Objectif :</strong> mesurer objectivement l'impact des décisions éditoriales sur 12 KPIs, sans outil analytics tiers (XHS n'expose pas d'API publique).</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">No structured tracking tool for Engoo's Xiaohongshu account (DMM.com Group). Content decisions driven entirely by intuition. <strong>Objective:</strong> objectively measure the impact of editorial choices across 12 KPIs — without a third-party analytics tool (XHS has no public API).</p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">Engoo（DMM.com 集團）的小紅書帳號缺乏系統性追蹤工具，內容決策完全依賴直覺。<strong>目標：</strong>在無第三方分析工具的情況下（小紅書不開放 API），客觀量化 12 項 KPI 的變化，為每次決策提供數據支撐。</p>
+        </div>
       </div>
 
       <div class="pf-star pf-star--action">
-        <div class="pf-star-lbl">Action · Architecture du dashboard</div>
-        <p class="pf-star-txt">
-          <strong>Classeur Excel à 3 feuilles :</strong>
-          <ul>
+        <div class="pf-star-lbl" data-i18n="portfolio.data.dashboard.actLbl">Action · Architecture du dashboard</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt"><strong>Classeur Excel à 3 feuilles :</strong></p>
+          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
             <li><strong>Données brutes :</strong> saisie quotidienne de 12 métriques (vues, likes, sauvegardes, partages, commentaires, abonnés, taux d'engagement, CTR, taux de complétion vidéo, portée). Mise en forme conditionnelle pour les jours outliers.</li>
-            <li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI avec fenêtres glissantes (formules DÉCALER+INDIRECT), graphiques de comparaison des formats de contenu. Zéro mise à jour manuelle.</li>
-            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour sélectionner n'importe quelles deux périodes — calcul automatique des écarts en % pour chaque KPI.</li>
+            <li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI avec fenêtres glissantes (formules DÉCALER+INDIRECT), graphiques de comparaison des formats. Zéro mise à jour manuelle.</li>
+            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour comparer n'importe quelles deux périodes — calcul automatique des écarts en % pour chaque KPI.</li>
           </ul>
-        </p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt"><strong>3-sheet Excel workbook:</strong></p>
+          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+            <li><strong>Raw data:</strong> daily entry of 12 metrics (views, likes, saves, shares, comments, followers, engagement rate, CTR, video completion rate, reach). Conditional formatting to flag outlier days.</li>
+            <li><strong>Dynamic dashboard (PivotTables):</strong> KPI time-series with rolling windows (OFFSET+INDIRECT), content format comparison charts. Zero manual updates.</li>
+            <li><strong>Dynamic A/B module:</strong> two drop-down selectors to compare any two periods — automatic % variance calculation per KPI.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt"><strong>Excel 三表工作簿：</strong></p>
+          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+            <li><strong>原始數據表：</strong>每日輸入 12 項指標（瀏覽次數、按讚、收藏、分享、留言、粉絲數、互動率、CTR、影片完看率、觸及人數）。條件式格式標記異常日。</li>
+            <li><strong>動態儀表板（樞紐分析表）：</strong>各 KPI 時間趨勢（OFFSET+INDIRECT 滑動窗口）、內容格式比較圖，零手動更新。</li>
+            <li><strong>動態 A/B 比較模組：</strong>兩個下拉選單自由選取任意時段，自動計算各 KPI 變化百分比。</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl">Résultats · Impact mesuré sur 3 mois</div>
-        <p class="pf-star-txt">
-          <strong>+93.3% vues · +89.1% interactions · +69.7% abonnés</strong> — documentés via le dashboard. Module A/B : +34% CTR et +28% engagement après pivot vers tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.
-        </p>
+        <div class="pf-star-lbl" data-i18n="portfolio.data.dashboard.resLbl">Résultats · Impact mesuré sur 3 mois</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt"><strong>+93.3% vues · +89.1% interactions · +69.7% abonnés</strong> — documentés via le dashboard. Module A/B : +34% CTR et +28% engagement après pivot vers tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt"><strong>+93.3% views · +89.1% interactions · +69.7% followers</strong> — all documented via the dashboard. A/B module: +34% CTR and +28% engagement following the pivot to a short-tutorial + clean-visual format. The dashboard became the team's weekly editorial decision tool.</p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">瀏覽次數 <strong>+93.3%、互動量 +89.1%、粉絲數 +69.7%</strong> — 全部透過儀表板記錄。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 34%、互動率提升 28%。儀表板成為團隊每週內容決策的核心工具。</p>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Le contenu éducatif comme signal d'intention :</strong> les sauvegardes (×2–3 vs. promotionnel) révèlent que l'utilisateur XHS différencie fortement valeur informative et contenu publicitaire — exploitable directement pour pondérer les types de contenus dans la stratégie éditoriale.</li>
+            <li><strong>La cohérence visuelle comme accélérateur de croissance :</strong> la corrélation entre adoption de charte visuelle et pic de croissance suggère que l'identité de marque agit comme variable de confiance, indépendante du sujet traité.</li>
+            <li><strong>Le format prime sur le contenu :</strong> le A/B testing a isolé l'effet format (+34% CTR) du reste — preuve que l'optimisation créative nécessite une mesure rigoureuse, pas une intuition.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Educational content as an intent signal:</strong> saves (2–3× vs. promotional) reveal XHS users strongly differentiate informational value from advertising — directly exploitable to weight content types in editorial strategy.</li>
+            <li><strong>Visual consistency as a growth accelerator:</strong> the correlation between adopting a visual identity and peak growth suggests brand identity acts as a trust variable, independent of the subject covered.</li>
+            <li><strong>Format outperforms content:</strong> A/B testing isolated the format effect (+34% CTR) from other variables — evidence that creative optimisation requires rigorous measurement, not intuition.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>教育型內容作為意圖指標：</strong>收藏數（×2–3 vs. 推廣型）揭示小紅書用戶對資訊價值與廣告內容有強烈區辨 — 可直接用於內容類型的策略權重配置。</li>
+            <li><strong>視覺一致性作為成長加速器：</strong>視覺識別建立與成長高峰的相關性顯示，品牌識別作為信任變數獨立於發文主題之外發揮作用。</li>
+            <li><strong>格式比內容更具決定性：</strong>A/B 測試分離了格式效果（+34% CTR），證明創意優化需要嚴謹的量化驗證，而非直覺判斷。</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pf-stats">
-        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl">Métriques / jour</span></div>
-        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl">Vues · 3 mois</span></div>
-        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl">Comparaison dynamique</span></div>
+        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.statMet">Métriques / jour</span></div>
+        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.statVues">Vues · 3 mois</span></div>
+        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.statAb">Comparaison A/B dynamique</span></div>
       </div>
 
       <div class="pf-btns">
@@ -565,39 +619,61 @@
       <div class="pf-tags">
         <span class="pf-tag">Excel</span>
         <span class="pf-tag">Dashboard</span>
-        <span class="pf-tag">TCD · Pivot Tables</span>
+        <span class="pf-tag">Pivot Tables</span>
         <span class="pf-tag">A/B Testing</span>
         <span class="pf-tag">KPI Tracking</span>
-        <span class="pf-tag">Formules avancées</span>
+        <span class="pf-tag">Advanced Formulas</span>
       </div>
     </article>
 
     <!-- ── 02 · M&A Research (featured) ─────────────── -->
     <article class="pf-card pf-card--featured" data-cat="recherche">
-      <div class="pf-card-num">02 · Recherche empirique · Finance quantitative</div>
-      <span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">Research · R · Finance quantitative</span>
+      <div class="pf-card-num" data-i18n="portfolio.data.ma.num">02 · Recherche empirique · Finance quantitative</div>
+      <span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">R · Quantitative Finance · Empirical Research</span>
       <h2 class="pf-card-title">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
-      <p style="font-style:italic; font-size:0.84rem; color:var(--cl-muted); margin-bottom:1.25rem;">
+      <p class="pf-card-body" style="font-style:italic;" data-i18n="portfolio.data.ma.subtitle">
         Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
       </p>
 
       <div class="pf-star">
-        <div class="pf-star-lbl">Situation</div>
-        <p class="pf-star-txt">
-          L'Amérique Latine présente un paradoxe pour les acquéreurs : ses ressources naturelles et son potentiel de croissance attirent les capitaux étrangers, mais son instabilité politique chronique génère un risque difficilement quantifiable. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong>
-        </p>
+        <div class="pf-star-lbl" data-i18n="portfolio.data.ma.sitLbl">Situation</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">L'Amérique Latine présente un paradoxe pour les acquéreurs : ses ressources naturelles et son potentiel de croissance attirent les capitaux étrangers, mais son instabilité politique chronique génère un risque difficilement quantifiable. <strong>Comment l'instabilité politique influence-t-elle concrètement les décisions M&amp;A cross-border ?</strong></p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">Latin America presents a paradox for acquirers: its natural resources and growth potential attract foreign capital, yet chronic political instability generates risk that is difficult to quantify. <strong>How does political instability concretely influence cross-border M&amp;A decisions?</strong></p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">拉丁美洲對收購方而言是一個矛盾：豐富的自然資源與成長潛力吸引外資，然而長期的政治不穩定性產生難以量化的風險。<strong>政治不穩定性究竟如何影響跨境併購（M&amp;A）決策？</strong></p>
+        </div>
       </div>
 
       <div class="pf-star pf-star--action">
-        <div class="pf-star-lbl">Action — Méthodologie</div>
-        <p class="pf-star-txt">
-          <ul>
+        <div class="pf-star-lbl" data-i18n="portfolio.data.ma.actLbl">Méthodologie</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
             <li><strong>H1 – Volume :</strong> Régression OLS sur panel data — l'indice WGI prédit-il le nombre d'opérations M&amp;A annuelles ?</li>
             <li><strong>H2 – Abandon :</strong> Modèle Logit — la dégradation du WGI augmente-t-elle la probabilité d'annulation de transaction ?</li>
             <li><strong>H3 – Prime :</strong> Régression OLS — les acheteurs paient-ils une prime plus élevée pour compenser le risque politique ?</li>
             <li><strong>Sources :</strong> LSEG Workspace / Refinitiv (2000–2024), WGI, POLCON III, FSI.</li>
           </ul>
-        </p>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>H1 – Volume:</strong> OLS regression on panel data — does the WGI index predict annual M&amp;A deal volume?</li>
+            <li><strong>H2 – Abandonment:</strong> Logit model — does WGI deterioration increase the probability of deal cancellation?</li>
+            <li><strong>H3 – Premium:</strong> OLS regression — do acquirers pay a higher premium to compensate for political risk?</li>
+            <li><strong>Data sources:</strong> LSEG Workspace / Refinitiv (2000–2024), WGI, POLCON III, FSI.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>H1 – 交易量：</strong>面板資料 OLS 迴歸 — WGI 指數能否預測年度 M&amp;A 交易數量？</li>
+            <li><strong>H2 – 交易取消：</strong>Logit 模型 — WGI 惡化是否提高交易取消概率？</li>
+            <li><strong>H3 – 收購溢價：</strong>OLS 迴歸 — 收購方是否支付更高溢價以補償政治風險？</li>
+            <li><strong>資料來源：</strong>LSEG Workspace / Refinitiv（2000–2024）、WGI、POLCON III、FSI。</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Charts 2×2 -->
@@ -605,51 +681,96 @@
         <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
-               alt="Score POLCON moyen par région" loading="lazy">
+               alt="POLCON – Average political constraints by region" loading="lazy">
         </a>
         <a href="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%AD%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
-               alt="Volume M&A vs WGI – H1" loading="lazy">
+               alt="M&A Volume vs WGI – H1" loading="lazy">
         </a>
         <a href="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Regression.png"
-               alt="Logit – Abandon M&A vs WGI – H2" loading="lazy">
+               alt="Logit – M&A Abandonment vs WGI – H2" loading="lazy">
         </a>
         <a href="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
            target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
-               alt="Prime M&A vs WGI – H3" loading="lazy">
+               alt="M&A Premium vs WGI – H3" loading="lazy">
         </a>
       </div>
 
       <div class="pf-result-callout">
-        <div class="pf-result-callout-lbl">Résultats clés</div>
-        <ul>
-          <li>Une meilleure gouvernance (WGI ↑) est corrélée à un <strong>volume M&amp;A plus élevé</strong> en Amérique Latine (H1 confirmée).</li>
-          <li>La dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — actionnable pour la due diligence (H2 confirmée).</li>
-          <li>Les acquéreurs intègrent le risque politique dans la <strong>prime d'acquisition</strong> (H3 partiellement confirmée).</li>
-          <li>Implication business : <strong>le risque politique est un levier de négociation tarifaire</strong>.</li>
-        </ul>
+        <div class="pf-result-callout-lbl" data-i18n="portfolio.data.ma.resLbl">Résultats clés</div>
+        <div data-lang-show="fr">
+          <ul>
+            <li>Une meilleure gouvernance (WGI ↑) est corrélée à un <strong>volume M&amp;A plus élevé</strong> en Amérique Latine (H1 confirmée).</li>
+            <li>La dégradation politique prédit significativement l'<strong>abandon de transaction</strong> (p &lt; 0.05) — directement actionnable pour la due diligence politique (H2 confirmée).</li>
+            <li>Les acquéreurs intègrent le risque politique dans la <strong>prime d'acquisition</strong> (H3 partiellement confirmée).</li>
+            <li>Implication business : <strong>le risque politique est un levier de négociation tarifaire</strong>, pas seulement un frein à l'investissement.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul>
+            <li>Stronger governance (WGI ↑) correlates with higher <strong>M&amp;A deal volume</strong> in Latin America (H1 confirmed).</li>
+            <li>Political deterioration significantly predicts <strong>deal abandonment</strong> (p &lt; 0.05) — directly actionable for political due diligence (H2 confirmed).</li>
+            <li>Acquirers integrate political risk into the <strong>acquisition premium</strong> (H3 partially confirmed).</li>
+            <li>Business implication: <strong>political risk is a pricing negotiation lever</strong>, not merely an investment deterrent.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul>
+            <li>治理水準提升（WGI ↑）與拉丁美洲 <strong>M&amp;A 交易量</strong>正相關（H1 確認）。</li>
+            <li>政治治理惡化顯著預測<strong>交易取消</strong>（p &lt; 0.05）— 可直接應用於政治盡職調查（H2 確認）。</li>
+            <li>收購方將政治風險納入<strong>收購溢價</strong>定價（H3 部分確認）。</li>
+            <li>商業意涵：<strong>政治風險是價格談判的槓桿</strong>，而非單純的投資阻力。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Le risque politique est un gradient, non un seuil :</strong> même une légère dégradation du WGI déclenche des comportements d'évitement chez les acquéreurs — ce qui suggère un suivi continu des indices plutôt qu'une évaluation ponctuelle.</li>
+            <li><strong>La prime comme outil de pricing implicite :</strong> les acquéreurs intègrent le risque institutionnel dans leur valorisation sans le quantifier explicitement — ouvrant la voie à des modèles de risk-pricing plus rigoureux en due diligence.</li>
+            <li><strong>WGI et POLCON comme indicateurs avancés :</strong> leur évolution précède souvent les mutations du volume M&A, ce qui offre un potentiel d'usage prédictif pour les équipes M&A et les fonds d'investissement.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Political risk is a gradient, not a threshold:</strong> even marginal WGI deterioration triggers avoidance behaviour — suggesting continuous index monitoring rather than point-in-time assessment.</li>
+            <li><strong>The premium as an implicit pricing tool:</strong> acquirers integrate institutional risk into valuations without explicitly quantifying it — opening the door to more rigorous risk-pricing frameworks in due diligence.</li>
+            <li><strong>WGI and POLCON as leading indicators:</strong> their evolution often precedes M&A volume shifts, offering predictive use cases for M&A teams and investment funds.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>政治風險是梯度，非門檻：</strong>即使 WGI 輕微惡化也足以觸發迴避行為 — 建議持續追蹤指數而非一次性評估。</li>
+            <li><strong>收購溢價作為隱性定價工具：</strong>收購方在未明確量化的情況下已將制度風險納入估值 — 為盡職調查中更嚴謹的風險定價框架提供實證基礎。</li>
+            <li><strong>WGI 與 POLCON 作為領先指標：</strong>兩者的變化往往早於 M&A 交易量轉折，對 M&A 團隊與投資基金具有預測性應用潛力。</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pf-stats">
-        <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl">Hypothèses testées</span></div>
-        <div><span class="pf-stat-val">2000–2024</span><span class="pf-stat-lbl">Période analysée</span></div>
-        <div><span class="pf-stat-val">WGI · FSI · POLCON</span><span class="pf-stat-lbl">Indices politiques</span></div>
+        <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl" data-i18n="portfolio.data.ma.statHypo">Hypothèses testées</span></div>
+        <div><span class="pf-stat-val">2000–2024</span><span class="pf-stat-lbl" data-i18n="portfolio.data.ma.statPeriod">Période analysée</span></div>
+        <div><span class="pf-stat-val">WGI · FSI · POLCON</span><span class="pf-stat-lbl" data-i18n="portfolio.data.ma.statIndices">Indices politiques</span></div>
       </div>
       <div class="pf-btns">
         <a href="assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf"
-           target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--primary">Lire le rapport complet (PDF)</a>
+           target="_blank" rel="noopener noreferrer" class="pf-btn pf-btn--primary"
+           data-i18n="portfolio.data.ma.btn">Lire le rapport complet (PDF)</a>
       </div>
       <div class="pf-tags">
         <span class="pf-tag">R</span>
         <span class="pf-tag">M&amp;A</span>
-        <span class="pf-tag">Régression OLS</span>
+        <span class="pf-tag">OLS Regression</span>
         <span class="pf-tag">Logit</span>
-        <span class="pf-tag">Finance quantitative</span>
-        <span class="pf-tag">Risque politique</span>
+        <span class="pf-tag">Quantitative Finance</span>
+        <span class="pf-tag">Political Risk</span>
+        <span class="pf-tag">LSEG · Refinitiv</span>
       </div>
     </article>
 
@@ -657,9 +778,9 @@
 
   <!-- ── Page footer ─────────────────────────────────── -->
   <footer class="pf-footer">
-    <a href="portfolio-marketing.html" class="pf-footer-link">← Portfolio Marketing</a>
+    <a href="portfolio-marketing.html" class="pf-footer-link" data-i18n="portfolio.data.footerBack">← Portfolio Marketing</a>
     <p class="pf-footer-credit">© <span id="year"></span> Yu-Ting Tseng &nbsp;·&nbsp; Data &amp; Market Research</p>
-    <a href="portfolio-finance.html" class="pf-footer-link">Portfolio Finance →</a>
+    <a href="portfolio-finance.html" class="pf-footer-link" data-i18n="portfolio.data.footerNext">Portfolio Finance →</a>
   </footer>
 
   <script src="main.js"></script>

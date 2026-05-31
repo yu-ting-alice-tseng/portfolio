@@ -305,6 +305,8 @@
       margin-bottom: 0.45rem;
     }
     .pf-star--result .pf-star-lbl { color: var(--ed-green); }
+    .pf-star--insight { border-left-color: #7c3aed; background: rgba(124,58,237,0.04); }
+    .pf-star--insight .pf-star-lbl { color: #7c3aed; }
     .pf-star-txt {
       font-size: 0.83rem;
       line-height: 1.75;
@@ -491,28 +493,27 @@
 
   <!-- ── Hero ────────────────────────────────────────── -->
   <section class="pf-hero">
-    <p class="pf-hero-eyebrow">Yu-Ting Tseng &nbsp;·&nbsp; Projets sélectionnés &nbsp;·&nbsp; 2024–2025</p>
+    <p class="pf-hero-eyebrow" data-i18n="portfolio.mkt.heroEyebrow">Yu-Ting Tseng &nbsp;·&nbsp; Projets sélectionnés &nbsp;·&nbsp; 2024–2025</p>
     <h1 class="pf-hero-title">
       Marketing<br>
       <em>&amp; Design créatif</em>
     </h1>
     <div class="pf-hero-foot">
-      <p class="pf-hero-desc">
-        Campagnes data-driven, direction artistique et community management.
-        Des projets où créativité visuelle et analyse de performance se croisent.
+      <p class="pf-hero-desc" data-i18n="portfolio.mkt.heroDesc">
+        Campagnes data-driven, direction artistique et community management — des projets où créativité visuelle et analyse de performance se croisent.
       </p>
       <div class="pf-hero-stats">
         <div class="pf-hero-stat">
           <span class="pf-hero-stat-num">4</span>
-          <span class="pf-hero-stat-label">Projets</span>
+          <span class="pf-hero-stat-label" data-i18n="portfolio.mkt.heroStatProjets">Projets</span>
         </div>
         <div class="pf-hero-stat">
           <span class="pf-hero-stat-num">+93%</span>
-          <span class="pf-hero-stat-label">Croissance XHS</span>
+          <span class="pf-hero-stat-label" data-i18n="portfolio.mkt.heroStatGrowth">Croissance XHS</span>
         </div>
         <div class="pf-hero-stat">
           <span class="pf-hero-stat-num">60+</span>
-          <span class="pf-hero-stat-label">Participants AIESEC</span>
+          <span class="pf-hero-stat-label" data-i18n="portfolio.mkt.heroStatPart">Participants AIESEC</span>
         </div>
       </div>
     </div>
@@ -520,11 +521,11 @@
 
   <!-- ── Filter bar ──────────────────────────────────── -->
   <div class="pf-filters">
-    <button class="filter-btn is-active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="dashboard">Dashboard &amp; Data</button>
-    <button class="filter-btn" data-filter="campagne">Campagnes</button>
-    <button class="filter-btn" data-filter="design">Design visuel</button>
-    <button class="filter-btn" data-filter="community">Community</button>
+    <button class="filter-btn is-active" data-filter="all" data-i18n="portfolio.mkt.filterAll">Tous</button>
+    <button class="filter-btn" data-filter="dashboard" data-i18n="portfolio.mkt.filterDashboard">Dashboard &amp; Data</button>
+    <button class="filter-btn" data-filter="campagne" data-i18n="portfolio.mkt.filterCampagne">Campagnes</button>
+    <button class="filter-btn" data-filter="design" data-i18n="portfolio.mkt.filterDesign">Design visuel</button>
+    <button class="filter-btn" data-filter="community" data-i18n="portfolio.mkt.filterCommunity">Community</button>
   </div>
 
   <!-- ── Projects ────────────────────────────────────── -->
@@ -532,31 +533,54 @@
 
     <!-- ── 01 · Engoo Dashboard (featured) ──────────── -->
     <article class="pf-card pf-card--featured" data-cat="dashboard">
-      <div class="pf-card-num">01 &nbsp;·&nbsp; Étude de cas complète</div>
-      <span class="pf-card-tag">Dashboard Excel &nbsp;·&nbsp; Social Analytics &nbsp;·&nbsp; A/B Testing</span>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.engoo.num">01 · Étude de cas complète</div>
+      <span class="pf-card-tag" data-i18n="portfolio.mkt.engoo.tag">Dashboard Excel · Social Analytics · A/B Testing</span>
       <h2 class="pf-card-title">
         Engoo (DMM.com Group) —<br>Dashboard de performance Xiaohongshu
       </h2>
 
       <div class="pf-star">
-        <div class="pf-star-lbl">Situation · Contexte &amp; Défi</div>
-        <p class="pf-star-txt">
-          Engoo (groupe DMM.com) cible les apprenants sinophones via <strong>Xiaohongshu (小红书)</strong> — réseau de 300 M+ utilisateurs actifs, mi-Instagram mi-Pinterest. À mon arrivée : présence sporadique, aucun outil de suivi structuré, décisions basées sur l'intuition.
-          <strong>Le défi :</strong> mesurer objectivement quel contenu génère de l'engagement, sans budget analytics tiers — XHS n'expose pas d'API publique.
-        </p>
+        <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.sitLbl">Situation · Contexte &amp; Défi</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">Engoo (groupe DMM.com) cible les apprenants sinophones via <strong>Xiaohongshu (小红书)</strong> — réseau de 300 M+ utilisateurs actifs, à mi-chemin entre Instagram et Pinterest. À mon arrivée : présence sporadique, aucun outil de suivi structuré, décisions éditoriales fondées sur l'intuition.<br><strong>Le défi :</strong> mesurer objectivement quel contenu génère de l'engagement, sans budget analytics tiers — XHS n'expose pas d'API publique.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">Engoo (DMM.com Group) targets Mandarin-speaking learners via <strong>Xiaohongshu (小红书)</strong> — a 300M+ user platform bridging Instagram and Pinterest. Upon joining: sporadic posting, no structured tracking tool, editorial decisions driven by intuition.<br><strong>The challenge:</strong> objectively measure which content drives engagement — without a third-party analytics budget (XHS exposes no public API).</p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">Engoo（DMM.com 集團）透過<strong>小紅書（300M+ 用戶）</strong>觸及中文學習者。我加入時，帳號發文不穩定、缺乏追蹤工具，所有內容決策仰賴直覺。<br><strong>挑戰：</strong>在無第三方分析工具預算的情況下（小紅書不開放 API），以數據客觀評估哪類內容最能驅動互動。</p>
+        </div>
       </div>
 
       <div class="pf-star">
-        <div class="pf-star-lbl">Action · Construction du dashboard</div>
-        <p class="pf-star-txt">
-          Conception d'un <strong>classeur Excel à 3 feuilles</strong> entièrement autonome :
-          <ul>
+        <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.actLbl">Action · Construction du dashboard</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">Conception d'un <strong>classeur Excel à 3 feuilles</strong> entièrement autonome :</p>
+          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
             <li><strong>Données brutes :</strong> 12 métriques quotidiennes — vues, likes, sauvegardes, partages, commentaires, abonnés, taux d'engagement, CTR, taux de complétion vidéo, portée.</li>
             <li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI, graphiques de comparaison des formats, moyennes mobiles. Zéro mise à jour manuelle.</li>
-            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour sélectionner n'importe quelles deux périodes — calcul automatique des écarts en % pour chaque KPI.</li>
+            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour comparer n'importe quelles deux périodes — calcul automatique des écarts en % pour chaque KPI.</li>
           </ul>
-          Mise en forme conditionnelle pour les outliers, formules DÉCALER+INDIRECT pour fenêtres glissantes.
-        </p>
+          <p class="pf-star-txt" style="margin-top:0.5rem;">Mise en forme conditionnelle pour les jours outliers ; formules DÉCALER+INDIRECT pour les fenêtres glissantes.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">Designed a self-contained <strong>3-sheet Excel workbook</strong>:</p>
+          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+            <li><strong>Raw data:</strong> daily entry of 12 metrics — views, likes, saves, shares, comments, followers, engagement rate, CTR, video completion rate, reach.</li>
+            <li><strong>Dynamic dashboard (PivotTables):</strong> KPI time-series curves, content format comparison charts, rolling averages. Zero manual updates.</li>
+            <li><strong>Dynamic A/B module:</strong> two drop-down selectors to compare any two periods — automatic % variance calculation per KPI.</li>
+          </ul>
+          <p class="pf-star-txt" style="margin-top:0.5rem;">Conditional formatting to flag outlier days; OFFSET+INDIRECT formulas for sliding time windows.</p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">設計了一套完全自主運作的 <strong>Excel 三表工作簿</strong>：</p>
+          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+            <li><strong>原始數據表：</strong>每日輸入 12 項指標 — 瀏覽次數、按讚、收藏、分享、留言、粉絲數、互動率、CTR、影片完看率、觸及人數。</li>
+            <li><strong>動態儀表板（樞紐分析表）：</strong>各 KPI 時間趨勢圖、內容格式比較圖、滾動平均值，零手動更新。</li>
+            <li><strong>動態 A/B 比較模組：</strong>兩個下拉選單自由選取任意時段，自動計算各 KPI 變化百分比。</li>
+          </ul>
+          <p class="pf-star-txt" style="margin-top:0.5rem;">條件式格式標記異常日；OFFSET+INDIRECT 公式實現滑動窗口分析。</p>
+        </div>
       </div>
 
       <!-- Screenshots -->
@@ -565,35 +589,65 @@
            class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/Engoo Dashboard_FR.png"
                data-i18n-src="experience.engoo.screenshot1"
-               alt="Dashboard KPIs – Vue d'ensemble Engoo XHS" loading="lazy">
+               alt="Dashboard KPIs – Engoo XHS" loading="lazy">
         </a>
         <a href="assets/Engoo Dashboard_FR.png" target="_blank" rel="noopener noreferrer"
            class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/Engoo Dashboard_FR.png"
                data-i18n-src="experience.engoo.screenshot1"
-               alt="Module A/B – Comparaison de périodes Engoo XHS" loading="lazy">
+               alt="A/B Module – Engoo XHS" loading="lazy">
         </a>
         <a href="assets/Engoo Data_FR.png" target="_blank" rel="noopener noreferrer"
            class="pf-img-wrap" style="aspect-ratio:4/3;">
           <img src="assets/Engoo Data_FR.png"
                data-i18n-src="experience.engoo.screenshot2"
-               alt="Données brutes – 12 métriques quotidiennes Engoo XHS" loading="lazy">
+               alt="Raw data – 12 daily metrics Engoo XHS" loading="lazy">
         </a>
       </div>
 
       <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl">Résultats · Impact sur 3 mois</div>
-        <p class="pf-star-txt">
-          <strong>+93.3% de vues · +89.1% d'interactions · +69.7% d'abonnés</strong> — mesurés et documentés via le dashboard.<br>
-          Le contenu éducatif surperforme le promotionnel (2–3× plus de sauvegardes). Le module A/B a validé +34% CTR et +28% engagement après pivot vers un format tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.
-        </p>
+        <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.resLbl">Résultats · Impact sur 3 mois</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt"><strong>+93.3% de vues · +89.1% d'interactions · +69.7% d'abonnés</strong> — documentés et mesurés via le dashboard. Le contenu éducatif surperforme le promotionnel (2–3× plus de sauvegardes). Le module A/B a validé +34% CTR et +28% engagement après pivot vers un format tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt"><strong>+93.3% views · +89.1% interactions · +69.7% followers</strong> — all measured and documented through the dashboard. Educational content outperformed promotional posts (2–3× more saves). The A/B module validated +34% CTR and +28% engagement after pivoting to a short-tutorial + clean-visual format. The dashboard became the team's weekly editorial decision tool.</p>
+        </div>
+        <div data-lang-show="zh">
+          <p class="pf-star-txt">瀏覽次數 <strong>+93.3%、互動量 +89.1%、粉絲數 +69.7%</strong> — 全部透過儀表板量化記錄。教育型內容表現遠優於推廣型貼文（收藏數高出 2–3 倍）。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 34%、互動率提升 28%。儀表板成為團隊每週決策的核心工具。</p>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Le contenu éducatif comme signal d'intention :</strong> les sauvegardes (×2–3 vs. contenu promotionnel) montrent que les utilisateurs XHS valorisent la valeur informative — indicateur directement exploitable pour prioriser les sujets éditoriaux.</li>
+            <li><strong>La cohérence de marque prime sur la fréquence :</strong> la semaine de plus forte accélération (+40% vues) correspond à l'adoption d'une charte visuelle, non à une hausse du rythme de publication.</li>
+            <li><strong>Le format est une variable indépendante du sujet :</strong> le pivot "tutoriel court + visuel épuré" a généré +34% CTR sur des sujets identiques — un insight que seul le A/B testing formel pouvait valider.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Educational content as an intent signal:</strong> saves (2–3× vs. promotional posts) show XHS users assign high value to informational content — an actionable signal for prioritising editorial topics.</li>
+            <li><strong>Brand consistency outperforms posting frequency:</strong> the week of strongest growth (+40% views) coincided with adopting a visual identity, not with publishing more.</li>
+            <li><strong>Format is a variable independent of topic:</strong> the "short tutorial + clean visual" pivot delivered +34% CTR on identical subjects — an insight only formal A/B testing could validate.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>教育型內容作為意圖指標：</strong>收藏數（遠高於推廣貼文 2–3 倍）反映小紅書用戶對資訊價值的高度重視 — 可直接指導選題優先順序。</li>
+            <li><strong>品牌一致性優於發文頻率：</strong>成長加速最顯著的一週（+40% 瀏覽）對應視覺識別系統的建立，而非發文頻率的提升。</li>
+            <li><strong>格式是獨立於主題的變數：</strong>「短教程 + 簡潔視覺」轉型在相同主題下帶來 CTR +34% — 唯有 A/B 測試才能正式驗證此因果關係。</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pf-stats">
-        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl">Métriques / jour</span></div>
-        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl">Vues · 3 mois</span></div>
-        <div><span class="pf-stat-val">+89.1%</span><span class="pf-stat-lbl">Interactions</span></div>
-        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl">Module comparaison dynamique</span></div>
+        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statMet">Métriques / jour</span></div>
+        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statVues">Vues · 3 mois</span></div>
+        <div><span class="pf-stat-val">+89.1%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statInter">Interactions</span></div>
+        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statAb">Module A/B dynamique</span></div>
       </div>
 
       <div class="pf-btns">
@@ -608,7 +662,7 @@
       <div class="pf-tags">
         <span class="pf-tag">Excel</span>
         <span class="pf-tag">Dashboard</span>
-        <span class="pf-tag">TCD · Pivot Tables</span>
+        <span class="pf-tag">Pivot Tables</span>
         <span class="pf-tag">A/B Testing</span>
         <span class="pf-tag">KPI Tracking</span>
         <span class="pf-tag">Xiaohongshu</span>
@@ -618,8 +672,8 @@
 
     <!-- ── 02 · AIESEC ───────────────────────────────── -->
     <article class="pf-card" data-cat="campagne">
-      <div class="pf-card-num">02 &nbsp;·&nbsp; Campagne Marketing</div>
-      <span class="pf-card-tag">Campagne &nbsp;·&nbsp; Direction artistique</span>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">02 · Campagne Marketing</div>
+      <span class="pf-card-tag" data-i18n="portfolio.mkt.aiesec.tag">Campagne · Direction artistique</span>
       <h2 class="pf-card-title">AIESEC – Camp international YOLO</h2>
       <div data-lang-show="zh" class="pf-imgs pf-imgs--2">
         <a href="assets/主視覺_英文標語.png" target="_blank" rel="noopener noreferrer"
@@ -631,23 +685,44 @@
           <img src="assets/主視覺_中文標語.png" alt="AIESEC YOLO Camp visual ZH" loading="lazy">
         </a>
       </div>
-      <p class="pf-card-body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Création des visuels principaux de campagne — affiches et publications — pour le recrutement de volontaires et de participants.</p>
+      <p class="pf-card-body" data-i18n="portfolio.mkt.aiesec.body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Conception des visuels de campagne — affiches et publications — pour le recrutement de volontaires et de participants.</p>
       <div class="pf-stats">
-        <div><span class="pf-stat-val">15</span><span class="pf-stat-lbl">Volontaires recrutés</span></div>
-        <div><span class="pf-stat-val">60+</span><span class="pf-stat-lbl">Participants</span></div>
-        <div><span class="pf-stat-val">+53.7%</span><span class="pf-stat-lbl">Objectif budgétaire</span></div>
+        <div><span class="pf-stat-val">15</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statVol">Volontaires recrutés</span></div>
+        <div><span class="pf-stat-val">60+</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statPart">Participants</span></div>
+        <div><span class="pf-stat-val">+53.7%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statBudget">Objectif budgétaire dépassé</span></div>
+      </div>
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>La direction artistique comme levier de crédibilité :</strong> une identité visuelle cohérente (palette, typographie, angle) renforce la perception de professionnalisme de l'événement et améliore directement le taux de conversion.</li>
+            <li><strong>Le partage pair-à-pair comme vecteur principal :</strong> l'analyse post-campagne révèle que la majorité des inscriptions provenaient de partages entre étudiants — signal pour prioriser les formats à forte viralité dans les prochaines éditions.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Art direction as a credibility lever:</strong> a consistent visual identity (palette, typography, shooting angle) raised the event's perceived professionalism and directly improved conversion rates.</li>
+            <li><strong>Peer-to-peer sharing as the primary driver:</strong> post-campaign analysis showed most sign-ups came from student shares — a signal to prioritise high-shareability formats in future editions.</li>
+          </ul>
+        </div>
+        <div data-lang-show="zh">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>視覺方向作為公信力槓桿：</strong>統一的視覺識別（色系、字型、拍攝風格）提升活動專業感，直接改善報名轉化率。</li>
+            <li><strong>同儕分享作為主要驅動力：</strong>活動後分析顯示多數報名來自學生間的自主分享 — 建議未來版本優先設計「易分享」的內容格式。</li>
+          </ul>
+        </div>
       </div>
       <div class="pf-tags">
-        <span class="pf-tag">Campagne</span>
-        <span class="pf-tag">Design visuel</span>
+        <span class="pf-tag">Campaign Management</span>
+        <span class="pf-tag">Art Direction</span>
         <span class="pf-tag">AIESEC</span>
-        <span class="pf-tag">Direction artistique</span>
+        <span class="pf-tag">Visual Design</span>
       </div>
     </article>
 
     <!-- ── 03 · 政大古箏社 ──────────────────────────────── -->
     <article class="pf-card" data-cat="community">
-      <div class="pf-card-num">03 &nbsp;·&nbsp; Community Management</div>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.guzhengNum">03 · Community Management</div>
       <span class="pf-card-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
       <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
       <div data-lang-show="zh" class="pf-imgs pf-imgs--2">
@@ -664,14 +739,14 @@
       <div class="pf-tags">
         <span class="pf-tag">Community Management</span>
         <span class="pf-tag">Facebook</span>
-        <span class="pf-tag">Design</span>
+        <span class="pf-tag">Visual Design</span>
       </div>
     </article>
 
     <!-- ── 04 · Packaging Design ─────────────────────── -->
     <article class="pf-card" data-cat="design">
-      <div class="pf-card-num">04 &nbsp;·&nbsp; Design Visuel</div>
-      <span class="pf-card-tag">Design &nbsp;·&nbsp; Concours</span>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.penwardsNum">04 · Design Visuel</div>
+      <span class="pf-card-tag" data-i18n="portfolio.mkt.penwardsTag">Design · Concours</span>
       <h2 class="pf-card-title" data-i18n="portfolio.packaging.title">包裝設計競賽 – 18th Penwards</h2>
       <a data-lang-show="zh" href="assets/1.png" target="_blank" rel="noopener noreferrer"
          class="pf-img-wrap" style="aspect-ratio:16/9; display:block; margin:1.25rem 0;">
@@ -679,9 +754,9 @@
       </a>
       <p class="pf-card-body" data-i18n="portfolio.packaging.desc">Participation à la 18e édition du concours de design d'emballage Penwards (2024). Création de visuels promotionnels pour l'appel à participation.</p>
       <div class="pf-tags">
-        <span class="pf-tag">Design</span>
+        <span class="pf-tag">Visual Design</span>
         <span class="pf-tag">Packaging</span>
-        <span class="pf-tag">Concours</span>
+        <span class="pf-tag">Competition</span>
       </div>
     </article>
 
@@ -689,9 +764,9 @@
 
   <!-- ── Page footer ─────────────────────────────────── -->
   <footer class="pf-footer">
-    <a href="marketing.html" class="pf-footer-link">← Retour à Marketing</a>
+    <a href="marketing.html" class="pf-footer-link" data-i18n="portfolio.mkt.footerBack">← Retour à Marketing</a>
     <p class="pf-footer-credit">© <span id="year"></span> Yu-Ting Tseng &nbsp;·&nbsp; Portfolio Marketing &amp; Design</p>
-    <a href="portfolio-data.html" class="pf-footer-link">Portfolio Data &amp; Recherche →</a>
+    <a href="portfolio-data.html" class="pf-footer-link" data-i18n="portfolio.mkt.footerNext">Portfolio Data &amp; Recherche →</a>
   </footer>
 
   <script src="main.js"></script>
