@@ -1198,6 +1198,11 @@ body.page-finance .hero h1 {
   white-space: nowrap;
 }
 
+.course-chips--white .course-chip {
+  background: #ffffff;
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
 .skills-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

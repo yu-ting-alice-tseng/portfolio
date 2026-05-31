@@ -172,7 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
         subDataTools: "Outils & Applications",
         subData2: "Dashboards & Visualisation",
         subData3: "Méthodes & Analyse",
-        subData4: "AI & Outils",
+        subDataQuant: "Méthodes Quantitatives",
+        subDataQual: "Méthodes Qualitatives & Analyse",
+        subData4: "IA & Outils",
         subMkt1: "Acquisition & Performance",
         subMkt2: "Social Media & Contenu",
         subMkt3: "Stratégie & Planification",
@@ -221,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
         online: "En ligne · Taïwan",
       },
       education: {
-        title: "Formation académique",
+        title: "Formation Académique",
         subtitle:
           "Un parcours international entre la France et Taïwan, à l’interface du management, de la finance et des langues.",
         emlyon: {
@@ -466,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle: "Programmes de mentorat linguistique, immersion culturelle et échanges internationaux.",
       },
             experience: {
-        title: "Expériences professionnelles",
+        title: "Expériences Professionnelles",
         subtitle:
           "Une sélection de mes expériences en marketing digital, analyse de données et gestion de projet.",
         kpn: {
@@ -667,7 +669,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Quelques projets académiques ou personnels illustrant ma manière de travailler et mes centres d’intérêt.",
       },
       extracurricular: {
-        title: "Expériences extra‑scolaires",
+        title: "Expériences Extra-Scolaires",
         subtitle:
           "Engagements dans des clubs et associations qui complètent mon parcours académique.",
         guzheng: {
@@ -703,7 +705,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       volunteer: {
-        title: "Expériences de bénévolat & engagement",
+        title: "Bénévolat & Engagement",
         subtitle:
           "Des initiatives centrées sur l’éducation, l’international et l’impact social.",
         aiesec: {
@@ -874,6 +876,8 @@ document.addEventListener("DOMContentLoaded", () => {
         subDataTools: "Tools & Applications",
         subData2: "Dashboards & Visualisation",
         subData3: "Methods & Analysis",
+        subDataQuant: "Quantitative Methods",
+        subDataQual: "Qualitative Methods & Analysis",
         subData4: "AI & Tools",
         subMkt1: "Acquisition & Performance",
         subMkt2: "Social Media & Content",
@@ -1571,6 +1575,8 @@ document.addEventListener("DOMContentLoaded", () => {
         subDataTools: "工具與應用程式",
         subData2: "數據視覺化",
         subData3: "分析方法",
+        subDataQuant: "量化方法",
+        subDataQual: "質化方法與分析",
         subData4: "AI 工具",
         subMkt1: "廣告投放",
         subMkt2: "社群媒體與內容",
@@ -2262,14 +2268,21 @@ document.addEventListener("DOMContentLoaded", () => {
       langButtons.forEach((b) => b.classList.remove("is-active"));
       btn.classList.add("is-active");
       applyTranslations(lang);
+      try { localStorage.setItem("pf-lang", lang); } catch(e) {}
       // Re-render skill panel if one is open so images swap to the new language
       const activeChip = document.querySelector(".skill-card.is-skill-active[data-skill]");
       if (activeChip) updateSkillPreview(activeChip.getAttribute("data-skill"));
     });
   });
 
-  // Ensure default language (French) is applied on load
-  applyTranslations("fr");
+  // Load saved language preference, default to French
+  const _savedLang = (() => { try { return localStorage.getItem("pf-lang") || "fr"; } catch(e) { return "fr"; } })();
+  const _savedBtn = document.querySelector(`.lang-btn[data-lang="${_savedLang}"]`);
+  if (_savedBtn) {
+    langButtons.forEach((b) => b.classList.remove("is-active"));
+    _savedBtn.classList.add("is-active");
+  }
+  applyTranslations(_savedLang);
 
   // Skill preview on hover
   const skillData = {
@@ -2318,12 +2331,19 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-sql": {
-      title: "SQL – Requêtes & Agrégation",
-      text: "Écriture de requêtes SQL pour interroger, filtrer et agréger des bases de données.",
-      links: [
+      title: "SQL – Requêtes & Bases de Données",
+      text: "Rédaction de requêtes SQL pour interroger, filtrer, agréger et joindre des bases de données. Environnement principal : Microsoft Access (SQL intégré) et requêtes analytiques.",
+      proofs: [
         {
-          label: "Cours Data Analysis & Programming (VBA & Access) – NCCU",
-          href: "#edu-nccu",
+          type: "Cours",
+          title: "Introduction to Data Analysis & Programming (VBA & Access)",
+          org: "NCCU – Université Nationale Chengchi",
+          meta: ["Cours académique"],
+          points: [
+            "Requêtes SELECT, WHERE, JOIN, GROUP BY et agrégations sur bases relationnelles.",
+            "Création et gestion de tables, formulaires et rapports automatisés.",
+          ],
+          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
         },
       ],
     },
@@ -2358,22 +2378,36 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "data-statistics": {
       title: "Statistiques & Méthodes Quantitatives",
-      text: "Méthodes quantitatives (R, statistiques) et qualitatives pour la recherche académique et les études de marché.",
+      text: "Maîtrise des méthodes quantitatives — régression OLS et Logit, analyse de panel, tests d'hypothèses, statistiques descriptives et inférentielles — appliquées à la recherche académique et aux études de marché.",
       proofs: [
         {
           type: "Cours",
-          title: "Méthodes de recherche (R & statistiques)",
-          org: "NCCU",
-          meta: ["Cours académique"],
-          points: ["Méthodes quantitatives et visualisation pour analyses appliquées."],
+          title: "Research Methods (R & Statistics)",
+          org: "NCCU – Université Nationale Chengchi",
+          meta: ["Cours académique", "R Studio"],
+          points: [
+            "Régression linéaire et logistique, ANOVA, tests de corrélation.",
+            "Visualisation statistique et interprétation des résultats pour la prise de décision.",
+          ],
           actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
+        },
+        {
+          type: "Projet académique",
+          title: "Risky Deals – M&A & Risque Politique (Amérique Latine)",
+          org: "emlyon business school",
+          meta: ["R · OLS · Logit · Panel Data"],
+          points: [
+            "3 hypothèses testées sur données empiriques 2000–2024 (LSEG / Refinitiv, WGI, POLCON III).",
+            "Régression OLS panel (H1 volume M&A), modèle Logit (H2 abandon), OLS sur prime d'acquisition (H3).",
+          ],
+          actions: [{ label: "Voir le rapport", href: "assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf" }],
         },
         {
           type: "Certification",
           title: "Data Literacy",
           org: "—",
           meta: ["05/2026"],
-          points: ["Compréhension et interprétation des données pour la prise de décision."],
+          points: ["Lecture critique des données, interprétation des biais et communication des résultats."],
           actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }],
         },
       ],
