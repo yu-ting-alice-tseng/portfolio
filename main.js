@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
         kicker: "Marketing 360 · Activation · Contenu",
         title1: "Donner de l'impact aux marques, de la stratégie à l'activation.",
         title2: "de la croissance",
-        summary: "Étudiante en Master à emlyon business school, j'ai piloté des campagnes Xiaohongshu pour Engoo (+93% de vues, +89% d'interactions en 3 mois). Je combine créativité, data et sens de la marque pour faire grandir des communautés.",
+        summary: "Étudiante en Master à emlyon business school, je combine vision stratégique et exécution opérationnelle pour animer les marques. Forte d'expériences concrètes en marketing digital (réseau sociaux : +93% de vues ; campagnes publicitaires : +9,5% CTR, +5,1% CVR ) et d'une double culture franco-asiatique, je mets la créativité et l'analyse de données au service de la performance de vos campagnes.",
         ctaPrimary: "Voir mes créations",
         ctaSecondary: "Me contacter",
         cardRole: "Marketing digital & Création",
