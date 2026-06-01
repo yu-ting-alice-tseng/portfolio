@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
       marketingHero: {
         kicker: "Marketing 360 · Activation · Contenu",
         title1: "Donner de l'impact aux marques, ",
-        title2: "de la stratégie à l'activation.",
+        title2: "de la stratégie à l'activation",
         summary: "Étudiante en Master à emlyon business school, je combine vision stratégique et exécution opérationnelle pour animer les marques. Forte d'expériences concrètes en marketing digital (réseau sociaux : +93% de vues ; campagnes publicitaires : +9,5% CTR, +5,1% CVR ) et d'une double culture franco-asiatique, je mets la créativité et l'analyse de données au service de la performance de vos campagnes.",
         ctaPrimary: "Voir mes créations",
         ctaSecondary: "Me contacter",
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dataHero: {
         kicker: "Analyse de Données · Informatique Décisionnelle · Strétegie Commerciale",
         title1: "Des données brutes aux",
-        title2: "insights actionnables.",
+        title2: "insights actionnables",
         summary: "Étudiante en Master à emlyon business school, je me passionne pour l'intersection entre les chiffres et la stratégie d'entreprise. Maîtrisant les outils d'analyse (Excel/TOSA 950, SQL, Power BI, Python), je transforme les données complexes en tableaux de bord actionnables pour optimiser les performances commerciales et piloter les décisions.",
         ctaPrimary: "Télécharger le dashboard (Excel)",
         ctaSecondary: "Voir mes expériences",
