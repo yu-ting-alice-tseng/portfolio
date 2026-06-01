@@ -374,8 +374,8 @@ document.addEventListener("DOMContentLoaded", () => {
         caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance (NCCU). Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
       },
       marketingHero: {
-        kicker: "Marketing digital · Contenu · Performance",
-        title1: "Du contenu qui crée",
+        kicker: "Marketing 360 · Activation · Contenu",
+        title1: "Donner de l'impact aux marques, de la stratégie à l'activation.",
         title2: "de la croissance",
         summary: "Étudiante en Master à emlyon business school, j'ai piloté des campagnes Xiaohongshu pour Engoo (+93% de vues, +89% d'interactions en 3 mois). Je combine créativité, data et sens de la marque pour faire grandir des communautés.",
         ctaPrimary: "Voir mes créations",
