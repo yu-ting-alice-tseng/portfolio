@@ -1,18 +1,20 @@
 @echo off
+chcp 65001 > nul
 echo ===================================================
-echo [監控中] 網頁自動上傳雷達已啟動...請勿關閉此視窗！
+echo [MONITORING] Auto-upload radar is active...
+echo Please do not close this window!
 echo ===================================================
 
 :loop
 git add .
-:: 檢查有沒有檔案被修改，有的話才送出
+:: Check if there are any changes to commit
 git diff-index --quiet HEAD --
 if %errorlevel% neq 0 (
     git commit -m "Auto-update: File changed"
     git push origin main
-    echo [%date% %time%] 偵測到網頁更新，已成功同步上傳至 GitHub！
+    echo [%date% %time%] Changes detected! Successfully synced to GitHub.
 )
 
-:: 每一百秒（100秒）自動在背景檢查一次，你可以自由修改數字
-timeout /t 60 > nul
+:: Checks for updates in the background every 100 seconds
+timeout /t 100 > nul
 goto loop
