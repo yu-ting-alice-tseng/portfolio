@@ -2380,31 +2380,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "data-powerbi": {
       title: "Power BI – Tableaux De Bord",
       text: "Construction de tableaux de bord interactifs pour suivre les performances marketing et financières.",
-      proofs: [
-        {
-          type: "Projet",
-          title: "Dashboard marketing orienté business",
-          org: "Projet académique",
-          meta: ["Power BI · Excel avancé · Python"],
-          points: [
-            "Suivi d'acquisition, d'engagement et de rétention sur un seul tableau de bord.",
-            "Structuration des KPIs pour aider la prise de décision.",
-          ],
-        },
-      ],
+      proofs: [],
     },
     "data-tableau": {
       title: "Tableau – Visualisation De Données",
       text: "Création de visualisations interactives pour explorer et communiquer des indicateurs clés.",
-      proofs: [
-        {
-          type: "Projet",
-          title: "Dashboard marketing orienté business",
-          org: "Projet académique",
-          meta: ["Tableau · Power BI"],
-          points: ["Visualisation de KPIs et tendances pour l'aide à la décision."],
-        },
-      ],
+      proofs: [],
     },
     "data-statistics": {
       title: "Statistiques & Méthodes Quantitatives",
@@ -2454,13 +2435,6 @@ document.addEventListener("DOMContentLoaded", () => {
           meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
           points: ["Dashboard de suivi de performance marketing et automatisation de rapports."],
           actions: [{ label: "Voir l’expérience", href: "#exp-engoo" }],
-        },
-        {
-          type: "Projet",
-          title: "Dashboard marketing orienté business",
-          org: "Projet académique",
-          meta: ["Excel · Power BI"],
-          points: ["Modélisation, KPIs et visualisation."],
         },
         {
           type: "Expérience",
@@ -2536,16 +2510,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "Suivi de KPIs (trafic, CTR, conversions).",
           ],
           actions: [{ label: "Voir l’expérience", href: "#exp-kpn" }],
-        },
-        {
-          type: "Projet",
-          title: "Analyse de performance SEO pour une marque e‑commerce",
-          org: "Projet",
-          meta: ["GA · Search Console · SEMrush"],
-          points: [
-            "Audit SEO complet, analyse concurrence, recommandations contenus.",
-            "Suivi des indicateurs clés (trafic organique, CTR, conversions).",
-          ],
         },
         {
           type: "Certification",
