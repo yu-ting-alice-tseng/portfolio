@@ -2577,18 +2577,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "mkt-research": {
       title: "Études De Marché & Positionnement",
       text:
-        "Analyses de marché pour des marques B2C, avec segmentation, cartographie concurrentielle et recommandations.",
+        "Analyses de marché pour orienter la stratégie de contenu et le positionnement, avec segmentation et veille concurrentielle.",
       proofs: [
-        {
-          type: "Projet",
-          title: "Étude de marché – marque lifestyle",
-          org: "Projet",
-          meta: ["Europe · Asie"],
-          points: [
-            "Analyse de positionnement et cartographie concurrentielle.",
-            "Définition de segments cibles et recommandations stratégiques.",
-          ],
-        },
         {
           type: "Activité",
           title: "Co‑fondatrice – Sora Education",
@@ -2967,23 +2957,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     // ── Marketing Digital (nouvelles entrées) ────────────────────────
-    "mkt-email": {
-      title: "Emailing & Automation Marketing",
-      text: "Conception de newsletters, séquences emails et workflows d'automation pour la fidélisation et le nurturing.",
-      proofs: [
-        {
-          type: "Expérience",
-          title: "Assistante Marketing",
-          org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
-          points: [
-            "Rédaction et envoi de newsletters segmentées.",
-            "Mise en place de séquences d'automation pour le nurturing.",
-          ],
-          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
-        },
-      ],
-    },
     "mkt-campaign": {
       title: "Planification De Campagnes",
       text: "Planification, coordination et suivi de campagnes marketing multicanal (SEO, SEA, social media, emailing).",
@@ -3009,54 +2982,26 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    "mkt-crm": {
-      title: "CRM & Parcours Client",
-      text: "Gestion de la relation client, cartographie du parcours client (customer journey) et suivi des interactions.",
-      proofs: [
-        {
-          type: "Expérience",
-          title: "Assistante Marketing Digital",
-          org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
-          points: [
-            "Gestion et mise à jour de la base de données clients.",
-            "Analyse du parcours client pour optimiser les taux de conversion.",
-          ],
-          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
-        },
-        {
-          type: "Cours",
-          title: "Customer Relationship Management",
-          org: "emlyon business school",
-          meta: ["Cours académique"],
-          points: ["Stratégies de fidélisation, segmentation client et gestion de la valeur vie client (CLV)."],
-          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
-        },
-      ],
-    },
-
-    // ── Consulting & Strategy (nouvelles entrées) ────────────────────
+    // ── Consulting & Strategy ────────────────────
     "cons-strategy": {
       title: "Analyse Stratégique (SWOT, PESTEL, Porter)",
       text: "Analyse d'entreprises et de marchés via les frameworks SWOT, PESTEL et les 5 forces de Porter.",
       proofs: [
         {
-          type: "Cours",
-          title: "Strategic Management",
-          org: "emlyon business school",
-          meta: ["Cours académique"],
-          points: [
-            "Application des outils stratégiques (SWOT, PESTEL, Porter) à des cas réels.",
-            "Analyse concurrentielle et formulation de recommandations.",
-          ],
-          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: ["Analyse de marché et positionnement concurrentiel pour la stratégie de contenu REDnote."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
-          type: "Projet",
-          title: "Étude De Marché – Marque Lifestyle",
-          org: "Projet",
-          meta: ["Europe · Asie"],
-          points: ["Analyse PESTEL et concurrentielle, définition du positionnement stratégique."],
+          type: "Activité",
+          title: "Co‑Fondatrice – Sora Education",
+          org: "Projet entrepreneurial",
+          meta: ["Camps de jeunesse"],
+          points: ["Études de marché, segmentation et positionnement de l'offre de cours."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
       ],
     },
@@ -3065,21 +3010,20 @@ document.addEventListener("DOMContentLoaded", () => {
       text: "Analyse comparative des acteurs du marché pour identifier des opportunités de positionnement et de différenciation.",
       proofs: [
         {
-          type: "Projet",
-          title: "Analyse De Performance SEO – Marque E‑Commerce",
-          org: "Projet",
-          meta: ["SEMrush · Search Console"],
-          points: [
-            "Benchmarking SEO des concurrents directs.",
-            "Identification des opportunités de mots-clés et de contenu.",
-          ],
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: ["Veille concurrentielle approfondie pour optimiser la stratégie de contenu sur le segment du chinois simplifié."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
-          type: "Projet",
-          title: "Étude De Marché – Marque Lifestyle",
-          org: "Projet",
-          meta: ["Europe · Asie"],
-          points: ["Cartographie concurrentielle sur deux marchés géographiques."],
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Benchmarks concurrentiels approfondis et analyse de positionnement SEO/SEA."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
       ],
     },
@@ -3087,17 +3031,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Business Case & Recommandations",
       text: "Structuration et présentation de business cases avec recommandations actionnables et chiffrage.",
       proofs: [
-        {
-          type: "Cours",
-          title: "Case Studies & Consulting Projects",
-          org: "emlyon business school",
-          meta: ["Cours académique"],
-          points: [
-            "Résolution de cas d'entreprise et formulation de recommandations stratégiques.",
-            "Structuration de livrables et soutenance devant des jurys professionnels.",
-          ],
-          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
-        },
         {
           type: "Activité",
           title: "Co‑Fondatrice – Sora Education",
@@ -3127,14 +3060,6 @@ document.addEventListener("DOMContentLoaded", () => {
           meta: ["2022"],
           points: ["Présentation et animation en contexte interculturel franco-taïwanais."],
           actions: [{ label: "Voir activités", href: "#volunteer" }],
-        },
-        {
-          type: "Cours",
-          title: "Business Presentations & Case Pitching",
-          org: "emlyon business school",
-          meta: ["Lyon · France"],
-          points: ["Présentations de business cases devant des jurys professionnels."],
-          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
         },
       ],
     },
