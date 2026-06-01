@@ -256,6 +256,10 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
+.page-btn.is-active:focus-visible {
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3), 0 0 0 2px #fff, 0 0 0 4px #2563eb;
+}
+
 /* ── Mobile nav toggle ───────────────────────────── */
 .nav-toggle {
   display: none;
@@ -2720,6 +2724,10 @@ body {
 }
 .filter-btn.is-active {
   box-shadow: 0 3px 12px rgba(37, 99, 235, 0.25) !important;
+}
+
+.filter-btn.is-active:focus-visible {
+  box-shadow: 0 3px 12px rgba(37, 99, 235, 0.25), 0 0 0 2px #fff, 0 0 0 4px var(--accent) !important;
 }
 
 /* ── Proof cards in skill panel: better separation ─ */
