@@ -1236,8 +1236,8 @@ document.addEventListener("DOMContentLoaded", () => {
         tutorABC: {
           period: "08/2024 – Present",
           title: "Online English Tutor",
-          point1: "One-on-one online English tutoring for learners from primary to high school level.",
-          point2: "IELTS and Cambridge English exam preparation (YLE, A2 Key, B1 Preliminary, B2 First).",
+          point1: "One-on-one and group lessons online English tutoring for learners from primary to high school level.",
+          point2: "Pronunciation, speaking, beginner and Cambridge English exam preparation.",
           coursesLabel: "Courses taught",
           courseGradeSchool: "English (primary)",
           courseMiddle: "English (secondary)",
