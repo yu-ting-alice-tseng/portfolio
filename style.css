@@ -89,8 +89,8 @@ a { color: inherit; text-decoration: none; }
 .skip-link:focus { transform: translateY(0); }
 
 :focus-visible {
-  outline: 2px solid rgba(37, 99, 235, 0.5);
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(37, 99, 235, 0.6);
 }
 
 .container {
@@ -212,12 +212,6 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(135deg, #2563eb, #4f46e5);
   color: #fff;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-}
-
-.lang-btn:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2563eb;
-  border-radius: var(--radius-pill);
 }
 
 .lang-btn.is-active:focus-visible {
@@ -932,7 +926,10 @@ body.page-finance .hero h1 {
 
 .skill-card[type="button"] { width: auto; text-align: center; }
 
-.skill-card:focus-visible { outline-offset: 4px; }
+.skill-card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--accent);
+}
 
 .skill-card::after {
   content: "↗";
@@ -2656,11 +2653,10 @@ body {
   box-shadow: 0 18px 44px rgba(15, 23, 42, 0.13) !important;
 }
 
-/* ── Focus visible: branded outline ──────────────── */
+/* ── Focus visible: branded ring (box-shadow follows border-radius) ── */
 :focus-visible {
-  outline: 2px solid var(--accent) !important;
-  outline-offset: 3px !important;
-  border-radius: 4px;
+  outline: none !important;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--accent) !important;
 }
 
 /* ══════════════════════════════════════════════════
