@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       financeHero: {
         kicker: "Finance · Comptabilité · Conseil Stratégique",
-        title1: "Allier ",
+        title1: "Allier",
         title2: "rigueur analytique et vision stratégique.",
         summary: "Étudiante en Master à emlyon business school avec un double parcours Économie/Gestion, je développe une expertise forte en modélisation, en gestion des risques et en résolution de problèmes complexes. Rigoureuse, analytique et dotée d'une solide maîtrise d'Excel et de la business intelligence, je structure les analyses pour accompagner la transformation et la création de valeur.",
         ctaPrimary: "Me contacter",
