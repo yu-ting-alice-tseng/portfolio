@@ -214,6 +214,16 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
+.lang-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2563eb;
+  border-radius: var(--radius-pill);
+}
+
+.lang-btn.is-active:focus-visible {
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3), 0 0 0 2px #fff, 0 0 0 4px #2563eb;
+}
+
 /* ── Page switcher ────────────────────────────────── */
 .page-switch {
   display: flex;
