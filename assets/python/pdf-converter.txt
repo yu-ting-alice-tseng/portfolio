@@ -1,0 +1,123 @@
+import os
+import sys
+import win32com.client
+import time
+
+# Backward compatibility check for different pypdf versions
+try:
+    from pypdf import PdfMerger
+except ImportError:
+    try:
+        from pypdf import PdfFileMerger as PdfMerger
+    except ImportError:
+        from PyPDF2 import PdfMerger
+
+def convert_to_pdf(file_path):
+    """Handles the conversion of a single file to PDF"""
+    abs_path = os.path.abspath(file_path)
+    file_dir = os.path.dirname(abs_path)
+    file_name, file_ext = os.path.splitext(os.path.basename(abs_path))
+    file_ext = file_ext.lower()
+    pdf_path = os.path.join(file_dir, f"{file_name}.pdf")
+
+# 1. Handle Microsoft Office Files
+    if file_ext in ['.doc', '.docx']:
+        print(f"Converting Word: {file_name}{file_ext}")
+        word = win32com.client.Dispatch("Word.Application")
+        word.Visible = False
+        
+        # Open the document explicitly
+        doc = word.Documents.Open(abs_path)
+        import time
+        time.sleep(1) # Give Word exactly 1 second to breathe and load the file safely
+        
+        doc.SaveAs(pdf_path, FileFormat=17) # 17 = wdFormatPDF
+        doc.Close()
+        word.Quit()
+        return pdf_path
+
+    elif file_ext in ['.ppt', '.pptx']:
+        print(f"Converting PowerPoint: {file_name}{file_ext}")
+        powerpoint = win32com.client.Dispatch("PowerPoint.Application")
+        ppt = powerpoint.Presentations.Open(abs_path, WithWindow=False)
+        ppt.SaveAs(pdf_path, FileFormat=32) # 32 = ppSaveAsPDF
+        ppt.Close()
+        powerpoint.Quit()
+        return pdf_path
+
+    elif file_ext in ['.xls', '.xlsx']:
+        print(f"Converting Excel: {file_name}{file_ext}")
+        excel = win32com.client.Dispatch("Excel.Application")
+        excel.Visible = False
+        wb = excel.Workbooks.Open(abs_path)
+        wb.ExportAsFixedFormat(0, pdf_path) # 0 = xlTypePDF
+        wb.Close(False)
+        excel.Quit()
+        return pdf_path
+
+    # 2. Handle Images (JPG, PNG) using Word background engine
+    elif file_ext in ['.jpg', '.jpeg', '.png']:
+        print(f"Converting Image: {file_name}{file_ext}")
+        word = win32com.client.Dispatch("Word.Application")
+        word.Visible = False
+        doc = word.Documents.Add()
+        
+        # Set page margins to 0 to fit the image perfectly
+        doc.PageSetup.TopMargin = 0
+        doc.PageSetup.BottomMargin = 0
+        doc.PageSetup.LeftMargin = 0
+        doc.PageSetup.RightMargin = 0
+        
+        # Insert image and save as PDF
+        shape = doc.InlineShapes.AddPicture(FileName=abs_path, LinkToFile=False, SaveWithDocument=True)
+        doc.SaveAs(pdf_path, FileFormat=17)
+        doc.Close(False)
+        word.Quit()
+        return pdf_path
+
+    # 3. If it's already a PDF, keep the path for potential merging later
+    elif file_ext == '.pdf':
+        return abs_path
+
+    else:
+        print(f"Unsupported file format: {file_ext}")
+        return None
+
+if __name__ == "__main__":
+    files = sys.argv[1:]
+    
+    if not files:
+        print("Please drag and drop files onto this icon to process them.")
+        os.system("pause")
+        sys.exit()
+
+    pdf_list = []
+    
+    # Process each dropped file
+    for f in files:
+        if os.path.exists(f):
+            result_pdf = convert_to_pdf(f)
+            if result_pdf:
+                pdf_list.append(result_pdf)
+
+    # Check if we should merge PDFs
+    # Merge condition triggers ONLY if ALL dropped files were originally PDFs and there are more than 1
+    original_all_pdf = all(os.path.splitext(f)[1].lower() == '.pdf' for f in files)
+
+    if len(pdf_list) > 1 and original_all_pdf:
+        print("\nMultiple PDF files detected. Starting merge process...")
+        output_dir = os.path.dirname(pdf_list[0])
+        merged_pdf_path = os.path.join(output_dir, "merged_file.pdf")
+        
+        merger = PdfMerger()
+        for pdf in pdf_list:
+            merger.append(pdf)
+        
+        merger.write(merged_pdf_path)
+        merger.close()
+        print(f"🎉 Merged successfully! Saved as: merged_file.pdf")
+    else:
+        print("\nAll files processed successfully!")
+        
+    import time
+    time.sleep(2)

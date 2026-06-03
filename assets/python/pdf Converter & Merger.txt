@@ -1,0 +1,7 @@
+@echo off
+:: Use the Anaconda Python engine directly to execute the script and pass the dropped files (%*)
+"C:\Users\Bonita\anaconda\python.exe" "C:\Users\Bonita\Downloads\pdf_converter.py" %*
+
+echo.
+echo Process finished. Please check for any error messages above.
+pause
