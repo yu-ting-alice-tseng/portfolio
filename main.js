@@ -2477,7 +2477,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-excel": {
-      title: "Excel · TOSA 950/1000",
+      title: "Excel - TOSA 950/1000",
       text:
         "Modèles Excel avancés, suivi de KPIs et automatisation de reportings.",
       proofs: [
