@@ -2394,12 +2394,22 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           type: "Outil Personnel",
-          title: "Scripts d’automatisation – Productivité & Gestion de fichiers",
-          org: "Usage personnel",
-          meta: ["Python · Git · GitHub API"],
+          title: "PDF Converter & Merger",
+          org: "Python · win32com · pypdf",
+          meta: ["Glisser-déposer · Word / PowerPoint / Excel / Images → PDF"],
           points: [
-            "Conversion en masse de fichiers vers le format PDF (traitement automatisé de grands volumes de documents).",
-            "Synchronisation automatique des fichiers locaux vers GitHub (script de détection des modifications et push automatique).",
+            "Conversion par glisser-déposer de fichiers Word (.docx), PowerPoint (.pptx), Excel (.xlsx) et images (JPG/PNG) en PDF via l’API COM de Microsoft Office.",
+            "Fusion automatique de plusieurs PDFs en un fichier unique si tous les fichiers déposés sont déjà des PDFs.",
+          ],
+        },
+        {
+          type: "Outil Personnel",
+          title: "Auto-Push – Synchronisation automatique GitHub",
+          org: "Git CLI · Batch Script",
+          meta: ["Surveillance fichiers · git commit + push · toutes les 100s"],
+          points: [
+            "Script de surveillance qui détecte les modifications locales toutes les 100 secondes et exécute automatiquement git add → commit → push vers la branche main.",
+            "Maintient en permanence les fichiers locaux synchronisés avec GitHub sans intervention manuelle.",
           ],
         },
       ],
