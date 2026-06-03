@@ -607,6 +607,9 @@ document.addEventListener("DOMContentLoaded", () => {
         filterFinance: "Finance",
         filterMarketing: "Marketing",
         viewAll: "Voir tout",
+        subtitleFinance: "Finance, analyse de données et conseil stratégique.",
+        subtitleMarketing: "Social media, performance marketing, création de contenu et engagement communautaire.",
+        subtitleData: "Analyse de données, tableaux de bord et études de marché.",
       },
       portfolio: {
         title: "Portfolio – Social Media & Design",
@@ -978,6 +981,9 @@ document.addEventListener("DOMContentLoaded", () => {
         blockAI: "AI & Creative Tools",
         filterFinance: "Finance",
         filterSoft: "Soft Skills",
+        subtitleMarketing: "Digital marketing, content creation, data tools and AI for marketing.",
+        subtitleData: "Programming languages, tools, quantitative methods and market research.",
+        subtitleFinance: "Analytical tools, financial fundamentals and strategic skills.",
       },
       tags: {
         teaching: "Teaching",
@@ -1347,6 +1353,9 @@ document.addEventListener("DOMContentLoaded", () => {
         filterFinance: "Finance",
         filterMarketing: "Marketing",
         viewAll: "View all",
+        subtitleFinance: "Finance, data analysis and strategic consulting.",
+        subtitleMarketing: "Social media, performance marketing, content creation and community engagement.",
+        subtitleData: "Data analysis, dashboards and market research.",
       },
       portfolio: {
         title: "Portfolio – Social Media & Design",
