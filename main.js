@@ -612,6 +612,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Portfolio – Social Media & Design",
         subtitle: "Exemples concrets de contenus créés, de campagnes gérées et de travaux visuels.",
         viewPdf: "Voir le portfolio complet (PDF)",
+        engooCard: { dashboardDesc: "12 métriques / jour · Séries temporelles · Comparaison A/B de périodes." },
         engoo: {
           tag: "Social Media",
           title: "Engoo – Campagne Xiaohongshu",
@@ -870,6 +871,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     en: {
       brandName: "Yu‑Ting Tseng",
+      a11y: { skipLink: "Skip to content" },
       simpleNav: {
         resume: "Resume",
         viewPortfolioPdf: "Portfolio (PDF)",
@@ -973,12 +975,17 @@ document.addEventListener("DOMContentLoaded", () => {
         chipAiTools: "AI Tools (ChatGPT, Claude, Gemini)",
         chipAiAds: "AI-Powered Advertising",
         chipAiBusiness: "AI for Business",
+        blockAI: "AI & Creative Tools",
+        filterFinance: "Finance",
+        filterSoft: "Soft Skills",
       },
       tags: {
         teaching: "Teaching",
         online: "Online",
         translation: "Translation",
         proofreading: "Proofreading",
+        visualDesign: "Visual Design",
+        competition: "Competition",
         language: "Language",
         mentoring: "Mentoring",
         immersion: "Immersion",
@@ -1345,6 +1352,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Portfolio – Social Media & Design",
         subtitle: "Concrete examples of content created, campaigns managed and visual work produced.",
         viewPdf: "View full portfolio (PDF)",
+        engooCard: { dashboardDesc: "12 metrics / day · Time series · A/B period comparison." },
         engoo: {
           tag: "Social Media",
           title: "Engoo – Xiaohongshu Campaign",
