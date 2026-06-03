@@ -2788,6 +2788,124 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
+    // ── Finance – Analyse & Contrôle de Gestion ─────────────────────
+    "fin-accounting": {
+      title: "Financial Accounting",
+      text: "Maîtrise des états financiers (bilan, compte de résultat, flux de trésorerie), des normes comptables et de la comptabilité en partie double.",
+      proofs: [
+        {
+          type: "Formation",
+          title: "Spécialisation Finance & Comptabilité",
+          org: "emlyon business school",
+          meta: ["Lyon · France", "2023 – Présent"],
+          points: ["Financial Accounting : états financiers, consolidation, analyse des comptes annuels."],
+          actions: [{ label: "Voir la formation", href: "#education" }],
+        },
+      ],
+    },
+    "fin-pnl": {
+      title: "P&L Analysis",
+      text: "Analyse du compte de résultat pour identifier les leviers de rentabilité, décomposer les marges et piloter la performance.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Suivi de la performance financière des campagnes : ROI, coût par acquisition, taux de conversion (+5,1% CVR)."],
+          actions: [{ label: "Voir l'expérience", href: "#experience" }],
+        },
+        {
+          type: "Activité",
+          title: "Co-Fondatrice – Sora Education",
+          org: "Projet entrepreneurial",
+          meta: ["Camps de jeunesse"],
+          points: ["Suivi du P&L de 5 camps d'été : pilotage des revenus, des coûts variables et fixes, et atteinte de la rentabilité."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
+        },
+      ],
+    },
+    "fin-modeling": {
+      title: "Financial Modeling",
+      text: "Construction de modèles financiers pour la prévision budgétaire, la valorisation et l'analyse de scénarios.",
+      proofs: [
+        {
+          type: "Formation",
+          title: "Spécialisation Finance & Comptabilité",
+          org: "emlyon business school",
+          meta: ["Lyon · France", "2023 – Présent"],
+          points: ["Modélisation financière : projections, valorisation et analyse de sensibilité."],
+          actions: [{ label: "Voir la formation", href: "#education" }],
+        },
+      ],
+    },
+    "fin-variance": {
+      title: "Variance Analysis",
+      text: "Analyse des écarts entre prévisions et réalisations pour identifier les causes de sur- ou sous-performance et recommander des actions correctives.",
+      proofs: [
+        {
+          type: "Formation",
+          title: "Spécialisation Finance & Comptabilité",
+          org: "emlyon business school",
+          meta: ["Lyon · France", "2023 – Présent"],
+          points: ["Analyse des écarts budgétaires (prix, volume, mix) et identification des leviers d'action."],
+          actions: [{ label: "Voir la formation", href: "#education" }],
+        },
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Analyse des écarts de performance marketing (CTR, CVR) vs benchmarks mensuels et formulation de recommandations."],
+          actions: [{ label: "Voir l'expérience", href: "#experience" }],
+        },
+      ],
+    },
+    "fin-cost-control": {
+      title: "Channel & Cost Control",
+      text: "Pilotage des coûts par canal et optimisation des structures de coûts pour maximiser la rentabilité.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: ["Gestion des budgets publicitaires mensuels Facebook & Google Ads et optimisation du coût par acquisition (conversion rate +5.1%)."],
+          actions: [{ label: "Voir l'expérience", href: "#experience" }],
+        },
+        {
+          type: "Activité",
+          title: "Membre – AIESEC in NCCU",
+          org: "AIESEC",
+          meta: ["Taipei · Taïwan", "09/2024 – 06/2025"],
+          points: ["Gestion budgétaire d'un camp d'été : optimisation de la structure de coûts, dépassement de l'objectif de rentabilité de 53,7%."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
+        },
+      ],
+    },
+    "fin-management": {
+      title: "Management Accounting",
+      text: "Utilisation des données comptables pour la prise de décision interne : budgeting, reporting de gestion et contrôle de performance.",
+      proofs: [
+        {
+          type: "Formation",
+          title: "Spécialisation Finance & Comptabilité",
+          org: "emlyon business school",
+          meta: ["Lyon · France", "2023 – Présent"],
+          points: ["Management Accounting : budgeting, cost allocation, performance measurement et reporting de gestion."],
+          actions: [{ label: "Voir la formation", href: "#education" }],
+        },
+        {
+          type: "Activité",
+          title: "Co-Fondatrice – Sora Education",
+          org: "Projet entrepreneurial",
+          meta: ["Camps de jeunesse"],
+          points: ["Reporting financier mensuel pour 5 camps d'été : suivi budgétaire, analyse des coûts et pilotage de la rentabilité."],
+          actions: [{ label: "Voir activités", href: "#extracurricular" }],
+        },
+      ],
+    },
+
     "soft-communication": {
       title: "Communication & Prise De Parole",
       text:
@@ -3308,17 +3426,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const skillChips = document.querySelectorAll(".skill-card[data-skill]");
 
-  function setActiveSkill(key) {
-    skillChips.forEach((c) =>
-      c.classList.toggle("is-skill-active", c.getAttribute("data-skill") === key)
-    );
+  // Element-based selection: only the exact hovered/clicked chip is highlighted,
+  // preventing duplicates when the same data-skill key appears in multiple blocks.
+  function setActiveSkill(activeChipEl) {
+    skillChips.forEach((c) => c.classList.toggle("is-skill-active", c === activeChipEl));
   }
 
   skillChips.forEach((chip) => {
     chip.addEventListener("mouseenter", () => {
       const key = chip.getAttribute("data-skill");
       if (key) {
-        setActiveSkill(key);
+        setActiveSkill(chip);
         updateSkillPreview(key);
       }
     });
@@ -3394,8 +3512,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     applySkillArea("all");
-    setActiveSkill("data-r");
-    updateSkillPreview("data-r");
+    const initialChip = document.querySelector('.skill-card[data-skill="data-r"]');
+    if (initialChip) { setActiveSkill(initialChip); updateSkillPreview("data-r"); }
   }
 
   // Experience filters
