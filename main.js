@@ -195,8 +195,13 @@ document.addEventListener("DOMContentLoaded", () => {
         chipAiTools: "Outils IA (ChatGPT, Claude, Gemini)",
         chipAiAds: "Publicité Assistée par l'IA",
         chipAiBusiness: "IA Pour Les Affaires",
+        subtitleMarketing: "Marketing digital, création de contenu, outils data et IA pour le marketing.",
+        subtitleData: "Langages, outils, méthodes quantitatives et recherche de marché.",
+        subtitleFinance: "Outils analytiques, fondamentaux financiers et compétences stratégiques.",
+        blockAI: "IA & Outils créatifs",
+        blockDataMarketing: "Data pour le Marketing",
       },
-      tags: {
+      simpleNav: {
         teaching: "Enseignement",
         online: "En ligne",
         translation: "Traduction",
@@ -221,6 +226,19 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       locations: {
         online: "En ligne · Taïwan",
+        taipei: "Taipei · Taïwan",
+        taipeiEdu: "Taipei, Taïwan",
+        lyon: "Lyon, France",
+        paris: "Paris, France",
+        onlineOnly: "En ligne",
+        freelance: "Freelance",
+      },
+      footer: {
+        rights: "Tous droits réservés.",
+        overview: "Vue générale",
+        marketing: "Marketing digital & Création",
+        data: "Data & Recherche de marché",
+        finance: "Finance & Conseil",
       },
       education: {
         title: "Formation Académique",
