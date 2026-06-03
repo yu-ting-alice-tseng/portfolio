@@ -3735,7 +3735,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Render screenshots if defined for this skill
-    const activeLang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
     const images = data.imagesByLang?.[activeLang] ?? data.imagesByLang?.fr ?? [];
     if (images.length) {
       const gallery = document.createElement("div");
