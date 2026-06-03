@@ -2373,8 +2373,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-python": {
-      title: "Python – Analyse De Données",
-      text: "Scripts Python pour nettoyer les données, calculer des indicateurs et automatiser des analyses.",
+      title: "Python – Analyse & Automatisation",
+      text: "Utilisation de Python pour l’analyse de données, le traitement de fichiers et la création d’outils d’automatisation pour faciliter le travail quotidien.",
       proofs: [
         {
           type: "Cours",
@@ -2391,6 +2391,16 @@ document.addEventListener("DOMContentLoaded", () => {
           meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
           points: ["Collecte, nettoyage et traitement de données pour la recherche."],
           actions: [{ label: "Voir l’expérience", href: "#exp-research" }],
+        },
+        {
+          type: "Outil Personnel",
+          title: "Scripts d’automatisation – Productivité & Gestion de fichiers",
+          org: "Usage personnel",
+          meta: ["Python · Git · GitHub API"],
+          points: [
+            "Conversion en masse de fichiers vers le format PDF (traitement automatisé de grands volumes de documents).",
+            "Synchronisation automatique des fichiers locaux vers GitHub (script de détection des modifications et push automatique).",
+          ],
         },
       ],
     },
