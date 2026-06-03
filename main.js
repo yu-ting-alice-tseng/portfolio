@@ -2352,7 +2352,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillData = {
     "data-r": {
       title: "R – Analyse Statistique",
-      text: "Utilisation de RStudio pour l’analyse statistique, la visualisation et les études marketing et académiques.",
+      text: "Utilisation de RStudio pour l’analyse statistique, la visualisation et les études et académiques.",
       proofs: [
         {
           type: "Cours",
