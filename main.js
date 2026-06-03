@@ -3614,7 +3614,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const type = document.createElement("span");
       type.className = "proof-type";
-      type.textContent = proof.type || "Preuve";
+      const rawType = proof.type || "Preuve";
+      type.textContent = typeMap[rawType] ?? rawType;
 
       top.appendChild(type);
       card.appendChild(top);
@@ -3657,7 +3658,7 @@ document.addEventListener("DOMContentLoaded", () => {
         proof.actions.forEach((a) => {
           const link = document.createElement("a");
           link.href = a.href;
-          link.textContent = a.label;
+          link.textContent = actionMap[a.label] ?? a.label;
           actions.appendChild(link);
         });
         card.appendChild(actions);

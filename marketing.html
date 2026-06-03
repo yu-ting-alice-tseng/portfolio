@@ -154,11 +154,37 @@
             <p data-i18n="skills.subtitleMarketing">Marketing digital, création de contenu, outils data et IA pour le marketing.</p>
           </header>
 
+          <div class="experience-toolbar skills-toolbar">
+            <div class="experience-filters skills-filters" aria-label="Filtrer les compétences">
+              <button type="button" class="experience-filter is-active" data-skill-area="all">
+                <span data-i18n="skills.filterAll">Tout</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="marketing">
+                <span data-i18n="skills.filterMarketing">Marketing Digital</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="data">
+                <span data-i18n="skills.filterData">Data &amp; Analytics</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="creative">
+                <span data-i18n="skills.blockCreative">Outils Créatifs</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="ai">
+                <span data-i18n="skills.filterAI">IA &amp; Digital</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="office">
+                <span data-i18n="skills.filterOffice">Bureautique</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="languages">
+                <span data-i18n="skills.filterLanguages">Langues</span>
+              </button>
+            </div>
+          </div>
+
           <div class="skills-layout">
           <div class="skills-left">
           <div class="skills-grid">
 
-            <!-- Marketing block -->
+            <!-- Marketing Digital -->
             <div class="skills-block" data-skill-area="marketing" data-reveal>
               <h3 data-i18n="skills.blockMarketing">Marketing Digital</h3>
               <div class="skills-subgroup">
@@ -178,7 +204,6 @@
                   <button type="button" class="skill-card" data-skill="mkt-instagram">Instagram</button>
                   <button type="button" class="skill-card" data-skill="mkt-facebook">Facebook</button>
                   <button type="button" class="skill-card" data-skill="mkt-mbs">Meta Business Suite</button>
-                  <button type="button" class="skill-card" data-skill="mkt-canva">Canva</button>
                   <button type="button" class="skill-card" data-skill="mkt-design" data-i18n="skills.chipDesign">Création De Contenu &amp; Design Visuel</button>
                 </div>
               </div>
@@ -191,9 +216,9 @@
               </div>
             </div>
 
-            <!-- Data for Marketing -->
+            <!-- Data pour le Marketing -->
             <div class="skills-block" data-skill-area="data" data-reveal>
-              <h3>Data pour le Marketing</h3>
+              <h3 data-i18n="skills.blockDataMarketing">Data pour le Marketing</h3>
               <div class="skills-cards">
                 <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
                 <button type="button" class="skill-card" data-skill="data-powerbi">Power BI</button>
@@ -201,12 +226,43 @@
               </div>
             </div>
 
-            <!-- AI Tools -->
-            <div class="skills-block" data-skill-area="data" data-reveal>
-              <h3>IA &amp; Outils créatifs</h3>
+            <!-- Outils Créatifs -->
+            <div class="skills-block" data-skill-area="creative" data-reveal>
+              <h3 data-i18n="skills.blockCreative">Outils Créatifs</h3>
+              <div class="skills-subgroup">
+                <p class="skills-subtitle" data-i18n="skills.subCreativeGraphic">Design Graphique</p>
+                <div class="skills-cards">
+                  <button type="button" class="skill-card" data-skill="creative-canva">Canva</button>
+                  <button type="button" class="skill-card" data-skill="creative-figma">Figma</button>
+                  <button type="button" class="skill-card" data-skill="creative-illustrator">Adobe Illustrator</button>
+                  <button type="button" class="skill-card" data-skill="creative-acrobat">Adobe Acrobat</button>
+                </div>
+              </div>
+              <div class="skills-subgroup">
+                <p class="skills-subtitle" data-i18n="skills.subCreativeVideo">Montage Vidéo</p>
+                <div class="skills-cards">
+                  <button type="button" class="skill-card" data-skill="creative-capcut">CapCut</button>
+                  <button type="button" class="skill-card" data-skill="creative-blender">Blender</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Outils IA -->
+            <div class="skills-block" data-skill-area="ai" data-reveal>
+              <h3 data-i18n="skills.blockAI">Outils IA</h3>
               <div class="skills-cards">
                 <button type="button" class="skill-card" data-skill="ai-tools" data-i18n="skills.chipAiTools">Outils IA (ChatGPT, Claude, Gemini)</button>
                 <button type="button" class="skill-card" data-skill="ai-ads" data-i18n="skills.chipAiAds">Publicité Assistée par l'IA</button>
+              </div>
+            </div>
+
+            <!-- Suite Bureautique -->
+            <div class="skills-block" data-skill-area="office" data-reveal>
+              <h3 data-i18n="skills.blockOffice">Suite Bureautique</h3>
+              <div class="skills-cards">
+                <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
+                <button type="button" class="skill-card" data-skill="office-word">Microsoft Word</button>
+                <button type="button" class="skill-card" data-skill="office-powerpoint">Microsoft PowerPoint</button>
               </div>
             </div>
 
@@ -214,7 +270,7 @@
             <div class="skills-block" data-skill-area="languages" data-reveal>
               <h3 data-i18n="skills.blockLanguages">Langues</h3>
               <div class="skills-cards">
-                <button type="button" class="skill-card" data-skill="lang-mandarin" data-i18n="skills.chipMandarin">Mandarin</button>
+                <button type="button" class="skill-card" data-skill="lang-mandarin" data-i18n="skills.chipMandarin">Mandarin – Langue Maternelle</button>
                 <button type="button" class="skill-card" data-skill="lang-french" data-i18n="skills.chipFrench">Français – DALF C1</button>
                 <button type="button" class="skill-card" data-skill="lang-english" data-i18n="skills.chipEnglish">Anglais – IELTS 8.0 (C1)</button>
                 <button type="button" class="skill-card" data-skill="lang-japanese" data-i18n="skills.chipJapanese">Japonais – JLPT N1</button>
