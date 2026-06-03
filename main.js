@@ -200,7 +200,13 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitleMarketing: "Marketing digital, création de contenu, outils data et IA pour le marketing.",
         subtitleData: "Langages, outils, méthodes quantitatives et recherche de marché.",
         subtitleFinance: "Outils analytiques, fondamentaux financiers et compétences stratégiques.",
-        blockAI: "IA & Outils créatifs",
+        blockAI: "Outils IA",
+        blockOffice: "Suite Bureautique",
+        blockCreative: "Outils Créatifs",
+        subCreativeGraphic: "Design Graphique",
+        subCreativeVideo: "Montage Vidéo",
+        filterAI: "IA & Digital",
+        filterOffice: "Bureautique",
         blockDataMarketing: "Data pour le Marketing",
       },
       simpleNav: {
@@ -290,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
           major1: "Langues et Cultures Européennes : Parcours Français",
           major2: "Diplomatie",
           minor1: "Économie",
-          point1: "Certificate of Excellence (Top 5% GPA) – 2021, 2023.",
+          point1: "Certificate of Excellence (Top 7% GPA) – 2021, 2023.",
           point2: "Vice-présidente du Comité Local AIESEC in NCCU.",
           gpa: "3,99 / 4,0",
           statRanking: "Classement",
@@ -847,10 +853,10 @@ document.addEventListener("DOMContentLoaded", () => {
           year: "2024",
         },
         excellence: {
-          title: "Certificate of Excellence – Top 5% GPA",
+          title: "Certificate of Excellence – Top 7% GPA",
           org: "NCCU – Université Nationale Chengchi",
           text:
-            "Récompense académique pour des résultats parmi les 5 % meilleurs étudiants de NCCU.",
+            "Récompense académique pour des résultats parmi les 7 % meilleurs étudiants de NCCU.",
           year: "2021, 2023",
         },
       },
@@ -978,7 +984,13 @@ document.addEventListener("DOMContentLoaded", () => {
         chipAiTools: "AI Tools (ChatGPT, Claude, Gemini)",
         chipAiAds: "AI-Powered Advertising",
         chipAiBusiness: "AI for Business",
-        blockAI: "AI & Creative Tools",
+        blockAI: "AI Tools",
+        blockOffice: "Office Suite",
+        blockCreative: "Creative Tools",
+        subCreativeGraphic: "Graphic Design",
+        subCreativeVideo: "Video Editing",
+        filterAI: "AI & Digital",
+        filterOffice: "Office Suite",
         filterFinance: "Finance",
         filterSoft: "Soft Skills",
         subtitleMarketing: "Digital marketing, content creation, data tools and AI for marketing.",
@@ -1036,7 +1048,7 @@ document.addEventListener("DOMContentLoaded", () => {
           major1: "European Languages and Cultures: French Track",
           major2: "Diplomacy",
           minor1: "Economics",
-          point1: "Certificate of Excellence (Top 5% GPA) – 2021, 2023.",
+          point1: "Certificate of Excellence (Top 7% GPA) – 2021, 2023.",
           point2: "Participated in club activities (Public Speaking, Guzheng, Kyudo, Kendo) and held leadership roles in the Guzheng Club and AIESEC.",
           gpa: "4.21 / 4.3 (3.99 / 4.0)",
           statRanking: "Ranking",
@@ -1590,9 +1602,9 @@ document.addEventListener("DOMContentLoaded", () => {
           year: "2024",
         },
         excellence: {
-          title: "Certificate of Excellence – Top 5% GPA",
+          title: "Certificate of Excellence – Top 7% GPA",
           org: "NCCU – National Chengchi University",
-          text: "Awarded for maintaining a GPA within the top 5% of the cohort.",
+          text: "Awarded for maintaining a GPA within the top 7% of the cohort.",
           year: "2021, 2023",
         },
       },
@@ -3374,6 +3386,178 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
+
+    // ── Creative Tools ───────────────────────────────────────────────
+    "creative-canva": {
+      title: "Canva",
+      text: "Création de visuels pour réseaux sociaux, affiches, présentations et supports marketing.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo",
+          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          points: ["Création de templates et visuels A/B testés pour Xiaohongshu et Meta."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+        {
+          type: "Activité",
+          title: "Directrice Marketing – Club de Guzheng",
+          org: "NCCU",
+          meta: [],
+          points: ["Affiches de recrutement, visuels d'événements et publications Facebook."],
+          actions: [{ label: "Voir le portfolio", href: "#portfolio" }],
+        },
+      ],
+      en: {
+        title: "Canva",
+        text: "Creating visuals for social media, posters, presentations and marketing materials.",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Marketing Assistant",
+            org: "Engoo",
+            meta: ["Taipei · Taiwan", "10/2024 – 02/2025"],
+            points: ["Designed and A/B tested visual templates for Xiaohongshu and Meta."],
+            actions: [{ label: "View experience", href: "#exp-engoo" }],
+          },
+          {
+            type: "Activity",
+            title: "Marketing Director – Guzheng Club",
+            org: "NCCU",
+            meta: [],
+            points: ["Recruitment posters, event visuals and Facebook posts."],
+            actions: [{ label: "View portfolio", href: "#portfolio" }],
+          },
+        ],
+      },
+    },
+    "creative-figma": {
+      title: "Figma",
+      text: "Maquettes, wireframes et prototypes d'interfaces pour projets de design.",
+      proofs: [],
+      en: {
+        title: "Figma",
+        text: "Wireframes, mockups and interface prototypes for design projects.",
+        proofs: [],
+      },
+    },
+    "creative-illustrator": {
+      title: "Adobe Illustrator",
+      text: "Création de visuels vectoriels : logos, icônes et illustrations pour supports imprimés et digitaux.",
+      proofs: [],
+      en: {
+        title: "Adobe Illustrator",
+        text: "Creating vector graphics: logos, icons and illustrations for print and digital media.",
+        proofs: [],
+      },
+    },
+    "creative-acrobat": {
+      title: "Adobe Acrobat",
+      text: "Édition, fusion et mise en forme de PDFs professionnels.",
+      proofs: [],
+      en: {
+        title: "Adobe Acrobat",
+        text: "Editing, merging and formatting professional PDF documents.",
+        proofs: [],
+      },
+    },
+    "creative-capcut": {
+      title: "CapCut",
+      text: "Montage vidéo court pour réseaux sociaux (Xiaohongshu, Instagram Reels, TikTok).",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing",
+          org: "Engoo",
+          meta: ["Xiaohongshu"],
+          points: ["Montage de vidéos courtes pour les campagnes de contenu."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+      ],
+      en: {
+        title: "CapCut",
+        text: "Short-form video editing for social media (Xiaohongshu, Instagram Reels, TikTok).",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Marketing Assistant",
+            org: "Engoo",
+            meta: ["Xiaohongshu"],
+            points: ["Edited short-form videos for content campaigns."],
+            actions: [{ label: "View experience", href: "#exp-engoo" }],
+          },
+        ],
+      },
+    },
+    "creative-blender": {
+      title: "Blender",
+      text: "Modélisation 3D et rendu pour visuels créatifs et animations.",
+      proofs: [],
+      en: {
+        title: "Blender",
+        text: "3D modelling and rendering for creative visuals and animations.",
+        proofs: [],
+      },
+    },
+
+    // ── Office Suite ─────────────────────────────────────────────────
+    "office-word": {
+      title: "Microsoft Word",
+      text: "Rédaction et mise en forme de documents professionnels : rapports, notes de synthèse et supports académiques.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante de recherche",
+          org: "Institut des Relations Internationales (NCCU)",
+          meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
+          points: ["Rédaction de synthèses quantitatives et supports pour séminaires."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
+        },
+      ],
+      en: {
+        title: "Microsoft Word",
+        text: "Writing and formatting professional documents: reports, summaries and academic papers.",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Research Assistant",
+            org: "Institute of International Relations (NCCU)",
+            meta: ["Taipei · Taiwan", "06/2023 – 12/2023"],
+            points: ["Produced quantitative summaries and seminar materials."],
+            actions: [{ label: "View experience", href: "#exp-research" }],
+          },
+        ],
+      },
+    },
+    "office-powerpoint": {
+      title: "Microsoft PowerPoint",
+      text: "Création de présentations professionnelles et de supports de soutenance.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante d'enseignement",
+          org: "College of Global Banking and Finance, NCCU",
+          meta: ["Taipei · Taïwan"],
+          points: ["Préparation de supports de cours et présentations de briefings."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-teaching" }],
+        },
+      ],
+      en: {
+        title: "Microsoft PowerPoint",
+        text: "Creating professional presentations and pitch decks.",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Teaching Assistant",
+            org: "College of Global Banking and Finance, NCCU",
+            meta: ["Taipei · Taiwan"],
+            points: ["Prepared course materials and project briefing decks."],
+            actions: [{ label: "View experience", href: "#exp-teaching" }],
+          },
+        ],
+      },
+    },
   };
 
   const previewContainer = document.querySelector(".skill-preview");
@@ -3384,8 +3568,26 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateSkillPreview(key) {
     if (!previewContainer || !previewTitle || !previewText || !previewProofs)
       return;
-    const data = skillData[key];
-    if (!data) return;
+    const baseData = skillData[key];
+    if (!baseData) return;
+    const activeLang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
+    const data = (activeLang !== "fr" && baseData[activeLang]) ? { ...baseData, ...baseData[activeLang] } : baseData;
+
+    // Translate proof type labels for EN
+    const typeMap = activeLang === "en" ? {
+      "Cours": "Course", "Expérience": "Experience", "Certification": "Certification",
+      "Portfolio": "Portfolio", "Activité": "Activity", "Pratique": "Practice",
+      "Projet académique": "Academic Project", "Formation": "Education",
+      "Bénévolat": "Volunteering", "Projet": "Project", "Certificat": "Certificate",
+      "Lien": "Link", "Outil Personnel": "Personal Tool", "Preuve": "Proof",
+    } : {};
+    const actionMap = activeLang === "en" ? {
+      "Voir l'expérience": "View experience", "Voir la formation": "View education",
+      "Ouvrir le certificat": "Open certificate", "Voir le portfolio": "View portfolio",
+      "Voir activités": "View activities", "Voir le rapport": "Read report",
+      "Ouvrir": "Open", "Voir l'engagement": "View engagement",
+    } : {};
+
     previewTitle.textContent = data.title;
     previewText.textContent = data.text;
 
@@ -3393,12 +3595,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ? data.proofs
       : Array.isArray(data.links)
         ? data.links.map((l) => ({
-            type: "Lien",
+            type: activeLang === "en" ? "Link" : "Lien",
             title: l.label,
             org: "",
             meta: [],
             points: [],
-            actions: [{ label: "Ouvrir", href: l.href }],
+            actions: [{ label: activeLang === "en" ? "Open" : "Ouvrir", href: l.href }],
           }))
         : [];
 
