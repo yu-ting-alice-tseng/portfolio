@@ -149,6 +149,32 @@
             <p data-i18n="skills.subtitleFinance">Outils analytiques, fondamentaux financiers et compétences stratégiques.</p>
           </header>
 
+          <div class="experience-toolbar skills-toolbar">
+            <div class="experience-filters skills-filters" aria-label="Filtrer les compétences">
+              <button type="button" class="experience-filter is-active" data-skill-area="all">
+                <span data-i18n="skills.filterAll">Tout</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="data">
+                <span data-i18n="skills.filterData">Data &amp; Analytics</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="finance">
+                <span data-i18n="skills.filterFinance">Finance</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="consulting">
+                <span data-i18n="skills.filterConsulting">Consulting &amp; Stratégie</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="ai">
+                <span data-i18n="skills.filterAI">IA &amp; Digital</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="office">
+                <span data-i18n="skills.filterOffice">Bureautique</span>
+              </button>
+              <button type="button" class="experience-filter" data-skill-area="languages">
+                <span data-i18n="skills.filterLanguages">Langues</span>
+              </button>
+            </div>
+          </div>
+
           <div class="skills-layout">
           <div class="skills-left">
           <div class="skills-grid">
@@ -167,7 +193,7 @@
               <div class="skills-subgroup">
                 <p class="skills-subtitle" data-i18n="skills.subData2">Dashboards &amp; Visualisation</p>
                 <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-excel">Excel - TOSA 950/1000</button>
+                  <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
                   <button type="button" class="skill-card" data-skill="data-powerbi">Power BI</button>
                   <button type="button" class="skill-card" data-skill="data-tableau">Tableau</button>
                 </div>
@@ -231,11 +257,30 @@
               </div>
             </div>
 
+            <!-- Outils IA -->
+            <div class="skills-block" data-skill-area="ai" data-reveal>
+              <h3 data-i18n="skills.blockAI">Outils IA</h3>
+              <div class="skills-cards">
+                <button type="button" class="skill-card" data-skill="ai-tools" data-i18n="skills.chipAiTools">Outils IA (ChatGPT, Claude, Gemini)</button>
+                <button type="button" class="skill-card" data-skill="ai-business" data-i18n="skills.chipAiBusiness">IA Pour Les Affaires</button>
+              </div>
+            </div>
+
+            <!-- Suite Bureautique -->
+            <div class="skills-block" data-skill-area="office" data-reveal>
+              <h3 data-i18n="skills.blockOffice">Suite Bureautique</h3>
+              <div class="skills-cards">
+                <button type="button" class="skill-card" data-skill="data-excel">Excel · TOSA 950/1000</button>
+                <button type="button" class="skill-card" data-skill="office-word">Microsoft Word</button>
+                <button type="button" class="skill-card" data-skill="office-powerpoint">Microsoft PowerPoint</button>
+              </div>
+            </div>
+
             <!-- Languages -->
             <div class="skills-block" data-skill-area="languages" data-reveal>
               <h3 data-i18n="skills.blockLanguages">Langues</h3>
               <div class="skills-cards">
-                <button type="button" class="skill-card" data-skill="lang-mandarin" data-i18n="skills.chipMandarin">Mandarin - Langue Maternelle</button>
+                <button type="button" class="skill-card" data-skill="lang-mandarin" data-i18n="skills.chipMandarin">Mandarin – Langue Maternelle</button>
                 <button type="button" class="skill-card" data-skill="lang-french" data-i18n="skills.chipFrench">Français – DALF C1</button>
                 <button type="button" class="skill-card" data-skill="lang-english" data-i18n="skills.chipEnglish">Anglais – IELTS 8.0 (C1)</button>
                 <button type="button" class="skill-card" data-skill="lang-japanese" data-i18n="skills.chipJapanese">Japonais – JLPT N1</button>
