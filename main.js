@@ -2429,7 +2429,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillData = {
     "data-r": {
       title: "R – Analyse Statistique",
-      text: "Utilisation de RStudio pour l’analyse statistique, la visualisation et les études et académiques.",
+      text: "Utilisation de RStudio pour l’analyse statistique, la visualisation et les études académiques.",
+      byPage: {
+        finance:   { text: "Régressions OLS et Logit, analyse de panel et tests d’hypothèses appliqués à la recherche en finance quantitative (M&A, données LSEG)." },
+        data:      { text: "Méthodes quantitatives : régressions, ANOVA, visualisations statistiques et études de marché pour des analyses actionnables." },
+        marketing: { text: "Études de marché et segmentation : R utilisé pour analyser les données d’audience et valider les stratégies de contenu." },
+      },
+      en: {
+        title: "R – Statistical Analysis",
+        text: "Using RStudio for statistical analysis, visualisation and academic research.",
+        byPage: {
+          finance:   { text: "OLS and logit regressions, panel data analysis and hypothesis testing applied to quantitative finance research (M&A, LSEG data)." },
+          data:      { text: "Quantitative methods: regressions, ANOVA, statistical visualisation and market studies for actionable insights." },
+          marketing: { text: "Market research and audience segmentation: R used to analyse audience data and validate content strategies." },
+        },
+      },
       proofs: [
         {
           type: "Cours",
@@ -2452,6 +2466,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "data-python": {
       title: "Python – Analyse & Automatisation",
       text: "Utilisation de Python pour l’analyse de données, le traitement de fichiers et la création d’outils d’automatisation pour faciliter le travail quotidien.",
+      byPage: {
+        finance:   { text: "Automatisation de la consolidation de données financières et génération de rapports de performance marketing (CTR, CVR, ROI)." },
+        data:      { text: "Scripts de nettoyage de données, calcul d’indicateurs et automatisation de la consolidation de données quotidiennes." },
+        marketing: { text: "Script Python d’automatisation de la consolidation des données Xiaohongshu, réduisant le temps de reporting quotidien." },
+      },
+      en: {
+        title: "Python – Analysis & Automation",
+        text: "Using Python for data analysis, file processing and automation tools to streamline everyday tasks.",
+        byPage: {
+          finance:   { text: "Automated financial data consolidation and marketing performance report generation (CTR, CVR, ROI)." },
+          data:      { text: "Data cleaning scripts, metric computation and automated daily data consolidation pipelines." },
+          marketing: { text: "Python automation script for Xiaohongshu data consolidation, cutting daily reporting time significantly." },
+        },
+      },
       proofs: [
         {
           type: "Cours",
@@ -2520,6 +2548,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "data-statistics": {
       title: "Statistiques & Méthodes Quantitatives",
       text: "Maîtrise des méthodes quantitatives — régression OLS et Logit, analyse de panel, tests d'hypothèses, statistiques descriptives et inférentielles — appliquées à la recherche académique et aux études de marché.",
+      byPage: {
+        finance:   { text: "Régressions OLS et Logit sur données LSEG/Refinitiv (2000–2024) pour tester l'impact du risque politique sur les opérations M&A." },
+        data:      { text: "Méthodes quantitatives appliquées : régressions multivariées, analyse de corrélation et tests d'hypothèses pour la recherche et l'analyse de marché." },
+        marketing: { text: "A/B testing statistique et segmentation d'audience pour mesurer l'impact des créas et identifier les leviers de croissance sur Xiaohongshu." },
+      },
+      en: {
+        title: "Statistics & Quantitative Methods",
+        text: "Proficient in quantitative methods — OLS and logit regression, panel data analysis, hypothesis testing, descriptive and inferential statistics — applied to academic research and market studies.",
+        byPage: {
+          finance:   { text: "OLS and logit regressions on LSEG/Refinitiv data (2000–2024) to test the impact of political risk on M&A transactions." },
+          data:      { text: "Applied quantitative methods: multivariate regressions, correlation analysis and hypothesis testing for research and market analysis." },
+          marketing: { text: "Statistical A/B testing and audience segmentation to measure creative impact and identify growth drivers on Xiaohongshu." },
+        },
+      },
       proofs: [
         {
           type: "Cours",
@@ -2606,6 +2648,20 @@ document.addEventListener("DOMContentLoaded", () => {
           { src: "assets/Engoo Dashboard_EN.png", alt: "Performance Dashboard – Engoo XHS" },
           { src: "assets/Engoo Data_EN.png",      alt: "Raw Data – Engoo XHS" },
         ],
+      },
+      byPage: {
+        finance:   { text: "Modèles Excel avancés pour le reporting financier, le suivi de KPIs (CTR, CVR, ROI) et la gestion de budgets publicitaires mensuels." },
+        data:      { text: "Dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) pour suivre 12 métriques quotidiennes et comparer des périodes A/B." },
+        marketing: { text: "Suivi de la performance des campagnes : automatisation du tableau de bord XHS (12 KPIs/jour, comparaison A/B de périodes)." },
+      },
+      en: {
+        title: "Excel – TOSA 950/1000",
+        text:  "Advanced Excel models, KPI tracking and automated reporting.",
+        byPage: {
+          finance:   { text: "Advanced Excel models for financial reporting, KPI tracking (CTR, CVR, ROI) and monthly ad-budget management." },
+          data:      { text: "Dynamic Excel dashboard (Pivot Tables, nested formulas) tracking 12 daily metrics with automated A/B period comparison." },
+          marketing: { text: "Campaign performance tracking: built and automated the XHS dashboard (12 KPIs/day, A/B period comparison) to optimise content strategy." },
+        },
       },
     },
     "data-access": {
@@ -3571,7 +3627,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const baseData = skillData[key];
     if (!baseData) return;
     const activeLang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
-    const data = (activeLang !== "fr" && baseData[activeLang]) ? { ...baseData, ...baseData[activeLang] } : baseData;
+    const pageCtx = document.body.classList.contains("page-finance") ? "finance"
+                  : document.body.classList.contains("page-data")    ? "data"
+                  : document.body.classList.contains("page-marketing") ? "marketing"
+                  : "general";
+    // Pick language layer, then page context on top
+    const langOverride = activeLang !== "fr" ? baseData[activeLang] : null;
+    const langData = langOverride ? { ...baseData, ...langOverride } : baseData;
+    // byPage lives on the language-specific override when present, else on base
+    const byPageSource = langOverride?.byPage ?? baseData.byPage;
+    const pageLayer = byPageSource?.[pageCtx] ?? null;
+    const data = pageLayer ? { ...langData, ...pageLayer } : langData;
 
     // Translate proof type labels for EN
     const typeMap = activeLang === "en" ? {
