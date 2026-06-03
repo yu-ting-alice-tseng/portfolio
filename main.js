@@ -2381,8 +2381,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Programming 101 (Python)",
           org: "NCCU",
           meta: ["Cours académique"],
-          points: ["Bases de la programmation et application à l’analyse de données."],
-          actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
+          points: ["Bases de la programmation et application à l’analyse de données."]
         },
         {
           type: "Expérience",
