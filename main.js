@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dataHero: {
         kicker: "Analyse de Données · Informatique Décisionnelle · Strétegie Commerciale",
         title1: "Des données brutes aux",
-        title2: "insights actionnables",
+        title2: "insights actionnables.",
         summary: "Étudiante en Master à emlyon business school, je me passionne pour l'intersection entre les chiffres et la stratégie d'entreprise. Maîtrisant les outils d'analyse (Excel/TOSA 950, SQL, Power BI, Python), je transforme les données complexes en tableaux de bord actionnables pour optimiser les performances commerciales et piloter les décisions.",
         ctaPrimary: "Télécharger le dashboard (Excel)",
         ctaSecondary: "Voir mes expériences",
@@ -1107,7 +1107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dataHero: {
         kicker: "Data analysis · Market research · Quantitative methods",
         title1: "From raw data to",
-        title2: "strategic insights",
+        title2: "strategic insights.",
         summary: "Master's student at emlyon business school, I turn complex datasets into actionable decisions. Proficient in R, Python, SQL, Excel (TOSA 950/1000), Power BI and Tableau — applied to market research and performance analytics.",
         ctaPrimary: "Download dashboard (Excel)",
         ctaSecondary: "View my experience",
