@@ -866,7 +866,7 @@ document.addEventListener("DOMContentLoaded", () => {
         locationLabel: "Based in",
         locationValue: "Lyon, France",
         availabilityLabel: "Available from",
-        availabilityValue: "July 2026 / January 2027 (6-month gap internship)",
+        availabilityValue: "July 2026 / January 2027 (6-month gap year internship)",
         ctaPrimary: "Contact me",
         ctaSecondary: "View my experience",
         cardName: "Yu‑Ting Tseng",
