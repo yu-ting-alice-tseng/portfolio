@@ -987,6 +987,7 @@ document.addEventListener("DOMContentLoaded", () => {
         blockAI: "AI Tools",
         blockOffice: "Office Suite",
         blockCreative: "Creative Tools",
+        blockDataMarketing: "Data for Marketing",
         subCreativeGraphic: "Graphic Design",
         subCreativeVideo: "Video Editing",
         filterAI: "AI & Digital",
@@ -2596,7 +2597,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "data-excel": {
-      title: "Excel - TOSA 950/1000",
+      title: "Excel · TOSA 950/1000",
       text:
         "Modèles Excel avancés, suivi de KPIs et automatisation de reportings.",
       proofs: [
