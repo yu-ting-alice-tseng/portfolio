@@ -2378,7 +2378,7 @@ document.addEventListener("DOMContentLoaded", () => {
       proofs: [
         {
           type: "Cours",
-          title: "Programming 101 (Python)",
+          title: "Programmation 101 (Python)",
           org: "NCCU",
           meta: ["Cours académique"],
           points: ["Bases de la programmation et application à l’analyse de données."]
