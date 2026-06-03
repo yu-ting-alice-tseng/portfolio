@@ -484,10 +484,34 @@
     }
     .pf-footer-link {
       font-size: 0.7rem; font-weight: 400; letter-spacing: 0.08em;
-      color: var(--lx-muted); text-decoration: none; transition: color 0.2s;
+      color: var(--lx-muted); text-decoration: none;
+      transition: color 0.2s, background 0.2s;
       font-family: 'Inter', sans-serif;
+      padding: 0.3rem 0.65rem;
+      border-radius: 2px;
     }
-    .pf-footer-link:hover { color: var(--lx-gold); }
+    .pf-footer-link:hover { color: var(--lx-gold); background: rgba(197,165,90,0.08); }
+
+    /* ── Chart + caption blocks ─────────────────────────── */
+    .pf-chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 720px) { .pf-chart-grid { grid-template-columns: 1fr; } }
+    .pf-chart-item { display: flex; flex-direction: column; }
+    .pf-chart-item .pf-img-wrap { flex-shrink: 0; }
+    .pf-img-caption {
+      padding: 0.65rem 0.9rem;
+      background: rgba(197,165,90,0.04);
+      border-left: 1.5px solid rgba(197,165,90,0.30);
+      font-size: 0.77rem;
+      line-height: 1.72;
+      color: var(--lx-text-soft);
+      font-weight: 300;
+    }
+    .pf-img-caption strong { color: var(--lx-text); font-weight: 500; }
     .pf-footer-credit {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.82rem; color: var(--lx-muted); opacity: 0.35; text-align: center;
@@ -688,8 +712,12 @@
     <!-- ── 02 · M&A Research (featured) ─────────────── -->
     <article class="pf-card pf-card--featured" data-cat="recherche">
       <div class="pf-card-num" data-i18n="portfolio.data.ma.num">02 · Recherche empirique · Finance quantitative</div>
-      <span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">R · Quantitative Finance · Empirical Research</span>
-      <h2 class="pf-card-title">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
+      <div data-lang-show="fr"><span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">R · Finance Quantitative · Recherche Empirique</span></div>
+      <div data-lang-show="en"><span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">R · Quantitative Finance · Empirical Research</span></div>
+      <div data-lang-show="zh"><span class="pf-card-tag" style="background:var(--cl-accent);color:#fff;border-color:var(--cl-accent);">R · 量化金融 · 實證研究</span></div>
+      <h2 class="pf-card-title" data-lang-show="fr">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
+      <h2 class="pf-card-title" data-lang-show="en">Risky Deals: Cross-border M&amp;A &amp; Political Risk in Latin America</h2>
+      <h2 class="pf-card-title" data-lang-show="zh">Risky Deals：跨境併購與拉丁美洲政治風險</h2>
       <p class="pf-card-body" style="font-style:italic;" data-i18n="portfolio.data.ma.subtitle">
         Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
       </p>
@@ -735,28 +763,65 @@
         </div>
       </div>
 
-      <!-- Charts 2×2 -->
-      <div class="pf-imgs pf-imgs--2x2">
-        <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
-           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
-          <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
-               alt="POLCON – Average political constraints by region" loading="lazy">
-        </a>
-        <a href="assets/R_M%26A%20Deal%20Analysis/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-03%20170233.png"
-           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:5/2;">
-          <img src="assets/R_M%26A%20Deal%20Analysis/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-03%20170233.png"
-               alt="H1 – Political Risk & M&A Transaction Volume (WGI · POLCON III · FSI)" loading="lazy">
-        </a>
-        <a href="assets/R_M%26A%20Deal%20Analysis/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-03%20170324.png"
-           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:5/2;">
-          <img src="assets/R_M%26A%20Deal%20Analysis/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-03%20170324.png"
-               alt="H2 – Political Risk & M&A Transaction Abandonment (WGI · POLCON III · FSI)" loading="lazy">
-        </a>
-        <a href="assets/R_M%26A%20Deal%20Analysis/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-03%20170344.png"
-           target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:5/2;">
-          <img src="assets/R_M%26A%20Deal%20Analysis/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-06-03%20170344.png"
-               alt="H3 – Political Risk & M&A Transaction Premium (WGI · POLCON III · FSI)" loading="lazy">
-        </a>
+      <!-- Charts with individual captions -->
+      <div class="pf-chart-grid">
+
+        <!-- Chart 1 – POLCON Overview -->
+        <div class="pf-chart-item">
+          <a href="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
+             target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+            <img src="assets/R_M%26A%20Deal%20Analysis/00_POLCON/Average%20Political%20Constraints%20by%20Region.png"
+                 alt="POLCON – Average political constraints by region" loading="lazy">
+          </a>
+          <div class="pf-img-caption">
+            <div data-lang-show="fr"><strong>Contexte :</strong> Contraintes politiques moyennes par région (POLCON III). L'Amérique Latine présente des contraintes institutionnelles nettement inférieures aux démocraties établies, ce qui justifie l'étude de l'impact du risque politique sur les décisions M&amp;A.</div>
+            <div data-lang-show="en"><strong>Context:</strong> Average political constraints by region (POLCON III). Latin America exhibits significantly lower institutional constraints than established democracies, motivating the study of political risk's impact on M&amp;A decisions.</div>
+            <div data-lang-show="zh"><strong>背景：</strong>各地區平均政治約束指數（POLCON III）。拉丁美洲的制度約束程度顯著低於成熟民主國家，為研究政治風險對併購決策的影響提供了理論依據。</div>
+          </div>
+        </div>
+
+        <!-- Chart 2 – H1 Volume -->
+        <div class="pf-chart-item">
+          <a href="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%ADA%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
+             target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+            <img src="assets/R_M%26A%20Deal%20Analysis/01_Hypothesis%201_%EF%BC%ADA%26A%20Volume%20%26%20Political%20Risk/M%26A%20Volume%20%26%20WGI_Chart.png"
+                 alt="H1 – M&A Volume & WGI Index" loading="lazy">
+          </a>
+          <div class="pf-img-caption">
+            <div data-lang-show="fr"><strong>H1 — Volume M&amp;A :</strong> Le volume des transactions en Amérique Latine corrèle positivement avec l'indice WGI. Une meilleure gouvernance attire davantage de capitaux étrangers — hypothèse confirmée (p &lt; 0,05).</div>
+            <div data-lang-show="en"><strong>H1 — M&amp;A Volume:</strong> Deal volume in Latin America correlates positively with the WGI index. Stronger governance attracts more foreign capital — hypothesis confirmed (p &lt; 0.05).</div>
+            <div data-lang-show="zh"><strong>H1 — 交易量：</strong>拉丁美洲M&amp;A交易量與WGI指數呈正相關。治理水準提升吸引更多外資進入——假設確認（p &lt; 0.05）。</div>
+          </div>
+        </div>
+
+        <!-- Chart 3 – H2 Abandonment -->
+        <div class="pf-chart-item">
+          <a href="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Chart.png"
+             target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+            <img src="assets/R_M%26A%20Deal%20Analysis/02_Hypothesis%202_M%26A%20Abandonment%20%26%20Political%20Risk/M%26A%20Abandonment%20%26%20WGI_Chart.png"
+                 alt="H2 – M&A Abandonment & WGI Index" loading="lazy">
+          </a>
+          <div class="pf-img-caption">
+            <div data-lang-show="fr"><strong>H2 — Abandon de transaction :</strong> La dégradation du WGI prédit significativement l'annulation d'opérations M&amp;A (p &lt; 0,05). Résultat directement exploitable pour la due diligence politique.</div>
+            <div data-lang-show="en"><strong>H2 — Deal Abandonment:</strong> WGI deterioration significantly predicts deal cancellation (p &lt; 0.05). Directly actionable for political due diligence assessments.</div>
+            <div data-lang-show="zh"><strong>H2 — 交易取消：</strong>WGI惡化顯著預測M&amp;A交易取消率（p &lt; 0.05）。可直接應用於政治盡職調查評估中。</div>
+          </div>
+        </div>
+
+        <!-- Chart 4 – H3 Premium -->
+        <div class="pf-chart-item">
+          <a href="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
+             target="_blank" rel="noopener noreferrer" class="pf-img-wrap" style="aspect-ratio:4/3;">
+            <img src="assets/R_M%26A%20Deal%20Analysis/03_Hypothesis%203_M%26A%20Premium%20%26%20Political%20Risk/M%26A%20Premium%20%26%20WGI_Chart.png"
+                 alt="H3 – M&A Acquisition Premium & WGI Index" loading="lazy">
+          </a>
+          <div class="pf-img-caption">
+            <div data-lang-show="fr"><strong>H3 — Prime d'acquisition :</strong> Les acquéreurs tendent à payer une prime plus élevée lorsque le risque politique est fort — hypothèse partiellement confirmée. Le risque institutionnel est intégré implicitement dans la valorisation.</div>
+            <div data-lang-show="en"><strong>H3 — Acquisition Premium:</strong> Acquirers tend to pay a higher premium when political risk is elevated — hypothesis partially confirmed. Institutional risk is implicitly priced into deal valuations.</div>
+            <div data-lang-show="zh"><strong>H3 — 收購溢價：</strong>在政治風險較高時，收購方傾向支付更高溢價——假設部分確認。制度風險被隱性納入交易估值之中。</div>
+          </div>
+        </div>
+
       </div>
 
       <div class="pf-result-callout">

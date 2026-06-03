@@ -124,7 +124,7 @@
       transition: color 0.2s, border-color 0.2s, background 0.2s;
     }
     .pf-topbar .lang-btn.is-active { color: var(--fi-accent); border-color: var(--fi-accent); background: var(--fi-accent-pale); }
-    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--fi-text); border-color: var(--fi-border); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--fi-text); border-color: var(--fi-border); background: var(--fi-accent-soft); }
 
     /* ── Hero ──────────────────────────────────────────── */
     .pf-hero {
@@ -441,9 +441,31 @@
     }
     .pf-footer-link {
       font-size: 0.73rem; font-weight: 500;
-      color: var(--fi-muted); text-decoration: none; transition: color 0.2s;
+      color: var(--fi-muted); text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+      padding: 0.3rem 0.65rem;
+      border-radius: 4px;
     }
-    .pf-footer-link:hover { color: var(--fi-accent); }
+    .pf-footer-link:hover { color: var(--fi-accent); background: var(--fi-accent-soft); }
+
+    /* ── Chart + caption blocks ─────────────────────────── */
+    .pf-chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 720px) { .pf-chart-grid { grid-template-columns: 1fr; } }
+    .pf-chart-item { display: flex; flex-direction: column; }
+    .pf-img-caption {
+      padding: 0.65rem 0.9rem;
+      background: var(--fi-accent-soft);
+      border-left: 2px solid var(--fi-accent);
+      font-size: 0.77rem;
+      line-height: 1.72;
+      color: var(--fi-muted);
+    }
+    .pf-img-caption strong { color: var(--fi-text); font-weight: 600; }
     .pf-footer-credit {
       font-family: 'Libre Baskerville', serif;
       font-size: 0.72rem; color: var(--fi-muted); opacity: 0.45; text-align: center;
@@ -525,8 +547,12 @@
     <!-- ── 01 · M&A Research (featured) ─────────────── -->
     <article class="pf-card pf-card--featured" data-cat="recherche">
       <div class="pf-card-num" data-i18n="portfolio.fin.ma.num">01 · Recherche empirique · Finance quantitative</div>
-      <span class="pf-card-tag pf-card-tag--featured">R · Quantitative Finance · Empirical Research</span>
-      <h2 class="pf-card-title">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
+      <div data-lang-show="fr"><span class="pf-card-tag pf-card-tag--featured">R · Finance Quantitative · Recherche Empirique</span></div>
+      <div data-lang-show="en"><span class="pf-card-tag pf-card-tag--featured">R · Quantitative Finance · Empirical Research</span></div>
+      <div data-lang-show="zh"><span class="pf-card-tag pf-card-tag--featured">R · 量化金融 · 實證研究</span></div>
+      <h2 class="pf-card-title" data-lang-show="fr">Risky Deals : M&amp;A transfrontalières &amp; Risque Politique en Amérique Latine</h2>
+      <h2 class="pf-card-title" data-lang-show="en">Risky Deals: Cross-border M&amp;A &amp; Political Risk in Latin America</h2>
+      <h2 class="pf-card-title" data-lang-show="zh">Risky Deals：跨境併購與拉丁美洲政治風險</h2>
       <p class="pf-card-body" style="font-style:italic; font-family:'Inter',sans-serif;" data-i18n="portfolio.fin.ma.subtitle">
         Étude empirique (2000–2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI
       </p>
