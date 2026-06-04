@@ -654,7 +654,15 @@
           title: "??閮剛?蝡嗉魚 ??18th Penwards",
           desc: "Participation ? la 18e 矇dition du concours de design d?mballage Penwards (2024). Cr矇ation de visuels promotionnels pour l?ppel ? participation.",
         },
-        insightLbl: "Insights m矇tier",
+        insightLbl: "Insights métier",
+        mkt: {
+          heroTitle2: "& Design créatif",
+          heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés · 2024–2025",
+          heroDesc: "Campagnes data-driven, direction artistique et community management — des projets où créativité visuelle et analyse de performance se croisent.",
+          heroStatProjets: "Projets",
+          heroStatGrowth: "Croissance XHS",
+          heroStatPart: "Participants AIESEC",
+          filterAll: "Tous",矇tier",
         mkt: {
           heroEyebrow: "Yu-Ting Tseng 繚 Projets s矇lectionn矇s 繚 2024??025",
           heroDesc: "Campagnes data-driven, direction artistique et community management ??des projets o羅 cr矇ativit矇 visuelle et analyse de performance se croisent.",
@@ -692,6 +700,9 @@
           footerNext: "Portfolio Data & Recherche ??,
         },
         data: {
+          heroTitle1: "Data &",
+          heroTitle2: "Recherche de marché",
+          heroEyebrow: "Yu-Ting Tseng · Data & Recherche de marché",
           heroDesc: "Tableaux de bord Excel, analyses quantitatives et 矇tudes de march矇 ??la rigueur analytique au service de d矇cisions actionnables.",
           heroStatProjets: "Projets",
           heroStatGrowth: "Croissance XHS",
@@ -725,6 +736,9 @@
           footerNext: "Portfolio Finance ??,
         },
         fin: {
+          heroTitle1: "Finance &",
+          heroTitle2: "Analyse",
+          heroEyebrow: "Yu-Ting Tseng · Finance & Analyse Quantitative",
           heroDesc: "Recherche acad矇mique en finance quantitative et mod矇lisation empirique ??rigueur analytique et insights actionnables pour les d矇cisions d?nvestissement.",
           heroStatProj: "Projet",
           heroStatData: "Donn矇es M&A",
