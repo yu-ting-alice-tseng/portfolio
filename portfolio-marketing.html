@@ -108,7 +108,7 @@
       align-items: stretch;
       gap: 0;
       background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(148,163,184,0.35);
+      border: 1px solid var(--mk-border);
       border-radius: 9999px;
       padding: 0;
       overflow: hidden;
@@ -128,11 +128,11 @@
       display: flex;
       align-items: center;
     }
-    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--mk-text); background: rgba(37,99,235,0.07); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--mk-text); background: var(--mk-accent-soft); }
     .pf-topbar .lang-btn.is-active {
-      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      background: linear-gradient(135deg, var(--mk-accent), var(--mk-accent2));
       color: #fff;
-      box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+      box-shadow: 0 2px 8px rgba(225,29,72,0.3);
     }
 
     /* ── Hero ──────────────────────────────────────────── */
