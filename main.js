@@ -2314,6 +2314,9 @@ document.addEventListener("DOMContentLoaded", () => {
           stat1: "志工招募人數",
           stat2: "學員人數",
           stat3: "超出目標",
+          finTitle: "會員",
+          finOrg: "AIESEC NCCU（全球非營利組織，統籌國際志工計畫）",
+          finPoint1: "管理夏令營的專案預算與財務預測，優化成本結構，使收支超出目標 53.7%。",
         },
         usr: {
           period: "2024/09 – 至今",
@@ -2342,6 +2345,8 @@ document.addEventListener("DOMContentLoaded", () => {
           org: "法國在台協會、法國文化協會與台北市文化局",
           point1:
             "代表課程「國際關係與法國社會」上台，以中法雙語分享永續發展相關議題，與 350 多位與會者交流。",
+          stat1: "參與人數",
+          stat2: "語言",
         },
       },
       honors: {
