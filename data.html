@@ -18,19 +18,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
-    /* ── Data page teal theme override ── */
+    /* ── Data page: teal theme — full override ── */
     .page-data {
       --accent:       #0d9488;
       --accent-hover: #0f766e;
       --accent-soft:  rgba(13,148,136,0.10);
     }
-    .page-data .scroll-progress { background: linear-gradient(to right, #0d9488, #14b8a6); }
+
+    /* Scroll progress bar */
+    .page-data .scroll-progress {
+      background: linear-gradient(90deg, #0d9488, #0891b2) !important;
+    }
+
+    /* Nav underline on hover */
+    .page-data .site-nav a::after {
+      background: linear-gradient(90deg, #0d9488, #0891b2);
+    }
+
+    /* h1 .accent gradient text */
+    .page-data .accent {
+      background-image: linear-gradient(120deg, #0d9488, #0891b2);
+    }
+
+    /* Section header decorative underline */
+    .page-data .section-header h2::before {
+      background: linear-gradient(90deg, #0d9488, #0891b2);
+    }
+
+    /* Primary button */
+    .page-data .btn-primary {
+      background: linear-gradient(135deg, #0d9488, #0891b2);
+      box-shadow: 0 4px 14px rgba(13,148,136,0.25);
+    }
+    .page-data .btn-primary:hover {
+      background: linear-gradient(135deg, #0f766e, #0369a1);
+      box-shadow: 0 6px 20px rgba(13,148,136,0.35);
+    }
+
+    /* Active skill card */
+    .page-data .skill-card.is-skill-active {
+      background: linear-gradient(135deg, #0d9488, #0891b2) !important;
+      box-shadow: 0 2px 8px rgba(13,148,136,0.30) !important;
+    }
+
+    /* Skill card hover shadow */
+    .page-data .skill-card:hover {
+      box-shadow: 0 4px 12px rgba(13,148,136,0.12) !important;
+    }
+
+    /* Lang toggle */
+    .page-data .lang-switch {
+      border-color: rgba(13,148,136,0.25);
+    }
     .page-data .lang-btn.is-active {
       background: linear-gradient(135deg, #0d9488, #0891b2);
       box-shadow: 0 2px 8px rgba(13,148,136,0.30);
-    }
-    .page-data .lang-switch {
-      border-color: rgba(13,148,136,0.25);
     }
     .page-data .lang-btn:hover:not(.is-active) { background: rgba(13,148,136,0.08); }
   </style>
