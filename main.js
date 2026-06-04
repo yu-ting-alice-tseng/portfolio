@@ -6,11 +6,10 @@
 
   // Fix corrupted PDF hrefs (encoding artifact from prior file operation)
   document.querySelectorAll('a[href*="250508_"]').forEach(a => {
-    if (!a.href.includes("雿???)) {
-      a.setAttribute("href", "assets/250508_雿??蝷曄黎蝬??身閮c.pdf");
+    if (!a.href.includes("作品集")) {
+      a.setAttribute("href", "assets/250508_作品集_社群經燳與設計_c.pdf");
     }
   });
-
   // Mobile nav
   const navToggle = document.querySelector("[data-nav-toggle]");
   const mobileNav = document.querySelector("[data-mobile-nav]");
