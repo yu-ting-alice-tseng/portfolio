@@ -1,4 +1,4 @@
-﻿﻿document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = String(new Date().getFullYear());
@@ -726,7 +726,7 @@
             btn: "Lire le rapport complet (PDF)",
           },
           footerBack: "??Portfolio Marketing",
-          footerNext: "Portfolio Finance ??,
+          footerNext: "Portfolio Finance →",
         },
         fin: {
           heroTitle1: "Finance &",
@@ -752,7 +752,7 @@
             btn: "Lire le rapport complet (PDF)",
           },
           footerBack: "??Portfolio Data & Recherche",
-          footerNext: "Accueil ??,
+          footerNext: "Accueil →",
         },
       },
       projects: {
@@ -1459,7 +1459,7 @@
           penwardsNum: "04 繚 Visual Design",
           penwardsTag: "Design 繚 Competition",
           footerBack: "??Back to Marketing",
-          footerNext: "Data & Research Portfolio ??,
+          footerNext: "Data & Research Portfolio →",
         },
         data: {
           heroTitle1: "Data &",
@@ -1495,7 +1495,7 @@
             btn: "Read the full paper (PDF)",
           },
           footerBack: "??Marketing Portfolio",
-          footerNext: "Finance Portfolio ??,
+          footerNext: "Finance Portfolio →",
         },
         fin: {
           heroTitle1: "Finance &",
@@ -1521,7 +1521,7 @@
             btn: "Read the full paper (PDF)",
           },
           footerBack: "??Data & Research Portfolio",
-          footerNext: "Home ??,
+          footerNext: "Home →",
         },
       },
       projects: {
@@ -2218,7 +2218,7 @@
           penwardsNum: "04 繚 閬死閮剛?",
           penwardsTag: "閮剛? 繚 蝡嗉魚",
           footerBack: "??餈?銵?",
-          footerNext: "?豢???蝛嗡??? ??,
+          footerNext: "?豢???蝛嗡??? →",
         },
         data: {
           heroTitle1: "數據 &",
@@ -2280,7 +2280,7 @@
             btn: "?梯?摰?勗?嚗DF嚗?,
           },
           footerBack: "???豢???蝛嗡???",
-          footerNext: "擐? ??,
+          footerNext: "擐? →",
         },
       },
       projects: {
