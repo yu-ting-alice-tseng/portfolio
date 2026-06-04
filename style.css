@@ -2139,11 +2139,11 @@ body {
 }
 .skill-card:hover::after { color: var(--accent) !important; opacity: 0.8 !important; }
 .skill-card.is-skill-active {
-  background-color: var(--accent) !important;
-  border-color:     var(--accent) !important;
-  color:            #fff !important;
-  font-weight:      600 !important;
-  box-shadow:       0 4px 14px rgba(37, 99, 235, 0.28) !important;
+  background:   linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  border-color: transparent !important;
+  color:        #fff !important;
+  font-weight:  600 !important;
+  box-shadow:   0 2px 8px rgba(37, 99, 235, 0.3) !important;
 }
 
 /* ── Filter tabs: ghost pill → solid blue on active ─ */
@@ -2701,10 +2701,11 @@ body {
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1) !important;
 }
 .skill-card.is-skill-active {
-  background: var(--accent) !important;
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
   color: #fff !important;
-  border-color: var(--accent) !important;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28) !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
+  font-weight: 600 !important;
 }
 
 /* ── Skills subgroup labels: more refined ────────── */
