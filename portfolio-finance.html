@@ -831,6 +831,17 @@
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
     });
+
+    function applyLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+      document.querySelectorAll('[data-lang-show]').forEach(el => {
+        el.style.display = el.dataset.langShow === lang ? '' : 'none';
+      });
+    }
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+    applyLang('fr');
   </script>
 </body>
 </html>
