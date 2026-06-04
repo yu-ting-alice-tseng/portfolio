@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿﻿document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = String(new Date().getFullYear());
@@ -662,14 +662,7 @@
           heroStatProjets: "Projets",
           heroStatGrowth: "Croissance XHS",
           heroStatPart: "Participants AIESEC",
-          filterAll: "Tous",矇tier",
-        mkt: {
-          heroEyebrow: "Yu-Ting Tseng 繚 Projets s矇lectionn矇s 繚 2024??025",
-          heroDesc: "Campagnes data-driven, direction artistique et community management ??des projets o羅 cr矇ativit矇 visuelle et analyse de performance se croisent.",
-          heroStatProjets: "Projets",
-          heroStatGrowth: "Croissance XHS",
-          heroStatPart: "Participants AIESEC",
-          filterAll: "Tous",
+          filterAll: "Tous",          filterAll: "Tous",
           filterDashboard: "Dashboard & Data",
           filterCampagne: "Campagnes",
           filterDesign: "Design visuel",
@@ -1432,6 +1425,7 @@
         },
         insightLbl: "Key Insights",
         mkt: {
+          heroTitle2: "& Creative Design",
           heroEyebrow: "Yu-Ting Tseng 繚 Selected Projects 繚 2024??025",
           heroDesc: "Data-driven campaigns, art direction and community management ??projects where visual creativity meets performance analytics.",
           heroStatProjets: "Projects",
@@ -1468,6 +1462,9 @@
           footerNext: "Data & Research Portfolio ??,
         },
         data: {
+          heroTitle1: "Data &",
+          heroTitle2: "Market Research",
+          heroEyebrow: "Yu-Ting Tseng · Data & Market Research",
           heroDesc: "Excel dashboards, quantitative analyses and market research ??analytical rigour in service of actionable business decisions.",
           heroStatProjets: "Projects",
           heroStatGrowth: "XHS Growth",
@@ -1501,6 +1498,9 @@
           footerNext: "Finance Portfolio ??,
         },
         fin: {
+          heroTitle1: "Finance &",
+          heroTitle2: "Analysis",
+          heroEyebrow: "Yu-Ting Tseng · Finance & Quantitative Analysis",
           heroDesc: "Academic research in quantitative finance and empirical modelling ??rigorous analysis producing actionable investment insights.",
           heroStatProj: "Project",
           heroStatData: "M&A Data",
