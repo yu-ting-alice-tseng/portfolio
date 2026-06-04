@@ -14,7 +14,10 @@
       "Bash(rm \".git/refs/tags/desktop.ini\")",
       "Bash(attrib +S .git)",
       "Bash(attrib .git)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git show *)",
+      "Bash(del orig_main.js)",
+      "Bash(rm -f orig_main.js)"
     ]
   }
 }
