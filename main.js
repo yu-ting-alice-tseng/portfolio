@@ -690,7 +690,7 @@
           penwardsNum: "04 繚 Design Visuel",
           penwardsTag: "Design 繚 Concours",
           footerBack: "??Retour ? Marketing",
-          footerNext: "Portfolio Data & Recherche ??,
+          footerNext: "Portfolio Data & Recherche →",
         },
         data: {
           heroTitle1: "Data &",
