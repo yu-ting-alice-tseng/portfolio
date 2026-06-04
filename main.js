@@ -994,6 +994,13 @@ document.addEventListener("DOMContentLoaded", () => {
         blockAI: "AI Tools",
         blockOffice: "Office Suite",
         blockCreative: "Creative Tools",
+        chipChatGPT: "ChatGPT",
+        chipClaude: "Claude",
+        chipGemini: "Gemini",
+        chipVibeCoding: "Vibe Coding",
+        chipMicrosoftOffice: "Microsoft Office (Word · Excel · PowerPoint)",
+        chipGoogleSuite: "Google Suite",
+        chipNotion: "Notion",
         blockDataMarketing: "Data for Marketing",
         subCreativeGraphic: "Graphic Design",
         subCreativeVideo: "Video Editing",
@@ -3449,6 +3456,62 @@ document.addEventListener("DOMContentLoaded", () => {
           actions: [{ label: "Ouvrir le certificat", href: "certificates/AI%20技術輔助高效廣告認證.png" }],
         },
       ],
+    },
+
+    // ── Individual AI Tools ──────────────────────────────────────────
+    "ai-chatgpt": {
+      title: "ChatGPT",
+      text: "Utilisation quotidienne de ChatGPT pour la rédaction, la synthèse, l'analyse et la génération de code.",
+      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "OpenAI", meta: ["Quotidien"], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] }],
+      en: { title: "ChatGPT", text: "Daily use of ChatGPT for writing, summarisation, analysis and code generation.", proofs: [{ type: "Practice", title: "Professional & academic use", org: "OpenAI", meta: ["Daily"], points: ["Marketing content writing, document summarisation, coding assistance."] }] },
+    },
+    "ai-claude": {
+      title: "Claude",
+      text: "Utilisation de Claude pour des analyses approfondies, la rédaction professionnelle et la gestion de longs contextes.",
+      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Anthropic", meta: ["Quotidien"], points: ["Rédaction avancée, analyse de données textuelles, synthèse de recherches."] }],
+      en: { title: "Claude", text: "Using Claude for in-depth analysis, professional writing and long-context document handling.", proofs: [{ type: "Practice", title: "Professional & academic use", org: "Anthropic", meta: ["Daily"], points: ["Advanced writing, text data analysis, research synthesis."] }] },
+    },
+    "ai-gemini": {
+      title: "Gemini",
+      text: "Utilisation de Gemini pour la recherche multimodale, la veille et l'intégration avec les outils Google Workspace.",
+      proofs: [{ type: "Pratique", title: "Recherche & productivité", org: "Google", meta: ["Régulier"], points: ["Recherche multimodale, résumé de sources, intégration Google Docs/Sheets."] }],
+      en: { title: "Gemini", text: "Using Gemini for multimodal research, market intelligence and Google Workspace integration.", proofs: [{ type: "Practice", title: "Research & productivity", org: "Google", meta: ["Regular"], points: ["Multimodal research, source summarisation, Google Docs/Sheets integration."] }] },
+    },
+    "ai-vibe-coding": {
+      title: "Vibe Coding",
+      text: "Développement assisté par l'IA — utilisation de modèles génératifs pour prototyper, déboguer et produire du code de manière interactive.",
+      proofs: [{ type: "Projet Personnel", title: "Portfolio & outils d'automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] }],
+      en: { title: "Vibe Coding", text: "AI-assisted development — using generative models to prototype, debug and produce code interactively.", proofs: [{ type: "Personal Project", title: "Portfolio & automation tools", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Built this portfolio and automation scripts via vibe coding workflows."] }] },
+    },
+
+    // ── Microsoft Office Suite ────────────────────────────────────────
+    "office-microsoft": {
+      title: "Microsoft Office (Word · Excel · PowerPoint)",
+      text: "Maîtrise de la suite Microsoft Office pour la rédaction de documents professionnels, la modélisation de données et la création de présentations impactantes.",
+      proofs: [
+        { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Score expert en modélisation, tableaux croisés et automatisation."] },
+        { type: "Expérience", title: "Assistante Marketing", org: "Engoo", meta: ["Taipei · Taïwan", "10/2024 – 02/2025"], points: ["Dashboard Excel et reporting hebdomadaire."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+      ],
+      en: {
+        title: "Microsoft Office (Word · Excel · PowerPoint)",
+        text: "Proficient in the Microsoft Office suite for professional document writing, data modelling and impactful presentation design.",
+        proofs: [
+          { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Expert score in modelling, pivot tables and automation."] },
+          { type: "Experience", title: "Marketing Assistant", org: "Engoo", meta: ["Taipei · Taiwan", "10/2024 – 02/2025"], points: ["Excel dashboard and weekly reporting."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+        ],
+      },
+    },
+    "office-google-suite": {
+      title: "Google Suite",
+      text: "Utilisation quotidienne de Google Workspace (Docs, Sheets, Slides, Drive, Gmail) pour la collaboration et la productivité.",
+      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Google Workspace", meta: ["Quotidien"], points: ["Rédaction collaborative, suivi de données sur Sheets, présentations Slides."] }],
+      en: { title: "Google Suite", text: "Daily use of Google Workspace (Docs, Sheets, Slides, Drive, Gmail) for collaboration and productivity.", proofs: [{ type: "Practice", title: "Professional & academic use", org: "Google Workspace", meta: ["Daily"], points: ["Collaborative writing, data tracking on Sheets, Slides presentations."] }] },
+    },
+    "office-notion": {
+      title: "Notion",
+      text: "Organisation des projets, prise de notes structurée et gestion de bases de données de travail via Notion.",
+      proofs: [{ type: "Pratique", title: "Gestion de projets & notes", org: "Notion", meta: ["Quotidien"], points: ["Planification de projets académiques et personnels, bases de données de contenus."] }],
+      en: { title: "Notion", text: "Project organisation, structured note-taking and work database management via Notion.", proofs: [{ type: "Practice", title: "Project management & notes", org: "Notion", meta: ["Daily"], points: ["Planning academic and personal projects, content databases."] }] },
     },
 
     // ── Creative Tools ───────────────────────────────────────────────
