@@ -17,6 +17,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Data page teal theme override ── */
+    .page-data {
+      --accent:       #0d9488;
+      --accent-hover: #0f766e;
+      --accent-soft:  rgba(13,148,136,0.10);
+    }
+    .page-data .scroll-progress { background: linear-gradient(to right, #0d9488, #14b8a6); }
+    .page-data .lang-btn.is-active {
+      background: linear-gradient(135deg, #0d9488, #0891b2);
+      box-shadow: 0 2px 8px rgba(13,148,136,0.30);
+    }
+    .page-data .lang-switch {
+      border-color: rgba(13,148,136,0.25);
+    }
+    .page-data .lang-btn:hover:not(.is-active) { background: rgba(13,148,136,0.08); }
+  </style>
   </head>
   <body class="page-data">
     <!-- Google Tag Manager (noscript) -->
