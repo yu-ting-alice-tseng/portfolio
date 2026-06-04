@@ -2387,14 +2387,14 @@
         excellence: {
           title: "?踵祥憭批飛?詨????5% GPA嚗?",
           org: "???踵祥憭批飛",
-          text: "憭活隞亦蝟餃? 5% ??蝮曄??瑞???,
+          text: "憭活隞亦蝟餃? 5% ??蝮曄??瑞???",
           year: "2021, 2023",
         },
       },
       contact: {
-        heading: "?舐窗??,
+        heading: "?舐窗??",
         intro:
-          "撠祕蝧?獢?????頞??甇∟??唾?蝯行?嚗??敹怠?閬?,
+          "撠祕蝧?獢?????頞??甇∟??唾?蝯行?嚗??敹怠?閬?",
         labelEmail: "?餃??萎辣",
         labelPhone: "?餉店",
         labelLocation: "??典",
@@ -2403,10 +2403,10 @@
         formMessage: "閮",
         namePlaceholder: "?函?憪?",
         emailPlaceholder: "?函?靽∠拳",
-        messagePlaceholder: "隢陛?剛牧???瘙?撠???,
+        messagePlaceholder: "隢陛?剛牧???瘙?撠???",
         submit: "?閮",
         formNote:
-          "甇方”?桃?垢蝷箇?嚗?亙 Formspree ??Netlify Forms 蝑???,
+          "甇方”?桃?垢蝷箇?嚗?亙 Formspree ??Netlify Forms 蝑???",
       },
     },
   };
@@ -2670,7 +2670,7 @@
         {
           type: "Certification",
           title: "Data Literacy",
-          org: "??,
+          org: "??",
           meta: ["05/2026"],
           points: ["Lecture critique des donn矇es, interpr矇tation des biais et communication des r矇sultats."],
           actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }],
