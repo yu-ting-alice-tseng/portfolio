@@ -110,21 +110,37 @@
       opacity: 0.55;
       flex: 1;
     }
-    .pf-topbar .lang-switch { display: flex; gap: 0.2rem; }
+    .pf-topbar .lang-switch {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(148,163,184,0.35);
+      border-radius: 9999px;
+      padding: 0;
+      overflow: hidden;
+    }
     .pf-topbar .lang-btn {
-      background: none;
-      border: 1px solid transparent;
-      font-size: 0.67rem;
+      background: transparent;
+      border: none;
+      font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.07em;
-      padding: 0.18rem 0.48rem;
+      letter-spacing: 0.06em;
+      padding: 0.22rem 0.65rem;
       cursor: pointer;
       color: var(--fi-muted);
-      border-radius: 3px;
-      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      border-radius: 9999px;
+      transition: background 0.15s ease, color 0.15s ease;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
-    .pf-topbar .lang-btn.is-active { color: var(--fi-accent); border-color: var(--fi-accent); background: var(--fi-accent-pale); }
-    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--fi-text); border-color: var(--fi-border); background: var(--fi-accent-soft); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--fi-text); background: rgba(37,99,235,0.07); }
+    .pf-topbar .lang-btn.is-active {
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+    }
 
     /* ── Hero ──────────────────────────────────────────── */
     .pf-hero {
