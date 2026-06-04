@@ -30,6 +30,20 @@
       background: linear-gradient(90deg, #0d9488, #0891b2) !important;
     }
 
+    /* Hero background orbs — replace blue/purple with teal */
+    .page-data .hero::before {
+      background:
+        radial-gradient(ellipse at 24% 34%, rgba(13,148,136,0.18) 0%, transparent 52%),
+        radial-gradient(ellipse at 72% 20%, rgba(8,145,178,0.12) 0%, transparent 48%),
+        radial-gradient(ellipse at 48% 78%, rgba(20,184,166,0.08) 0%, transparent 44%);
+    }
+    .page-data .hero::after {
+      background:
+        radial-gradient(ellipse at 58% 42%, rgba(8,145,178,0.14) 0%, transparent 52%),
+        radial-gradient(ellipse at 18% 75%, rgba(13,148,136,0.09) 0%, transparent 48%),
+        radial-gradient(ellipse at 84% 22%, rgba(20,184,166,0.08) 0%, transparent 44%);
+    }
+
     /* Nav underline on hover */
     .page-data .site-nav a::after {
       background: linear-gradient(90deg, #0d9488, #0891b2);
