@@ -13,7 +13,8 @@
       "Bash(git show-ref *)",
       "Bash(rm \".git/refs/tags/desktop.ini\")",
       "Bash(attrib +S .git)",
-      "Bash(attrib .git)"
+      "Bash(attrib .git)",
+      "Bash(node -e ' *)"
     ]
   }
 }
