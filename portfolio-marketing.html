@@ -403,6 +403,16 @@
       color: var(--mk-muted);
       margin-top: 0.25rem;
     }
+    .pf-res-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      margin-top: 0.9rem;
+    }
+    .pf-res-stat {
+      display: flex;
+      flex-direction: column;
+    }
 
     /* ── Tags ──────────────────────────────────────────── */
     .pf-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1.1rem; }
@@ -637,14 +647,35 @@
 
       <div class="pf-star pf-star--result">
         <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.resLbl">Résultats · Impact sur 3 mois</div>
+
+        <!-- Stat chips — language-neutral numbers -->
+        <div class="pf-res-stats">
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">+93.3%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resVues">Vues</span>
+          </div>
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">+89.1%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resInter">Interactions</span>
+          </div>
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">+69.7%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resAbonnes">Abonnés</span>
+          </div>
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">−30%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resTime">Temps reporting / jour</span>
+          </div>
+        </div>
+
         <div data-lang-show="fr">
-          <p class="pf-star-txt"><strong>+93.3% de vues · +89.1% d'interactions · +69.7% d'abonnés</strong> — documentés et mesurés via le dashboard. Le contenu éducatif surperforme le promotionnel (2–3× plus de sauvegardes). Le module A/B a validé +34% CTR et +28% engagement après pivot vers un format tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.</p>
+          <p class="pf-star-txt" style="margin-top:0.75rem;">Résultats documentés et mesurés via le dashboard. Le module A/B a validé <strong>+34% CTR et +28% d'engagement</strong> après pivot vers un format tutoriel court + visuel épuré. Le dashboard a également réduit de <strong>30% le temps quotidien</strong> consacré à la consolidation des données et à la production de graphiques — devenant l'outil de décision hebdomadaire de l'équipe.</p>
         </div>
         <div data-lang-show="en">
-          <p class="pf-star-txt"><strong>+93.3% views · +89.1% interactions · +69.7% followers</strong> — all measured and documented through the dashboard. Educational content outperformed promotional posts (2–3× more saves). The A/B module validated +34% CTR and +28% engagement after pivoting to a short-tutorial + clean-visual format. The dashboard became the team's weekly editorial decision tool.</p>
+          <p class="pf-star-txt" style="margin-top:0.75rem;">All results measured and documented through the dashboard. The A/B module validated <strong>+34% CTR and +28% engagement</strong> after pivoting to a short-tutorial + clean-visual format. The dashboard also cut daily data processing and chart-building time by <strong>30%</strong> — becoming the team's weekly editorial decision tool.</p>
         </div>
         <div data-lang-show="zh">
-          <p class="pf-star-txt">瀏覽次數 <strong>+93.3%、互動量 +89.1%、粉絲數 +69.7%</strong> — 全部透過儀表板量化記錄。教育型內容表現遠優於推廣型貼文（收藏數高出 2–3 倍）。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 34%、互動率提升 28%。儀表板成為團隊每週決策的核心工具。</p>
+          <p class="pf-star-txt" style="margin-top:0.75rem;">所有數據透過儀表板量化記錄。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 <strong>34%</strong>、互動率提升 <strong>28%</strong>。儀表板同時將每日數據整理與製圖時間縮短 <strong>30%</strong>，成為團隊每週決策的核心工具。</p>
         </div>
       </div>
 
