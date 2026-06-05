@@ -419,7 +419,7 @@
       financeHero: {
         kicker: "Finance · Comptabilité · Conseil Stratégique",
         title1: "Allier",
-        title2: "rigueur analytique et vision stratégique",
+        title2: "rigueur analytique et vision stratégique.",
         summary: "Étudiante en Master à emlyon business school avec un double parcours Économie/Gestion, je développe une expertise forte en modélisation, en gestion des risques et en résolution de problèmes complexes. Rigoureuse, analytique et dotée d'une solide maîtrise d'Excel et de la business intelligence, je structure les analyses pour accompagner la transformation et la création de valeur.",
         ctaPrimary: "Me contacter",
         ctaSecondary: "Voir mes expériences",
@@ -431,7 +431,7 @@
       marketingHero: {
         kicker: "Marketing 360 · Activation · Contenu",
         title1: "Donner de l'impact aux marques, ",
-        title2: "de la stratégie à l'activation",
+        title2: "de la stratégie à l'activation.",
         summary: "Étudiante en Master à emlyon business school, je combine vision stratégique et exécution opérationnelle pour animer les marques. Forte d'expériences concrètes en marketing digital (réseau sociaux : +93% de vues ; campagnes publicitaires : +9,5% CTR, +5,1% CVR ) et d'une double culture franco-asiatique, je mets la créativité et l'analyse de données au service de la performance de vos campagnes.",
         ctaPrimary: "Voir mes créations",
         ctaSecondary: "Me contacter",
@@ -1200,7 +1200,7 @@
       marketingHero: {
         kicker: "Digital marketing · Content · Performance",
         title1: "Content that drives",
-        title2: "real growth",
+        title2: "real growth.",
         summary: "Master's student at emlyon business school, I led Xiaohongshu campaigns for Engoo (+93% views, +89% interactions in 3 months). I blend creativity, data and brand sense to grow communities and drive performance.",
         ctaPrimary: "View my portfolio",
         ctaSecondary: "Contact me",
