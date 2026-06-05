@@ -1022,7 +1022,7 @@
     function applyLang(lang) {
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
       document.querySelectorAll('[data-lang-show]').forEach(el => {
-        el.style.display = el.dataset.langShow === lang à '' : 'none';
+        el.style.display = el.dataset.langShow === lang ? '' : 'none';
       });
     }
     document.querySelectorAll('.lang-btn').forEach(btn => {
