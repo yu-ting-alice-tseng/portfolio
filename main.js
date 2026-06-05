@@ -700,7 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
           aiesec: {
             num: "02 · Campagne Marketing",
             tag: "Campagne · Direction artistique",
-            body: "Pilotage de l'ééquipe marketing (4 personnes) pour le camp international YOLO d'IESEC in NCCU. Conception des visuels de campagne –affiches et publications –pour le recrutement de volontaires et de participants.",
+            body: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'IESEC in NCCU. Conception des visuels de campagne –affiches et publications –pour le recrutement de volontaires et de participants.",
             statVol: "Volontaires recrutés",
             statPart: "Participants",
             statBudget: "Objectif budgétaire dépassé",
@@ -1225,7 +1225,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaPrimary: "View my portfolio",
         ctaSecondary: "Contact me",
         cardRole: "Digital Marketing & Content Creation",
-        caseStudyLabel: "Case Study · Engoo XHS",
+        caseStudyLabel: "Case Study · Engoo Xiaohongshu",
         caseStudyTitle: "Analytics Dashboard & Xiaohongshu Growth",
         caseStudyS: "Situation: Engoo lacked a centralized tool to track Xiaohongshu performance, making it difficult to quantify engagement and optimize content ROI.",
         caseStudyA: "Action: Developed a dynamic Excel dashboard (Pivot Tables, Nested Formulas) featuring automated A/B period comparison to drive the STP strategy.",
