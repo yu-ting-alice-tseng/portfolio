@@ -91,7 +91,7 @@
   // Language switcher (FR / EN)
   const translations = {
     fr: {
-      brandName: "Yu?ing Tseng",
+      brandName: "Yu?‑Ting Tseng",
       a11y: { skipLink: "Aller au contenu" },
       simpleNav: {
         resume: "Résumé",
@@ -152,14 +152,14 @@
         title1: "Je transforme les données en",
         title2: "décisions marketing",
         summary:
-          "Étudiante en Master à emlyon business school, je combine une solide expertise analytique et une forte sensibilité pour le marketing stratégique et l?xpérience client. Je souhaite mettre mes compétences au service de marques ambitieuses en digital, performance et développement de l?ctivité.",
+          "Étudiante en Master à emlyon business school, je combine une solide expertise analytique et une forte sensibilité pour le marketing stratégique et l?'expérience client. Je souhaite mettre mes compétences au service de marques ambitieuses en digital, performance et développement de l?'activité.",
         locationLabel: "Basée ?",
         locationValue: "Lyon, France",
         availabilityLabel: "Disponible à partir de",
         availabilityValue: "juillet 2026 / janvier 2027 (stage de césure de 6 mois)",
         ctaPrimary: "Me contacter",
         ctaSecondary: "Voir mes expériences",
-        cardName: "Yu?ing Tseng",
+        cardName: "Yu?‑Ting Tseng",
         cardRole: "Marketing digital & Data",
         cardEmailLabel: "Email",
         cardPhoneLabel: "Téléphone",
@@ -168,9 +168,9 @@
       skills: {
         title: "Compétences",
         subtitle:
-          "Un socle structuré autour de l?nalyse de données, du marketing digital et d?n profil international.",
+          "Un socle structuré autour de l?'analyse de données, du marketing digital et d?'un profil international.",
         filterAll: "Tout",
-        previewTitle: "Détail d?ne compétence",
+        previewTitle: "Détail d?'une compétence",
         previewText: "Survolez une compétence pour voir des preuves (projets, cours, expériences) avec le contexte, ce qui a été fait et les résultats.",
         chipEnglish: "Anglais –IELTS 8.0 (C1)",
         chipFrench: "Français –DALF C1",
@@ -280,9 +280,9 @@
       education: {
         title: "Formation Académique",
         subtitle:
-          "Un parcours international entre la France et Taïwan, à l?nterface du management, de la finance et des langues.",
+          "Un parcours international entre la France et Taïwan, à l?'interface du management, de la finance et des langues.",
         emlyon: {
-          period: "09/2023 –Aujourd?ui",
+          period: "09/2023 –Aujourd?'hui",
           title: "Master en Gestion (Programme Grande ?cole)",
           school: "emlyon business school",
           point1: "Spécialisation en Finance et Comptabilité.",
@@ -313,8 +313,8 @@
         },
         paris1: {
           period: "01/2024 –06/2024",
-          title: "Programme d?échange en Science Politique",
-          school: "Université Paris 1 Panthéon?orbonne",
+          title: "Programme d?'ééchange en Science Politique",
+          school: "Université Paris 1 Panthéon?'orbonne",
           point1: "Approfondissement des politiques européennes et internationales.",
           point2: "Immersion académique et culturelle en France.",
           course1: "Science politique",
@@ -381,14 +381,14 @@
         fieldMsg: "Message (facultatif)",
         fieldMsgPh: "Parlez-moi de votre niveau, vos objectifs ou vos questions.",
         submit: "Envoyer la demande",
-        formNote: "Ce formulaire est une démonstration front?nd. Connectez?e à Formspree ou Netlify Forms pour l'activer.",
+        formNote: "Ce formulaire est une démonstration front?'nd. Connectez?'e à Formspree ou Netlify Forms pour l'activer.",
       },
       resources: {
         title: "Ressources pédagogiques",
         subtitle: "Des outils gratuits et fiables pour pratiquer l'anglais, le français ou le mandarin entre les cours.",
-        tabEn: "?? Anglais",
-        tabFr: "?? Français",
-        tabZh: "?? Mandarin",
+        tabEn: "?'?' Anglais",
+        tabFr: "?'?' Français",
+        tabZh: "?'?' Mandarin",
         websitesTitle: "Sites web & applications",
         tipsTitle: "Conseils d'apprentissage",
         videosTitle: "Ressources vidéo",
@@ -461,7 +461,7 @@
         kicker: "Langues & engagement international",
         title1: "Immersion linguistique &",
         title2: "échange interculturel",
-        summary: "Locutrice native en mandarin, certifiée DALF C1 (français), IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des programmes d?ccompagnement linguistique et d?échange culturel à Taïwan.",
+        summary: "Locutrice native en mandarin, certifiée DALF C1 (français), IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des programmes d?'accompagnement linguistique et d?'ééchange culturel à Taïwan.",
         ctaSecondary: "Voir mes engagements",
         availabilityLabel: "Enseignement",
         availabilityValue: "En ligne · Disponible",
@@ -532,28 +532,28 @@
           point1: "Optimisation SEO (on-page / technique) et recommandations de contenus.",
           point2: "Suivi de KPIs et analyse de performance (trafic, CTR, conversions).",
           point3: "Campagnes SEA et reporting.",
-          dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l?équipe.",
+          dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l?'ééquipe.",
           dataPoint2: "Concevoir et piloter des reportings de performance marketing (FB & Google) via des tableaux de bord –+9,5% CTR, +5,1% CVR.",
           dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",
           finTitle: "Assistante Marketing Digital (Stage)",
           finCompany: "KPN (Agence de marketing digital –SEO, SEM, publicité Facebook & Google)",
           finPoint1: "Gestion des budgets publicitaires mensuels sur Facebook et Google Ads, suivi des métriques ROI et allocation efficace du capital pour optimiser le coûtt par acquisition (taux de conversion +5,1%).",
-          finPoint2: "Réalisation d?udits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
+          finPoint2: "Réalisation d?'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
         },
         engoo: {
           period: "10/2024 –02/2025",
           title: "Assistante Marketing",
-          point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing –+89.1% d?nteractions et +69.7% d?bonnés en 3 mois.",
-          point2: "Veille concurrentielle, analyse d?udience et adaptation des visuels par sous-segment cible.",
+          point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing –+89.1% d?'interactions et +69.7% d?'abonnés en 3 mois.",
+          point2: "Veille concurrentielle, analyse d?'audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
           dataPoint1: "Construire un dashboard Excel dynamique –12 métriques quotidiennes, comparaison A/B automatisée et visualisation des KPIs –réduisant le temps de reporting de 5h/semaine.",
           dataPoint2: "Réaliser des analyses de marché approfondies et une veille concurrentielle pour optimiser la stratégie de contenu sur le segment du chinois simplifié (REDnote / Xiaohongshu).",
-          dataPoint3: "Déployer une stratégie de contenu data-driven fondée sur le modèle STP –+93,3% de vues, +89,1% d?nteractions et +69,7% d?bonnés en 3 mois.",
+          dataPoint3: "Déployer une stratégie de contenu data-driven fondée sur le modèle STP –+93,3% de vues, +89,1% d?'interactions et +69,7% d?'abonnés en 3 mois.",
           finTitle: "Assistante Marketing (Stage)",
           finCompany: "Engoo, DMM.com (Plateforme internationale de cours de langue en ligne)",
           finPoint1: "Analyse de marché approfondie pour développer et affiner les stratégies marketing sur le segment du chinois simplifié.",
-          finPoint2: "Gestion des métriques de performance et de contenu sur Xiaohongshu –+93,3% de vues, +89,1% d?nteractions et +69,7% d?bonnés en 3 mois.",
-          pythonPoint: "Développement d?n script Python d?utomatisation de la consolidation de données quotidiennes, améliorant l?fficacité du processus de reporting chaque jour.",
+          finPoint2: "Gestion des métriques de performance et de contenu sur Xiaohongshu –+93,3% de vues, +89,1% d?'interactions et +69,7% d?'abonnés en 3 mois.",
+          pythonPoint: "Développement d?'un script Python d?'automatisation de la consolidation de données quotidiennes, améliorant l?'efficacité du processus de reporting chaque jour.",
           portfolioLink: "Voir les créations (PDF)",
           excelLink: "Télécharger le tableau de bord XHS (Excel)",
           excelHref: "assets/Engoo_XHS Dashboard_FR.xlsx",
@@ -568,7 +568,7 @@
           showcaseBadge1: "– Évaluation générale",
           showcaseTitle1: "Vue d'ensemble · 30 derniers jours",
           showcaseDesc1: "Section gauche : KPIs principaux (vues, abonnés, engagement, notoriété) et graphiques d'évolution sur la période sélectionnée.",
-          showcaseBadge2: "?? Comparaison A/B",
+          showcaseBadge2: "?'? Comparaison A/B",
           showcaseTitle2: "30 jours vs 30 jours précédents",
           showcaseDesc2: "Section droite : courbe Période A vs Période B pour identifier les tendances et l'impact des actions menées.",
           showcaseBadge3: "– Données brutes",
@@ -577,15 +577,15 @@
         },
         teaching: {
           period: "07/2023 –12/2023 · 07/2024 –04/2025",
-          title: "Assistante d?nseignement",
+          title: "Assistante d?'enseignement",
           point1: "Support de cours (finance, risk management) et suivi des étudiants.",
           point2: "Préparation de supports et coordination logistique.",
           dataSupport: "Support pédagogique pour les cours de programmation et analyse de données (VBA, Access).",
-          dataCoord: "Coordonner la logistique opérationnelle de 9 cours et assurer l?nterface entre des parties prenantes exigeantes.",
+          dataCoord: "Coordonner la logistique opérationnelle de 9 cours et assurer l?'interface entre des parties prenantes exigeantes.",
           finTitle: "Assistante de cours",
           finCompany: "Faculté de Banque et Finance Internationale, NCCU",
-          finPoint1: "Coordination logistique de 9 cours de finance, en assurant l?nterface entre les étudiants, les enseignants et les partenaires entreprise.",
-          finPoint2: "Animation d?énénements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
+          finPoint1: "Coordination logistique de 9 cours de finance, en assurant l?'interface entre les étudiants, les enseignants et les partenaires entreprise.",
+          finPoint2: "Animation d?'éénénements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
         },
         research: {
           period: "06/2023 –12/2023",
@@ -629,7 +629,7 @@
         engoo: {
           tag: "Social Media",
           title: "Engoo –Campagne Xiaohongshu",
-          desc: "Reprise et développement du compte Xiaohongshu d?ngoo sur le marché chinois simplifié. Stratégie de contenu fondée sur le modèle STP, A/B testing des visuels et des textes, ciblage de sous-segments selon leur profil.",
+          desc: "Reprise et développement du compte Xiaohongshu d?'ngoo sur le marché chinois simplifié. Stratégie de contenu fondée sur le modèle STP, A/B testing des visuels et des textes, ciblage de sous-segments selon leur profil.",
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
@@ -637,7 +637,7 @@
         guzheng: {
           tag: "Community Management",
           title: "?踹之?斤?蝷–?Page Facebook",
-          desc: "Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d?ctivités, recrutement de nouveaux membres et couverture d?énénements de fin d?nnée.",
+          desc: "Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d?'activités, recrutement de nouveaux membres et couverture d?'éénénements de fin d?'année.",
         },
         instagram: {
           tag: "Content Creation",
@@ -647,11 +647,11 @@
         design: {
           tag: "Photographie & Design",
           title: "Photographie & supports promotionnels",
-          desc: "Photographie de paysages, portraits et architecture –recherche d?ngles et d?éléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d?utres activités.",
+          desc: "Photographie de paysages, portraits et architecture –recherche d?'angles et d?'ééléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d?'autres activités.",
         },
         packaging: {
-          title: "??閮剛?蝡嗉魚 –18th Penwards",
-          desc: "Participation à la 18e édition du concours de design d?mballage Penwards (2024). Création de visuels promotionnels pour l?ppel à participation.",
+          title: "?'?閮剛?蝡嗉魚 –18th Penwards",
+          desc: "Participation à la 18e édition du concours de design d?'emballage Penwards (2024). Création de visuels promotionnels pour l?'appel à participation.",
         },
         insightLbl: "Insights métier",
         mkt: {
@@ -680,7 +680,7 @@
           aiesec: {
             num: "02 · Campagne Marketing",
             tag: "Campagne · Direction artistique",
-            body: "Pilotage de l?équipe marketing (4 personnes) pour le camp international YOLO d?IESEC in NCCU. Conception des visuels de campagne –affiches et publications –pour le recrutement de volontaires et de participants.",
+            body: "Pilotage de l?'ééquipe marketing (4 personnes) pour le camp international YOLO d?'IESEC in NCCU. Conception des visuels de campagne –affiches et publications –pour le recrutement de volontaires et de participants.",
             statVol: "Volontaires recrutés",
             statPart: "Participants",
             statBudget: "Objectif budgétaire dépassé",
@@ -731,7 +731,7 @@
           heroTitle1: "Finance &",
           heroTitle2: "Analyse",
           heroEyebrow: "Yu-Ting Tseng · Finance & Analyse Quantitative",
-          heroDesc: "Recherche académique en finance quantitative et modélisation empirique –rigueur analytique et insights actionnables pour les décisions d?nvestissement.",
+          heroDesc: "Recherche académique en finance quantitative et modélisation empirique –rigueur analytique et insights actionnables pour les décisions d?'investissement.",
           heroStatProj: "Projet",
           heroStatData: "Données M&A",
           heroStatHypo: "Hypothèses testées",
@@ -757,7 +757,7 @@
       projects: {
         title: "Projets sélectionnés",
         subtitle:
-          "Quelques projets académiques ou personnels illustrant ma manière de travailler et mes centres d?ntérêt.",
+          "Quelques projets académiques ou personnels illustrant ma manière de travailler et mes centres d?'intérêt.",
       },
       extracurricular: {
         title: "Expériences Extra-Scolaires",
@@ -771,9 +771,9 @@
           portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
-          title: "Co?ondatrice –Sora Education (camps de jeunesse)",
+          title: "Co?'ondatrice –Sora Education (camps de jeunesse)",
           text:
-            "Organisation de cinq camps d?été d?ne semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l?ffre de cours et la stratégie marketing.",
+            "Organisation de cinq camps d?'éété d?'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l?'ffre de cours et la stratégie marketing.",
           stat1: "Camps organisés",
         },
         clubs: {
@@ -798,14 +798,14 @@
       volunteer: {
         title: "Bénévolat & Engagement",
         subtitle:
-          "Des initiatives centrées sur l?éducation, l?nternational et l?mpact social.",
+          "Des initiatives centrées sur l?'ééducation, l?'international et l?'impact social.",
         aiesec: {
           period: "09/2024 –Présent",
           title: "Membre –AIESEC in NCCU",
           org:
             "AIESEC · Organisation internationale de développement du leadership",
           point1:
-            "Pilotage d?ne équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d?nglais, au?el? de l?bjectif budgétaire.",
+            "Pilotage d?'une équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d?'anglais, au?'el? de l?'bjectif budgétaire.",
           point2:
             "Collaboration avec des partenaires locaux et internationaux sur des programmes de volontariat.",
           stat1: "Volontaires recrutés",
@@ -813,32 +813,32 @@
           stat3: "Objectif dépassé",
           finTitle: "Membre",
           finOrg: "AIESEC in NCCU (Organisation mondiale à but non lucratif de coordination de programmes de volontariat international)",
-          finPoint1: "Gestion du budget et des prévisions financières d?n camp d?été, optimisation des structures de coûtts pour dépasser l?bjectif de budget équilibré de 53,7%.",
+          finPoint1: "Gestion du budget et des prévisions financières d?'un camp d?'éété, optimisation des structures de coûtts pour dépasser l?'bjectif de budget équilibré de 53,7%.",
         },
         usr: {
           period: "09/2024 –Présent",
           title: "Volontaire –Projet University Social Responsibility",
           org: "NCCU · Office of University Responsibility",
           point1:
-            "Accompagnement d?élèves issus de familles transnationales dans l?pprentissage de la langue et l?ntégration culturelle.",
+            "Accompagnement d?'éélèves issus de familles transnationales dans l?'apprentissage de la langue et l?'intégration culturelle.",
         },
         flagship: {
           period: "09/2023 –Présent",
           title: "Volontaire –Programme de compagnonnage linguistique",
           org: "Chinese Overseas Flagship Center in Taiwan",
           point1:
-            "Facilitation de l?mmersion linguistique et culturelle d?étudiants américains via des événements et visites.",
+            "Facilitation de l?'immersion linguistique et culturelle d?'éétudiants américains via des événements et visites.",
         },
         buddy: {
           period: "09/2023 –01/2025",
-          title: "Étudiante?éférente –Buddy Program",
+          title: "Étudiante?'éférente –Buddy Program",
           org: "NCCU · Office of International Cooperation",
           point1:
-            "Accompagnement de trois étudiants en échange (France, États?nis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
+            "Accompagnement de trois étudiants en échange (France, États?'nis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
         },
         nuit: {
           period: "12/2023",
-          title: "Déléguée –Nuit des Idées (français?andarin)",
+          title: "Déléguée –Nuit des Idées (français?'andarin)",
           org:
             "Bureau français de Taipei, Institut Français & Département de la Culture de Taipei",
           point1:
@@ -852,17 +852,17 @@
         subtitle:
           "Reconnaissance académique pour mes résultats et mon engagement.",
         exchange: {
-          title: "Bourse d?échange",
-          org: "Ministère de l?ucation (Taïwan)",
+          title: "Bourse d?'ééchange",
+          org: "Ministère de l?'é'ucation (Taïwan)",
           text:
-            "Bourse au mérite pour un programme d?échange international en France.",
+            "Bourse au mérite pour un programme d?'ééchange international en France.",
           year: "2024",
         },
         short: {
-          title: "Bourse d?études à court terme",
+          title: "Bourse d?'éétudes à court terme",
           org: "NCCU –Université Nationale Chengchi",
           text:
-            "Financement au mérite pour un séjour d?études à l?étranger.",
+            "Financement au mérite pour un séjour d?'éétudes à l?'éétranger.",
           year: "2024",
         },
         excellence: {
@@ -876,7 +876,7 @@
       contact: {
         heading: "Entrons en contact",
         intro:
-          "Intéressé·e par un stage, un projet ou une collaboration– Envoyez?oi un message, je vous répondrai avec plaisir.",
+          "Intéressé·e par un stage, un projet ou une collaboration– Envoyez?'oi un message, je vous répondrai avec plaisir.",
         labelEmail: "Email",
         labelPhone: "Téléphone",
         labelLocation: "Localisation",
@@ -888,11 +888,11 @@
         messagePlaceholder: "Expliquez brièvement votre besoin ou votre projet.",
         submit: "Envoyer le message",
         formNote:
-          "Ce formulaire est une démonstration front?nd. Connectez?e à Formspree ou Netlify Forms pour l'activer.",
+          "Ce formulaire est une démonstration front?'nd. Connectez?'e à Formspree ou Netlify Forms pour l'activer.",
       },
     },
     en: {
-      brandName: "Yu?ing Tseng",
+      brandName: "Yu?‑Ting Tseng",
       a11y: { skipLink: "Skip to content" },
       simpleNav: {
         resume: "Resume",
@@ -932,14 +932,14 @@
         title1: "I turn data into",
         title2: "marketing decisions",
         summary:
-          "Master? student at emlyon business school with strong analytical skills and a passion for digital marketing and customer experience. I aim to support ambitious brands in performance marketing and business development.",
+          "Master?' student at emlyon business school with strong analytical skills and a passion for digital marketing and customer experience. I aim to support ambitious brands in performance marketing and business development.",
         locationLabel: "Based in",
         locationValue: "Lyon, France",
         availabilityLabel: "Available from",
         availabilityValue: "July 2026 / January 2027 (6-month gap year internship)",
         ctaPrimary: "Contact me",
         ctaSecondary: "View my experience",
-        cardName: "Yu?ing Tseng",
+        cardName: "Yu?‑Ting Tseng",
         cardRole: "Digital Marketing & Data",
         cardEmailLabel: "Email",
         cardPhoneLabel: "Phone",
@@ -1083,7 +1083,7 @@
         paris1: {
           period: "01/2024 –06/2024",
           title: "Exchange Programme in Political Science",
-          school: "Université Paris 1 Panthéon?orbonne",
+          school: "Université Paris 1 Panthéon?'orbonne",
           point1: "Deepened knowledge of European and international policies.",
           point2: "Academic and cultural immersion in France.",
           course1: "Political Science",
@@ -1155,9 +1155,9 @@
       resources: {
         title: "Learning Resources",
         subtitle: "Free resources to practise English, French or Mandarin between lessons.",
-        tabEn: "?? English",
-        tabFr: "?? French",
-        tabZh: "?? Mandarin",
+        tabEn: "?'?' English",
+        tabFr: "?'?' French",
+        tabZh: "?'?' Mandarin",
         websitesTitle: "Websites & Apps",
         tipsTitle: "Study Tips",
         videosTitle: "Video Resources",
@@ -1189,7 +1189,7 @@
         kicker: "Finance · Accounting ",
         title1: "Bridging analytical rigor with",
         title2: "strategic vision.",
-        summary: "Master? student at emlyon business school with a strong background in Economics and Management, I am dedicated to financial modeling, risk analysis, and complex problem-solving. Rigorous and highly analytical, I leverage tools like Excel and business intelligence to deliver structured insights that support business transformation and value creation.",
+        summary: "Master?' student at emlyon business school with a strong background in Economics and Management, I am dedicated to financial modeling, risk analysis, and complex problem-solving. Rigorous and highly analytical, I leverage tools like Excel and business intelligence to deliver structured insights that support business transformation and value creation.",
         ctaPrimary: "Contact me",
         ctaSecondary: "View my experience",
         cardRole: "Finance & Accounting",
@@ -1337,7 +1337,7 @@
           showcaseBadge1: "– General Performance",
           showcaseTitle1: "Overview · Last 30 Days",
           showcaseDesc1: "Left panel: core KPIs (views, followers, engagement, brand awareness) and trend charts for the selected period.",
-          showcaseBadge2: "?? A/B Comparison",
+          showcaseBadge2: "?'? A/B Comparison",
           showcaseTitle2: "Last 30 Days vs Previous 30",
           showcaseDesc2: "Right panel: Period A vs Period B trend curve to identify growth patterns and the impact of content actions.",
           showcaseBadge3: "– Raw Data",
@@ -1540,9 +1540,9 @@
           portfolioLink: "View creations (PDF)",
         },
         camps: {
-          title: "Co?ounder –Sora Education (Youth Camps)",
+          title: "Co?'ounder –Sora Education (Youth Camps)",
           text:
-            "Co?an five week?ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
+            "Co?'an five week?'ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
           stat1: "Camps organised",
         },
         clubs: {
@@ -1572,9 +1572,9 @@
           period: "Sep. 2024 –Present",
           title: "Member –AIESEC in NCCU",
           org:
-            "AIESEC · Global non?rofit organization developing youth leadership",
+            "AIESEC · Global non?'rofit organization developing youth leadership",
           point1:
-            "Led a marketing team of four to recruit 15 volunteers and over 60 participants for an English camp, exceeding the balanced?udget target by 53.7%.",
+            "Led a marketing team of four to recruit 15 volunteers and over 60 participants for an English camp, exceeding the balanced?'udget target by 53.7%.",
           point2:
             "Collaborated with local and international partners on global volunteer programmes.",
           stat1: "Volunteers recruited",
@@ -1607,7 +1607,7 @@
         },
         nuit: {
           period: "Dec. 2023",
-          title: "Delegate –Nuit des Idées (French?andarin debates)",
+          title: "Delegate –Nuit des Idées (French?'andarin debates)",
           org:
             "French Office in Taipei, Institut Français & Taipei Department of Cultural Affairs",
           point1:
@@ -1626,9 +1626,9 @@
           year: "2024",
         },
         short: {
-          title: "Short?erm Study Abroad Scholarship",
+          title: "Short?'erm Study Abroad Scholarship",
           org: "NCCU –National Chengchi University",
-          text: "Funding for short?erm study abroad based on academic excellence.",
+          text: "Funding for short?'erm study abroad based on academic excellence.",
           year: "2024",
         },
         excellence: {
