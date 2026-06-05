@@ -3698,21 +3698,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "creative-illustrator": {
       title: "Adobe Illustrator",
-      text: "Création de visuels vectoriels : logos, icônes et illustrations pour supports imprimés et digitaux.",
+      text: "Création de visuels vectoriels : logos, icônes et illustrations pour supports imprimés et digitaux. Niveau débutant.",
       proofs: [],
       en: {
         title: "Adobe Illustrator",
-        text: "Creating vector graphics: logos, icons and illustrations for print and digital media.",
+        text: "Creating vector graphics: logos, icons and illustrations for print and digital media. Basic level.",
         proofs: [],
       },
     },
     "creative-acrobat": {
-      title: "Adobe Acrobat",
-      text: "?dition, fusion et mise en forme de PDFs professionnels.",
+      title: "Adobe Photoshop",
+      text: "Retouche photo, création de visuels et mise en page pour supports digitaux et imprimés. Niveau débutant.",
       proofs: [],
       en: {
-        title: "Adobe Acrobat",
-        text: "Editing, merging and formatting professional PDF documents.",
+        title: "Adobe Photoshop",
+        text: "Photo editing, visual creation and layout for digital and print media. Basic level.",
         proofs: [],
       },
     },
@@ -3746,11 +3746,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "creative-blender": {
       title: "Blender",
-      text: "Modélisation 3D et rendu pour visuels créatifs et animations.",
+      text: "Modélisation 3D et rendu pour visuels créatifs et animations. Niveau débutant.",
       proofs: [],
       en: {
         title: "Blender",
-        text: "3D modelling and rendering for creative visuals and animations.",
+        text: "3D modelling and rendering for creative visuals and animations. Basic level.",
         proofs: [],
       },
     },
