@@ -15,6 +15,6 @@ if %errorlevel% neq 0 (
     echo [%date% %time%] Changes detected! Successfully synced to GitHub.
 )
 
-:: Checks for updates in the background every 100 seconds
-timeout /t 100 > nul
+:: Checks for updates in the background every 10 seconds
+timeout /t 10 > nul
 goto loop
