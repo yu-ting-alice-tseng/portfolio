@@ -2779,16 +2779,16 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       imagesByLang: {
         fr: [
-          { src: "assets/Engoo Dashboard_FR.png", alt: "Tableau de bord de performance –Engoo XHS" },
-          { src: "assets/Engoo Data_FR.png",      alt: "Données brutes –Engoo XHS" },
+          { src: "assets/Excel_Engoo/Engoo Dashboard_FR.png", alt: "Tableau de bord de performance –Engoo XHS" },
+          { src: "assets/Excel_Engoo/Engoo Data_FR.png",      alt: "Données brutes –Engoo XHS" },
         ],
         en: [
-          { src: "assets/Engoo Dashboard_EN.png", alt: "Performance Dashboard –Engoo XHS" },
-          { src: "assets/Engoo Data_EN.png",      alt: "Raw Data –Engoo XHS" },
+          { src: "assets/Excel_Engoo/Engoo Dashboard_EN.png", alt: "Performance Dashboard –Engoo XHS" },
+          { src: "assets/Excel_Engoo/Engoo Data_EN.png",      alt: "Raw Data –Engoo XHS" },
         ],
         zh: [
-          { src: "assets/Engoo Dashboard_EN.png", alt: "Performance Dashboard –Engoo XHS" },
-          { src: "assets/Engoo Data_EN.png",      alt: "Raw Data –Engoo XHS" },
+          { src: "assets/Excel_Engoo/Engoo Dashboard_EN.png", alt: "Performance Dashboard –Engoo XHS" },
+          { src: "assets/Excel_Engoo/Engoo Data_EN.png",      alt: "Raw Data –Engoo XHS" },
         ],
       },
       byPage: {
