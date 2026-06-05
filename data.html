@@ -154,6 +154,54 @@
     }
 
     /* ?? Lang toggle ?? */
+    /* Section-alt (Formation académique, Contact) */
+    .page-data .section-alt {
+      background-image:
+        radial-gradient(ellipse at 6% 50%,  rgba(13,148,136,0.06) 0%, transparent 46%),
+        radial-gradient(ellipse at 94% 50%, rgba(8,145,178,0.05) 0%, transparent 46%),
+        radial-gradient(ellipse at 50% 0%,  rgba(20,184,166,0.04) 0%, transparent 40%),
+        linear-gradient(160deg, #f0fdfa 0%, #f0fdfa 50%, #ecfeff 100%) !important;
+    }
+    .page-data .section-alt::before {
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(13,148,136,0.28) 30%,
+        rgba(8,145,178,0.45) 50%,
+        rgba(13,148,136,0.28) 70%,
+        transparent 100%
+      ) !important;
+    }
+
+    /* Timeline items (Formation) */
+    .page-data .timeline-item {
+      border-left-color: rgba(13,148,136,0.15) !important;
+    }
+    .page-data .timeline-item::before {
+      border-color: rgba(13,148,136,0.40) !important;
+    }
+    .page-data .timeline-item:hover {
+      background-color: rgba(13,148,136,0.04) !important;
+    }
+
+    /* Education degree chips */
+    .page-data .edu-degree-chip {
+      background: rgba(13,148,136,0.08);
+      border-color: rgba(13,148,136,0.22);
+    }
+
+    /* Skill preview panel */
+    .page-data .skill-preview {
+      background: linear-gradient(
+        152deg,
+        rgba(13,148,136,0.07) 0%,
+        rgba(255,255,255,0.99) 38%,
+        rgba(8,145,178,0.04) 100%
+      );
+      border-color: rgba(13,148,136,0.20);
+      box-shadow: 0 10px 40px rgba(13,148,136,0.10), 0 2px 8px rgba(15,23,42,0.04), inset 0 1px 0 rgba(255,255,255,0.96);
+    }
+
     /* Award / distinction cards */
     .page-data .award-card {
       background: linear-gradient(145deg, #f0fdfa 0%, #ffffff 60%, #f0fdfa 100%);
