@@ -457,6 +457,18 @@
         caseStudyTitle: "Dashboard Excel –Performance Xiaohongshu",
         caseStudyDesc: "Construction d'un tableau de bord Excel complet pour suivre 12 métriques quotidiennes du compte Xiaohongshu d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.",
       },
+      portfolioTeaser: {
+        label: "Portfolio",
+        cta: "Explorer le portfolio →",
+      },
+      marketingPortfolioTeaser: {
+        title: "Campagnes, dashboards & visuels de marque",
+        desc: "Stratégies Xiaohongshu, analyses de performance et créations visuelles.",
+      },
+      financePortfolioTeaser: {
+        title: "Analyses, modèles & études de cas",
+        desc: "Modélisations financières, analyses de données et livrables conseil.",
+      },
       teachingHero: {
         kicker: "Langues & engagement international",
         title1: "Immersion linguistique &",
@@ -1225,6 +1237,18 @@
         caseStudyLabel: "Case Study · XHS Dashboard",
         caseStudyTitle: "Excel Dashboard –Xiaohongshu Performance",
         caseStudyDesc: "Built a comprehensive Excel dashboard to track 12 daily metrics for Engoo's Xiaohongshu account: KPIs overview, time-series trends and A/B period comparison.",
+      },
+      portfolioTeaser: {
+        label: "Portfolio",
+        cta: "Explore the portfolio →",
+      },
+      marketingPortfolioTeaser: {
+        title: "Campaigns, dashboards & brand visuals",
+        desc: "Xiaohongshu strategies, performance analytics and visual creations.",
+      },
+      financePortfolioTeaser: {
+        title: "Analyses, models & case studies",
+        desc: "Financial modelling, data analysis and consulting deliverables.",
       },
       teachingHero: {
         kicker: "Languages & international engagement",
