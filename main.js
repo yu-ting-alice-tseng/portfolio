@@ -314,7 +314,7 @@
         paris1: {
           period: "01/2024 –06/2024",
           title: "Programme d'ééchange en Science Politique",
-          school: "Université Paris 1 Panthéon'orbonne",
+          school: "Université Paris 1 Panthéon-Sorbonne",
           point1: "Approfondissement des politiques européennes et internationales.",
           point2: "Immersion académique et culturelle en France.",
           course1: "Science politique",
@@ -381,7 +381,7 @@
         fieldMsg: "Message (facultatif)",
         fieldMsgPh: "Parlez-moi de votre niveau, vos objectifs ou vos questions.",
         submit: "Envoyer la demande",
-        formNote: "Ce formulaire est une démonstration front'nd. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
+        formNote: "Ce formulaire est une démonstration front-end. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
       },
       resources: {
         title: "Ressources pédagogiques",
@@ -629,7 +629,7 @@
         engoo: {
           tag: "Social Media",
           title: "Engoo –Campagne Xiaohongshu",
-          desc: "Reprise et développement du compte Xiaohongshu d'ngoo sur le marché chinois simplifié. Stratégie de contenu fondée sur le modèle STP, A/B testing des visuels et des textes, ciblage de sous-segments selon leur profil.",
+          desc: "Reprise et développement du compte Xiaohongshu d'Engoo sur le marché chinois simplifié. Stratégie de contenu fondée sur le modèle STP, A/B testing des visuels et des textes, ciblage de sous-segments selon leur profil.",
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
@@ -771,9 +771,9 @@
           portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
-          title: "Co'ondatrice –Sora Education (camps de jeunesse)",
+          title: "Co-fondatrice –Sora Education (camps de jeunesse)",
           text:
-            "Organisation de cinq camps d'éété d'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l'ffre de cours et la stratégie marketing.",
+            "Organisation de cinq camps d'été d'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l'offre de cours et la stratégie marketing.",
           stat1: "Camps organisés",
         },
         clubs: {
@@ -813,7 +813,7 @@
           stat3: "Objectif dépassé",
           finTitle: "Membre",
           finOrg: "AIESEC in NCCU (Organisation mondiale à but non lucratif de coordination de programmes de volontariat international)",
-          finPoint1: "Gestion du budget et des prévisions financières d'un camp d'éété, optimisation des structures de coûtts pour dépasser l'objectif de budget équilibré de 53,7%.",
+          finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûtts pour dépasser l'objectif de budget équilibré de 53,7%.",
         },
         usr: {
           period: "09/2024 –Présent",
@@ -834,7 +834,7 @@
           title: "Étudiante'éférente –Buddy Program",
           org: "NCCU · Office of International Cooperation",
           point1:
-            "Accompagnement de trois étudiants en échange (France, États'nis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
+            "Accompagnement de trois étudiants en échange (France, États-Unis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
         },
         nuit: {
           period: "12/2023",
@@ -888,7 +888,7 @@
         messagePlaceholder: "Expliquez brièvement votre besoin ou votre projet.",
         submit: "Envoyer le message",
         formNote:
-          "Ce formulaire est une démonstration front'nd. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
+          "Ce formulaire est une démonstration front-end. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
       },
     },
     en: {
@@ -932,7 +932,7 @@
         title1: "I turn data into",
         title2: "marketing decisions",
         summary:
-          "Master' student at emlyon business school with strong analytical skills and a passion for digital marketing and customer experience. I aim to support ambitious brands in performance marketing and business development.",
+          "Master's student at emlyon business school with strong analytical skills and a passion for digital marketing and customer experience. I aim to support ambitious brands in performance marketing and business development.",
         locationLabel: "Based in",
         locationValue: "Lyon, France",
         availabilityLabel: "Available from",
@@ -1083,7 +1083,7 @@
         paris1: {
           period: "01/2024 –06/2024",
           title: "Exchange Programme in Political Science",
-          school: "Université Paris 1 Panthéon'orbonne",
+          school: "Université Paris 1 Panthéon-Sorbonne",
           point1: "Deepened knowledge of European and international policies.",
           point2: "Academic and cultural immersion in France.",
           course1: "Political Science",
@@ -1189,7 +1189,7 @@
         kicker: "Finance · Accounting ",
         title1: "Bridging analytical rigor with",
         title2: "strategic vision.",
-        summary: "Master' student at emlyon business school with a strong background in Economics and Management, I am dedicated to financial modeling, risk analysis, and complex problem-solving. Rigorous and highly analytical, I leverage tools like Excel and business intelligence to deliver structured insights that support business transformation and value creation.",
+        summary: "Master's student at emlyon business school with a strong background in Economics and Management, I am dedicated to financial modeling, risk analysis, and complex problem-solving. Rigorous and highly analytical, I leverage tools like Excel and business intelligence to deliver structured insights that support business transformation and value creation.",
         ctaPrimary: "Contact me",
         ctaSecondary: "View my experience",
         cardRole: "Finance & Accounting",
@@ -1540,7 +1540,7 @@
           portfolioLink: "View creations (PDF)",
         },
         camps: {
-          title: "Co'ounder –Sora Education (Youth Camps)",
+          title: "Co-Founder –Sora Education (Youth Camps)",
           text:
             "Co'an five week'ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
           stat1: "Camps organised",
@@ -1572,9 +1572,9 @@
           period: "Sep. 2024 –Present",
           title: "Member –AIESEC in NCCU",
           org:
-            "AIESEC · Global non'rofit organization developing youth leadership",
+            "AIESEC · Global non-profit organization developing youth leadership",
           point1:
-            "Led a marketing team of four to recruit 15 volunteers and over 60 participants for an English camp, exceeding the balanced'udget target by 53.7%.",
+            "Led a marketing team of four to recruit 15 volunteers and over 60 participants for an English camp, exceeding the balanced-budget target by 53.7%.",
           point2:
             "Collaborated with local and international partners on global volunteer programmes.",
           stat1: "Volunteers recruited",
@@ -1626,7 +1626,7 @@
           year: "2024",
         },
         short: {
-          title: "Short'erm Study Abroad Scholarship",
+          title: "Short-term Study Abroad Scholarship",
           org: "NCCU –National Chengchi University",
           text: "Funding for short'erm study abroad based on academic excellence.",
           year: "2024",
