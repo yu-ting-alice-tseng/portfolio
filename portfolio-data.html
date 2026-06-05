@@ -432,6 +432,16 @@
       color: var(--lx-muted); margin-top: 0.3rem;
       font-weight: 400;
     }
+    .pf-res-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      margin-top: 0.9rem;
+    }
+    .pf-res-stat {
+      display: flex;
+      flex-direction: column;
+    }
 
     /* ── Tags ──────────────────────────────────────────── */
     .pf-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem; }
@@ -669,14 +679,34 @@
 
       <div class="pf-star pf-star--result">
         <div class="pf-star-lbl" data-i18n="portfolio.data.dashboard.resLbl">Résultats · Impact mesuré sur 3 mois</div>
+
+        <div class="pf-res-stats">
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">+93.3%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.resVues">Vues</span>
+          </div>
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">+89.1%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.resInter">Interactions</span>
+          </div>
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">+69.7%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.resAbonnes">Abonnés</span>
+          </div>
+          <div class="pf-res-stat">
+            <span class="pf-stat-val">−30%</span>
+            <span class="pf-stat-lbl" data-i18n="portfolio.data.dashboard.resTime">Temps reporting / jour</span>
+          </div>
+        </div>
+
         <div data-lang-show="fr">
-          <p class="pf-star-txt"><strong>+93.3% vues · +89.1% interactions · +69.7% abonnés</strong> — documentés via le dashboard. Module A/B : +34% CTR et +28% engagement après pivot vers tutoriel court + visuel épuré. Le dashboard est devenu l'outil de décision hebdomadaire de l'équipe.</p>
+          <p class="pf-star-txt" style="margin-top:0.75rem;">Résultats documentés via le dashboard. Module A/B : <strong>+34% CTR et +28% engagement</strong> après pivot vers tutoriel court + visuel épuré. Le dashboard a réduit de <strong>30% le temps quotidien</strong> de consolidation et de visualisation des données — devenant l'outil de décision hebdomadaire de l'équipe.</p>
         </div>
         <div data-lang-show="en">
-          <p class="pf-star-txt"><strong>+93.3% views · +89.1% interactions · +69.7% followers</strong> — all documented via the dashboard. A/B module: +34% CTR and +28% engagement following the pivot to a short-tutorial + clean-visual format. The dashboard became the team's weekly editorial decision tool.</p>
+          <p class="pf-star-txt" style="margin-top:0.75rem;">All results documented via the dashboard. A/B module: <strong>+34% CTR and +28% engagement</strong> after pivoting to a short-tutorial + clean-visual format. The dashboard cut daily data processing and charting time by <strong>30%</strong> — becoming the team's weekly editorial decision tool.</p>
         </div>
         <div data-lang-show="zh">
-          <p class="pf-star-txt">瀏覽次數 <strong>+93.3%、互動量 +89.1%、粉絲數 +69.7%</strong> — 全部透過儀表板記錄。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 34%、互動率提升 28%。儀表板成為團隊每週內容決策的核心工具。</p>
+          <p class="pf-star-txt" style="margin-top:0.75rem;">所有數據透過儀表板記錄。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 <strong>34%</strong>、互動率提升 <strong>28%</strong>。儀表板同時將每日數據整理與製圖時間縮短 <strong>30%</strong>，成為團隊每週決策的核心工具。</p>
         </div>
       </div>
 
