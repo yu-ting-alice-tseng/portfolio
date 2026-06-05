@@ -650,7 +650,7 @@
           desc: "Photographie de paysages, portraits et architecture –recherche d?'angles et d?'ééléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d?'autres activités.",
         },
         packaging: {
-          title: "?'?閮剛?蝡嗉魚 –18th Penwards",
+          title: "?'包裝設計競賽 – 18th Penwards",
           desc: "Participation à la 18e édition du concours de design d?'emballage Penwards (2024). Création de visuels promotionnels pour l?'appel à participation.",
         },
         insightLbl: "Insights métier",
@@ -1419,7 +1419,7 @@
           desc: "Photography of landscapes, portraits and architecture –exploring unexpected angles. Designed communication materials for events: name badges, posters and posts for the kyudo club and other activities.",
         },
         packaging: {
-          title: "Packaging Design Competition –18th Penwards",
+          title: "Packaging Design Competition – 18th Penwards",
           desc: "Entry for the 18th Penwards packaging design competition (2024). Created promotional visuals for the open call.",
         },
         insightLbl: "Key Insights",
@@ -2178,8 +2178,8 @@
           desc: "????芰憸冽?犖?抵?撱箇?嚗??潭??蝛?摨艾??ˊ雿暑?恐?喟????撘?蝷曉??絲?梯???蝷曄黎鞎潭?閮剛???",
         },
         packaging: {
-          title: "??閮剛?蝡嗉魚 ??蝚砍??怠?曀祈??",
-          desc: "?? 2024 撟渡洵?撅筋?舐???閮剛?蝡嗉魚嚗ˊ雿噩隞嗆暑?恐?唾?閬箇???",
+          title: "?包裝設計競賽 ??蝚砍??怠?曀祈??",
+          desc: "?? 2024 撟渡洵?撅筋?舐??包裝設計競賽嚗ˊ雿噩隞嗆暑?恐?唾?閬箇???",
         },
         insightLbl: "?瘣?",
         mkt: {
