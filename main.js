@@ -2039,6 +2039,14 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "分析、模型與案例研究",
         desc: "財務建模、數據分析與顧問交付成果。",
       },
+      dataPortfolioTeaser: {
+        title: "儀表板、視覺化與數據分析",
+        desc: "Excel 儀表板、Power BI 報告與應用量化分析。",
+      },
+      indexPortfolioTeaser: {
+        title: "具體成果與專案",
+        desc: "行銷、數據、金融與教學 — 按領域探索專案。",
+      },
       teachingHero: {
         kicker: "隤? · ?飛 · ??鈭斗?",
         title1: "頝刻?閮???嚗?",
