@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = String(new Date().getFullYear());
@@ -2010,6 +2010,18 @@
         caseStudyLabel: "獢??弦 · 撠??詨?銵冽",
         caseStudyTitle: "Excel ?銵冽 ??撠??貊蜀?蕭頩?",
         caseStudyDesc: "??Engoo 撠??詨董?遣蝡??渡? Excel ?銵冽嚗蕭頩?12 ???交?璅?KPI 璁汗?????隅?Ｚ? A/B ?望?瘥???",
+      },
+      portfolioTeaser: {
+        label: "作品集",
+        cta: "探索作品集 →",
+      },
+      marketingPortfolioTeaser: {
+        title: "行銷活動、數據儀表板與品牌視覺",
+        desc: "小紅書策略、績效分析與視覺創作。",
+      },
+      financePortfolioTeaser: {
+        title: "分析、模型與案例研究",
+        desc: "財務建模、數據分析與顧問交付成果。",
       },
       teachingHero: {
         kicker: "隤? · ?飛 · ??鈭斗?",
