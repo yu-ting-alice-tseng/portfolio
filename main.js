@@ -469,6 +469,14 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Analyses, modèles & études de cas",
         desc: "Modélisations financières, analyses de données et livrables conseil.",
       },
+      dataPortfolioTeaser: {
+        title: "Dashboards, visualisations & analyses de données",
+        desc: "Tableaux de bord Excel, rapports Power BI et analyses quantitatives appliquées.",
+      },
+      indexPortfolioTeaser: {
+        title: "Réalisations & projets concrets",
+        desc: "Marketing, data, finance & enseignement — découvrez les projets par domaine.",
+      },
       teachingHero: {
         kicker: "Langues & engagement international",
         title1: "Immersion linguistique &",
@@ -1249,6 +1257,14 @@ document.addEventListener("DOMContentLoaded", () => {
       financePortfolioTeaser: {
         title: "Analyses, models & case studies",
         desc: "Financial modelling, data analysis and consulting deliverables.",
+      },
+      dataPortfolioTeaser: {
+        title: "Dashboards, visualisations & data analyses",
+        desc: "Excel dashboards, Power BI reports and applied quantitative analyses.",
+      },
+      indexPortfolioTeaser: {
+        title: "Projects & concrete achievements",
+        desc: "Marketing, data, finance & teaching — explore projects by domain.",
       },
       teachingHero: {
         kicker: "Languages & international engagement",
