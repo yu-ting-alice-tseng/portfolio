@@ -17,7 +17,8 @@
       "Bash(node -e ' *)",
       "Bash(git show *)",
       "Bash(del orig_main.js)",
-      "Bash(rm -f orig_main.js)"
+      "Bash(rm -f orig_main.js)",
+      "Read(//c/Users/Bonita/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/f811d178-8d38-4c25-a2a6-ba948105ca0e/88389803-b4e3-46f1-aea8-03e407533c1a/skills/xlsx/**)"
     ]
   }
 }
