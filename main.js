@@ -425,8 +425,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaPrimary: "Me contacter",
         ctaSecondary: "Voir mes expériences",
         cardRole: "Finance & Comptabilité",
-        caseStudyLabel: "Expérience clé · Finance & Enseignement",
-        caseStudyTitle: "Assistante d'enseignement –Finance & Risk Management",
+        caseStudyLabel: "Expérience clé - Finance & Enseignement",
+        caseStudyTitle: "Assistante d'enseignement - Finance & Risk Management",
         caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance (NCCU). Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
       },
       marketingHero: {
