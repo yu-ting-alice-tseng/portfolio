@@ -2677,7 +2677,7 @@ body {
 
 .skills-layout {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   align-items: start;
   margin-top: 1.5rem;
