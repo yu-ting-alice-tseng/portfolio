@@ -867,18 +867,28 @@ body.page-finance .hero h1 {
 
 /* ── Skills section ──────────────────────────────── */
 
-/* Two-column: skills list left, preview panel right (sticky) */
+/* Default: skills-left fills full width; right panel hidden until triggered */
 .skills-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
   margin-top: 1rem;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.skills-layout.info-active {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .skills-right {
+  display: none;
   position: sticky;
   top: calc(var(--header-h) + 1.5rem);
+}
+
+.skills-layout.info-active .skills-right {
+  display: block;
 }
 
 .skills-grid {
