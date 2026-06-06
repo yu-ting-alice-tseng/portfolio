@@ -916,11 +916,11 @@ body.page-finance .hero h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.25rem 0.55rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 999px;
   background-color: #ffffff;
   border: 1px solid rgba(148, 163, 184, 0.45);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   color: var(--text);
   cursor: pointer;
   white-space: nowrap;
