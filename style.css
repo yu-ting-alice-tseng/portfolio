@@ -1011,7 +1011,7 @@ body.page-finance .hero h1 {
   border-radius: 14px;
   border: 1px solid rgba(148, 163, 184, 0.28);
   background: #fff;
-  padding: 0.85rem 0.95rem;
+  padding: 1.1rem 1.25rem;
   box-shadow: var(--shadow-card);
   transition: box-shadow 0.18s ease;
 }
