@@ -4121,7 +4121,7 @@
 
   // Skill area filters (inside #skills)
   const skillsSection = document.getElementById("skills");
-  const skillAreaFilters = skillsSection?.querySelectorAll("[data-skill-area]") || [];
+  const skillAreaFilters = skillsSection?.querySelectorAll("button[data-skill-area], [data-skill-area='all']") || [];
   const skillsBlocks = skillsSection?.querySelectorAll(".skills-block[data-skill-area]") || [];
 
   function applySkillArea(area) {
