@@ -471,7 +471,7 @@
         desc: "Stratégies Xiaohongshu, analyses de performance et créations visuelles.",
       },
       financePortfolioTeaser: {
-        title: "Analyses, modèles & études de cas",
+        title: "Analyses, Modèles & Études De Cas",
         desc: "Modélisations financières, analyses de données et livrables conseil.",
       },
       dataPortfolioTeaser: {
