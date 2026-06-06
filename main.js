@@ -2787,19 +2787,10 @@
           points: ["Score 950/1000 – niveau expert en modélisation, tableaux croisés dynamiques et automatisation."],
         },
       ],
-      imagesByLang: {
-        fr: [
-          { src: "assets/Excel_Engoo/Engoo Dashboard_FR.png", alt: "Tableau de bord de performance – Engoo XHS" },
-          { src: "assets/Excel_Engoo/Engoo Data_FR.png",      alt: "Données brutes – Engoo XHS" },
-        ],
-        en: [
-          { src: "assets/Excel_Engoo/Engoo Dashboard_EN.png", alt: "Performance Dashboard – Engoo XHS" },
-          { src: "assets/Excel_Engoo/Engoo Data_EN.png",      alt: "Raw Data – Engoo XHS" },
-        ],
-        zh: [
-          { src: "assets/Excel_Engoo/Engoo Dashboard_EN.png", alt: "Performance Dashboard – Engoo XHS" },
-          { src: "assets/Excel_Engoo/Engoo Data_EN.png",      alt: "Raw Data – Engoo XHS" },
-        ],
+      portfolioLink: {
+        fr: { label: "Voir le portfolio – Dashboard Engoo XHS", href: "portfolio-data.html" },
+        en: { label: "View portfolio – Engoo XHS Dashboard",    href: "portfolio-data.html" },
+        zh: { label: "查看作品集 – Engoo XHS 儀表板",             href: "portfolio-data.html" },
       },
       byPage: {
         finance:   { text: "Modèles Excel avancés pour le reporting financier, le suivi de KPIs (CTR, CVR, ROI) et la gestion de budgets publicitaires mensuels." },
