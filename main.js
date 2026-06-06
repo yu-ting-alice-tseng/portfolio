@@ -3289,7 +3289,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "lang-japanese": {
-      title: "?交'隤–?JLPT N1",
+      title: "Japonais – JLPT N1",
       text:
         "Niveau avancé de japonais (JLPT N1), utile pour comprendre la culture et les marchés d'sie de l'st.",
       proofs: [
@@ -3326,7 +3326,7 @@ document.addEventListener("DOMContentLoaded", () => {
           org: "Université Nationale Chengchi · Bureau USR",
           meta: ["Taipei · Taïwan", "09/2024 –Présent"],
           points: [
-            "Soutien linguistique et culturel auprès d'élèves issus de familles transnationales (?唬?瘞'?隞?/ enfants de migrants).",
+            "Soutien linguistique et culturel auprès d'élèves issus de familles transnationales (nouveaux immigrants / enfants de migrants).",
           ],
           actions: [{ label: "Voir l'engagement", href: "#engagement" }],
         },
@@ -3616,7 +3616,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ?? Microsoft Office Suite ????????????????????????????????????????
     "office-microsoft": {
       title: "Microsoft Office (Word · Excel · PowerPoint)",
-      text: "Ma簾trise de la suite Microsoft Office pour la rédaction de documents professionnels, la modélisation de données et la création de présentations impactantes.",
+      text: "Maîtrise de la suite Microsoft Office pour la rédaction de documents professionnels, la modélisation de données et la création de présentations impactantes.",
       proofs: [
         { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Score expert en modélisation, tableaux croisés et automatisation."] },
         { type: "Expérience", title: "Assistante Marketing", org: "Engoo", meta: ["Taipei · Taïwan", "10/2024 –02/2025"], points: ["Dashboard Excel et reporting hebdomadaire."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
