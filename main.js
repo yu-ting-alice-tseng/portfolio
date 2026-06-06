@@ -208,7 +208,7 @@
         subSoft2: "Leadership & Organisation",
         subSoft3: "Communication",
         chipSeoTechnical: "SEO Technique",
-        chipSeoKeyword: "Recherche de mots-clés & stratégie de contenu",
+        chipSeoKeyword: "Recherche De Mots-Clés & Stratégie De Contenu",
         chipSeoOnpage: "SEO On-Page",
         chipSeoOffpage: "SEO Off-Page",
         chipStatistics: "Statistiques & Méthodes Quantitatives",
@@ -2876,7 +2876,7 @@
       },
     },
     "mkt-seo-keyword": {
-      title: "Recherche de mots-clés & stratégie de contenu",
+      title: "Recherche De Mots-Clés & Stratégie De Contenu",
       text: "Identifier ce que les prospects recherchent et créer du contenu qui répond à leurs besoins : analyse de l'intention de recherche (informationnelle, transactionnelle, navigationnelle), évaluation de la difficulté et du volume des mots-clés, architecture Topic Clusters et planification Pillar-Cluster.",
       proofs: [
         {
