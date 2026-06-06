@@ -4269,40 +4269,6 @@ a, button, [role="button"],
 .page-type-link svg      { width: 0.82rem; height: 0.82rem; vertical-align: -0.1em; flex-shrink: 0; }
 .btn svg.btn-icon        { width: 0.85rem; height: 0.85rem; vertical-align: -0.1em; }
 
-/* ── Data page typography overrides ─────────────── */
-/* All headings use Inter to match the technical/analytical body font */
-body.page-data .section-header h2,
-body.page-data .hero h1,
-body.page-data h2,
-body.page-data h3,
-body.page-data .award-title,
-body.page-data .timeline-item h3,
-body.page-data .portfolio-card h3 {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 700;
-}
-body.page-data .hero h1 {
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
-/* ── Data page typography overrides ─────────────── */
-/* All headings use Inter to match the technical/analytical body font */
-body.page-data .section-header h2,
-body.page-data .hero h1,
-body.page-data h2,
-body.page-data h3,
-body.page-data .award-title,
-body.page-data .timeline-item h3,
-body.page-data .portfolio-card h3 {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 700;
-}
-body.page-data .hero h1 {
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
 /* ── Finance page typography overrides ───────────── */
 /* All headings use formal Libre Baskerville instead of Cormorant */
 body.page-finance .section-header h2,
