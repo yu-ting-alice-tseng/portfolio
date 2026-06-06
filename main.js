@@ -4063,13 +4063,15 @@
   }
 
   skillChips.forEach((chip) => {
-    chip.addEventListener("mouseenter", () => {
+    function triggerPreview() {
       const key = chip.getAttribute("data-skill");
       if (key) {
         setActiveSkill(chip);
         updateSkillPreview(key);
       }
-    });
+    }
+    chip.addEventListener("mouseenter", triggerPreview);
+    chip.addEventListener("click", triggerPreview);
   });
 
   // ?? Shared filter animation helper ????????????????
