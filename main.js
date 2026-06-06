@@ -2833,10 +2833,9 @@
         },
       ],
     },
-    "mkt-seo": {
-      title: "SEO On'age & Technique",
-      text:
-        "Audit SEO, optimisation de contenus et recherche de facteurs de classement Google.",
+    "mkt-seo-technical": {
+      title: "SEO Technique",
+      text: "Garantir que les moteurs de recherche peuvent explorer et indexer le site sans obstacle : vitesse, mobile-first, Sitemap XML, Robots.txt, données structurées (Schema Markup), HTTPS, gestion des erreurs 404 / redirections 301 et structure d'URL.",
       proofs: [
         {
           type: "Expérience",
@@ -2844,20 +2843,111 @@
           org: "KPN",
           meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
           points: [
-            "Optimisation SEO (on'age / technique) et recommandations de contenus.",
-            "Suivi de KPIs (trafic, CTR, conversions).",
+            "Audit technique SEO (crawlabilité, vitesse, mobile-first) et recommandations d'optimisation.",
+            "Suivi de KPIs via Google Search Console et Google Analytics 4.",
           ],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
         {
           type: "Certification",
           title: "Google – Programme Marketing Digital",
-          org: "Google ?訾?鈭箸 – Ｙ揣閮''",
+          org: "Google",
           meta: ["Marketing digital"],
-          points: ["Certification SEO, SEA, analytics et stratégie de contenu."],
+          points: ["Certification couvrant SEO technique, SEA, analytics et stratégie de contenu."],
           actions: [{ label: "Ouvrir le certificat", href: "certificates/Google?訾?鈭箸 – Ｙ揣閮''_霅''.pdf" }],
         },
       ],
+      en: {
+        title: "Technical SEO",
+        text: "Ensuring search engine crawlers can crawl and index the site without barriers: site speed, mobile-first, XML Sitemap, Robots.txt, Schema Markup, HTTPS, 404 errors / 301 redirects management and URL structure optimisation.",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Digital Marketing Assistant",
+            org: "KPN",
+            meta: ["Taipei · Taiwan", "01/2025 – 06/2025"],
+            points: [
+              "Technical SEO audit (crawlability, speed, mobile-first) and optimisation recommendations.",
+              "KPI tracking via Google Search Console and Google Analytics 4.",
+            ],
+            actions: [{ label: "View experience", href: "#exp-kpn" }],
+          },
+        ],
+      },
+    },
+    "mkt-seo-keyword": {
+      title: "Recherche de mots-clés & stratégie de contenu",
+      text: "Identifier ce que les prospects recherchent et créer du contenu qui répond à leurs besoins : analyse de l'intention de recherche (informationnelle, transactionnelle, navigationnelle), évaluation de la difficulté et du volume des mots-clés, architecture Topic Clusters et planification Pillar-Cluster.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: [
+            "Recherche de mots-clés et recommandations de contenus alignés avec l'intention de recherche.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+      en: {
+        title: "Keyword Research & Content Strategy",
+        text: "Identifying what prospects search for and creating content that answers their needs: search intent analysis (informational, transactional, navigational), keyword difficulty & volume assessment, Topic Clusters architecture and Pillar-Cluster planning.",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Digital Marketing Assistant",
+            org: "KPN",
+            meta: ["Taipei · Taiwan", "01/2025 – 06/2025"],
+            points: [
+              "Keyword research and content recommendations aligned with search intent.",
+            ],
+            actions: [{ label: "View experience", href: "#exp-kpn" }],
+          },
+        ],
+      },
+    },
+    "mkt-seo-onpage": {
+      title: "SEO On-Page",
+      text: "Optimiser les éléments visibles et internes de chaque page pour les moteurs de recherche et les utilisateurs : balises Title, Meta Description, hiérarchie Heading (H1–H3), attributs Alt des images, maillage interne et placement naturel des mots-clés.",
+      proofs: [
+        {
+          type: "Expérience",
+          title: "Assistante Marketing Digital",
+          org: "KPN",
+          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          points: [
+            "Optimisation On-Page (balises, structure de contenu, maillage interne) et recommandations éditoriales.",
+          ],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+      en: {
+        title: "On-Page SEO",
+        text: "Optimising the visible and internal elements of each page for search engines and users: Title tags, Meta Descriptions, Heading hierarchy (H1–H3), image Alt attributes, internal linking and natural keyword placement.",
+        proofs: [
+          {
+            type: "Experience",
+            title: "Digital Marketing Assistant",
+            org: "KPN",
+            meta: ["Taipei · Taiwan", "01/2025 – 06/2025"],
+            points: [
+              "On-Page optimisation (tags, content structure, internal linking) and editorial recommendations.",
+            ],
+            actions: [{ label: "View experience", href: "#exp-kpn" }],
+          },
+        ],
+      },
+    },
+    "mkt-seo-offpage": {
+      title: "SEO Off-Page",
+      text: "Renforcer l'autorité et la crédibilité du site aux yeux de Google : acquisition de backlinks, mentions de marque (Brand Mentions), signaux sociaux et relations presse digitale (Digital PR).",
+      proofs: [],
+      en: {
+        title: "Off-Page SEO",
+        text: "Building the site's authority and trustworthiness in Google's eyes: backlink acquisition, Brand Mentions, social signals and Digital PR.",
+        proofs: [],
+      },
     },
     "mkt-sea": {
       title: "SEA · Google Ads",
