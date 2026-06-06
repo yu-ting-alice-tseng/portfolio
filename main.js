@@ -789,6 +789,7 @@
         subtitle:
           "Engagements dans des clubs et associations qui complètent mon parcours académique.",
         guzheng: {
+          period: "02/2023 – 01/2024",
           title:
             "Directrice marketing & adhésions – Club de guzheng (cithare chinoise)",
           text:
@@ -1583,6 +1584,7 @@
         subtitle:
           "Clubs and initiatives that complement my academic path.",
         guzheng: {
+          period: "Feb. 2023 – Jan. 2024",
           title:
             "Marketing & Membership Director – Guzheng (Chinese Zither) Club",
           text:
