@@ -865,7 +865,7 @@ body.page-finance .hero h1 {
 /* Two-column: skills list left, preview panel right (sticky) */
 .skills-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0,1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
   margin-top: 1rem;
