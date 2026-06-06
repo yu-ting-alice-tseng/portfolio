@@ -4287,17 +4287,108 @@ body.page-data .hero h1 {
 }
 
 /* ── Finance page typography overrides ───────────── */
-/* All headings use formal Libre Baskerville instead of Cormorant */
-body.page-finance .section-header h2,
+/* Display headings: Libre Baskerville — authoritative, formal serif */
 body.page-finance .hero h1,
+body.page-finance .section-header h2,
 body.page-finance h2,
-body.page-finance h3,
-body.page-finance .award-title,
-body.page-finance .timeline-item h3,
-body.page-finance .portfolio-card h3 {
+body.page-finance .award-title {
   font-family: "Libre Baskerville", Georgia, serif;
+}
+body.page-finance .hero h1 {
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 body.page-finance .section-header h2 {
-  font-size: 1.55rem; /* Baskerville slightly larger optically */
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+/* Job/card titles stay Inter — clean, readable at small sizes */
+body.page-finance h3,
+body.page-finance .timeline-body h3,
+body.page-finance .timeline-item h3,
+body.page-finance .portfolio-card h3 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+/* Body refinements: tighter line-height for crisp professional text */
+body.page-finance {
+  line-height: 1.65;
+}
+
+/* ── Marketing page typography overrides ─────────── */
+/* Body: Outfit — modern, geometric, energetic                     */
+/* Display headings: Cormorant Garamond — editorial, high-fashion  */
+body.page-marketing {
+  font-family: "Outfit", system-ui, sans-serif;
+  letter-spacing: 0.005em;
+  line-height: 1.7;
+}
+body.page-marketing .hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2.8rem, 5.5vw, 3.8rem);
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+}
+body.page-marketing .section-header h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+/* Kicker text: more editorial, wider tracking */
+body.page-marketing .hero-kicker {
+  letter-spacing: 0.26em;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+/* h3 (card titles, skill blocks): keep Outfit for energy at small sizes */
+body.page-marketing h3,
+body.page-marketing .skill-preview-title,
+body.page-marketing .timeline-body h3 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+/* ── Data page typography overrides ─────────────── */
+/* Inter throughout — precise, analytical, highly legible          */
+/* Section h2 uses a heavier Inter weight for authority             */
+body.page-data .section-header h2 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+/* Hero h1: lighter Inter with generous tracking — airy data-dashboard feel */
+body.page-data .hero h1 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+/* h3 and card/award titles: consistent Inter */
+body.page-data h2,
+body.page-data h3,
+body.page-data .award-title,
+body.page-data .timeline-item h3,
+body.page-data .portfolio-card h3 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+/* Kicker: minimal, technical micro-label */
+body.page-data .hero-kicker {
+  letter-spacing: 0.2em;
+  font-size: 0.64rem;
+  font-weight: 700;
+}
+/* Body: Inter, optimised line-height for data-dense content */
+body.page-data {
+  line-height: 1.7;
 }
