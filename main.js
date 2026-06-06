@@ -1251,7 +1251,7 @@
         title1: "From raw data to",
         title2: "strategic insights.",
         summary: "Master's student at emlyon business school, I turn complex datasets into actionable decisions. Proficient in R, Python, SQL, Excel (TOSA 950/1000), Power BI and Tableau – applied to market research and performance analytics.",
-        ctaPrimary: "Download dashboard (Excel)",
+        ctaPrimary: "View portfolio",
         ctaSecondary: "View my experience",
         cardRole: "Data Analysis & Market Research",
         caseStudyLabel: "Case Study · XHS Dashboard",
