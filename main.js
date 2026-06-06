@@ -4022,26 +4022,17 @@
       previewProofs.appendChild(card);
     });
 
-    // Render screenshots if defined for this skill
-    const images = data.imagesByLang?.[activeLang] ?? data.imagesByLang?.fr ?? [];
-    if (images.length) {
-      const gallery = document.createElement("div");
-      gallery.className = "proof-images";
-      images.forEach(({ src, alt }) => {
-        const a = document.createElement("a");
-        a.href = src;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.className = "proof-img-link";
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = alt;
-        img.className = "proof-img";
-        img.loading = "lazy";
-        a.appendChild(img);
-        gallery.appendChild(a);
-      });
-      previewProofs.appendChild(gallery);
+    // Render portfolio link chip if defined for this skill
+    const portfolioLink = data.portfolioLink?.[activeLang] ?? data.portfolioLink?.fr ?? null;
+    if (portfolioLink) {
+      const linkWrap = document.createElement("div");
+      linkWrap.className = "proof-portfolio-link";
+      const a = document.createElement("a");
+      a.href = portfolioLink.href;
+      a.className = "skill-card";
+      a.textContent = portfolioLink.label;
+      linkWrap.appendChild(a);
+      previewProofs.appendChild(linkWrap);
     }
   }
 

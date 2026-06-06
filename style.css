@@ -2804,6 +2804,10 @@ body {
   padding-left: 1.1rem;
 }
 
+.proof-portfolio-link {
+  margin-top: 0.75rem;
+}
+
 .proof-points li { margin-bottom: 0.2rem; }
 
 .proof-actions {
