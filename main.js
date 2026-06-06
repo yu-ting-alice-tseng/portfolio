@@ -901,7 +901,7 @@
       contact: {
         heading: "Entrons en contact",
         intro:
-          "Intéressé·e par un stage, un projet ou une collaboration – Envoyez'oi un message, je vous répondrai avec plaisir.",
+          "Intéressé·e par un stage, un projet ou une collaboration ? Envoyez-moi un message, je vous répondrai avec plaisir.",
         labelEmail: "Email",
         labelPhone: "Téléphone",
         labelLocation: "Localisation",
