@@ -3697,8 +3697,8 @@
     "ai-gemini": {
       title: "Gemini",
       text: "Utilisation de Gemini pour la recherche multimodale, la veille et l'intégration avec les outils Google Workspace.",
-      proofs: [{ type: "Pratique", title: "Recherche & productivité", org: "Google", meta: ["Régulier"], points: ["Recherche multimodale, résumé de sources, intégration Google Docs/Sheets."] }],
-      en: { title: "Gemini", text: "Using Gemini for multimodal research, market intelligence and Google Workspace integration.", proofs: [{ type: "Practice", title: "Research & Productivity", org: "Google", meta: ["Regular"], points: ["Multimodal research, source summarisation, Google Docs/Sheets integration."] }] },
+      proofs: [{ type: "Pratique", title: "Recherche & productivité", org: "Google", meta: [], points: ["Recherche multimodale, résumé de sources, intégration Google Docs/Sheets."] }],
+      en: { title: "Gemini", text: "Using Gemini for multimodal research, market intelligence and Google Workspace integration.", proofs: [{ type: "Practice", title: "Research & Productivity", org: "Google", meta: [], points: ["Multimodal research, source summarisation, Google Docs/Sheets integration."] }] },
     },
     "ai-vibe-coding": {
       title: "Vibe Coding",
