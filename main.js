@@ -676,8 +676,8 @@
           desc: "Photographie de paysages, portraits et architecture – recherche d'angles et d'éléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d'autres activités.",
         },
         packaging: {
-          title: "'包裝設計競賽 – 18th Penwards",
-          desc: "Participation à la 18e édition du concours de design d'emballage Penwards (2024). Création de visuels promotionnels pour l'appel à participation.",
+          title: "包裝設計競賽 – 18th Penwards",
+          desc: "Affiche promotionnelle conçue pour la 18e édition du concours de design d'emballage Penwards (2024), dans le cadre de l'appel à candidatures.",
         },
         insightLbl: "Insights métier",
         mkt: {
