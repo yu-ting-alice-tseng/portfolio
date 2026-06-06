@@ -2147,7 +2147,7 @@ body {
 
 /* ── Filter tabs: ghost pill → solid blue on active ─ */
 .skills-filters .experience-filter {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 0.28rem 0.85rem;
   border-radius: 100px;
@@ -3852,7 +3852,7 @@ a, button, [role="button"],
 
   /* Skills: wrap chips neatly */
   .skills-cards { gap: 0.35rem; }
-  .skill-card { font-size: 0.79rem; padding: 0.48rem 0.75rem; }
+  .skill-card { font-size: 0.875rem; padding: 0.48rem 0.75rem; }
 
   /* Timeline */
   .timeline-item { padding: 0.9rem 0.75rem 0.9rem 1rem; }
