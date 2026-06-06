@@ -369,7 +369,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   gap: 2.2rem;
   align-items: center;
   position: relative;
@@ -865,7 +865,7 @@ body.page-finance .hero h1 {
 /* Two-column: skills list left, preview panel right (sticky) */
 .skills-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0,1fr);
   gap: 1.5rem;
   align-items: start;
   margin-top: 1rem;
