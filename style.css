@@ -4308,10 +4308,11 @@ body.page-finance .portfolio-card h3 {
   font-weight: 650;
   letter-spacing: -0.01em;
 }
-/* Skills block micro-labels: Inter uppercase, structured */
+/* Skills block micro-labels: Libre Baskerville — consistent with page headings */
 body.page-finance .skills-block h3 {
-  font-family: "Inter", system-ui, sans-serif !important;
-  letter-spacing: 0.13em !important;
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  letter-spacing: 0.06em !important;
+  font-weight: 700 !important;
 }
 
 /* ── MARKETING: creative, aesthetic, editorial ───────
