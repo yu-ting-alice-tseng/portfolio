@@ -3685,14 +3685,14 @@
     "ai-chatgpt": {
       title: "ChatGPT",
       text: "Utilisation quotidienne de ChatGPT pour la rédaction, la synthèse, l'analyse et la génération de code.",
-      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "OpenAI", meta: ["Quotidien"], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] }],
-      en: { title: "ChatGPT", text: "Daily use of ChatGPT for writing, summarisation, analysis and code generation.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "OpenAI", meta: ["Daily"], points: ["Marketing content writing, document summarisation, coding assistance."] }] },
+      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "OpenAI", meta: [], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] }],
+      en: { title: "ChatGPT", text: "Daily use of ChatGPT for writing, summarisation, analysis and code generation.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "OpenAI", meta: [], points: ["Marketing content writing, document summarisation, coding assistance."] }] },
     },
     "ai-claude": {
       title: "Claude",
       text: "Utilisation de Claude pour des analyses approfondies, la rédaction professionnelle et la gestion de longs contextes.",
-      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Anthropic", meta: ["Quotidien"], points: ["Rédaction avancée, analyse de données textuelles, synthèse de recherches."] }],
-      en: { title: "Claude", text: "Using Claude for in-depth analysis, professional writing and long-context document handling.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "Anthropic", meta: ["Daily"], points: ["Advanced writing, text data analysis, research synthesis."] }] },
+      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Anthropic", meta: [], points: ["Rédaction avancée, analyse de données textuelles, synthèse de recherches."] }],
+      en: { title: "Claude", text: "Using Claude for in-depth analysis, professional writing and long-context document handling.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "Anthropic", meta: [], points: ["Advanced writing, text data analysis, research synthesis."] }] },
     },
     "ai-gemini": {
       title: "Gemini",
