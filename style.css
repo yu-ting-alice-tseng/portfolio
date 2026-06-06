@@ -41,6 +41,11 @@ body.page-finance {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ── Data page: clean Inter for analytical/technical content ── */
+body.page-data {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 body { min-height: 100vh; }
 
 /* Decorative page-edge lines */
