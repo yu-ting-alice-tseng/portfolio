@@ -915,12 +915,12 @@ body.page-finance .hero h1 {
 .skill-card {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.38rem 0.75rem;
+  gap: 0.25rem;
+  padding: 0.25rem 0.55rem;
   border-radius: 999px;
   background-color: #ffffff;
   border: 1px solid rgba(148, 163, 184, 0.45);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--text);
   cursor: pointer;
   white-space: nowrap;
@@ -972,7 +972,7 @@ body.page-finance .hero h1 {
 /* ── Skill preview panel ─────────────────────────── */
 .skill-preview {
   margin-top: 0;
-  padding: 1.2rem 1.4rem;
+  padding: 2rem 2.2rem;
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, #ffffff 50%);
   border: 1px solid rgba(37, 99, 235, 0.15);
@@ -981,22 +981,22 @@ body.page-finance .hero h1 {
 }
 
 .skill-preview-title {
-  margin: 0 0 0.35rem;
-  font-size: 0.92rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 .skill-preview-text {
-  margin: 0 0 0.7rem;
-  font-size: 0.82rem;
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
   color: var(--text-soft);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .skill-preview-links {
   margin: 0;
   padding-left: 1.1rem;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: var(--text);
 }
 
