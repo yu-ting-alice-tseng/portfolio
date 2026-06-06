@@ -3036,7 +3036,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Compréhension des enjeux de finance verte, de gestion des risques et de régulation.",
       links: [
         {
-          label: "Cours 竄 Green Finance and Risk Management 罈",
+          label: "Cours « Green Finance and Risk Management »",
           href: "#exp-teaching",
         },
       ],
@@ -3048,7 +3048,7 @@ document.addEventListener("DOMContentLoaded", () => {
       links: [
         {
           label:
-            "Cours 竄 Operational Decision Analysis and Management of Financial Institutions 罈",
+            "Cours « Operational Decision Analysis and Management of Financial Institutions »",
           href: "#exp-teaching",
         },
       ],
