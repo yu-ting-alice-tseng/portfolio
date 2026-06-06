@@ -826,7 +826,7 @@
         subtitle:
           "Des initiatives centrées sur l'ééducation, l'international et l'impact social.",
         aiesec: {
-          period: "09/2024 – Présent",
+          period: "09/2024 – 06/2025",
           title: "Membre – AIESEC in NCCU",
           org:
             "AIESEC · Organisation internationale de développement du leadership",
@@ -842,7 +842,7 @@
           finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûtts pour dépasser l'objectif de budget équilibré de 53,7%.",
         },
         usr: {
-          period: "09/2024 – Présent",
+          period: "09/2024 – 06/2025",
           title: "Volontaire – Projet University Social Responsibility",
           org: "NCCU · Office of University Responsibility",
           point1:
@@ -1621,7 +1621,7 @@
         subtitle:
           "Initiatives focused on education, international exchange and social impact.",
         aiesec: {
-          period: "Sep. 2024 – Present",
+          period: "Sep. 2024 – Jun. 2025",
           title: "Member – AIESEC in NCCU",
           org:
             "AIESEC · Global non-profit organization developing youth leadership",
@@ -1637,7 +1637,7 @@
           finPoint1: "Managed the project budget and financial forecast for a summer camp, optimizing cost structures to exceed the balanced budget target by 53.7%.",
         },
         usr: {
-          period: "Sep. 2024 – Present",
+          period: "Sep. 2024 – Jun. 2025",
           title: "Volunteer – University Social Responsibility Project",
           org: "NCCU · Office of University Responsibility",
           point1:
