@@ -3727,13 +3727,13 @@
     "office-google-suite": {
       title: "Google Suite",
       text: "Utilisation quotidienne de Google Workspace (Docs, Sheets, Slides, Drive, Gmail) pour la collaboration et la productivité.",
-      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Google Workspace", meta: ["Quotidien"], points: ["Rédaction collaborative, suivi de données sur Sheets, présentations Slides."] }],
+      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Google Workspace", meta: [], points: ["Rédaction collaborative, suivi de données sur Sheets, présentations Slides."] }],
       en: { title: "Google Suite", text: "Daily use of Google Workspace (Docs, Sheets, Slides, Drive, Gmail) for collaboration and productivity.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "Google Workspace", meta: ["Daily"], points: ["Collaborative writing, data tracking on Sheets, Slides presentations."] }] },
     },
     "office-notion": {
       title: "Notion",
       text: "Organisation des projets, prise de notes structurée et gestion de bases de données de travail via Notion.",
-      proofs: [{ type: "Pratique", title: "Gestion de projets & notes", org: "Notion", meta: ["Quotidien"], points: ["Planification de projets académiques et personnels, bases de données de contenus."] }],
+      proofs: [{ type: "Pratique", title: "Gestion de projets & notes", org: "Notion", meta: [], points: ["Planification de projets académiques et personnels, bases de données de contenus."] }],
       en: { title: "Notion", text: "Project organisation, structured note-taking and work database management via Notion.", proofs: [{ type: "Practice", title: "Project Management & Notes", org: "Notion", meta: ["Daily"], points: ["Planning academic and personal projects, content databases."] }] },
     },
 
