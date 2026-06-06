@@ -4062,12 +4062,15 @@
     skillChips.forEach((c) => c.classList.toggle("is-skill-active", c === activeChipEl));
   }
 
+  const skillsLayout = document.querySelector(".skills-layout");
+
   skillChips.forEach((chip) => {
     function triggerPreview() {
       const key = chip.getAttribute("data-skill");
       if (key) {
         setActiveSkill(chip);
         updateSkillPreview(key);
+        skillsLayout?.classList.add("info-active");
       }
     }
     chip.addEventListener("mouseenter", triggerPreview);
