@@ -571,6 +571,7 @@
           point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing – +89.1% d'interactions et +69.7% d'abonnés en 3 mois.",
           point2: "Veille concurrentielle, analyse d'audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
+          point4: "Traduction de 67 articles (anglais → chinois simplifié) couvrant des thèmes business, tech et culture.",
           dataPoint1: "Construire un dashboard Excel dynamique – 12 métriques quotidiennes, comparaison A/B automatisée et visualisation des KPIs – réduisant le temps de reporting de 5h/semaine.",
           dataPoint2: "Réaliser des analyses de marché approfondies et une veille concurrentielle pour optimiser la stratégie de contenu sur le segment du chinois simplifié (REDnote / Xiaohongshu).",
           dataPoint3: "Déployer une stratégie de contenu data-driven fondée sur le modèle STP – +93,3% de vues, +89,1% d'interactions et +69,7% d'abonnés en 3 mois.",
@@ -793,7 +794,7 @@
           title:
             "Directrice marketing & adhésions – Club de guzheng (cithare chinoise)",
           text:
-            "Organisation des campagnes de recrutement, gestion des réseaux sociaux, adaptation des cours en fonction des retours et coordination des événements et performances.",
+            "Pilotage des campagnes de recrutement et des événements d'orientation, atteignant le plein effectif les deux semestres. Fidélisation de 80 % des membres via la gestion de la page Facebook, l'adaptation des cours et l'organisation d'activités et de performances.",
           portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
@@ -1366,6 +1367,7 @@
           point1: "Xiaohongshu content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
           point2: "Competitive monitoring, audience analysis and visual adaptation by target sub-segment.",
           point3: "Created Meta content (Facebook & Instagram) aligned with trends and brand identity.",
+          point4: "Translated 67 English articles on business, technology and culture into Simplified Chinese.",
           dataPoint1: "Built a dynamic Excel dashboard – 12 daily metrics, automated A/B comparison and KPI visualisation – cutting reporting time by 5h/week.",
           dataPoint2: "Conducted in-depth market analyses and competitive monitoring to optimise the content strategy for the simplified Chinese market (REDnote / Xiaohongshu).",
           dataPoint3: "Deployed a data-driven content strategy based on the STP model – +93.3% views, +89.1% interactions and +69.7% followers in 3 months.",
@@ -1588,7 +1590,7 @@
           title:
             "Marketing & Membership Director – Guzheng (Chinese Zither) Club",
           text:
-            "Led recruitment campaigns, managed social media, adjusted course structure based on feedback and coordinated events and performances.",
+            "Led recruitment and orientation events, achieving full enrollment in both semesters. Retained 80% of members by managing the Facebook page, adjusting course arrangements based on feedback, and organising activities and performances.",
           portfolioLink: "View creations (PDF)",
         },
         camps: {
