@@ -318,7 +318,7 @@
         },
         paris1: {
           period: "01/2024 – 06/2024",
-          title: "Programme d'ééchange en Science Politique",
+          title: "Programme d'échange en Science Politique",
           school: "Université Paris 1 Panthéon-Sorbonne",
           point1: "Approfondissement des politiques européennes et internationales.",
           point2: "Immersion académique et culturelle en France.",
@@ -486,7 +486,7 @@
         kicker: "Langues & engagement international",
         title1: "Immersion linguistique &",
         title2: "échange interculturel",
-        summary: "Locutrice native en mandarin, certifiée DALF C1 (français), IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des programmes d'accompagnement linguistique et d'ééchange culturel à Taïwan.",
+        summary: "Locutrice native en mandarin, certifiée DALF C1 (français), IELTS 8.0 (anglais) et JLPT N1 (japonais). Engagée dans des programmes d'accompagnement linguistique et d'échange culturel à Taïwan.",
         ctaSecondary: "Voir mes engagements",
         availabilityLabel: "Enseignement",
         availabilityValue: "En ligne · Disponible",
@@ -557,7 +557,7 @@
           point1: "Optimisation SEO (on-page / technique) et recommandations de contenus.",
           point2: "Suivi de KPIs et analyse de performance (trafic, CTR, conversions).",
           point3: "Campagnes SEA et reporting.",
-          dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l'ééquipe.",
+          dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l'équipe.",
           dataPoint2: "Concevoir et piloter des reportings de performance marketing (FB & Google) via des tableaux de bord – +9,5% CTR, +5,1% CVR.",
           dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",
           finTitle: "Assistante Marketing Digital (Stage)",
@@ -611,7 +611,7 @@
           finTitle: "Assistante de cours",
           finCompany: "Faculté de Banque et Finance Internationale, NCCU",
           finPoint1: "Coordination logistique de 9 cours de finance, en assurant l'interface entre les étudiants, les enseignants et les partenaires entreprise.",
-          finPoint2: "Animation d'éénénements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
+          finPoint2: "Animation d'événements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
         },
         research: {
           period: "06/2023 – 12/2023",
@@ -663,7 +663,7 @@
         guzheng: {
           tag: "Community Management",
           title: "政大古箏社 – Page Facebook",
-          desc: "Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'éénénements de fin d'année.",
+          desc: "Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.",
         },
         instagram: {
           tag: "Content Creation",
@@ -673,7 +673,7 @@
         design: {
           tag: "Photographie & Design",
           title: "Photographie & supports promotionnels",
-          desc: "Photographie de paysages, portraits et architecture – recherche d'angles et d'ééléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d'autres activités.",
+          desc: "Photographie de paysages, portraits et architecture – recherche d'angles et d'éléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d'autres activités.",
         },
         packaging: {
           title: "'包裝設計競賽 – 18th Penwards",
@@ -825,7 +825,7 @@
       volunteer: {
         title: "Bénévolat & Engagement",
         subtitle:
-          "Des initiatives centrées sur l'ééducation, l'international et l'impact social.",
+          "Des initiatives centrées sur l'éducation, l'international et l'impact social.",
         aiesec: {
           period: "09/2024 – 06/2025",
           title: "Membre – AIESEC in NCCU",
@@ -847,14 +847,14 @@
           title: "Volontaire – Projet University Social Responsibility",
           org: "NCCU · Office of University Responsibility",
           point1:
-            "Accompagnement d'éélèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.",
+            "Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.",
         },
         flagship: {
           period: "09/2023 – Présent",
           title: "Volontaire – Programme de compagnonnage linguistique",
           org: "Chinese Overseas Flagship Center in Taiwan",
           point1:
-            "Facilitation de l'immersion linguistique et culturelle d'éétudiants américains via des événements et visites.",
+            "Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.",
         },
         buddy: {
           period: "09/2023 – 01/2025",
@@ -879,17 +879,17 @@
         subtitle:
           "Reconnaissance académique pour mes résultats et mon engagement.",
         exchange: {
-          title: "Bourse d'ééchange",
+          title: "Bourse d'échange",
           org: "Ministère de l'é'ucation (Taïwan)",
           text:
-            "Bourse au mérite pour un programme d'ééchange international en France.",
+            "Bourse au mérite pour un programme d'échange international en France.",
           year: "2024",
         },
         short: {
-          title: "Bourse d'éétudes à court terme",
+          title: "Bourse d'études à court terme",
           org: "NCCU – Université Nationale Chengchi",
           text:
-            "Financement au mérite pour un séjour d'éétudes à l'éétranger.",
+            "Financement au mérite pour un séjour d'études à l'étranger.",
           year: "2024",
         },
         excellence: {
@@ -3294,7 +3294,7 @@
     "soft-leadership": {
       title: "Leadership & Gestion D'é'uipe",
       text:
-        "Encadrement de petites équipes marketing et animation de groupes d'éétudiants.",
+        "Encadrement de petites équipes marketing et animation de groupes d'étudiants.",
       links: [
         {
           label: "Responsable marketing AIESEC – équipe de 4",
@@ -3309,7 +3309,7 @@
     "soft-project": {
       title: "Gestion De Projet & Organisation",
       text:
-        "Planification, coordination et suivi de projets académiques, d'éénénements et de camps.",
+        "Planification, coordination et suivi de projets académiques, d'événements et de camps.",
       links: [
         {
           label: "Sora Education – organisation de 5 camps d'été",
@@ -3360,7 +3360,7 @@
     "lang-french": {
       title: "Français – DALF C1",
       text:
-        "Niveau C1 certifié en français, avec expérience d'éétudes et de présentations en France.",
+        "Niveau C1 certifié en français, avec expérience d'études et de présentations en France.",
       proofs: [
         {
           type: "Certificat",
@@ -3374,7 +3374,7 @@
         },
         {
           type: "Formation",
-          title: "Programme d'ééchange",
+          title: "Programme d'échange",
           org: "Université Paris 1 Panthéon-Sorbonne",
           meta: ["Paris · France", "01/2024 – 06/2024"],
           points: ["Immersion académique et culturelle en France."],
