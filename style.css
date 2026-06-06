@@ -2687,17 +2687,27 @@ body {
 
 .skills-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.5rem;
   align-items: start;
   margin-top: 1.5rem;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.skills-layout.info-active {
+  grid-template-columns: 1fr 1fr;
 }
 
 .skills-left  { min-width: 0; }
 
 .skills-right {
+  display: none;
   position: sticky;
   top: calc(var(--header-h) + 1.5rem);
+}
+
+.skills-layout.info-active .skills-right {
+  display: block;
 }
 
 /* ── Skill preview panel ── */
@@ -2819,7 +2829,8 @@ body {
 
 /* ── Responsive: stack on small screens ── */
 @media (max-width: 900px) {
-  .skills-layout {
+  .skills-layout,
+  .skills-layout.info-active {
     grid-template-columns: 1fr;
   }
   .skills-right {
