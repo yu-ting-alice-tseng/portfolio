@@ -455,7 +455,7 @@
         title1: "Des données brutes aux",
         title2: "insights actionnables.",
         summary: "Étudiante en Master à emlyon business school, je me passionne pour l'intersection entre les chiffres et la stratégie d'entreprise. Maîtrisant les outils d'analyse (Excel/TOSA 950, SQL, Power BI, Python), je transforme les données complexes en tableaux de bord actionnables pour optimiser les performances commerciales et piloter les décisions.",
-        ctaPrimary: "Télécharger le dashboard (Excel)",
+        ctaPrimary: "Voir le portfolio",
         ctaSecondary: "Voir mes expériences",
         cardRole: "Analyse de Données & Informatique Décisionnelle",
         caseStudyLabel: "Étude de cas - Dashboard XHS",
