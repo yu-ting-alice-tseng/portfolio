@@ -1473,7 +1473,7 @@
         },
         packaging: {
           title: "Packaging Design Competition – 18th Penwards",
-          desc: "Entry for the 18th Penwards packaging design competition (2024). Created promotional visuals for the open call.",
+          desc: "Promotional poster designed for the 18th Penwards packaging design competition (2024) open call.",
         },
         insightLbl: "Key Insights",
         mkt: {
