@@ -4071,7 +4071,10 @@
       }
     }
     chip.addEventListener("mouseenter", triggerPreview);
-    chip.addEventListener("click", triggerPreview);
+    chip.addEventListener("click", (e) => {
+      e.stopPropagation();
+      triggerPreview();
+    });
   });
 
   // ?? Shared filter animation helper ????????????????
