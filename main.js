@@ -761,9 +761,9 @@
           ma: {
             num: "02 · Recherche empirique · Finance quantitative",
             subtitle: "Étude empirique (2000 – 024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
-            sitLbl: "Situation",
+            sitLbl: "Introduction",
             actLbl: "Méthodologie",
-            resLbl: "Résultats clés",
+            resLbl: "Résultats",
             statHypo: "Hypothèses testées",
             statPeriod: "Période analysée",
             statIndices: "Indices politiques",
@@ -1508,7 +1508,7 @@
           title: "Packaging Design Competition – 18th Penwards",
           desc: "Personal practice piece inspired by the theme of the 18th Penwards packaging design competition (2024) — an exercise in visual composition and typography.",
         },
-        insightLbl: "Key Insights",
+        insightLbl: "Discussion",
         mkt: {
           heroTitle2: "& Creative Design",
           heroEyebrow: "Yu-Ting Tseng · Selected Projects · 2024 – 025",
