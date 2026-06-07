@@ -683,7 +683,7 @@
         },
         insightLbl: "Insights métier",
         mkt: {
-          heroTitle2: "& Design créatif",
+          heroTitle2: "& Design Créatif",
           heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés · 2024 – 2025",
           heroDesc: "Campagnes data-driven, direction artistique et community management — des projets où créativité visuelle et analyse de performance se croisent.",
           heroStatProjets: "Projets",
