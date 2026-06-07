@@ -1433,7 +1433,7 @@
           title: "Teaching Assistant",
           point1: "Course support (finance, risk management) and student follow-up.",
           point2: "Prepared course materials and handled logistics.",
-          dataSupport: "Pedagogical support for programming and data analysis courses (VBA, Access).",
+          dataSupport: "Managed event organisation (thematic conferences, networking sessions), coordinating communication flow and welcoming external speakers.",
           dataCoord: "Coordinated the operational logistics of 9 courses and served as the interface between demanding stakeholders.",
           finTitle: "Course Assistant",
           finCompany: "College of Global Banking and Finance, NCCU",
