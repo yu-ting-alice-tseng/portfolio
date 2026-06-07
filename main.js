@@ -287,7 +287,7 @@
         subtitle:
           "Un parcours international entre la France et Taïwan, à l'interface du management, de la finance et des langues.",
         emlyon: {
-          period: "09/2023 – Aujourd'hui",
+          period: "09/2025 – Aujourd'hui",
           title: "Master en Gestion (Programme Grande École)",
           school: "emlyon business school",
           point1: "Spécialisation en Finance et Comptabilité.",
@@ -1115,7 +1115,7 @@
         subtitle:
           "An international path between France and Taiwan, at the crossroads of management, finance and languages.",
         emlyon: {
-          period: "09/2023 – Present",
+          period: "09/2025 – Present",
           title: "Master in Management (Grande École Programme)",
           school: "emlyon business school",
           point1: "Specialisation in Finance and Accounting.",
