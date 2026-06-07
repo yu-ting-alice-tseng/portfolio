@@ -306,7 +306,6 @@
           major2: "Diplomatie",
           minor1: "Économie",
           point1: "Certificate of Excellence (Top 5% GPA) – 2021, 2023.",
-          point2: "Vice-présidente du Comité Local AIESEC in NCCU.",
           gpa: "3,99 / 4,0",
           statRanking: "Classement",
           courseManagement: "Management",
