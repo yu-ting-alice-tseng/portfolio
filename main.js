@@ -1461,7 +1461,7 @@
           point1: "Data collection, cleaning and analysis for research papers.",
           point2: "Produced summaries and seminar materials.",
           dataPoint1: "Analysed macroeconomic issues using a dual quantitative and qualitative approach via R and Excel, ensuring the rigour of deliverables.",
-          dataPoint2: "Data collection, cleaning and processing; produced quantitative summaries and materials for seminars and conferences.",
+          dataPoint2: "Led teams of 3 to 4 people to organise seminars, conferences and summer camps.",
           finCompany: "Institute of International Relations, NCCU",
           finPoint1: "Analyzed economic trends and datasets using qualitative surveys and quantitative regression methods.",
         },
