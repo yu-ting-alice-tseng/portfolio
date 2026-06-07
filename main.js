@@ -664,6 +664,8 @@
           tag: "Community Management",
           title: "政大古箏社 – Page Facebook",
           desc: "Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.",
+          cap1: "Affiche de recrutement",
+          cap2: "Réunion de fin de semestre",
         },
         instagram: {
           tag: "Content Creation",
