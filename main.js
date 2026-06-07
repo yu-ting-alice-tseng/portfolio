@@ -680,7 +680,7 @@
           title: "Concours de design d'emballage – 18th Penwards",
           desc: "Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024) — exercice de style autour de la composition visuelle et de la typographie.",
         },
-        insightLbl: "Insights métier",
+        insightLbl: "Discussion",
         mkt: {
           heroTitle2: "& Design Créatif",
           heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés · 2024 – 2025",
