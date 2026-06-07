@@ -1475,6 +1475,8 @@
           tag: "Community Management",
           title: "NCCU Guzheng Club – Facebook Page",
           desc: "Managed the Facebook page of NCCU's guzheng (Chinese zither) club. Created visuals for activity announcements, membership recruitment and year-end event coverage.",
+          cap1: "Recruitment poster",
+          cap2: "Year-end gathering",
         },
         instagram: {
           tag: "Content Creation",
@@ -1533,6 +1535,7 @@
             ig6: "IG post – event introduction",
             ig7: "IG post – sign-up CTA",
             ig8: "IG post – follow CTA",
+            igLabel: "Instagram Posts – YOLO Campaign",
           },
           guzhengNum: "03 - Community Management",
           penwardsNum: "04 - Visual Design",
