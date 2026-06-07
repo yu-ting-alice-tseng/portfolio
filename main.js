@@ -1097,6 +1097,19 @@
       },
       locations: {
         online: "Online · Taiwan",
+        taipei: "Taipei · Taiwan",
+        taipeiEdu: "Taipei, Taiwan",
+        lyon: "Lyon, France",
+        paris: "Paris, France",
+        onlineOnly: "Online",
+        freelance: "Freelance",
+      },
+      footer: {
+        rights: "All rights reserved.",
+        overview: "Overview",
+        marketing: "Digital Marketing & Design",
+        data: "Data & Market Research",
+        finance: "Finance & Consulting",
       },
       education: {
         title: "Academic Background",
