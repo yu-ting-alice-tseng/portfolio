@@ -662,8 +662,8 @@
         },
         guzheng: {
           tag: "Community Management",
-          title: "政大古箏社 – Page Facebook",
-          desc: "Directrice marketing & adhésions du club de guzheng de NCCU (2023–2024). Création de visuels pour les annonces d'activités, le recrutement et les événements de fin de semestre — ayant contribué à atteindre le plein effectif et à fidéliser 80 % des membres grâce à une gestion active de la page Facebook.",
+          title: "Club de Guzheng de NCCU – Page Facebook",
+          desc: "Directrice marketing & adhésions du club de guzheng de NCCU (2023–2024). Création de visuels pour les annonces d'activités, le recrutement et les événements de fin de semestre — 100 % des places pourvues à chaque recrutement et 80 % de fidélisation des membres grâce à une gestion active de la page Facebook.",
           cap1: "Affiche de recrutement",
           cap2: "Réunion de fin de semestre",
         },
