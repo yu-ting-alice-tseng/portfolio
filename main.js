@@ -1913,7 +1913,20 @@
         research: "?弦",
       },
       locations: {
-        online: "蝺? · ?啁",
+        online: "線上･台灣",
+        taipei: "台北･台灣",
+        taipeiEdu: "台北，台灣",
+        lyon: "里昂，法國",
+        paris: "巴黎，法國",
+        onlineOnly: "線上",
+        freelance: "自由接案",
+      },
+      footer: {
+        rights: "版權所有。",
+        overview: "總覽",
+        marketing: "數位行銀與創意設計",
+        data: "數據分析與市場研究",
+        finance: "財務與顧問",
       },
       education: {
         title: "摮豢風?",
