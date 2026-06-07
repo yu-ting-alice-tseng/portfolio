@@ -724,6 +724,7 @@
             ig6: "Post IG – présentation de l'événement",
             ig7: "Post IG – appel à l'inscription",
             ig8: "Post IG – invitation à suivre le compte",
+            igLabel: "Posts Instagram – Campagne YOLO",
           },
           guzhengNum: "03 - Community Management",
           penwardsNum: "04 - Design Visuel",
