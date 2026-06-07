@@ -605,7 +605,7 @@
           title: "Assistante d'enseignement",
           point1: "Support de cours (finance, risk management) et suivi des étudiants.",
           point2: "Préparation de supports et coordination logistique.",
-          dataSupport: "Support pédagogique pour les cours de programmation et analyse de données (VBA, Access).",
+          dataSupport: "Piloter l'organisation événementielle (conférences thématiques, sessions de networking), assurant le flux de communication et l'accueil des intervenants externes.",
           dataCoord: "Coordonner la logistique opérationnelle de 9 cours et assurer l'interface entre des parties prenantes exigeantes.",
           finTitle: "Assistante de cours",
           finCompany: "Faculté de Banque et Finance Internationale, NCCU",
