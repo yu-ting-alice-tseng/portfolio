@@ -1954,7 +1954,6 @@
           major2: "憭漱摮?",
           minor1: "蝬?",
           point1: "璁桃??????5% GPA嚗?2021??023 撟氬?",
-          point2: "?遙 AIESEC NCCU ?唳憪?銝餃葉??",
           gpa: "4.22 / 4.3",
           statRanking: "??",
           courseManagement: "蝞∠?摮?",
@@ -2453,7 +2452,8 @@
       extracurricular: {
         title: "隤脣?瘣餃?",
         subtitle: "?函冗???犖?菜平銝剖擗?撖虫???撠??",
-        guzheng: {          period: "2023/02 – 2024/01",
+        guzheng: {
+          period: "2023/02 – 2024/01",
 
           title: "???斤?蝷?銵???⊿",
           text:
