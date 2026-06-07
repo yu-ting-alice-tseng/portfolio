@@ -1924,7 +1924,7 @@
       footer: {
         rights: "版權所有。",
         overview: "總覽",
-        marketing: "數位行銀與創意設計",
+        marketing: "數位行銷與創意設計",
         data: "數據分析與市場研究",
         finance: "財務與顧問",
       },
