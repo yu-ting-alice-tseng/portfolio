@@ -196,7 +196,7 @@
         subDataQuant: "Méthodes Quantitatives",
         subDataQual: "Méthodes Qualitatives & Analyse",
         subData4: "IA & Outils",
-        subMkt1: "Référencement naturel (SEO)",
+        subMkt1: "Référencement Naturel (SEO)",
         subMkt2: "SEA (Search Engine Advertising)",
         subMkt3: "SMM (Social Media Marketing)",
         subMkt4: "Stratégie & Planification",
