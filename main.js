@@ -708,7 +708,7 @@
           aiesec: {
             num: "02 - Campagne Marketing",
             tag: "Campagne - Direction artistique",
-            body: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'IESEC in NCCU. Conception des visuels de campagne - affiches et publications - pour le recrutement de volontaires et de participants.",
+            body: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU — un séjour entièrement en anglais destiné aux lycéens. Conception des visuels de campagne — affiches et publications — pour le recrutement de volontaires et de participants.",
             statVol: "Volontaires recrutés",
             statPart: "Participants",
             statBudget: "Objectif budgétaire dépassé",
@@ -1519,7 +1519,7 @@
           aiesec: {
             num: "02 - Marketing Campaign",
             tag: "Campaign - Art Direction",
-            body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp. Designed the main campaign visuals - posters and social posts - to drive volunteer and participant recruitment.",
+            body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp — a fully English-language program for high school students. Designed the main campaign visuals — posters and social posts — to drive volunteer and participant recruitment.",
             statVol: "Volunteers recruited",
             statPart: "Participants",
             statBudget: "Budget target exceeded",
