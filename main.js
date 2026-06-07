@@ -915,7 +915,7 @@
           title: "Certificate of Excellence – Top 5% GPA",
           org: "NCCU – Université Nationale Chengchi",
           text:
-            "Récompense académique pour des résultats parmi les 7 % meilleurs étudiants de NCCU.",
+            "Récompense décernée aux meilleurs 5 % de chaque promotion ; classée 1re de filière et dans les 7 % meilleurs diplômés de NCCU.",
           year: "2021, 2023",
         },
       },
@@ -1739,7 +1739,7 @@
         excellence: {
           title: "Certificate of Excellence – Top 5% GPA",
           org: "NCCU – National Chengchi University",
-          text: "Awarded for maintaining a GPA within the top 7% of the cohort.",
+          text: "Awarded to the top 5% of each cohort; ranked 1st in department and in the top 7% of NCCU graduates overall.",
           year: "2021, 2023",
         },
       },
