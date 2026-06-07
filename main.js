@@ -3395,7 +3395,7 @@
         {
           type: "Certificat",
           title: "DALF C1",
-          org: "France ?ducation international",
+          org: "France Éducation international",
           meta: ["Français"],
           points: ["Certification C1."],
           actions: [
