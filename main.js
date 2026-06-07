@@ -663,7 +663,7 @@
         guzheng: {
           tag: "Community Management",
           title: "政大古箏社 – Page Facebook",
-          desc: "Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.",
+          desc: "Directrice marketing & adhésions du club de guzheng de NCCU (2023–2024). Création de visuels pour les annonces d'activités, le recrutement et les événements de fin de semestre — ayant contribué à atteindre le plein effectif et à fidéliser 80 % des membres grâce à une gestion active de la page Facebook.",
           cap1: "Affiche de recrutement",
           cap2: "Réunion de fin de semestre",
         },
@@ -1474,7 +1474,7 @@
         guzheng: {
           tag: "Community Management",
           title: "NCCU Guzheng Club – Facebook Page",
-          desc: "Managed the Facebook page of NCCU's guzheng (Chinese zither) club. Created visuals for activity announcements, membership recruitment and year-end event coverage.",
+          desc: "Marketing & Membership Director of NCCU's guzheng (Chinese zither) club (2023–2024). Designed visuals for activity announcements, recruitment campaigns and year-end events — contributing to full enrollment and 80% member retention through active Facebook page management.",
           cap1: "Recruitment poster",
           cap2: "Year-end gathering",
         },
