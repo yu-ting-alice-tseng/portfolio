@@ -679,7 +679,7 @@
         },
         packaging: {
           title: "包裝設計競賽 – 18th Penwards",
-          desc: "Affiche promotionnelle conçue pour la 18e édition du concours de design d'emballage Penwards (2024), dans le cadre de l'appel à candidatures.",
+          desc: "Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024) — exercice de style autour de la composition visuelle et de la typographie.",
         },
         insightLbl: "Insights métier",
         mkt: {
@@ -1490,7 +1490,7 @@
         },
         packaging: {
           title: "Packaging Design Competition – 18th Penwards",
-          desc: "Promotional poster designed for the 18th Penwards packaging design competition (2024) open call.",
+          desc: "Personal practice piece inspired by the theme of the 18th Penwards packaging design competition (2024) — an exercise in visual composition and typography.",
         },
         insightLbl: "Key Insights",
         mkt: {
