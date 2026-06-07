@@ -1043,7 +1043,7 @@
         chipComm: "Communication & Public Speaking",
         chipAiTools: "AI Tools (ChatGPT, Claude, Gemini)",
         chipAiAds: "AI-Powered Advertising",
-        chipAiBusiness: "AI for Business",
+        chipAiBusiness: "AI For Business",
         blockAI: "AI Tools",
         blockOffice: "Office Suite",
         blockCreative: "Creative Tools",
