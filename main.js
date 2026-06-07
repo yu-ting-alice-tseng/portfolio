@@ -692,7 +692,7 @@
           filterAll: "Tous",          filterAll: "Tous",
           filterDashboard: "Dashboard",
           filterCampagne: "Campagnes",
-          filterDesign: "Design visuel",
+          filterDesign: "Design Visuel",
           filterCommunity: "Community",
           engoo: {
             num: "01 - Étude de cas complète",
@@ -700,10 +700,10 @@
             sitLbl: "Situation - Contexte & Défi",
             actLbl: "Action - Construction du dashboard",
             resLbl: "Résultats - Impact sur 3 mois",
-            statMet: "Métriques / jour",
-            statVues: "Vues - 3 mois",
+            statMet: "Métriques / Jour",
+            statVues: "Vues - 3 Mois",
             statInter: "Interactions",
-            statAb: "Module A/B dynamique",
+            statAb: "Module A/B Dynamique",
           },
           aiesec: {
             num: "02 - Campagne Marketing",
