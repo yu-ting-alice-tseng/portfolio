@@ -692,7 +692,7 @@
           filterDashboard: "Dashboard",
           filterCampagne: "Campagnes",
           filterDesign: "Design Visuel",
-          filterCommunity: "Community",
+          filterCommunity: "Communauté",
           engoo: {
             num: "Étude de cas",
             tag: "Excel · Dashboard · Analytics",
