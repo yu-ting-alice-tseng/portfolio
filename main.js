@@ -684,7 +684,7 @@
         mkt: {
           heroTitle2: "& Design Créatif",
           heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés · 2024 – 2025",
-          heroDesc: "Campagnes data-driven, direction artistique et community management — des projets où créativité visuelle et analyse de performance se croisent.",
+          heroDesc: "Campagnes orientées données, direction artistique et gestion de communauté — une approche conjuguant rigueur analytique et création visuelle au service de la performance.",
           heroStatProjets: "Projets",
           heroStatGrowth: "Croissance XHS",
           heroStatPart: "Participants AIESEC",
