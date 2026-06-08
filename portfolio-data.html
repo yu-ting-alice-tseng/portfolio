@@ -276,8 +276,9 @@
       max-width: 1240px;
       margin: 0 auto;
       padding: 3.5rem 2rem 6rem;
-      columns: 2;
-      column-gap: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
     }
 
     /* ── Card ──────────────────────────────────────────── */
@@ -288,9 +289,6 @@
       padding: 2.25rem;
       transition: background 0.28s ease;
       position: relative;
-      break-inside: avoid;
-      margin-bottom: 1.5rem;
-      display: block;
     }
     .pf-card::after {
       content: '';
@@ -303,7 +301,6 @@
     .pf-card.is-hidden { display: none !important; }
 
     .pf-card--featured {
-      column-span: all;
       padding: 3rem 3.5rem;
       background: var(--lx-bg-soft);
       border: none;
