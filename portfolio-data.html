@@ -549,8 +549,8 @@
 
     /* ── Responsive ────────────────────────────────────── */
     @media (max-width: 860px) {
-      .pf-grid { columns: 1; }
-      .pf-card--featured { column-span: all; padding: 2rem; }
+      .pf-grid { grid-template-columns: 1fr; }
+      .pf-card--featured { padding: 2rem; }
       .pf-hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 2rem 2.5rem; }
       .pf-hero-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: 1.5px; }
       .pf-hero-stat-block { text-align: left; }
