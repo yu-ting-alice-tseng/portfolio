@@ -1587,7 +1587,7 @@
             statAb: "Dynamic A/B Comparison",
           },
           ma: {
-            num: "02 · Empirical Research · Quantitative Finance",
+            num: "Empirical Research · Quantitative Finance",
             subtitle: "Empirical study (2000 – 024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Methodology",
@@ -1613,7 +1613,7 @@
           filterRecherche: "Research",
           filterDistinction: "Awards",
           ma: {
-            num: "01 · Empirical Research · Quantitative Finance",
+            num: "Empirical Research · Quantitative Finance",
             subtitle: "Empirical study (2000 – 024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Methodology",
