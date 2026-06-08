@@ -274,10 +274,8 @@
       max-width: 1240px;
       margin: 0 auto;
       padding: 3rem 2rem 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.75rem;
-      align-items: start;
+      columns: 2;
+      column-gap: 1.75rem;
     }
 
     /* ── Card ──────────────────────────────────────────── */
@@ -288,6 +286,9 @@
       padding: 2rem;
       transition: box-shadow 0.28s ease, transform 0.28s ease, border-color 0.28s;
       position: relative;
+      break-inside: avoid;
+      margin-bottom: 1.75rem;
+      display: block;
     }
     .pf-card:hover {
       box-shadow: 0 14px 44px rgba(225,29,72,0.09), 0 2px 8px rgba(0,0,0,0.04);
@@ -297,7 +298,7 @@
     .pf-card.is-hidden { display: none !important; }
 
     .pf-card--featured {
-      grid-column: 1 / -1;
+      column-span: all;
       padding: 2.75rem 3rem;
       border-color: rgba(225,29,72,0.16);
       background: linear-gradient(160deg, #fff 0%, #fff8fa 60%, #fdf4ff 100%);
