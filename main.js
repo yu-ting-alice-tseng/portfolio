@@ -750,7 +750,7 @@
           filterRecherche: "Recherche",
           filterReporting: "Reporting",
           dashboard: {
-            num: "Dashboard · Étude de cas",
+            num: "Dashboard",
             sitLbl: "Contexte & Problématique",
             actLbl: "Démarche & Méthodologie",
             resLbl: "Résultats & Impact",
