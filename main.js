@@ -750,7 +750,7 @@
           filterRecherche: "Recherche",
           filterReporting: "Reporting",
           dashboard: {
-            num: "01 · Dashboard · Étude de cas",
+            num: "Dashboard · Étude de cas",
             sitLbl: "Contexte & Problématique",
             actLbl: "Démarche & Méthodologie",
             resLbl: "Résultats & Impact",
@@ -759,7 +759,7 @@
             statAb: "Comparaison A/B dynamique",
           },
           ma: {
-            num: "02 · Recherche empirique · Finance quantitative",
+            num: "Recherche empirique · Finance quantitative",
             subtitle: "Étude empirique (2000 – 024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Méthodologie",
@@ -785,7 +785,7 @@
           filterRecherche: "Recherche",
           filterDistinction: "Distinctions",
           ma: {
-            num: "01 · Recherche empirique · Finance quantitative",
+            num: "Recherche empirique · Finance quantitative",
             subtitle: "Étude empirique (2000 – 024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Méthodologie",
