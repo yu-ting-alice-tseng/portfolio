@@ -1296,13 +1296,13 @@
   </script>
 
   <script>
-    // Instagram-style carousel for YOLO posts
-    (function () {
-      const carousel = document.getElementById('yoloCarousel');
-      const dotsWrap = document.getElementById('yoloDots');
-      if (!carousel) return;
+    // Generic carousel initialiser — works for any .ig-carousel
+    function initCarousel(carouselId, dotsId, visibleDesktop) {
+      const carousel = document.getElementById(carouselId);
+      const dotsWrap = document.getElementById(dotsId);
+      if (!carousel || !dotsWrap) return;
 
-      const items = carousel.querySelectorAll('a');
+      const items = carousel.querySelectorAll('.ig-item');
       const total = items.length;
 
       // Build dots
@@ -1314,7 +1314,7 @@
       const dots = dotsWrap.querySelectorAll('.ig-dot');
 
       function getVisibleCount() {
-        return window.innerWidth <= 640 ? 2 : 3;
+        return window.innerWidth <= 640 ? 1 : visibleDesktop;
       }
 
       function scrollByPages(dir) {
@@ -1323,28 +1323,28 @@
         carousel.scrollBy({ left: dir * itemW * visible, behavior: 'smooth' });
       }
 
-      // Arrows
-      const prev = carousel.closest('.ig-carousel-wrap').querySelector('.ig-nav--prev');
-      const next = carousel.closest('.ig-carousel-wrap').querySelector('.ig-nav--next');
-      prev.addEventListener('click', e => { e.preventDefault(); scrollByPages(-1); });
-      next.addEventListener('click', e => { e.preventDefault(); scrollByPages(1); });
+      const wrap = carousel.closest('.ig-carousel-wrap');
+      wrap.querySelector('.ig-nav--prev').addEventListener('click', e => { e.preventDefault(); scrollByPages(-1); });
+      wrap.querySelector('.ig-nav--next').addEventListener('click', e => { e.preventDefault(); scrollByPages(1); });
 
-      // Update dots on scroll
       carousel.addEventListener('scroll', () => {
-        const visible = getVisibleCount();
         const itemW = carousel.scrollWidth / total;
         const idx = Math.round(carousel.scrollLeft / itemW);
         dots.forEach((d, i) => d.classList.toggle('active', i === idx));
       }, { passive: true });
 
-      // Prevent link navigation when dragging
+      // Prevent link activation while dragging
       let startX = 0, moved = false;
       carousel.addEventListener('mousedown', e => { startX = e.clientX; moved = false; });
       carousel.addEventListener('mousemove', e => { if (Math.abs(e.clientX - startX) > 5) moved = true; });
       carousel.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', e => { if (moved) e.preventDefault(); });
       });
-    })();
+    }
+
+    initCarousel('yoloCarousel',  'yoloDots',    3);  // AIESEC: 3 per view
+    initCarousel('weeklyFR',      'weeklyDotsFR', 2);  // Weekly report FR: 2 per view
+    initCarousel('weeklyEN',      'weeklyDotsEN', 2);  // Weekly report EN: 2 per view
   </script>
 </body>
 </html>
