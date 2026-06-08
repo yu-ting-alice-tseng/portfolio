@@ -1488,7 +1488,7 @@
           stat3: "Interactions",
         },
         guzheng: {
-          tag: "Community Management",
+          tag: "Facebook · Canva",
           title: "NCCU Guzheng Club – Facebook Page",
           desc: "Marketing & Membership Director of NCCU's guzheng (Chinese zither) club (2023–2024). Designed visuals for activity announcements, recruitment campaigns and year-end events — achieving 100% enrollment in every recruitment drive and 80% member retention through active Facebook page management.",
           cap1: "Recruitment poster",
