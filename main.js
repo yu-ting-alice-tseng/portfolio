@@ -1482,7 +1482,7 @@
         engoo: {
           tag: "Social Media",
           title: "Engoo – Xiaohongshu Campaign",
-          desc: "Assumed responsibility for and developed Engoo's Xiaohongshu account for the Sinophone market. Developed a content strategy grounded in the STP model, conducted A/B testing on visuals and copy, and implemented sub-segment targeting based on behavioural profiles.",
+          desc: "Assumed responsibility for and developed Engoo's Xiaohongshu account for the Sinophone market. Developed a content strategy grounded in the STP model and implemented sub-segment targeting based on behavioural profiles.",
           stat1: "Views",
           stat2: "Followers",
           stat3: "Interactions",
