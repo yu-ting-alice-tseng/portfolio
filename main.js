@@ -654,7 +654,7 @@
         engoo: {
           tag: "Social Media",
           title: "Engoo – Campagne Xiaohongshu",
-          desc: "Prise en charge et développement du compte Xiaohongshu d'Engoo sur le marché sinophone. Élaboration d'une stratégie de contenu fondée sur le modèle STP, expérimentation A/B sur les visuels et les accroches, ciblage de sous-segments selon leur profil comportemental.",
+          desc: "Prise en charge et développement du compte Xiaohongshu d'Engoo sur le marché sinophone. Élaboration d'une stratégie de contenu fondée sur le modèle STP et ciblage de sous-segments selon leur profil comportemental.",
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
