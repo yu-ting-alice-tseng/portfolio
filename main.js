@@ -1522,8 +1522,8 @@
           filterDesign: "Visual Design",
           filterCommunity: "Community",
           engoo: {
-            num: "01 - Full Case Study",
-            tag: "Excel Dashboard - Social Analytics - A/B Testing",
+            num: "Case Study",
+            tag: "Excel · Dashboard · Analytics",
             sitLbl: "Context & Research Question",
             actLbl: "Approach & Methodology",
             resLbl: "Results & Impact",
@@ -1533,8 +1533,8 @@
             statAb: "Dynamic A/B Module",
           },
           aiesec: {
-            num: "02 - Marketing Campaign",
-            tag: "Campaign - Art Direction",
+            num: "Marketing Campaign",
+            tag: "Art Direction",
             body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp — a fully English-language program for high school students. Designed the main campaign visuals — posters and social posts — to drive volunteer and participant recruitment.",
             statVol: "Volunteers Recruited",
             statPart: "Participants",
