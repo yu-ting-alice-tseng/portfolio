@@ -654,7 +654,7 @@
         engoo: {
           tag: "Social Media",
           title: "Engoo – Campagne Xiaohongshu",
-          desc: "Reprise et développement du compte Xiaohongshu d'Engoo sur le marché chinois simplifié. Stratégie de contenu fondée sur le modèle STP, A/B testing des visuels et des textes, ciblage de sous-segments selon leur profil.",
+          desc: "Prise en charge et développement du compte Xiaohongshu d'Engoo sur le marché sinophone. Élaboration d'une stratégie de contenu fondée sur le modèle STP, expérimentation A/B sur les visuels et les accroches, ciblage de sous-segments selon leur profil comportemental.",
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
@@ -1579,9 +1579,9 @@
           filterReporting: "Reporting",
           dashboard: {
             num: "01 · Dashboard · Case Study",
-            sitLbl: "Situation · Analytical Challenge",
-            actLbl: "Action · Dashboard Architecture",
-            resLbl: "Results · Measured 3-Month Impact",
+            sitLbl: "Context & Research Question",
+            actLbl: "Approach & Methodology",
+            resLbl: "Results & Impact",
             statMet: "Metrics / day",
             statVues: "Views · 3 months",
             statAb: "Dynamic A/B Comparison",
