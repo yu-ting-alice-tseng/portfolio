@@ -404,11 +404,7 @@
     }
     /* Carousel overlay label */
     .ig-item { position: relative; flex: 0 0 calc((100% - 1rem) / 3); scroll-snap-align: start; }
-    /* Slide variant – 2 per row, 16:9 aspect */
-    .ig-item--slide { flex: 0 0 calc((100% - 0.75rem) / 2); }
-    .ig-item--slide a { aspect-ratio: 16/9; background: #f1f5f9; border-radius: 6px; }
-    .ig-item--slide a img { object-fit: contain; background: #fff; }
-    @media (max-width: 640px) { .ig-item--slide { flex: 0 0 100%; } }
+    /* Slide variant – defined later with !important to beat base .ig-item a rules */
     @media (max-width: 640px) { .ig-item { flex: 0 0 calc((100% - 0.5rem) / 2); } }
     .ig-item a {
       display: block;
