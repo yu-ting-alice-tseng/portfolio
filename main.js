@@ -1497,7 +1497,7 @@
         instagram: {
           tag: "Content Creation",
           title: "Personal Book Review Account",
-          desc: "Created visual and written content for a personal Instagram account dedicated to book reviews. Original visual storytelling and accessible literary analysis – e.g. Flowers for Algernon.",
+          desc: "Produced visual and written content for a personal Instagram account dedicated to literary criticism. Developed original visual identities for each review and authored accessible critical analyses — e.g. Flowers for Algernon.",
         },
         design: {
           tag: "Photography & Design",
