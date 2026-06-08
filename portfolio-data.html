@@ -276,10 +276,8 @@
       max-width: 1240px;
       margin: 0 auto;
       padding: 3.5rem 2rem 6rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5px;
-      align-items: start;
+      columns: 2;
+      column-gap: 1.5rem;
     }
 
     /* ── Card ──────────────────────────────────────────── */
@@ -290,6 +288,9 @@
       padding: 2.25rem;
       transition: background 0.28s ease;
       position: relative;
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      display: block;
     }
     .pf-card::after {
       content: '';
@@ -302,7 +303,7 @@
     .pf-card.is-hidden { display: none !important; }
 
     .pf-card--featured {
-      grid-column: 1 / -1;
+      column-span: all;
       padding: 3rem 3.5rem;
       background: var(--lx-bg-soft);
       border: none;
@@ -551,8 +552,8 @@
 
     /* ── Responsive ────────────────────────────────────── */
     @media (max-width: 860px) {
-      .pf-grid { grid-template-columns: 1fr; gap: 1.5px; }
-      .pf-card--featured { grid-column: 1; padding: 2rem; }
+      .pf-grid { columns: 1; }
+      .pf-card--featured { column-span: all; padding: 2rem; }
       .pf-hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 2rem 2.5rem; }
       .pf-hero-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: 1.5px; }
       .pf-hero-stat-block { text-align: left; }
