@@ -669,7 +669,7 @@
         instagram: {
           tag: "Content Creation",
           title: "Compte lectures personnelles",
-          desc: "Création de contenus visuels et rédactionnels pour un compte Instagram dédié aux comptes rendus de lecture. Narration visuelle originale et analyse littéraire accessible – ex. Des fleurs pour Algernon.",
+          desc: "Production de contenus visuels et rédactionnels pour un compte Instagram personnel consacré à la critique littéraire. Conception d'identités visuelles originales et rédaction d'analyses accessibles — ex. Des Fleurs pour Algernon.",
         },
         design: {
           tag: "Photographie & Design",
@@ -1482,7 +1482,7 @@
         engoo: {
           tag: "Social Media",
           title: "Engoo – Xiaohongshu Campaign",
-          desc: "Took over and grew Engoo's Xiaohongshu account for the Simplified Chinese market. Content strategy based on the STP model, A/B testing of visuals and copy, sub-segment targeting.",
+          desc: "Assumed responsibility for and developed Engoo's Xiaohongshu account for the Sinophone market. Developed a content strategy grounded in the STP model, conducted A/B testing on visuals and copy, and implemented sub-segment targeting based on behavioural profiles.",
           stat1: "Views",
           stat2: "Followers",
           stat3: "Interactions",
