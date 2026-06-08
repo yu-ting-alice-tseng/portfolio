@@ -1328,8 +1328,14 @@
       wrap.querySelector('.ig-nav--next').addEventListener('click', e => { e.preventDefault(); scrollByPages(1); });
 
       carousel.addEventListener('scroll', () => {
-        const itemW = carousel.scrollWidth / total;
-        const idx = Math.round(carousel.scrollLeft / itemW);
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        let idx;
+        if (maxScroll > 0 && carousel.scrollLeft >= maxScroll - 2) {
+          idx = total - 1; // scrolled to end → last dot
+        } else {
+          const itemW = carousel.scrollWidth / total;
+          idx = Math.round(carousel.scrollLeft / itemW);
+        }
         dots.forEach((d, i) => d.classList.toggle('active', i === idx));
       }, { passive: true });
 
