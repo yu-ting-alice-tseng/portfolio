@@ -79,6 +79,14 @@ Proofread every piece of new content for:
 
 ---
 
+## 10. Self-Updating Rules
+
+- If the user mentions a new rule, correction, or preference at any point during a session, **immediately update this `CLAUDE.md` file** to include it.
+- Also update the corresponding memory file under `memory/` if one exists (e.g. `feedback_content_creation_rules.md`).
+- Do not wait to be asked — treat any new guideline as a standing rule and record it right away.
+
+---
+
 ## Quick Pre-Publish Checklist
 
 Before finalizing any new text, component, or section:
