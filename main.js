@@ -759,7 +759,7 @@
           filterRecherche: "Recherche",
           filterReporting: "Reporting",
           dashboard: {
-            num: "Dashboard",
+            num: "Dashboard · Analytics",
             sitLbl: "Contexte & Problématique",
             actLbl: "Démarche & Méthodologie",
             resLbl: "Résultats & Impact",
@@ -1573,7 +1573,7 @@
           kyudoTitle: "NCCU Kyudo Club – Event Name Badge",
           kyudoDesc: "Designed name badges for NCCU's kyudo (Japanese archery) club activities — two colour variants (beige and blue) with styled mockups.",
           kyudoCap1: "Name badge – mockup",
-          weeklyNum: "Reporting · Synthesis",
+          weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
           weeklyTitle: "Engoo – XHS Weekly Report",
           weeklyDesc: "Bilingual weekly report (EN/FR) produced during the Engoo internship, distilling Xiaohongshu account performance into 7 clear, actionable slides — key metrics, weekly trends and editorial recommendations for the management team.",
@@ -1596,7 +1596,7 @@
           filterRecherche: "Research",
           filterReporting: "Reporting",
           dashboard: {
-            num: "Dashboard",
+            num: "Dashboard · Analytics",
             sitLbl: "Context & Research Question",
             actLbl: "Approach & Methodology",
             resLbl: "Results & Impact",
