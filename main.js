@@ -640,6 +640,12 @@
           stat4: "Abonnés",
           stat5: "TTT",
         },
+        weber: {
+          period: "Août 2023 – Présent",
+          title: "Correctrice (Freelance)",
+          point1: "Traduction de 6 ouvrages de l'anglais vers le chinois.",
+          point2: "Correction de 3 romans traduits du français vers le chinois — précision du sens, pertinence culturelle et fluidité des phrases.",
+        },
         filterAll: "Toutes",
         filterTeaching: "Enseignement",
         filterFinance: "Finance",
