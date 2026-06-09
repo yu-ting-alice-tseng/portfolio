@@ -155,6 +155,7 @@ a { color: inherit; text-decoration: none; }
 
 .site-nav {
   display: flex;
+  align-items: center;
   gap: 1.15rem;
   font-size: 0.875rem;
 }
