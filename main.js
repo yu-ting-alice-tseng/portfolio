@@ -702,7 +702,7 @@
           filterCommunity: "Communauté",
           engoo: {
             num: "Étude de cas",
-            tag: "Excel · Dashboard · Analytics",
+            tag: "Excel · TCD · Dashboard · Séries temporelles",
             sitLbl: "Contexte & Problématique",
             actLbl: "Démarche & Méthodologie",
             resLbl: "Résultats & Impact",
@@ -1543,7 +1543,7 @@
           filterCommunity: "Social Media",
           engoo: {
             num: "Case Study",
-            tag: "Excel · Dashboard · Analytics",
+            tag: "Excel · PivotTables · Dashboard · Time Series",
             sitLbl: "Context & Research Question",
             actLbl: "Approach & Methodology",
             resLbl: "Results & Impact",
