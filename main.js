@@ -697,7 +697,7 @@
         insightLbl: "Discussion",
         mkt: {
           heroTitle2: "& Design Créatif",
-          heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés · 2024 – 2025",
+          heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés",
           heroDesc: "Campagnes orientées données, direction artistique et gestion de communauté — une approche conjuguant rigueur analytique et création visuelle au service de la performance.",
           heroStatProjets: "Projets",
           heroStatGrowth: "Croissance XHS",
@@ -1545,7 +1545,7 @@
         insightLbl: "Discussion",
         mkt: {
           heroTitle2: "& Creative Design",
-          heroEyebrow: "Yu-Ting Tseng · Selected Projects · 2024 – 025",
+          heroEyebrow: "Yu-Ting Tseng · Selected Projects",
           heroDesc: "Data-driven campaigns, art direction and community management — an approach combining analytical rigour with visual creativity in service of measurable performance.",
           heroStatProjets: "Projects",
           heroStatGrowth: "XHS Growth",
