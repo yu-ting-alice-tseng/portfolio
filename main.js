@@ -1554,7 +1554,7 @@
           },
           aiesec: {
             num: "Marketing Campaign",
-            tag: "Art Direction",
+            tag: "Art Direction · Canva · Illustrator",
             body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp — a fully English-language program for high school students. Designed the main campaign visuals — posters and social posts — to drive volunteer and participant recruitment.",
             statVol: "Volunteers Recruited",
             statPart: "Participants",
