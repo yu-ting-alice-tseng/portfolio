@@ -2141,7 +2141,7 @@
         title1: "從原始數據到",
         title2: "可執行洞察。",
         summary: "emlyon 商學院碩士生，擅長將複雜數據集轉化為可行決策。精通 R、Python、SQL、Excel（TOSA 950/1000）、Power BI 及 Tableau，應用於市場研究與績效分析。",
-        ctaPrimary: "下載儀表板（Excel）",
+        ctaPrimary: "查看作品集",
         ctaSecondary: "查看我的經歷",
         cardRole: "數據分析 & 市場研究",
         caseStudyLabel: "案例研究 · 小紅書儀表板",
@@ -2496,7 +2496,7 @@
           period: "2023/02 – 2024/01",
           title: "行銷與會員部長 ── 古箏社",
           text:
-            "統籌招募活動、管理社群媒體，依回饋調整課程內容，並協調各項活動與演出。",
+            "統籌招募活動與新生說明會，兩學期均達額滿；管理 Facebook 專頁、依回饋調整課程安排並籌辦活動與演出，留住 80% 的社員。",
           portfolioLink: "查看作品集（PDF）",
         },
         camps: {
@@ -2591,7 +2591,7 @@
         excellence: {
           title: "國立政治大學優異成績獎（前 5% GPA）",
           org: "國立政治大學",
-          text: "因在 NCCU 成績名列前 5% 所獲頒的學術獎項。",
+          text: "頒予各屆前 5% 的優秀學生；系排第一名，全校畢業生前 7%。",
           year: "2021, 2023",
         },
       },
