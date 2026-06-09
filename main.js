@@ -1973,7 +1973,7 @@
         title: "學歷背景",
         subtitle: "法台之間的國際求學歷程，橫跨管理、財務與語言領域。",
         emlyon: {
-          period: "2023/09 –至今",
+          period: "2025/09 –至今",
           title: "管理碩士（大學校課程）",
           school: "emlyon business school",
           point1: "財務與會計專業。",
