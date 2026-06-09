@@ -1477,6 +1477,12 @@
           stat4: "Followers",
           stat5: "TTT",
         },
+        weber: {
+          period: "Aug. 2023 – Present",
+          title: "Proofreader (Freelance)",
+          point1: "Translated 6 books from English into Chinese.",
+          point2: "Proofread 3 novels translated from French into Chinese — accuracy of meaning, cultural relevance and sentence fluency.",
+        },
         research: {
           period: "06/2023 – 12/2023",
           title: "Research Assistant",
