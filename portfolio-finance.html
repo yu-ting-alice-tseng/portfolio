@@ -802,6 +802,17 @@
       });
     });
 
+    // ── Scroll progress bar ───────────────────────────
+    const _bar = document.getElementById('scroll-progress');
+    if (_bar) {
+      function _updateBar() {
+        const s = window.scrollY;
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        _bar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', _updateBar, { passive: true });
+    }
+
     document.querySelectorAll('a[href]').forEach(link => {
       const href = link.getAttribute('href');
       if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
