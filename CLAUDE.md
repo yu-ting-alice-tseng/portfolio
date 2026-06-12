@@ -6,7 +6,7 @@ These rules apply to **every task** on this project. Read and follow them before
 
 ## 1. Capitalization
 
-- The **first letter of every word** in a title or sub-title must be capitalized (title case).
+- The **first letter of every word** in a title or sub-title must be capitalized (title case), **except prepositions** (e.g. de, sur, en, in, of, à, pour, etc.) which stay lowercase.
 - Follow the capitalization convention already in use on the specific page for body text (typically sentence case).
 
 ---

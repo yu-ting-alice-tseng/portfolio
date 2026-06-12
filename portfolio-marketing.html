@@ -17,7 +17,7 @@
       transform: translateY(18px);
       transition: opacity 0.45s ease, transform 0.45s ease;
     }
-    body.is-visible { opacity: 1; transform: translateY(0); }
+    body.is-visible { opacity: 1; transform: none; }
     body.is-leaving { opacity: 0; transform: translateY(-12px); transition-duration: 0.32s; }
 
     /* ── Marketing palette (consistent with marketing.html) ── */
@@ -50,19 +50,8 @@
       min-height: 100vh;
     }
 
-    /* ── Gradient accent bar ───────────────────────────── */
-    body.page-portfolio-marketing::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #e11d48 0%, #7c3aed 100%);
-      z-index: 300;
-      pointer-events: none;
-    }
-
     /* ── Top navigation bar ────────────────────────────── */
-    #scroll-progress { z-index: 201; }
+    #scroll-progress { z-index: 301; }
     .pf-topbar {
       position: sticky;
       top: 3px;
@@ -689,7 +678,7 @@
       <div class="pf-card-num" data-i18n="portfolio.mkt.engoo.num">01 - Étude de cas complète</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.engoo.tag">Dashboard Excel - Social Analytics - A/B Testing</span>
       <h2 class="pf-card-title">
-        Engoo (DMM.com Group) —<br>Dashboard de performance des Réseaux Sociaux (Xiaohongshu)
+        Engoo (DMM.com Group) —<br>Dashboard De Performance Des Réseaux Sociaux (Xiaohongshu)
       </h2>
 
       <div class="pf-star">
@@ -888,28 +877,28 @@
     <article class="pf-card" data-cat="campagne">
       <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">02 · Campagne Marketing</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.aiesec.tag">Campagne · Direction artistique</span>
-      <h2 class="pf-card-title">AIESEC – Camp international YOLO</h2>
+      <h2 class="pf-card-title">AIESEC – Camp International YOLO</h2>
       <!-- Campaign posters with captions -->
       <div class="pf-imgs pf-imgs--2" style="align-items:start;">
         <div class="pf-img-figure">
-          <a href="assets/主視覺_英文標語.png" target="_blank" rel="noopener noreferrer"
+          <a href="assets/yolo-camp-main-visual-en.png" target="_blank" rel="noopener noreferrer"
              class="pf-img-wrap" style="aspect-ratio:3/4;">
-            <img src="assets/主視覺_英文標語.png" alt="AIESEC YOLO Camp – main visual EN" loading="lazy">
+            <img src="assets/yolo-camp-main-visual-en.png" alt="AIESEC YOLO International Camp – Main Campaign Poster, English Version" loading="lazy">
           </a>
           <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap1">Affiche principale – version anglaise</p>
         </div>
         <div class="pf-img-figure">
-          <a href="assets/主視覺_中文標語.png" target="_blank" rel="noopener noreferrer"
+          <a href="assets/yolo-camp-main-visual-zh.png" target="_blank" rel="noopener noreferrer"
              class="pf-img-wrap" style="aspect-ratio:3/4;">
-            <img src="assets/主視覺_中文標語.png" alt="AIESEC YOLO Camp – main visual ZH" loading="lazy">
+            <img src="assets/yolo-camp-main-visual-zh.png" alt="AIESEC YOLO International Camp – Main Campaign Poster, Chinese Version" loading="lazy">
           </a>
           <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap2">Affiche principale – version chinoise</p>
         </div>
       </div>
       <div class="pf-img-figure" style="margin: 0.5rem 0 1rem;">
-        <a href="assets/帆布袋.png" target="_blank" rel="noopener noreferrer"
+        <a href="assets/yolo-camp-tote-bag.png" target="_blank" rel="noopener noreferrer"
            class="pf-img-wrap" style="aspect-ratio:16/9; display:block; background:#000;">
-          <img src="assets/帆布袋.png" alt="AIESEC YOLO Camp – brand logo" loading="lazy" style="object-fit:contain;">
+          <img src="assets/yolo-camp-tote-bag.png" alt="AIESEC YOLO Camp – Official Tote Bag Visual Design" loading="lazy" style="object-fit:contain;">
         </a>
         <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap4">Identité visuelle – logo officiel</p>
       </div>
@@ -920,43 +909,43 @@
         <button class="ig-nav ig-nav--prev" aria-label="Previous">&#8249;</button>
         <div class="ig-carousel" id="yoloCarousel">
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/1.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/1.png" alt="YOLO – event recap cover" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-event-recap-cover.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-event-recap-cover.png" alt="AIESEC YOLO Camp – Instagram Post: Event Recap Cover" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/2_v2.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/2_v2.png" alt="YOLO – foreign volunteers" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-foreign-volunteers.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-foreign-volunteers.png" alt="AIESEC YOLO Camp – Instagram Post: International Volunteers" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/3.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/3.png" alt="YOLO – courses and workshops" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-courses-workshops.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-courses-workshops.png" alt="AIESEC YOLO Camp – Instagram Post: Courses and Workshops" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/4_v2.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/4_v2.png" alt="YOLO – diverse activities" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-diverse-activities.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-diverse-activities.png" alt="AIESEC YOLO Camp – Instagram Post: Diverse Activities" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/5.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/5.png" alt="YOLO – group presentations" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-group-presentations.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-group-presentations.png" alt="AIESEC YOLO Camp – Instagram Post: Group Presentations" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/6.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/6.png" alt="YOLO – event introduction" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-event-introduction.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-event-introduction.png" alt="AIESEC YOLO Camp – Instagram Post: Event Introduction" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/7.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/7.png" alt="YOLO – sign-up CTA" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-signup-cta.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-signup-cta.png" alt="AIESEC YOLO Camp – Instagram Post: Sign-up Call to Action" loading="lazy">
             </a>
           </div>
           <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/8.png" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/8.png" alt="YOLO – follow CTA" loading="lazy">
+            <a href="assets/Social%20Media_YOLO/yolo-follow-cta.png" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Social%20Media_YOLO/yolo-follow-cta.png" alt="AIESEC YOLO Camp – Instagram Post: Follow Us Call to Action" loading="lazy">
             </a>
           </div>
         </div>
@@ -1004,16 +993,16 @@
       <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
       <div class="pf-imgs pf-imgs--2" style="align-items:start;">
         <div class="pf-img-figure">
-          <a href="assets/5.png" target="_blank" rel="noopener noreferrer"
+          <a href="assets/guzheng-club-recruitment-poster.png" target="_blank" rel="noopener noreferrer"
              class="pf-img-wrap" style="aspect-ratio:1/1;">
-            <img src="assets/5.png" alt="政大古箏社 – recruitment poster" loading="lazy">
+            <img src="assets/guzheng-club-recruitment-poster.png" alt="NCCU Guzheng Club – Member Recruitment Poster" loading="lazy">
           </a>
           <p class="pf-img-caption" data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</p>
         </div>
         <div class="pf-img-figure">
-          <a href="assets/112-1政大古箏社期末聚會.png" target="_blank" rel="noopener noreferrer"
+          <a href="assets/guzheng-club-year-end-gathering.png" target="_blank" rel="noopener noreferrer"
              class="pf-img-wrap" style="aspect-ratio:1/1;">
-            <img src="assets/112-1政大古箏社期末聚會.png" alt="政大古箏社 – year-end gathering" loading="lazy">
+            <img src="assets/guzheng-club-year-end-gathering.png" alt="NCCU Guzheng Club – Year-end Semester Gathering Event" loading="lazy">
           </a>
           <p class="pf-img-caption" data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</p>
         </div>
@@ -1035,9 +1024,9 @@
       <div class="pf-card-num" data-i18n="portfolio.mkt.penwardsNum">04 · Design Visuel</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.penwardsTag">Design · Concours</span>
       <h2 class="pf-card-title" data-i18n="portfolio.packaging.title">包裝設計競賽 – 18th Penwards</h2>
-      <a href="assets/1.png" target="_blank" rel="noopener noreferrer"
+      <a href="assets/penwards-design-award.png" target="_blank" rel="noopener noreferrer"
          class="pf-img-wrap" style="aspect-ratio:16/9; display:block; margin:1.25rem 0;">
-        <img src="assets/1.png" alt="18th Penwards Packaging Design Competition" loading="lazy">
+        <img src="assets/penwards-design-award.png" alt="18th Penwards Packaging Design Competition – Personal Entry Poster (2024)" loading="lazy">
       </a>
       <p class="pf-card-body" data-i18n="portfolio.packaging.desc">Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024).</p>
       <div class="pf-tags">
@@ -1051,11 +1040,11 @@
     <article class="pf-card" data-cat="campagne">
       <div class="pf-card-num" data-i18n="portfolio.mkt.kyudoNum">05 · Design Visuel</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.kyudoTag">Design · Supports événementiels</span>
-      <h2 class="pf-card-title" data-i18n="portfolio.mkt.kyudoTitle">Club de Kyudo de NCCU – Badge nominatif</h2>
+      <h2 class="pf-card-title" data-i18n="portfolio.mkt.kyudoTitle">Club de Kyudo de NCCU – Badge Nominatif</h2>
       <div class="pf-img-figure" style="margin: 1.25rem 0 0.5rem;">
-        <a href="assets/kyudo_nametag.jpeg" target="_blank" rel="noopener noreferrer"
+        <a href="assets/kyudo-club-name-badge.jpeg" target="_blank" rel="noopener noreferrer"
            class="pf-img-wrap" style="aspect-ratio:16/9; display:block;">
-          <img src="assets/kyudo_nametag.jpeg" alt="NCCU Kyudo Club – Event Name Badge" loading="lazy">
+          <img src="assets/kyudo-club-name-badge.jpeg" alt="NCCU Kyudo Club – Event Name Badge Mockup, Beige and Blue Variants" loading="lazy">
         </a>
         <p class="pf-img-caption" data-i18n="portfolio.mkt.kyudoCap1">Badge nominatif – maquette</p>
       </div>
