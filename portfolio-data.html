@@ -1199,7 +1199,7 @@
       function _updateBar() {
         const s = window.scrollY;
         const h = document.documentElement.scrollHeight - window.innerHeight;
-        _bar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
+        _bar.style.setProperty('--p', (h > 0 ? (s / h) * 100 : 0) + '%');
       }
       window.addEventListener('scroll', _updateBar, { passive: true });
     }
