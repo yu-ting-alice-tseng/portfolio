@@ -5,6 +5,10 @@ echo [MONITORING] Auto-upload radar is active...
 echo Please do not close this window!
 echo ===================================================
 
+:: Disable automatic garbage collection so git never prompts during push
+git config gc.auto 0
+set GIT_TERMINAL_PROMPT=0
+
 :loop
 git add .
 :: Check if there are any changes to commit
