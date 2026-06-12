@@ -1556,7 +1556,7 @@ body.page-finance .stat-value {
   left: 0;
   right: 0;
   height: 3px;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.15);
   z-index: 199;
   pointer-events: none;
 }
