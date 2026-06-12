@@ -1550,15 +1550,24 @@ body.page-finance .stat-value {
 }
 
 /* ── Scroll progress bar ─────────────────────────── */
+.scroll-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.08);
+  z-index: 199;
+  pointer-events: none;
+}
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
-  height: 2.5px;
+  height: 3px;
   background: linear-gradient(90deg, #2563eb, #6d28d9, #ec4899);
   z-index: 200;
-  border-radius: 0 3px 3px 0;
   pointer-events: none;
 }
 
