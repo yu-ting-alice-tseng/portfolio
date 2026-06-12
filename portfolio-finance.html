@@ -68,12 +68,11 @@
       z-index: 100;
     }
 
-    .scroll-progress-track { z-index: 301; }
     #scroll-progress { z-index: 302; }
     /* ── Top navigation bar ────────────────────────────── */
     .pf-topbar {
       position: sticky;
-      top: 3px;
+      top: 0;
       z-index: 200;
       background: rgba(246,248,251,0.96);
       backdrop-filter: blur(12px);
@@ -810,7 +809,7 @@
       function _updateBar() {
         const s = window.scrollY;
         const h = document.documentElement.scrollHeight - window.innerHeight;
-        _bar.style.setProperty('--p', (h > 0 ? (s / h) * 100 : 0) + '%');
+        _bar.style.width = (h > 0 ? (s / h) * 100 : 0) + '%';
       }
       window.addEventListener('scroll', _updateBar, { passive: true });
     }
