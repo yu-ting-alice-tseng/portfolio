@@ -19,6 +19,7 @@ These rules apply to **every task** on this project. Read and follow them before
   - ❌ `Excel-TOSA 950/1000`
 - Do **not** use dots/periods as separators to add detail.
   - ❌ `Excel. TOSA 950/1000`
+- **Em dash `—` is only allowed in titles and subtitles.** Never use `—` in body text, sentences, paragraphs, or list items. Use `:`, `,`, or parentheses `( )` instead as appropriate.
 
 ---
 
