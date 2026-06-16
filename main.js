@@ -2981,7 +2981,7 @@
           org: "Google",
           meta: ["Marketing digital"],
           points: ["Certification couvrant SEO technique, SEA, analytics et stratégie de contenu."],
-          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google?訾?鈭箸 – Ｙ揣閮''_霅''.pdf" }],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%E6%95%B8%E4%BD%8D%E4%BA%BA%E6%89%8D%E6%8E%A2%E7%B4%A2%E8%A8%88%E7%95%AB_%E8%AD%89%E7%85%A7.pdf" }],
         },
       ],
       en: {
@@ -3094,7 +3094,7 @@
           org: "Google",
           meta: ["Google Ads"],
           points: ["Certification officielle Google Ads Recherche."],
-          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20'?撱 – 隤'?.png" }],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20%E6%90%9C%E5%B0%8B%E5%BB%A3%E5%91%8A%E8%AA%8D%E8%AD%89.png" }],
         },
         {
           type: "Certification",
@@ -3102,7 +3102,7 @@
           org: "Google",
           meta: ["Google Ads"],
           points: ["Certification officielle Google Ads Vidéo."],
-          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20敶梁?撱 – 隤'?.png" }],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20%E5%BD%B1%E7%89%87%E5%BB%A3%E5%91%8A%E8%AA%8D%E8%AD%89.png" }],
         },
         {
           type: "Certification",
@@ -3192,7 +3192,7 @@
           org: "Google",
           meta: ["Google Ads"],
           points: ["Certification Google Ads sur la conception de créas publicitaires performantes."],
-          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20撱 – 蝝'?隤'?.png" }],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Ads%20%E5%BB%A3%E5%91%8A%E7%B4%A0%E6%9D%90%E8%AA%8D%E8%AD%89.png" }],
         },
       ],
     },
