@@ -213,7 +213,7 @@
           engagement: "Engagement",
         },
       },
-      hero: {
+      hero: {                              // → index.html (section héro principal)
         kicker: "Marketing digital · Analyse de données",
         title1: "Je transforme les données en",
         title2: "décisions marketing",
