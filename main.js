@@ -1881,6 +1881,8 @@
           "This is a front-end demo form. Connect it to Formspree or Netlify Forms to activate it.",
       },
     },
+    // ─── zh ──────────────────────────────────────────────────────────────────
+    // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
       brandName: "曾郁庭 Yu-Ting Tseng",
       a11y: { skipLink: "跳至內容" },
