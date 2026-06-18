@@ -773,7 +773,7 @@
           desc: "Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024) — exercice de style autour de la composition visuelle et de la typographie.",
         },
         insightLbl: "Défi",
-        mkt: {
+        mkt: {                             // → portfolio-marketing.html
           heroTitle2: "& Design Créatif",
           heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés",
           heroDesc: "Campagnes orientées données, direction artistique et gestion de communauté — une approche conjuguant rigueur analytique et création visuelle au service de la performance.",
