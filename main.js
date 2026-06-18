@@ -867,11 +867,11 @@
           "Des initiatives centrées sur l'éducation, l'international et l'impact social.",
         aiesec: {
           period: "09/2024 – 06/2025",
-          title: "Membre – AIESEC in NCCU",
+          title: "Responsabilités du Pôle Marketing & Membre du Pôle de Bénévolat International Entrant",
           org:
-            "AIESEC · Organisation internationale de développement du leadership",
+            "AIESEC in NCCU · Organisation internationale de développement du leadership",
           point1:
-            "Pilotage d'une équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d'anglais, au-delà de l'objectif budgétaire.",
+            "Pilotage d'une équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d'anglais, dépassant l'objectif budgétaire de 53,7%.",
           point2:
             "Collaboration avec des partenaires locaux et internationaux sur des programmes de volontariat.",
           stat1: "Volontaires recrutés",
@@ -884,29 +884,29 @@
         usr: {
           period: "09/2024 – 06/2025",
           title: "Volontaire – Projet University Social Responsibility",
-          org: "NCCU · Office of University Responsibility",
+          org: "Office of University Responsibility, NCCU",
           point1:
             "Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.",
         },
         flagship: {
-          period: "09/2023 – Présent",
-          title: "Volontaire – Programme de compagnonnage linguistique",
-          org: "Chinese Overseas Flagship Center in Taiwan",
+          period: "09/2023 – 06/2025",
+          title: "Volontaire – Programme de Compagnonnage Linguistique",
+          org: "Centre d'excellence de Chinois à Taïwan",
           point1:
             "Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.",
         },
         buddy: {
           period: "09/2023 – 01/2025",
           title: "Étudiante'éférente – Buddy Program",
-          org: "NCCU · Office of International Cooperation",
+          org: "Direction des Relations Internationales, NCCU",
           point1:
-            "Accompagnement de trois étudiants en échange (France, États-Unis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
+            "Accompagnement de 3 étudiants en échange (France, États-Unis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
         },
         nuit: {
           period: "12/2023",
-          title: "Déléguée – Nuit des Idées (français'andarin)",
+          title: "Déléguée – Nuit des Idées 2023",
           org:
-            "Bureau français de Taipei, Institut Français & Département de la Culture de Taipei",
+            "Bureau Français de Taipei, Institut Français & Département de la Culture de Taipei",
           point1:
             "Présentation de points de vue sur des sujets de durabilité devant plus de 350 participants, en français et en chinois.",
           stat1: "Participants",
@@ -919,21 +919,21 @@
           "Reconnaissance académique pour mes résultats et mon engagement.",
         exchange: {
           title: "Bourse d'échange",
-          org: "Ministère de l'é'ucation (Taïwan)",
+          org: "Ministère de l'éducation, Taïwan",
           text:
             "Bourse au mérite pour un programme d'échange international en France.",
           year: "2024",
         },
         short: {
           title: "Bourse d'études à court terme",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "NCCU",
           text:
             "Financement au mérite pour un séjour d'études à l'étranger.",
           year: "2024",
         },
         excellence: {
           title: "Certificate of Excellence – Top 5% GPA",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "NCCU",
           text:
             "Récompense décernée aux meilleurs 5 % de chaque promotion ; classée 1re de filière et dans les 7 % meilleurs diplômés de NCCU.",
           year: "2021, 2023",
@@ -1279,7 +1279,7 @@
         cardRole: "Finance & Accounting",
         caseStudyLabel: "Key Experience · Finance & Teaching",
         caseStudyTitle: "Teaching Assistant – Finance & Risk Management",
-        caseStudyDesc: "Academic support for finance and risk management courses at the College of Global Banking and Finance (NCCU). Student guidance, course material preparation and coordination across two mandates.",
+        caseStudyDesc: "Academic support for finance and risk management courses at the College of Global Banking and Finance of NCCU. Student guidance, course material preparation and coordination across two mandates.",
       },
       marketingHero: {
         kicker: "Digital marketing · Content · Performance",
@@ -1715,9 +1715,9 @@
           "Initiatives focused on education, international exchange and social impact.",
         aiesec: {
           period: "Sep. 2024 – Jun. 2025",
-          title: "Member – AIESEC in NCCU",
+          title: "Marketing Project Leader &amp; Incoming Volunteer Department",
           org:
-            "AIESEC · Global non-profit organization developing youth leadership",
+            "AIESEC in NCCU · Global non-profit organization developing youth leadership",
           point1:
             "Led a marketing team of four to recruit 15 volunteers and over 60 participants for an English camp, exceeding the balanced-budget target by 53.7%.",
           point2:
