@@ -939,7 +939,7 @@
           point2: "Tri et conditionnement des denrées alimentaires.",
         },
       },
-      volunteer: {
+      volunteer: {                         // → index.html (section Bénévolat) — aiesec.finTitle/finPoint → finance.html
         title: "Bénévolat & Engagement",
         subtitle:
           "Des initiatives centrées sur l'éducation, l'international et l'impact social.",
