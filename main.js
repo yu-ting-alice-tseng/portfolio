@@ -195,7 +195,7 @@
         data: "Data",
         research: "Recherche",
       },
-      nav: {
+      nav: {                               // → index.html + teaching.html (items différents)
         about: "À propos",
         skills: "Compétences",
         education: "Formation",
