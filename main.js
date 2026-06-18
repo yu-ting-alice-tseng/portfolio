@@ -637,7 +637,7 @@
           finPoint1: "Gestion des budgets publicitaires mensuels sur Facebook et Google Ads, suivi des métriques ROI et allocation efficace du capital pour optimiser le coûtt par acquisition (taux de conversion +5,1%).",
           finPoint2: "Réalisation d'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
         },
-        engoo: {
+        engoo: {                           // point1-4 → index + marketing.html | dataPoint → data.html | finTitle/finPoint → finance.html
           period: "10/2024 – 02/2025",
           title: "Assistante Marketing",
           point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing – +89.1% d'interactions et +69.7% d'abonnés en 3 mois.",
