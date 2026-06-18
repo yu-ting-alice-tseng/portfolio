@@ -991,7 +991,7 @@
           stat2: "Langues",
         },
       },
-      honors: {
+      honors: {                            // → index.html (section Distinctions)
         title: "Distinctions & bourses",
         subtitle:
           "Reconnaissance académique pour mes résultats et mon engagement.",
@@ -1017,7 +1017,7 @@
           year: "2021, 2023",
         },
       },
-      contact: {
+      contact: {                           // → index.html (section Contact)
         heading: "Entrons en contact",
         intro:
           "Intéressé·e par un stage, un projet ou une collaboration ? Envoyez-moi un message, je vous répondrai avec plaisir.",
