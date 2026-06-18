@@ -89,11 +89,77 @@
   });
 
   // Language switcher (FR / EN)
+  //
+  // ┌─────────────────────────────────────────────────────────────────────────┐
+  // │  GUIDE DE NAVIGATION DES TRADUCTIONS / 翻譯對照導覽                    │
+  // │  想修改哪個頁面，就找對應的 key 區塊。                                  │
+  // │  三種語言（fr / en / zh）結構完全相同，只需改對應語言的內容即可。       │
+  // │                                                                         │
+  // │  KEY                     → FICHIER HTML                                │
+  // │  ──────────────────────────────────────────────────────────────────── │
+  // │  brandName, a11y,        → 全部頁面共用 (all pages)                    │
+  // │  simpleNav, pageNav,     → 全部頁面共用 (all pages)                    │
+  // │  footer                  → 全部頁面共用 (all pages)                    │
+  // │                                                                         │
+  // │  nav, hero, skills,      → index.html  (Vue générale / 總覽)           │
+  // │  tags, locations,        → index.html                                  │
+  // │  education, projects,    → index.html                                  │
+  // │  extracurricular,        → index.html                                  │
+  // │  volunteer, honors,      → index.html                                  │
+  // │  contact,                → index.html                                  │
+  // │  indexPortfolioTeaser    → index.html                                  │
+  // │                                                                         │
+  // │  financeHero,            → finance.html                                │
+  // │  financePortfolioTeaser  → finance.html                                │
+  // │  experience.kpn.finTitle / finPoint…  → finance.html                  │
+  // │  experience.engoo.finTitle / finPoint… → finance.html                 │
+  // │  experience.teaching.finTitle / finPoint… → finance.html              │
+  // │  experience.research.finCompany / finPoint… → finance.html            │
+  // │  volunteer.aiesec.finTitle / finOrg / finPoint1 → finance.html        │
+  // │                                                                         │
+  // │  marketingHero,          → marketing.html                              │
+  // │  marketingPortfolioTeaser → marketing.html                             │
+  // │  experience.kpn (point1-3)  → marketing.html (et index.html)          │
+  // │  experience.engoo (point1-4) → marketing.html (et index.html)         │
+  // │                                                                         │
+  // │  dataHero,               → data.html                                   │
+  // │  dataPortfolioTeaser     → data.html                                   │
+  // │  experience.kpn.dataPoint… → data.html                                │
+  // │  experience.engoo.dataPoint… → data.html                              │
+  // │  experience.teaching.dataSupport / dataCoord → data.html              │
+  // │  experience.research.dataPoint… → data.html                           │
+  // │                                                                         │
+  // │  teachingHero,           → teaching.html                               │
+  // │  teachingLanguages,      → teaching.html                               │
+  // │  teachingServices,       → teaching.html                               │
+  // │  teachingExp,            → teaching.html                               │
+  // │  teachingEngagement,     → teaching.html                               │
+  // │  booking,                → teaching.html                               │
+  // │  resources,              → teaching.html                               │
+  // │  chapters, pageSwitcher  → teaching.html                               │
+  // │                                                                         │
+  // │  portfolio.mkt,          → portfolio-marketing.html                    │
+  // │  portfolio.engoo,        → portfolio-marketing.html (carte résumé)     │
+  // │  portfolio.guzheng,      → portfolio-marketing.html                    │
+  // │  portfolio.instagram,    → portfolio-marketing.html                    │
+  // │  portfolio.design,       → portfolio-marketing.html                    │
+  // │  portfolio.packaging     → portfolio-marketing.html                    │
+  // │  portfolio.insightLbl    → portfolio-marketing.html                    │
+  // │                                                                         │
+  // │  portfolio.data          → portfolio-data.html                         │
+  // │  portfolio.fin           → portfolio-finance.html                      │
+  // │                                                                         │
+  // │  portfolioTeaser         → finance.html / marketing.html / data.html   │
+  // │                            (bloc « Explorer le portfolio »)             │
+  // └─────────────────────────────────────────────────────────────────────────┘
   const translations = {
+    // ─── fr ──────────────────────────────────────────────────────────────────
+    // Structure identique pour "en" et "zh" — même arborescence de clés.
+    // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
-      brandName: "Yu‑Ting Tseng",
-      a11y: { skipLink: "Aller au contenu" },
-      simpleNav: {
+      brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
+      a11y: { skipLink: "Aller au contenu" }, // → TOUTES les pages
+      simpleNav: {                       // → TOUTES les pages (nav header)
         resume: "Résumé",
         viewPortfolioPdf: "Portfolio (PDF)",
         langMandarin: "Mandarin",
