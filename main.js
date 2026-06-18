@@ -1850,7 +1850,7 @@
         short: {
           title: "Short-term Study Abroad Scholarship",
           org: "NCCU – National Chengchi University",
-          text: "Funding for short'erm study abroad based on academic excellence.",
+          text: "Funding for short-term study abroad based on academic excellence.",
           year: "2024",
         },
         excellence: {
