@@ -1035,6 +1035,8 @@
           "Ce formulaire est une démonstration front-end. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
       },
     },
+    // ─── en ──────────────────────────────────────────────────────────────────
+    // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
       brandName: "Yu‑Ting Tseng",
       a11y: { skipLink: "Skip to content" },
