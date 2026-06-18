@@ -3562,7 +3562,7 @@
           title: "Master in Management",
           org: "emlyon business school",
           meta: ["Lyon · France"],
-          points: ["Programme dispensé entièrement en anglais – cours, projets et travaux de groupe."],
+          points: ["Programme dispensé entièrement en anglais."],
           actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
         },
       ],
