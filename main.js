@@ -532,15 +532,15 @@
         label: "Portfolio",
         cta: "Explorer le portfolio →",
       },
-      marketingPortfolioTeaser: {
+      marketingPortfolioTeaser: {         // → marketing.html (teaser portfolio)
         title: "Campagnes, dashboards & visuels de marque",
         desc: "Stratégies Xiaohongshu, analyses de performance et créations visuelles.",
       },
-      financePortfolioTeaser: {
+      financePortfolioTeaser: {           // → finance.html (teaser portfolio)
         title: "Analyses, Modèles & Études de Cas",
         desc: "Modélisations financières, analyses de données et livrables conseil.",
       },
-      dataPortfolioTeaser: {
+      dataPortfolioTeaser: {              // → data.html (teaser portfolio)
         title: "Dashboards, visualisations & analyses de données",
         desc: "Tableaux de bord Excel, rapports Power BI et analyses quantitatives appliquées.",
       },
