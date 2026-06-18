@@ -834,7 +834,7 @@
           footerBack: "←Retour à Marketing",
           footerNext: "Portfolio Data & Recherche →",
         },
-        data: {
+        data: {                            // → portfolio-data.html
           heroTitle1: "Data &",
           heroTitle2: "Recherche de marché",
           heroEyebrow: "Yu-Ting Tseng · Data & Recherche de marché",
@@ -870,7 +870,7 @@
           footerBack: "←Portfolio Marketing",
           footerNext: "Portfolio Finance →",
         },
-        fin: {
+        fin: {                             // → portfolio-finance.html
           heroTitle1: "Finance &",
           heroTitle2: "Analyse",
           heroEyebrow: "Yu-Ting Tseng · Finance & Analyse Quantitative",
