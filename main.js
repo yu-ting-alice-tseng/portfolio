@@ -998,22 +998,19 @@
         exchange: {
           title: "Bourse d'échange",
           org: "Ministère de l'éducation, Taïwan",
-          text:
-            "Bourse au mérite pour un programme d'échange international en France.",
+          text: "Bourse au mérite pour un programme d'échange international en France.",
           year: "2024",
         },
         short: {
           title: "Bourse d'études à court terme",
           org: "NCCU",
-          text:
-            "Financement au mérite pour un séjour d'études à l'étranger.",
+          text: "Financement au mérite pour un séjour d'études à l'étranger.",
           year: "2024",
         },
         excellence: {
           title: "Certificate of Excellence – Top 5% GPA",
           org: "NCCU",
-          text:
-            "Récompense décernée aux meilleurs 5 % de chaque promotion ; classée 1re de filière et dans les 7 % meilleurs diplômés de NCCU.",
+          text: "Récompense décernée aux meilleurs 5 % de chaque promotion ; classée 1re de filière et dans les 7 % meilleurs diplômés de NCCU.",
           year: "2021, 2023",
         },
       },
