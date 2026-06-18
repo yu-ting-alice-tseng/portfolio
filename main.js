@@ -676,7 +676,7 @@
           showcaseTitle3: "Jeu de données quotidiennes",
           showcaseDesc3: "12 métriques par jour (vues, temps de visionnage, engagement, notoriété – – base structurée de toutes les visualisations.",
         },
-        teaching: {
+        teaching: {                        // point1-2 → index.html | dataSupport/dataCoord → data.html | finTitle/finPoint → finance.html
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
           title: "Assistante d'enseignement",
           point1: "Support de cours (finance, risk management) et suivi des étudiants.",
