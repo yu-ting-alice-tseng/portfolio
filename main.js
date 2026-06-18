@@ -348,7 +348,7 @@
         data: "Data & Recherche de marché",
         finance: "Finance & Conseil",
       },
-      education: {
+      education: {                         // → index.html (section Formation)
         title: "Formation Académique",
         subtitle:
           "Un parcours international entre la France et Taïwan, à l'interface du management, de la finance et des langues.",
@@ -396,7 +396,7 @@
         },
         coursesLabel: "Cours pertinents",
       },
-      pageSwitcher: {
+      pageSwitcher: {                      // → teaching.html (bouton Enseignement / Business)
         business: "Business",
         teaching: "Enseignement",
       },
