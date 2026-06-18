@@ -713,7 +713,7 @@
           stat4: "Abonnés",
           stat5: "TTT",
         },
-        weber: {
+        weber: {                           // → teaching.html (section Expériences d'enseignement)
           period: "Août 2023 – Présent",
           title: "Correctrice (Freelance)",
           point1: "Traduction de 6 ouvrages de l'anglais vers le chinois.",
