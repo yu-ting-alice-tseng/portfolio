@@ -613,20 +613,26 @@
         title: "Engagement linguistique & international",
         subtitle: "Programmes de mentorat linguistique, immersion culturelle et échanges internationaux.",
       },
-            experience: {
+      // ─── experience ──────────────────────────────────────────────────────────
+      // Chaque expérience contient plusieurs variantes selon la page :
+      //   point1/2/3/4   → index.html + marketing.html  (version générale)
+      //   dataPoint1/2/3 → data.html    (reformulation axée données)
+      //   finTitle / finPoint… → finance.html  (reformulation axée finance)
+      //   (les variantes "teaching" n'existent que pour certaines entrées)
+      experience: {                        // → index.html / marketing.html / data.html / finance.html
         title: "Expériences Professionnelles",
         subtitle:
           "Une sélection de mes expériences en marketing digital, analyse de données et gestion de projet.",
         kpn: {
           period: "01/2025 – 06/2025",
-          title: "Assistante Marketing Digital",
+          title: "Assistante Marketing Digital",     // point1-3 → index + marketing.html
           point1: "Optimisation SEO (on-page / technique) et recommandations de contenus.",
           point2: "Suivi de KPIs et analyse de performance (trafic, CTR, conversions).",
           point3: "Campagnes SEA et reporting.",
-          dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l'équipe.",
-          dataPoint2: "Concevoir et piloter des reportings de performance marketing (FB & Google) via des tableaux de bord – +9,5% CTR, +5,1% CVR.",
-          dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",
-          finTitle: "Assistante Marketing Digital (Stage)",
+          dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l'équipe.",   // → data.html
+          dataPoint2: "Concevoir et piloter des reportings de performance marketing (FB & Google) via des tableaux de bord – +9,5% CTR, +5,1% CVR.",  // → data.html
+          dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",  // → data.html
+          finTitle: "Assistante Marketing Digital (Stage)",  // → finance.html
           finCompany: "KPN (Agence de marketing digital – SEO, SEM, publicité Facebook & Google)",
           finPoint1: "Gestion des budgets publicitaires mensuels sur Facebook et Google Ads, suivi des métriques ROI et allocation efficace du capital pour optimiser le coûtt par acquisition (taux de conversion +5,1%).",
           finPoint2: "Réalisation d'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
