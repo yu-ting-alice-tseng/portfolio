@@ -728,7 +728,13 @@
         subtitleMarketing: "Social media, performance marketing, création de contenu et engagement communautaire.",
         subtitleData: "Analyse de données, tableaux de bord et études de marché.",
       },
-      portfolio: {
+      // ─── portfolio ────────────────────────────────────────────────────────────
+      // portfolio.mkt      → portfolio-marketing.html  (page complète)
+      // portfolio.data     → portfolio-data.html       (page complète)
+      // portfolio.fin      → portfolio-finance.html    (page complète)
+      // portfolio.engoo / guzheng / instagram / design / packaging / insightLbl
+      //                    → portfolio-marketing.html  (cartes projet)
+      portfolio: {                         // → voir sous-clés ci-dessus
         title: "Portfolio – Social Media & Design",
         subtitle: "Exemples concrets de contenus créés, de campagnes gérées et de travaux visuels.",
         viewPdf: "Voir le portfolio complet (PDF)",
