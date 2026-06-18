@@ -561,7 +561,7 @@
         title: "Compétences linguistiques",
         subtitle: "Certifications officielles et pratique quotidienne dans quatre langues.",
       },
-      teachingServices: {
+      teachingServices: {                  // → teaching.html (section Services)
         title: "Services d'Enseignement",
         subtitle: "Des cours personnalisés, dans un environnement détendu et bienveillant, pour progresser à son propre rythme.",
         philosophy: "Dans chaque cours, j'adapte mes méthodes à l'élève : <strong>jeux</strong>, <strong>exercices ciblés</strong> et <strong>échanges interactifs</strong> pour rendre l'apprentissage naturel et durable.",
@@ -598,7 +598,7 @@
           tag4: "Grammaire & Vocabulaire",
         },
       },
-      teachingExp: {
+      teachingExp: {                       // → teaching.html (section Expériences d'enseignement)
         title: "Expériences D'Enseignement",
         subtitle: "Cours en ligne, préparation aux certifications et services de traduction.",
         translation: {
@@ -609,7 +609,7 @@
           point2: "Correction et relecture de thèses, articles et supports de communication pour des étudiants et entreprises.",
         },
       },
-      teachingEngagement: {
+      teachingEngagement: {                // → teaching.html (section Engagement)
         title: "Engagement linguistique & international",
         subtitle: "Programmes de mentorat linguistique, immersion culturelle et échanges internationaux.",
       },
