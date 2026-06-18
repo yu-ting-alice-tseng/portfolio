@@ -231,7 +231,7 @@
         cardPhoneLabel: "Téléphone",
         cardLanguagesLabel: "Langues",
       },
-      skills: {
+      skills: {                            // → index.html / finance.html / marketing.html / data.html
         title: "Compétences",
         subtitle:
           "Un socle structuré autour de l'analyse de données, du marketing digital et d'un profil international.",
@@ -307,7 +307,7 @@
         filterOffice: "Bureautique",
         blockDataMarketing: "Data pour le Marketing",
       },
-      tags: {
+      tags: {                              // → index.html (badges de filtrage)
         leadership: "Leadership",
         marketing: "Marketing",
         visualDesign: "Design visuel",
@@ -341,7 +341,7 @@
         onlineOnly: "En ligne",
         freelance: "Freelance",
       },
-      footer: {
+      footer: {                            // → TOUTES les pages (pied de page)
         rights: "Tous droits réservés.",
         overview: "Vue générale",
         marketing: "Marketing digital & Création",
