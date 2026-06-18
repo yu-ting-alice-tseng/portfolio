@@ -487,7 +487,7 @@
         teaching: "Enseignement",
         data: "Data & Recherche",
       },
-      financeHero: {
+      financeHero: {                       // → finance.html (section héro)
         kicker: "Finance · Comptabilité · Conseil Stratégique",
         title1: "Allier",
         title2: "rigueur analytique et vision stratégique.",
@@ -499,7 +499,7 @@
         caseStudyTitle: "Assistante d'enseignement - Finance & Risk Management",
         caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance (NCCU). Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
       },
-      marketingHero: {
+      marketingHero: {                     // → marketing.html (section héro)
         kicker: "Marketing 360 - Activation - Contenu",
         title1: "Donner de l'impact aux marques, ",
         title2: "de la stratégie à l'activation.",
@@ -516,7 +516,7 @@
         caseStudyInsight2: " – Le 'Golden Time' de publication pour le segment cible se situe entre 19h et 21h.",
         caseStudyTemplate: "Consulter le modèle interactif (Excel)",
       },
-      dataHero: {
+      dataHero: {                          // → data.html (section héro)
         kicker: "Analyse de Données - Informatique Décisionnelle - Stratégie Commerciale",
         title1: "Des données brutes aux",
         title2: "insights actionnables.",
@@ -528,7 +528,7 @@
         caseStudyTitle: "Dashboard Excel - Performance Xiaohongshu",
         caseStudyDesc: "Construction d'un tableau de bord Excel complet pour suivre 12 métriques quotidiennes du compte Xiaohongshu d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.",
       },
-      portfolioTeaser: {
+      portfolioTeaser: {                   // → finance.html / marketing.html / data.html (bloc CTA)
         label: "Portfolio",
         cta: "Explorer le portfolio →",
       },
