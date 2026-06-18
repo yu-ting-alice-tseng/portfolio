@@ -897,7 +897,7 @@
           footerNext: "Accueil →",
         },
       },
-      projects: {
+      projects: {                          // → index.html (section Projets)
         title: "Projets sélectionnés",
         subtitle:
           "Quelques projets académiques ou personnels illustrant ma manière de travailler et mes centres d'intérêt.",
