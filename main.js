@@ -739,7 +739,7 @@
             ig8: "Post IG – Invitation à Suivre Le Compte",
             igLabel: "Posts Instagram – Campagne YOLO",
           },
-          guzhengNum: "Community Management",
+          guzhengNum: "Animation de Communauté",
           penwardsNum: "Design Visuel",
           penwardsTag: "Composition visuelle · Typographie",
           kyudoNum: "Design Visuel",
