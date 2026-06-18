@@ -400,7 +400,7 @@
         business: "Business",
         teaching: "Enseignement",
       },
-      chapters: {
+      chapters: {                          // → teaching.html (navigation chapitres)
         aboutMe: "À propos de moi",
         aboutMeDesc: "Mes qualifications, expériences et parcours pour vous aider à évaluer votre enseignante.",
         teachingService: "Services d'enseignement",
@@ -408,7 +408,7 @@
         learningResources: "Ressources pédagogiques",
         learningResourcesDesc: "Outils, conseils et supports sélectionnés pour progresser entre les cours.",
       },
-      booking: {
+      booking: {                           // → teaching.html (formulaire de réservation)
         title: "Réserver un cours",
         subtitle: "Remplissez ce formulaire pour me contacter. Je vous répondrai sous 24h pour confirmer le créneau.",
         navCta: "Réserver un cours",
@@ -454,7 +454,7 @@
         submit: "Envoyer la demande",
         formNote: "Ce formulaire est une démonstration front-end. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
       },
-      resources: {
+      resources: {                         // → teaching.html (ressources d'apprentissage)
         title: "Ressources pédagogiques",
         subtitle: "Des outils gratuits et fiables pour pratiquer l'anglais, le français ou le mandarin entre les cours.",
         tabEn: "🇬🇧 Anglais",
