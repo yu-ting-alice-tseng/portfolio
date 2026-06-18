@@ -544,11 +544,11 @@
         title: "Dashboards, visualisations & analyses de données",
         desc: "Tableaux de bord Excel, rapports Power BI et analyses quantitatives appliquées.",
       },
-      indexPortfolioTeaser: {
+      indexPortfolioTeaser: {             // → index.html (teaser portfolio sur page d'accueil)
         title: "Réalisations & projets concrets",
         desc: "Marketing, data, finance & enseignement — découvrez les projets par domaine.",
       },
-      teachingHero: {
+      teachingHero: {                      // → teaching.html (section héro)
         kicker: "Langues & engagement international",
         title1: "Immersion linguistique &",
         title2: "échange interculturel",
@@ -557,7 +557,7 @@
         availabilityLabel: "Enseignement",
         availabilityValue: "En ligne · Disponible",
       },
-      teachingLanguages: {
+      teachingLanguages: {                 // → teaching.html (section Langues)
         title: "Compétences linguistiques",
         subtitle: "Certifications officielles et pratique quotidienne dans quatre langues.",
       },
