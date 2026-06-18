@@ -721,7 +721,7 @@
           aiesec: {
             num: "Campagne Marketing",
             tag: "Direction artistique · Canva · Illustrator",
-            body: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. C'est un séjour entièrement en anglais destiné aux lycéens. J'ai conçu des visuels de campagne comme les affiches et les publications pour le recrutement de volontaires et de participants.",
+            body: "En 2025, j'ai piloté l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. C'est un séjour entièrement en anglais destiné aux lycéens. J'ai conçu des visuels de campagne comme les affiches et les publications pour le recrutement de volontaires et de participants. On a recruté 15 volontaires et plus de 60 participants, dépassant l'objectif budgétaire de 53,7%.",
             statVol: "Volontaires Recrutés",
             statPart: "Participants",
             statBudget: "Objectif Budgétaire Dépassé",
