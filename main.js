@@ -902,7 +902,7 @@
         subtitle:
           "Quelques projets académiques ou personnels illustrant ma manière de travailler et mes centres d'intérêt.",
       },
-      extracurricular: {
+      extracurricular: {                   // → index.html (section Activités extra-scolaires)
         title: "Expériences Extra-Scolaires",
         subtitle:
           "Engagements dans des clubs et associations qui complètent mon parcours académique.",
