@@ -688,7 +688,7 @@
           finPoint1: "Coordination logistique de 9 cours de finance, en assurant l'interface entre les étudiants, les enseignants et les partenaires entreprise.",
           finPoint2: "Animation d'événements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
         },
-        research: {
+        research: {                        // point1-2 → index.html | dataPoint → data.html | finCompany/finPoint → finance.html
           period: "06/2023 – 12/2023",
           title: "Assistante de recherche",
           point1: "Collecte, nettoyage et analyse de données pour des travaux de recherche.",
@@ -698,7 +698,7 @@
           finCompany: "Institut des Relations Internationales, NCCU",
           finPoint1: "Analyse des tendances économiques et de jeux de données via des méthodes qualitatives (enquêtes) et quantitatives (régressions).",
         },
-        tutorABC: {
+        tutorABC: {                        // → teaching.html (section Expériences d'enseignement)
           period: "08/2024 – Présent",
           title: "Professeure particulière d'anglais en ligne",
           point1: "Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).",
