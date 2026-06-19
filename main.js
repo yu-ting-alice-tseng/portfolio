@@ -2337,7 +2337,7 @@
           dataPoint2: "設計並管理行銷績效儀表板（FB & Google），CTR +9.5%、CVR +5.1%。",
           dataPoint3: "執行深入競爭基準分析，透過 Google Analytics & Search Console 追蹤 KPI（流量、CTR、轉換率）。",
           finTitle: "數位行銷助理（實習）",
-          finCompany: "KPN（提供 SEO、SEM、Facebook 廣告等數位行銷服務的公司）",
+          finCompany: "KPN · 提供 SEO、SEM、Facebook 廣告等數位行銷服務的公司",
           finPoint1: "管理 Facebook 及 Google Ads 每月廣告預算，追蹤 ROI 指標並有效分配資金以優化每次獲客成本（轉換率 +5.1%）。",
           finPoint2: "每月執行網站績效審核，分析關鍵差異數據，並與跨部門團隊合作解決問題。",
         },
@@ -2381,6 +2381,7 @@
         teaching: {
           period: "2023/07 –2023/12 · 2024/07 –2025/04",
           title: "教學助理",
+          company: "國立政治大學全球銀行與財務學院",
           point1: "協助財務與風險管理課程，並追蹤學生學習進度。",
           point2: "備課及處理行政事務。",
           dataSupport: "協助程式設計與數據分析課程（VBA、Access）的教學支援。",
@@ -2408,6 +2409,7 @@
         research: {
           period: "2023/06 –2023/12",
           title: "研究助理",
+          company: "國立政治大學國際關係研究中心",
           point1: "蒐集、清理並分析研究用數據。",
           point2: "準備摘要與研討會素材。",
           dataPoint1: "運用 R 語言及 Excel 以量化與質性雙軌方式分析總體經濟議題，確保研究成果的嚴謹性。",
