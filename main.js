@@ -2990,10 +2990,10 @@
         },
         {
           type: "Certification",
-          title: "Data Literacy",
+          title: "AI Literacy",
           org: " – ",
           meta: ["05/2026"],
-          points: ["Lecture critique des données, interprétation des biais et communication des résultats."],
+          points: ["Compréhension des fondamentaux de l'IA, lecture critique des résultats et utilisation responsable des outils d'intelligence artificielle."],
           actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }],
         },
       ],
