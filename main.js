@@ -1808,6 +1808,7 @@
         },
         camps: {
           title: "Co-Founder – Sora Education (Youth Camps)",
+          org: "Sora Education",
           text:
             "Co'an five week'ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
           stat1: "Camps organised",
