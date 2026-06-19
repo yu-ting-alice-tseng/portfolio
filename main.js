@@ -626,6 +626,7 @@
         kpn: {
           period: "01/2025 – 06/2025",
           title: "Assistante Marketing Digital",     // point1-4 → index + marketing.html
+          company: "KPN · Agence de marketing digital",
           point1: "Analyser les tendances et effectuer des benchmarks sectoriels pour guider la création de contenus web adaptés aux attentes des utilisateurs, positionnant 10+ articles dans le Top 10 Google.",
           point2: "Piloter la performance des campagnes publicitaires Meta et Google via des reportings, optimisant le CTR (+9,5%) et le taux de conversion (+5,1%) grâce à des tests A/B.",
           point3: "Collaborer de manière transversale avec les pôles CRM et techniques pour aligner la production de contenu sur les objectifs de visibilité de la marque.",
