@@ -3191,8 +3191,38 @@
         proofs: [],
       },
     },
+    "mkt-gkp": {
+      title: "Google Keyword Planner",
+      text: "Recherche de mots-clés, estimation des volumes de recherche et planification des enchères pour les campagnes Google Ads.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA", "01/2025 – 06/2025"], points: ["Identification et sélection de mots-clés via Google Keyword Planner pour optimiser le ciblage et les enchères des campagnes Google Ads."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+      ],
+      en: { title: "Google Keyword Planner", text: "Keyword research, search volume estimation and bid planning for Google Ads campaigns.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEA", "01/2025 – 06/2025"], points: ["Used Google Keyword Planner to identify and select keywords for targeting and bid optimisation across Google Ads campaigns."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+    "mkt-gtrends": {
+      title: "Google Trends",
+      text: "Analyse des tendances de recherche pour anticiper les sujets porteurs, affiner la stratégie de contenu et aligner le calendrier éditorial sur la demande.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO · SEA", "01/2025 – 06/2025"], points: ["Utilisation de Google Trends pour identifier les tendances sectorielles et orienter la production de contenus web à fort potentiel SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+      ],
+      en: { title: "Google Trends", text: "Search trend analysis to anticipate high-potential topics, refine content strategy and align the editorial calendar with demand.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO · SEA", "01/2025 – 06/2025"], points: ["Used Google Trends to identify industry trends and guide web content production with strong SEO potential."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+    "mkt-semrush": {
+      title: "Semrush",
+      text: "Audit SEO, analyse de la concurrence, suivi du positionnement et identification d'opportunités de mots-clés.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Utilisation de Semrush pour l'audit de sites clients, l'analyse concurrentielle et le suivi du positionnement des articles dans les résultats de recherche."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+      ],
+      en: { title: "Semrush", text: "SEO audit, competitor analysis, rank tracking and keyword opportunity identification.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Used Semrush to audit client websites, analyse competitors and track article rankings in search results."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
     "mkt-sea": {
-      title: "SEA · Google Ads",
+      title: "Google Ads",
       text: "Gestion de campagnes Google Ads orientées performance (CTR, CVR) et optimisation budgétaire.",
       proofs: [
         {
