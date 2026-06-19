@@ -625,10 +625,11 @@
           "Une sélection de mes expériences en marketing digital, analyse de données et gestion de projet.",
         kpn: {
           period: "01/2025 – 06/2025",
-          title: "Assistante Marketing Digital",     // point1-3 → index + marketing.html
-          point1: "Optimisation SEO (on-page / technique) et recommandations de contenus.",
-          point2: "Suivi de KPIs et analyse de performance (trafic, CTR, conversions).",
-          point3: "Campagnes SEA et reporting.",
+          title: "Assistante Marketing Digital",     // point1-4 → index + marketing.html
+          point1: "Analyser les tendances et effectuer des benchmarks sectoriels pour guider la création de contenus web adaptés aux attentes des utilisateurs, positionnant 10+ articles dans le Top 10 Google.",
+          point2: "Piloter la performance des campagnes publicitaires Meta et Google via des reportings, optimisant le CTR (+9,5%) et le taux de conversion (+5,1%) grâce à des tests A/B.",
+          point3: "Collaborer de manière transversale avec les pôles CRM et techniques pour aligner la production de contenu sur les objectifs de visibilité de la marque.",
+          point4: "Piloter un projet de recherche sur les facteurs de positionnement sur Google via des régressions statistiques, permettant d'affiner la stratégie SEO de l'agence.",
           dataPoint1: "Piloter un projet de recherche quantitative pour identifier les leviers de performance digitale et synthétiser les données en recommandations stratégiques pour l'équipe.",   // → data.html
           dataPoint2: "Concevoir et piloter des reportings de performance marketing (FB & Google) via des tableaux de bord – +9,5% CTR, +5,1% CVR.",  // → data.html
           dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",  // → data.html
@@ -1479,9 +1480,10 @@
         kpn: {
           period: "01/2025 – 06/2025",
           title: "Digital Marketing Assistant",
-          point1: "SEO optimisation (on-page & technical) and content recommendations.",
-          point2: "KPI tracking and performance analysis (traffic, CTR, conversions).",
-          point3: "SEA campaign management and reporting.",
+          point1: "Analysed industry trends and conducted competitive benchmarks to guide web content creation aligned with user expectations, positioning 10+ articles in Google's Top 10.",
+          point2: "Monitored Meta and Google advertising campaign performance through reporting dashboards, optimising CTR (+9.5%) and conversion rate (+5.1%) via A/B testing.",
+          point3: "Collaborated cross-functionally with CRM and technical teams to align content production with brand visibility objectives.",
+          point4: "Led a quantitative research project on Google ranking factors using statistical regressions, enabling the agency to refine its SEO strategy.",
           dataPoint1: "Led a quantitative research project to identify digital performance drivers, synthesising data into strategic recommendations for the team.",
           dataPoint2: "Designed and managed marketing performance dashboards (FB & Google) – +9.5% CTR, +5.1% CVR.",
           dataPoint3: "Conducted in-depth competitive benchmarking and tracked KPIs (traffic, CTR, conversions) via Google Analytics & Search Console.",
