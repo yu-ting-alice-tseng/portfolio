@@ -1539,6 +1539,7 @@
         teaching: {
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
           title: "Teaching Assistant",
+          company: "College of Global Banking and Finance, NCCU",
           point1: "Course support (finance, risk management) and student follow-up.",
           point2: "Prepared course materials and handled logistics.",
           dataSupport: "Managed event organisation (thematic conferences, networking sessions), coordinating communication flow and welcoming external speakers.",
@@ -1572,6 +1573,7 @@
         research: {
           period: "06/2023 – 12/2023",
           title: "Research Assistant",
+          company: "Institute of International Relations, NCCU",
           point1: "Data collection, cleaning and analysis for research papers.",
           point2: "Produced summaries and seminar materials.",
           dataPoint1: "Analysed macroeconomic issues using a dual quantitative and qualitative approach via R and Excel, ensuring the rigour of deliverables.",
@@ -1764,6 +1766,7 @@
           period: "Feb. 2023 – Jan. 2024",
           title:
             "Marketing & Membership Director – Guzheng (Chinese Zither) Club",
+          org: "Guzheng Club, NCCU",
           text:
             "Led recruitment and orientation events, achieving full enrollment in both semesters. Retained 80% of members by managing the Facebook page, adjusting course arrangements based on feedback, and organising activities and performances.",
           portfolioLink: "View creations (PDF)",
