@@ -3977,8 +3977,14 @@
     "ai-chatgpt": {
       title: "ChatGPT",
       text: "Utilisation quotidienne de ChatGPT pour la rédaction, la synthèse, l'analyse et la génération de code.",
-      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "OpenAI", meta: [], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] }],
-      en: { title: "ChatGPT", text: "Daily use of ChatGPT for writing, summarisation, analysis and code generation.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "OpenAI", meta: [], points: ["Marketing content writing, document summarisation, coding assistance."] }] },
+      proofs: [
+        { type: "Pratique", title: "Usage professionnel & académique", org: "OpenAI", meta: [], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] },
+        { type: "Certification", title: "AI Literacy", org: " – ", meta: ["05/2026"], points: ["Compréhension des fondamentaux de l'IA, lecture critique des résultats et utilisation responsable des outils d'intelligence artificielle."], actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }] },
+      ],
+      en: { title: "ChatGPT", text: "Daily use of ChatGPT for writing, summarisation, analysis and code generation.", proofs: [
+        { type: "Practice", title: "Professional & Academic Use", org: "OpenAI", meta: [], points: ["Marketing content writing, document summarisation, coding assistance."] },
+        { type: "Certification", title: "AI Literacy", org: " – ", meta: ["05/2026"], points: ["Understanding AI fundamentals, critical reading of AI outputs and responsible use of AI tools."], actions: [{ label: "Open certificate", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }] },
+      ]},
     },
     "ai-claude": {
       title: "Claude",
