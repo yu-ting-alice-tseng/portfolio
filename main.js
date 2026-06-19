@@ -1179,6 +1179,8 @@
         chipClaude: "Claude",
         chipGemini: "Gemini",
         chipVibeCoding: "Vibe Coding",
+        subAITools: "Artificial Intelligence",
+        subDevWeb: "Web Development",
         chipMicrosoftOffice: "Microsoft Office (Word · Excel · PowerPoint)",
         chipGoogleSuite: "Google Suite",
         chipNotion: "Notion",
