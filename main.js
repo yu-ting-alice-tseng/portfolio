@@ -2505,7 +2505,7 @@
           heroStatProjets: "專案",
           heroStatGrowth: "小紅書成長",
           heroStatPart: "AIESEC 參與人數",
-          filterAll: "全部",          filterAll: "全部",
+          filterAll: "全部",
           filterDashboard: "儀表板 & 數據",
           filterCampagne: "行銷活動",
           filterDesign: "視覺設計",
@@ -2999,7 +2999,7 @@
           org: "emlyon business school",
           meta: ["R · OLS · Logit · Panel Data"],
           points: [
-            "3 hypothèses testées sur données empiriques 2000 – 024 (LSEG / Refinitiv, WGI, POLCON III).",
+            "3 hypothèses testées sur données empiriques 2000 – 2024 (LSEG / Refinitiv, WGI, POLCON III).",
             "Régression OLS panel (H1 volume M&A), modèle Logit (H2 abandon), OLS sur prime d'acquisition (H3).",
           ],
           actions: [{ label: "Voir le rapport", href: "assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf" }],
