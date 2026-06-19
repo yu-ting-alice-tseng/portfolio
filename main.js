@@ -4060,6 +4060,63 @@
     },
 
     // ?? Creative Tools ???????????????????????????????????????????????
+    // SEO Tools
+    "mkt-ahrefs": {
+      title: "Ahrefs",
+      text: "Analyse des backlinks, audit SEO, recherche de mots-clés et suivi du positionnement pour identifier les opportunités de croissance organique.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+      ],
+      en: { title: "Ahrefs", text: "Backlink analysis, SEO audit, keyword research and rank tracking to identify organic growth opportunities.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+    "mkt-similarweb": {
+      title: "Similarweb",
+      text: "Analyse du trafic web, benchmarking concurrentiel et identification des sources de trafic pour affiner la stratégie digitale.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO · Veille", "01/2025 – 06/2025"], points: ["Utilisation de Similarweb pour analyser le trafic des sites concurrents et identifier les canaux d'acquisition les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+      ],
+      en: { title: "Similarweb", text: "Web traffic analysis, competitive benchmarking and traffic source identification to refine digital strategy.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO · Research", "01/2025 – 06/2025"], points: ["Used Similarweb to analyse competitor website traffic and identify the best-performing acquisition channels."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+    "mkt-screaming-frog": {
+      title: "Screaming Frog SEO Spider",
+      text: "Audit technique SEO : crawl des sites, détection des erreurs (404, redirections, balises manquantes) et analyse de la structure du site.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO Technique", "01/2025 – 06/2025"], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+      ],
+      en: { title: "Screaming Frog SEO Spider", text: "Technical SEO audit: site crawling, error detection (404s, redirects, missing tags) and site structure analysis.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["Technical SEO", "01/2025 – 06/2025"], points: ["Crawled client websites to detect technical issues (broken links, redirects, missing title/meta tags) and prioritise SEO fixes."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+
+    // Web Development
+    "dev-html": {
+      title: "HTML",
+      text: "Structuration de pages web et intégration de contenu pour le développement de sites marketing et de portfolio.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML", "01/2025 – 06/2025"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Construction de ce portfolio multi-pages en HTML/CSS/JS avec système i18n (FR/EN/ZH) et animations."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
+      ],
+      en: { title: "HTML", text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["HTML", "01/2025 – 06/2025"], points: ["Edited and structured HTML content for on-page optimisation and client website updates."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Personal Project", title: "Professional Portfolio", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Built this full multi-page portfolio in HTML/CSS/JS with i18n system (FR/EN/ZH) and animations."], actions: [{ label: "View portfolio", href: "index.html" }] },
+      ]},
+    },
+    "dev-css": {
+      title: "CSS",
+      text: "Mise en forme, design responsive et animations pour des interfaces web professionnelles et des pages marketing.",
+      proofs: [
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS", "01/2025 – 06/2025"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Design visuel complet, système de variables CSS, responsive et animations pour ce portfolio."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
+      ],
+      en: { title: "CSS", text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["CSS", "01/2025 – 06/2025"], points: ["Applied CSS styling to improve the visual presentation and layout of client web pages."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Personal Project", title: "Professional Portfolio", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Full visual design, CSS variable system, responsive layout and scroll animations for this portfolio."], actions: [{ label: "View portfolio", href: "index.html" }] },
+      ]},
+    },
     "creative-canva": {
       title: "Canva",
       text: "Création de visuels pour réseaux sociaux, affiches, présentations et supports marketing.",
