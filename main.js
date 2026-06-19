@@ -4070,6 +4070,48 @@
     },
 
     // ?? Creative Tools ???????????????????????????????????????????????
+    // Events & Coordination
+    "mkt-event-management": {
+      title: "Organisation d'événements",
+      text: "Planification et coordination logistique d'événements (camps, conférences, séminaires) : définition du programme, gestion des participants et suivi opérationnel.",
+      proofs: [
+        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Événementiel", "09/2022 – 06/2023"], points: ["Organisation de conférences thématiques et sessions de networking, gestion du flux de communication et coordination des prestataires."] },
+        { type: "Expérience", title: "Assistante de recherche", org: "Institut des Relations Internationales, NCCU", meta: ["Événementiel", "09/2021 – 06/2022"], points: ["Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été."] },
+        { type: "Extra-scolaire", title: "Co-fondatrice", org: "Sora Education", meta: ["Événementiel", "07/2022 – 08/2024"], points: ["Organisation de 5 camps d'été d'une semaine, coordination logistique complète avec deux partenaires."] },
+        { type: "Bénévolat", title: "Membre – AIESEC in NCCU", org: "AIESEC", meta: ["Événementiel", "09/2024 – 06/2025"], points: ["Coordination de l'organisation d'un camp d'anglais accueillant 60+ participants et 15 volontaires internationaux."] },
+      ],
+      en: { title: "Event Management", text: "Planning and logistical coordination of events (camps, conferences, seminars): programme design, participant management and operational follow-up.", proofs: [
+        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Events", "09/2022 – 06/2023"], points: ["Organised thematic conferences and networking sessions, managed communication flow and coordinated with service providers."] },
+        { type: "Experience", title: "Research Assistant", org: "Institute of International Relations, NCCU", meta: ["Events", "09/2021 – 06/2022"], points: ["Led teams of 3–4 people to organise seminars, conferences and summer camps."] },
+        { type: "Extracurricular", title: "Co-founder", org: "Sora Education", meta: ["Events", "07/2022 – 08/2024"], points: ["Organised 5 one-week summer camps with full logistical coordination across two partners."] },
+        { type: "Volunteering", title: "Member – AIESEC in NCCU", org: "AIESEC", meta: ["Events", "09/2024 – 06/2025"], points: ["Coordinated organisation of an English camp hosting 60+ participants and 15 international volunteers."] },
+      ]},
+    },
+    "mkt-event-hosting": {
+      title: "Présidence & Animation",
+      text: "Animation et présidence d'événements : accueil des intervenants, modération des échanges et assurance du bon déroulement du programme.",
+      proofs: [
+        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Animation", "09/2022 – 06/2023"], points: ["Présidence et animation des conférences et sessions de networking, assurant le cadre et la fluidité des échanges."] },
+        { type: "Extra-scolaire", title: "Directrice marketing & adhésions", org: "Club de Guzheng, NCCU", meta: ["Animation", "02/2023 – 01/2024"], points: ["Organisation et animation d'activités et de performances musicales pour les membres du club."] },
+      ],
+      en: { title: "Hosting & Facilitation", text: "Hosting and chairing events: welcoming speakers, moderating exchanges and ensuring smooth programme delivery.", proofs: [
+        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Facilitation", "09/2022 – 06/2023"], points: ["Chaired conferences and networking sessions, ensuring structure and smooth flow of exchanges."] },
+        { type: "Extracurricular", title: "Marketing & Membership Director", org: "Guzheng Club, NCCU", meta: ["Facilitation", "02/2023 – 01/2024"], points: ["Organised and facilitated club activities and musical performances for members."] },
+      ]},
+    },
+    "mkt-vendor-coordination": {
+      title: "Coordination avec Prestataires",
+      text: "Identification, contact et suivi des prestataires externes (lieux, traiteurs, intervenants) pour assurer le bon déroulement des événements.",
+      proofs: [
+        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Coordination", "09/2022 – 06/2023"], points: ["Gestion de la relation avec les prestataires et intervenants externes lors de l'organisation de conférences et sessions événementielles."] },
+        { type: "Extra-scolaire", title: "Co-fondatrice", org: "Sora Education", meta: ["Coordination", "07/2022 – 08/2024"], points: ["Contact et négociation avec les prestataires (lieux, matériaux pédagogiques) pour l'organisation des camps d'été."] },
+      ],
+      en: { title: "Vendor Coordination", text: "Identifying, contacting and managing external service providers (venues, caterers, speakers) to ensure smooth event delivery.", proofs: [
+        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Coordination", "09/2022 – 06/2023"], points: ["Managed relationships with external providers and guest speakers when organising conferences and networking events."] },
+        { type: "Extracurricular", title: "Co-founder", org: "Sora Education", meta: ["Coordination", "07/2022 – 08/2024"], points: ["Contacted and negotiated with service providers (venues, teaching materials) for the organisation of summer camps."] },
+      ]},
+    },
+
     // SEO Tools
     "mkt-ahrefs": {
       title: "Ahrefs",
