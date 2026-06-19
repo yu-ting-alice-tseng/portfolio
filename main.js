@@ -1767,8 +1767,8 @@
           title:
             "Marketing & Membership Director – Guzheng (Chinese Zither) Club",
           org: "Guzheng Club, NCCU",
-          text:
-            "Led recruitment and orientation events, achieving full enrollment in both semesters. Retained 80% of members by managing the Facebook page, adjusting course arrangements based on feedback, and organising activities and performances.",
+          point1: "Led recruitment and orientation events, achieving full enrollment in both semesters.",
+          point2: "Retained 80% of members by managing the Facebook page, adjusting course arrangements based on feedback, and organising activities and performances.",
           portfolioLink: "View creations (PDF)",
         },
         camps: {
@@ -2590,8 +2590,8 @@
           period: "2023/02 – 2024/01",
           title: "行銷與會員部長 ── 古箏社",
           org: "政大古箏社",
-          text:
-            "統籌招募活動與新生說明會，兩學期均達額滿；管理 Facebook 專頁、依回饋調整課程安排並籌辦活動與演出，留住 80% 的社員。",
+          point1: "統籌招募活動與新生說明會，兩學期均達額滿。",
+          point2: "管理 Facebook 專頁、依回饋調整課程安排並籌辦活動與演出，留住 80% 的社員。",
           portfolioLink: "查看作品集（PDF）",
         },
         camps: {
