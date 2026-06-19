@@ -634,7 +634,7 @@
           dataPoint2: "Concevoir et piloter des reportings de performance marketing (FB & Google) via des tableaux de bord – +9,5% CTR, +5,1% CVR.",  // → data.html
           dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",  // → data.html
           finTitle: "Assistante Marketing Digital (Stage)",  // → finance.html
-          finCompany: "KPN (Agence de marketing digital – SEO, SEM, publicité Facebook & Google)",
+          finCompany: "KPN · Agence de marketing digital, SEO, SEM & publicité Facebook et Google",
           finPoint1: "Gestion des budgets publicitaires mensuels sur Facebook et Google Ads, suivi des métriques ROI et allocation efficace du capital pour optimiser le coûtt par acquisition (taux de conversion +5,1%).",
           finPoint2: "Réalisation d'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
         },
@@ -650,7 +650,7 @@
           dataPoint2: "Réaliser des analyses de marché approfondies et une veille concurrentielle pour optimiser la stratégie de contenu sur le segment du chinois simplifié (REDnote / Xiaohongshu).",
           dataPoint3: "Déployer une stratégie de contenu data-driven fondée sur le modèle STP – +93,3% de vues, +89,1% d'interactions et +69,7% d'abonnés en 3 mois.",
           finTitle: "Assistante Marketing (Stage)",
-          finCompany: "Engoo, DMM.com (Plateforme internationale de cours de langue en ligne)",
+          finCompany: "Engoo, DMM.com · Plateforme internationale d'apprentissage des langues en ligne",
           finPoint1: "Analyse de marché approfondie pour développer et affiner les stratégies marketing sur le segment du chinois simplifié.",
           finPoint2: "Gestion des métriques de performance et de contenu sur Xiaohongshu – +93,3% de vues, +89,1% d'interactions et +69,7% d'abonnés en 3 mois.",
           pythonPoint: "Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour.",
