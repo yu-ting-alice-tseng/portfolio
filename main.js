@@ -681,6 +681,7 @@
         teaching: {                        // point1-2 → index.html | dataSupport/dataCoord → data.html | finTitle/finPoint → finance.html
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
           title: "Assistante d'enseignement",
+          company: "Faculté de Banque et Finance Internationale, NCCU",
           point1: "Support de cours (finance, risk management) et suivi des étudiants.",
           point2: "Préparation de supports et coordination logistique.",
           dataSupport: "Piloter l'organisation événementielle (conférences thématiques, sessions de networking), assurant le flux de communication et l'accueil des intervenants externes.",
@@ -693,6 +694,7 @@
         research: {                        // point1-2 → index.html | dataPoint → data.html | finCompany/finPoint → finance.html
           period: "06/2023 – 12/2023",
           title: "Assistante de recherche",
+          company: "Institut des Relations Internationales, NCCU",
           point1: "Collecte, nettoyage et analyse de données pour des travaux de recherche.",
           point2: "Préparation de synthèses et supports pour séminaires.",
           dataPoint1: "Analyser des enjeux macro-économiques par une double approche quantitative et qualitative via R et Excel, garantissant la rigueur des livrables.",
