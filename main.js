@@ -914,6 +914,7 @@
           period: "02/2023 – 01/2024",
           title:
             "Directrice Marketing & Adhésions",
+          org: "Club de Guzheng, NCCU",
           text:
             "Pilotage des campagnes de recrutement et des événements d'orientation, atteignant le plein effectif les deux semestres. Fidélisation de 80 % des membres via la gestion de la page Facebook, l'adaptation des cours et l'organisation d'activités et de performances.",
           portfolioLink: "Voir les créations (PDF)",
