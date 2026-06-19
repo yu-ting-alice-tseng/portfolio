@@ -939,7 +939,7 @@
           portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
-          title: "Co-fondatrice – Camps de jeunesse",
+          title: "Co-fondatrice (Projet entrepreneurial)",
           org: "Sora Education · Cours de langues étrangères et soft skills pour enfants pendant les vacances scolaires",
           text:
             "Organisation de cinq camps d'été d'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l'offre de cours et la stratégie marketing.",
