@@ -1819,7 +1819,7 @@
         usr: {
           period: "Sep. 2024 – Jun. 2025",
           title: "Volunteer – University Social Responsibility Project",
-          org: "NCCU · Office of University Responsibility",
+          org: "Office of University Responsibility, NCCU",
           point1:
             "Tutored transnational students in both language learning and cultural integration.",
         },
@@ -1833,7 +1833,7 @@
         buddy: {
           period: "Sep. 2023 – Jan. 2025",
           title: "Student Buddy – Buddy Programme",
-          org: "NCCU · Office of International Cooperation",
+          org: "Office of International Cooperation, NCCU",
           point1:
             "Helped three exchange students from France, the US and South Korea adapt to life in Taiwan.",
         },
