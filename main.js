@@ -642,7 +642,7 @@
         engoo: {                           // point1-4 → index + marketing.html | dataPoint → data.html | finTitle/finPoint → finance.html
           period: "10/2024 – 02/2025",
           title: "Assistante Marketing",
-          company: "Engoo, DMM.com Group",
+          company: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing – +89.1% d'interactions et +69.7% d'abonnés en 3 mois.",
           point2: "Veille concurrentielle, analyse d'audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
