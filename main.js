@@ -2988,14 +2988,6 @@
           ],
           actions: [{ label: "Voir le rapport", href: "assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf" }],
         },
-        {
-          type: "Certification",
-          title: "AI Literacy",
-          org: " – ",
-          meta: ["05/2026"],
-          points: ["Compréhension des fondamentaux de l'IA, lecture critique des résultats et utilisation responsable des outils d'intelligence artificielle."],
-          actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }],
-        },
       ],
     },
     "data-excel": {
