@@ -1807,8 +1807,8 @@
           portfolioLink: "View creations (PDF)",
         },
         camps: {
-          title: "Co-Founder – Sora Education (Youth Camps)",
-          org: "Sora Education",
+          title: "Co-Founder – Youth Camps",
+          org: "Sora Education · Foreign language and soft skills courses for children during school holidays",
           text:
             "Co'an five week'ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
           stat1: "Camps organised",
