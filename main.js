@@ -2344,6 +2344,7 @@
         engoo: {
           period: "2024/10 –2025/02",
           title: "行銷助理",
+          company: "Engoo, DMM.com Group",
           point1: "基於 STP 模型的小紅書內容策略，搭配 A/B 測試，3 個月內互動量 +89.1%、追蹤者 +69.7%。",
           point2: "競爭監測、受眾分析，並依目標細分族群調整視覺內容。",
           point3: "創作符合趨勢與品牌調性的 Meta（Facebook & Instagram）內容。",
