@@ -3276,7 +3276,7 @@
         {
           type: "Activité",
           title: "Co-fondatrice – Sora Education",
-          org: "Projet entrepreneurial",
+          org: "Sora Education",
           meta: ["Camps de jeunesse"],
           points: ["Études de marché et ajustement de l'offre et de la stratégie marketing."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
@@ -3458,7 +3458,7 @@
         {
           type: "Activité",
           title: "Co-Fondatrice – Sora Education",
-          org: "Projet entrepreneurial",
+          org: "Sora Education",
           meta: ["Camps de jeunesse"],
           points: ["Suivi du P&L de 5 camps d'été : pilotage des revenus, des coûtts variables et fixes, et atteinte de la rentabilité."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
@@ -3538,7 +3538,7 @@
         {
           type: "Activité",
           title: "Co-Fondatrice – Sora Education",
-          org: "Projet entrepreneurial",
+          org: "Sora Education",
           meta: ["Camps de jeunesse"],
           points: ["Reporting financier mensuel pour 5 camps d'été : suivi budgétaire, analyse des coûtts et pilotage de la rentabilité."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
@@ -3787,7 +3787,7 @@
         {
           type: "Activité",
           title: "Co-fondatrice – Sora Education",
-          org: "Projet entrepreneurial",
+          org: "Sora Education",
           meta: ["Camps de jeunesse"],
           points: ["Planification et exécution de campagnes de recrutement pour 5 camps d'été."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
@@ -3810,7 +3810,7 @@
         {
           type: "Activité",
           title: "Co-fondatrice – Sora Education",
-          org: "Projet entrepreneurial",
+          org: "Sora Education",
           meta: ["Camps de jeunesse"],
           points: ["Études de marché, segmentation et positionnement de l'offre de cours."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
@@ -3846,7 +3846,7 @@
         {
           type: "Activité",
           title: "Co-fondatrice – Sora Education",
-          org: "Projet entrepreneurial",
+          org: "Sora Education",
           meta: ["Camps de jeunesse"],
           points: ["Business plan, modèle économique et pitch pour 5 camps d'été."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
