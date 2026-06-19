@@ -961,7 +961,7 @@
           stat2: "Participants",
           stat3: "Objectif dépassé",
           finTitle: "Membre",
-          finOrg: "AIESEC in NCCU (Organisation mondiale à but non lucratif de coordination de programmes de volontariat international)",
+          finOrg: "AIESEC in NCCU · Organisation mondiale à but non lucratif de coordination de programmes de volontariat international",
           finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûtts pour dépasser l'objectif de budget équilibré de 53,7%.",
         },
         usr: {
@@ -1499,6 +1499,7 @@
         engoo: {
           period: "10/2024 – 02/2025",
           title: "Marketing Assistant",
+          company: "Engoo, DMM.com Group",
           point1: "Xiaohongshu content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
           point2: "Competitive monitoring, audience analysis and visual adaptation by target sub-segment.",
           point3: "Created Meta content (Facebook & Instagram) aligned with trends and brand identity.",
