@@ -924,6 +924,7 @@
           text:
             "Organisation de cinq camps d'été d'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l'offre de cours et la stratégie marketing.",
           stat1: "Camps organisés",
+          stat2: "Bénéfice net généré",
         },
         clubs: {
           title: "Autres clubs étudiants",
@@ -1776,6 +1777,7 @@
           text:
             "Co'an five week'ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
           stat1: "Camps organised",
+          stat2: "Net profit generated",
         },
         clubs: {
           title: "Other Student Clubs",
