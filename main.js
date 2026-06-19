@@ -2354,7 +2354,7 @@
           dataPoint3: "部署基於 STP 模型的數據驅動內容策略，3 個月內瀏覽量 +93.3%、互動量 +89.1%、追蹤者 +69.7%。",
           pythonPoint: "開發 Python 腳本自動化每日數據整合流程，提升每日報告作業效率。",
           finTitle: "行銷助理（實習）",
-          finCompany: "Engoo, DMM.com（國際線上語言學習平台）",
+          finCompany: "Engoo, DMM.com · 國際線上語言學習平台",
           finPoint1: "執行市場分析，針對簡體中文市場開發並優化行銷策略。",
           finPoint2: "管理小紅書的頻道績效與內容指標，3 個月內瀏覽量 +93.3%、互動量 +89.1%、追蹤者 +69.7%。",
           portfolioLink: "查看作品集（PDF）",
