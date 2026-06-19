@@ -497,7 +497,7 @@
         cardRole: "Finance & Comptabilité",
         caseStudyLabel: "Expérience clé - Finance & Enseignement",
         caseStudyTitle: "Assistante d'enseignement - Finance & Risk Management",
-        caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance (NCCU). Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
+        caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance, NCCU. Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
       },
       marketingHero: {                     // → marketing.html (section héro)
         kicker: "Marketing 360 - Activation - Contenu",
@@ -533,8 +533,8 @@
         cta: "Explorer le portfolio →",
       },
       marketingPortfolioTeaser: {         // → marketing.html (teaser portfolio)
-        title: "Campagnes, dashboards & visuels de marque",
-        desc: "Stratégies Xiaohongshu, analyses de performance et créations visuelles.",
+        title: "Campagnes, Dashboards & Visuels de Marque",
+        desc: "Stratégies Xiaohongshu, Analyses de Performance et Créations Visuelles.",
       },
       financePortfolioTeaser: {           // → finance.html (teaser portfolio)
         title: "Analyses, Modèles & Études de Cas",
@@ -682,8 +682,8 @@
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
           title: "Assistante d'enseignement",
           company: "Faculté de Banque et Finance Internationale, NCCU",
-          point1: "Support de cours (finance, risk management) et suivi des étudiants.",
-          point2: "Préparation de supports et coordination logistique.",
+          point1: "Coordonner la logistique opérationnelle de 9 cours et assurer l'interface entre des parties prenantes exigeantes.",
+          point2: "Piloter l'organisation événementielle (conférences thématiques, sessions de networking), assurant le flux de communication et la gestion des prestataires.",
           dataSupport: "Piloter l'organisation événementielle (conférences thématiques, sessions de networking), assurant le flux de communication et l'accueil des intervenants externes.",
           dataCoord: "Coordonner la logistique opérationnelle de 9 cours et assurer l'interface entre des parties prenantes exigeantes.",
           finTitle: "Assistante de cours",
@@ -695,8 +695,8 @@
           period: "06/2023 – 12/2023",
           title: "Assistante de recherche",
           company: "Institut des Relations Internationales, NCCU",
-          point1: "Collecte, nettoyage et analyse de données pour des travaux de recherche.",
-          point2: "Préparation de synthèses et supports pour séminaires.",
+          point1: "Encadrer des équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été.",
+          point2: "Synthétiser des analyses complexes et visualiser les données sous format PowerPoint pour formuler des recommandations stratégiques.",
           dataPoint1: "Analyser des enjeux macro-économiques par une double approche quantitative et qualitative via R et Excel, garantissant la rigueur des livrables.",
           dataPoint2: "Encadrer des équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été.",
           finCompany: "Institut des Relations Internationales, NCCU",
@@ -2837,7 +2837,7 @@
         {
           type: "Expérience",
           title: "Assistante de recherche",
-          org: "Institut des Relations Internationales (NCCU)",
+          org: "Institut des Relations Internationales, NCCU",
           meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
           points: ["Analyse statistique et visualisation pour des travaux de recherche."],
           actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
@@ -2872,7 +2872,7 @@
         {
           type: "Expérience",
           title: "Assistante de recherche",
-          org: "Institut des Relations Internationales (NCCU)",
+          org: "Institut des Relations Internationales, NCCU",
           meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
           points: ["Collecte, nettoyage et traitement de données pour la recherche."],
           actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
@@ -4083,7 +4083,7 @@
         {
           type: "Expérience",
           title: "Assistante de recherche",
-          org: "Institut des Relations Internationales (NCCU)",
+          org: "Institut des Relations Internationales, NCCU",
           meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
           points: ["Rédaction de synthèses quantitatives et supports pour séminaires."],
           actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
@@ -4096,7 +4096,7 @@
           {
             type: "Experience",
             title: "Research Assistant",
-            org: "Institute of International Relations (NCCU)",
+            org: "Institute of International Relations, NCCU",
             meta: ["Taipei · Taiwan", "06/2023 – 12/2023"],
             points: ["Produced quantitative summaries and seminar materials."],
             actions: [{ label: "View experience", href: "#exp-research" }],
