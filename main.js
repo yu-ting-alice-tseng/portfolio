@@ -466,7 +466,7 @@
         fieldMsg: "Message (facultatif)",
         fieldMsgPh: "Parlez-moi de votre niveau, vos objectifs ou vos questions.",
         submit: "Envoyer la demande",
-        formNote: "Ce formulaire est une démonstration front-end. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
+        formNote: "Ce formulaire est une démonstration front-end. Connectez-le à Formspree ou Netlify Forms pour l'activer.",
       },
       resources: {                         // → teaching.html (ressources d'apprentissage)
         title: "Ressources pédagogiques",
@@ -560,7 +560,7 @@
       },
       indexPortfolioTeaser: {             // → index.html (teaser portfolio sur page d'accueil)
         title: "Réalisations & projets concrets",
-        desc: "Marketing, data, finance & enseignement — découvrez les projets par domaine.",
+        desc: "Marketing, data, finance & enseignement : découvrez les projets par domaine.",
       },
       teachingHero: {                      // → teaching.html (section héro)
         kicker: "Langues & engagement international",
@@ -650,7 +650,7 @@
           dataPoint3: "Réaliser des benchmarks concurrentiels approfondis et suivre les KPIs (trafic, CTR, conversions) via Google Analytics & Search Console.",  // → data.html
           finTitle: "Assistante Marketing Digital (Stage)",  // → finance.html
           finCompany: "KPN · Agence de marketing digital, SEO, SEM & publicité Facebook et Google",
-          finPoint1: "Gestion des budgets publicitaires mensuels sur Facebook et Google Ads, suivi des métriques ROI et allocation efficace du capital pour optimiser le coûtt par acquisition (taux de conversion +5,1%).",
+          finPoint1: "Gestion des budgets publicitaires mensuels sur Facebook et Google Ads, suivi des métriques ROI et allocation efficace du capital pour optimiser le coût par acquisition (taux de conversion +5,1%).",
           finPoint2: "Réalisation d'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
         },
         engoo: {                           // point1-4 → index + marketing.html | dataPoint → data.html | finTitle/finPoint → finance.html
@@ -695,7 +695,7 @@
           showcaseDesc2: "Section droite : courbe Période A vs Période B pour identifier les tendances et l'impact des actions menées.",
           showcaseBadge3: "- Données brutes",
           showcaseTitle3: "Jeu de données quotidiennes",
-          showcaseDesc3: "12 métriques par jour (vues, temps de visionnage, engagement, notoriété – – base structurée de toutes les visualisations.",
+          showcaseDesc3: "12 métriques par jour (vues, temps de visionnage, engagement, notoriété) : base structurée de toutes les visualisations.",
         },
         teaching: {                        // point1-2 → index.html | dataSupport/dataCoord → data.html | finTitle/finPoint → finance.html
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
@@ -740,7 +740,7 @@
           period: "Août 2023 – Présent",
           title: "Correctrice (Freelance)",
           point1: "Traduction de 6 ouvrages de l'anglais vers le chinois.",
-          point2: "Correction de 3 romans traduits du français vers le chinois — précision du sens, pertinence culturelle et fluidité des phrases.",
+          point2: "Correction de 3 romans traduits du français vers le chinois : précision du sens, pertinence culturelle et fluidité des phrases.",
         },
         filterAll: "Toutes",
         filterTeaching: "Enseignement",
@@ -773,7 +773,7 @@
         guzheng: {
           tag: "Facebook · Canva",
           title: "Club de Guzheng de NCCU – Page Facebook",
-          desc: "Directrice marketing & adhésions du club de guzheng de NCCU (2023–2024). Création de visuels pour les annonces d'activités, le recrutement et les événements de fin de semestre — gestion active de la page Facebook.",
+          desc: "Directrice marketing & adhésions du club de guzheng de NCCU (2023–2024). Création de visuels pour les annonces d'activités, le recrutement et les événements de fin de semestre, assurée par la gestion active de la page Facebook.",
           stat1Val: "100 %",
           stat1Lbl: "Places pourvues à chaque recrutement",
           stat2Val: "80 %",
@@ -784,7 +784,7 @@
         instagram: {
           tag: "Content Creation",
           title: "Compte lectures personnelles",
-          desc: "Production de contenus visuels et rédactionnels pour un compte Instagram personnel consacré à la critique littéraire. Conception d'identités visuelles originales et rédaction d'analyses accessibles — ex. Des Fleurs pour Algernon.",
+          desc: "Production de contenus visuels et rédactionnels pour un compte Instagram personnel consacré à la critique littéraire. Conception d'identités visuelles originales et rédaction d'analyses accessibles (ex. Des Fleurs pour Algernon).",
         },
         design: {
           tag: "Photographie & Design",
@@ -793,17 +793,17 @@
         },
         packaging: {
           title: "Concours de design d'emballage – 18th Penwards",
-          desc: "Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024) — exercice de style autour de la composition visuelle et de la typographie.",
+          desc: "Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024) : exercice de style autour de la composition visuelle et de la typographie.",
         },
         insightLbl: "Défi",
         mkt: {                             // → portfolio-marketing.html
           heroTitle2: "& Design Créatif",
           heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés",
-          heroDesc: "Campagnes orientées données, direction artistique et gestion de communauté — une approche conjuguant rigueur analytique et création visuelle au service de la performance.",
+          heroDesc: "Campagnes orientées données, direction artistique et gestion de communauté, une approche conjuguant rigueur analytique et création visuelle au service de la performance.",
           heroStatProjets: "Projets",
           heroStatGrowth: "Croissance XHS",
           heroStatPart: "Participants AIESEC",
-          filterAll: "Tous",          filterAll: "Tous",
+          filterAll: "Tous",
           filterDashboard: "Dashboard",
           filterCampagne: "Campagnes",
           filterDesign: "Design Visuel",
@@ -846,12 +846,12 @@
           kyudoNum: "Design Visuel",
           kyudoTag: "Print design · Maquette",
           kyudoTitle: "Club de Kyudo de NCCU – Badge nominatif",
-          kyudoDesc: "Conception de badges nominatifs pour les activités du club de kyudo de l'université de NCCU — déclinaison en deux coloris (beige et bleu) avec maquettes de mise en situation.",
+          kyudoDesc: "Conception de badges nominatifs pour les activités du club de kyudo de l'université de NCCU, déclinaison en deux coloris (beige et bleu) avec maquettes de mise en situation.",
           kyudoCap1: "Badge nominatif – maquette",
           weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
           weeklyTitle: "Engoo – Rapport hebdomadaire XHS",
-          weeklyDesc: "Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables — indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.",
+          weeklyDesc: "Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.",
           weeklyCarouselLblFR: "Version française",
           weeklyCarouselLblEN: "Version anglaise",
           footerBack: "←Retour à Marketing",
@@ -881,7 +881,7 @@
           },
           ma: {
             num: "Recherche empirique · Finance quantitative",
-            subtitle: "Étude empirique (2000 – 024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Étude empirique (2000 – 2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Méthodologie",
             resLbl: "Résultats",
@@ -907,7 +907,7 @@
           filterDistinction: "Distinctions",
           ma: {
             num: "Recherche empirique · Finance quantitative",
-            subtitle: "Étude empirique (2000 – 024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Étude empirique (2000 – 2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Méthodologie",
             resLbl: "Résultats",
@@ -959,8 +959,8 @@
         viewAll: "Voir tout",
         restoCoeur: {
           period: "10/2025 – Présent",
-          title: "Bénévole – Restos du C'ur",
-          org: "Les Restos du C'ur · Association humanitaire",
+          title: "Bénévole – Restos du Cœur",
+          org: "Les Restos du Cœur · Association humanitaire",
           point1: "Distribution alimentaire et accueil de bénéficiaires en situation de précarité.",
           point2: "Tri et conditionnement des denrées alimentaires.",
         },
@@ -983,7 +983,7 @@
           stat3: "Objectif dépassé",
           finTitle: "Membre",
           finOrg: "AIESEC in NCCU · Organisation mondiale à but non lucratif de coordination de programmes de volontariat international",
-          finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûtts pour dépasser l'objectif de budget équilibré de 53,7%.",
+          finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûts pour dépasser l'objectif de budget équilibré de 53,7%.",
         },
         usr: {
           period: "09/2024 – 06/2025",
@@ -1001,7 +1001,7 @@
         },
         buddy: {
           period: "09/2023 – 01/2025",
-          title: "Étudiante'éférente – Buddy Program",
+          title: "Étudiante-Référente – Buddy Program",
           org: "Direction des Relations Internationales, NCCU",
           point1:
             "Accompagnement de 3 étudiants en échange (France, États-Unis, Corée du Sud) dans leur vie quotidienne à Taïwan.",
@@ -1055,7 +1055,7 @@
         messagePlaceholder: "Expliquez brièvement votre besoin ou votre projet.",
         submit: "Envoyer le message",
         formNote:
-          "Ce formulaire est une démonstration front-end. Connectez'e à Formspree ou Netlify Forms pour l'activer.",
+          "Ce formulaire est une démonstration front-end. Connectez-le à Formspree ou Netlify Forms pour l'activer.",
       },
     },
     // ─── en ──────────────────────────────────────────────────────────────────
@@ -1347,7 +1347,7 @@
         matStudent: "Materials I bring myself",
         matBoth: "A mix of both",
         fieldSlot: "Preferred time slots",
-        fieldSlotPh: "e.g. Monday 6 – pm, Saturday morning",
+        fieldSlotPh: "e.g. Monday 6:00 pm – 8:00 pm, Saturday morning",
         fieldMsg: "Message (optional)",
         fieldMsgPh: "Tell me about your level, goals or any questions.",
         submit: "Send request",
@@ -1356,8 +1356,8 @@
       resources: {
         title: "Learning Resources",
         subtitle: "Free resources to practise English, French or Mandarin between lessons.",
-        tabEn: "'' English",
-        tabFr: "'' French",
+        tabEn: "🇬🇧 English",
+        tabFr: "🇫🇷 French",
         tabZh: "🇨🇳 Mandarin",
         websitesTitle: "Websites & Apps",
         tipsTitle: "Study Tips",
@@ -1569,7 +1569,7 @@
           showcaseDesc2: "Right panel: Period A vs Period B trend curve to identify growth patterns and the impact of content actions.",
           showcaseBadge3: " – Raw Data",
           showcaseTitle3: "Daily Dataset",
-          showcaseDesc3: "12 metrics per day (views, watch time, engagement, brand awareness – – the structured foundation of all visualisations.",
+          showcaseDesc3: "12 metrics per day (views, watch time, engagement, brand awareness) : the structured foundation of all visualisations.",
         },
         teaching: {
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
@@ -1587,7 +1587,7 @@
         tutorABC: {
           period: "08/2024 – Present",
           title: "Online English Tutor",
-          point1: "One-on-one and group lessons online English tutoring for learners from primary to high school level.",
+          point1: "Online English tutoring (one-on-one and group lessons) for learners from primary to high school level.",
           point2: "Pronunciation, speaking, beginner and Cambridge English exam preparation.",
           coursesLabel: "Courses taught",
           courseGradeSchool: "English (primary)",
@@ -1603,7 +1603,7 @@
           period: "Aug. 2023 – Present",
           title: "Proofreader (Freelance)",
           point1: "Translated 6 books from English into Chinese.",
-          point2: "Proofread 3 novels translated from French into Chinese — accuracy of meaning, cultural relevance and sentence fluency.",
+          point2: "Proofread 3 novels translated from French into Chinese : accuracy of meaning, cultural relevance and sentence fluency.",
         },
         research: {
           period: "06/2023 – 12/2023",
@@ -1641,7 +1641,7 @@
         guzheng: {
           tag: "Facebook · Canva",
           title: "NCCU Guzheng Club – Facebook Page",
-          desc: "Marketing & Membership Director of NCCU's guzheng (Chinese zither) club (2023–2024). Designed visuals for activity announcements, recruitment campaigns and year-end events — through active Facebook page management.",
+          desc: "Marketing & Membership Director of NCCU's guzheng (Chinese zither) club (2023–2024). Designed visuals for activity announcements, recruitment campaigns and year-end events, through active Facebook page management.",
           stat1Val: "100%",
           stat1Lbl: "Enrollment at every recruitment",
           stat2Val: "80%",
@@ -1652,7 +1652,7 @@
         instagram: {
           tag: "Content Creation",
           title: "Personal Book Review Account",
-          desc: "Produced visual and written content for a personal Instagram account dedicated to literary criticism. Developed original visual identities for each review and authored accessible critical analyses — e.g. Flowers for Algernon.",
+          desc: "Produced visual and written content for a personal Instagram account dedicated to literary criticism. Developed original visual identities for each review and authored accessible critical analyses (e.g. Flowers for Algernon).",
         },
         design: {
           tag: "Photography & Design",
@@ -1661,13 +1661,13 @@
         },
         packaging: {
           title: "Packaging Design Competition – 18th Penwards",
-          desc: "Personal practice piece inspired by the theme of the 18th Penwards packaging design competition (2024) — an exercise in visual composition and typography.",
+          desc: "Personal practice piece inspired by the theme of the 18th Penwards packaging design competition (2024) : an exercise in visual composition and typography.",
         },
         insightLbl: "Discussion",
         mkt: {
           heroTitle2: "& Creative Design",
           heroEyebrow: "Yu-Ting Tseng · Selected Projects",
-          heroDesc: "Data-driven campaigns, art direction and community management — an approach combining analytical rigour with visual creativity in service of measurable performance.",
+          heroDesc: "Data-driven campaigns, art direction and community management, an approach combining analytical rigour with visual creativity in service of measurable performance.",
           heroStatProjets: "Projects",
           heroStatGrowth: "XHS Growth",
           heroStatPart: "AIESEC Participants",
@@ -1690,7 +1690,7 @@
           aiesec: {
             num: "Marketing Campaign",
             tag: "Canva · Illustrator",
-            body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp — a fully English-language program for high school students. Designed the main campaign visuals — posters and social posts — to drive volunteer and participant recruitment.",
+            body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp, a fully English-language program for high school students. Designed the main campaign visuals (posters and social posts) to drive volunteer and participant recruitment.",
             statVol: "Volunteers Recruited",
             statPart: "Participants",
             statBudget: "Budget Target Exceeded",
@@ -1714,12 +1714,12 @@
           kyudoNum: "Visual Design",
           kyudoTag: "Print Design · Mockup",
           kyudoTitle: "NCCU Kyudo Club – Event Name Badge",
-          kyudoDesc: "Designed name badges for NCCU's kyudo (Japanese archery) club activities — two colour variants (beige and blue) with styled mockups.",
+          kyudoDesc: "Designed name badges for NCCU's kyudo (Japanese archery) club activities, with two colour variants (beige and blue) with styled mockups.",
           kyudoCap1: "Name badge – mockup",
           weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
           weeklyTitle: "Engoo – XHS Weekly Report",
-          weeklyDesc: "Bilingual weekly report (EN/FR) produced during the Engoo internship, distilling Xiaohongshu account performance into 7 clear, actionable slides — key metrics, weekly trends and editorial recommendations for the management team.",
+          weeklyDesc: "Bilingual weekly report (EN/FR) produced during the Engoo internship, distilling Xiaohongshu account performance into 7 clear, actionable slides : key metrics, weekly trends and editorial recommendations for the management team.",
           weeklyCarouselLblFR: "French version",
           weeklyCarouselLblEN: "English version",
           footerBack: "←Back to Marketing",
@@ -1749,7 +1749,7 @@
           },
           ma: {
             num: "Empirical Research · Quantitative Finance",
-            subtitle: "Empirical study (2000 – 024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Empirical study (2000 – 2024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Methodology",
             resLbl: "Results",
@@ -1775,7 +1775,7 @@
           filterDistinction: "Awards",
           ma: {
             num: "Empirical Research · Quantitative Finance",
-            subtitle: "Empirical study (2000 – 024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Empirical study (2000 – 2024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
             sitLbl: "Introduction",
             actLbl: "Methodology",
             resLbl: "Results",
@@ -1810,7 +1810,7 @@
           title: "Co-Founder (Entrepreneurial Project)",
           org: "Sora Education · Foreign language and soft skills courses for children during school holidays",
           text:
-            "Co'an five week'ong summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
+            "Co-organised five one-week summer camps with two partners, built the business plan, managed finances and conducted market research to refine course design and marketing strategy.",
           stat1: "Camps organised",
           stat2: "Net profit generated",
         },
@@ -1827,8 +1827,8 @@
         viewAll: "View all",
         restoCoeur: {
           period: "10/2025 – Present",
-          title: "Volunteer – Restos du C'ur",
-          org: "Les Restos du C'ur · Humanitarian association",
+          title: "Volunteer – Restos du Cœur",
+          org: "Les Restos du Cœur · Humanitarian association",
           point1: "Food distribution and support for people in precarious situations.",
           point2: "Sorting and packaging of food donations.",
         },
@@ -1876,7 +1876,7 @@
         },
         nuit: {
           period: "Dec. 2023",
-          title: "Delegate – Nuit des Idées (French'andarin debates)",
+          title: "Delegate – Nuit des Idées (French-Mandarin debates)",
           org:
             "French Office in Taipei, Institut Français & Taipei Department of Cultural Affairs",
           point1:
@@ -2968,7 +2968,7 @@
       title: "Statistiques & Méthodes Quantitatives",
       text: "Ma簾trise des méthodes quantitatives – régression OLS et Logit, analyse de panel, tests d'hypothèses, statistiques descriptives et inférentielles – appliquées à la recherche académique et aux études de marché.",
       byPage: {
-        finance:   { text: "Régressions OLS et Logit sur données LSEG/Refinitiv (2000 – 024) pour tester l'impact du risque politique sur les opérations M&A." },
+        finance:   { text: "Régressions OLS et Logit sur données LSEG/Refinitiv (2000 – 2024) pour tester l'impact du risque politique sur les opérations M&A." },
         data:      { text: "Méthodes quantitatives appliquées : régressions multivariées, analyse de corrélation et tests d'hypothèses pour la recherche et l'analyse de marché." },
         marketing: { text: "A/B testing statistique et segmentation d'audience pour mesurer l'impact des créas et identifier les leviers de croissance sur Xiaohongshu." },
       },
@@ -2976,7 +2976,7 @@
         title: "Statistics & Quantitative Methods",
         text: "Proficient in quantitative methods – OLS and logit regression, panel data analysis, hypothesis testing, descriptive and inferential statistics – applied to academic research and market studies.",
         byPage: {
-          finance:   { text: "OLS and logit regressions on LSEG/Refinitiv data (2000 – 024) to test the impact of political risk on M&A transactions." },
+          finance:   { text: "OLS and logit regressions on LSEG/Refinitiv data (2000 – 2024) to test the impact of political risk on M&A transactions." },
           data:      { text: "Applied quantitative methods: multivariate regressions, correlation analysis and hypothesis testing for research and market analysis." },
           marketing: { text: "Statistical A/B testing and audience segmentation to measure creative impact and identify growth drivers on Xiaohongshu." },
         },
@@ -3490,7 +3490,7 @@
           title: "Assistante Marketing Digital",
           org: "KPN",
           meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
-          points: ["Suivi de la performance financière des campagnes : ROI, coûtt par acquisition, taux de conversion (+5,1% CVR)."],
+          points: ["Suivi de la performance financière des campagnes : ROI, coût par acquisition, taux de conversion (+5,1% CVR)."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
         },
         {
@@ -3498,7 +3498,7 @@
           title: "Co-Fondatrice – Sora Education",
           org: "Sora Education",
           meta: ["Camps de jeunesse"],
-          points: ["Suivi du P&L de 5 camps d'été : pilotage des revenus, des coûtts variables et fixes, et atteinte de la rentabilité."],
+          points: ["Suivi du P&L de 5 camps d'été : pilotage des revenus, des coûts variables et fixes, et atteinte de la rentabilité."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
       ],
@@ -3541,14 +3541,14 @@
     },
     "fin-cost-control": {
       title: "Channel & Cost Control",
-      text: "Pilotage des coûtts par canal et optimisation des structures de coûtts pour maximiser la rentabilité.",
+      text: "Pilotage des coûts par canal et optimisation des structures de coûts pour maximiser la rentabilité.",
       proofs: [
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
           meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
-          points: ["Gestion des budgets publicitaires mensuels Facebook & Google Ads et optimisation du coûtt par acquisition (conversion rate +5.1%)."],
+          points: ["Gestion des budgets publicitaires mensuels Facebook & Google Ads et optimisation du coût par acquisition (conversion rate +5.1%)."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
         },
         {
@@ -3556,7 +3556,7 @@
           title: "Membre – AIESEC in NCCU",
           org: "AIESEC",
           meta: ["Taipei · Taïwan", "09/2024 – 06/2025"],
-          points: ["Gestion budgétaire d'un camp d'été : optimisation de la structure de coûtts, dépassement de l'objectif de rentabilité de 53,7%."],
+          points: ["Gestion budgétaire d'un camp d'été : optimisation de la structure de coûts, dépassement de l'objectif de rentabilité de 53,7%."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
       ],
@@ -3578,7 +3578,7 @@
           title: "Co-Fondatrice – Sora Education",
           org: "Sora Education",
           meta: ["Camps de jeunesse"],
-          points: ["Reporting financier mensuel pour 5 camps d'été : suivi budgétaire, analyse des coûtts et pilotage de la rentabilité."],
+          points: ["Reporting financier mensuel pour 5 camps d'été : suivi budgétaire, analyse des coûts et pilotage de la rentabilité."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
       ],
