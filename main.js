@@ -3934,11 +3934,31 @@
       proofs: [{ type: "Pratique", title: "Recherche & productivité", org: "Google", meta: [], points: ["Recherche multimodale, résumé de sources, intégration Google Docs/Sheets."] }],
       en: { title: "Gemini", text: "Using Gemini for multimodal research, market intelligence and Google Workspace integration.", proofs: [{ type: "Practice", title: "Research & Productivity", org: "Google", meta: [], points: ["Multimodal research, source summarisation, Google Docs/Sheets integration."] }] },
     },
+    "data-marketing-automation": {
+      title: "Marketing Automation & Python",
+      text: "Automatisation de processus marketing répétitifs via des scripts Python, pour optimiser le reporting et la consolidation de données.",
+      proofs: [
+        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python", "01/2025 – 06/2025"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
+        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python", "10/2024 – 02/2025"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
+      ],
+      en: { title: "Marketing Automation & Python", text: "Automating repetitive marketing processes via Python scripts to optimise reporting and data consolidation.", proofs: [
+        { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python", "01/2025 – 06/2025"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
+        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python", "10/2024 – 02/2025"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
+      ]},
+    },
     "ai-vibe-coding": {
       title: "Vibe Coding",
       text: "Développement assisté par l'IA – utilisation de modèles génératifs pour prototyper, déboguer et produire du code de manière interactive.",
-      proofs: [{ type: "Projet Personnel", title: "Portfolio & outils d'automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] }],
-      en: { title: "Vibe Coding", text: "AI-assisted development – using generative models to prototype, debug and produce code interactively.", proofs: [{ type: "Personal Project", title: "Portfolio & Automation Tools", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Built this portfolio and automation scripts via vibe coding workflows."] }] },
+      proofs: [
+        { type: "Projet Personnel", title: "Portfolio & outils d'automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] },
+        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python", "01/2025 – 06/2025"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
+        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python", "10/2024 – 02/2025"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
+      ],
+      en: { title: "Vibe Coding", text: "AI-assisted development – using generative models to prototype, debug and produce code interactively.", proofs: [
+        { type: "Personal Project", title: "Portfolio & Automation Tools", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Built this portfolio and automation scripts via vibe coding workflows."] },
+        { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python", "01/2025 – 06/2025"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
+        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python", "10/2024 – 02/2025"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
+      ]},
     },
 
     // ?? Microsoft Office Suite ????????????????????????????????????????
