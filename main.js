@@ -1180,7 +1180,7 @@
         chipMicrosoftOffice: "Microsoft Office (Word · Excel · PowerPoint)",
         chipGoogleSuite: "Google Suite",
         chipNotion: "Notion",
-        blockDataMarketing: "Data for Marketing",
+        blockDataMarketing: "Data, Reporting & Automation",
         subCreativeGraphic: "Graphic Design",
         subCreativeVideo: "Video Editing",
         filterAI: "AI & Digital",
