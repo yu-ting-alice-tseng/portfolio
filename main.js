@@ -3244,6 +3244,30 @@
         },
       ],
     },
+    "mkt-content-strategy": {
+      title: "Stratégie de Contenu",
+      text: "Définition et pilotage de stratégies éditoriales adaptées aux audiences cibles, intégrant veille des tendances, positionnement de marque et optimisation de la performance.",
+      proofs: [
+        { type: "Stage", title: "Stratégie de contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3%), l'engagement (89,1%) et le nombre d'abonnés (69,7%)."] },
+        { type: "Stage", title: "Stratégie de contenu web & SEO", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
+      ],
+      en: { title: "Content Strategy", text: "Defining and managing editorial strategies tailored to target audiences, combining trend monitoring, brand positioning and performance optimisation.", proofs: [
+        { type: "Internship", title: "REDnote Content Strategy", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
+        { type: "Internship", title: "Web Content & SEO Strategy", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analysed trends and conducted sectoral benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."] },
+      ]},
+    },
+    "mkt-ab-testing": {
+      title: "A/B Testing",
+      text: "Conception et analyse de tests A/B pour optimiser les performances des contenus, campagnes et tunnels de conversion.",
+      proofs: [
+        { type: "Stage", title: "A/B Testing – Campagnes Meta & Google", org: "KPN · Agence de marketing digital", meta: ["Meta Ads", "Google Ads", "01/2025 – 06/2025"], points: ["Optimisation du CTR (+9,5%) et du taux de conversion (+5,1%) via des tests A/B sur les campagnes publicitaires Meta et Google."] },
+        { type: "Stage", title: "A/B Testing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
+      ],
+      en: { title: "A/B Testing", text: "Designing and analysing A/B tests to optimise content, campaign and conversion funnel performance.", proofs: [
+        { type: "Internship", title: "A/B Testing – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: ["Meta Ads", "Google Ads", "01/2025 – 06/2025"], points: ["Improved CTR (+9.5%) and conversion rate (+5.1%) through A/B testing across Meta and Google ad campaigns."] },
+        { type: "Internship", title: "A/B Testing – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
+      ]},
+    },
     "mkt-research": {
       title: "Études De Marché & Positionnement",
       text:
