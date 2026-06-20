@@ -348,7 +348,7 @@
       },
       locations: {
         online: "En ligne · Taïwan",
-        taipei: "Taipei · Taïwan"
+        taipei: "Taipei · Taïwan",
         taipeiEdu: "Taipei, Taïwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
