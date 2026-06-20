@@ -4422,10 +4422,12 @@
       title.textContent = proof.title || "";
       card.appendChild(title);
 
-      const org = document.createElement("p");
-      org.className = "proof-org";
-      org.textContent = proof.org || "";
-      card.appendChild(org);
+      if (proof.org) {
+        const org = document.createElement("p");
+        org.className = "proof-org";
+        org.textContent = proof.org;
+        card.appendChild(org);
+      }
 
       if (Array.isArray(proof.meta) && proof.meta.length) {
         const meta = document.createElement("div");
