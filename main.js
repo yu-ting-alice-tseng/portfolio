@@ -3026,7 +3026,7 @@
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3094,7 +3094,7 @@
       text: "Garantir que les moteurs de recherche peuvent explorer et indexer le site sans obstacle : vitesse, mobile-first, Sitemap XML, Robots.txt, données structurées (Schema Markup), HTTPS, gestion des erreurs 404 / redirections 301 et structure d'URL.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3118,7 +3118,7 @@
         text: "Ensuring search engine crawlers can crawl and index the site without barriers: site speed, mobile-first, XML Sitemap, Robots.txt, Schema Markup, HTTPS, 404 errors / 301 redirects management and URL structure optimisation.",
         proofs: [
           {
-            type: "Experience",
+            type: "Internship",
             title: "Digital Marketing Assistant",
             org: "KPN · Digital Marketing Agency",
             meta: [],
@@ -3136,7 +3136,7 @@
       text: "Identifier ce que les prospects recherchent et créer du contenu qui répond à leurs besoins : analyse de l'intention de recherche (informationnelle, transactionnelle, navigationnelle), évaluation de la difficulté et du volume des mots-clés, architecture Topic Clusters et planification Pillar-Cluster.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3151,7 +3151,7 @@
         text: "Identifying what prospects search for and creating content that answers their needs: search intent analysis (informational, transactional, navigational), keyword difficulty & volume assessment, Topic Clusters architecture and Pillar-Cluster planning.",
         proofs: [
           {
-            type: "Experience",
+            type: "Internship",
             title: "Digital Marketing Assistant",
             org: "KPN · Digital Marketing Agency",
             meta: [],
@@ -3168,7 +3168,7 @@
       text: "Optimiser les éléments visibles et internes de chaque page pour les moteurs de recherche et les utilisateurs : balises Title, Meta Description, hiérarchie Heading (H1–H3), attributs Alt des images, maillage interne et placement naturel des mots-clés.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3183,7 +3183,7 @@
         text: "Optimising the visible and internal elements of each page for search engines and users: Title tags, Meta Descriptions, Heading hierarchy (H1–H3), image Alt attributes, internal linking and natural keyword placement.",
         proofs: [
           {
-            type: "Experience",
+            type: "Internship",
             title: "Digital Marketing Assistant",
             org: "KPN · Digital Marketing Agency",
             meta: [],
@@ -3209,7 +3209,7 @@
       title: "Google Keyword Planner",
       text: "Recherche de mots-clés, estimation des volumes de recherche et planification des enchères pour les campagnes Google Ads.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA"], points: ["Identification et sélection de mots-clés via Google Keyword Planner pour optimiser le ciblage et les enchères des campagnes Google Ads."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA"], points: ["Identification et sélection de mots-clés via Google Keyword Planner pour optimiser le ciblage et les enchères des campagnes Google Ads."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Google Keyword Planner", text: "Keyword research, search volume estimation and bid planning for Google Ads campaigns.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEA"], points: ["Used Google Keyword Planner to identify and select keywords for targeting and bid optimisation across Google Ads campaigns."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -3219,7 +3219,7 @@
       title: "Google Trends",
       text: "Analyse des tendances de recherche pour anticiper les sujets porteurs, affiner la stratégie de contenu et aligner le calendrier éditorial sur la demande.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA"], points: ["Utilisation de Google Trends pour identifier les tendances sectorielles et orienter la production de contenus web à fort potentiel SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA"], points: ["Utilisation de Google Trends pour identifier les tendances sectorielles et orienter la production de contenus web à fort potentiel SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Google Trends", text: "Search trend analysis to anticipate high-potential topics, refine content strategy and align the editorial calendar with demand.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEA"], points: ["Used Google Trends to identify industry trends and guide web content production with strong SEO potential."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -3229,7 +3229,7 @@
       title: "Semrush",
       text: "Audit de site, analyse de la concurrence, suivi du positionnement et identification d'opportunités de mots-clés.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Utilisation de Semrush pour l'audit de sites clients, l'analyse concurrentielle et le suivi du positionnement des articles dans les résultats de recherche."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Utilisation de Semrush pour l'audit de sites clients, l'analyse concurrentielle et le suivi du positionnement des articles dans les résultats de recherche."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Semrush", text: "Site audit, competitor analysis, rank tracking and keyword opportunity identification.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO"], points: ["Used Semrush to audit client websites, analyse competitors and track article rankings in search results."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -3240,7 +3240,7 @@
       text: "Gestion de campagnes orientées performance (CTR, CVR) et optimisation budgétaire.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3338,7 +3338,7 @@
           actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%20Analytics%20Certificate.pdf" }],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3490,7 +3490,7 @@
       text: "Analyse du compte de résultat pour identifier les leviers de rentabilité, décomposer les marges et piloter la performance.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3534,7 +3534,7 @@
           actions: [{ label: "Voir la formation", href: "#education" }],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3548,7 +3548,7 @@
       text: "Pilotage des coûts par canal et optimisation des structures de coûts pour maximiser la rentabilité.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3756,7 +3756,7 @@
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3816,7 +3816,7 @@
       text: "Planification, coordination et suivi de campagnes marketing multicanal (SEO, SEA, social media, emailing).",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3872,7 +3872,7 @@
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -3958,7 +3958,7 @@
           actions: [{ label: "Ouvrir le certificat", href: "certificates/AI%20技術輔助高效廣告認證.png" }],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing Digital",
           org: "KPN · Agence de marketing digital",
           meta: [],
@@ -4123,7 +4123,7 @@
       title: "Ahrefs",
       text: "Analyse des backlinks, audit de site, recherche de mots-clés et suivi du positionnement.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Ahrefs", text: "Backlink analysis, site audit, keyword research and rank tracking.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO"], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -4133,7 +4133,7 @@
       title: "Similarweb",
       text: "Analyse du trafic web, benchmarking concurrentiel et identification des sources de trafic pour affiner la stratégie digitale.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["Veille"], points: ["Utilisation de Similarweb pour analyser le trafic des sites concurrents et identifier les canaux d'acquisition les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["Veille"], points: ["Utilisation de Similarweb pour analyser le trafic des sites concurrents et identifier les canaux d'acquisition les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Similarweb", text: "Web traffic analysis, competitive benchmarking and traffic source identification to refine digital strategy.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["Research"], points: ["Used Similarweb to analyse competitor website traffic and identify the best-performing acquisition channels."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -4143,7 +4143,7 @@
       title: "Screaming Frog SEO Spider",
       text: "Crawl de sites, détection des erreurs (404, redirections, balises manquantes) et analyse de la structure du site.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: [], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: [], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Screaming Frog SEO Spider", text: "Site crawling, error detection (404s, redirects, missing tags) and site structure analysis.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: [], points: ["Crawled client websites to detect technical issues (broken links, redirects, missing title/meta tags) and prioritise SEO fixes."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -4155,7 +4155,7 @@
       title: "HTML",
       text: "Structuration de pages web et intégration de contenu pour le développement de sites marketing et de portfolio.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
         { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Construction de ce portfolio multi-pages en HTML/CSS/JS avec système i18n (FR/EN/ZH) et animations."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
       en: { title: "HTML", text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
@@ -4167,7 +4167,7 @@
       title: "CSS",
       text: "Mise en forme, design responsive et animations pour des interfaces web professionnelles et des pages marketing.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
         { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Design visuel complet, système de variables CSS, responsive et animations pour ce portfolio."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
       en: { title: "CSS", text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
@@ -4254,7 +4254,7 @@
       text: "Montage vidéo court pour réseaux sociaux (Xiaohongshu, Instagram Reels, TikTok).",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: ["Xiaohongshu"],
