@@ -4158,7 +4158,7 @@
         { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
         { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Construction de ce portfolio multi-pages en HTML/CSS/JS avec système i18n (FR/EN/ZH) et animations."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
-      en: { title: text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
+      en: { title: "HTML", text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["HTML"], points: ["Edited and structured HTML content for on-page optimisation and client website updates."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
         { type: "Personal Project", title: "Professional Portfolio", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Built this full multi-page portfolio in HTML/CSS/JS with i18n system (FR/EN/ZH) and animations."], actions: [{ label: "View portfolio", href: "index.html" }] },
       ]},
@@ -4170,7 +4170,7 @@
         { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
         { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Design visuel complet, système de variables CSS, responsive et animations pour ce portfolio."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
-      en: { title: text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
+      en: { title: "CSS", text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["CSS"], points: ["Applied CSS styling to improve the visual presentation and layout of client web pages."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
         { type: "Personal Project", title: "Professional Portfolio", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Full visual design, CSS variable system, responsive layout and scroll animations for this portfolio."], actions: [{ label: "View portfolio", href: "index.html" }] },
       ]},
