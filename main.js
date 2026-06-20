@@ -3237,7 +3237,7 @@
     },
     "mkt-sea": {
       title: "Google Ads",
-      text: "Gestion de campagnes Google Ads orientées performance (CTR, CVR) et optimisation budgétaire.",
+      text: "Gestion de campagnes orientées performance (CTR, CVR) et optimisation budgétaire.",
       proofs: [
         {
           type: "Expérience",
@@ -3275,8 +3275,7 @@
     },
     "mkt-social": {
       title: "Social Media (Xiaohongshu, Meta)",
-      text:
-        "Création de contenu et optimisation de la visibilité sur Xiaohongshu (RED) et les réseaux sociaux Meta.",
+      text: "Création de contenu et optimisation de la visibilité.",
       proofs: [
         {
           type: "Expérience",
@@ -3290,7 +3289,7 @@
     },
     "mkt-content-strategy": {
       title: "Stratégie de Contenu",
-      text: "Définition et pilotage de stratégies éditoriales adaptées aux audiences cibles, intégrant veille des tendances, positionnement de marque et optimisation de la performance.",
+      text: "Veille des tendances, positionnement de marque et optimisation de la performance éditoriale.",
       proofs: [
         { type: "Stage", title: "Stratégie de contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3%), l'engagement (89,1%) et le nombre d'abonnés (69,7%)."] },
         { type: "Stage", title: "Stratégie de contenu web & SEO", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
@@ -3314,8 +3313,7 @@
     },
     "mkt-research": {
       title: "Études De Marché & Positionnement",
-      text:
-        "Analyses de marché pour orienter la stratégie de contenu et le positionnement, avec segmentation et veille concurrentielle.",
+      text: "Segmentation d'audience et veille concurrentielle pour orienter la stratégie de contenu.",
       proofs: [
         {
           type: "Activité",
@@ -3329,7 +3327,7 @@
     },
     "mkt-analytics": {
       title: "Google Analytics",
-      text: "Analyse du trafic web, segmentation des audiences et suivi des conversions via Google Analytics.",
+      text: "Analyse du trafic web, segmentation des audiences et suivi des conversions.",
       proofs: [
         {
           type: "Certification",
