@@ -4190,7 +4190,7 @@
         {
           type: "Activité",
           title: "Directrice Marketing – Club de Guzheng",
-          org: "NCCU",
+          org: "Club de Guzheng, NCCU",
           meta: [],
           points: ["Affiches de recrutement, visuels d'événements et publications Facebook."],
           actions: [{ label: "Voir le portfolio", href: "#portfolio" }],
