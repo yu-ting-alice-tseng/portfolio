@@ -3108,7 +3108,7 @@
           type: "Certification",
           title: "Google – Programme Marketing Digital",
           org: "Google",
-          meta: ["Marketing digital"],
+          meta: [],
           points: ["Certification couvrant SEO technique, SEA, analytics et stratégie de contenu."],
           actions: [{ label: "Ouvrir le certificat", href: "certificates/Google%E6%95%B8%E4%BD%8D%E4%BA%BA%E6%89%8D%E6%8E%A2%E7%B4%A2%E8%A8%88%E7%95%AB_%E8%AD%89%E7%85%A7.pdf" }],
         },
