@@ -3020,7 +3020,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: ["Dashboard de suivi de performance marketing et automatisation de rapports."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -3028,7 +3028,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: [
             "Suivi mensuel des KPIs SEO/SEA (trafic, CTR, conversions) et consolidation des rapports clients sous Excel.",
@@ -3096,7 +3096,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: [
             "Audit technique SEO (crawlabilité, vitesse, mobile-first) et recommandations d'optimisation.",
@@ -3120,7 +3120,7 @@
           {
             type: "Experience",
             title: "Digital Marketing Assistant",
-            org: "KPN",
+            org: "KPN · Digital Marketing Agency",
             meta: [],
             points: [
               "Technical SEO audit (crawlability, speed, mobile-first) and optimisation recommendations.",
@@ -3138,7 +3138,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: [
             "Recherche de mots-clés et recommandations de contenus alignés avec l'intention de recherche.",
@@ -3153,7 +3153,7 @@
           {
             type: "Experience",
             title: "Digital Marketing Assistant",
-            org: "KPN",
+            org: "KPN · Digital Marketing Agency",
             meta: [],
             points: [
               "Keyword research and content recommendations aligned with search intent.",
@@ -3170,7 +3170,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: [
             "Optimisation On-Page (balises, structure de contenu, maillage interne) et recommandations éditoriales.",
@@ -3185,7 +3185,7 @@
           {
             type: "Experience",
             title: "Digital Marketing Assistant",
-            org: "KPN",
+            org: "KPN · Digital Marketing Agency",
             meta: [],
             points: [
               "On-Page optimisation (tags, content structure, internal linking) and editorial recommendations.",
@@ -3242,7 +3242,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Campagnes Google Ads, suivi CTR et conversions."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
@@ -3280,7 +3280,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: ["Contenus et optimisation de visibilité sur plateformes social media."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -3340,7 +3340,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Suivi de performance et analyse du trafic web (Google Analytics + Search Console)."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
@@ -3354,7 +3354,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: ["A/B testing de visuels et adaptation des créas par sous-segment cible."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -3406,7 +3406,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: [
             "Développement de macros VBA pour automatiser la mise à jour du dashboard de performance XHS et la génération de rapports hebdomadaires.",
@@ -3492,7 +3492,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Suivi de la performance financière des campagnes : ROI, coût par acquisition, taux de conversion (+5,1% CVR)."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
@@ -3536,7 +3536,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Analyse des écarts de performance marketing (CTR, CVR) vs benchmarks mensuels et formulation de recommandations."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
@@ -3550,7 +3550,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Gestion des budgets publicitaires mensuels Facebook & Google Ads et optimisation du coût par acquisition (conversion rate +5.1%)."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
@@ -3747,7 +3747,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: [
             "Construction et suivi de dashboards KPIs (acquisition, engagement, rétention).",
@@ -3758,7 +3758,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Suivi mensuel de KPIs SEO/SEA (trafic, CTR, conversions) et reporting client."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
@@ -3782,7 +3782,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: [
             "A/B testing de créas par sous-segment cible.",
@@ -3799,7 +3799,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: [
             "Tests A/B sur visuels publicitaires et copies par sous-segment.",
@@ -3818,7 +3818,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: [
             "Planification et coordination de campagnes digitales multicanal.",
@@ -3844,7 +3844,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: ["Analyse de marché et positionnement concurrentiel pour la stratégie de contenu REDnote."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -3866,7 +3866,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: ["Veille concurrentielle approfondie pour optimiser la stratégie de contenu sur le segment du chinois simplifié."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -3874,7 +3874,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Benchmarks concurrentiels approfondis et analyse de positionnement SEO/SEA."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
@@ -3960,7 +3960,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
-          org: "KPN",
+          org: "KPN · Agence de marketing digital",
           meta: [],
           points: ["Campagnes Google Ads avec optimisation automatique (Smart Bidding, Performance Max)."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
@@ -4051,14 +4051,14 @@
       text: "Maîtrise de la suite Microsoft Office pour la rédaction de documents professionnels, la modélisation de données et la création de présentations impactantes.",
       proofs: [
         { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Score expert en modélisation, tableaux croisés et automatisation."] },
-        { type: "Stage", title: "Assistante Marketing", org: "Engoo", meta: [], points: ["Dashboard Excel et reporting hebdomadaire."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+        { type: "Stage", title: "Assistante Marketing", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Dashboard Excel et reporting hebdomadaire."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
       ],
       en: {
         title: "Microsoft Office (Word · Excel · PowerPoint)",
         text: "Proficient in the Microsoft Office suite for professional document writing, data modelling and impactful presentation design.",
         proofs: [
           { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Expert score in modelling, pivot tables and automation."] },
-          { type: "Internship", title: "Marketing Assistant", org: "Engoo", meta: [], points: ["Excel dashboard and weekly reporting."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+          { type: "Internship", title: "Marketing Assistant", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Excel dashboard and weekly reporting."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
         ],
       },
     },
@@ -4182,7 +4182,7 @@
         {
           type: "Stage",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
           points: ["Création de templates et visuels A/B testés pour Xiaohongshu et Meta."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -4203,7 +4203,7 @@
           {
             type: "Experience",
             title: "Marketing Assistant",
-            org: "Engoo",
+            org: "Engoo, DMM.com · Global Language Learning Platform",
             meta: [],
             points: ["Designed and A/B tested visual templates for Xiaohongshu and Meta."],
             actions: [{ label: "View experience", href: "#exp-engoo" }],
@@ -4256,7 +4256,7 @@
         {
           type: "Expérience",
           title: "Assistante Marketing",
-          org: "Engoo",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: ["Xiaohongshu"],
           points: ["Montage de vidéos courtes pour les campagnes de contenu."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
@@ -4269,7 +4269,7 @@
           {
             type: "Experience",
             title: "Marketing Assistant",
-            org: "Engoo",
+            org: "Engoo, DMM.com · Global Language Learning Platform",
             meta: ["Xiaohongshu"],
             points: ["Edited short-form videos for content campaigns."],
             actions: [{ label: "View experience", href: "#exp-engoo" }],
