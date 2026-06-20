@@ -1031,13 +1031,13 @@
         },
         short: {
           title: "Bourse d'études à court terme",
-          org: "NCCU",
+          org: "Université Nationale Chengchi (NCCU)",
           text: "Financement au mérite pour un séjour d'études à l'étranger.",
           year: "2024",
         },
         excellence: {
           title: "Certificate of Excellence – Top 5% GPA",
-          org: "NCCU",
+          org: "Université Nationale Chengchi (NCCU)",
           text: "Récompense décernée aux meilleurs 5 % de chaque promotion ; classée 1re de filière et dans les 7 % meilleurs diplômés de NCCU.",
           year: "2021, 2023",
         },
@@ -1900,13 +1900,13 @@
         },
         short: {
           title: "Short-term Study Abroad Scholarship",
-          org: "NCCU – National Chengchi University",
+          org: "National Chengchi University (NCCU)",
           text: "Funding for short-term study abroad based on academic excellence.",
           year: "2024",
         },
         excellence: {
           title: "Certificate of Excellence – Top 5% GPA",
-          org: "NCCU – National Chengchi University",
+          org: "National Chengchi University (NCCU)",
           text: "Awarded to the top 5% of each cohort; ranked 1st in department and in the top 7% of NCCU graduates overall.",
           year: "2021, 2023",
         },
@@ -2950,7 +2950,7 @@
         {
           type: "Cours",
           title: "Introduction to Data Analysis & Programming (VBA & Access)",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique"],
           points: [
             "Requêtes SELECT, WHERE, JOIN, GROUP BY et agrégations sur bases relationnelles.",
@@ -2991,7 +2991,7 @@
         {
           type: "Cours",
           title: "Research Methods (R & Statistics)",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique", "R Studio"],
           points: [
             "Régression linéaire et logistique, ANOVA, tests de corrélation.",
@@ -3038,7 +3038,7 @@
         {
           type: "Cours",
           title: "Introduction to Data Analysis and Programming (VBA & Access)",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique"],
           points: [
             "Modélisation avancée, fonctions complexes et gestion de larges volumes de données.",
@@ -3079,7 +3079,7 @@
         {
           type: "Cours",
           title: "Introduction to Data Analysis and Programming (VBA & Access)",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique"],
           points: [
             "Modélisation de bases de données relationnelles, rédaction de requêtes SQL dans Access.",
@@ -3362,7 +3362,7 @@
         {
           type: "Portfolio",
           title: "Photographie & supports promotionnels",
-          org: "Portfolio",
+          org: "",
           meta: ["Canva · Photoshop"],
           points: ["Affiches, badges et publications pour des clubs et événements."],
           actions: [{ label: "Voir le portfolio", href: "#portfolio" }],
@@ -3416,7 +3416,7 @@
         {
           type: "Cours",
           title: "Introduction to Data Analysis and Programming (VBA & Access)",
-          org: "NCCU – Université Nationale Chengchi",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique"],
           points: [
             "Conception et exécution de macros VBA pour automatiser l'analyse de données et le reporting.",
