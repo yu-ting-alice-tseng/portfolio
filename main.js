@@ -3227,11 +3227,11 @@
     },
     "mkt-semrush": {
       title: "Semrush",
-      text: "Audit SEO, analyse de la concurrence, suivi du positionnement et identification d'opportunités de mots-clés.",
+      text: "Audit de site, analyse de la concurrence, suivi du positionnement et identification d'opportunités de mots-clés.",
       proofs: [
         { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Utilisation de Semrush pour l'audit de sites clients, l'analyse concurrentielle et le suivi du positionnement des articles dans les résultats de recherche."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
-      en: { title: "Semrush", text: "SEO audit, competitor analysis, rank tracking and keyword opportunity identification.", proofs: [
+      en: { title: "Semrush", text: "Site audit, competitor analysis, rank tracking and keyword opportunity identification.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Used Semrush to audit client websites, analyse competitors and track article rankings in search results."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
@@ -4123,11 +4123,11 @@
     // SEO Tools
     "mkt-ahrefs": {
       title: "Ahrefs",
-      text: "Analyse des backlinks, audit SEO, recherche de mots-clés et suivi du positionnement pour identifier les opportunités de croissance organique.",
+      text: "Analyse des backlinks, audit de site, recherche de mots-clés et suivi du positionnement.",
       proofs: [
         { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
-      en: { title: "Ahrefs", text: "Backlink analysis, SEO audit, keyword research and rank tracking to identify organic growth opportunities.", proofs: [
+      en: { title: "Ahrefs", text: "Backlink analysis, site audit, keyword research and rank tracking.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
@@ -4147,7 +4147,7 @@
       proofs: [
         { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO Technique", "01/2025 – 06/2025"], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
-      en: { title: "Screaming Frog SEO Spider", text: "Technical SEO audit: site crawling, error detection (404s, redirects, missing tags) and site structure analysis.", proofs: [
+      en: { title: "Screaming Frog SEO Spider", text: "Site crawling, error detection (404s, redirects, missing tags) and site structure analysis.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["Technical SEO", "01/2025 – 06/2025"], points: ["Crawled client websites to detect technical issues (broken links, redirects, missing title/meta tags) and prioritise SEO fixes."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
