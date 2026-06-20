@@ -2873,7 +2873,7 @@
         {
           type: "Cours",
           title: "Marketing Research & Research Methods (R)",
-          org: "NCCU",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique"],
           points: ["Méthodes quantitatives, régressions et visualisation appliquée."],
           actions: [{ label: "Voir la formation", href: "#edu-nccu" }],
@@ -2909,7 +2909,7 @@
         {
           type: "Cours",
           title: "Programmation 101 (Python)",
-          org: "NCCU",
+          org: "Université Nationale Chengchi (NCCU)",
           meta: ["Cours académique"],
           points: ["Bases de la programmation et application à l'analyse de données."]
         },
@@ -3729,7 +3729,7 @@
         {
           type: "Bénévolat",
           title: "Bénévole – Projet USR (Responsabilité Sociale Universitaire)",
-          org: "Université Nationale Chengchi · Bureau USR",
+          org: "Bureau USR, NCCU",
           meta: ["Taipei · Taïwan", "09/2024 – Présent"],
           points: [
             "Soutien linguistique et culturel auprès d'élèves issus de familles transnationales (nouveaux immigrants / enfants de migrants).",
@@ -3902,7 +3902,7 @@
         {
           type: "Activité",
           title: "Toastmasters – Prise De Parole",
-          org: "Clubs étudiants – NCCU",
+          org: "Clubs étudiants, NCCU",
           meta: ["Anglais · Mandarin"],
           points: ["Prise de parole structurée et storytelling en anglais et mandarin."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
