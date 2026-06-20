@@ -936,6 +936,8 @@
           org: "Club de Guzheng, NCCU",
           point1: "Pilotage des campagnes de recrutement et des événements d'orientation, atteignant le plein effectif les deux semestres.",
           point2: "Fidélisation de 80 % des membres via la gestion de la page Facebook, l'adaptation des cours et l'organisation d'activités et de performances.",
+          stat1: "Places pourvues à chaque recrutement",
+          stat2: "Fidélisation des membres",
           portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
