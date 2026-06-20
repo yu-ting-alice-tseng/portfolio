@@ -3316,7 +3316,7 @@
       text: "Segmentation d'audience et veille concurrentielle pour orienter la stratégie de contenu.",
       proofs: [
         {
-          type: "Activité",
+          type: "Projet entrepreneurial",
           title: "Co-fondatrice – Sora Education",
           org: "Sora Education",
           meta: ["Camps de jeunesse"],
@@ -3827,7 +3827,7 @@
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
         {
-          type: "Activité",
+          type: "Projet entrepreneurial",
           title: "Co-fondatrice – Sora Education",
           org: "Sora Education",
           meta: ["Camps de jeunesse"],
@@ -3850,7 +3850,7 @@
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
-          type: "Activité",
+          type: "Projet entrepreneurial",
           title: "Co-fondatrice – Sora Education",
           org: "Sora Education",
           meta: ["Camps de jeunesse"],
@@ -3886,7 +3886,7 @@
       text: "Structuration et présentation de business cases avec recommandations actionnables et chiffrage.",
       proofs: [
         {
-          type: "Activité",
+          type: "Projet entrepreneurial",
           title: "Co-fondatrice – Sora Education",
           org: "Sora Education",
           meta: ["Camps de jeunesse"],
