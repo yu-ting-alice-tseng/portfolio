@@ -1519,7 +1519,7 @@
         subtitle:
           "A selection of my experience in digital marketing, data analysis and project coordination.",
         kpn: {
-          period: ,
+          period: "01/2025 – 06/2025",
           title: "Digital Marketing Assistant",
           point1: "Analysed industry trends and conducted competitive benchmarks to guide web content creation aligned with user expectations, positioning 10+ articles in Google's Top 10.",
           point2: "Monitored Meta and Google advertising campaign performance through reporting dashboards, optimising CTR (+9.5%) and conversion rate (+5.1%) via A/B testing.",
@@ -1534,7 +1534,7 @@
           finPoint2: "Formulated and executed monthly performance audits on websites, analyzed key divergence data, and collaborated with cross-functional teams to mitigate problems.",
         },
         engoo: {
-          period: ,
+          period: "10/2024 – 02/2025",
           title: "Marketing Assistant",
           company: "Engoo, DMM.com Group",
           point1: "Xiaohongshu content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
@@ -1608,7 +1608,7 @@
           point2: "Proofread 3 novels translated from French into Chinese : accuracy of meaning, cultural relevance and sentence fluency.",
         },
         research: {
-          period: ,
+          period: "06/2023 – 12/2023",
           title: "Research Assistant",
           company: "Institute of International Relations, NCCU",
           point1: "Data collection, cleaning and analysis for research papers.",
