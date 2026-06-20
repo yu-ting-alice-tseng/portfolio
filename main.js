@@ -4143,7 +4143,7 @@
     },
     "mkt-screaming-frog": {
       title: "Screaming Frog SEO Spider",
-      text: "Audit technique SEO : crawl des sites, détection des erreurs (404, redirections, balises manquantes) et analyse de la structure du site.",
+      text: "Crawl de sites, détection des erreurs (404, redirections, balises manquantes) et analyse de la structure du site.",
       proofs: [
         { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO Technique", "01/2025 – 06/2025"], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
