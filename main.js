@@ -4211,7 +4211,7 @@
           {
             type: "Activity",
             title: "Marketing Director – Guzheng Club",
-            org: "NCCU",
+            org: "Guzheng Club, NCCU",
             meta: [],
             points: ["Recruitment posters, event visuals and Facebook posts."],
             actions: [{ label: "View portfolio", href: "#portfolio" }],
