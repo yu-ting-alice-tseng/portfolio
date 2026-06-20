@@ -1020,7 +1020,7 @@
         },
       },
       honors: {                            // → index.html (section Distinctions)
-        title: "Distinctions & bourses",
+        title: "Distinctions & Bourses",
         subtitle:
           "Reconnaissance académique pour mes résultats et mon engagement.",
         exchange: {
@@ -1043,7 +1043,7 @@
         },
       },
       contact: {                           // → index.html (section Contact)
-        heading: "Entrons en contact",
+        heading: "Entrons en Contact",
         intro:
           "Intéressé·e par un stage, un projet ou une collaboration ? Envoyez-moi un message, je vous répondrai avec plaisir.",
         labelEmail: "Email",
@@ -4098,7 +4098,7 @@
       text: "Animation et présidence d'événements : accueil des intervenants, modération des échanges et assurance du bon déroulement du programme.",
       proofs: [
         { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Animation"], points: ["Présidence et animation des conférences et sessions de networking, assurant le cadre et la fluidité des échanges."] },
-        { type: "Extra-scolaire", title: "Directrice marketing & adhésions", org: "Club de Guzheng, NCCU", meta: ["Animation"], points: ["Organisation et animation d'activités et de performances musicales pour les membres du club."] },
+        { type: "Extra-scolaire", title: "Directrice Marketing & Adhésions", org: "Club de Guzheng, NCCU", meta: ["Animation"], points: ["Organisation et animation d'activités et de performances musicales pour les membres du club."] },
       ],
       en: { title: "Hosting & Facilitation", text: "Hosting and chairing events: welcoming speakers, moderating exchanges and ensuring smooth programme delivery.", proofs: [
         { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Facilitation"], points: ["Chaired conferences and networking sessions, ensuring structure and smooth flow of exchanges."] },
