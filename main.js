@@ -1806,6 +1806,8 @@
           org: "Guzheng Club, NCCU",
           point1: "Led recruitment and orientation events, achieving full enrollment in both semesters.",
           point2: "Retained 80% of members by managing the Facebook page, adjusting course arrangements based on feedback, and organising activities and performances.",
+          stat1: "Enrollment rate each semester",
+          stat2: "Member retention rate",
           portfolioLink: "View creations (PDF)",
         },
         camps: {
