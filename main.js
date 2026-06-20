@@ -1235,7 +1235,7 @@
       },
       locations: {
         online: "Online · Taiwan",
-        taipei: "Taipei · Taiwan"
+        taipei: "Taipei · Taiwan",
         taipeiEdu: "Taipei, Taiwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
