@@ -3114,7 +3114,7 @@
         },
       ],
       en: {
-        title: "Technical SEO"
+        title: "Technical SEO",
         text: "Ensuring search engine crawlers can crawl and index the site without barriers: site speed, mobile-first, XML Sitemap, Robots.txt, Schema Markup, HTTPS, 404 errors / 301 redirects management and URL structure optimisation.",
         proofs: [
           {
