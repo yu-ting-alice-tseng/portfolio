@@ -3090,7 +3090,7 @@
       ],
     },
     "mkt-seo-technical": {
-      title: "SEO Technique"
+      title: "SEO Technique",
       text: "Garantir que les moteurs de recherche peuvent explorer et indexer le site sans obstacle : vitesse, mobile-first, Sitemap XML, Robots.txt, données structurées (Schema Markup), HTTPS, gestion des erreurs 404 / redirections 301 et structure d'URL.",
       proofs: [
         {
