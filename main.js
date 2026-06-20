@@ -348,7 +348,7 @@
       },
       locations: {
         online: "En ligne · Taïwan",
-        taipei: ,
+        taipei: "Taipei · Taïwan"
         taipeiEdu: "Taipei, Taïwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
@@ -638,7 +638,7 @@
         subtitle:
           "Une sélection de mes expériences en marketing digital, analyse de données et gestion de projet.",
         kpn: {
-          period: ,
+          period: "01/2025 – 06/2025",
           title: "Assistante Marketing Digital",     // point1-4 → index + marketing.html
           company: "KPN · Agence de marketing digital",
           point1: "Analyser les tendances et effectuer des benchmarks sectoriels pour guider la création de contenus web adaptés aux attentes des utilisateurs, positionnant 10+ articles dans le Top 10 Google.",
@@ -654,7 +654,7 @@
           finPoint2: "Réalisation d'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
         },
         engoo: {                           // point1-4 → index + marketing.html | dataPoint → data.html | finTitle/finPoint → finance.html
-          period: ,
+          period: "10/2024 – 02/2025",
           title: "Assistante Marketing",
           company: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing – +89.1% d'interactions et +69.7% d'abonnés en 3 mois.",
@@ -711,7 +711,7 @@
           finPoint2: "Animation d'événements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
         },
         research: {                        // point1-2 → index.html | dataPoint → data.html | finCompany/finPoint → finance.html
-          period: ,
+          period: "06/2023 – 12/2023",
           title: "Assistante de recherche",
           company: "Institut des Relations Internationales, NCCU",
           point1: "Encadrer des équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été.",
@@ -930,7 +930,7 @@
         subtitle:
           "Engagements dans des clubs et associations qui complètent mon parcours académique.",
         guzheng: {
-          period: ,
+          period: "02/2023 – 01/2024",
           title:
             "Directrice Marketing & Adhésions",
           org: "Club de Guzheng, NCCU",
@@ -972,7 +972,7 @@
         subtitle:
           "Des initiatives centrées sur l'éducation, l'international et l'impact social.",
         aiesec: {
-          period: ,
+          period: "09/2024 – 06/2025",
           title: "Responsabilités du Pôle Marketing & Membre du Pôle de Bénévolat International Entrant",
           org:
             "AIESEC in NCCU · Organisation internationale de développement du leadership",
@@ -988,7 +988,7 @@
           finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûts pour dépasser l'objectif de budget équilibré de 53,7%.",
         },
         usr: {
-          period: ,
+          period: "09/2024 – 06/2025",
           title: "Volontaire – Projet University Social Responsibility",
           org: "Office of University Responsibility, NCCU",
           point1:
@@ -1235,7 +1235,7 @@
       },
       locations: {
         online: "Online · Taiwan",
-        taipei: ,
+        taipei: "Taipei · Taiwan"
         taipeiEdu: "Taipei, Taiwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
@@ -3090,7 +3090,7 @@
       ],
     },
     "mkt-seo-technical": {
-      title: ,
+      title: "SEO Technique"
       text: "Garantir que les moteurs de recherche peuvent explorer et indexer le site sans obstacle : vitesse, mobile-first, Sitemap XML, Robots.txt, données structurées (Schema Markup), HTTPS, gestion des erreurs 404 / redirections 301 et structure d'URL.",
       proofs: [
         {
@@ -3114,7 +3114,7 @@
         },
       ],
       en: {
-        title: ,
+        title: "Technical SEO"
         text: "Ensuring search engine crawlers can crawl and index the site without barriers: site speed, mobile-first, XML Sitemap, Robots.txt, Schema Markup, HTTPS, 404 errors / 301 redirects management and URL structure optimisation.",
         proofs: [
           {
