@@ -273,7 +273,7 @@
         subSoft1: "Collaboration",
         subSoft2: "Leadership & Organisation",
         subSoft3: "Communication",
-        chipSeoTechnical: "SEO Technique",
+        chipSeoTechnical: ,
         chipSeoKeyword: "Recherche de Mots-Clés",
         chipContentStrategy: "Stratégie de Contenu",
         chipABTesting: "A/B Testing",
@@ -348,7 +348,7 @@
       },
       locations: {
         online: "En ligne · Taïwan",
-        taipei: "Taipei · Taïwan",
+        taipei: ,
         taipeiEdu: "Taipei, Taïwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
@@ -638,7 +638,7 @@
         subtitle:
           "Une sélection de mes expériences en marketing digital, analyse de données et gestion de projet.",
         kpn: {
-          period: "01/2025 – 06/2025",
+          period: ,
           title: "Assistante Marketing Digital",     // point1-4 → index + marketing.html
           company: "KPN · Agence de marketing digital",
           point1: "Analyser les tendances et effectuer des benchmarks sectoriels pour guider la création de contenus web adaptés aux attentes des utilisateurs, positionnant 10+ articles dans le Top 10 Google.",
@@ -654,7 +654,7 @@
           finPoint2: "Réalisation d'audits de performance mensuels sur les sites web, analyse des écarts clés et collaboration avec les équipes transverses pour identifier et résoudre les problèmes.",
         },
         engoo: {                           // point1-4 → index + marketing.html | dataPoint → data.html | finTitle/finPoint → finance.html
-          period: "10/2024 – 02/2025",
+          period: ,
           title: "Assistante Marketing",
           company: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           point1: "Stratégie de contenu Xiaohongshu basée sur le modèle STP et A/B testing – +89.1% d'interactions et +69.7% d'abonnés en 3 mois.",
@@ -711,7 +711,7 @@
           finPoint2: "Animation d'événements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
         },
         research: {                        // point1-2 → index.html | dataPoint → data.html | finCompany/finPoint → finance.html
-          period: "06/2023 – 12/2023",
+          period: ,
           title: "Assistante de recherche",
           company: "Institut des Relations Internationales, NCCU",
           point1: "Encadrer des équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été.",
@@ -930,7 +930,7 @@
         subtitle:
           "Engagements dans des clubs et associations qui complètent mon parcours académique.",
         guzheng: {
-          period: "02/2023 – 01/2024",
+          period: ,
           title:
             "Directrice Marketing & Adhésions",
           org: "Club de Guzheng, NCCU",
@@ -972,7 +972,7 @@
         subtitle:
           "Des initiatives centrées sur l'éducation, l'international et l'impact social.",
         aiesec: {
-          period: "09/2024 – 06/2025",
+          period: ,
           title: "Responsabilités du Pôle Marketing & Membre du Pôle de Bénévolat International Entrant",
           org:
             "AIESEC in NCCU · Organisation internationale de développement du leadership",
@@ -988,7 +988,7 @@
           finPoint1: "Gestion du budget et des prévisions financières d'un camp d'été, optimisation des structures de coûts pour dépasser l'objectif de budget équilibré de 53,7%.",
         },
         usr: {
-          period: "09/2024 – 06/2025",
+          period: ,
           title: "Volontaire – Projet University Social Responsibility",
           org: "Office of University Responsibility, NCCU",
           point1:
@@ -1158,7 +1158,7 @@
         subSoft1: "Collaboration",
         subSoft2: "Leadership & Organisation",
         subSoft3: "Communication",
-        chipSeoTechnical: "Technical SEO",
+        chipSeoTechnical: ,
         chipSeoKeyword: "Keyword Research",
         chipContentStrategy: "Content Strategy",
         chipABTesting: "A/B Testing",
@@ -1235,7 +1235,7 @@
       },
       locations: {
         online: "Online · Taiwan",
-        taipei: "Taipei · Taiwan",
+        taipei: ,
         taipeiEdu: "Taipei, Taiwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
@@ -1519,7 +1519,7 @@
         subtitle:
           "A selection of my experience in digital marketing, data analysis and project coordination.",
         kpn: {
-          period: "01/2025 – 06/2025",
+          period: ,
           title: "Digital Marketing Assistant",
           point1: "Analysed industry trends and conducted competitive benchmarks to guide web content creation aligned with user expectations, positioning 10+ articles in Google's Top 10.",
           point2: "Monitored Meta and Google advertising campaign performance through reporting dashboards, optimising CTR (+9.5%) and conversion rate (+5.1%) via A/B testing.",
@@ -1534,7 +1534,7 @@
           finPoint2: "Formulated and executed monthly performance audits on websites, analyzed key divergence data, and collaborated with cross-functional teams to mitigate problems.",
         },
         engoo: {
-          period: "10/2024 – 02/2025",
+          period: ,
           title: "Marketing Assistant",
           company: "Engoo, DMM.com Group",
           point1: "Xiaohongshu content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
@@ -1608,7 +1608,7 @@
           point2: "Proofread 3 novels translated from French into Chinese : accuracy of meaning, cultural relevance and sentence fluency.",
         },
         research: {
-          period: "06/2023 – 12/2023",
+          period: ,
           title: "Research Assistant",
           company: "Institute of International Relations, NCCU",
           point1: "Data collection, cleaning and analysis for research papers.",
@@ -2882,7 +2882,7 @@
           type: "Expérience",
           title: "Assistante de recherche",
           org: "Institut des Relations Internationales, NCCU",
-          meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
+          meta: [],
           points: ["Analyse statistique et visualisation pour des travaux de recherche."],
           actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
         },
@@ -2917,7 +2917,7 @@
           type: "Expérience",
           title: "Assistante de recherche",
           org: "Institut des Relations Internationales, NCCU",
-          meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
+          meta: [],
           points: ["Collecte, nettoyage et traitement de données pour la recherche."],
           actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
         },
@@ -3018,10 +3018,10 @@
         "Modèles Excel avancés, suivi de KPIs et automatisation de reportings.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: ["Dashboard de suivi de performance marketing et automatisation de rapports."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
@@ -3029,7 +3029,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: [
             "Suivi mensuel des KPIs SEO/SEA (trafic, CTR, conversions) et consolidation des rapports clients sous Excel.",
           ],
@@ -3090,14 +3090,14 @@
       ],
     },
     "mkt-seo-technical": {
-      title: "SEO Technique",
+      title: ,
       text: "Garantir que les moteurs de recherche peuvent explorer et indexer le site sans obstacle : vitesse, mobile-first, Sitemap XML, Robots.txt, données structurées (Schema Markup), HTTPS, gestion des erreurs 404 / redirections 301 et structure d'URL.",
       proofs: [
         {
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: [
             "Audit technique SEO (crawlabilité, vitesse, mobile-first) et recommandations d'optimisation.",
             "Suivi de KPIs via Google Search Console et Google Analytics 4.",
@@ -3114,14 +3114,14 @@
         },
       ],
       en: {
-        title: "Technical SEO",
+        title: ,
         text: "Ensuring search engine crawlers can crawl and index the site without barriers: site speed, mobile-first, XML Sitemap, Robots.txt, Schema Markup, HTTPS, 404 errors / 301 redirects management and URL structure optimisation.",
         proofs: [
           {
             type: "Experience",
             title: "Digital Marketing Assistant",
             org: "KPN",
-            meta: ["Taipei · Taiwan", "01/2025 – 06/2025"],
+            meta: [],
             points: [
               "Technical SEO audit (crawlability, speed, mobile-first) and optimisation recommendations.",
               "KPI tracking via Google Search Console and Google Analytics 4.",
@@ -3139,7 +3139,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: [
             "Recherche de mots-clés et recommandations de contenus alignés avec l'intention de recherche.",
           ],
@@ -3154,7 +3154,7 @@
             type: "Experience",
             title: "Digital Marketing Assistant",
             org: "KPN",
-            meta: ["Taipei · Taiwan", "01/2025 – 06/2025"],
+            meta: [],
             points: [
               "Keyword research and content recommendations aligned with search intent.",
             ],
@@ -3171,7 +3171,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: [
             "Optimisation On-Page (balises, structure de contenu, maillage interne) et recommandations éditoriales.",
           ],
@@ -3186,7 +3186,7 @@
             type: "Experience",
             title: "Digital Marketing Assistant",
             org: "KPN",
-            meta: ["Taipei · Taiwan", "01/2025 – 06/2025"],
+            meta: [],
             points: [
               "On-Page optimisation (tags, content structure, internal linking) and editorial recommendations.",
             ],
@@ -3209,30 +3209,30 @@
       title: "Google Keyword Planner",
       text: "Recherche de mots-clés, estimation des volumes de recherche et planification des enchères pour les campagnes Google Ads.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA", "01/2025 – 06/2025"], points: ["Identification et sélection de mots-clés via Google Keyword Planner pour optimiser le ciblage et les enchères des campagnes Google Ads."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA"], points: ["Identification et sélection de mots-clés via Google Keyword Planner pour optimiser le ciblage et les enchères des campagnes Google Ads."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Google Keyword Planner", text: "Keyword research, search volume estimation and bid planning for Google Ads campaigns.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEA", "01/2025 – 06/2025"], points: ["Used Google Keyword Planner to identify and select keywords for targeting and bid optimisation across Google Ads campaigns."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEA"], points: ["Used Google Keyword Planner to identify and select keywords for targeting and bid optimisation across Google Ads campaigns."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
     "mkt-gtrends": {
       title: "Google Trends",
       text: "Analyse des tendances de recherche pour anticiper les sujets porteurs, affiner la stratégie de contenu et aligner le calendrier éditorial sur la demande.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO · SEA", "01/2025 – 06/2025"], points: ["Utilisation de Google Trends pour identifier les tendances sectorielles et orienter la production de contenus web à fort potentiel SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEA"], points: ["Utilisation de Google Trends pour identifier les tendances sectorielles et orienter la production de contenus web à fort potentiel SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Google Trends", text: "Search trend analysis to anticipate high-potential topics, refine content strategy and align the editorial calendar with demand.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO · SEA", "01/2025 – 06/2025"], points: ["Used Google Trends to identify industry trends and guide web content production with strong SEO potential."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEA"], points: ["Used Google Trends to identify industry trends and guide web content production with strong SEO potential."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
     "mkt-semrush": {
       title: "Semrush",
       text: "Audit de site, analyse de la concurrence, suivi du positionnement et identification d'opportunités de mots-clés.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Utilisation de Semrush pour l'audit de sites clients, l'analyse concurrentielle et le suivi du positionnement des articles dans les résultats de recherche."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Utilisation de Semrush pour l'audit de sites clients, l'analyse concurrentielle et le suivi du positionnement des articles dans les résultats de recherche."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Semrush", text: "Site audit, competitor analysis, rank tracking and keyword opportunity identification.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Used Semrush to audit client websites, analyse competitors and track article rankings in search results."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO"], points: ["Used Semrush to audit client websites, analyse competitors and track article rankings in search results."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
     "mkt-sea": {
@@ -3243,7 +3243,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Campagnes Google Ads, suivi CTR et conversions."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
@@ -3278,10 +3278,10 @@
       text: "Création de contenu et optimisation de la visibilité.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: ["Contenus et optimisation de visibilité sur plateformes social media."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
@@ -3291,24 +3291,24 @@
       title: "Stratégie de Contenu",
       text: "Veille des tendances, positionnement de marque et optimisation de la performance éditoriale.",
       proofs: [
-        { type: "Stage", title: "Stratégie de contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3%), l'engagement (89,1%) et le nombre d'abonnés (69,7%)."] },
-        { type: "Stage", title: "Stratégie de contenu web & SEO", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
+        { type: "Stage", title: "Stratégie de contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3%), l'engagement (89,1%) et le nombre d'abonnés (69,7%)."] },
+        { type: "Stage", title: "Stratégie de contenu web & SEO", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
       ],
       en: { title: "Content Strategy", text: "Defining and managing editorial strategies tailored to target audiences, combining trend monitoring, brand positioning and performance optimisation.", proofs: [
-        { type: "Internship", title: "REDnote Content Strategy", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
-        { type: "Internship", title: "Web Content & SEO Strategy", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analysed trends and conducted sectoral benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."] },
+        { type: "Internship", title: "REDnote Content Strategy", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
+        { type: "Internship", title: "Web Content & SEO Strategy", org: "KPN · Digital Marketing Agency", meta: ["SEO"], points: ["Analysed trends and conducted sectoral benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."] },
       ]},
     },
     "mkt-ab-testing": {
       title: "A/B Testing",
       text: "Conception et analyse de tests A/B pour optimiser les performances des contenus, campagnes et tunnels de conversion.",
       proofs: [
-        { type: "Stage", title: "A/B Testing – Campagnes Meta & Google", org: "KPN · Agence de marketing digital", meta: ["Meta Ads", "Google Ads", "01/2025 – 06/2025"], points: ["Optimisation du CTR (+9,5%) et du taux de conversion (+5,1%) via des tests A/B sur les campagnes publicitaires Meta et Google."] },
-        { type: "Stage", title: "A/B Testing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
+        { type: "Stage", title: "A/B Testing – Campagnes Meta & Google", org: "KPN · Agence de marketing digital", meta: ["Meta Ads"], points: ["Optimisation du CTR (+9,5%) et du taux de conversion (+5,1%) via des tests A/B sur les campagnes publicitaires Meta et Google."] },
+        { type: "Stage", title: "A/B Testing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
       ],
       en: { title: "A/B Testing", text: "Designing and analysing A/B tests to optimise content, campaign and conversion funnel performance.", proofs: [
-        { type: "Internship", title: "A/B Testing – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: ["Meta Ads", "Google Ads", "01/2025 – 06/2025"], points: ["Improved CTR (+9.5%) and conversion rate (+5.1%) through A/B testing across Meta and Google ad campaigns."] },
-        { type: "Internship", title: "A/B Testing – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu", "10/2024 – 02/2025"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
+        { type: "Internship", title: "A/B Testing – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: ["Meta Ads"], points: ["Improved CTR (+9.5%) and conversion rate (+5.1%) through A/B testing across Meta and Google ad campaigns."] },
+        { type: "Internship", title: "A/B Testing – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
       ]},
     },
     "mkt-research": {
@@ -3341,7 +3341,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Suivi de performance et analyse du trafic web (Google Analytics + Search Console)."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
@@ -3352,10 +3352,10 @@
       text: "Conception de visuels pour les réseaux sociaux, événements et supports de communication.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: ["A/B testing de visuels et adaptation des créas par sous-segment cible."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
@@ -3404,10 +3404,10 @@
       text: "Macros VBA pour automatiser le traitement de données, la mise à jour de dashboards et la génération de rapports.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: [
             "Développement de macros VBA pour automatiser la mise à jour du dashboard de performance XHS et la génération de rapports hebdomadaires.",
           ],
@@ -3493,7 +3493,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Suivi de la performance financière des campagnes : ROI, coût par acquisition, taux de conversion (+5,1% CVR)."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
         },
@@ -3537,7 +3537,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Analyse des écarts de performance marketing (CTR, CVR) vs benchmarks mensuels et formulation de recommandations."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
         },
@@ -3551,7 +3551,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Gestion des budgets publicitaires mensuels Facebook & Google Ads et optimisation du coût par acquisition (conversion rate +5.1%)."],
           actions: [{ label: "Voir l'expérience", href: "#experience" }],
         },
@@ -3559,7 +3559,7 @@
           type: "Activité",
           title: "Membre – AIESEC in NCCU",
           org: "AIESEC",
-          meta: ["Taipei · Taïwan", "09/2024 – 06/2025"],
+          meta: [],
           points: ["Gestion budgétaire d'un camp d'été : optimisation de la structure de coûts, dépassement de l'objectif de rentabilité de 53,7%."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
@@ -3730,7 +3730,7 @@
           type: "Bénévolat",
           title: "Bénévole – Projet USR (Responsabilité Sociale Universitaire)",
           org: "Bureau USR, NCCU",
-          meta: ["Taipei · Taïwan", "09/2024 – Présent"],
+          meta: [],
           points: [
             "Soutien linguistique et culturel auprès d'élèves issus de familles transnationales (nouveaux immigrants / enfants de migrants).",
           ],
@@ -3745,10 +3745,10 @@
       text: "Suivi de KPIs marketing et business, construction de tableaux de bord et reporting périodique.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: [
             "Construction et suivi de dashboards KPIs (acquisition, engagement, rétention).",
             "Reporting hebdomadaire et analyse des tendances de performance.",
@@ -3759,7 +3759,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Suivi mensuel de KPIs SEO/SEA (trafic, CTR, conversions) et reporting client."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
@@ -3780,10 +3780,10 @@
           ],
         },
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: [
             "A/B testing de créas par sous-segment cible.",
             "Analyse comportementale des audiences sur les plateformes sociales.",
@@ -3797,10 +3797,10 @@
       text: "Conception et analyse de tests A/B pour optimiser les créas, messages et parcours utilisateur.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: [
             "Tests A/B sur visuels publicitaires et copies par sous-segment.",
             "Analyse des résultats et recommandations d'optimisation.",
@@ -3819,7 +3819,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: [
             "Planification et coordination de campagnes digitales multicanal.",
             "Suivi budgétaire et reporting de performance.",
@@ -3842,10 +3842,10 @@
       text: "Analyse d'entreprises et de marchés via les frameworks SWOT, PESTEL et les 5 forces de Porter.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: ["Analyse de marché et positionnement concurrentiel pour la stratégie de contenu REDnote."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
@@ -3864,10 +3864,10 @@
       text: "Analyse comparative des acteurs du marché pour identifier des opportunités de positionnement et de différenciation.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: ["Veille concurrentielle approfondie pour optimiser la stratégie de contenu sur le segment du chinois simplifié."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
@@ -3875,7 +3875,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Benchmarks concurrentiels approfondis et analyse de positionnement SEO/SEA."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
@@ -3961,7 +3961,7 @@
           type: "Expérience",
           title: "Assistante Marketing Digital",
           org: "KPN",
-          meta: ["Taipei · Taïwan", "01/2025 – 06/2025"],
+          meta: [],
           points: ["Campagnes Google Ads avec optimisation automatique (Smart Bidding, Performance Max)."],
           actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
@@ -4022,12 +4022,12 @@
       title: "Marketing Automation & Python",
       text: "Automatisation de processus marketing répétitifs via des scripts Python, pour optimiser le reporting et la consolidation de données.",
       proofs: [
-        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python", "01/2025 – 06/2025"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
-        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python", "10/2024 – 02/2025"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
+        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
+        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
       ],
       en: { title: "Marketing Automation & Python", text: "Automating repetitive marketing processes via Python scripts to optimise reporting and data consolidation.", proofs: [
-        { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python", "01/2025 – 06/2025"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
-        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python", "10/2024 – 02/2025"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
+        { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
+        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
       ]},
     },
     "ai-vibe-coding": {
@@ -4035,13 +4035,13 @@
       text: "Développement assisté par l'IA – utilisation de modèles génératifs pour prototyper, déboguer et produire du code de manière interactive.",
       proofs: [
         { type: "Projet Personnel", title: "Portfolio & outils d'automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] },
-        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python", "01/2025 – 06/2025"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
-        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python", "10/2024 – 02/2025"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
+        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
+        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
       ],
       en: { title: "Vibe Coding", text: "AI-assisted development – using generative models to prototype, debug and produce code interactively.", proofs: [
         { type: "Personal Project", title: "Portfolio & Automation Tools", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Built this portfolio and automation scripts via vibe coding workflows."] },
-        { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python", "01/2025 – 06/2025"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
-        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python", "10/2024 – 02/2025"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
+        { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
+        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
       ]},
     },
 
@@ -4051,14 +4051,14 @@
       text: "Maîtrise de la suite Microsoft Office pour la rédaction de documents professionnels, la modélisation de données et la création de présentations impactantes.",
       proofs: [
         { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Score expert en modélisation, tableaux croisés et automatisation."] },
-        { type: "Expérience", title: "Assistante Marketing", org: "Engoo", meta: ["Taipei · Taïwan", "10/2024 – 02/2025"], points: ["Dashboard Excel et reporting hebdomadaire."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+        { type: "Stage", title: "Assistante Marketing", org: "Engoo", meta: [], points: ["Dashboard Excel et reporting hebdomadaire."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
       ],
       en: {
         title: "Microsoft Office (Word · Excel · PowerPoint)",
         text: "Proficient in the Microsoft Office suite for professional document writing, data modelling and impactful presentation design.",
         proofs: [
           { type: "Certification", title: "TOSA Excel 950/1000", org: "TOSA", meta: ["10/2025"], points: ["Expert score in modelling, pivot tables and automation."] },
-          { type: "Experience", title: "Marketing Assistant", org: "Engoo", meta: ["Taipei · Taiwan", "10/2024 – 02/2025"], points: ["Excel dashboard and weekly reporting."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+          { type: "Internship", title: "Marketing Assistant", org: "Engoo", meta: [], points: ["Excel dashboard and weekly reporting."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
         ],
       },
     },
@@ -4081,40 +4081,40 @@
       title: "Organisation d'événements",
       text: "Planification et coordination logistique d'événements (camps, conférences, séminaires) : définition du programme, gestion des participants et suivi opérationnel.",
       proofs: [
-        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Événementiel", "09/2022 – 06/2023"], points: ["Organisation de conférences thématiques et sessions de networking, gestion du flux de communication et coordination des prestataires."] },
-        { type: "Expérience", title: "Assistante de recherche", org: "Institut des Relations Internationales, NCCU", meta: ["Événementiel", "09/2021 – 06/2022"], points: ["Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été."] },
-        { type: "Extra-scolaire", title: "Co-fondatrice", org: "Sora Education", meta: ["Événementiel", "07/2022 – 08/2024"], points: ["Organisation de 5 camps d'été d'une semaine, coordination logistique complète avec deux partenaires."] },
-        { type: "Bénévolat", title: "Membre – AIESEC in NCCU", org: "AIESEC", meta: ["Événementiel", "09/2024 – 06/2025"], points: ["Coordination de l'organisation d'un camp d'anglais accueillant 60+ participants et 15 volontaires internationaux."] },
+        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Événementiel"], points: ["Organisation de conférences thématiques et sessions de networking, gestion du flux de communication et coordination des prestataires."] },
+        { type: "Expérience", title: "Assistante de recherche", org: "Institut des Relations Internationales, NCCU", meta: ["Événementiel"], points: ["Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été."] },
+        { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: ["Événementiel"], points: ["Organisation de 5 camps d'été d'une semaine, coordination logistique complète avec deux partenaires."] },
+        { type: "Bénévolat", title: "Membre – AIESEC in NCCU", org: "AIESEC", meta: ["Événementiel"], points: ["Coordination de l'organisation d'un camp d'anglais accueillant 60+ participants et 15 volontaires internationaux."] },
       ],
       en: { title: "Event Management", text: "Planning and logistical coordination of events (camps, conferences, seminars): programme design, participant management and operational follow-up.", proofs: [
-        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Events", "09/2022 – 06/2023"], points: ["Organised thematic conferences and networking sessions, managed communication flow and coordinated with service providers."] },
-        { type: "Experience", title: "Research Assistant", org: "Institute of International Relations, NCCU", meta: ["Events", "09/2021 – 06/2022"], points: ["Led teams of 3–4 people to organise seminars, conferences and summer camps."] },
-        { type: "Extracurricular", title: "Co-founder", org: "Sora Education", meta: ["Events", "07/2022 – 08/2024"], points: ["Organised 5 one-week summer camps with full logistical coordination across two partners."] },
-        { type: "Volunteering", title: "Member – AIESEC in NCCU", org: "AIESEC", meta: ["Events", "09/2024 – 06/2025"], points: ["Coordinated organisation of an English camp hosting 60+ participants and 15 international volunteers."] },
+        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Events"], points: ["Organised thematic conferences and networking sessions, managed communication flow and coordinated with service providers."] },
+        { type: "Experience", title: "Research Assistant", org: "Institute of International Relations, NCCU", meta: ["Events"], points: ["Led teams of 3–4 people to organise seminars, conferences and summer camps."] },
+        { type: "Entrepreneurial Project", title: "Co-founder", org: "Sora Education", meta: ["Events"], points: ["Organised 5 one-week summer camps with full logistical coordination across two partners."] },
+        { type: "Volunteering", title: "Member – AIESEC in NCCU", org: "AIESEC", meta: ["Events"], points: ["Coordinated organisation of an English camp hosting 60+ participants and 15 international volunteers."] },
       ]},
     },
     "mkt-event-hosting": {
       title: "Présidence & Animation",
       text: "Animation et présidence d'événements : accueil des intervenants, modération des échanges et assurance du bon déroulement du programme.",
       proofs: [
-        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Animation", "09/2022 – 06/2023"], points: ["Présidence et animation des conférences et sessions de networking, assurant le cadre et la fluidité des échanges."] },
-        { type: "Extra-scolaire", title: "Directrice marketing & adhésions", org: "Club de Guzheng, NCCU", meta: ["Animation", "02/2023 – 01/2024"], points: ["Organisation et animation d'activités et de performances musicales pour les membres du club."] },
+        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Animation"], points: ["Présidence et animation des conférences et sessions de networking, assurant le cadre et la fluidité des échanges."] },
+        { type: "Extra-scolaire", title: "Directrice marketing & adhésions", org: "Club de Guzheng, NCCU", meta: ["Animation"], points: ["Organisation et animation d'activités et de performances musicales pour les membres du club."] },
       ],
       en: { title: "Hosting & Facilitation", text: "Hosting and chairing events: welcoming speakers, moderating exchanges and ensuring smooth programme delivery.", proofs: [
-        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Facilitation", "09/2022 – 06/2023"], points: ["Chaired conferences and networking sessions, ensuring structure and smooth flow of exchanges."] },
-        { type: "Extracurricular", title: "Marketing & Membership Director", org: "Guzheng Club, NCCU", meta: ["Facilitation", "02/2023 – 01/2024"], points: ["Organised and facilitated club activities and musical performances for members."] },
+        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Facilitation"], points: ["Chaired conferences and networking sessions, ensuring structure and smooth flow of exchanges."] },
+        { type: "Extracurricular", title: "Marketing & Membership Director", org: "Guzheng Club, NCCU", meta: ["Facilitation"], points: ["Organised and facilitated club activities and musical performances for members."] },
       ]},
     },
     "mkt-vendor-coordination": {
       title: "Coordination avec Prestataires",
       text: "Identification, contact et suivi des prestataires externes (lieux, traiteurs, intervenants) pour assurer le bon déroulement des événements.",
       proofs: [
-        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Coordination", "09/2022 – 06/2023"], points: ["Gestion de la relation avec les prestataires et intervenants externes lors de l'organisation de conférences et sessions événementielles."] },
-        { type: "Extra-scolaire", title: "Co-fondatrice", org: "Sora Education", meta: ["Coordination", "07/2022 – 08/2024"], points: ["Contact et négociation avec les prestataires (lieux, matériaux pédagogiques) pour l'organisation des camps d'été."] },
+        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Coordination"], points: ["Gestion de la relation avec les prestataires et intervenants externes lors de l'organisation de conférences et sessions événementielles."] },
+        { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: ["Coordination"], points: ["Contact et négociation avec les prestataires (lieux, matériaux pédagogiques) pour l'organisation des camps d'été."] },
       ],
       en: { title: "Vendor Coordination", text: "Identifying, contacting and managing external service providers (venues, caterers, speakers) to ensure smooth event delivery.", proofs: [
-        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Coordination", "09/2022 – 06/2023"], points: ["Managed relationships with external providers and guest speakers when organising conferences and networking events."] },
-        { type: "Extracurricular", title: "Co-founder", org: "Sora Education", meta: ["Coordination", "07/2022 – 08/2024"], points: ["Contacted and negotiated with service providers (venues, teaching materials) for the organisation of summer camps."] },
+        { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Coordination"], points: ["Managed relationships with external providers and guest speakers when organising conferences and networking events."] },
+        { type: "Entrepreneurial Project", title: "Co-founder", org: "Sora Education", meta: ["Coordination"], points: ["Contacted and negotiated with service providers (venues, teaching materials) for the organisation of summer camps."] },
       ]},
     },
 
@@ -4123,30 +4123,30 @@
       title: "Ahrefs",
       text: "Analyse des backlinks, audit de site, recherche de mots-clés et suivi du positionnement.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Ahrefs", text: "Backlink analysis, site audit, keyword research and rank tracking.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO", "01/2025 – 06/2025"], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO"], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
     "mkt-similarweb": {
       title: "Similarweb",
       text: "Analyse du trafic web, benchmarking concurrentiel et identification des sources de trafic pour affiner la stratégie digitale.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO · Veille", "01/2025 – 06/2025"], points: ["Utilisation de Similarweb pour analyser le trafic des sites concurrents et identifier les canaux d'acquisition les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["Veille"], points: ["Utilisation de Similarweb pour analyser le trafic des sites concurrents et identifier les canaux d'acquisition les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Similarweb", text: "Web traffic analysis, competitive benchmarking and traffic source identification to refine digital strategy.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO · Research", "01/2025 – 06/2025"], points: ["Used Similarweb to analyse competitor website traffic and identify the best-performing acquisition channels."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["Research"], points: ["Used Similarweb to analyse competitor website traffic and identify the best-performing acquisition channels."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
     "mkt-screaming-frog": {
       title: "Screaming Frog SEO Spider",
       text: "Crawl de sites, détection des erreurs (404, redirections, balises manquantes) et analyse de la structure du site.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO Technique", "01/2025 – 06/2025"], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: [], points: ["Crawl des sites clients pour détecter les erreurs techniques (liens brisés, redirections, balises title/meta manquantes) et prioriser les corrections SEO."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Screaming Frog SEO Spider", text: "Site crawling, error detection (404s, redirects, missing tags) and site structure analysis.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["Technical SEO", "01/2025 – 06/2025"], points: ["Crawled client websites to detect technical issues (broken links, redirects, missing title/meta tags) and prioritise SEO fixes."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: [], points: ["Crawled client websites to detect technical issues (broken links, redirects, missing title/meta tags) and prioritise SEO fixes."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
 
@@ -4155,11 +4155,11 @@
       title: "HTML",
       text: "Structuration de pages web et intégration de contenu pour le développement de sites marketing et de portfolio.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML", "01/2025 – 06/2025"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
         { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Construction de ce portfolio multi-pages en HTML/CSS/JS avec système i18n (FR/EN/ZH) et animations."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
-      en: { title: "HTML", text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["HTML", "01/2025 – 06/2025"], points: ["Edited and structured HTML content for on-page optimisation and client website updates."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      en: { title: text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["HTML"], points: ["Edited and structured HTML content for on-page optimisation and client website updates."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
         { type: "Personal Project", title: "Professional Portfolio", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Built this full multi-page portfolio in HTML/CSS/JS with i18n system (FR/EN/ZH) and animations."], actions: [{ label: "View portfolio", href: "index.html" }] },
       ]},
     },
@@ -4167,11 +4167,11 @@
       title: "CSS",
       text: "Mise en forme, design responsive et animations pour des interfaces web professionnelles et des pages marketing.",
       proofs: [
-        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS", "01/2025 – 06/2025"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Expérience", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
         { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Design visuel complet, système de variables CSS, responsive et animations pour ce portfolio."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
-      en: { title: "CSS", text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["CSS", "01/2025 – 06/2025"], points: ["Applied CSS styling to improve the visual presentation and layout of client web pages."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      en: { title: text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["CSS"], points: ["Applied CSS styling to improve the visual presentation and layout of client web pages."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
         { type: "Personal Project", title: "Professional Portfolio", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Full visual design, CSS variable system, responsive layout and scroll animations for this portfolio."], actions: [{ label: "View portfolio", href: "index.html" }] },
       ]},
     },
@@ -4180,10 +4180,10 @@
       text: "Création de visuels pour réseaux sociaux, affiches, présentations et supports marketing.",
       proofs: [
         {
-          type: "Expérience",
+          type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo",
-          meta: ["Taipei · Taïwan", "10/2024 – 02/2025"],
+          meta: [],
           points: ["Création de templates et visuels A/B testés pour Xiaohongshu et Meta."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
@@ -4204,7 +4204,7 @@
             type: "Experience",
             title: "Marketing Assistant",
             org: "Engoo",
-            meta: ["Taipei · Taiwan", "10/2024 – 02/2025"],
+            meta: [],
             points: ["Designed and A/B tested visual templates for Xiaohongshu and Meta."],
             actions: [{ label: "View experience", href: "#exp-engoo" }],
           },
@@ -4297,7 +4297,7 @@
           type: "Expérience",
           title: "Assistante de recherche",
           org: "Institut des Relations Internationales, NCCU",
-          meta: ["Taipei · Taïwan", "06/2023 – 12/2023"],
+          meta: [],
           points: ["Rédaction de synthèses quantitatives et supports pour séminaires."],
           actions: [{ label: "Voir l'expérience", href: "#exp-research" }],
         },
@@ -4310,7 +4310,7 @@
             type: "Experience",
             title: "Research Assistant",
             org: "Institute of International Relations, NCCU",
-            meta: ["Taipei · Taiwan", "06/2023 – 12/2023"],
+            meta: [],
             points: ["Produced quantitative summaries and seminar materials."],
             actions: [{ label: "View experience", href: "#exp-research" }],
           },
@@ -4325,7 +4325,7 @@
           type: "Expérience",
           title: "Assistante d'enseignement",
           org: "College of Global Banking and Finance, NCCU",
-          meta: ["Taipei · Taïwan"],
+          meta: [],
           points: ["Préparation de supports de cours et présentations de briefings."],
           actions: [{ label: "Voir l'expérience", href: "#exp-teaching" }],
         },
@@ -4338,7 +4338,7 @@
             type: "Experience",
             title: "Teaching Assistant",
             org: "College of Global Banking and Finance, NCCU",
-            meta: ["Taipei · Taiwan"],
+            meta: [],
             points: ["Prepared course materials and project briefing decks."],
             actions: [{ label: "View experience", href: "#exp-teaching" }],
           },
