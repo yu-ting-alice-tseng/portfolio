@@ -3317,9 +3317,9 @@
       proofs: [
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice – Sora Education",
+          title: "Co-fondatrice",
           org: "Sora Education",
-          meta: ["Camps de jeunesse"],
+          meta: [],
           points: ["Études de marché et ajustement de l'offre et de la stratégie marketing."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
@@ -3828,9 +3828,9 @@
         },
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice – Sora Education",
+          title: "Co-fondatrice",
           org: "Sora Education",
-          meta: ["Camps de jeunesse"],
+          meta: [],
           points: ["Planification et exécution de campagnes de recrutement pour 5 camps d'été."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
@@ -3851,9 +3851,9 @@
         },
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice – Sora Education",
+          title: "Co-fondatrice",
           org: "Sora Education",
-          meta: ["Camps de jeunesse"],
+          meta: [],
           points: ["Études de marché, segmentation et positionnement de l'offre de cours."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
@@ -3887,9 +3887,9 @@
       proofs: [
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice – Sora Education",
+          title: "Co-fondatrice",
           org: "Sora Education",
-          meta: ["Camps de jeunesse"],
+          meta: [],
           points: ["Business plan, modèle économique et pitch pour 5 camps d'été."],
           actions: [{ label: "Voir activités", href: "#extracurricular" }],
         },
