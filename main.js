@@ -3287,6 +3287,74 @@
         },
       ],
     },
+    "mkt-gsc": {
+      title: "Google Search Console",
+      text: "Suivi du positionnement, analyse des performances de recherche (impressions, clics, CTR) et identification des opportunités d'optimisation.",
+      proofs: [
+        {
+          type: "Stage",
+          title: "Assistante Marketing Digital",
+          org: "KPN · Agence de marketing digital",
+          meta: [],
+          points: ["Suivi des positions et des performances de recherche (impressions, CTR, clics) pour orienter les recommandations SEO on-page et de contenu."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+      en: { title: "Google Search Console", text: "Rank tracking, search performance analysis (impressions, clicks, CTR) and optimisation opportunity identification.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: [], points: ["Tracked search positions and performance metrics (impressions, CTR, clicks) to guide on-page SEO and content recommendations."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+    "mkt-meta": {
+      title: "Meta Ads",
+      text: "Gestion de campagnes publicitaires sur Facebook et Instagram : ciblage d'audience, création d'annonces et optimisation des performances via des tests A/B.",
+      proofs: [
+        {
+          type: "Stage",
+          title: "Assistante Marketing Digital – Campagnes Meta & Google",
+          org: "KPN · Agence de marketing digital",
+          meta: [],
+          points: ["Pilotage des campagnes publicitaires Meta via des reportings réguliers, avec optimisation du CTR (+9,5%) et du taux de conversion (+5,1%) grâce aux tests A/B."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
+        },
+      ],
+      en: { title: "Meta Ads", text: "Managing Facebook and Instagram ad campaigns: audience targeting, ad creation and performance optimisation through A/B testing.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: [], points: ["Managed Meta ad campaigns through regular reporting, improving CTR (+9.5%) and conversion rate (+5.1%) via A/B testing."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+      ]},
+    },
+    "mkt-mbs": {
+      title: "Meta Business Suite",
+      text: "Gestion des pages Facebook et Instagram : planification des publications, suivi des statistiques et animation de la communauté.",
+      proofs: [
+        {
+          type: "Stage",
+          title: "Assistante Marketing",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
+          meta: [],
+          points: ["Gestion des publications et suivi des performances des pages Facebook et Instagram via Meta Business Suite."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+      ],
+      en: { title: "Meta Business Suite", text: "Managing Facebook and Instagram pages: scheduling posts, tracking analytics and engaging the community.", proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Managed Facebook and Instagram page publishing and performance tracking via Meta Business Suite."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+      ]},
+    },
+    "mkt-xhs": {
+      title: "Xiaohongshu (REDnote)",
+      text: "Stratégie de contenu et gestion de communauté sur Xiaohongshu (REDnote) : veille des tendances, formats adaptés à la plateforme et optimisation de l'engagement.",
+      proofs: [
+        {
+          type: "Stage",
+          title: "Assistante Marketing – Contenu REDnote",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
+          meta: ["Xiaohongshu"],
+          points: ["Stratégie de contenu basée sur la veille des tendances, générant +93,3% de visibilité, +89,1% d'engagement et +69,7% d'abonnés."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+        },
+      ],
+      en: { title: "Xiaohongshu (REDnote)", text: "Content strategy and community management on Xiaohongshu (REDnote): trend monitoring, platform-native formats and engagement optimisation.", proofs: [
+        { type: "Internship", title: "Marketing Assistant – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Trend-driven content strategy delivering +93.3% visibility, +89.1% engagement and +69.7% follower growth."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+      ]},
+    },
     "mkt-content-strategy": {
       title: "Stratégie de Contenu",
       text: "Veille des tendances, positionnement de marque et optimisation de la performance éditoriale.",
