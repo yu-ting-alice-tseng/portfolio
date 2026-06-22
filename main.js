@@ -3303,12 +3303,12 @@
       title: "A/B Testing",
       text: "Conception et analyse de tests A/B pour optimiser les performances des contenus, campagnes et tunnels de conversion.",
       proofs: [
-        { type: "Stage", title: "A/B Testing – Campagnes Meta & Google", org: "KPN · Agence de marketing digital", meta: [], points: ["Optimisation du CTR (+9,5%) et du taux de conversion (+5,1%) via des tests A/B sur les campagnes publicitaires Meta et Google."] },
-        { type: "Stage", title: "A/B Testing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
+        { type: "Stage", title: "Assistante Marketing Digital – Campagnes Meta & Google", org: "KPN · Agence de marketing digital", meta: [], points: ["Optimisation du CTR (+9,5%) et du taux de conversion (+5,1%) via des tests A/B sur les campagnes publicitaires Meta et Google."] },
+        { type: "Stage", title: "Assistante Marketing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
       ],
       en: { title: "A/B Testing", text: "Designing and analysing A/B tests to optimise content, campaign and conversion funnel performance.", proofs: [
-        { type: "Internship", title: "A/B Testing – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: [], points: ["Improved CTR (+9.5%) and conversion rate (+5.1%) through A/B testing across Meta and Google ad campaigns."] },
-        { type: "Internship", title: "A/B Testing – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
+        { type: "Internship", title: "Digital Marketing Assistant – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: [], points: ["Improved CTR (+9.5%) and conversion rate (+5.1%) through A/B testing across Meta and Google ad campaigns."] },
+        { type: "Internship", title: "Marketing Assistant – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
       ]},
     },
     "mkt-research": {
