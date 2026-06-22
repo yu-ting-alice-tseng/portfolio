@@ -3291,12 +3291,12 @@
       title: "Stratégie de Contenu",
       text: "Veille des tendances, positionnement de marque et optimisation de la performance éditoriale.",
       proofs: [
-        { type: "Stage", title: "Stratégie de contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3%), l'engagement (89,1%) et le nombre d'abonnés (69,7%)."] },
-        { type: "Stage", title: "Stratégie de contenu web & SEO", org: "KPN · Agence de marketing digital", meta: [], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
+        { type: "Stage", title: "Assistante Marketing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3%), l'engagement (89,1%) et le nombre d'abonnés (69,7%)."] },
+        { type: "Stage", title: "Assistante Marketing Digital – Contenu Web & SEO", org: "KPN · Agence de marketing digital", meta: [], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
       ],
       en: { title: "Content Strategy", text: "Defining and managing editorial strategies tailored to target audiences, combining trend monitoring, brand positioning and performance optimisation.", proofs: [
-        { type: "Internship", title: "REDnote Content Strategy", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
-        { type: "Internship", title: "Web Content & SEO Strategy", org: "KPN · Digital Marketing Agency", meta: [], points: ["Analysed trends and conducted sectoral benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."] },
+        { type: "Internship", title: "Marketing Assistant – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
+        { type: "Internship", title: "Digital Marketing Assistant – Web & SEO Content", org: "KPN · Digital Marketing Agency", meta: [], points: ["Analysed trends and conducted sectoral benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."] },
       ]},
     },
     "mkt-ab-testing": {
