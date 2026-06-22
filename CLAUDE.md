@@ -88,6 +88,35 @@ Proofread every piece of new content for:
 
 ---
 
+## 11. Skill Proof Card Titles
+
+- The **title** of a proof card inside a skill detail panel must **never repeat the skill's name**.
+- For internship/stage proofs, use: **Job title – Specific project or context**
+  - ✅ `Assistante Marketing Digital – Campagnes Meta & Google`
+  - ❌ `A/B Testing – Campagnes Meta & Google`
+- For portfolio, project, or certification proofs, use a descriptive title for the deliverable (no job title needed).
+
+---
+
+## 12. Skill Proof Card Ordering
+
+Order proof cards within a skill by importance (descending):
+
+1. **Portfolio / Project** (most important)
+2. **Professional Experience** (Stage, CDI, CDD, etc.)
+3. **Extracurricular** (associations, clubs)
+4. **Volunteer**
+5. **Certification / Course** (least important)
+
+---
+
+## 13. Skill Proof Meta Tags — No Redundant Category Tags
+
+- Do **not** add a meta tag to a proof entry if its value is the same as (or a subset of) the skill's category name.
+- Example: a proof under the "SEO" category should not have `meta: ["SEO"]`.
+
+---
+
 ## Quick Pre-Publish Checklist
 
 Before finalizing any new text, component, or section:
