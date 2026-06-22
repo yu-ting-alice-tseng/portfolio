@@ -4123,10 +4123,10 @@
       title: "Ahrefs",
       text: "Analyse des backlinks, audit de site, recherche de mots-clés et suivi du positionnement.",
       proofs: [
-        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["SEO"], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: [], points: ["Analyse des profils de backlinks et identification d'opportunités de netlinking pour renforcer l'autorité des sites clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
       ],
       en: { title: "Ahrefs", text: "Backlink analysis, site audit, keyword research and rank tracking.", proofs: [
-        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["SEO"], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: [], points: ["Analysed backlink profiles and identified link-building opportunities to strengthen client site authority."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
       ]},
     },
     "mkt-similarweb": {
