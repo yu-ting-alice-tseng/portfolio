@@ -3352,20 +3352,20 @@
       text: "Conception de visuels pour les réseaux sociaux, événements et supports de communication.",
       proofs: [
         {
-          type: "Stage",
-          title: "Assistante Marketing",
-          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
-          meta: [],
-          points: ["A/B testing de visuels et adaptation des créas par sous-segment cible."],
-          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
-        },
-        {
           type: "Portfolio",
           title: "Photographie & supports promotionnels",
           org: "",
           meta: ["Canva · Photoshop"],
           points: ["Affiches, badges et publications pour des clubs et événements."],
           actions: [{ label: "Voir le portfolio", href: "#portfolio" }],
+        },
+        {
+          type: "Stage",
+          title: "Assistante Marketing",
+          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
+          meta: [],
+          points: ["A/B testing de visuels et adaptation des créas par sous-segment cible."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
           type: "Certification",
