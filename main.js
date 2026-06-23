@@ -4145,13 +4145,13 @@
       en: { title: "Gemini", text: "Using Gemini for multimodal research, market intelligence and Google Workspace integration.", proofs: [{ type: "Practice", title: "Research & Productivity", org: "Google", meta: [], points: ["Multimodal research, source summarisation, Google Docs/Sheets integration."] }] },
     },
     "data-marketing-automation": {
-      title: "Marketing Automation & Python",
+      title: "Marketing Automation",
       text: "Automatisation de processus marketing répétitifs via des scripts Python, pour optimiser le reporting et la consolidation de données.",
       proofs: [
         { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
         { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
       ],
-      en: { title: "Marketing Automation & Python", text: "Automating repetitive marketing processes via Python scripts to optimise reporting and data consolidation.", proofs: [
+      en: { title: "Marketing Automation", text: "Automating repetitive marketing processes via Python scripts to optimise reporting and data consolidation.", proofs: [
         { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
         { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
       ]},
