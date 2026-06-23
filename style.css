@@ -2136,6 +2136,48 @@ body {
   content: "/ " !important;
   color: var(--accent) !important;
   font-weight: 900 !important;
+
+/* ── Nested sub-label (no slash prefix) ─────────── */
+.skills-subtitle--sub {
+  font-size: 0.58rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: #b0bec5 !important;
+  margin: 0.6rem 0 0.3rem !important;
+  padding-left: 0 !important;
+  border: none !important;
+}
+.skills-subtitle--sub::before { content: none !important; }
+
+/* ── Tool cards group box ────────────────────────── */
+.skills-tools-group {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.55rem 0.45rem;
+  background-color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 10px;
+}
+.skills-tools-label {
+  display: block;
+  font-size: 0.54rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #b0bec5;
+  margin-bottom: 0.3rem;
+}
+.skill-card--tool {
+  background-color: #f1f5f9;
+  border-color: rgba(148, 163, 184, 0.28);
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+.skill-card--tool:hover {
+  background-color: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.45);
+  color: var(--accent);
+}
 }
 .skills-subgroup:first-of-type .skills-subtitle {
   margin-top: 0 !important;
