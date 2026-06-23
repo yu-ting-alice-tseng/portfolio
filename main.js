@@ -3380,7 +3380,7 @@
       ]},
     },
     "mkt-research": {
-      title: "Études De Marché & Positionnement",
+      title: "Études De Marché",
       text: "Segmentation d'audience et veille concurrentielle pour orienter la stratégie de contenu.",
       proofs: [
         {
@@ -3416,7 +3416,7 @@
       ],
     },
     "mkt-design": {
-      title: "Création De Contenu & Design Visuel",
+      title: "Rédaction De Contenu & Design Visuel",
       text: "Conception de visuels pour les réseaux sociaux, événements et supports de communication.",
       proofs: [
         {
