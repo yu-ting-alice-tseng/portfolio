@@ -3879,6 +3879,43 @@
     },
 
     // ?? Marketing Digital (nouvelles entrées) ????????????????????????
+    // Stratégie
+    "mkt-veille": {
+      title: "Veille Concurrentielle",
+      text: "Surveillance continue des tendances du marché et des actions concurrentes pour anticiper les évolutions et ajuster la stratégie marketing.",
+      proofs: [
+        { type: "Stage", title: "Assistante Marketing Digital – Veille Sectorielle", org: "KPN · Agence de marketing digital", meta: [], points: ["Analyse des tendances sectorielles et benchmarks concurrentiels pour orienter la création de contenus web, positionnant 10+ articles dans le Top 10 Google."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing – Veille REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Veille des tendances Xiaohongshu pour orienter la stratégie de contenu, générant +93,3% de visibilité."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+      ],
+      en: { title: "Competitive Intelligence", text: "Continuous monitoring of market trends and competitor activities to anticipate shifts and refine marketing strategy.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant – Sector Monitoring", org: "KPN · Digital Marketing Agency", meta: [], points: ["Analysed industry trends and competitive benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Marketing Assistant – REDnote Trend Monitoring", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Monitored Xiaohongshu trends to guide content strategy, achieving +93.3% visibility growth."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+      ]},
+    },
+    "mkt-benchmarking": {
+      title: "Benchmarking",
+      text: "Analyse comparative des performances et pratiques des concurrents pour identifier les écarts et opportunités d'amélioration.",
+      proofs: [
+        { type: "Stage", title: "Assistante Marketing Digital – Benchmarks Sectoriels", org: "KPN · Agence de marketing digital", meta: [], points: ["Réalisation de benchmarks sectoriels approfondis pour identifier les meilleures pratiques et affiner la stratégie de contenu des clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
+        { type: "Stage", title: "Assistante Marketing – Analyse Concurrentielle", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Benchmarking des comptes concurrents sur Xiaohongshu pour identifier les formats et thématiques les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+      ],
+      en: { title: "Benchmarking", text: "Comparative analysis of competitor performance and practices to identify gaps and improvement opportunities.", proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant – Sector Benchmarks", org: "KPN · Digital Marketing Agency", meta: [], points: ["Conducted in-depth sector benchmarks to identify best practices and refine client content strategy."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
+        { type: "Internship", title: "Marketing Assistant – Competitive Analysis", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Benchmarked competitor accounts on Xiaohongshu to identify top-performing formats and topics."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+      ]},
+    },
+    "mkt-positionnement": {
+      title: "Positionnement",
+      text: "Définition du positionnement de marque ou d'offre : segmentation cible, différenciation concurrentielle et proposition de valeur.",
+      proofs: [
+        { type: "Stage", title: "Assistante Marketing – Modèle STP", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Application du modèle STP (Segmentation, Ciblage, Positionnement) pour adapter le contenu à chaque sous-segment cible sur Xiaohongshu."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+        { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: [], points: ["Études de marché et ajustement de l'offre pour différencier les camps d'été sur un marché concurrentiel."], actions: [{ label: "Voir activités", href: "#extracurricular" }] },
+      ],
+      en: { title: "Positioning", text: "Defining brand or offer positioning: target segmentation, competitive differentiation and value proposition.", proofs: [
+        { type: "Internship", title: "Marketing Assistant – STP Model", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Applied the STP model (Segmentation, Targeting, Positioning) to tailor content for each sub-segment on Xiaohongshu."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+        { type: "Entrepreneurial Project", title: "Co-founder", org: "Sora Education", meta: [], points: ["Conducted market research and offer adjustments to differentiate summer camps in a competitive market."], actions: [{ label: "View activities", href: "#extracurricular" }] },
+      ]},
+    },
     "mkt-campaign": {
       title: "Planification De Campagnes",
       text: "Planification, coordination et suivi de campagnes marketing multicanal (SEO, SEA, social media, emailing).",
