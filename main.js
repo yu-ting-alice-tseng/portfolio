@@ -2980,7 +2980,7 @@
           marketing: { text: "Python automation script for Xiaohongshu data consolidation, cutting daily reporting time significantly." },
         },
         proofs: [
-          { type: "Portfolio", title: "XHS Weekly Report – Synthesis & Reporting", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Reporting", "Synthesis", "PowerPoint", "Data Storytelling"], points: ["Bilingual weekly report (EN/FR) distilling Xiaohongshu account performance into 7 actionable slides: key metrics, weekly trends and editorial recommendations for the management team."], actions: [{ label: "Download – French version", href: "assets/Engoo_Weekly Report_FR.pptx" }, { label: "Download – English version", href: "assets/Engoo_Weekly Report_EN.pptx" }, { label: "View Marketing Portfolio", href: "marketing.html" }] },
+          { type: "Portfolio", title: "XHS Weekly Report – Synthesis & Reporting", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Reporting", "Synthesis", "PowerPoint", "Data Storytelling"], points: ["Bilingual weekly report (EN/FR) distilling Xiaohongshu account performance into 7 actionable slides: key metrics, weekly trends and editorial recommendations for the management team."], actions: [{ label: "Download – French version", href: "assets/Engoo_Weekly Report_FR.pptx" }, { label: "Download – English version", href: "assets/Engoo_Weekly Report_EN.pptx" }, { label: "View Data Portfolio", href: "portfolio-data.html#xhs-weekly" }] },
           { type: "Personal Tool", title: "PDF Converter & Merger", org: "Python · win32com · pypdf", meta: ["Drag-and-drop · Word / PowerPoint / Excel / Images – PDF"], points: ["Drag-and-drop conversion of Word (.docx), PowerPoint (.pptx), Excel (.xlsx) and image files (JPG/PNG) to PDF via the Microsoft Office COM API.", "Automatic merging of multiple PDFs into a single file when all dropped files are already PDFs."] },
           { type: "Personal Tool", title: "Auto-Push – Automatic GitHub Sync", org: "Git CLI · Batch Script", meta: ["File watch · git commit + push · every 100s"], points: ["Watch script that detects local changes every 100 seconds and automatically runs git add – commit – push to the main branch.", "Keeps local files permanently in sync with GitHub without manual intervention."] },
           { type: "Internship", title: "Marketing Assistant – XHS Data Consolidation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Developed a Python script to automate daily Xiaohongshu data consolidation, reducing reporting time."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
@@ -3000,7 +3000,7 @@
           actions: [
             { label: "Télécharger – Version française", href: "assets/Engoo_Weekly Report_FR.pptx" },
             { label: "Télécharger – Version anglaise", href: "assets/Engoo_Weekly Report_EN.pptx" },
-            { label: "Voir le portfolio Marketing", href: "marketing.html" },
+            { label: "Voir le portfolio Data", href: "portfolio-data.html#xhs-weekly" },
           ],
         },
         {
