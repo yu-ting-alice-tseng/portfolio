@@ -2910,7 +2910,7 @@
       ],
     },
     "data-python": {
-      title: "Python – Analyse & Automatisation",
+      title: "Python – Analyse",
       text: "Utilisation de Python pour l'analyse de données, le traitement de fichiers et la création d'utils d'automatisation pour faciliter le travail quotidien.",
       byPage: {
         finance:   { text: "Automatisation de la consolidation de données financières et génération de rapports de performance marketing (CTR, CVR, ROI)." },
