@@ -2153,26 +2153,27 @@ body {
 
 /* ── Tool cards group box ────────────────────────── */
 .skills-tools-group {
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.55rem 0.45rem;
+  margin-top: 0.35rem;
+  padding: 0.25rem 0.4rem 0.3rem;
   background-color: #f8fafc;
   border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .skills-tools-label {
   display: block;
-  font-size: 0.54rem;
+  font-size: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #b0bec5;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 .skill-card--tool {
   background-color: #f1f5f9;
   border-color: rgba(148, 163, 184, 0.28);
   color: var(--text-soft);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  padding: 0.18rem 0.55rem;
 }
 .skill-card--tool:hover {
   background-color: rgba(37, 99, 235, 0.05);
