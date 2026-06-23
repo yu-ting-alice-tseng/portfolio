@@ -2179,7 +2179,6 @@ body {
   border-color: rgba(37, 99, 235, 0.45);
   color: var(--accent);
 }
-}
 .skills-subgroup:first-of-type .skills-subtitle {
   margin-top: 0 !important;
 }
