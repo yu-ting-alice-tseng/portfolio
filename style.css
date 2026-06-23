@@ -2136,6 +2136,7 @@ body {
   content: "/ " !important;
   color: var(--accent) !important;
   font-weight: 900 !important;
+}
 
 /* ── Nested sub-label (no slash prefix) ─────────── */
 .skills-subtitle--sub {
