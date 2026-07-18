@@ -20,6 +20,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
     <title>Yu-Ting Tseng · Portfolio</title>
     <meta name="description" content="Portfolio de Yu-Ting Tseng – marketing digital, analyse de données, consulting." />
     <link rel="stylesheet" href="style.css" />
