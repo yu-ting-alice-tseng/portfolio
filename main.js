@@ -8,6 +8,7 @@
       const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       themeToggle.setAttribute("aria-pressed", String(next === "dark"));
+      void themeToggle.offsetHeight; // force style recalc on the toggle button itself
       try {
         localStorage.setItem("theme", next);
       } catch (e) {}
