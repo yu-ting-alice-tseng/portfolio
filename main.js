@@ -169,6 +169,8 @@
         langJapanese: "Japonais",
         deepDiveMarketing: " – Page Marketing",
         deepDiveData: " – Page Data",
+        seePortfolio: "→ Voir dans le portfolio",
+        seeVisuals: "→ Voir les visuels dans le portfolio",
         deepDiveLabel: "Pages détaillées par domaine :",
         aiesecDesc: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO. Création des visuels principaux pour le recrutement de volontaires et de participants.",
         kpnDesc: "Optimisation SEO on-page et technique, suivi de KPIs (trafic, CTR, conversions) via Google Analytics et reporting de campagnes SEA.",
@@ -266,6 +268,8 @@
         subMkt2: "SEA (Search Engine Advertising)",
         subMkt3: "SMM (Social Media Marketing)",
         subMkt4: "Stratégie & Planification",
+        subMktAcq: "Acquisition & Performance",
+        subMktSocial: "Social Media & Contenu",
         subCons1: "Analyse Stratégique",
         subCons2: "Business & Présentation",
         subFin1: "Cours & Fondamentaux",
@@ -285,6 +289,9 @@
         chipResearch: "Études de Marché",
         chipVeille: "Veille Concurrentielle",
         chipBenchmarking: "Benchmarking",
+        chipBenchmarkingComp: "Benchmarking Concurrentiel",
+        chipBusinessCase: "Business Case & Recommandations",
+        chipStorytelling: "Storytelling & Présentations",
         chipPositionnement: "Positionnement",
         subMktStrategie: "Stratégie",
         subMktContenu: "Contenu",
@@ -382,6 +389,12 @@
           gpa: "4,0/4,0",
           specLabel: "Spécialisation",
           spec1: "Finance & Comptabilité",
+          courseCorpFin: "Finance d'Entreprise",
+          courseAccounting: "Comptabilité & Contrôle",
+          courseMarketing: "Marketing",
+          courseStrategy: "Management Stratégique",
+          courseDataCompliance: "Conformité des Données d'Entreprise",
+          courseStats: "Introduction aux Statistiques",
         },
         nccu: {
           period: "09/2020 – 06/2025",
@@ -473,7 +486,7 @@
         fieldMsg: "Message (facultatif)",
         fieldMsgPh: "Parlez-moi de votre niveau, vos objectifs ou vos questions.",
         submit: "Envoyer la demande",
-        formNote: "Ce formulaire est une démonstration front-end. Connectez-le à Formspree ou Netlify Forms pour l'activer.",
+        formNote: "L'envoi ouvre votre application e-mail avec votre demande préremplie.",
       },
       resources: {                         // → teaching.html (ressources d'apprentissage)
         title: "Ressources pédagogiques",
@@ -730,6 +743,7 @@
         },
         tutorABC: {                        // → teaching.html (section Expériences d'enseignement)
           period: "08/2024 – Présent",
+          location: "En ligne",
           title: "Professeure particulière d'anglais en ligne",
           point1: "Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).",
           point2: "Préparation aux certifications IELTS et Cambridge English (YLE, A2 Key, B1 Preliminary, B2 First).",
@@ -980,7 +994,6 @@
         },
         filterAll: "Toutes",
         filterVolunteer: "Bénévolat",
-        periodTBD: "Période à préciser",
         filterEntrepreneurship: "Entrepreneuriat",
         filterClubs: "Clubs & culture",
         viewAll: "Voir tout",
@@ -1082,7 +1095,7 @@
         messagePlaceholder: "Expliquez brièvement votre besoin ou votre projet.",
         submit: "Envoyer le message",
         formNote:
-          "Ce formulaire est une démonstration front-end. Connectez-le à Formspree ou Netlify Forms pour l'activer.",
+          "L'envoi ouvre votre application e-mail avec votre message prérempli.",
       },
     },
     // ─── en ──────────────────────────────────────────────────────────────────
@@ -1100,6 +1113,8 @@
         langJapanese: "Japanese",
         deepDiveMarketing: " – Marketing page",
         deepDiveData: " – Data page",
+        seePortfolio: "→ See in the portfolio",
+        seeVisuals: "→ See the visuals in the portfolio",
         deepDiveLabel: "Detailed pages by domain:",
         aiesecDesc: "Led a 4-person marketing team for the international YOLO camp. Created main campaign visuals (posters, posts) for volunteer and participant recruitment.",
         kpnDesc: "On-page & technical SEO optimisation, KPI tracking (traffic, CTR, conversions) via Google Analytics and SEA campaign reporting.",
@@ -1176,6 +1191,8 @@
         subMkt2: "SEA (Search Engine Advertising)",
         subMkt3: "SMM (Social Media Marketing)",
         subMkt4: "Strategy & Planning",
+        subMktAcq: "Acquisition & Performance",
+        subMktSocial: "Social Media & Content",
         subCons1: "Strategic Analysis",
         subCons2: "Business & Presentations",
         subFin1: "Courses & Fundamentals",
@@ -1195,6 +1212,9 @@
         chipResearch: "Market Research",
         chipVeille: "Competitive Intelligence",
         chipBenchmarking: "Benchmarking",
+        chipBenchmarkingComp: "Competitive Benchmarking",
+        chipBusinessCase: "Business Cases & Recommendations",
+        chipStorytelling: "Storytelling & Presentations",
         chipPositionnement: "Positioning",
         subMktStrategie: "Strategy",
         subMktContenu: "Content",
@@ -1294,6 +1314,12 @@
           gpa: "4.0/4.0",
           specLabel: "Specialisation",
           spec1: "Finance & Accounting",
+          courseCorpFin: "Corporate Finance",
+          courseAccounting: "Accounting & Control",
+          courseMarketing: "Marketing",
+          courseStrategy: "Strategic Management",
+          courseDataCompliance: "Corporate Data Compliance",
+          courseStats: "Introduction to Statistics",
         },
         nccu: {
           period: "09/2020 – 06/2025",
@@ -1306,7 +1332,7 @@
           minor1: "Economics",
           point1: "Certificate of Excellence (Top 5% GPA) – 2021, 2023.",
           point2: "PR Officer for the Guzheng Club; AIESEC member and project team lead.",
-          gpa: "4.21 / 4.3 (3.99 / 4.0)",
+          gpa: "3.99 / 4.0",
           statRanking: "Ranking",
           courseManagement: "Management",
           courseDataAnalysis: "Data Analysis & Programming (Excel & Access)",
@@ -1385,7 +1411,7 @@
         fieldMsg: "Message (optional)",
         fieldMsgPh: "Tell me about your level, goals or any questions.",
         submit: "Send request",
-        formNote: "This is a front-end demo form. Connect it to Formspree or Netlify Forms to activate it.",
+        formNote: "Submitting opens your email app with your request pre-filled.",
       },
       resources: {
         title: "Learning Resources",
@@ -1620,6 +1646,7 @@
         },
         tutorABC: {
           period: "08/2024 – Present",
+          location: "Online",
           title: "Online English Tutor",
           point1: "Online English tutoring (one-on-one and group lessons) for learners from primary to high school level.",
           point2: "Pronunciation, speaking, beginner and Cambridge English exam preparation.",
@@ -1875,7 +1902,6 @@
         },
         filterAll: "All",
         filterVolunteer: "Volunteering",
-        periodTBD: "Dates TBC",
         filterEntrepreneurship: "Entrepreneurship",
         filterClubs: "Clubs & culture",
         viewAll: "View all",
@@ -1893,7 +1919,7 @@
           "Initiatives focused on education, international exchange and social impact.",
         aiesec: {
           period: "Sep. 2024 – Jun. 2025",
-          title: "Marketing Project Leader &amp; Incoming Volunteer Department",
+          title: "Marketing Project Leader & Incoming Volunteer Department",
           org:
             "AIESEC in NCCU · Global non-profit organization developing youth leadership",
           point1:
@@ -1976,7 +2002,7 @@
         messagePlaceholder: "Briefly describe your project or request.",
         submit: "Send message",
         formNote:
-          "This is a front-end demo form. Connect it to Formspree or Netlify Forms to activate it.",
+          "Submitting opens your email app with your message pre-filled.",
       },
     },
     // ─── zh ──────────────────────────────────────────────────────────────────
@@ -1994,6 +2020,8 @@
         langJapanese: "日語",
         deepDiveMarketing: "──行銷專頁",
         deepDiveData: "──數據專頁",
+        seePortfolio: "→ 前往作品集",
+        seeVisuals: "→ 前往作品集查看視覺作品",
         deepDiveLabel: "各領域詳細頁面：",
         aiesecDesc: "帶領 AIESEC NCCU YOLO 國際營隊行銷小組（4 人），製作主視覺海報及社群貼文，招募志工與學員。",
         kpnDesc: "執行 SEO 優化，透過 Google Analytics 追蹤 KPI（流量、CTR、轉換率），並進行 SEA 廣告活動管理。",
@@ -2065,10 +2093,12 @@
         subDataQuant: "量化方法",
         subDataQual: "質性方法與分析",
         subData4: "AI 工具",
-        subMkt1: "投放與績效",
-        subMkt2: "社群媒體與內容",
-        subMkt3: "策略與規劃",
+        subMkt1: "搜尋引擎優化（SEO）",
+        subMkt2: "搜尋引擎廣告（SEA）",
+        subMkt3: "社群媒體行銷（SMM）",
         subMkt4: "策略與規劃",
+        subMktAcq: "投放與績效",
+        subMktSocial: "社群媒體與內容",
         subCons1: "策略分析",
         subCons2: "商業與簡報",
         subFin1: "課程與基礎知識",
@@ -2084,6 +2114,9 @@
         chipResearch: "市場研究",
         chipVeille: "競爭情報監測",
         chipBenchmarking: "基準分析",
+        chipBenchmarkingComp: "競爭者比較分析",
+        chipBusinessCase: "商業案例與策略建議",
+        chipStorytelling: "敘事與簡報表達",
         chipPositionnement: "品牌定位",
         subMktStrategie: "策略",
         subMktContenu: "內容",
@@ -2170,6 +2203,12 @@
           gpa: "4.0/4.0",
           specLabel: "專業方向",
           spec1: "財務與會計",
+          courseCorpFin: "公司財務",
+          courseAccounting: "會計與管控",
+          courseMarketing: "行銷",
+          courseStrategy: "策略管理",
+          courseDataCompliance: "企業資料合規",
+          courseStats: "統計學導論",
         },
         nccu: {
           period: "2020/09 –2025/06",
@@ -2261,7 +2300,7 @@
         fieldMsg: "訊息（選填）",
         fieldMsgPh: "請告訴我您的程度、學習目標或任何問題。",
         submit: "送出申請",
-        formNote: "此表單為前端示範，請連結 Formspree 或 Netlify Forms 以啟用。",
+        formNote: "送出後將開啟您的電子郵件應用程式，並自動帶入申請內容。",
       },
       resources: {
         title: "學習資源",
@@ -2491,6 +2530,7 @@
         },
         tutorABC: {
           period: "2024/08 –至今",
+          location: "線上",
           title: "線上英語家教",
           point1: "提供小學至高中生一對一線上英語家教課程。",
           point2: "發音、口說、初學者課程及劍橋英語備考（YLE、A2 Key、B1 Preliminary、B2 First）。",
@@ -2726,7 +2766,6 @@
         },
         filterAll: "全部",
         filterVolunteer: "志願服務",
-        periodTBD: "時間待確認",
         filterEntrepreneurship: "創業",
         filterClubs: "社團 & 文化",
         viewAll: "查看全部",
@@ -2824,7 +2863,7 @@
         messagePlaceholder: "請簡短說明您的需求或專案。",
         submit: "送出訊息",
         formNote:
-          "此表單為前端示範，請連結 Formspree 或 Netlify Forms 以啟用。",
+          "送出後將開啟您的電子郵件應用程式，並自動帶入訊息內容。",
       },
     },
   };
@@ -3077,7 +3116,7 @@
     },
     "data-statistics": {
       title: "Statistiques & Méthodes Quantitatives",
-      text: "Ma簾trise des méthodes quantitatives – régression OLS et Logit, analyse de panel, tests d'hypothèses, statistiques descriptives et inférentielles – appliquées à la recherche académique et aux études de marché.",
+      text: "Maîtrise des méthodes quantitatives – régression OLS et Logit, analyse de panel, tests d'hypothèses, statistiques descriptives et inférentielles – appliquées à la recherche académique et aux études de marché.",
       byPage: {
         finance:   { text: "Régressions OLS et Logit sur données LSEG/Refinitiv (2000 – 2024) pour tester l'impact du risque politique sur les opérations M&A." },
         data:      { text: "Méthodes quantitatives appliquées : régressions multivariées, analyse de corrélation et tests d'hypothèses pour la recherche et l'analyse de marché." },
@@ -3646,13 +3685,13 @@
     // ?? Finance – Analyse & Contrôle de Gestion ?????????????????????
     "fin-accounting": {
       title: "Financial Accounting",
-      text: "Ma簾trise des états financiers (bilan, compte de résultat, flux de trésorerie), des normes comptables et de la comptabilité en partie double.",
+      text: "Maîtrise des états financiers (bilan, compte de résultat, flux de trésorerie), des normes comptables et de la comptabilité en partie double.",
       proofs: [
         {
           type: "Formation",
           title: "Spécialisation Finance & Comptabilité",
           org: "emlyon business school",
-          meta: ["Lyon · France", "2023 – Présent"],
+          meta: ["Lyon · France", "2025 – Présent"],
           points: ["Financial Accounting : états financiers, consolidation, analyse des comptes annuels."],
           actions: [{ label: "Voir la formation", href: "#education" }],
         },
@@ -3688,7 +3727,7 @@
           type: "Formation",
           title: "Spécialisation Finance & Comptabilité",
           org: "emlyon business school",
-          meta: ["Lyon · France", "2023 – Présent"],
+          meta: ["Lyon · France", "2025 – Présent"],
           points: ["Modélisation financière : projections, valorisation et analyse de sensibilité."],
           actions: [{ label: "Voir la formation", href: "#education" }],
         },
@@ -3702,7 +3741,7 @@
           type: "Formation",
           title: "Spécialisation Finance & Comptabilité",
           org: "emlyon business school",
-          meta: ["Lyon · France", "2023 – Présent"],
+          meta: ["Lyon · France", "2025 – Présent"],
           points: ["Analyse des écarts budgétaires (prix, volume, mix) et identification des leviers d'action."],
           actions: [{ label: "Voir la formation", href: "#education" }],
         },
@@ -3746,7 +3785,7 @@
           type: "Formation",
           title: "Spécialisation Finance & Comptabilité",
           org: "emlyon business school",
-          meta: ["Lyon · France", "2023 – Présent"],
+          meta: ["Lyon · France", "2025 – Présent"],
           points: ["Management Accounting : budgeting, cost allocation, performance measurement et reporting de gestion."],
           actions: [{ label: "Voir la formation", href: "#education" }],
         },
@@ -4132,17 +4171,6 @@
       text: "Utilisation quotidienne des principaux modèles d'IA générative pour la rédaction, l'analyse, la génération de code et la productivité.",
       proofs: [
         {
-          type: "Cours",
-          title: "Data Science & AI for Business",
-          org: "emlyon business school",
-          meta: ["Lyon · France"],
-          points: [
-            "Fondements du machine learning appliqués au contexte business.",
-            "Cas d'usage de l'IA pour la prise de décision et l'automatisation.",
-          ],
-          actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
-        },
-        {
           type: "Pratique",
           title: "Utilisation quotidienne – Production & Analyse",
           org: "Usage professionnel & académique",
@@ -4183,12 +4211,11 @@
       proofs: [
         {
           type: "Cours",
-          title: "Data Science & AI for Business",
+          title: "Transformations",
           org: "emlyon business school",
           meta: ["Lyon · France"],
           points: [
-            "Applications business du machine learning : prédiction, segmentation, recommandation.",
-            "Analyse de l'impact de l'IA sur les stratégies d'entreprise.",
+            "Cours de tronc commun du Programme Grande École consacré aux transformations des entreprises et de leurs modèles d'affaires.",
           ],
           actions: [{ label: "Voir la formation", href: "#edu-emlyon" }],
         },
@@ -4956,5 +4983,27 @@
       });
     }
   }
+
+  // Contact & booking forms: open the visitor's email app pre-filled
+  document.querySelectorAll("form.contact-form").forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const lines = [];
+      form.querySelectorAll("input[name], select[name], textarea[name]").forEach((field) => {
+        if (field.type === "radio" && !field.checked) return;
+        if (field.closest("[hidden]")) return;
+        const value = (field.value || "").trim();
+        if (!value) return;
+        const labelEl = field.id ? form.querySelector(`label[for="${field.id}"]`) : null;
+        const label = labelEl ? labelEl.textContent.trim() : field.name;
+        lines.push(`${label}: ${value}`);
+      });
+      const mailto =
+        "mailto:yuting.alice.tseng@gmail.com" +
+        "?subject=" + encodeURIComponent(document.title + " - Contact") +
+        "&body=" + encodeURIComponent(lines.join("\n"));
+      window.location.href = mailto;
+    });
+  });
 });
 
