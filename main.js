@@ -1,4 +1,19 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
+  // Theme toggle (light / dark)
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (themeToggle) {
+    const root = document.documentElement;
+    themeToggle.setAttribute("aria-pressed", String(root.getAttribute("data-theme") === "dark"));
+    themeToggle.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      themeToggle.setAttribute("aria-pressed", String(next === "dark"));
+      try {
+        localStorage.setItem("theme", next);
+      } catch (e) {}
+    });
+  }
+
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = String(new Date().getFullYear());
