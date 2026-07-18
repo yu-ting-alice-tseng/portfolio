@@ -4670,7 +4670,10 @@ html[data-theme="dark"] .field textarea:focus {
 html[data-theme="dark"] .footer-inner { border-top-color: rgba(148, 163, 184, 0.22); }
 html[data-theme="dark"] .skip-link { background: #16213a; color: var(--text); border-color: rgba(148, 163, 184, 0.4); }
 
-/* Page-specific accent surfaces (teal Data page keeps its own accent) */
+/* Page-specific accent surfaces — each page sets its own --bg/--accent
+   directly on <body>, which otherwise wins over the generic <html> dark
+   tokens above (an element's own rule beats an inherited ancestor value
+   regardless of specificity), so each page needs its own dark override. */
 html[data-theme="dark"] body.page-data {
   --bg: #081b1a !important;
   --bg-soft: #0d2725 !important;
@@ -4679,4 +4682,43 @@ html[data-theme="dark"] body.page-data {
 html[data-theme="dark"] body.page-data::before,
 html[data-theme="dark"] body.page-data::after {
   background: linear-gradient(to bottom, transparent 0%, rgba(45, 212, 191, 0.22) 18%, rgba(34, 211, 238, 0.18) 55%, rgba(20, 184, 166, 0.12) 82%, transparent 100%);
+}
+
+html[data-theme="dark"] body.page-finance {
+  --accent: #5b8fc7 !important;
+  --accent-hover: #7ba7d6 !important;
+  --accent-soft: rgba(91, 143, 199, 0.14) !important;
+  --bg: #0b1220 !important;
+  --bg-soft: #131c30 !important;
+}
+html[data-theme="dark"] .page-finance .hero {
+  background: linear-gradient(160deg, #0f1a2e 0%, #131c30 40%, #16213a 70%, #101828 100%) !important;
+}
+html[data-theme="dark"] .page-finance .section-alt {
+  background: rgba(91, 143, 199, 0.04);
+}
+
+html[data-theme="dark"] body.page-marketing {
+  --accent: #fb7185 !important;
+  --accent-hover: #fda4af !important;
+  --accent-soft: rgba(251, 113, 133, 0.14) !important;
+  --bg: #170f18 !important;
+  --bg-soft: #201526 !important;
+  background: radial-gradient(ellipse at 5% 8%, rgba(225, 29, 72, 0.10) 0%, transparent 42%),
+    radial-gradient(ellipse at 95% 88%, rgba(124, 58, 237, 0.12) 0%, transparent 42%),
+    radial-gradient(ellipse at 60% 45%, rgba(225, 29, 72, 0.05) 0%, transparent 55%),
+    #170f18 !important;
+}
+html[data-theme="dark"] .page-marketing .hero {
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(225,29,72,0.13) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(124,58,237,0.13) 0%, transparent 55%),
+    linear-gradient(160deg, #170f18 0%, #1a1424 100%) !important;
+}
+html[data-theme="dark"] .page-marketing .section-alt {
+  background: linear-gradient(135deg, rgba(225,29,72,0.05) 0%, rgba(124,58,237,0.05) 100%);
+}
+
+html[data-theme="dark"] .page-teaching .section-alt {
+  background: linear-gradient(158deg, #101828 0%, rgba(124, 58, 237, 0.08) 55%, rgba(8, 145, 178, 0.07) 100%);
 }
