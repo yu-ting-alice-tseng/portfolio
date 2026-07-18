@@ -2943,7 +2943,7 @@
     });
 
     // Show/hide elements that only make sense in a specific language
-    // Usage: data-lang-show="zh"  ??visible only when ZH is active
+    // Usage: data-lang-show="zh" — visible only when ZH is active
     document.querySelectorAll("[data-lang-show]").forEach((el) => {
       const targetLang = el.getAttribute("data-lang-show");
       el.style.display = targetLang === lang ? "" : "none";
@@ -4759,7 +4759,7 @@
   });
 
   // ?? Shared filter animation helper ????????????????
-  const FADE_DURATION = 190; // ms ??must match CSS .filter-fade-out transition
+  const FADE_DURATION = 190; // ms — must match CSS .filter-fade-out transition
 
   function animateFilterItem(el, show) {
     if (show) {
@@ -4823,7 +4823,7 @@
         skillAreaFilters.forEach((b) => b.classList.remove("is-active"));
         btn.classList.add("is-active");
         applySkillArea(area);
-        resetSkillPreview(); // ??clear preview when switching category
+        resetSkillPreview(); // clear preview when switching category
       });
     });
 
