@@ -65,7 +65,7 @@
     });
   }
 
-  // Desktop nav dropdown ??click-toggle
+  // Desktop nav dropdown — click-toggle
   document.querySelectorAll(".nav-item--has-dropdown").forEach((item) => {
     const btn = item.querySelector(".nav-dropdown-toggle");
     if (!btn) return;
