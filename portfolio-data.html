@@ -29,41 +29,41 @@
 
     /* ── Precision Analytics palette — Data & Market Research ── */
     :root {
-      --lx-bg:           #f8fafc;
-      --lx-bg-soft:      #f1f5f9;
-      --lx-card:         #ffffff;
-      --lx-card-hover:   #f8fafc;
-      --lx-gold:         #0d9488;
-      --lx-gold-light:   #14b8a6;
-      --lx-gold-pale:    rgba(13,148,136,0.08);
-      --lx-gold-border:  rgba(13,148,136,0.22);
-      --lx-text:         #0f172a;
-      --lx-text-soft:    #475569;
-      --lx-muted:        #94a3b8;
-      --lx-border:       #e2e8f0;
-      --lx-border2:      #cbd5e1;
-      --lx-green:        #059669;
-      --lx-green-pale:   rgba(5,150,105,0.08);
-      --lx-insight:      #6366f1;
-      --lx-insight-pale: rgba(99,102,241,0.08);
+      --da-bg:           #f8fafc;
+      --da-bg-soft:      #f1f5f9;
+      --da-card:         #ffffff;
+      --da-card-hover:   #f8fafc;
+      --da-accent:        #0d9488;
+      --da-accent-light:  #14b8a6;
+      --da-accent-pale:   rgba(13,148,136,0.08);
+      --da-accent-border: rgba(13,148,136,0.22);
+      --da-text:         #0f172a;
+      --da-text-soft:    #475569;
+      --da-muted:        #94a3b8;
+      --da-border:       #e2e8f0;
+      --da-border2:      #cbd5e1;
+      --da-green:        #059669;
+      --da-green-pale:   rgba(5,150,105,0.08);
+      --da-insight:      #6366f1;
+      --da-insight-pale: rgba(99,102,241,0.08);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
     body.page-portfolio-data {
-      background: var(--lx-bg);
-      color: var(--lx-text);
+      background: var(--da-bg);
+      color: var(--da-text);
       font-family: 'Outfit', sans-serif;
       min-height: 100vh;
     }
 
-    /* Thin champagne-gold rule at very top */
+    /* Thin accent rule at very top */
     body.page-portfolio-data::before {
       content: '';
       position: fixed;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent 0%, var(--lx-gold) 30%, var(--lx-gold-light) 50%, var(--lx-gold) 70%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, var(--da-accent) 30%, var(--da-accent-light) 50%, var(--da-accent) 70%, transparent 100%);
       z-index: 300;
       pointer-events: none;
     }
@@ -77,7 +77,7 @@
       background: rgba(248,250,252,0.92);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--lx-border);
+      border-bottom: 1px solid var(--da-border);
     }
     .pf-topbar-inner {
       max-width: 1240px;
@@ -95,19 +95,19 @@
       font-size: 0.72rem;
       font-weight: 400;
       letter-spacing: 0.06em;
-      color: var(--lx-muted);
+      color: var(--da-muted);
       text-decoration: none;
       transition: color 0.25s;
       white-space: nowrap;
     }
-    .pf-back:hover { color: var(--lx-gold); }
+    .pf-back:hover { color: var(--da-accent); }
     .pf-back svg { width: 12px; height: 12px; flex-shrink: 0; }
-    .pf-topbar-sep { width: 1px; height: 16px; background: var(--lx-border); flex-shrink: 0; }
+    .pf-topbar-sep { width: 1px; height: 16px; background: var(--da-border); flex-shrink: 0; }
     .pf-topbar-label {
       font-size: 0.64rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--lx-muted);
+      color: var(--da-muted);
       flex: 1;
       font-weight: 300;
     }
@@ -115,8 +115,8 @@
       display: flex;
       align-items: stretch;
       gap: 0;
-      background: var(--lx-bg-soft);
-      border: 1px solid var(--lx-gold-border);
+      background: var(--da-bg-soft);
+      border: 1px solid var(--da-accent-border);
       border-radius: 9999px;
       padding: 0;
       overflow: hidden;
@@ -129,7 +129,7 @@
       letter-spacing: 0.06em;
       padding: 0.22rem 0.65rem;
       cursor: pointer;
-      color: var(--lx-text-soft);
+      color: var(--da-text-soft);
       border-radius: 9999px;
       transition: background 0.15s ease, color 0.15s ease;
       height: 100%;
@@ -137,9 +137,9 @@
       align-items: center;
       font-family: 'Outfit', sans-serif;
     }
-    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--lx-text); background: var(--lx-gold-pale); }
+    .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--da-text); background: var(--da-accent-pale); }
     .pf-topbar .lang-btn.is-active {
-      background: var(--lx-gold);
+      background: var(--da-accent);
       color: #ffffff;
       box-shadow: 0 2px 8px rgba(13,148,136,0.30);
     }
@@ -161,7 +161,7 @@
       font-size: 0.6rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--lx-gold);
+      color: var(--da-accent);
       font-weight: 400;
       margin-bottom: 1.5rem;
       font-family: 'Outfit', sans-serif;
@@ -171,7 +171,7 @@
       display: inline-block;
       width: 28px;
       height: 1px;
-      background: var(--lx-gold);
+      background: var(--da-accent);
       flex-shrink: 0;
       opacity: 0.7;
     }
@@ -180,18 +180,18 @@
       font-size: clamp(3rem, 5.5vw, 5rem);
       font-weight: 600;
       line-height: 1.0;
-      color: var(--lx-text);
+      color: var(--da-text);
       margin: 0 0 1.4rem;
       letter-spacing: -0.01em;
     }
     .pf-hero-title span {
       font-style: italic;
-      color: var(--lx-gold);
+      color: var(--da-accent);
     }
     .pf-hero-desc {
       font-size: 0.84rem;
       line-height: 1.85;
-      color: var(--lx-text-soft);
+      color: var(--da-text-soft);
       max-width: clamp(280px, 38vw, 500px);
       margin: 0;
       font-weight: 300;
@@ -207,9 +207,9 @@
     .pf-hero-stat-block {
       text-align: right;
       padding: 1.2rem 1.6rem;
-      background: var(--lx-card);
-      border: 1px solid var(--lx-border);
-      border-left: 1px solid var(--lx-gold-border);
+      background: var(--da-card);
+      border: 1px solid var(--da-border);
+      border-left: 1px solid var(--da-accent-border);
       min-width: 168px;
       transition: background 0.25s, border-color 0.25s;
       position: relative;
@@ -219,10 +219,10 @@
       position: absolute;
       left: 0; top: 15%; bottom: 15%;
       width: 1.5px;
-      background: var(--lx-gold);
+      background: var(--da-accent);
       opacity: 0.6;
     }
-    .pf-hero-stat-block:hover { background: var(--lx-card-hover); }
+    .pf-hero-stat-block:hover { background: var(--da-card-hover); }
     .pf-hero-stat-block:hover::before { opacity: 1; }
     .pf-hero-stat-num {
       display: block;
@@ -230,14 +230,14 @@
       font-size: 2.2rem;
       font-weight: 400;
       line-height: 1;
-      color: var(--lx-gold);
+      color: var(--da-accent);
     }
     .pf-hero-stat-label {
       display: block;
       font-size: 0.57rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--lx-muted);
+      color: var(--da-muted);
       margin-top: 0.4rem;
       font-weight: 400;
     }
@@ -250,8 +250,8 @@
       display: flex;
       align-items: center;
       gap: 0;
-      border-top: 1px solid var(--lx-border);
-      border-bottom: 1px solid var(--lx-border);
+      border-top: 1px solid var(--da-border);
+      border-bottom: 1px solid var(--da-border);
       overflow-x: auto;
       scrollbar-width: none;
     }
@@ -267,16 +267,16 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       font-weight: 400;
-      color: var(--lx-muted);
+      color: var(--da-muted);
       cursor: pointer;
       transition: color 0.22s, border-color 0.22s;
       margin-bottom: -1px;
       white-space: nowrap;
     }
-    .pf-filters .filter-btn:hover { color: var(--lx-text-soft); }
+    .pf-filters .filter-btn:hover { color: var(--da-text-soft); }
     .pf-filters .filter-btn.is-active {
-      color: var(--lx-gold);
-      border-bottom-color: var(--lx-gold);
+      color: var(--da-accent);
+      border-bottom-color: var(--da-accent);
     }
 
     /* ── Grid ──────────────────────────────────────────── */
@@ -291,8 +291,8 @@
 
     /* ── Card ──────────────────────────────────────────── */
     .pf-card {
-      background: var(--lx-card);
-      border: 1px solid var(--lx-border);
+      background: var(--da-card);
+      border: 1px solid var(--da-border);
       border-radius: 0;
       padding: 2.25rem;
       transition: background 0.28s ease;
@@ -303,17 +303,17 @@
       position: absolute;
       bottom: 0; left: 2.25rem; right: 2.25rem;
       height: 1px;
-      background: var(--lx-border);
+      background: var(--da-border);
     }
-    .pf-card:hover { background: var(--lx-card-hover); }
+    .pf-card:hover { background: var(--da-card-hover); }
     .pf-card.is-hidden { display: none !important; }
 
     .pf-card--featured {
       padding: 3rem 3.5rem;
-      background: var(--lx-bg-soft);
+      background: var(--da-bg-soft);
       border: none;
-      border-top: 1px solid var(--lx-border);
-      border-bottom: 1px solid var(--lx-border);
+      border-top: 1px solid var(--da-border);
+      border-bottom: 1px solid var(--da-border);
       position: relative;
     }
     .pf-card--featured::before {
@@ -321,16 +321,16 @@
       position: absolute;
       left: 0; top: 0; bottom: 0;
       width: 1.5px;
-      background: linear-gradient(to bottom, transparent 0%, var(--lx-gold) 20%, var(--lx-gold) 80%, transparent 100%);
+      background: linear-gradient(to bottom, transparent 0%, var(--da-accent) 20%, var(--da-accent) 80%, transparent 100%);
     }
     .pf-card--featured::after { display: none; }
-    .pf-card--featured:hover { background: var(--lx-bg-soft); }
+    .pf-card--featured:hover { background: var(--da-bg-soft); }
 
     .pf-card-num {
       font-size: 0.58rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--lx-muted);
+      color: var(--da-muted);
       font-weight: 400;
       margin-bottom: 0.75rem;
     }
@@ -340,9 +340,9 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       font-weight: 500;
-      color: var(--lx-gold);
-      background: var(--lx-gold-pale);
-      border: 1px solid var(--lx-gold-border);
+      color: var(--da-accent);
+      background: var(--da-accent-pale);
+      border: 1px solid var(--da-accent-border);
       padding: 0.2rem 0.7rem;
       border-radius: 1px;
       margin-bottom: 1rem;
@@ -352,7 +352,7 @@
       font-size: 1.7rem;
       font-weight: 600;
       line-height: 1.18;
-      color: var(--lx-text);
+      color: var(--da-text);
       margin: 0 0 1rem;
       letter-spacing: 0.01em;
     }
@@ -360,41 +360,41 @@
     .pf-card-body {
       font-size: 0.83rem;
       line-height: 1.82;
-      color: var(--lx-text-soft);
+      color: var(--da-text-soft);
       font-weight: 300;
     }
 
     /* ── STAR sections ─────────────────────────────────── */
     .pf-star {
       padding: 0.9rem 1.2rem;
-      border-left: 1px solid var(--lx-gold);
-      background: var(--lx-gold-pale);
+      border-left: 1px solid var(--da-accent);
+      background: var(--da-accent-pale);
       border-radius: 0;
       margin: 1.1rem 0;
     }
     .pf-star--action { border-left-color: rgba(99,102,241,0.6); background: rgba(99,102,241,0.06); }
-    .pf-star--action .pf-star-lbl { color: var(--lx-insight); }
-    .pf-star--result { border-left-color: var(--lx-green); background: var(--lx-green-pale); }
-    .pf-star--result .pf-star-lbl { color: var(--lx-green); }
-    .pf-star--insight { border-left-color: var(--lx-insight); background: var(--lx-insight-pale); }
-    .pf-star--insight .pf-star-lbl { color: var(--lx-insight); }
+    .pf-star--action .pf-star-lbl { color: var(--da-insight); }
+    .pf-star--result { border-left-color: var(--da-green); background: var(--da-green-pale); }
+    .pf-star--result .pf-star-lbl { color: var(--da-green); }
+    .pf-star--insight { border-left-color: var(--da-insight); background: var(--da-insight-pale); }
+    .pf-star--insight .pf-star-lbl { color: var(--da-insight); }
     .pf-star-lbl {
       font-size: 0.57rem;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--lx-gold);
+      color: var(--da-accent);
       margin-bottom: 0.5rem;
       font-family: 'Outfit', sans-serif;
     }
     .pf-star-txt {
       font-size: 0.82rem;
       line-height: 1.78;
-      color: var(--lx-text-soft);
+      color: var(--da-text-soft);
       margin: 0;
       font-weight: 300;
     }
-    .pf-star-txt strong { color: var(--lx-text); font-weight: 500; }
+    .pf-star-txt strong { color: var(--da-text); font-weight: 500; }
     .pf-star-txt ul { margin: 0.45rem 0 0; padding-left: 1.1rem; }
     .pf-star-txt li { margin-bottom: 0.38rem; }
 
@@ -406,7 +406,7 @@
       display: block;
       overflow: hidden;
       border-radius: 0;
-      background: var(--lx-bg-soft);
+      background: var(--da-bg-soft);
       border: none;
       position: relative;
     }
@@ -422,8 +422,8 @@
     .pf-stats {
       display: flex; flex-wrap: wrap; gap: 2.5rem;
       padding: 1.4rem 0;
-      border-top: 1px solid var(--lx-border);
-      border-bottom: 1px solid var(--lx-border);
+      border-top: 1px solid var(--da-border);
+      border-bottom: 1px solid var(--da-border);
       margin: 1.4rem 0;
     }
     .pf-stat-val {
@@ -432,12 +432,12 @@
       font-size: 2.1rem;
       font-weight: 600;
       line-height: 1;
-      color: var(--lx-gold);
+      color: var(--da-accent);
     }
     .pf-stat-lbl {
       display: block; font-size: 0.57rem;
       letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--lx-muted); margin-top: 0.3rem;
+      color: var(--da-muted); margin-top: 0.3rem;
       font-weight: 400;
     }
     .pf-res-stats {
@@ -454,9 +454,9 @@
     /* ── Tags ──────────────────────────────────────────── */
     .pf-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem; }
     .pf-tag {
-      font-size: 0.6rem; color: var(--lx-muted);
-      background: var(--lx-gold-pale);
-      border: 1px solid var(--lx-border);
+      font-size: 0.6rem; color: var(--da-muted);
+      background: var(--da-accent-pale);
+      border: 1px solid var(--da-border);
       padding: 0.18rem 0.65rem;
       border-radius: 1px;
       letter-spacing: 0.04em;
@@ -476,54 +476,54 @@
       cursor: pointer; transition: all 0.25s;
     }
     .pf-btn--primary {
-      background: var(--lx-gold);
+      background: var(--da-accent);
       color: #ffffff;
-      border-color: var(--lx-gold);
+      border-color: var(--da-accent);
       font-weight: 500;
     }
-    .pf-btn--primary:hover { background: var(--lx-gold-light); border-color: var(--lx-gold-light); transform: translateY(-1px); }
-    .pf-btn--ghost { background: transparent; color: var(--lx-gold); border-color: var(--lx-gold-border); }
-    .pf-btn--ghost:hover { border-color: var(--lx-gold); background: var(--lx-gold-pale); }
+    .pf-btn--primary:hover { background: var(--da-accent-light); border-color: var(--da-accent-light); transform: translateY(-1px); }
+    .pf-btn--ghost { background: transparent; color: var(--da-accent); border-color: var(--da-accent-border); }
+    .pf-btn--ghost:hover { border-color: var(--da-accent); background: var(--da-accent-pale); }
 
     /* ── Results callout ───────────────────────────────── */
     .pf-result-callout {
       padding: 1rem 1.2rem;
-      background: var(--lx-green-pale);
+      background: var(--da-green-pale);
       border: none;
-      border-left: 1px solid var(--lx-green);
+      border-left: 1px solid var(--da-green);
       border-radius: 0;
       margin: 1.1rem 0;
     }
     .pf-result-callout-lbl {
       font-size: 0.57rem; font-weight: 600;
       letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--lx-green); margin-bottom: 0.55rem;
+      color: var(--da-green); margin-bottom: 0.55rem;
       font-family: 'Outfit', sans-serif;
     }
     .pf-result-callout ul {
       font-size: 0.82rem; line-height: 1.78;
-      color: var(--lx-text-soft); margin: 0; padding-left: 1.1rem;
+      color: var(--da-text-soft); margin: 0; padding-left: 1.1rem;
       font-weight: 300;
     }
     .pf-result-callout li { margin-bottom: 0.32rem; }
-    .pf-result-callout strong { color: var(--lx-text); font-weight: 500; }
+    .pf-result-callout strong { color: var(--da-text); font-weight: 500; }
 
     /* ── Page footer ───────────────────────────────────── */
     .pf-footer {
-      border-top: 1px solid var(--lx-border);
+      border-top: 1px solid var(--da-border);
       max-width: 1240px; margin: 0 auto; padding: 2.25rem 2rem;
       display: flex; justify-content: space-between;
       align-items: center; flex-wrap: wrap; gap: 1rem;
     }
     .pf-footer-link {
       font-size: 0.7rem; font-weight: 400; letter-spacing: 0.08em;
-      color: var(--lx-muted); text-decoration: none;
+      color: var(--da-muted); text-decoration: none;
       transition: color 0.2s, background 0.2s;
       font-family: 'Outfit', sans-serif;
       padding: 0.3rem 0.65rem;
       border-radius: 2px;
     }
-    .pf-footer-link:hover { color: var(--lx-gold); background: var(--lx-gold-pale); }
+    .pf-footer-link:hover { color: var(--da-accent); background: var(--da-accent-pale); }
 
     /* ── Chart images show at full natural height ─────────── */
     .pf-chart-item .pf-img-wrap { height: auto; }
@@ -541,17 +541,17 @@
     .pf-chart-item .pf-img-wrap { flex-shrink: 0; }
     .pf-img-caption {
       padding: 0.65rem 0.9rem;
-      background: var(--lx-gold-pale);
-      border-left: 1.5px solid var(--lx-gold-border);
+      background: var(--da-accent-pale);
+      border-left: 1.5px solid var(--da-accent-border);
       font-size: 0.77rem;
       line-height: 1.72;
-      color: var(--lx-text-soft);
+      color: var(--da-text-soft);
       font-weight: 300;
     }
-    .pf-img-caption strong { color: var(--lx-text); font-weight: 500; }
+    .pf-img-caption strong { color: var(--da-text); font-weight: 500; }
     .pf-footer-credit {
       font-family: 'Outfit', system-ui, sans-serif;
-      font-size: 0.82rem; color: var(--lx-muted); opacity: 0.35; text-align: center;
+      font-size: 0.82rem; color: var(--da-muted); opacity: 0.35; text-align: center;
       letter-spacing: 0.05em;
     }
 
@@ -782,9 +782,9 @@
     <!-- ── 02 · M&A Research (featured) ─────────────── -->
     <article class="pf-card pf-card--featured" data-cat="recherche">
       <div class="pf-card-num" data-i18n="portfolio.data.ma.num">02 · Recherche empirique · Finance quantitative</div>
-      <div data-lang-show="fr"><span class="pf-card-tag" style="background:var(--lx-gold-pale);color:var(--lx-gold);border-color:var(--lx-gold-border);">R · Finance Quantitative · Recherche Empirique</span></div>
-      <div data-lang-show="en"><span class="pf-card-tag" style="background:var(--lx-gold-pale);color:var(--lx-gold);border-color:var(--lx-gold-border);">R · Quantitative Finance · Empirical Research</span></div>
-      <div data-lang-show="zh"><span class="pf-card-tag" style="background:var(--lx-gold-pale);color:var(--lx-gold);border-color:var(--lx-gold-border);">R · 量化金融 · 實證研究</span></div>
+      <div data-lang-show="fr"><span class="pf-card-tag" style="background:var(--da-accent-pale);color:var(--da-accent);border-color:var(--da-accent-border);">R · Finance Quantitative · Recherche Empirique</span></div>
+      <div data-lang-show="en"><span class="pf-card-tag" style="background:var(--da-accent-pale);color:var(--da-accent);border-color:var(--da-accent-border);">R · Quantitative Finance · Empirical Research</span></div>
+      <div data-lang-show="zh"><span class="pf-card-tag" style="background:var(--da-accent-pale);color:var(--da-accent);border-color:var(--da-accent-border);">R · 量化金融 · 實證研究</span></div>
       <h2 class="pf-card-title" data-lang-show="fr">Risky Deals : M&amp;A Transfrontalières &amp; Risque Politique en Amérique Latine</h2>
       <h2 class="pf-card-title" data-lang-show="en">Risky Deals: Cross-Border M&amp;A &amp; Political Risk in Latin America</h2>
       <h2 class="pf-card-title" data-lang-show="zh">Risky Deals：跨境併購與拉丁美洲政治風險</h2>
@@ -806,7 +806,7 @@
       </div>
 
       <div class="pf-star" style="border-left-color:rgba(167,139,220,0.55);background:rgba(167,139,220,0.04);">
-        <div class="pf-star-lbl" style="color:var(--lx-insight);">
+        <div class="pf-star-lbl" style="color:var(--da-insight);">
           <span data-lang-show="fr">Revue de Littérature &amp; Hypothèses</span>
           <span data-lang-show="en">Literature Review &amp; Hypotheses</span>
           <span data-lang-show="zh">文獻回顧與研究假設</span>
