@@ -29,18 +29,19 @@
 
     /* ── Marketing palette (consistent with marketing.html) ── */
     :root {
-      --mk-accent:        #e11d48;
-      --mk-accent2:       #7c3aed;
-      --mk-accent-soft:   rgba(225,29,72,0.08);
-      --mk-accent-pale:   rgba(225,29,72,0.04);
+      --mk-bg:            #fdfcfa;
+      --mk-accent:        #9f1239;
+      --mk-accent2:       #7a5c6b;
+      --mk-accent-soft:   rgba(159,18,57,0.08);
+      --mk-accent-pale:   rgba(159,18,57,0.04);
       --mk-text:          #0f172a;
       --mk-muted:         #64748b;
-      --mk-border:        #f0e4e8;
+      --mk-border:        #ede4e4;
       --mk-card:          #ffffff;
       --mk-green:         #059669;
       --mk-green-pale:    rgba(5,150,105,0.06);
-      --mk-insight:       #7c3aed;
-      --mk-insight-pale:  rgba(124,58,237,0.06);
+      --mk-insight:       #7a5c6b;
+      --mk-insight-pale:  rgba(122,92,107,0.06);
     }
 
     /* ── Base ──────────────────────────────────────────── */
@@ -54,15 +55,15 @@
     }
 
     /* ── Top navigation bar ────────────────────────────── */
-    #scroll-progress { z-index: 302; background: linear-gradient(90deg, #e11d48, #7c3aed); }
+    #scroll-progress { z-index: 302; background: linear-gradient(90deg, #9f1239, #7a5c6b); }
     .pf-topbar {
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(255,250,252,0.92);
+      background: rgba(253,252,250,0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(225,29,72,0.1);
+      border-bottom: 1px solid rgba(159,18,57,0.1);
     }
     .pf-topbar-inner {
       max-width: 1240px;
@@ -87,7 +88,7 @@
     }
     .pf-back:hover { color: var(--mk-accent); }
     .pf-back svg { width: 13px; height: 13px; flex-shrink: 0; }
-    .pf-topbar-sep { width: 1px; height: 14px; background: rgba(225,29,72,0.15); flex-shrink: 0; }
+    .pf-topbar-sep { width: 1px; height: 14px; background: rgba(159,18,57,0.15); flex-shrink: 0; }
     .pf-topbar-label {
       font-size: 0.67rem;
       letter-spacing: 0.13em;
@@ -125,7 +126,7 @@
     .pf-topbar .lang-btn.is-active {
       background: linear-gradient(135deg, var(--mk-accent), var(--mk-accent2));
       color: #fff;
-      box-shadow: 0 2px 8px rgba(225,29,72,0.3);
+      box-shadow: 0 2px 8px rgba(159,18,57,0.3);
     }
 
     /* ── Hero ──────────────────────────────────────────── */
@@ -160,7 +161,7 @@
     }
     .pf-hero-title em {
       font-style: italic;
-      background: linear-gradient(90deg, #e11d48 0%, #7c3aed 100%);
+      background: linear-gradient(90deg, #9f1239 0%, #7a5c6b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -193,7 +194,7 @@
       position: absolute;
       left: 0; top: 15%; bottom: 15%;
       width: 1.5px;
-      background: linear-gradient(180deg, #e11d48 0%, #7c3aed 100%);
+      background: linear-gradient(180deg, #9f1239 0%, #7a5c6b 100%);
       opacity: 0.6;
     }
     .pf-hero-stat-block:hover { background: var(--mk-hover, #fafafa); }
@@ -204,7 +205,7 @@
       font-size: 2.2rem;
       font-weight: 400;
       line-height: 1;
-      background: linear-gradient(135deg, #e11d48 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #9f1239 0%, #7a5c6b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -275,16 +276,16 @@
       display: block;
     }
     .pf-card:hover {
-      box-shadow: 0 14px 44px rgba(225,29,72,0.09), 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 14px 44px rgba(159,18,57,0.09), 0 2px 8px rgba(0,0,0,0.04);
       transform: translateY(-2px);
-      border-color: rgba(225,29,72,0.22);
+      border-color: rgba(159,18,57,0.22);
     }
     .pf-card.is-hidden { display: none !important; }
 
     .pf-card--featured {
       column-span: all;
       padding: 2.75rem 3rem;
-      border-color: rgba(225,29,72,0.16);
+      border-color: rgba(159,18,57,0.16);
       background: linear-gradient(160deg, #fff 0%, #fff8fa 60%, #fdf4ff 100%);
       margin-top: 1.75rem;
       margin-bottom: 1.75rem;
@@ -309,7 +310,7 @@
       font-weight: 700;
       color: var(--mk-accent);
       background: var(--mk-accent-soft);
-      border: 1px solid rgba(225,29,72,0.18);
+      border: 1px solid rgba(159,18,57,0.18);
       padding: 0.22rem 0.68rem;
       border-radius: 20px;
       margin-bottom: 0.9rem;
@@ -332,7 +333,7 @@
     /* ── STAR sections ─────────────────────────────────── */
     .pf-star {
       padding: 0.9rem 1.15rem;
-      border-left: 2px solid rgba(225,29,72,0.5);
+      border-left: 2px solid rgba(159,18,57,0.5);
       background: var(--mk-accent-pale);
       border-radius: 0 8px 8px 0;
       margin: 1.1rem 0;
@@ -370,7 +371,7 @@
       display: block;
       overflow: hidden;
       border-radius: 8px;
-      background: rgba(225,29,72,0.04);
+      background: rgba(159,18,57,0.04);
       position: relative;
     }
     .pf-img-wrap img {
@@ -435,7 +436,7 @@
       font-size: 2rem;
       font-weight: 600;
       line-height: 1;
-      background: linear-gradient(135deg, #e11d48 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #9f1239 0%, #7a5c6b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -464,8 +465,8 @@
     .pf-tag {
       font-size: 0.62rem;
       color: var(--mk-muted);
-      background: rgba(225,29,72,0.05);
-      border: 1px solid rgba(225,29,72,0.12);
+      background: rgba(159,18,57,0.05);
+      border: 1px solid rgba(159,18,57,0.12);
       padding: 0.15rem 0.62rem;
       border-radius: 20px;
       letter-spacing: 0.02em;
@@ -489,14 +490,14 @@
       transition: all 0.22s;
     }
     .pf-btn--primary {
-      background: linear-gradient(135deg, #e11d48 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #9f1239 0%, #7a5c6b 100%);
       color: #fff;
     }
-    .pf-btn--primary:hover { opacity: 0.87; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(225,29,72,0.3); }
+    .pf-btn--primary:hover { opacity: 0.87; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(159,18,57,0.3); }
     .pf-btn--ghost {
       background: transparent;
       color: var(--mk-accent);
-      border-color: rgba(225,29,72,0.35);
+      border-color: rgba(159,18,57,0.35);
     }
     .pf-btn--ghost:hover { background: var(--mk-accent-soft); border-color: var(--mk-accent); }
 
@@ -1100,7 +1101,7 @@
         </div>
       </div>
 
-      <div class="pf-star" style="border-left-color:rgba(124,58,237,0.5);background:rgba(124,58,237,0.05);border-radius:0 8px 8px 0;">
+      <div class="pf-star" style="border-left-color:rgba(122,92,107,0.5);background:rgba(122,92,107,0.05);border-radius:0 8px 8px 0;">
         <div class="pf-star-lbl" style="color:var(--mk-insight);">
           <span data-lang-show="fr">Méthodologie &amp; Données</span>
           <span data-lang-show="en">Methodology &amp; Data</span>
