@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aperçu des palettes · Portfolio Marketing</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    background:#101215;
+    color:#E7E9EC;
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+
+  /* ── Chrome ─────────────────────────────────────── */
+  .bar{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+    flex-wrap:wrap;
+    padding:0.85rem 1.4rem;
+    background:#16191D;
+    border-bottom:1px solid #262B31;
+  }
+  .bar-title{
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#9AA3AD;
+    white-space:nowrap;
+  }
+  .seg{display:flex;gap:0.3rem;flex-wrap:wrap}
+  .seg button{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.5rem 0.85rem;
+    border:1px solid #2E343B;
+    border-radius:7px;
+    background:#1D2126;
+    color:#C3CAD2;
+    font:inherit;
+    font-size:0.82rem;
+    cursor:pointer;
+    transition:background .16s,border-color .16s,color .16s;
+  }
+  .seg button:hover{background:#242930;border-color:#3B434C}
+  .seg button:focus-visible{outline:2px solid #7FB2E5;outline-offset:2px}
+  .seg button[aria-pressed="true"]{
+    background:#E7E9EC;
+    border-color:#E7E9EC;
+    color:#14171A;
+    font-weight:600;
+  }
+  .dots{display:flex;gap:3px}
+  .dot{width:11px;height:11px;border-radius:50%;border:1px solid rgba(0,0,0,.28)}
+  .note{
+    font-size:0.74rem;
+    color:#7C858F;
+    margin-left:auto;
+    max-width:34ch;
+    line-height:1.45;
+  }
+
+  /* ── Preview stage ──────────────────────────────── */
+  .stage{flex:1 1 auto;position:relative;background:#0B0D0F}
+  iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+  .loading{
+    position:absolute;inset:0;
+    display:grid;place-items:center;
+    color:#6B747E;font-size:0.85rem;
+    pointer-events:none;opacity:0;transition:opacity .2s;
+  }
+  .loading.on{opacity:1}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <span class="bar-title">Aperçu des palettes</span>
+  <div class="seg" id="seg"></div>
+  <p class="note">Fichier temporaire. Rend la vraie page avec les couleurs remplacées à la volée : aucun fichier du site n'est modifié.</p>
+</div>
+
+<div class="stage">
+  <div class="loading" id="loading">Chargement…</div>
+  <iframe id="frame" title="Aperçu de la page marketing"></iframe>
+</div>
+
+<script>
+const SOURCE = 'portfolio-marketing.html';
+
+/* Chaque palette remappe les littéraux codés en dur de la page
+   + redéfinit les variables --mk-* qui, elles, passent bien par :root. */
+const PALETTES = [
+  {
+    id:'actuel',
+    name:'Actuel',
+    swatch:['#ffffff','#e11d48','#7c3aed'],
+    map:null
+  },
+  {
+    id:'ivoire-rose',
+    name:'Ivoire + Rose bois',
+    swatch:['#FDFCFA','#9F1239','#7A5C6B'],
+    map:{
+      ground:'#FDFCFA', groundRGB:'253,252,250',
+      accent:'#9F1239', accentRGB:'159,18,57',
+      accent2:'#7A5C6B', accent2RGB:'122,92,107',
+      card:'#FFFFFF', border:'#EDE4E4'
+    }
+  },
+  {
+    id:'ivoire-noir',
+    name:'Ivoire + Noir',
+    swatch:['#FDFCFA','#1A1A1A','#4A4A4A'],
+    map:{
+      ground:'#FDFCFA', groundRGB:'253,252,250',
+      accent:'#1A1A1A', accentRGB:'26,26,26',
+      accent2:'#4A4A4A', accent2RGB:'74,74,74',
+      card:'#FFFFFF', border:'#E8E5E0'
+    }
+  },
+  {
+    id:'grege-cuivre',
+    name:'Grège + Cuivre',
+    swatch:['#F5F1EC','#8C5A3C','#6E5A48'],
+    map:{
+      ground:'#F5F1EC', groundRGB:'245,241,236',
+      accent:'#8C5A3C', accentRGB:'140,90,60',
+      accent2:'#6E5A48', accent2RGB:'110,90,72',
+      card:'#FCFAF7', border:'#E3DBD0'
+    }
+  }
+];
+
+let sourceHTML = null;
+const frame = document.getElementById('frame');
+const loading = document.getElementById('loading');
+
+function reskin(html, p){
+  if(!p.map) return html;
+  const m = p.map;
+  let out = html
+    .replace(/#e11d48/gi, m.accent)
+    .replace(/#7c3aed/gi, m.accent2)
+    .replace(/rgba\(225,\s*29,\s*72,/g, 'rgba(' + m.accentRGB + ',')
+    .replace(/rgba\(124,\s*58,\s*237,/g, 'rgba(' + m.accent2RGB + ',')
+    .replace(/rgba\(255,\s*250,\s*252,/g, 'rgba(' + m.groundRGB + ',');
+
+  /* Le fond du body est composé de trois radial-gradients codés en dur :
+     on l'aplatit en fond uni, ce qui est justement l'objet de la refonte. */
+  const override = `
+  <style id="palette-override">
+    :root{
+      --mk-card: ${m.card} !important;
+      --mk-border: ${m.border} !important;
+    }
+    body.page-portfolio-marketing{ background: ${m.ground} !important; }
+  </style>`;
+
+  return out.replace(/<\/head>/i, override + '</head>');
+}
+
+function render(p){
+  loading.classList.add('on');
+  let html = reskin(sourceHTML, p);
+  /* srcdoc n'a pas d'URL de base : on la fournit pour que les chemins
+     relatifs (images, CSS, polices, assets) continuent de résoudre. */
+  html = html.replace(/<head([^>]*)>/i, '<head$1><base href="/">');
+  frame.srcdoc = html;
+}
+
+frame.addEventListener('load', () => loading.classList.remove('on'));
+
+/* Barre de sélection */
+const seg = document.getElementById('seg');
+PALETTES.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.setAttribute('aria-pressed', String(i === 0));
+  b.dataset.id = p.id;
+  const dots = document.createElement('span');
+  dots.className = 'dots';
+  p.swatch.forEach(c => {
+    const d = document.createElement('span');
+    d.className = 'dot';
+    d.style.background = c;
+    dots.appendChild(d);
+  });
+  b.appendChild(dots);
+  b.appendChild(document.createTextNode(p.name));
+  b.addEventListener('click', () => {
+    seg.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true');
+    render(p);
+  });
+  seg.appendChild(b);
+});
+
+fetch(SOURCE)
+  .then(r => {
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    return r.text();
+  })
+  .then(t => { sourceHTML = t; render(PALETTES[0]); })
+  .catch(e => {
+    loading.textContent = 'Impossible de charger ' + SOURCE + ' : ' + e.message;
+    loading.classList.add('on');
+  });
+</script>
+</body>
+</html>
