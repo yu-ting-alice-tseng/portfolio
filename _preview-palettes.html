@@ -148,10 +148,17 @@ let sourceHTML = null;
 const frame = document.getElementById('frame');
 const loading = document.getElementById('loading');
 
+/* Dans une iframe srcdoc, l'observateur de chargement différé ne se
+   déclenche pas de façon fiable : on charge les images immédiatement.
+   Cela ne concerne que l'aperçu, jamais les fichiers du site. */
+function eagerImages(html){
+  return html.replace(/\s+loading="lazy"/g, '');
+}
+
 function reskin(html, p){
-  if(!p.map) return html;
+  if(!p.map) return eagerImages(html);
   const m = p.map;
-  let out = html
+  let out = eagerImages(html)
     .replace(/#e11d48/gi, m.accent)
     .replace(/#7c3aed/gi, m.accent2)
     .replace(/rgba\(225,\s*29,\s*72,/g, 'rgba(' + m.accentRGB + ',')
