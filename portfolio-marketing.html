@@ -29,19 +29,25 @@
 
     /* ── Marketing palette (consistent with marketing.html) ── */
     :root {
-      --mk-bg:            #fdfcfa;
-      --mk-accent:        #9f1239;
-      --mk-accent2:       #7a5c6b;
-      --mk-accent-soft:   rgba(159,18,57,0.08);
-      --mk-accent-pale:   rgba(159,18,57,0.04);
+      /* Teintes de base. Les composantes RVB sont isolées pour que les
+         opacités puissent être composées au point d'utilisation. */
+      --mk-bg-rgb:        253,252,250;
+      --mk-accent-rgb:    159,18,57;
+      --mk-accent2-rgb:   122,92,107;
+
+      --mk-bg:            rgb(var(--mk-bg-rgb));
+      --mk-accent:        rgb(var(--mk-accent-rgb));
+      --mk-accent2:       rgb(var(--mk-accent2-rgb));
+      --mk-accent-soft:   rgba(var(--mk-accent-rgb),0.08);
+      --mk-accent-pale:   rgba(var(--mk-accent-rgb),0.04);
       --mk-text:          #0f172a;
       --mk-muted:         #64748b;
       --mk-border:        #ede4e4;
       --mk-card:          #ffffff;
       --mk-green:         #059669;
       --mk-green-pale:    rgba(5,150,105,0.06);
-      --mk-insight:       #7a5c6b;
-      --mk-insight-pale:  rgba(122,92,107,0.06);
+      --mk-insight:       var(--mk-accent2);
+      --mk-insight-pale:  rgba(var(--mk-accent2-rgb),0.06);
     }
 
     /* ── Base ──────────────────────────────────────────── */
@@ -55,15 +61,15 @@
     }
 
     /* ── Top navigation bar ────────────────────────────── */
-    #scroll-progress { z-index: 302; background: linear-gradient(90deg, #9f1239, #7a5c6b); }
+    #scroll-progress { z-index: 302; background: linear-gradient(90deg, var(--mk-accent), var(--mk-accent2)); }
     .pf-topbar {
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(253,252,250,0.92);
+      background: rgba(var(--mk-bg-rgb),0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(159,18,57,0.1);
+      border-bottom: 1px solid rgba(var(--mk-accent-rgb),0.1);
     }
     .pf-topbar-inner {
       max-width: 1240px;
@@ -88,7 +94,7 @@
     }
     .pf-back:hover { color: var(--mk-accent); }
     .pf-back svg { width: 13px; height: 13px; flex-shrink: 0; }
-    .pf-topbar-sep { width: 1px; height: 14px; background: rgba(159,18,57,0.15); flex-shrink: 0; }
+    .pf-topbar-sep { width: 1px; height: 14px; background: rgba(var(--mk-accent-rgb),0.15); flex-shrink: 0; }
     .pf-topbar-label {
       font-size: 0.67rem;
       letter-spacing: 0.13em;
@@ -126,7 +132,7 @@
     .pf-topbar .lang-btn.is-active {
       background: linear-gradient(135deg, var(--mk-accent), var(--mk-accent2));
       color: #fff;
-      box-shadow: 0 2px 8px rgba(159,18,57,0.3);
+      box-shadow: 0 2px 8px rgba(var(--mk-accent-rgb),0.3);
     }
 
     /* ── Hero ──────────────────────────────────────────── */
@@ -161,7 +167,7 @@
     }
     .pf-hero-title em {
       font-style: italic;
-      background: linear-gradient(90deg, #9f1239 0%, #7a5c6b 100%);
+      background: linear-gradient(90deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -194,7 +200,7 @@
       position: absolute;
       left: 0; top: 15%; bottom: 15%;
       width: 1.5px;
-      background: linear-gradient(180deg, #9f1239 0%, #7a5c6b 100%);
+      background: linear-gradient(180deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
       opacity: 0.6;
     }
     .pf-hero-stat-block:hover { background: var(--mk-hover, #fafafa); }
@@ -205,7 +211,7 @@
       font-size: 2.2rem;
       font-weight: 400;
       line-height: 1;
-      background: linear-gradient(135deg, #9f1239 0%, #7a5c6b 100%);
+      background: linear-gradient(135deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -276,16 +282,16 @@
       display: block;
     }
     .pf-card:hover {
-      box-shadow: 0 14px 44px rgba(159,18,57,0.09), 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 14px 44px rgba(var(--mk-accent-rgb),0.09), 0 2px 8px rgba(0,0,0,0.04);
       transform: translateY(-2px);
-      border-color: rgba(159,18,57,0.22);
+      border-color: rgba(var(--mk-accent-rgb),0.22);
     }
     .pf-card.is-hidden { display: none !important; }
 
     .pf-card--featured {
       column-span: all;
       padding: 2.75rem 3rem;
-      border-color: rgba(159,18,57,0.16);
+      border-color: rgba(var(--mk-accent-rgb),0.16);
       background: linear-gradient(160deg, #fff 0%, #fff8fa 60%, #fdf4ff 100%);
       margin-top: 1.75rem;
       margin-bottom: 1.75rem;
@@ -310,7 +316,7 @@
       font-weight: 700;
       color: var(--mk-accent);
       background: var(--mk-accent-soft);
-      border: 1px solid rgba(159,18,57,0.18);
+      border: 1px solid rgba(var(--mk-accent-rgb),0.18);
       padding: 0.22rem 0.68rem;
       border-radius: 20px;
       margin-bottom: 0.9rem;
@@ -333,7 +339,7 @@
     /* ── STAR sections ─────────────────────────────────── */
     .pf-star {
       padding: 0.9rem 1.15rem;
-      border-left: 2px solid rgba(159,18,57,0.5);
+      border-left: 2px solid rgba(var(--mk-accent-rgb),0.5);
       background: var(--mk-accent-pale);
       border-radius: 0 8px 8px 0;
       margin: 1.1rem 0;
@@ -371,7 +377,7 @@
       display: block;
       overflow: hidden;
       border-radius: 8px;
-      background: rgba(159,18,57,0.04);
+      background: rgba(var(--mk-accent-rgb),0.04);
       position: relative;
     }
     .pf-img-wrap img {
@@ -436,7 +442,7 @@
       font-size: 2rem;
       font-weight: 600;
       line-height: 1;
-      background: linear-gradient(135deg, #9f1239 0%, #7a5c6b 100%);
+      background: linear-gradient(135deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -465,8 +471,8 @@
     .pf-tag {
       font-size: 0.62rem;
       color: var(--mk-muted);
-      background: rgba(159,18,57,0.05);
-      border: 1px solid rgba(159,18,57,0.12);
+      background: rgba(var(--mk-accent-rgb),0.05);
+      border: 1px solid rgba(var(--mk-accent-rgb),0.12);
       padding: 0.15rem 0.62rem;
       border-radius: 20px;
       letter-spacing: 0.02em;
@@ -490,16 +496,82 @@
       transition: all 0.22s;
     }
     .pf-btn--primary {
-      background: linear-gradient(135deg, #9f1239 0%, #7a5c6b 100%);
+      background: linear-gradient(135deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
       color: #fff;
     }
-    .pf-btn--primary:hover { opacity: 0.87; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(159,18,57,0.3); }
+    .pf-btn--primary:hover { opacity: 0.87; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(var(--mk-accent-rgb),0.3); }
     .pf-btn--ghost {
       background: transparent;
       color: var(--mk-accent);
-      border-color: rgba(159,18,57,0.35);
+      border-color: rgba(var(--mk-accent-rgb),0.35);
     }
     .pf-btn--ghost:hover { background: var(--mk-accent-soft); border-color: var(--mk-accent); }
+
+    /* ── Autres travaux ────────────────────────────────── */
+    .pf-extras {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 3rem 2rem 0;
+      border-top: 1px solid var(--mk-border);
+    }
+    .pf-extras-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: var(--mk-text);
+      margin: 0;
+      text-wrap: balance;
+    }
+    .pf-extras-intro {
+      font-size: 0.82rem;
+      color: var(--mk-muted);
+      margin: 0.4rem 0 0;
+      line-height: 1.55;
+    }
+    .pf-extras-list {
+      list-style: none;
+      margin: 1.75rem 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .pf-extra {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.35rem 1.5rem;
+      background: var(--mk-accent-pale);
+      border: 1px solid var(--mk-border);
+      border-radius: 10px;
+    }
+    .pf-extra-tag {
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--mk-accent);
+    }
+    .pf-extra-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--mk-text);
+      margin: 0;
+      text-wrap: balance;
+    }
+    .pf-extra-desc {
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: var(--mk-muted);
+      margin: 0;
+    }
+    .pf-extra-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.15rem;
+    }
 
     /* ── Page footer ───────────────────────────────────── */
     .pf-footer {
@@ -605,6 +677,7 @@
       .pf-grid { padding: 2rem 1.25rem 3rem; }
       .pf-filters { padding: 0 1.25rem; }
       .pf-footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+      .pf-extras { padding: 2.25rem 1.25rem 0; }
       .pf-topbar-inner { padding: 0 1.25rem; }
     }
   </style>
@@ -684,7 +757,7 @@
 
     <!-- ── 01 · Engoo Dashboard (featured) ──────────── -->
     <article class="pf-card pf-card--featured" data-cat="dashboard" id="engoo-dashboard">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.engoo.num">01 - Étude de cas complète</div>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.engoo.num">Étude de cas complète</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.engoo.tag">Dashboard Excel - Social Analytics - A/B Testing</span>
       <h2 class="pf-card-title">
         Engoo, DMM.com Group —<br>Dashboard de Performance des Réseaux Sociaux (Xiaohongshu)
@@ -841,7 +914,179 @@
       </div>
     </article>
 
-    <!-- ── 01b · Engoo Weekly Report (featured) ─────── -->
+    <article class="pf-card pf-card--featured" data-cat="analyse" id="bcg-beaute">
+      <div class="pf-card-num">Analyse Produit</div>
+      <span class="pf-card-tag">BCG Matrix · Product Portfolio · Beauty Analytics</span>
+      <h2 class="pf-card-title">
+        <span data-lang-show="fr">Sephora — Intelligence Produit &amp; Stratégie de Portefeuille Beauté</span>
+        <span data-lang-show="en">Sephora — Product Intelligence &amp; Beauty Portfolio Strategy</span>
+      </h2>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Contexte & Problématique</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">Sephora propose un catalogue de <strong>8 495 produits</strong> couvrant Skincare, Fragrance, Makeup, Hair Care et Bath &amp; Body. Avec 32 000+ avis clients, un prix moyen de <strong>51,70 $</strong> et une note moyenne de <strong>4,23/5</strong>, comment distinguer les produits à défendre des SKUs à risque ? <strong>Objectif :</strong> appliquer une matrice BCG au portefeuille beauté pour orienter les décisions marketing et commerciales.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">Sephora's catalog spans <strong>8,495 products</strong> across Skincare, Fragrance, Makeup, Hair Care, and Bath &amp; Body. With 32,000+ customer reviews, an average price of <strong>$51.70</strong>, and an average rating of <strong>4.23/5</strong>, how do you distinguish which products to defend from which SKUs are at risk? <strong>Objective:</strong> apply a BCG matrix to the beauty portfolio to guide marketing and commercial decisions.</p>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--result">
+        <div class="pf-star-lbl">BCG Portfolio Segmentation · 8 495 produits</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Hero (Stars) — 2 307 produits (27,2%) :</strong> Volume élevé + note élevée (≥ 4,29). Protéger, amplifier, mettre en avant. Top brand : Anastasia Beverly Hills.</li>
+            <li><strong>Question Marks — 1 801 produits (21,2%) :</strong> Note élevée mais faible volume : potentiel marketing inexploité. Cibler avec des campagnes de visibilité et du seeding influenceur pour les convertir en Stars.</li>
+            <li><strong>Risk (Dogs) — 1 814 produits (21,4%) :</strong> Volume élevé mais note faible : risque de réputation. Reformuler ou déréférencer prioritairement avant que les avis négatifs n'érodent la marque globale.</li>
+            <li><strong>Underperformers — 2 294 produits (27%) :</strong> Faible volume + note faible. Rationaliser l'assortiment, candidats au délistage.</li>
+            <li><strong>Non notés — 279 produits :</strong> Invisibles dans les recherches filtrées par avis : activer les programmes de collecte d'avis en priorité.</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Hero (Stars) — 2,307 products (27.2%):</strong> High volume + high rating (≥ 4.29). Protect, amplify, feature. Top brand: Anastasia Beverly Hills.</li>
+            <li><strong>Question Marks — 1,801 products (21.2%):</strong> High rating but low volume: untapped marketing upside. Target with visibility campaigns and influencer seeding to convert to Stars.</li>
+            <li><strong>Risk (Dogs) — 1,814 products (21.4%):</strong> High volume but low rating: reputation risk. Reformulate or delist as a priority before negative reviews erode the overall brand.</li>
+            <li><strong>Underperformers — 2,294 products (27%):</strong> Low volume + low rating. Rationalise assortment, candidates for delisting.</li>
+            <li><strong>Unrated — 279 products:</strong> Invisible in review-filtered searches: activate review collection programs as first priority.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl">Discussion</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">L'analyse identifie trois implications opérationnelles. Les 1 801 produits classés en Question Marks présentent déjà un niveau de satisfaction élevé (note moyenne ≥ 4,29) mais souffrent d'un déficit de visibilité ; un programme de seeding influenceur associé à une mise en avant éditoriale constituerait un levier d'adoption à moindre coût, sans nécessiter de reformulation produit.</p>
+          <p class="pf-star-txt">Par ailleurs, les 32 000 avis clients intègrent des données démographiques structurées (type de peau, carnation, couleur des yeux) qui représentent une ressource directement exploitable pour la personnalisation des campagnes beauté et la construction d'audiences similaires en ciblage publicitaire.</p>
+          <p class="pf-star-txt">Enfin, les 1 814 produits Risk Dogs combinent un volume d'avis significatif et un faible score de satisfaction ; un traitement prioritaire de ces références s'impose afin d'enrayer l'érosion potentielle de la valeur de marque Sephora avant que les signaux négatifs n'atteignent une masse critique.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">The analysis identifies three operational implications. The 1,801 Question Mark products already achieve high satisfaction (average rating ≥ 4.29) but suffer from a visibility deficit; an influencer seeding programme combined with editorial promotion would constitute a low-cost adoption lever, requiring no product reformulation.</p>
+          <p class="pf-star-txt">Furthermore, the 32,000+ customer reviews contain structured demographic data (skin type, skin tone, eye colour) representing a directly exploitable resource for beauty campaign personalisation and lookalike audience construction in paid targeting.</p>
+          <p class="pf-star-txt">Finally, the 1,814 Risk Dog products combine significant review volume with low satisfaction scores; prioritised remediation of these references is warranted to pre-empt the potential erosion of Sephora brand equity before negative signals reach a critical mass.</p>
+        </div>
+      </div>
+
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">8 495</span><span class="pf-stat-lbl">Produits analysés</span></div>
+        <div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl">Avis clients</span></div>
+        <div><span class="pf-stat-val">4,23/5</span><span class="pf-stat-lbl">Note moyenne catalogue</span></div>
+        <div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl">Matrice de portefeuille</span></div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">BCG Matrix</span>
+        <span class="pf-tag">Product Portfolio</span>
+        <span class="pf-tag">Beauty E-commerce</span>
+        <span class="pf-tag">Review Analytics</span>
+        <span class="pf-tag">Brand Strategy</span>
+        <span class="pf-tag">Sephora</span>
+        <span class="pf-tag">Python</span>
+      </div>
+    </article>
+
+    <article class="pf-card pf-card--featured" data-cat="analyse">
+      <div class="pf-card-num">Analyse Marketing</div>
+      <span class="pf-card-tag">Python · Segmentation · Campaign ROI</span>
+      <h2 class="pf-card-title">
+        <span data-lang-show="fr">Maison Beauté — Diagnostic Personnalité Client &amp; ROI Campagnes</span>
+        <span data-lang-show="en">Maison Beauté — Customer Personality &amp; Campaign ROI Diagnostic</span>
+      </h2>
+      <p class="pf-card-body" style="font-style:italic;">
+        <span data-lang-show="fr">Analyse stratégique de 2 240 clients · 6 campagnes · Corrélation revenu – dépense premium · Segmentation omni-canal</span>
+        <span data-lang-show="en">Strategic analysis of 2,240 customers · 6 campaigns · Income – premium spend correlation · Omni-channel segmentation</span>
+      </p>
+
+      <div class="pf-star">
+        <div class="pf-star-lbl">Contexte & Problématique</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">Maison Beauté, marque de parfumerie et soin haut de gamme, dispose d'un portefeuille de 2 240 clients sans stratégie claire pour identifier les segments à fort potentiel. <strong>Objectif :</strong> diagnostiquer la personnalité client, mesurer le ROI de 6 campagnes et identifier les leviers de croissance du chiffre d'affaires premium (fragrances &amp; skincare luxe).</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">Maison Beauté, a premium fragrance and skincare brand, holds a portfolio of 2,240 customers with no clear strategy to identify high-potential segments. <strong>Objective:</strong> diagnose customer personality, measure ROI across 6 campaigns, and identify revenue levers for premium lines (fragrances &amp; luxury skincare).</p>
+        </div>
+      </div>
+
+      <div class="pf-star" style="border-left-color:rgba(var(--mk-accent2-rgb),0.5);background:rgba(var(--mk-accent2-rgb),0.05);border-radius:0 8px 8px 0;">
+        <div class="pf-star-lbl" style="color:var(--mk-insight);">
+          <span data-lang-show="fr">Méthodologie &amp; Données</span>
+          <span data-lang-show="en">Methodology &amp; Data</span>
+        </div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Dataset :</strong> 2 240 clients, 24 variables comportementales et démographiques (âge, revenu, historique d'achats, réponses aux campagnes). 24 revenus manquants imputés par la moyenne populationnelle.</li>
+            <li><strong>Segmentation revenu :</strong> Quartiles T1 à T4 : de la clientèle Mass (&lt;25%) au segment Luxe (Top 25%).</li>
+            <li><strong>Segmentation canal :</strong> Trois profils : True Omni-Channel (47,2%), Counter-First (27,6%), Digital-First (25,0%).</li>
+            <li><strong>Corrélations :</strong> Revenu ↔ dépense premium (r = 0,59) · Visites web ↔ achats web (r = −0,06).</li>
+            <li><strong>Profilage campagnes :</strong> Taux d'acceptation sur 6 campagnes + segmentation par niveau d'engagement (0, 1, 2+ campagnes acceptées).</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Dataset:</strong> 2,240 customers, 24 behavioural and demographic variables (age, income, purchase history, campaign responses). 24 missing incomes imputed with population mean.</li>
+            <li><strong>Income segmentation:</strong> Quartiles T1 – T4: from Mass tier (&lt;25%) to Luxury tier (Top 25%).</li>
+            <li><strong>Channel segmentation:</strong> Three profiles: True Omni-Channel (47.2%), Counter-First (27.6%), Digital-First (25.0%).</li>
+            <li><strong>Correlations:</strong> Income ↔ premium spend (r = 0.59) · Web visits ↔ web purchases (r = −0.06).</li>
+            <li><strong>Campaign profiling:</strong> Acceptance rate across 6 campaigns + segmentation by engagement tier (0, 1, 2+ accepted campaigns).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--result">
+        <div class="pf-star-lbl">Résultats</div>
+        <div data-lang-show="fr">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Gradient de prémiumisation (18x) :</strong> La dépense premium moyenne grimpe de <strong>39 $</strong> (T1 Mass) à <strong>708 $</strong> (T4 Luxury). Le revenu explique 59% de la variance de la dépense premium.</li>
+            <li><strong>L'engagement multiplie la valeur client (3x) :</strong> Les clients ayant accepté 2+ campagnes dépensent <strong>775 $</strong> en produits premium contre <strong>255 $</strong> pour les non-engagés.</li>
+            <li><strong>Campagne « Response » — standout :</strong> Taux de conversion de <strong>14,9%</strong>, le double de la meilleure campagne historique (Campagne 4 : 7,5%). La Campagne 2 stagne à seulement 1,3%.</li>
+            <li><strong>Le canal physique résiste :</strong> Le comptoir beauté représente <strong>46,2%</strong> des achats (12 970 transactions) contre 32,6% pour le web et 21,2% pour le catalogue.</li>
+            <li><strong>Signal d'alarme digital :</strong> Corrélation visites web ↔ achats web de <strong>r = −0,06</strong>, le trafic web ne convertit pas en panier.</li>
+            <li><strong>Profil du consommateur idéal :</strong> Revenu <strong>60 186 $</strong> · Âge <strong>~45 ans</strong> · Dépense premium <strong>564 $</strong> · Segment T4 Luxury · Génération X (35 – 49 ans).</li>
+          </ul>
+        </div>
+        <div data-lang-show="en">
+          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+            <li><strong>Premiumisation gradient (18x):</strong> Average premium spend climbs from <strong>$39</strong> (T1 Mass) to <strong>$708</strong> (T4 Luxury). Income accounts for 59% of premium spend variance.</li>
+            <li><strong>Engagement multiplies customer value (3x):</strong> Customers who accepted 2+ campaigns spend <strong>$775</strong> on premium lines vs <strong>$255</strong> for unengaged customers.</li>
+            <li><strong>"Response" campaign — standout performer:</strong> Conversion rate of <strong>14.9%</strong>, roughly double the best historical campaign (Campaign 4: 7.5%). Campaign 2 lagged at just 1.3%.</li>
+            <li><strong>Physical channel holds strong:</strong> The beauty counter accounts for <strong>46.2%</strong> of purchases (12,970 transactions) vs 32.6% web and 21.2% catalogue.</li>
+            <li><strong>Digital warning signal:</strong> Web visits ↔ web purchases correlation of <strong>r = −0.06</strong>, web traffic is not converting to baskets.</li>
+            <li><strong>Ideal consumer profile:</strong> Income <strong>$60,186</strong> · Age <strong>~45</strong> · Premium spend <strong>$564</strong> · T4 Luxury · Gen X (35 – 49).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pf-star pf-star--insight">
+        <div class="pf-star-lbl">Discussion</div>
+        <div data-lang-show="fr">
+          <p class="pf-star-txt">Les résultats suggèrent trois axes prioritaires. En premier lieu, le segment omni-canal (47 % des clients) représente un levier sous-exploité : équiper les conseillers en comptoir pour capturer les profils comportementaux et déclencher des parcours de réachat en ligne permettrait de convertir ce cœur de clientèle en acheteurs digitaux récurrents sur les lignes fragrances et skincare premium.</p>
+          <p class="pf-star-txt">En second lieu, la campagne Response affiche le taux de conversion le plus élevé (14,9 %) ; l'analyse systématique de ses déclencheurs (timing, message, ciblage) et la transposition de cette mécanique aux segments T3 Affluent et T4 Luxury constitueraient une approche d'optimisation à fort potentiel de rendement.</p>
+          <p class="pf-star-txt">Enfin, le faible taux de transformation des visiteurs web à haute fréquence plaide pour des offres d'échantillonnage et de bundles premium ciblées, visant à convertir une intention de navigation en achat à haute marge.</p>
+        </div>
+        <div data-lang-show="en">
+          <p class="pf-star-txt">The findings point to three priority directions. First, the omni-channel segment (47% of customers) represents an under-leveraged asset: equipping in-store advisors to capture behavioural profiles and trigger personalised repurchase journeys online would convert this core customer base into recurring digital buyers across premium fragrance and skincare lines.</p>
+          <p class="pf-star-txt">Second, the Response campaign records the highest conversion rate (14.9%); a systematic analysis of its triggers (timing, message, targeting) and the transposition of this mechanism to T3 Affluent and T4 Luxury segments would constitute a high-yield optimisation approach.</p>
+          <p class="pf-star-txt">Finally, the low conversion rate among high-frequency web visitors argues for targeted sampling and premium bundle offers designed to transform browsing intent into high-margin purchases.</p>
+        </div>
+      </div>
+
+      <div class="pf-stats">
+        <div><span class="pf-stat-val">2 240</span><span class="pf-stat-lbl">Clients analysés</span></div>
+        <div><span class="pf-stat-val">18x</span><span class="pf-stat-lbl">Écart Mass vs Luxury spend</span></div>
+        <div><span class="pf-stat-val">14,9%</span><span class="pf-stat-lbl">Conversion · Campagne Response</span></div>
+        <div><span class="pf-stat-val">3x</span><span class="pf-stat-lbl">Valeur client engagé vs non-engagé</span></div>
+      </div>
+      <div class="pf-tags">
+        <span class="pf-tag">Customer Segmentation</span>
+        <span class="pf-tag">Campaign ROI</span>
+        <span class="pf-tag">Omni-Channel</span>
+        <span class="pf-tag">Correlation Analysis</span>
+        <span class="pf-tag">Luxury Marketing</span>
+        <span class="pf-tag">Consumer Insights</span>
+        <span class="pf-tag">Python</span>
+      </div>
+    </article>
+
     <article class="pf-card pf-card--featured" data-cat="reporting" id="engoo-weekly">
       <div class="pf-card-num" data-i18n="portfolio.mkt.weeklyNum">Reporting · Synthèse</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.weeklyTag">PowerPoint · Data Storytelling · Reporting</span>
@@ -897,9 +1142,8 @@
       </div>
     </article>
 
-    <!-- ── 02 · AIESEC ───────────────────────────────── -->
     <article class="pf-card" data-cat="campagne">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">02 · Campagne Marketing</div>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">Campagne Marketing</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.aiesec.tag">Campagne · Direction artistique</span>
       <h2 class="pf-card-title">AIESEC – Camp International YOLO</h2>
       <!-- Logo first -->
@@ -1008,9 +1252,8 @@
       </div>
     </article>
 
-    <!-- ── 03 · 政大古箏社 ──────────────────────────────── -->
     <article class="pf-card" data-cat="community">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.guzhengNum">03 · Community Management</div>
+      <div class="pf-card-num" data-i18n="portfolio.mkt.guzhengNum">Community Management</div>
       <span class="pf-card-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
       <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
       <div class="pf-imgs pf-imgs--2" style="align-items:start;">
@@ -1041,219 +1284,35 @@
       </div>
     </article>
 
-    <!-- ── 04 · Packaging Design ─────────────────────── -->
-    <article class="pf-card" data-cat="campagne">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.penwardsNum">04 · Design Visuel</div>
-      <span class="pf-card-tag" data-i18n="portfolio.mkt.penwardsTag">Design · Concours</span>
-      <h2 class="pf-card-title" data-i18n="portfolio.packaging.title">包裝設計競賽 – 18th Penwards</h2>
-      <a href="assets/penwards-design-award.png" target="_blank" rel="noopener noreferrer"
-         class="pf-img-wrap" style="aspect-ratio:16/9; display:block; margin:1.25rem 0;">
-        <img src="assets/penwards-design-award.png" alt="18th Penwards Packaging Design Competition – Personal Entry Poster (2024)" loading="lazy">
-      </a>
-      <p class="pf-card-body" data-i18n="portfolio.packaging.desc">Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024).</p>
-      <div class="pf-tags">
-        <span class="pf-tag">Visual Design</span>
-        <span class="pf-tag">Packaging</span>
-        <span class="pf-tag">Typography</span>
-      </div>
-    </article>
-
-    <!-- ── 05 · KYUDO Club Name Badge ── -->
-    <article class="pf-card" data-cat="campagne">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.kyudoNum">05 · Design Visuel</div>
-      <span class="pf-card-tag" data-i18n="portfolio.mkt.kyudoTag">Design · Supports événementiels</span>
-      <h2 class="pf-card-title" data-i18n="portfolio.mkt.kyudoTitle">Club de Kyudo de NCCU – Badge Nominatif</h2>
-      <div class="pf-img-figure" style="margin: 1.25rem 0 0.5rem;">
-        <a href="assets/kyudo-club-name-badge.jpeg" target="_blank" rel="noopener noreferrer"
-           class="pf-img-wrap" style="aspect-ratio:16/9; display:block;">
-          <img src="assets/kyudo-club-name-badge.jpeg" alt="NCCU Kyudo Club – Event Name Badge Mockup, Beige and Blue Variants" loading="lazy">
-        </a>
-        <p class="pf-img-caption" data-i18n="portfolio.mkt.kyudoCap1">Badge nominatif – maquette</p>
-      </div>
-      <p class="pf-card-body" data-i18n="portfolio.mkt.kyudoDesc">Conception de badges nominatifs pour les activités du club de kyudo de NCCU, déclinaison en deux coloris avec maquettes de mise en situation.</p>
-      <div class="pf-tags">
-        <span class="pf-tag">Visual Design</span>
-        <span class="pf-tag">Print</span>
-        <span class="pf-tag">Mockup</span>
-      </div>
-    </article>
-
-    <!-- ── 06 · MAISON BEAUTÉ Customer Analytics (featured) ── -->
-    <article class="pf-card pf-card--featured" data-cat="analyse">
-      <div class="pf-card-num">Analyse Marketing</div>
-      <span class="pf-card-tag">Python · Segmentation · Campaign ROI</span>
-      <h2 class="pf-card-title">
-        <span data-lang-show="fr">Maison Beauté — Diagnostic Personnalité Client &amp; ROI Campagnes</span>
-        <span data-lang-show="en">Maison Beauté — Customer Personality &amp; Campaign ROI Diagnostic</span>
-      </h2>
-      <p class="pf-card-body" style="font-style:italic;">
-        <span data-lang-show="fr">Analyse stratégique de 2 240 clients · 6 campagnes · Corrélation revenu – dépense premium · Segmentation omni-canal</span>
-        <span data-lang-show="en">Strategic analysis of 2,240 customers · 6 campaigns · Income – premium spend correlation · Omni-channel segmentation</span>
-      </p>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl">Contexte & Problématique</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Maison Beauté, marque de parfumerie et soin haut de gamme, dispose d'un portefeuille de 2 240 clients sans stratégie claire pour identifier les segments à fort potentiel. <strong>Objectif :</strong> diagnostiquer la personnalité client, mesurer le ROI de 6 campagnes et identifier les leviers de croissance du chiffre d'affaires premium (fragrances &amp; skincare luxe).</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Maison Beauté, a premium fragrance and skincare brand, holds a portfolio of 2,240 customers with no clear strategy to identify high-potential segments. <strong>Objective:</strong> diagnose customer personality, measure ROI across 6 campaigns, and identify revenue levers for premium lines (fragrances &amp; luxury skincare).</p>
-        </div>
-      </div>
-
-      <div class="pf-star" style="border-left-color:rgba(122,92,107,0.5);background:rgba(122,92,107,0.05);border-radius:0 8px 8px 0;">
-        <div class="pf-star-lbl" style="color:var(--mk-insight);">
-          <span data-lang-show="fr">Méthodologie &amp; Données</span>
-          <span data-lang-show="en">Methodology &amp; Data</span>
-        </div>
-        <div data-lang-show="fr">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Dataset :</strong> 2 240 clients, 24 variables comportementales et démographiques (âge, revenu, historique d'achats, réponses aux campagnes). 24 revenus manquants imputés par la moyenne populationnelle.</li>
-            <li><strong>Segmentation revenu :</strong> Quartiles T1 à T4 : de la clientèle Mass (&lt;25%) au segment Luxe (Top 25%).</li>
-            <li><strong>Segmentation canal :</strong> Trois profils : True Omni-Channel (47,2%), Counter-First (27,6%), Digital-First (25,0%).</li>
-            <li><strong>Corrélations :</strong> Revenu ↔ dépense premium (r = 0,59) · Visites web ↔ achats web (r = −0,06).</li>
-            <li><strong>Profilage campagnes :</strong> Taux d'acceptation sur 6 campagnes + segmentation par niveau d'engagement (0, 1, 2+ campagnes acceptées).</li>
-          </ul>
-        </div>
-        <div data-lang-show="en">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Dataset:</strong> 2,240 customers, 24 behavioural and demographic variables (age, income, purchase history, campaign responses). 24 missing incomes imputed with population mean.</li>
-            <li><strong>Income segmentation:</strong> Quartiles T1 – T4: from Mass tier (&lt;25%) to Luxury tier (Top 25%).</li>
-            <li><strong>Channel segmentation:</strong> Three profiles: True Omni-Channel (47.2%), Counter-First (27.6%), Digital-First (25.0%).</li>
-            <li><strong>Correlations:</strong> Income ↔ premium spend (r = 0.59) · Web visits ↔ web purchases (r = −0.06).</li>
-            <li><strong>Campaign profiling:</strong> Acceptance rate across 6 campaigns + segmentation by engagement tier (0, 1, 2+ accepted campaigns).</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl">Résultats</div>
-        <div data-lang-show="fr">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Gradient de prémiumisation (18x) :</strong> La dépense premium moyenne grimpe de <strong>39 $</strong> (T1 Mass) à <strong>708 $</strong> (T4 Luxury). Le revenu explique 59% de la variance de la dépense premium.</li>
-            <li><strong>L'engagement multiplie la valeur client (3x) :</strong> Les clients ayant accepté 2+ campagnes dépensent <strong>775 $</strong> en produits premium contre <strong>255 $</strong> pour les non-engagés.</li>
-            <li><strong>Campagne « Response » — standout :</strong> Taux de conversion de <strong>14,9%</strong>, le double de la meilleure campagne historique (Campagne 4 : 7,5%). La Campagne 2 stagne à seulement 1,3%.</li>
-            <li><strong>Le canal physique résiste :</strong> Le comptoir beauté représente <strong>46,2%</strong> des achats (12 970 transactions) contre 32,6% pour le web et 21,2% pour le catalogue.</li>
-            <li><strong>Signal d'alarme digital :</strong> Corrélation visites web ↔ achats web de <strong>r = −0,06</strong>, le trafic web ne convertit pas en panier.</li>
-            <li><strong>Profil du consommateur idéal :</strong> Revenu <strong>60 186 $</strong> · Âge <strong>~45 ans</strong> · Dépense premium <strong>564 $</strong> · Segment T4 Luxury · Génération X (35 – 49 ans).</li>
-          </ul>
-        </div>
-        <div data-lang-show="en">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Premiumisation gradient (18x):</strong> Average premium spend climbs from <strong>$39</strong> (T1 Mass) to <strong>$708</strong> (T4 Luxury). Income accounts for 59% of premium spend variance.</li>
-            <li><strong>Engagement multiplies customer value (3x):</strong> Customers who accepted 2+ campaigns spend <strong>$775</strong> on premium lines vs <strong>$255</strong> for unengaged customers.</li>
-            <li><strong>"Response" campaign — standout performer:</strong> Conversion rate of <strong>14.9%</strong>, roughly double the best historical campaign (Campaign 4: 7.5%). Campaign 2 lagged at just 1.3%.</li>
-            <li><strong>Physical channel holds strong:</strong> The beauty counter accounts for <strong>46.2%</strong> of purchases (12,970 transactions) vs 32.6% web and 21.2% catalogue.</li>
-            <li><strong>Digital warning signal:</strong> Web visits ↔ web purchases correlation of <strong>r = −0.06</strong>, web traffic is not converting to baskets.</li>
-            <li><strong>Ideal consumer profile:</strong> Income <strong>$60,186</strong> · Age <strong>~45</strong> · Premium spend <strong>$564</strong> · T4 Luxury · Gen X (35 – 49).</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pf-star pf-star--insight">
-        <div class="pf-star-lbl">Discussion</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Les résultats suggèrent trois axes prioritaires. En premier lieu, le segment omni-canal (47 % des clients) représente un levier sous-exploité : équiper les conseillers en comptoir pour capturer les profils comportementaux et déclencher des parcours de réachat en ligne permettrait de convertir ce cœur de clientèle en acheteurs digitaux récurrents sur les lignes fragrances et skincare premium.</p>
-          <p class="pf-star-txt">En second lieu, la campagne Response affiche le taux de conversion le plus élevé (14,9 %) ; l'analyse systématique de ses déclencheurs (timing, message, ciblage) et la transposition de cette mécanique aux segments T3 Affluent et T4 Luxury constitueraient une approche d'optimisation à fort potentiel de rendement.</p>
-          <p class="pf-star-txt">Enfin, le faible taux de transformation des visiteurs web à haute fréquence plaide pour des offres d'échantillonnage et de bundles premium ciblées, visant à convertir une intention de navigation en achat à haute marge.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">The findings point to three priority directions. First, the omni-channel segment (47% of customers) represents an under-leveraged asset: equipping in-store advisors to capture behavioural profiles and trigger personalised repurchase journeys online would convert this core customer base into recurring digital buyers across premium fragrance and skincare lines.</p>
-          <p class="pf-star-txt">Second, the Response campaign records the highest conversion rate (14.9%); a systematic analysis of its triggers (timing, message, targeting) and the transposition of this mechanism to T3 Affluent and T4 Luxury segments would constitute a high-yield optimisation approach.</p>
-          <p class="pf-star-txt">Finally, the low conversion rate among high-frequency web visitors argues for targeted sampling and premium bundle offers designed to transform browsing intent into high-margin purchases.</p>
-        </div>
-      </div>
-
-      <div class="pf-stats">
-        <div><span class="pf-stat-val">2 240</span><span class="pf-stat-lbl">Clients analysés</span></div>
-        <div><span class="pf-stat-val">18x</span><span class="pf-stat-lbl">Écart Mass vs Luxury spend</span></div>
-        <div><span class="pf-stat-val">14,9%</span><span class="pf-stat-lbl">Conversion · Campagne Response</span></div>
-        <div><span class="pf-stat-val">3x</span><span class="pf-stat-lbl">Valeur client engagé vs non-engagé</span></div>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">Customer Segmentation</span>
-        <span class="pf-tag">Campaign ROI</span>
-        <span class="pf-tag">Omni-Channel</span>
-        <span class="pf-tag">Correlation Analysis</span>
-        <span class="pf-tag">Luxury Marketing</span>
-        <span class="pf-tag">Consumer Insights</span>
-        <span class="pf-tag">Python</span>
-      </div>
-    </article>
-
-    <!-- ── 06 · Sephora BCG Product Intelligence ──────────── -->
-    <article class="pf-card" data-cat="analyse">
-      <div class="pf-card-num">Analyse Produit</div>
-      <span class="pf-card-tag">BCG Matrix · Product Portfolio · Beauty Analytics</span>
-      <h2 class="pf-card-title">
-        <span data-lang-show="fr">Sephora — Intelligence Produit &amp; Stratégie de Portefeuille Beauté</span>
-        <span data-lang-show="en">Sephora — Product Intelligence &amp; Beauty Portfolio Strategy</span>
-      </h2>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl">Contexte & Problématique</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Sephora propose un catalogue de <strong>8 495 produits</strong> couvrant Skincare, Fragrance, Makeup, Hair Care et Bath &amp; Body. Avec 32 000+ avis clients, un prix moyen de <strong>51,70 $</strong> et une note moyenne de <strong>4,23/5</strong>, comment distinguer les produits à défendre des SKUs à risque ? <strong>Objectif :</strong> appliquer une matrice BCG au portefeuille beauté pour orienter les décisions marketing et commerciales.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Sephora's catalog spans <strong>8,495 products</strong> across Skincare, Fragrance, Makeup, Hair Care, and Bath &amp; Body. With 32,000+ customer reviews, an average price of <strong>$51.70</strong>, and an average rating of <strong>4.23/5</strong>, how do you distinguish which products to defend from which SKUs are at risk? <strong>Objective:</strong> apply a BCG matrix to the beauty portfolio to guide marketing and commercial decisions.</p>
-        </div>
-      </div>
-
-      <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl">BCG Portfolio Segmentation · 8 495 produits</div>
-        <div data-lang-show="fr">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Hero (Stars) — 2 307 produits (27,2%) :</strong> Volume élevé + note élevée (≥ 4,29). Protéger, amplifier, mettre en avant. Top brand : Anastasia Beverly Hills.</li>
-            <li><strong>Question Marks — 1 801 produits (21,2%) :</strong> Note élevée mais faible volume : potentiel marketing inexploité. Cibler avec des campagnes de visibilité et du seeding influenceur pour les convertir en Stars.</li>
-            <li><strong>Risk (Dogs) — 1 814 produits (21,4%) :</strong> Volume élevé mais note faible : risque de réputation. Reformuler ou déréférencer prioritairement avant que les avis négatifs n'érodent la marque globale.</li>
-            <li><strong>Underperformers — 2 294 produits (27%) :</strong> Faible volume + note faible. Rationaliser l'assortiment, candidats au délistage.</li>
-            <li><strong>Non notés — 279 produits :</strong> Invisibles dans les recherches filtrées par avis : activer les programmes de collecte d'avis en priorité.</li>
-          </ul>
-        </div>
-        <div data-lang-show="en">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Hero (Stars) — 2,307 products (27.2%):</strong> High volume + high rating (≥ 4.29). Protect, amplify, feature. Top brand: Anastasia Beverly Hills.</li>
-            <li><strong>Question Marks — 1,801 products (21.2%):</strong> High rating but low volume: untapped marketing upside. Target with visibility campaigns and influencer seeding to convert to Stars.</li>
-            <li><strong>Risk (Dogs) — 1,814 products (21.4%):</strong> High volume but low rating: reputation risk. Reformulate or delist as a priority before negative reviews erode the overall brand.</li>
-            <li><strong>Underperformers — 2,294 products (27%):</strong> Low volume + low rating. Rationalise assortment, candidates for delisting.</li>
-            <li><strong>Unrated — 279 products:</strong> Invisible in review-filtered searches: activate review collection programs as first priority.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pf-star pf-star--insight">
-        <div class="pf-star-lbl">Discussion</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">L'analyse identifie trois implications opérationnelles. Les 1 801 produits classés en Question Marks présentent déjà un niveau de satisfaction élevé (note moyenne ≥ 4,29) mais souffrent d'un déficit de visibilité ; un programme de seeding influenceur associé à une mise en avant éditoriale constituerait un levier d'adoption à moindre coût, sans nécessiter de reformulation produit.</p>
-          <p class="pf-star-txt">Par ailleurs, les 32 000 avis clients intègrent des données démographiques structurées (type de peau, carnation, couleur des yeux) qui représentent une ressource directement exploitable pour la personnalisation des campagnes beauté et la construction d'audiences similaires en ciblage publicitaire.</p>
-          <p class="pf-star-txt">Enfin, les 1 814 produits Risk Dogs combinent un volume d'avis significatif et un faible score de satisfaction ; un traitement prioritaire de ces références s'impose afin d'enrayer l'érosion potentielle de la valeur de marque Sephora avant que les signaux négatifs n'atteignent une masse critique.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">The analysis identifies three operational implications. The 1,801 Question Mark products already achieve high satisfaction (average rating ≥ 4.29) but suffer from a visibility deficit; an influencer seeding programme combined with editorial promotion would constitute a low-cost adoption lever, requiring no product reformulation.</p>
-          <p class="pf-star-txt">Furthermore, the 32,000+ customer reviews contain structured demographic data (skin type, skin tone, eye colour) representing a directly exploitable resource for beauty campaign personalisation and lookalike audience construction in paid targeting.</p>
-          <p class="pf-star-txt">Finally, the 1,814 Risk Dog products combine significant review volume with low satisfaction scores; prioritised remediation of these references is warranted to pre-empt the potential erosion of Sephora brand equity before negative signals reach a critical mass.</p>
-        </div>
-      </div>
-
-      <div class="pf-stats">
-        <div><span class="pf-stat-val">8 495</span><span class="pf-stat-lbl">Produits analysés</span></div>
-        <div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl">Avis clients</span></div>
-        <div><span class="pf-stat-val">4,23/5</span><span class="pf-stat-lbl">Note moyenne catalogue</span></div>
-        <div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl">Matrice de portefeuille</span></div>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">BCG Matrix</span>
-        <span class="pf-tag">Product Portfolio</span>
-        <span class="pf-tag">Beauty E-commerce</span>
-        <span class="pf-tag">Review Analytics</span>
-        <span class="pf-tag">Brand Strategy</span>
-        <span class="pf-tag">Sephora</span>
-        <span class="pf-tag">Python</span>
-      </div>
-    </article>
-
   </main>
+
+  <!-- ── Autres travaux ──────────────────────────────── -->
+  <section class="pf-extras" id="autres-travaux">
+    <h2 class="pf-extras-title">Autres Travaux</h2>
+    <p class="pf-extras-intro">Travaux de design réalisés dans un cadre associatif ou personnel.</p>
+    <ul class="pf-extras-list">
+      <li class="pf-extra">
+        <span class="pf-extra-tag">Design · Affiche</span>
+        <h3 class="pf-extra-title">Affiche - Thème Penwards 2024</h3>
+        <p class="pf-extra-desc">Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024). Exercice de composition et de typographie, sans participation au concours.</p>
+        <div class="pf-extra-tags">
+          <span class="pf-tag">Visual Design</span>
+          <span class="pf-tag">Typography</span>
+        </div>
+      </li>
+      <li class="pf-extra">
+        <span class="pf-extra-tag">Design · Supports événementiels</span>
+        <h3 class="pf-extra-title">Club de Kyudo de NCCU - Badge Nominatif</h3>
+        <p class="pf-extra-desc">Conception de badges nominatifs pour les activités du club de kyudo de NCCU, déclinaison en deux coloris avec maquette de présentation.</p>
+        <div class="pf-extra-tags">
+          <span class="pf-tag">Visual Design</span>
+          <span class="pf-tag">Print</span>
+          <span class="pf-tag">Mockup</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
 
   <!-- ── Page footer ─────────────────────────────────── -->
   <footer class="pf-footer">
