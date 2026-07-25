@@ -507,6 +507,269 @@
     }
     .pf-btn--ghost:hover { background: var(--mk-accent-soft); border-color: var(--mk-accent); }
 
+    /* ══════════════════════════════════════════════════════
+       Éditorial interactif
+       Le grain, le curseur et l'index donnent à la page une
+       texture d'imprimé ; toutes les animations se désactivent
+       si l'utilisateur préfère un mouvement réduit.
+       ══════════════════════════════════════════════════════ */
+
+    /* ── Grain d'impression ────────────────────────────── */
+    .pf-grain {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.4;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+    }
+
+    /* ── Curseur sur mesure ────────────────────────────── */
+    .pf-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 999;
+      pointer-events: none;
+      display: grid;
+      place-items: center;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--mk-accent);
+      transform: translate(-50%, -50%);
+      transition: width 0.32s cubic-bezier(.22,1,.36,1),
+                  height 0.32s cubic-bezier(.22,1,.36,1),
+                  background-color 0.32s ease,
+                  opacity 0.3s ease;
+      opacity: 0;
+    }
+    .pf-cursor.is-active { opacity: 1; }
+    .pf-cursor.is-expanded {
+      width: 82px; height: 82px;
+      background: rgba(var(--mk-accent-rgb),0.92);
+    }
+    .pf-cursor-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.24s ease, transform 0.24s ease;
+      white-space: nowrap;
+    }
+    .pf-cursor.is-expanded .pf-cursor-label { opacity: 1; transform: none; }
+    /* Le curseur natif ne disparaît que si le curseur sur mesure est actif */
+    body.has-custom-cursor,
+    body.has-custom-cursor a,
+    body.has-custom-cursor button { cursor: none; }
+
+    /* ── Index éditorial ───────────────────────────────── */
+    .pf-index {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1rem 2rem 3.5rem;
+    }
+    .pf-index-eyebrow {
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mk-muted);
+      margin: 0 0 0.5rem;
+    }
+    .pf-index-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--mk-border);
+    }
+    .pf-index-row {
+      display: grid;
+      grid-template-columns: 3.25rem 1fr auto;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding: 1.05rem 0.5rem 1.05rem 0.25rem;
+      border-bottom: 1px solid var(--mk-border);
+      cursor: pointer;
+      position: relative;
+      transition: padding-left 0.42s cubic-bezier(.22,1,.36,1);
+    }
+    /* Voile qui se déploie depuis la gauche au survol */
+    .pf-index-row::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--mk-accent-pale);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.52s cubic-bezier(.22,1,.36,1);
+      pointer-events: none;
+    }
+    .pf-index-row:hover,
+    .pf-index-row:focus-visible { padding-left: 1.25rem; outline: none; }
+    .pf-index-row:hover::before,
+    .pf-index-row:focus-visible::before { transform: scaleX(1); }
+    .pf-index-row:focus-visible { box-shadow: inset 0 0 0 2px var(--mk-accent); }
+    .pf-index-num {
+      position: relative;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--mk-muted);
+      font-variant-numeric: tabular-nums;
+      transition: color 0.32s ease;
+    }
+    .pf-index-name {
+      position: relative;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.4vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--mk-text);
+      text-wrap: balance;
+      transition: color 0.32s ease;
+    }
+    .pf-index-meta {
+      position: relative;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mk-muted);
+      white-space: nowrap;
+      transition: color 0.32s ease;
+    }
+    .pf-index-row:hover .pf-index-num,
+    .pf-index-row:hover .pf-index-meta,
+    .pf-index-row:focus-visible .pf-index-num,
+    .pf-index-row:focus-visible .pf-index-meta { color: var(--mk-accent); }
+    .pf-index-row:hover .pf-index-name,
+    .pf-index-row:focus-visible .pf-index-name { color: var(--mk-accent); }
+
+    /* Aperçu flottant qui suit le curseur */
+    .pf-index-preview {
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 998;
+      width: 300px;
+      margin: 0;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.94);
+      transition: opacity 0.34s ease, transform 0.48s cubic-bezier(.22,1,.36,1);
+      will-change: transform;
+    }
+    .pf-index-preview.is-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    .pf-index-preview img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 18px 48px rgba(var(--mk-accent-rgb),0.18);
+    }
+    /* Aperçu typographique pour les projets sans visuel */
+    .pf-index-preview-stat {
+      display: none;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 2.25rem 2rem;
+      background: var(--mk-accent);
+      border-radius: 4px;
+      box-shadow: 0 18px 48px rgba(var(--mk-accent-rgb),0.24);
+    }
+    .pf-index-preview.is-stat .pf-index-preview-stat { display: flex; }
+    .pf-index-preview.is-stat img { display: none; }
+    .pf-index-preview-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.1rem;
+      font-weight: 400;
+      line-height: 1;
+      color: #fff;
+      font-variant-numeric: tabular-nums;
+    }
+    .pf-index-preview-lbl {
+      font-size: 0.64rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+
+    /* ── Révélations au défilement ─────────────────────── */
+    /* L'état masqué n'est appliqué que si le script a pu poser la classe
+       .js-reveal sur <html>. Sans JavaScript, ou si le script échoue,
+       le contenu reste visible : une page blanche serait bien pire
+       qu'une page sans animation. */
+    html.js-reveal [data-reveal] {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.72s cubic-bezier(.22,1,.36,1),
+                  transform 0.72s cubic-bezier(.22,1,.36,1);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+    html.js-reveal [data-reveal].is-revealed { opacity: 1; transform: none; }
+
+    /* ── Matrice BCG (Sephora) ─────────────────────────── */
+    .pf-bcg {
+      margin: 1.5rem 0 0;
+      padding: 1.5rem;
+      background: var(--mk-accent-pale);
+      border: 1px solid var(--mk-border);
+      border-radius: 10px;
+    }
+    .pf-bcg-caption {
+      font-size: 0.72rem;
+      color: var(--mk-muted);
+      margin: 0.9rem 0 0;
+      line-height: 1.55;
+    }
+    .pf-bcg svg { display: block; width: 100%; height: auto; }
+    .pf-bcg-quad {
+      cursor: default;
+      transition: opacity 0.28s ease;
+    }
+    .pf-bcg:hover .pf-bcg-quad { opacity: 0.42; }
+    .pf-bcg .pf-bcg-quad:hover { opacity: 1; }
+    .pf-bcg-quad rect { transition: fill 0.28s ease; }
+    .pf-bcg-quad:hover rect { fill: rgba(var(--mk-accent-rgb),0.14); }
+
+    /* ── Écrans tactiles : pas de curseur ni d'aperçu ──── */
+    @media (hover: none) {
+      .pf-cursor, .pf-index-preview { display: none !important; }
+      body.has-custom-cursor,
+      body.has-custom-cursor a,
+      body.has-custom-cursor button { cursor: auto; }
+    }
+
+    /* ── Écrans étroits ────────────────────────────────── */
+    /* La largeur est une contrainte distincte de la capacité de survol :
+       un navigateur de bureau en fenêtre étroite a besoin de cette règle,
+       que @media (hover: none) ne lui appliquerait jamais. */
+    @media (max-width: 720px) {
+      .pf-index { padding: 1rem 1.25rem 2.5rem; }
+      .pf-index-row {
+        grid-template-columns: 2.25rem minmax(0, 1fr);
+        gap: 0.85rem;
+      }
+      .pf-index-meta { display: none; }
+      .pf-index-name { overflow-wrap: anywhere; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pf-grain { display: none; }
+      .pf-cursor, .pf-index-preview { display: none !important; }
+      body.has-custom-cursor,
+      body.has-custom-cursor a,
+      body.has-custom-cursor button { cursor: auto; }
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+      .pf-index-row, .pf-index-row::before { transition: none; }
+    }
+
     /* ── Autres travaux ────────────────────────────────── */
     .pf-extras {
       max-width: 1240px;
@@ -688,6 +951,10 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- ── Texture &amp; curseur ──────────────────────────── -->
+  <div class="pf-grain" aria-hidden="true"></div>
+  <div class="pf-cursor" aria-hidden="true"><span class="pf-cursor-label"></span></div>
+
   <!-- ── Scroll progress ─────────────────────────────── -->
   <div class="scroll-progress-track" aria-hidden="true"></div>
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -741,6 +1008,51 @@
       </div>
     </div>
   </section>
+
+  <!-- ── Index éditorial ─────────────────────────────── -->
+  <section class="pf-index" aria-labelledby="index-title">
+    <p class="pf-index-eyebrow" id="index-title">Index des Projets</p>
+    <ol class="pf-index-list">
+      <li class="pf-index-row" data-target="engoo-dashboard" data-preview="assets/Excel_Engoo/Engoo Dashboard_FR.png" tabindex="0" role="link">
+        <span class="pf-index-num">01</span>
+        <span class="pf-index-name">Engoo · Dashboard Xiaohongshu</span>
+        <span class="pf-index-meta">Dashboard · Social Analytics</span>
+      </li>
+      <li class="pf-index-row" data-target="bcg-beaute" data-stat="8 495" data-stat-label="Produits analysés" tabindex="0" role="link">
+        <span class="pf-index-num">02</span>
+        <span class="pf-index-name">Sephora · Intelligence Produit</span>
+        <span class="pf-index-meta">BCG · Beauty Analytics</span>
+      </li>
+      <li class="pf-index-row" data-target="maison-beaute" data-stat="2 240" data-stat-label="Clients analysés" tabindex="0" role="link">
+        <span class="pf-index-num">03</span>
+        <span class="pf-index-name">Maison Beauté · Diagnostic Client</span>
+        <span class="pf-index-meta">Segmentation · ROI</span>
+      </li>
+      <li class="pf-index-row" data-target="engoo-weekly" data-preview="assets/Engoo_Weekly%20Report_FR/Diapositive1.PNG" tabindex="0" role="link">
+        <span class="pf-index-num">04</span>
+        <span class="pf-index-name">Engoo · Rapport Hebdomadaire</span>
+        <span class="pf-index-meta">Reporting · Data Storytelling</span>
+      </li>
+      <li class="pf-index-row" data-target="aiesec-yolo" data-preview="assets/yolo-camp-tote-bag.png" tabindex="0" role="link">
+        <span class="pf-index-num">05</span>
+        <span class="pf-index-name">AIESEC · Camp International YOLO</span>
+        <span class="pf-index-meta">Campagne · Direction Artistique</span>
+      </li>
+      <li class="pf-index-row" data-target="guzheng-facebook" data-preview="assets/guzheng-club-recruitment-poster.png" tabindex="0" role="link">
+        <span class="pf-index-num">06</span>
+        <span class="pf-index-name">Club de Guzheng · Page Facebook</span>
+        <span class="pf-index-meta">Community Management</span>
+      </li>
+    </ol>
+  </section>
+
+  <figure class="pf-index-preview" aria-hidden="true">
+    <img src="" alt="">
+    <div class="pf-index-preview-stat">
+      <span class="pf-index-preview-val"></span>
+      <span class="pf-index-preview-lbl"></span>
+    </div>
+  </figure>
 
   <!-- ── Filter bar ──────────────────────────────────── -->
   <div class="pf-filters">
@@ -968,6 +1280,58 @@
         </div>
       </div>
 
+      <div class="pf-bcg">
+        <svg viewBox="0 0 560 392" role="img" aria-labelledby="bcg-t bcg-d">
+          <title id="bcg-t">Matrice de portefeuille Sephora</title>
+          <desc id="bcg-d">Répartition des 8 495 produits en quatre segments selon la satisfaction client et le volume d'avis : Hero 2 307 produits, Question Marks 1 801, Underperformers 2 294, Risk 1 814.</desc>
+
+          <!-- Axes -->
+          <line x1="70" y1="170" x2="530" y2="170" stroke="var(--mk-border)" stroke-width="1"/>
+          <line x1="300" y1="26"  x2="300" y2="314" stroke="var(--mk-border)" stroke-width="1"/>
+
+          <!-- Légendes des axes -->
+          <text x="300" y="344" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" fill="var(--mk-muted)">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
+          <text x="30" y="170" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" fill="var(--mk-muted)" transform="rotate(-90 30 170)">SATISFACTION  ·  NOTE →</text>
+
+          <!-- Question Marks : forte satisfaction, faible visibilité -->
+          <g class="pf-bcg-quad">
+            <rect x="70" y="26" width="230" height="144" fill="transparent"/>
+            <circle cx="185" cy="88" r="30" fill="rgba(var(--mk-accent-rgb),0.16)" stroke="var(--mk-accent)" stroke-width="1"/>
+            <text x="185" y="84" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">1 801</text>
+            <text x="185" y="99" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">21,2 %</text>
+            <text x="185" y="140" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent)">QUESTION MARKS</text>
+          </g>
+
+          <!-- Hero (Stars) : forte satisfaction, forte visibilité -->
+          <g class="pf-bcg-quad">
+            <rect x="300" y="26" width="230" height="144" fill="transparent"/>
+            <circle cx="415" cy="88" r="34" fill="rgba(var(--mk-accent-rgb),0.16)" stroke="var(--mk-accent)" stroke-width="1"/>
+            <text x="415" y="84" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">2 307</text>
+            <text x="415" y="99" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">27,2 %</text>
+            <text x="415" y="144" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent)">HERO · STARS</text>
+          </g>
+
+          <!-- Underperformers : faible satisfaction, faible visibilité -->
+          <g class="pf-bcg-quad">
+            <rect x="70" y="170" width="230" height="144" fill="transparent"/>
+            <circle cx="185" cy="248" r="34" fill="rgba(var(--mk-accent2-rgb),0.14)" stroke="var(--mk-accent2)" stroke-width="1"/>
+            <text x="185" y="244" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">2 294</text>
+            <text x="185" y="259" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">27 %</text>
+            <text x="185" y="304" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent2)">UNDERPERFORMERS</text>
+          </g>
+
+          <!-- Risk (Dogs) : faible satisfaction, forte visibilité -->
+          <g class="pf-bcg-quad">
+            <rect x="300" y="170" width="230" height="144" fill="transparent"/>
+            <circle cx="415" cy="248" r="30" fill="rgba(var(--mk-accent2-rgb),0.14)" stroke="var(--mk-accent2)" stroke-width="1"/>
+            <text x="415" y="244" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">1 814</text>
+            <text x="415" y="259" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">21,4 %</text>
+            <text x="415" y="300" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent2)">RISK · DOGS</text>
+          </g>
+        </svg>
+        <p class="pf-bcg-caption">Aire des cercles proportionnelle au nombre de produits. Les quatre segments totalisent 8 216 références, soit 96,8 % du catalogue analysé.</p>
+      </div>
+
       <div class="pf-stats">
         <div><span class="pf-stat-val">8 495</span><span class="pf-stat-lbl">Produits analysés</span></div>
         <div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl">Avis clients</span></div>
@@ -985,7 +1349,7 @@
       </div>
     </article>
 
-    <article class="pf-card pf-card--featured" data-cat="analyse">
+    <article class="pf-card pf-card--featured" data-cat="analyse" id="maison-beaute">
       <div class="pf-card-num">Analyse Marketing</div>
       <span class="pf-card-tag">Python · Segmentation · Campaign ROI</span>
       <h2 class="pf-card-title">
@@ -1142,7 +1506,7 @@
       </div>
     </article>
 
-    <article class="pf-card" data-cat="campagne">
+    <article class="pf-card" data-cat="campagne" id="aiesec-yolo">
       <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">Campagne Marketing</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.aiesec.tag">Campagne · Direction artistique</span>
       <h2 class="pf-card-title">AIESEC – Camp International YOLO</h2>
@@ -1252,7 +1616,7 @@
       </div>
     </article>
 
-    <article class="pf-card" data-cat="community">
+    <article class="pf-card" data-cat="community" id="guzheng-facebook">
       <div class="pf-card-num" data-i18n="portfolio.mkt.guzhengNum">Community Management</div>
       <span class="pf-card-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
       <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
@@ -1437,6 +1801,209 @@
     initCarousel('yoloCarousel',  'yoloDots',    3);  // AIESEC: 3 per view
     initCarousel('weeklyFR',      'weeklyDotsFR', 2);  // Weekly report FR: 2 per view
     initCarousel('weeklyEN',      'weeklyDotsEN', 2);  // Weekly report EN: 2 per view
+  </script>
+
+  <!-- ── Éditorial interactif ────────────────────────── -->
+  <script>
+  (function () {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fine    = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    /* ── 1. Révélations au défilement ─────────────────── */
+    const revealables = [
+      ['.pf-index-row', 40],
+      ['.pf-card', 0],
+      ['.pf-star', 60],
+      ['.pf-extra', 60],
+    ];
+    revealables.forEach(([sel, step]) => {
+      document.querySelectorAll(sel).forEach((el, i) => {
+        el.setAttribute('data-reveal', '');
+        if (step) el.style.setProperty('--reveal-delay', (i % 6) * step + 'ms');
+      });
+    });
+
+    function revealAll() {
+      document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
+    }
+
+    if (reduced || !('IntersectionObserver' in window)) {
+      revealAll();
+    } else {
+      /* On ne masque qu'à partir d'ici : si le script s'arrête avant,
+         rien n'aura jamais été caché. */
+      document.documentElement.classList.add('js-reveal');
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-revealed');
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.06 });
+      document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+      /* Filet de sécurité : si l'observateur ne se déclenche jamais
+         (onglet en arrière-plan, moteur exotique, rendu suspendu),
+         on affiche tout au bout de 2,5 s. */
+      setTimeout(revealAll, 2500);
+    }
+
+    /* ── 2. Compteurs animés ──────────────────────────── */
+    /* On ne touche qu'aux valeurs purement numériques : les libellés
+       comme « A/B » ou « BCG » sont laissés intacts. */
+    function animateCount(el) {
+      const original = el.textContent;
+      const m = original.trim().match(/^(\D*?)(\d+(?:[\s\u00a0\u202f]\d{3})*(?:[.,]\d+)?)(.*)$/);
+      if (!m) return;
+
+      const prefix = m[1], suffix = m[3], digits = m[2];
+      const sepMatch   = digits.match(/[.,](?=\d+$)/);
+      const decimalSep = sepMatch ? sepMatch[0] : '.';
+      const groupSep   = (digits.match(/[\s\u00a0\u202f]/) || [null])[0];
+      const normalised = digits.replace(/[\s\u00a0\u202f]/g, '').replace(',', '.');
+      const target     = parseFloat(normalised);
+      if (!isFinite(target)) return;
+
+      const decimals = (normalised.split('.')[1] || '').length;
+      const started  = performance.now();
+      const DURATION = 1100;
+
+      function frame(now) {
+        const t = Math.min((now - started) / DURATION, 1);
+        if (t >= 1) {
+          /* Derniere image : on restitue la chaine d'origine au caractere pres,
+             pour ne jamais alterer le format choisi (separateurs, espaces fines,
+             ponctuation). L'animation ne peut donc pas modifier le contenu. */
+          el.textContent = original;
+          return;
+        }
+        const eased = 1 - Math.pow(1 - t, 3);
+        let shown = (target * eased).toFixed(decimals);
+        if (decimalSep !== '.') shown = shown.replace('.', decimalSep);
+        if (groupSep) {
+          const parts = shown.split(decimalSep);
+          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, groupSep);
+          shown = parts.join(decimalSep);
+        }
+        el.textContent = prefix + shown + suffix;
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    if (!reduced && 'IntersectionObserver' in window) {
+      const countIO = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          animateCount(entry.target);
+          countIO.unobserve(entry.target);
+        });
+      }, { threshold: 0.6 });
+      document.querySelectorAll('.pf-stat-val, .pf-hero-stat-num').forEach(el => {
+        if (/\d/.test(el.textContent)) countIO.observe(el);
+      });
+    }
+
+    /* ── 3. Index : navigation ────────────────────────── */
+    const rows = [...document.querySelectorAll('.pf-index-row')];
+    function goToCard(row) {
+      const target = document.getElementById(row.dataset.target);
+      if (!target) return;
+      /* Un filtre actif peut masquer la carte visée : on rétablit « Tous ». */
+      if (target.classList.contains('is-hidden')) {
+        const all = document.querySelector('.filter-btn[data-filter="all"]');
+        if (all) all.click();
+      }
+      target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    }
+    rows.forEach(row => {
+      row.addEventListener('click', () => goToCard(row));
+      row.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToCard(row); }
+      });
+    });
+
+    /* ── 4. Curseur sur mesure &amp; aperçu flottant ─────── */
+    if (fine && !reduced) {
+      const cursor  = document.querySelector('.pf-cursor');
+      const label   = document.querySelector('.pf-cursor-label');
+      const preview = document.querySelector('.pf-index-preview');
+      const pImg    = preview.querySelector('img');
+      const pVal    = preview.querySelector('.pf-index-preview-val');
+      const pLbl    = preview.querySelector('.pf-index-preview-lbl');
+
+      document.body.classList.add('has-custom-cursor');
+
+      let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+      let px = cx, py = cy;
+
+      window.addEventListener('mousemove', e => {
+        cx = e.clientX; cy = e.clientY;
+        cursor.classList.add('is-active');
+        cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+      }, { passive: true });
+
+      document.addEventListener('mouseleave', () => {
+        cursor.classList.remove('is-active');
+        preview.classList.remove('is-visible');
+      });
+
+      /* L'aperçu suit le curseur avec un léger retard (effet de traîne) */
+      (function follow() {
+        px += (cx - px) * 0.12;
+        py += (cy - py) * 0.12;
+        preview.style.transform =
+          `translate(${px}px, ${py}px) translate(-50%, -50%) scale(${preview.classList.contains('is-visible') ? 1 : 0.94})`;
+        requestAnimationFrame(follow);
+      })();
+
+      function expand(text) {
+        cursor.classList.add('is-expanded');
+        label.textContent = text;
+      }
+      function collapse() {
+        cursor.classList.remove('is-expanded');
+        label.textContent = '';
+      }
+
+      /* Index : aperçu + curseur « Voir » */
+      rows.forEach(row => {
+        row.addEventListener('mouseenter', () => {
+          expand('Voir');
+          if (row.dataset.stat) {
+            preview.classList.add('is-stat');
+            pVal.textContent = row.dataset.stat;
+            pLbl.textContent = row.dataset.statLabel || '';
+          } else if (row.dataset.preview) {
+            preview.classList.remove('is-stat');
+            pImg.src = row.dataset.preview;
+          }
+          preview.classList.add('is-visible');
+        });
+        row.addEventListener('mouseleave', () => {
+          collapse();
+          preview.classList.remove('is-visible');
+        });
+      });
+
+      /* Images des cartes : curseur « Agrandir » */
+      document.querySelectorAll('.pf-card img, .pf-img-wrap img').forEach(img => {
+        img.addEventListener('mouseenter', () => expand('Agrandir'));
+        img.addEventListener('mouseleave', collapse);
+      });
+
+      /* Liens et boutons : simple élargissement, sans libellé */
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if (el.closest('.pf-index-row')) return;
+          cursor.classList.add('is-expanded');
+          label.textContent = '';
+        });
+        el.addEventListener('mouseleave', collapse);
+      });
+    }
+  })();
   </script>
 </body>
 </html>
