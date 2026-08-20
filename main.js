@@ -312,6 +312,7 @@
         subMktStrategie: "Stratégie",
         subMktContenu: "Contenu",
         subMktPerf: "Marketing Performance",
+        subMktDisplay: "Display & AdOps",
         subMktDataTech: "Data Analytics & Marketing Tech",
         chipCampaign: "Planification de Campagnes",
         filterContent: "Content & Community",
@@ -1255,6 +1256,7 @@
         subMktStrategie: "Strategy",
         subMktContenu: "Content",
         subMktPerf: "Marketing Performance",
+        subMktDisplay: "Display & AdOps",
         subMktDataTech: "Data Analytics & Marketing Tech",
         chipCampaign: "Campaign Planning",
         filterContent: "Content & Community",
@@ -2177,6 +2179,7 @@
         subMktStrategie: "策略",
         subMktContenu: "內容",
         subMktPerf: "行銷績效",
+        subMktDisplay: "Display 廣告與 AdOps",
         subMktDataTech: "數據分析與行銷科技",
         chipCampaign: "行銷活動規劃",
         chipIntercultural: "跨文化合作",
@@ -4380,6 +4383,126 @@
       text: "Utilisation quotidienne de Google Workspace (Docs, Sheets, Slides, Drive, Gmail) pour la collaboration et la productivité.",
       proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Google Workspace", meta: [], points: ["Rédaction collaborative, suivi de données sur Sheets, présentations Slides."] }],
       en: { title: "Google Suite", text: "Daily use of Google Workspace (Docs, Sheets, Slides, Drive, Gmail) for collaboration and productivity.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "Google Workspace", meta: [], points: ["Collaborative writing, data tracking on Sheets, Slides presentations."] }] },
+    },
+    "mkt-xandr": {
+      title: "Xandr",
+      text: "Plateforme publicitaire utilisée en régie pour la mise en ligne des campagnes display et le suivi de leur diffusion.",
+      byPage: {
+        marketing: { text: "Mise en ligne des campagnes display et suivi de leur diffusion : contrôle du bon déroulement et optimisation en cours de campagne." },
+        data:      { text: "Source des données de diffusion utilisées pour produire les rapports de mise en ligne et les bilans de campagnes." },
+      },
+      proofs: [
+        {
+          type: "Stage",
+          title: "Mediatrading / AdOps – Mise en ligne des campagnes display",
+          org: "leboncoin · Régie publicitaire",
+          meta: [],
+          points: ["Mise en ligne des campagnes display et suivi opérationnel de leur diffusion sur un portefeuille de campagnes."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
+        },
+      ],
+      en: {
+        title: "Xandr",
+        text: "Advertising platform used on the sales house side to launch display campaigns and monitor their delivery.",
+        byPage: {
+          marketing: { text: "Launching display campaigns and monitoring delivery: checking that campaigns run as booked and optimising them while live." },
+          data:      { text: "Source of the delivery data used to produce go-live reports and end-of-campaign reviews." },
+        },
+        proofs: [
+          { type: "Internship", title: "Mediatrading / AdOps – Display Campaign Go-Live", org: "leboncoin · Advertising Sales House", meta: [], points: ["Launched display campaigns and monitored their delivery across a portfolio of campaigns."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+        ],
+      },
+    },
+    "mkt-gam": {
+      title: "Google Ad Manager",
+      text: "Ad server utilisé pour la gestion de l'inventaire display, la diffusion des campagnes et l'édition des rapports associés.",
+      byPage: {
+        marketing: { text: "Gestion de la diffusion des campagnes display sur l'inventaire de la régie et contrôle de l'atteinte des objectifs de livraison." },
+        data:      { text: "Extraction et consolidation des données de diffusion (livraison, performance) pour les rapports de mise en ligne et les bilans." },
+      },
+      proofs: [
+        {
+          type: "Stage",
+          title: "Mediatrading / AdOps – Diffusion & reporting des campagnes",
+          org: "leboncoin · Régie publicitaire",
+          meta: [],
+          points: ["Suivi de la diffusion des campagnes display et production des rapports de mise en ligne et des bilans de campagnes."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
+        },
+      ],
+      en: {
+        title: "Google Ad Manager",
+        text: "Ad server used to manage display inventory, deliver campaigns and produce the associated reports.",
+        byPage: {
+          marketing: { text: "Managing display campaign delivery across the sales house inventory and checking that delivery objectives are met." },
+          data:      { text: "Extracting and consolidating delivery and performance data for go-live reports and end-of-campaign reviews." },
+        },
+        proofs: [
+          { type: "Internship", title: "Mediatrading / AdOps – Campaign Delivery & Reporting", org: "leboncoin · Advertising Sales House", meta: [], points: ["Monitored display campaign delivery and produced go-live reports and end-of-campaign reviews."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+        ],
+      },
+    },
+    "office-monday": {
+      title: "Monday",
+      text: "Suivi de projets et de tâches en équipe : organisation des campagnes, échéances et répartition du travail.",
+      byPage: {
+        marketing: { text: "Suivi d'un portefeuille de campagnes : planning de mise en ligne, échéances et avancement partagés avec les équipes commerciales." },
+        data:      { text: "Suivi des demandes de reporting et des échéances de production des bilans de campagnes." },
+        finance:   { text: "Suivi des échéances et des livrables d'un portefeuille de campagnes, garantissant le respect des engagements pris auprès des annonceurs." },
+      },
+      proofs: [
+        {
+          type: "Stage",
+          title: "Mediatrading / AdOps – Suivi d'un portefeuille de campagnes",
+          org: "leboncoin · Régie publicitaire",
+          meta: [],
+          points: ["Suivi de l'avancement et des échéances des campagnes display en lien avec les équipes commerciales."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
+        },
+      ],
+      en: {
+        title: "Monday",
+        text: "Team project and task tracking: campaign organisation, deadlines and workload allocation.",
+        byPage: {
+          marketing: { text: "Tracking a portfolio of campaigns: go-live planning, deadlines and progress shared with the sales teams." },
+          data:      { text: "Tracking reporting requests and the production deadlines for end-of-campaign reviews." },
+          finance:   { text: "Tracking deadlines and deliverables across a portfolio of campaigns, ensuring commitments made to advertisers are met." },
+        },
+        proofs: [
+          { type: "Internship", title: "Mediatrading / AdOps – Campaign Portfolio Tracking", org: "leboncoin · Advertising Sales House", meta: [], points: ["Tracked the progress and deadlines of display campaigns together with the sales teams."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+        ],
+      },
+    },
+    "office-slack": {
+      title: "Slack",
+      text: "Communication interne au quotidien : coordination entre équipes et circulation rapide de l'information.",
+      byPage: {
+        marketing: { text: "Coordination quotidienne avec les équipes commerciales pour fluidifier les échanges entre l'annonceur et la régie." },
+        data:      { text: "Circulation des résultats de campagnes et des demandes de reporting entre les équipes." },
+        finance:   { text: "Interface quotidienne avec les équipes commerciales, assurant la fiabilité et la traçabilité de l'information transmise au client." },
+      },
+      proofs: [
+        {
+          type: "Stage",
+          title: "Mediatrading / AdOps – Coordination avec les équipes commerciales",
+          org: "leboncoin · Régie publicitaire",
+          meta: [],
+          points: ["Échanges quotidiens avec les équipes commerciales pour assurer la fluidité de la communication entre l'annonceur et la régie."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
+        },
+      ],
+      en: {
+        title: "Slack",
+        text: "Day-to-day internal communication: cross-team coordination and fast information flow.",
+        byPage: {
+          marketing: { text: "Daily coordination with the sales teams to keep exchanges smooth between the advertiser and the sales house." },
+          data:      { text: "Circulating campaign results and reporting requests across teams." },
+          finance:   { text: "Daily interface with the sales teams, ensuring the reliability and traceability of the information shared with the client." },
+        },
+        proofs: [
+          { type: "Internship", title: "Mediatrading / AdOps – Coordination with Sales Teams", org: "leboncoin · Advertising Sales House", meta: [], points: ["Daily exchanges with the sales teams to keep communication smooth between the advertiser and the sales house."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+        ],
+      },
     },
     "office-notion": {
       title: "Notion",
