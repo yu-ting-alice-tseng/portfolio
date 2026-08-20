@@ -11,6 +11,10 @@ setlocal EnableExtensions
 
 cd /d "%~dp0"
 set "LOG=%~dp0auto-sync.log"
+
+:: Nettoyage prealable : Windows / OneDrive depose parfois des desktop.ini
+:: dans .git, ce qui casse git ("fatal: bad object refs/desktop.ini").
+if exist ".git" del /s /f /q /a ".git\desktop.ini" > nul 2>&1
 set GIT_TERMINAL_PROMPT=0
 git config gc.auto 0
 
