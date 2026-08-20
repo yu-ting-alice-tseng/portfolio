@@ -117,6 +117,16 @@ Order proof cards within a skill by importance (descending):
 
 ---
 
+## 14. Une Expérience, Une Écriture par Page
+
+- Lorsqu'une même expérience apparaît sur plusieurs pages, **le style d'écriture et les compétences mises en avant doivent être différents sur chaque page**.
+- Ne jamais dupliquer les mêmes puces d'une page à l'autre : chaque page reçoit sa propre variante de clés i18n (`point…` pour index, `mkPoint…` pour marketing, `dataPoint…` pour data, `finPoint…` pour finance).
+- Le style suit celui déjà utilisé sur la page : phrases nominales courtes sur index et finance, verbes à l'infinitif sur marketing et data.
+- Les compétences signalées suivent le domaine de la page (marketing : diffusion, relation annonceur ; data : consolidation et analyse des indicateurs ; finance : exécution des engagements, synthèse de performance).
+- Reformuler uniquement à partir de faits réels : changer l'angle, jamais inventer de nouvelles missions.
+
+---
+
 ## Quick Pre-Publish Checklist
 
 Before finalizing any new text, component, or section:
@@ -129,4 +139,5 @@ Before finalizing any new text, component, or section:
 - [ ] No fabricated information
 - [ ] No garbled/placeholder text
 - [ ] Content is in the correct section
+- [ ] Une expérience présente sur plusieurs pages a un style et des compétences différents sur chaque page
 - [ ] Language matches the page's language version
