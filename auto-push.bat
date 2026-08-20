@@ -1,24 +1,25 @@
 @echo off
 chcp 65001 > nul
-echo ===================================================
-echo [MONITORING] Auto-upload radar is active...
-echo Please do not close this window!
-echo ===================================================
+setlocal EnableExtensions
 
-:: Disable automatic garbage collection so git never prompts during push
-git config gc.auto 0
-set GIT_TERMINAL_PROMPT=0
+:: ------------------------------------------------------------------
+::  Ancienne methode : fenetre ouverte en permanence.
+::  Elle appelle desormais auto-sync.bat (qui fait aussi un pull),
+::  toutes les 30 secondes.
+::  Methode recommandee : lancer une fois install-auto-sync.bat,
+::  plus aucune fenetre a garder ouverte.
+::  Ne pas utiliser les deux methodes en meme temps.
+:: ------------------------------------------------------------------
+
+cd /d "%~dp0"
+
+echo ===================================================
+echo [MONITORING] Synchronisation automatique active...
+echo Ne pas fermer cette fenetre !
+echo (Alternative : install-auto-sync.bat, sans fenetre)
+echo ===================================================
 
 :loop
-git add .
-:: Check if there are any changes to commit
-git diff-index --quiet HEAD --
-if %errorlevel% neq 0 (
-    git commit -m "Auto-update: File changed"
-    git push origin main
-    echo [%date% %time%] Changes detected! Successfully synced to GitHub.
-)
-
-:: Checks for updates in the background every 10 seconds
-timeout /t 10 > nul
+call "%~dp0auto-sync.bat"
+timeout /t 30 /nobreak > nul
 goto loop

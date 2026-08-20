@@ -9,3 +9,6 @@ ehthumbs.db
 # Large research data packages (not needed for website deployment)
 assets/**/Replication*
 assets/**/Replication-Package/
+
+# Auto-sync log (local only)
+auto-sync.log
