@@ -20,11 +20,19 @@ if errorlevel 1 (
     exit /b 1
 )
 
+
+:: Par defaut, schtasks refuse de lancer la tache sur batterie et ne rattrape
+:: pas les executions manquees. On corrige les deux reglages.
+echo Reglages : execution sur batterie + rattrapage des passages manques...
+powershell -NoProfile -Command "$s = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable; Set-ScheduledTask -TaskName '%TACHE%' -Settings $s | Out-Null" > nul 2>&1
+if errorlevel 1 echo (Reglages non appliques - la tache fonctionne quand meme sur secteur.)
+
 echo.
 echo Tache installee. Premiere synchronisation immediate...
 schtasks /Run /TN "%TACHE%"
 echo.
 echo C'est fait : le site se synchronise desormais toutes les 5 minutes,
-echo sans fenetre a garder ouverte. Journal : auto-sync.log
+echo des l'ouverture de session Windows, sans rien ouvrir et sans fenetre.
+echo Journal : auto-sync.log
 echo Pour desinstaller : uninstall-auto-sync.bat
 pause

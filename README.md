@@ -46,6 +46,8 @@ Le site est publié depuis la branche `main` : tout ce qui est poussé sur `main
 
 **Désinstaller** : double-cliquer sur `uninstall-auto-sync.bat`.
 
+**Sur batterie** : `install-auto-sync.bat` autorise explicitement l'exécution sur batterie et le rattrapage des passages manqués (réglages appliqués via PowerShell après la création de la tâche).
+
 **Changer la fréquence** : dans `install-auto-sync.bat`, remplacer `/MO 5` par le nombre de minutes souhaité, puis relancer le fichier.
 
 `auto-push.bat` reste disponible pour l'ancienne méthode (fenêtre ouverte en permanence) : il appelle désormais `auto-sync.bat` toutes les 30 secondes.
