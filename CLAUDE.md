@@ -132,7 +132,7 @@ Order proof cards within a skill by importance (descending):
 - **Ne jamais créer de branche** pour une modification du site : travailler, committer et pousser **directement sur `main`**.
 - Pas de pull request : `main` est la branche publiée, toute modification validée doit y arriver immédiatement.
 - Toujours faire un `git pull --rebase origin main` avant de pousser, afin de ne pas bloquer la synchronisation automatique de la machine locale.
-- La synchronisation locale est assurée par `auto-sync.bat`, planifié par la tâche Windows « Portfolio Auto Sync » (installée via `install-auto-sync.bat`).
+- La synchronisation locale est assurée par `auto-watch.ps1` (surveillance du dossier, déclenchement une minute après la dernière modification, contrôle toutes les 30 minutes), qui appelle `auto-sync.bat`. Tâche Windows « Portfolio Auto Sync », installée via `install-auto-sync.bat`.
 
 ---
 
