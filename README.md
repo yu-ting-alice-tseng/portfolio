@@ -58,8 +58,6 @@ Le site est publié depuis la branche `main` : tout ce qui est poussé sur `main
 
 **Changer les délais** : en haut de `auto-watch.ps1`, `$debounceSeconds` (défaut 60) et `$fullSyncMinutes` (défaut 30).
 
-`auto-push.bat` reste disponible pour l'ancienne méthode (fenêtre ouverte en permanence) : il appelle `auto-sync.bat` toutes les 30 secondes.
-
 **En cas de conflit** : rien n'est jamais écrasé. Si le `pull` échoue, le script annule le rebase, écrit `ECHEC du pull` dans `auto-sync.log` et ne pousse pas, en attendant une résolution manuelle.
 
 **Erreur `fatal: bad object refs/desktop.ini`** : Windows / OneDrive a déposé un `desktop.ini` dans `.git`. Double-cliquer sur `fix-git-desktop-ini.bat` (le nettoyage est aussi fait automatiquement à chaque synchronisation).

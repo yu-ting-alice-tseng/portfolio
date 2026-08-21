@@ -20,12 +20,6 @@
     yearSpan.textContent = String(new Date().getFullYear());
   }
 
-  // Fix corrupted PDF hrefs (encoding artifact from prior file operation)
-  document.querySelectorAll('a[href*="250508_"]').forEach(a => {
-    if (!a.href.includes("作品集")) {
-      a.setAttribute("href", "assets/250508_作品集_社群經燳與設計_c.pdf");
-    }
-  });
   // Mobile nav
   const navToggle = document.querySelector("[data-nav-toggle]");
   const mobileNav = document.querySelector("[data-mobile-nav]");
@@ -732,7 +726,7 @@
           mkPoint4: "Coordonner les flux de localisation avec le pôle contenu pour garantir l'uniformité internationale de la marque.",
           portfolioLink: "Voir les créations (PDF)",
           excelLink: "Télécharger le tableau de bord XHS (Excel)",
-          excelHref: "assets/Engoo_XHS Dashboard_FR.xlsx",
+          excelHref: "assets/Engoo_XHS Dashboard_FR.xlsx",   // fichier absent du depot : lien retire des pages
           weeklyReportLabel: "Rapport hebdomadaire",
           weeklyReportEN: "Télécharger – Version anglaise",
           weeklyReportFR: "Télécharger – Version française",
@@ -1667,7 +1661,7 @@
           pythonPoint: "Developed a Python script to automate the daily data consolidation process, improving the efficiency of reporting operations every day.",
           portfolioLink: "View creations (PDF)",
           excelLink: "Download XHS Dashboard (Excel)",
-          excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",
+          excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",   // fichier absent du depot : lien retire des pages
           weeklyReportLabel: "Weekly Report",
           weeklyReportEN: "Download – English version",
           weeklyReportFR: "Download – French version",
@@ -2575,7 +2569,7 @@
           finPoint2: "管理小紅書的頻道績效與內容指標，3 個月內瀏覽量 +93.3%、互動量 +89.1%、追蹤者 +69.7%。",
           portfolioLink: "查看作品集（PDF）",
           excelLink: "下載小紅書儀表板（Excel）",
-          excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",
+          excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",   // fichier absent du depot : lien retire des pages
           stat1: "瀏覽量",
           stat2: "追蹤者",
           stat3: "互動量",
@@ -3273,6 +3267,7 @@
           title: "TOSA 950/1000",
           meta: ["10/2025"],
           points: ["Score 950/1000 – niveau expert en modélisation, tableaux croisés dynamiques et automatisation."],
+          actions: [{ label: "Ouvrir le certificat", href: "certificates/TOSA%20Certificate.pdf" }],
         },
       ],
       portfolioLink: {
@@ -4133,10 +4128,12 @@
       proofs: [
         { type: "Stage", title: "Assistante Marketing – Modèle STP", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Application du modèle STP (Segmentation, Ciblage, Positionnement) pour adapter le contenu à chaque sous-segment cible sur Xiaohongshu."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
         { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: [], points: ["Études de marché et ajustement de l'offre pour différencier les camps d'été sur un marché concurrentiel."], actions: [{ label: "Voir activités", href: "#extracurricular" }] },
+        { type: "Certification", title: "INSIDE LVMH – Track 3", org: "LVMH", meta: [], points: ["Programme INSIDE LVMH consacré aux marques et aux métiers du luxe."], actions: [{ label: "Ouvrir le certificat", href: "certificates/Yu-Ting%20Tseng%20-%20INSIDE%20LVMH%20CERTIFICATE%20-%20Track%203.pdf" }] },
       ],
       en: { title: "Positioning", text: "Defining brand or offer positioning: target segmentation, competitive differentiation and value proposition.", proofs: [
         { type: "Internship", title: "Marketing Assistant – STP Model", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Applied the STP model (Segmentation, Targeting, Positioning) to tailor content for each sub-segment on Xiaohongshu."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
         { type: "Entrepreneurial Project", title: "Co-founder", org: "Sora Education", meta: [], points: ["Conducted market research and offer adjustments to differentiate summer camps in a competitive market."], actions: [{ label: "View activities", href: "#extracurricular" }] },
+        { type: "Certificate", title: "INSIDE LVMH – Track 3", org: "LVMH", meta: [], points: ["INSIDE LVMH programme on luxury brands and professions."], actions: [{ label: "Open certificate", href: "certificates/Yu-Ting%20Tseng%20-%20INSIDE%20LVMH%20CERTIFICATE%20-%20Track%203.pdf" }] },
       ]},
     },
     "mkt-campaign": {
