@@ -227,8 +227,8 @@
       },
       hero: {                              // → index.html (section héro principal)
         kicker: "Marketing digital · Analyse de données",
-        title1: "Étudiante en Master à emlyon,",
-        title2: "je travaille le marketing digital côté chiffres.",
+        title1: "Étudiante en Master à emlyon, je travaille le marketing digital",
+        title2: "côté chiffres.",
         summary:
           "Trois stages en marketing digital : SEO et campagnes Meta et Google chez KPN, réseaux sociaux chez Engoo, et depuis juillet 2026 le mediatrading chez leboncoin à Paris. Avant cela, une licence en langues et en diplomatie à Taïwan et un semestre à Paris 1. Je cherche un stage de césure de six mois à partir de janvier 2027.",
         locationLabel: "Basée à",
@@ -1171,8 +1171,8 @@
       },
       hero: {
         kicker: "Digital marketing · Data analytics",
-        title1: "Master's student at emlyon,",
-        title2: "I work on digital marketing from the numbers side.",
+        title1: "Master's student at emlyon, I work on digital marketing",
+        title2: "from the numbers side.",
         summary:
           "Three digital marketing internships: SEO and Meta and Google campaigns at KPN, social media at Engoo, and since July 2026 mediatrading at leboncoin in Paris. Before that, a bachelor's degree in languages and diplomacy in Taiwan and a semester at Paris 1. I am looking for a six-month gap year internship from January 2027.",
         locationLabel: "Based in",
@@ -2099,8 +2099,8 @@
       },
       hero: {
         kicker: "數位行銷 · 數據分析",
-        title1: "emlyon 商學院碩士生，",
-        title2: "從數字那一端做數位行銷。",
+        title1: "emlyon 商學院碩士生，做數位行銷，",
+        title2: "從數字那一端。",
         summary:
           "三段數位行銷實習：KPN 的 SEO 與 Meta、Google 廣告投放，Engoo 的社群經營，以及 2026 年 7 月起在巴黎 leboncoin 的廣告投放交易。在此之前於台灣完成語言與外交雙主修學士，並於巴黎第一大學交換一學期。目前尋找 2027 年 1 月起、為期六個月的間隔年實習。",
         locationLabel: "現居地",
