@@ -4724,3 +4724,275 @@ html[data-theme="dark"] .page-marketing .section-alt {
 html[data-theme="dark"] .page-teaching .section-alt {
   background: linear-gradient(158deg, #101828 0%, rgba(124, 58, 237, 0.08) 55%, rgba(8, 145, 178, 0.07) 100%);
 }
+
+/* ════════════════════════════════════════════════════
+   § 41 — Page marketing : encre, vermillon et corde
+   Direction propre à marketing.html et portfolio-marketing.html.
+   Un seul motif, la corde de guzheng : elle sépare les sections,
+   porte les chiffres comparables et se tend en haut de page avec
+   le défilement. Le vermillon ne sert qu'aux accents et au sceau
+   qui signale un chiffre accompagné d'un justificatif.
+   Aucune règle ne sort de .page-marketing.
+   ════════════════════════════════════════════════════ */
+
+.page-marketing {
+  --accent:        #a8392a;
+  --accent-hover:  #8c2e21;
+  --accent-soft:   rgba(168, 57, 42, 0.08);
+  --bg:            #e9e7df;
+  --bg-soft:       #e1dfd5;
+  --bg-alt:        #f3f1ea;
+  --surface:       #f3f1ea;
+  --text:          #1c1b17;
+  --text-soft:     #6a6659;
+  --head:          #14130f;
+  --border-subtle: #cbc7ba;
+  --corde:         #b9b5a6;
+  background: var(--bg) !important;
+}
+
+html[data-theme="dark"] .page-marketing {
+  --accent:        #cb5842;
+  --accent-hover:  #d96a53;
+  --accent-soft:   rgba(203, 88, 66, 0.14);
+  --bg:            #141410;
+  --bg-soft:       #1a1a15;
+  --bg-alt:        #1d1c17;
+  --surface:       #1d1c17;
+  --text:          #e6e3d8;
+  --text-soft:     #a29d8d;
+  --head:          #f0ede2;
+  --border-subtle: #34332c;
+  --corde:         #45443a;
+}
+
+/* — Neutralisation des dégradés d'origine — */
+.page-marketing .hero,
+.page-marketing .section-alt { background: transparent !important; }
+.page-marketing .hero::before,
+.page-marketing .hero::after { display: none !important; }
+.page-marketing .section-alt { background: var(--bg-soft) !important; }
+
+.page-marketing .accent {
+  background: none !important;
+  background-image: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: var(--accent) !important;
+}
+
+.page-marketing .hero-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: var(--text) !important;
+}
+.page-marketing .hero-card h2,
+.page-marketing .hero-card .value { color: var(--text) !important; }
+.page-marketing .hero-card .hero-role,
+.page-marketing .hero-card .label { color: var(--text-soft) !important; }
+.page-marketing .hero-card a { color: var(--accent) !important; }
+.page-marketing .hero-card::before { display: none !important; }
+.page-marketing .avatar {
+  border-radius: 2px;
+  box-shadow: none;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
+}
+
+/* — La corde en haut de page : progression de lecture — */
+.page-marketing .scroll-progress {
+  background: var(--accent) !important;
+  background-image: none !important;
+  height: 1px !important;
+  box-shadow: none !important;
+}
+
+/* — Repères de section : un filet, pas un dégradé — */
+.page-marketing .section-header::before {
+  background: var(--head) !important;
+  background-image: none !important;
+  height: 1px !important;
+  width: 1.75rem !important;
+  border-radius: 0 !important;
+  opacity: 1;
+}
+.page-marketing .section-header h2::after { display: none !important; }
+.page-marketing .section { border-top: 1px solid var(--corde); }
+.page-marketing .hero-kicker {
+  color: var(--text-soft);
+  letter-spacing: 0.18em;
+}
+.page-marketing .hero-kicker::before { background: var(--accent); }
+
+/* — Le cordier du hero : chaque corde porte un résultat — */
+.mk-cordier { display: none; }
+.page-marketing .mk-cordier {
+  display: block;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--corde);
+}
+.mk-cordier-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin: 0 0 1rem;
+}
+.mk-cordes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+.mk-cordes li {
+  display: grid;
+  grid-template-columns: minmax(0, 24rem) auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 14px;
+}
+.mk-corde-track { display: flex; align-items: center; height: 14px; }
+.mk-corde {
+  display: block;
+  height: 1px;
+  background: var(--corde);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: background 0.3s ease, transform 1s cubic-bezier(0.25, 0.8, 0.3, 1);
+}
+.page-marketing .hero.is-visible .mk-corde,
+.page-marketing .mk-cordier.is-visible .mk-corde { transform: scaleX(1); }
+.mk-cordes li:nth-child(2) .mk-corde { transition-delay: 0.08s; }
+.mk-cordes li:nth-child(3) .mk-corde { transition-delay: 0.16s; }
+.mk-cordes li:nth-child(4) .mk-corde { transition-delay: 0.24s; }
+.mk-cordes li:nth-child(5) .mk-corde { transition-delay: 0.32s; }
+.mk-lbl {
+  font-size: 0.74rem;
+  color: var(--text-soft);
+  white-space: nowrap;
+  transition: color 0.25s ease;
+  font-variant-numeric: tabular-nums;
+}
+.mk-cordes li:hover .mk-corde {
+  background: var(--accent);
+  animation: mk-pluck 0.8s ease-out;
+}
+.mk-cordes li:hover .mk-lbl { color: var(--text); }
+@keyframes mk-pluck {
+  0%   { transform: scaleX(1) scaleY(1); }
+  16%  { transform: scaleX(1) scaleY(9); }
+  40%  { transform: scaleX(1) scaleY(0.4); }
+  64%  { transform: scaleX(1) scaleY(4.5); }
+  100% { transform: scaleX(1) scaleY(1); }
+}
+
+/* — Chiffres comparables portés par une corde — */
+.page-marketing .exp-stats {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+}
+.page-marketing .exp-stat {
+  display: grid;
+  grid-template-columns: minmax(6rem, 11rem) 1fr auto;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.page-marketing .exp-stat .stat-label {
+  order: 1;
+  font-size: 0.76rem;
+  color: var(--text-soft);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.page-marketing .exp-stat .stat-value {
+  order: 3;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.page-marketing .exp-stat--corde::before {
+  content: "";
+  order: 2;
+  height: 1px;
+  width: calc(var(--val, 50) * 1%);
+  background: var(--corde);
+  transform-origin: left center;
+  transition: background 0.3s ease, transform 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+  transform: scaleX(0);
+}
+.page-marketing .is-visible .exp-stat--corde::before { transform: scaleX(1); }
+.page-marketing .exp-stat--corde:hover::before {
+  background: var(--accent);
+  animation: mk-pluck 0.8s ease-out;
+}
+
+/* — Les chiffres s'écrivent au lieu de défiler — */
+.page-marketing .stat-value {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+}
+.page-marketing .is-visible .stat-value { clip-path: inset(0 0 0 0); }
+
+/* — Le sceau : ce chiffre est accompagné d'un justificatif — */
+.page-marketing .is-sourced .stat-value::after,
+.page-marketing .is-sourced .pf-stat-val::after {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin-left: 0.4rem;
+  vertical-align: 0.35em;
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 1px;
+}
+
+/* — Boutons et étiquettes : angles francs — */
+.page-marketing .btn,
+.page-marketing .skill-card,
+.page-marketing .experience-filter,
+.page-marketing .tag,
+.page-marketing .course-chip { border-radius: 2px; }
+.page-marketing .btn-primary {
+  background: var(--accent) !important;
+  background-image: none !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
+.page-marketing .skill-card { border-color: var(--border-subtle); }
+.page-marketing .experience-filter.is-active {
+  background: var(--head) !important;
+  border-color: var(--head) !important;
+  color: var(--bg) !important;
+}
+.page-marketing .timeline-item { border-radius: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-marketing .stat-value { clip-path: none !important; }
+  .page-marketing .exp-stat--corde::before { transform: scaleX(1) !important; }
+  .mk-cordes li:hover .mk-corde { animation: none !important; }
+}
+
+/* — Ajustements du cordier et du bloc de résultats — */
+.page-marketing .mk-cordes li { grid-template-columns: minmax(0, 20rem) auto; }
+.page-marketing .mk-cordier { margin-bottom: 2rem; }
+
+.page-marketing .exp-stats {
+  background: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--corde) !important;
+  border-bottom: 1px solid var(--corde) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.1rem 0 !important;
+}
+.page-marketing .is-sourced .stat-value::after {
+  width: 6px; height: 6px;
+  vertical-align: 0.15em;
+  margin-left: 0.45rem;
+}
