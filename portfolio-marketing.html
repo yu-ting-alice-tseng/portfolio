@@ -31,21 +31,21 @@
     :root {
       /* Teintes de base. Les composantes RVB sont isolées pour que les
          opacités puissent être composées au point d'utilisation. */
-      --mk-bg-rgb:        253,252,250;
-      --mk-accent-rgb:    159,18,57;
-      --mk-accent2-rgb:   122,92,107;
+      --mk-bg-rgb:        233,231,223;
+      --mk-accent-rgb:    168,57,42;
+      --mk-accent2-rgb:   106,102,89;
 
       --mk-bg:            rgb(var(--mk-bg-rgb));
       --mk-accent:        rgb(var(--mk-accent-rgb));
       --mk-accent2:       rgb(var(--mk-accent2-rgb));
       --mk-accent-soft:   rgba(var(--mk-accent-rgb),0.08);
       --mk-accent-pale:   rgba(var(--mk-accent-rgb),0.04);
-      --mk-text:          #0f172a;
-      --mk-muted:         #64748b;
-      --mk-border:        #ede4e4;
-      --mk-card:          #ffffff;
-      --mk-green:         #059669;
-      --mk-green-pale:    rgba(5,150,105,0.06);
+      --mk-text:          #1c1b17;
+      --mk-muted:         #6a6659;
+      --mk-border:        #cbc7ba;
+      --mk-card:          #f3f1ea;
+      --mk-green:         #8c2e21;
+      --mk-green-pale:    rgba(140,46,33,0.06);
       --mk-insight:       var(--mk-accent2);
       --mk-insight-pale:  rgba(var(--mk-accent2-rgb),0.06);
     }
@@ -61,7 +61,7 @@
     }
 
     /* ── Top navigation bar ────────────────────────────── */
-    #scroll-progress { z-index: 302; background: linear-gradient(90deg, var(--mk-accent), var(--mk-accent2)); }
+    #scroll-progress { z-index: 302; background: var(--mk-accent); height: 1px; box-shadow: none; }
     .pf-topbar {
       position: sticky;
       top: 0;
@@ -130,7 +130,7 @@
     }
     .pf-topbar .lang-btn:hover:not(.is-active) { color: var(--mk-text); background: var(--mk-accent-soft); }
     .pf-topbar .lang-btn.is-active {
-      background: linear-gradient(135deg, var(--mk-accent), var(--mk-accent2));
+      background: var(--mk-accent);
       color: #fff;
       box-shadow: 0 2px 8px rgba(var(--mk-accent-rgb),0.3);
     }
@@ -167,7 +167,7 @@
     }
     .pf-hero-title em {
       font-style: italic;
-      background: linear-gradient(90deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
+      background: var(--mk-accent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -200,7 +200,7 @@
       position: absolute;
       left: 0; top: 15%; bottom: 15%;
       width: 1.5px;
-      background: linear-gradient(180deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
+      background: var(--mk-accent);
       opacity: 0.6;
     }
     .pf-hero-stat-block:hover { background: var(--mk-hover, #fafafa); }
@@ -211,7 +211,7 @@
       font-size: 2.2rem;
       font-weight: 400;
       line-height: 1;
-      background: linear-gradient(135deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
+      background: var(--mk-accent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -292,7 +292,7 @@
       column-span: all;
       padding: 2.75rem 3rem;
       border-color: rgba(var(--mk-accent-rgb),0.16);
-      background: linear-gradient(160deg, #fff 0%, #fff8fa 60%, #fdf4ff 100%);
+      background: var(--mk-card);
       margin-top: 1.75rem;
       margin-bottom: 1.75rem;
     }
@@ -442,10 +442,19 @@
       font-size: 2rem;
       font-weight: 600;
       line-height: 1;
-      background: linear-gradient(135deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--mk-accent);
+      font-variant-numeric: tabular-nums;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+    }
+    .pf-stat-val.is-written { clip-path: inset(0 0 0 0); }
+    .pf-hero-stat-num {
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+    }
+    .pf-hero-stat-num.is-written { clip-path: inset(0 0 0 0); }
+    @media (prefers-reduced-motion: reduce) {
+      .pf-stat-val, .pf-hero-stat-num { clip-path: none !important; }
     }
     .pf-stat-lbl {
       display: block;
@@ -460,6 +469,38 @@
       flex-wrap: wrap;
       gap: 1.5rem 2.5rem;
       margin-top: 0.9rem;
+    }
+    /* Les pourcentages comparables entre eux sont portés par une corde */
+    .pf-cordes { display: grid; gap: 0.7rem; margin-top: 1rem; }
+    .pf-cordes .pf-res-stat {
+      display: grid;
+      grid-template-columns: minmax(6rem, 11rem) 1fr auto;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .pf-cordes .pf-stat-lbl {
+      order: 1; margin: 0; text-transform: none; letter-spacing: 0;
+      font-size: 0.76rem; color: var(--mk-muted);
+    }
+    .pf-cordes .pf-stat-val { order: 3; font-size: 1.2rem; white-space: nowrap; }
+    .pf-cordes .pf-res-stat::before {
+      content: ""; order: 2; height: 1px;
+      width: calc(var(--val, 50) * 1%);
+      background: var(--mk-border);
+      transform: scaleX(0); transform-origin: left center;
+      transition: background 0.3s ease, transform 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+    }
+    .is-visible .pf-cordes .pf-res-stat::before { transform: scaleX(1); }
+    .pf-cordes .is-baisse::before { border-top: 1px dashed var(--mk-border); background: none; height: 0; }
+    .pf-cordes .pf-res-stat:hover::before { background: var(--mk-accent); animation: pf-pluck 0.8s ease-out; }
+    .pf-cordes .is-baisse:hover::before { border-top-color: var(--mk-accent); background: none; }
+    @keyframes pf-pluck {
+      0% { transform: scaleX(1) scaleY(1); } 16% { transform: scaleX(1) scaleY(9); }
+      40% { transform: scaleX(1) scaleY(0.4); } 64% { transform: scaleX(1) scaleY(4.5); }
+      100% { transform: scaleX(1) scaleY(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pf-cordes .pf-res-stat::before { transform: scaleX(1) !important; animation: none !important; }
     }
     .pf-res-stat {
       display: flex;
@@ -496,7 +537,7 @@
       transition: all 0.22s;
     }
     .pf-btn--primary {
-      background: linear-gradient(135deg, var(--mk-accent) 0%, var(--mk-accent2) 100%);
+      background: var(--mk-accent);
       color: #fff;
     }
     .pf-btn--primary:hover { opacity: 0.87; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(var(--mk-accent-rgb),0.3); }
@@ -1144,20 +1185,20 @@
         <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.resLbl">Résultats - Impact sur 3 mois</div>
 
         <!-- Stat chips — language-neutral numbers -->
-        <div class="pf-res-stats">
-          <div class="pf-res-stat">
+        <div class="pf-res-stats pf-cordes">
+          <div class="pf-res-stat" style="--val:93.3">
             <span class="pf-stat-val">+93.3%</span>
             <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resVues">Vues</span>
           </div>
-          <div class="pf-res-stat">
+          <div class="pf-res-stat" style="--val:89.1">
             <span class="pf-stat-val">+89.1%</span>
             <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resInter">Interactions</span>
           </div>
-          <div class="pf-res-stat">
+          <div class="pf-res-stat" style="--val:69.7">
             <span class="pf-stat-val">+69.7%</span>
             <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resAbonnes">Abonnés</span>
           </div>
-          <div class="pf-res-stat">
+          <div class="pf-res-stat is-baisse" style="--val:30">
             <span class="pf-stat-val">−30%</span>
             <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resTime">Temps reporting</span>
           </div>
@@ -1847,60 +1888,32 @@
       setTimeout(revealAll, 2500);
     }
 
-    /* ── 2. Compteurs animés ──────────────────────────── */
-    /* On ne touche qu'aux valeurs purement numériques : les libellés
-       comme « A/B » ou « BCG » sont laissés intacts. */
-    function animateCount(el) {
-      const original = el.textContent;
-      const m = original.trim().match(/^(\D*?)(\d+(?:[\s\u00a0\u202f]\d{3})*(?:[.,]\d+)?)(.*)$/);
-      if (!m) return;
-
-      const prefix = m[1], suffix = m[3], digits = m[2];
-      const sepMatch   = digits.match(/[.,](?=\d+$)/);
-      const decimalSep = sepMatch ? sepMatch[0] : '.';
-      const groupSep   = (digits.match(/[\s\u00a0\u202f]/) || [null])[0];
-      const normalised = digits.replace(/[\s\u00a0\u202f]/g, '').replace(',', '.');
-      const target     = parseFloat(normalised);
-      if (!isFinite(target)) return;
-
-      const decimals = (normalised.split('.')[1] || '').length;
-      const started  = performance.now();
-      const DURATION = 1100;
-
-      function frame(now) {
-        const t = Math.min((now - started) / DURATION, 1);
-        if (t >= 1) {
-          /* Derniere image : on restitue la chaine d'origine au caractere pres,
-             pour ne jamais alterer le format choisi (separateurs, espaces fines,
-             ponctuation). L'animation ne peut donc pas modifier le contenu. */
-          el.textContent = original;
-          return;
-        }
-        const eased = 1 - Math.pow(1 - t, 3);
-        let shown = (target * eased).toFixed(decimals);
-        if (decimalSep !== '.') shown = shown.replace('.', decimalSep);
-        if (groupSep) {
-          const parts = shown.split(decimalSep);
-          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, groupSep);
-          shown = parts.join(decimalSep);
-        }
-        el.textContent = prefix + shown + suffix;
-        requestAnimationFrame(frame);
-      }
-      requestAnimationFrame(frame);
+    /* ── 2. Les chiffres s'écrivent ───────────────────── */
+    /* Plus de compteur qui défile : la valeur est dévoilée de gauche à
+       droite, comme un trait qu'on trace. Le texte n'est jamais modifié,
+       seul son masque bouge, donc rien ne peut altérer le format. */
+    /* On observe le bloc parent, jamais le chiffre : son masque le réduit à
+       une largeur nulle, et un observateur ne verrait donc jamais entrer un
+       élément entièrement rogné. */
+    const chiffres = '.pf-stat-val, .pf-hero-stat-num';
+    function ecrire(bloc) {
+      bloc.querySelectorAll(chiffres).forEach(el => el.classList.add('is-written'));
     }
-
     if (!reduced && 'IntersectionObserver' in window) {
-      const countIO = new IntersectionObserver((entries) => {
+      const writeIO = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
-          animateCount(entry.target);
-          countIO.unobserve(entry.target);
+          ecrire(entry.target);
+          writeIO.unobserve(entry.target);
         });
-      }, { threshold: 0.6 });
-      document.querySelectorAll('.pf-stat-val, .pf-hero-stat-num').forEach(el => {
-        if (/\d/.test(el.textContent)) countIO.observe(el);
-      });
+      }, { threshold: 0.35 });
+      document.querySelectorAll('.pf-stats, .pf-res-stats, .pf-hero-stat-block')
+        .forEach(bloc => writeIO.observe(bloc));
+      /* Filet de sécurité, comme pour les révélations. */
+      setTimeout(() => document.querySelectorAll(chiffres)
+        .forEach(el => el.classList.add('is-written')), 4000);
+    } else {
+      document.querySelectorAll(chiffres).forEach(el => el.classList.add('is-written'));
     }
 
     /* ── 3. Index : navigation ────────────────────────── */
