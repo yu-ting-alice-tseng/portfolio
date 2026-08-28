@@ -1233,7 +1233,11 @@ body.page-finance .hero h1 {
   border: 1px solid rgba(148, 163, 184, 0.45);
   font-size: 0.77rem;
   color: var(--text);
-  white-space: nowrap;
+  /* Un intitulé de cours plus large que l'écran faisait déborder la page en
+     mobile : on autorise la coupure plutôt que de forcer une seule ligne. */
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .course-chips--white .course-chip {
@@ -4726,12 +4730,12 @@ html[data-theme="dark"] .page-teaching .section-alt {
 }
 
 /* ════════════════════════════════════════════════════
-   § 41 — Page marketing : encre, vermillon et corde
-   Direction propre à marketing.html et portfolio-marketing.html.
-   Un seul motif, la corde de guzheng : elle sépare les sections,
-   porte les chiffres comparables et se tend en haut de page avec
-   le défilement. Le vermillon ne sert qu'aux accents et au sceau
-   qui signale un chiffre accompagné d'un justificatif.
+   § 41 — Page marketing : lavis d'encre
+   Direction propre à marketing.html : encre sur papier,
+   vermillon en seul accent, fibres de papier et bavures
+   obtenues par filtres SVG plutôt que par des images.
+   Le motif de la corde a été retiré ; la séparation des
+   sections est un fleuron à la feuille d'orchidée.
    Aucune règle ne sort de .page-marketing.
    ════════════════════════════════════════════════════ */
 
@@ -4739,78 +4743,113 @@ html[data-theme="dark"] .page-teaching .section-alt {
   --accent:        #a8392a;
   --accent-hover:  #8c2e21;
   --accent-soft:   rgba(168, 57, 42, 0.08);
-  --bg:            #e9e7df;
-  --bg-soft:       #e1dfd5;
+  --bg:            #ece9e0;
+  --bg-soft:       #e4e0d5;
   --bg-alt:        #f3f1ea;
   --surface:       #f3f1ea;
-  --text:          #1c1b17;
-  --text-soft:     #6a6659;
+  --text:          #1a1815;
+  --text-soft:     #4a463d;
   --head:          #14130f;
   --border-subtle: #cbc7ba;
-  --corde:         #b9b5a6;
+  --eau:           #b6b1a3;
+  --grain:         0.055;
   background: var(--bg) !important;
 }
 
+html[data-theme="dark"] body.page-marketing,
 html[data-theme="dark"] .page-marketing {
-  --accent:        #cb5842;
-  --accent-hover:  #d96a53;
-  --accent-soft:   rgba(203, 88, 66, 0.14);
-  --bg:            #141410;
-  --bg-soft:       #1a1a15;
+  --accent:        #cb5842 !important;
+  --accent-hover:  #d96a53 !important;
+  --accent-soft:   rgba(203, 88, 66, 0.14) !important;
+  --bg:            #14130f !important;
+  --bg-soft:       #1a1a15 !important;
   --bg-alt:        #1d1c17;
   --surface:       #1d1c17;
-  --text:          #e6e3d8;
-  --text-soft:     #a29d8d;
+  --text:          #e8e5da;
+  --text-soft:     #b3ae9f;
   --head:          #f0ede2;
   --border-subtle: #34332c;
-  --corde:         #45443a;
+  --eau:           #4a463d;
+  --grain:         0.09;
+  background: var(--bg) !important;
 }
+html[data-theme="dark"] .page-marketing .hero,
+html[data-theme="dark"] .page-marketing .section-alt {
+  background-image: none !important;
+}
+html[data-theme="dark"] .page-marketing .hero { background: transparent !important; }
+html[data-theme="dark"] .page-marketing .section-alt { background: var(--bg-soft) !important; }
+
+/* — Fibres du papier — */
+.mk-grain { display: none; }
+.page-marketing .mk-grain {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  opacity: var(--grain);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='220' height='220' filter='url(%23f)'/></svg>");
+}
+html[data-theme="dark"] .page-marketing .mk-grain { mix-blend-mode: screen; }
 
 /* — Neutralisation des dégradés d'origine — */
 .page-marketing .hero,
 .page-marketing .section-alt { background: transparent !important; }
 .page-marketing .hero::before,
-.page-marketing .hero::after { display: none !important; }
+.page-marketing .hero::after,
+.page-marketing .hero-card::before { display: none !important; }
 .page-marketing .section-alt { background: var(--bg-soft) !important; }
 
 .page-marketing .accent {
-  background: none !important;
-  background-image: none !important;
   -webkit-text-fill-color: currentColor !important;
   color: var(--accent) !important;
 }
+/* Pas de tache d'encre derrière le mot d'accent : applyTranslations écrit en
+   textContent, on ne peut donc pas isoler un seul mot dans un span, et un fond
+   posé sur toute la phrase est rogné en rectangle par la boîte en ligne. Le
+   lavis passe par les fibres du papier, le fleuron et le bord fondu de
+   l'œuvre, pas par le titre. */
 
-.page-marketing .hero-card {
-  background: var(--surface) !important;
-  border: 1px solid var(--border-subtle) !important;
-  border-radius: 3px;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  color: var(--text) !important;
-}
-.page-marketing .hero-card h2,
-.page-marketing .hero-card .value { color: var(--text) !important; }
-.page-marketing .hero-card .hero-role,
-.page-marketing .hero-card .label { color: var(--text-soft) !important; }
-.page-marketing .hero-card a { color: var(--accent) !important; }
-.page-marketing .hero-card::before { display: none !important; }
-.page-marketing .avatar {
-  border-radius: 2px;
-  box-shadow: none;
-  background: var(--bg-soft);
-  border: 1px solid var(--border-subtle);
-}
-
-/* — La corde en haut de page : progression de lecture — */
 .page-marketing .scroll-progress {
   background: var(--accent) !important;
   background-image: none !important;
-  height: 1px !important;
+  height: 2px !important;
   box-shadow: none !important;
 }
 
-/* — Repères de section : un filet, pas un dégradé — */
+/* — Séparation des sections : fleuron à la feuille d'orchidée — */
+.mk-sep { display: none; }
+.page-marketing .mk-sep {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+.mk-sep-filet { flex: 1; height: 6px; min-width: 0; }
+.mk-sep-filet path { fill: var(--eau); }
+.mk-sep-orn { flex: none; }
+.mk-sep-orn .feuille { fill: var(--text); }
+.mk-sep-orn .coeur { fill: var(--accent); }
+/* les filets s'ouvrent depuis le centre, le fleuron se pose ensuite */
+.page-marketing .mk-sep .mk-sep-filet:first-child { clip-path: inset(0 0 0 100%); }
+.page-marketing .mk-sep .mk-sep-filet:last-child  { clip-path: inset(0 100% 0 0); }
+.page-marketing .mk-sep .mk-sep-orn { opacity: 0; transform: scale(1.5); }
+.page-marketing .mk-sep.is-visible .mk-sep-filet {
+  clip-path: inset(0);
+  transition: clip-path 1s cubic-bezier(0.3, 0.75, 0.3, 1);
+}
+.page-marketing .mk-sep.is-visible .mk-sep-orn {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.6s ease 0.45s, transform 0.65s cubic-bezier(0.25, 0.9, 0.3, 1) 0.45s;
+}
+.page-marketing .section { border-top: 0; }
+
+/* — Repères de section — */
 .page-marketing .section-header::before {
   background: var(--head) !important;
   background-image: none !important;
@@ -4820,133 +4859,78 @@ html[data-theme="dark"] .page-marketing {
   opacity: 1;
 }
 .page-marketing .section-header h2::after { display: none !important; }
-.page-marketing .section { border-top: 1px solid var(--corde); }
-.page-marketing .hero-kicker {
-  color: var(--text-soft);
-  letter-spacing: 0.18em;
-}
+.page-marketing .hero-kicker { color: var(--text-soft); letter-spacing: 0.2em; }
 .page-marketing .hero-kicker::before { background: var(--accent); }
 
-/* — Le cordier du hero : chaque corde porte un résultat — */
-.mk-cordier { display: none; }
-.page-marketing .mk-cordier {
+/* — L'œuvre en couverture, à la place de la carte de profil — */
+.mk-oeuvre { display: none; }
+.page-marketing .mk-oeuvre { display: block; margin: 0; }
+.mk-oeuvre-cadre {
+  position: relative;
   display: block;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--corde);
+  aspect-ratio: 4 / 5;
+  max-height: min(74vh, 560px);
+  margin-left: auto;
+  overflow: hidden;
+  background: var(--bg-soft);
 }
-.mk-cordier-title {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+.mk-oeuvre-cadre img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(1) contrast(1.1) brightness(1.02);
+  transform: scale(1.05);
+  transition: filter 1s ease, transform 1.4s cubic-bezier(0.2, 0.9, 0.25, 1);
+  -webkit-mask-image: radial-gradient(ellipse 78% 72% at 50% 46%, #000 52%, transparent 92%);
+  mask-image: radial-gradient(ellipse 78% 72% at 50% 46%, #000 52%, transparent 92%);
+}
+.mk-oeuvre:hover .mk-oeuvre-cadre img,
+.mk-oeuvre:focus-within .mk-oeuvre-cadre img { filter: grayscale(0) contrast(1); transform: scale(1); }
+.mk-oeuvre-legende {
+  position: absolute; left: 0; bottom: 1.2rem;
+  writing-mode: vertical-rl;
+  font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--text-soft);
-  margin: 0 0 1rem;
 }
-.mk-cordes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
-.mk-cordes li {
-  display: grid;
-  grid-template-columns: minmax(0, 24rem) auto;
-  align-items: center;
-  gap: 1rem;
-  min-height: 14px;
+.mk-oeuvre-note {
+  margin: 0.9rem 0 0;
+  text-align: right;
+  font-size: 0.72rem; letter-spacing: 0.04em; color: var(--text-soft);
 }
-.mk-corde-track { display: flex; align-items: center; height: 14px; }
-.mk-corde {
-  display: block;
-  height: 1px;
-  background: var(--corde);
-  transform-origin: left center;
-  transform: scaleX(0);
-  transition: background 0.3s ease, transform 1s cubic-bezier(0.25, 0.8, 0.3, 1);
-}
-.page-marketing .hero.is-visible .mk-corde,
-.page-marketing .mk-cordier.is-visible .mk-corde { transform: scaleX(1); }
-.mk-cordes li:nth-child(2) .mk-corde { transition-delay: 0.08s; }
-.mk-cordes li:nth-child(3) .mk-corde { transition-delay: 0.16s; }
-.mk-cordes li:nth-child(4) .mk-corde { transition-delay: 0.24s; }
-.mk-cordes li:nth-child(5) .mk-corde { transition-delay: 0.32s; }
-.mk-lbl {
-  font-size: 0.74rem;
-  color: var(--text-soft);
-  white-space: nowrap;
-  transition: color 0.25s ease;
-  font-variant-numeric: tabular-nums;
-}
-.mk-cordes li:hover .mk-corde {
-  background: var(--accent);
-  animation: mk-pluck 0.8s ease-out;
-}
-.mk-cordes li:hover .mk-lbl { color: var(--text); }
-@keyframes mk-pluck {
-  0%   { transform: scaleX(1) scaleY(1); }
-  16%  { transform: scaleX(1) scaleY(9); }
-  40%  { transform: scaleX(1) scaleY(0.4); }
-  64%  { transform: scaleX(1) scaleY(4.5); }
-  100% { transform: scaleX(1) scaleY(1); }
-}
-
-/* — Chiffres comparables portés par une corde — */
-.page-marketing .exp-stats {
-  display: grid;
-  gap: 0.7rem;
-  margin-top: 1.1rem;
-}
-.page-marketing .exp-stat {
-  display: grid;
-  grid-template-columns: minmax(6rem, 11rem) 1fr auto;
-  align-items: center;
-  gap: 0.9rem;
-  text-align: left;
-  background: none;
-  border: 0;
-  padding: 0;
-}
-.page-marketing .exp-stat .stat-label {
-  order: 1;
-  font-size: 0.76rem;
-  color: var(--text-soft);
-  letter-spacing: 0;
-  text-transform: none;
-}
-.page-marketing .exp-stat .stat-value {
-  order: 3;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.2rem;
-  color: var(--text);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-.page-marketing .exp-stat--corde::before {
-  content: "";
-  order: 2;
-  height: 1px;
-  width: calc(var(--val, 50) * 1%);
-  background: var(--corde);
-  transform-origin: left center;
-  transition: background 0.3s ease, transform 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
-  transform: scaleX(0);
-}
-.page-marketing .is-visible .exp-stat--corde::before { transform: scaleX(1); }
-.page-marketing .exp-stat--corde:hover::before {
-  background: var(--accent);
-  animation: mk-pluck 0.8s ease-out;
-}
+.mk-oeuvre-note a { color: var(--accent); }
 
 /* — Les chiffres s'écrivent au lieu de défiler — */
 .page-marketing .stat-value {
   clip-path: inset(0 100% 0 0);
   transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
 }
 .page-marketing .is-visible .stat-value { clip-path: inset(0 0 0 0); }
 
+.page-marketing .exp-stats {
+  background: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--eau) !important;
+  border-bottom: 1px solid var(--eau) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.1rem 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 2.6rem;
+}
+.page-marketing .exp-stat { background: none; border: 0; padding: 0; text-align: left; }
+.page-marketing .exp-stat .stat-label {
+  font-size: 0.74rem; color: var(--text-soft); text-transform: none; letter-spacing: 0;
+}
+
 /* — Le sceau : ce chiffre est accompagné d'un justificatif — */
-.page-marketing .is-sourced .stat-value::after,
-.page-marketing .is-sourced .pf-stat-val::after {
+.page-marketing .is-sourced .stat-value::after {
   content: "";
   display: inline-block;
-  width: 7px; height: 7px;
-  margin-left: 0.4rem;
-  vertical-align: 0.35em;
+  width: 6px; height: 6px;
+  margin-left: 0.45rem;
+  vertical-align: 0.15em;
   border: 1px solid var(--accent);
   background: var(--accent-soft);
   border-radius: 1px;
@@ -4974,25 +4958,15 @@ html[data-theme="dark"] .page-marketing {
 
 @media (prefers-reduced-motion: reduce) {
   .page-marketing .stat-value { clip-path: none !important; }
-  .page-marketing .exp-stat--corde::before { transform: scaleX(1) !important; }
-  .mk-cordes li:hover .mk-corde { animation: none !important; }
+  .page-marketing .mk-sep .mk-sep-filet { clip-path: none !important; }
+  .page-marketing .mk-sep .mk-sep-orn { opacity: 1 !important; transform: none !important; }
+  .mk-oeuvre-cadre img { transition: none !important; }
 }
 
-/* — Ajustements du cordier et du bloc de résultats — */
-.page-marketing .mk-cordes li { grid-template-columns: minmax(0, 20rem) auto; }
-.page-marketing .mk-cordier { margin-bottom: 2rem; }
-
-.page-marketing .exp-stats {
-  background: none !important;
-  border: 0 !important;
-  border-top: 1px solid var(--corde) !important;
-  border-bottom: 1px solid var(--corde) !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 1.1rem 0 !important;
-}
-.page-marketing .is-sourced .stat-value::after {
-  width: 6px; height: 6px;
-  vertical-align: 0.15em;
-  margin-left: 0.45rem;
-}
+/* — Étiquettes de compétences : gris d'encre au lieu du bleu d'origine — */
+.page-marketing .skills-subtitle { color: var(--text-soft) !important; }
+.page-marketing .skills-subtitle--sub { color: var(--eau) !important; }
+.page-marketing .skills-subtitle { border-left-color: var(--eau) !important; }
+.page-marketing .skills-block { border-left-color: var(--eau) !important; }
+.page-marketing .skills-tools-group { border-color: var(--eau) !important; }
+.page-marketing .skills-tools-label { color: var(--eau) !important; }

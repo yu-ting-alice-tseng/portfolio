@@ -28,6 +28,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   </head>
   <body class="page-marketing">
+  <div class="mk-grain" aria-hidden="true"></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="mk-bavure">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="mk-encre">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6"/>
+    </filter>
+  </svg>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4HC6D6D"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -143,46 +154,47 @@
                 <span class="meta-value" data-i18n="hero.availabilityValue">janvier 2027</span>
               </div>
             </div>
-            <div class="mk-cordier" data-reveal>
-              <p class="mk-cordier-title" data-i18n="marketingHero.cordierTitle">Résultats de campagnes</p>
-              <ul class="mk-cordes">
-                <li><span class="mk-corde-track"><span class="mk-corde" style="width:93.3%"></span></span><span class="mk-lbl" data-i18n="marketingHero.corde1">+93,3 % de vues · Engoo</span></li>
-                <li><span class="mk-corde-track"><span class="mk-corde" style="width:89.1%"></span></span><span class="mk-lbl" data-i18n="marketingHero.corde2">+89,1 % d'interactions · Engoo</span></li>
-                <li><span class="mk-corde-track"><span class="mk-corde" style="width:69.7%"></span></span><span class="mk-lbl" data-i18n="marketingHero.corde3">+69,7 % d'abonnés · Engoo</span></li>
-                <li><span class="mk-corde-track"><span class="mk-corde" style="width:9.5%"></span></span><span class="mk-lbl" data-i18n="marketingHero.corde4">+9,5 % de CTR · KPN</span></li>
-                <li><span class="mk-corde-track"><span class="mk-corde" style="width:5.1%"></span></span><span class="mk-lbl" data-i18n="marketingHero.corde5">+5,1 % de conversion · KPN</span></li>
-              </ul>
-            </div>
             <div class="hero-actions">
-              <a href="#portfolio" class="btn btn-primary" data-i18n="marketingHero.ctaPrimary">
+              <a href="portfolio-marketing.html" class="btn btn-primary" data-i18n="marketingHero.ctaPrimary">
                 Voir mes créations
               </a>
               <a href="#contact" class="btn btn-ghost" data-i18n="marketingHero.ctaSecondary">Me contacter</a>
             </div>
           </div>
-          <aside class="hero-card" aria-label="Informations principales">
-            <img class="avatar" src="assets/profile.webp" alt="Portrait de Yu-Ting Tseng"
-              width="240" height="280" loading="eager" decoding="async" />
-            <h2 data-i18n="hero.cardName">Yu‑Ting Tseng</h2>
-            <p class="hero-role" data-i18n="marketingHero.cardRole">Marketing digital &amp; Création</p>
-            <ul class="hero-list">
-              <li>
-                <span class="label" data-i18n="hero.cardEmailLabel">Email</span>
-                <span class="value">yuting.alice.tseng@gmail.com</span>
-              </li>
-              <li>
-                <span class="label">LinkedIn</span>
-                <span class="value">
-                  <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
-                    target="_blank" rel="noopener noreferrer">Yu-Ting Tseng</a>
-                </span>
-              </li>
-            </ul>
-          </aside>
+          <figure class="mk-oeuvre">
+            <a class="mk-oeuvre-cadre" href="portfolio-marketing.html#yolo"
+               aria-label="YOLO Summer Camp, direction artistique complète">
+              <img src="assets/yolo-camp-main-visual-zh.webp"
+                   alt="Affiche principale du YOLO Summer Camp"
+                   width="520" height="736" loading="eager" decoding="async" />
+              <figcaption class="mk-oeuvre-legende">YOLO Summer Camp · AIESEC</figcaption>
+            </a>
+            <p class="mk-oeuvre-note" data-i18n="marketingHero.oeuvreNote">
+              Direction artistique complète — survolez pour la couleur
+            </p>
+          </figure>
         </div>
       </section>
 
       <!-- ?? Skills ?????????????????????????????????? -->
+      <div class="mk-sep" data-reveal aria-hidden="true">
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+        <svg class="mk-sep-orn" width="84" height="24" viewBox="-42 -12 84 24" focusable="false">
+          <g class="feuille" filter="url(#mk-encre)">
+            <path d="M-2.5,1.5 C-14,-2 -26,-8.5 -38,-6 C-31,-8.5 -22,-6.5 -14,-3 C-8.5,-0.5 -4.5,1 -2.5,1.5 Z"/>
+            <path d="M-2.5,1.5 C-13,3.5 -24,7.5 -34,6 C-27,7.5 -18,5.5 -10,3.2 C-6,2.2 -3.5,1.8 -2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C14,-2 26,-8.5 38,-6 C31,-8.5 22,-6.5 14,-3 C8.5,-0.5 4.5,1 2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C13,3.5 24,7.5 34,6 C27,7.5 18,5.5 10,3.2 C6,2.2 3.5,1.8 2.5,1.5 Z"/>
+          </g>
+          <ellipse class="coeur" cx="0" cy="1" rx="3.4" ry="2.6" filter="url(#mk-bavure)"/>
+        </svg>
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+      </div>
+
       <section class="section" id="skills">
         <div class="container">
           <header class="section-header" data-reveal>
@@ -466,6 +478,24 @@
       </section>
 
       <!-- ?? Education ??????????????????????????????? -->
+      <div class="mk-sep" data-reveal aria-hidden="true">
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+        <svg class="mk-sep-orn" width="84" height="24" viewBox="-42 -12 84 24" focusable="false">
+          <g class="feuille" filter="url(#mk-encre)">
+            <path d="M-2.5,1.5 C-14,-2 -26,-8.5 -38,-6 C-31,-8.5 -22,-6.5 -14,-3 C-8.5,-0.5 -4.5,1 -2.5,1.5 Z"/>
+            <path d="M-2.5,1.5 C-13,3.5 -24,7.5 -34,6 C-27,7.5 -18,5.5 -10,3.2 C-6,2.2 -3.5,1.8 -2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C14,-2 26,-8.5 38,-6 C31,-8.5 22,-6.5 14,-3 C8.5,-0.5 4.5,1 2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C13,3.5 24,7.5 34,6 C27,7.5 18,5.5 10,3.2 C6,2.2 3.5,1.8 2.5,1.5 Z"/>
+          </g>
+          <ellipse class="coeur" cx="0" cy="1" rx="3.4" ry="2.6" filter="url(#mk-bavure)"/>
+        </svg>
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+      </div>
+
       <section class="section section-alt" id="education">
         <div class="container">
           <header class="section-header" data-reveal>
@@ -572,6 +602,24 @@
       </section>
 
       <!-- ?? Experience ??????????????????????????????? -->
+      <div class="mk-sep" data-reveal aria-hidden="true">
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+        <svg class="mk-sep-orn" width="84" height="24" viewBox="-42 -12 84 24" focusable="false">
+          <g class="feuille" filter="url(#mk-encre)">
+            <path d="M-2.5,1.5 C-14,-2 -26,-8.5 -38,-6 C-31,-8.5 -22,-6.5 -14,-3 C-8.5,-0.5 -4.5,1 -2.5,1.5 Z"/>
+            <path d="M-2.5,1.5 C-13,3.5 -24,7.5 -34,6 C-27,7.5 -18,5.5 -10,3.2 C-6,2.2 -3.5,1.8 -2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C14,-2 26,-8.5 38,-6 C31,-8.5 22,-6.5 14,-3 C8.5,-0.5 4.5,1 2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C13,3.5 24,7.5 34,6 C27,7.5 18,5.5 10,3.2 C6,2.2 3.5,1.8 2.5,1.5 Z"/>
+          </g>
+          <ellipse class="coeur" cx="0" cy="1" rx="3.4" ry="2.6" filter="url(#mk-bavure)"/>
+        </svg>
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+      </div>
+
       <section class="section" id="experience">
         <div class="container">
           <header class="section-header" data-reveal>
@@ -727,6 +775,24 @@
       </section>
 
       <!-- ?? Expériences Extra-scolaires ???????????????? -->
+      <div class="mk-sep" data-reveal aria-hidden="true">
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+        <svg class="mk-sep-orn" width="84" height="24" viewBox="-42 -12 84 24" focusable="false">
+          <g class="feuille" filter="url(#mk-encre)">
+            <path d="M-2.5,1.5 C-14,-2 -26,-8.5 -38,-6 C-31,-8.5 -22,-6.5 -14,-3 C-8.5,-0.5 -4.5,1 -2.5,1.5 Z"/>
+            <path d="M-2.5,1.5 C-13,3.5 -24,7.5 -34,6 C-27,7.5 -18,5.5 -10,3.2 C-6,2.2 -3.5,1.8 -2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C14,-2 26,-8.5 38,-6 C31,-8.5 22,-6.5 14,-3 C8.5,-0.5 4.5,1 2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C13,3.5 24,7.5 34,6 C27,7.5 18,5.5 10,3.2 C6,2.2 3.5,1.8 2.5,1.5 Z"/>
+          </g>
+          <ellipse class="coeur" cx="0" cy="1" rx="3.4" ry="2.6" filter="url(#mk-bavure)"/>
+        </svg>
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+      </div>
+
       <section class="section section-alt" id="extracurricular">
         <div class="container">
           <header class="section-header" data-reveal>
@@ -798,6 +864,24 @@
       </section>
 
       <!-- ?? Honors ?????????????????????????????????? -->
+      <div class="mk-sep" data-reveal aria-hidden="true">
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+        <svg class="mk-sep-orn" width="84" height="24" viewBox="-42 -12 84 24" focusable="false">
+          <g class="feuille" filter="url(#mk-encre)">
+            <path d="M-2.5,1.5 C-14,-2 -26,-8.5 -38,-6 C-31,-8.5 -22,-6.5 -14,-3 C-8.5,-0.5 -4.5,1 -2.5,1.5 Z"/>
+            <path d="M-2.5,1.5 C-13,3.5 -24,7.5 -34,6 C-27,7.5 -18,5.5 -10,3.2 C-6,2.2 -3.5,1.8 -2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C14,-2 26,-8.5 38,-6 C31,-8.5 22,-6.5 14,-3 C8.5,-0.5 4.5,1 2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C13,3.5 24,7.5 34,6 C27,7.5 18,5.5 10,3.2 C6,2.2 3.5,1.8 2.5,1.5 Z"/>
+          </g>
+          <ellipse class="coeur" cx="0" cy="1" rx="3.4" ry="2.6" filter="url(#mk-bavure)"/>
+        </svg>
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+      </div>
+
       <section class="section section-alt" id="honors">
         <div class="container">
           <header class="section-header" data-reveal>
@@ -832,6 +916,24 @@
       <!-- ?? Contact ?????????????????????????????????? -->
 
       <!-- ?? Contact ?????????????????????????????????? -->
+      <div class="mk-sep" data-reveal aria-hidden="true">
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+        <svg class="mk-sep-orn" width="84" height="24" viewBox="-42 -12 84 24" focusable="false">
+          <g class="feuille" filter="url(#mk-encre)">
+            <path d="M-2.5,1.5 C-14,-2 -26,-8.5 -38,-6 C-31,-8.5 -22,-6.5 -14,-3 C-8.5,-0.5 -4.5,1 -2.5,1.5 Z"/>
+            <path d="M-2.5,1.5 C-13,3.5 -24,7.5 -34,6 C-27,7.5 -18,5.5 -10,3.2 C-6,2.2 -3.5,1.8 -2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C14,-2 26,-8.5 38,-6 C31,-8.5 22,-6.5 14,-3 C8.5,-0.5 4.5,1 2.5,1.5 Z"/>
+            <path d="M2.5,1.5 C13,3.5 24,7.5 34,6 C27,7.5 18,5.5 10,3.2 C6,2.2 3.5,1.8 2.5,1.5 Z"/>
+          </g>
+          <ellipse class="coeur" cx="0" cy="1" rx="3.4" ry="2.6" filter="url(#mk-bavure)"/>
+        </svg>
+        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
+          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
+        </svg>
+      </div>
+
       <section class="section section-alt" id="contact">
         <div class="container contact-grid">
           <div data-reveal>
