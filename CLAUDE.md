@@ -136,6 +136,21 @@ Order proof cards within a skill by importance (descending):
 
 ---
 
+## 16. Page Marketing : Direction Visuelle et Portée des Effets
+
+- `marketing.html` et `portfolio-marketing.html` suivent la direction **encre et papier** (lavis, papier de riz, vermillon en seul accent). Les autres pages (`index`, `data`, `finance`, `teaching`) gardent leurs dégradés d'origine.
+- **Le curseur bougie ne s'applique qu'aux travaux de création** : affiches, identité visuelle, design packaging. Les livrables analytiques (dashboards, segmentation, analyse produit) restent affichés normalement : leur lisibilité passe avant l'effet.
+- La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
+
+---
+
+## 17. Pas de Nom Chinois sur le Site
+
+- Les candidatures visent des entreprises hors de Taïwan : le site affiche uniquement **Yu-Ting Tseng**, jamais le nom chinois.
+- Cela vaut pour toutes les pages et toutes les langues, y compris la version chinoise.
+
+---
+
 ## Quick Pre-Publish Checklist
 
 Before finalizing any new text, component, or section:
@@ -150,3 +165,4 @@ Before finalizing any new text, component, or section:
 - [ ] Content is in the correct section
 - [ ] Une expérience présente sur plusieurs pages a un style et des compétences différents sur chaque page
 - [ ] Language matches the page's language version
+- [ ] Aucun nom chinois affiché sur le site
