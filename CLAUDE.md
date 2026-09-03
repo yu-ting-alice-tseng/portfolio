@@ -133,6 +133,14 @@ Order proof cards within a skill by importance (descending):
 - Pas de pull request : `main` est la branche publiée, toute modification validée doit y arriver immédiatement.
 - Toujours faire un `git pull --rebase origin main` avant de pousser, afin de ne pas bloquer la synchronisation automatique de la machine locale.
 - La synchronisation locale est assurée par `auto-watch.ps1` (surveillance du dossier, déclenchement une minute après la dernière modification, contrôle toutes les 30 minutes), qui appelle `auto-sync.bat`. Tâche Windows « Portfolio Auto Sync », installée via `install-auto-sync.bat`.
+- **Session Claude Code forcée sur une branche** (`claude/…`) : la consigne de session impose parfois de développer sur une branche dédiée. Dans ce cas, une fois le travail terminé et vérifié, **toujours finir par le ramener sur `main`** sans attendre qu'on le demande :
+  ```bash
+  git push -u origin <branche>                 # trace du travail
+  git checkout main && git pull --rebase origin main
+  git merge --ff-only <branche> && git push origin main
+  ```
+  Sans cette dernière étape, le site publié ne change pas : `main` est la seule branche que GitHub Pages met en ligne.
+- **Chaîne de publication complète**, aucune étape manuelle : machine locale → `auto-watch.ps1` → `main` → GitHub Pages (mise en ligne en une à deux minutes). Une modification poussée sur `main` depuis n'importe où redescend sur la machine locale au contrôle suivant (30 minutes au plus).
 
 ---
 
