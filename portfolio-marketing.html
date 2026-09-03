@@ -454,7 +454,7 @@
     }
     .pf-hero-stat-num.is-written { clip-path: inset(0 0 0 0); }
     @media (prefers-reduced-motion: reduce) {
-      .pf-stat-val, .pf-hero-stat-num { clip-path: none !important; }
+      .pf-stat-val, .pf-hero-stat-num, .pf-board-val { clip-path: none !important; }
     }
     .pf-stat-lbl {
       display: block;
@@ -607,57 +607,66 @@
     body.has-custom-cursor a,
     body.has-custom-cursor button { cursor: none; }
 
-    /* ── Index éditorial ───────────────────────────────── */
-    .pf-index {
+    /* ── Tableau des résultats ─────────────────────────── */
+    /* L'ancien sommaire ne disait que le nom des projets. Ce tableau
+       montre d'abord ce qui a été obtenu : un chiffre par projet, puis
+       ses preuves, chacune ramenée à une échelle annoncée. */
+    .pf-board {
       position: relative;
       z-index: 2;
       max-width: 1240px;
       margin: 0 auto;
       padding: 1rem 2rem 3.5rem;
     }
-    .pf-index-eyebrow {
+    .pf-board-eyebrow {
       font-size: 0.64rem;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--mk-muted);
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.4rem;
     }
-    .pf-index-list {
+    .pf-board-intro {
+      font-size: 0.86rem;
+      line-height: 1.6;
+      color: var(--mk-muted);
+      max-width: 46ch;
+      margin: 0 0 1.5rem;
+    }
+    .pf-board-list {
       list-style: none;
       margin: 0;
       padding: 0;
-      border-top: 1px solid var(--mk-border);
-    }
-    .pf-index-row {
       display: grid;
-      grid-template-columns: 3.25rem 1fr auto;
-      align-items: baseline;
-      gap: 1.25rem;
-      padding: 1.05rem 0.5rem 1.05rem 0.25rem;
-      border-bottom: 1px solid var(--mk-border);
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 1.15rem;
+    }
+    .pf-board-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 1.35rem 1.4rem 1.5rem;
+      background: var(--mk-card);
+      border: 1px solid var(--mk-border);
       cursor: pointer;
-      position: relative;
-      transition: padding-left 0.42s cubic-bezier(.22,1,.36,1);
+      transition: background 0.36s ease, transform 0.42s cubic-bezier(.22,1,.36,1);
     }
-    /* Voile qui se déploie depuis la gauche au survol */
-    .pf-index-row::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+    .pf-board-card:hover,
+    .pf-board-card:focus-visible {
       background: var(--mk-accent-pale);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.52s cubic-bezier(.22,1,.36,1);
-      pointer-events: none;
+      border-color: rgba(var(--mk-accent-rgb),0.35);
+      transform: translateY(-3px);
+      outline: none;
     }
-    .pf-index-row:hover,
-    .pf-index-row:focus-visible { padding-left: 1.25rem; outline: none; }
-    .pf-index-row:hover::before,
-    .pf-index-row:focus-visible::before { transform: scaleX(1); }
-    .pf-index-row:focus-visible { box-shadow: inset 0 0 0 2px var(--mk-accent); }
-    .pf-index-num {
-      position: relative;
+    .pf-board-card:focus-visible { box-shadow: inset 0 0 0 2px var(--mk-accent); }
+    .pf-board-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .pf-board-num {
       font-family: 'Outfit', sans-serif;
       font-size: 0.68rem;
       font-weight: 500;
@@ -666,34 +675,152 @@
       font-variant-numeric: tabular-nums;
       transition: color 0.32s ease;
     }
-    .pf-index-name {
-      position: relative;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 3.4vw, 2.6rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--mk-text);
-      text-wrap: balance;
+    .pf-board-cat {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: right;
+      color: var(--mk-muted);
       transition: color 0.32s ease;
     }
-    .pf-index-meta {
-      position: relative;
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
+    .pf-board-card:hover .pf-board-num,
+    .pf-board-card:hover .pf-board-cat,
+    .pf-board-card:focus-visible .pf-board-num,
+    .pf-board-card:focus-visible .pf-board-cat { color: var(--mk-accent); }
+    .pf-board-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.62rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--mk-text);
+      margin: 0;
+      /* Deux lignes réservées : les chiffres restent alignés d'une fiche à l'autre */
+      min-height: 2.3em;
+      text-wrap: balance;
+    }
+    /* Le chiffre du projet : ce que le lecteur doit retenir en premier */
+    .pf-board-figure {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0.15rem 0 0.2rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--mk-border);
+    }
+    .pf-board-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 4.6vw, 3rem);
+      font-weight: 600;
+      line-height: 1;
+      color: var(--mk-accent);
+      font-variant-numeric: tabular-nums;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+    }
+    .pf-board-val.is-written { clip-path: inset(0 0 0 0); }
+    .pf-board-lbl {
+      font-size: 0.59rem;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       color: var(--mk-muted);
-      white-space: nowrap;
-      transition: color 0.32s ease;
     }
-    .pf-index-row:hover .pf-index-num,
-    .pf-index-row:hover .pf-index-meta,
-    .pf-index-row:focus-visible .pf-index-num,
-    .pf-index-row:focus-visible .pf-index-meta { color: var(--mk-accent); }
-    .pf-index-row:hover .pf-index-name,
-    .pf-index-row:focus-visible .pf-index-name { color: var(--mk-accent); }
+    /* Jauges : plusieurs mesures comparables sur une même échelle */
+    .pf-board-bars {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .pf-board-bars > li + li { margin-top: 0.1rem; }
+    .pf-board-bar-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.6rem;
+      font-size: 0.66rem;
+      letter-spacing: 0.04em;
+      color: var(--mk-muted);
+      margin-bottom: 0.28rem;
+    }
+    .pf-board-bar-val {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      color: var(--mk-text);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .pf-board-track {
+      display: block;
+      height: 3px;
+      background: rgba(var(--mk-accent-rgb),0.12);
+      overflow: hidden;
+    }
+    .pf-board-fill {
+      display: block;
+      height: 100%;
+      width: calc(var(--v) * 1%);
+      background: var(--mk-accent);
+      transform-origin: left;
+      transition: width 1s cubic-bezier(0.25, 0.8, 0.3, 1);
+    }
+    /* Largeur nulle au départ seulement si le script gère la révélation */
+    .pf-board-card[data-reveal] .pf-board-fill { width: 0; }
+    .pf-board-card[data-reveal].is-revealed .pf-board-fill { width: calc(var(--v) * 1%); }
+    /* Chiffres clés : mesures d'unités différentes, donc sans jauge */
+    /* Pas de filet sous les chiffres clés : un trait plein se lirait comme
+       une jauge remplie à 100%, ce que ces mesures ne signifient pas. */
+    .pf-board-chips {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .pf-board-chip {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.66rem;
+      letter-spacing: 0.04em;
+      color: var(--mk-muted);
+    }
+    .pf-board-chip-val {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      color: var(--mk-text);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .pf-board-scale {
+      font-size: 0.58rem;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      color: var(--mk-muted);
+      margin: 0.2rem 0 0;
+      font-style: italic;
+    }
+    .pf-board-card::after {
+      content: '';
+      position: absolute;
+      left: -1px;
+      bottom: -1px;
+      width: calc(100% + 2px);
+      height: 2px;
+      background: var(--mk-accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.52s cubic-bezier(.22,1,.36,1);
+      pointer-events: none;
+    }
+    .pf-board-card:hover::after,
+    .pf-board-card:focus-visible::after { transform: scaleX(1); }
 
     /* Aperçu flottant qui suit le curseur */
-    .pf-index-preview {
+    .pf-preview {
       position: fixed;
       top: 0; left: 0;
       z-index: 998;
@@ -705,40 +832,14 @@
       transition: opacity 0.34s ease, transform 0.48s cubic-bezier(.22,1,.36,1);
       will-change: transform;
     }
-    .pf-index-preview.is-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    .pf-index-preview img {
+    .pf-preview.is-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    .pf-preview img {
       display: block;
       width: 100%;
       height: 210px;
       object-fit: cover;
       border-radius: 4px;
       box-shadow: 0 18px 48px rgba(var(--mk-accent-rgb),0.18);
-    }
-    /* Aperçu typographique pour les projets sans visuel */
-    .pf-index-preview-stat {
-      display: none;
-      flex-direction: column;
-      gap: 0.2rem;
-      padding: 2.25rem 2rem;
-      background: var(--mk-accent);
-      border-radius: 4px;
-      box-shadow: 0 18px 48px rgba(var(--mk-accent-rgb),0.24);
-    }
-    .pf-index-preview.is-stat .pf-index-preview-stat { display: flex; }
-    .pf-index-preview.is-stat img { display: none; }
-    .pf-index-preview-val {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.1rem;
-      font-weight: 400;
-      line-height: 1;
-      color: #fff;
-      font-variant-numeric: tabular-nums;
-    }
-    .pf-index-preview-lbl {
-      font-size: 0.64rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.82);
     }
 
     /* ── Révélations au défilement ─────────────────────── */
@@ -781,7 +882,7 @@
 
     /* ── Écrans tactiles : pas de curseur ni d'aperçu ──── */
     @media (hover: none) {
-      .pf-cursor, .pf-index-preview { display: none !important; }
+      .pf-cursor, .pf-preview { display: none !important; }
       body.has-custom-cursor,
       body.has-custom-cursor a,
       body.has-custom-cursor button { cursor: auto; }
@@ -792,23 +893,21 @@
        un navigateur de bureau en fenêtre étroite a besoin de cette règle,
        que @media (hover: none) ne lui appliquerait jamais. */
     @media (max-width: 720px) {
-      .pf-index { padding: 1rem 1.25rem 2.5rem; }
-      .pf-index-row {
-        grid-template-columns: 2.25rem minmax(0, 1fr);
-        gap: 0.85rem;
-      }
-      .pf-index-meta { display: none; }
-      .pf-index-name { overflow-wrap: anywhere; }
+      .pf-board { padding: 1rem 1.25rem 2.5rem; }
+      .pf-board-list { grid-template-columns: 1fr; }
+      /* Une seule colonne : plus rien à aligner, la réserve de deux lignes
+         ne ferait que creuser un vide sous chaque titre. */
+      .pf-board-name { min-height: 0; overflow-wrap: anywhere; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .pf-grain { display: none; }
-      .pf-cursor, .pf-index-preview { display: none !important; }
+      .pf-cursor, .pf-preview { display: none !important; }
       body.has-custom-cursor,
       body.has-custom-cursor a,
       body.has-custom-cursor button { cursor: auto; }
       [data-reveal] { opacity: 1; transform: none; transition: none; }
-      .pf-index-row, .pf-index-row::before { transition: none; }
+      .pf-board-card, .pf-board-card::after, .pf-board-fill { transition: none; }
     }
 
     /* ── Autres travaux ────────────────────────────────── */
@@ -1050,49 +1149,200 @@
     </div>
   </section>
 
-  <!-- ── Index éditorial ─────────────────────────────── -->
-  <section class="pf-index" aria-labelledby="index-title">
-    <p class="pf-index-eyebrow" id="index-title">Index des Projets</p>
-    <ol class="pf-index-list">
-      <li class="pf-index-row" data-target="engoo-dashboard" data-preview="assets/Excel_Engoo/Engoo Dashboard_FR.webp" tabindex="0" role="link">
-        <span class="pf-index-num">01</span>
-        <span class="pf-index-name">Engoo · Dashboard Xiaohongshu</span>
-        <span class="pf-index-meta">Dashboard · Social Analytics</span>
+  <!-- ── Tableau des résultats ───────────────────────── -->
+  <section class="pf-board" aria-labelledby="board-title">
+    <p class="pf-board-eyebrow" id="board-title" data-i18n="portfolio.mkt.board.title">Résultats des Projets</p>
+    <p class="pf-board-intro" data-i18n="portfolio.mkt.board.intro">Chaque fiche donne le résultat obtenu avant le nom du projet. Cliquez sur une fiche pour ouvrir l'étude de cas correspondante.</p>
+    <ol class="pf-board-list">
+
+      <li class="pf-board-card" data-target="engoo-dashboard" data-preview="assets/Excel_Engoo/Engoo Dashboard_FR.webp" tabindex="0" role="link">
+        <div class="pf-board-head">
+          <span class="pf-board-num">01</span>
+          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p1Cat">Dashboard · Social Analytics</span>
+        </div>
+        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</h3>
+        <p class="pf-board-figure">
+          <span class="pf-board-val">+93.3%</span>
+          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p1Lbl">Vues sur 3 mois</span>
+        </p>
+        <ul class="pf-board-bars">
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p1Bar1">Vues</span>
+              <span class="pf-board-bar-val">+93.3%</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:93.3"></span></span>
+          </li>
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p1Bar2">Interactions</span>
+              <span class="pf-board-bar-val">+89.1%</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:89.1"></span></span>
+          </li>
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p1Bar3">Abonnés</span>
+              <span class="pf-board-bar-val">+69.7%</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:69.7"></span></span>
+          </li>
+        </ul>
+        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p1Scale">Croissance sur 3 mois, jauges graduées de 0 à 100%.</p>
       </li>
-      <li class="pf-index-row" data-target="bcg-beaute" data-stat="8 495" data-stat-label="Produits analysés" tabindex="0" role="link">
-        <span class="pf-index-num">02</span>
-        <span class="pf-index-name">Sephora · Intelligence Produit</span>
-        <span class="pf-index-meta">BCG · Beauty Analytics</span>
+
+      <li class="pf-board-card" data-target="bcg-beaute" tabindex="0" role="link">
+        <div class="pf-board-head">
+          <span class="pf-board-num">02</span>
+          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p2Cat">BCG · Beauty Analytics</span>
+        </div>
+        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</h3>
+        <p class="pf-board-figure">
+          <span class="pf-board-val">8 495</span>
+          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p2Lbl">Produits analysés</span>
+        </p>
+        <ul class="pf-board-bars">
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p2Bar1">Note moyenne du catalogue</span>
+              <span class="pf-board-bar-val">4,23/5</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:84.6"></span></span>
+          </li>
+        </ul>
+        <ul class="pf-board-chips">
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p2Chip1">Avis clients traités</span>
+            <span class="pf-board-chip-val">32K+</span>
+          </li>
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p2Chip2">Lecture du portefeuille</span>
+            <span class="pf-board-chip-val" data-i18n="portfolio.mkt.board.p2Chip2Val">Matrice BCG</span>
+          </li>
+        </ul>
+        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p2Scale">Jauge graduée de 0 à 5, échelle de notation Sephora.</p>
       </li>
-      <li class="pf-index-row" data-target="maison-beaute" data-stat="2 240" data-stat-label="Clients analysés" tabindex="0" role="link">
-        <span class="pf-index-num">03</span>
-        <span class="pf-index-name">Maison Beauté · Diagnostic Client</span>
-        <span class="pf-index-meta">Segmentation · ROI</span>
+
+      <li class="pf-board-card" data-target="maison-beaute" tabindex="0" role="link">
+        <div class="pf-board-head">
+          <span class="pf-board-num">03</span>
+          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p3Cat">Segmentation · ROI</span>
+        </div>
+        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</h3>
+        <p class="pf-board-figure">
+          <span class="pf-board-val">2 240</span>
+          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p3Lbl">Clients analysés</span>
+        </p>
+        <ul class="pf-board-bars">
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p3Bar1">Conversion, campagne Response</span>
+              <span class="pf-board-bar-val">14,9%</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:14.9"></span></span>
+          </li>
+        </ul>
+        <ul class="pf-board-chips">
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p3Chip1">Écart de dépense Mass vs Luxury</span>
+            <span class="pf-board-chip-val">18x</span>
+          </li>
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p3Chip2">Valeur du client engagé</span>
+            <span class="pf-board-chip-val">3x</span>
+          </li>
+        </ul>
+        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p3Scale">Jauge graduée de 0 à 100% de la base ciblée.</p>
       </li>
-      <li class="pf-index-row" data-target="engoo-weekly" data-preview="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" tabindex="0" role="link">
-        <span class="pf-index-num">04</span>
-        <span class="pf-index-name">Engoo · Rapport Hebdomadaire</span>
-        <span class="pf-index-meta">Reporting · Data Storytelling</span>
+
+      <li class="pf-board-card" data-target="engoo-weekly" data-preview="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" tabindex="0" role="link">
+        <div class="pf-board-head">
+          <span class="pf-board-num">04</span>
+          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p4Cat">Reporting · Data Storytelling</span>
+        </div>
+        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</h3>
+        <p class="pf-board-figure">
+          <span class="pf-board-val">7</span>
+          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p4Lbl">Diapositives par semaine</span>
+        </p>
+        <ul class="pf-board-chips">
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p4Chip1">Langues de diffusion</span>
+            <span class="pf-board-chip-val">FR / EN</span>
+          </li>
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p4Chip2">Cadence de production</span>
+            <span class="pf-board-chip-val" data-i18n="portfolio.mkt.board.p4Chip2Val">Hebdomadaire</span>
+          </li>
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p4Chip3">Destinataire</span>
+            <span class="pf-board-chip-val" data-i18n="portfolio.mkt.board.p4Chip3Val">Équipe de direction</span>
+          </li>
+        </ul>
+        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p4Scale">Format du livrable remis chaque semaine pendant le stage.</p>
       </li>
-      <li class="pf-index-row" data-target="aiesec-yolo" data-preview="assets/yolo-camp-tote-bag.webp" tabindex="0" role="link">
-        <span class="pf-index-num">05</span>
-        <span class="pf-index-name">AIESEC · Camp International YOLO</span>
-        <span class="pf-index-meta">Campagne · Direction Artistique</span>
+
+      <li class="pf-board-card" data-target="aiesec-yolo" data-preview="assets/yolo-camp-tote-bag.webp" tabindex="0" role="link">
+        <div class="pf-board-head">
+          <span class="pf-board-num">05</span>
+          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique</span>
+        </div>
+        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</h3>
+        <p class="pf-board-figure">
+          <span class="pf-board-val">+53.7%</span>
+          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p5Lbl">Objectif budgétaire dépassé</span>
+        </p>
+        <ul class="pf-board-chips">
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p5Chip1">Participants accueillis</span>
+            <span class="pf-board-chip-val">60+</span>
+          </li>
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p5Chip2">Volontaires recrutés</span>
+            <span class="pf-board-chip-val">15</span>
+          </li>
+          <li class="pf-board-chip">
+            <span data-i18n="portfolio.mkt.board.p5Chip3">Équipe marketing pilotée</span>
+            <span class="pf-board-chip-val">4</span>
+          </li>
+        </ul>
+        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p5Scale">Résultats de l'édition 2025 du camp, AIESEC in NCCU.</p>
       </li>
-      <li class="pf-index-row" data-target="guzheng-facebook" data-preview="assets/guzheng-club-recruitment-poster.webp" tabindex="0" role="link">
-        <span class="pf-index-num">06</span>
-        <span class="pf-index-name">Club de Guzheng · Page Facebook</span>
-        <span class="pf-index-meta">Community Management</span>
+
+      <li class="pf-board-card" data-target="guzheng-facebook" data-preview="assets/guzheng-club-recruitment-poster.webp" tabindex="0" role="link">
+        <div class="pf-board-head">
+          <span class="pf-board-num">06</span>
+          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p6Cat">Community Management</span>
+        </div>
+        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</h3>
+        <p class="pf-board-figure">
+          <span class="pf-board-val">100 %</span>
+          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p6Lbl">Places pourvues à chaque recrutement</span>
+        </p>
+        <ul class="pf-board-bars">
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p6Bar1">Places pourvues</span>
+              <span class="pf-board-bar-val">100 %</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:100"></span></span>
+          </li>
+          <li>
+            <span class="pf-board-bar-head">
+              <span data-i18n="portfolio.mkt.board.p6Bar2">Fidélisation des membres</span>
+              <span class="pf-board-bar-val">80 %</span>
+            </span>
+            <span class="pf-board-track"><span class="pf-board-fill" style="--v:80"></span></span>
+          </li>
+        </ul>
+        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p6Scale">Jauges graduées de 0 à 100% de l'effectif du club.</p>
       </li>
+
     </ol>
   </section>
 
-  <figure class="pf-index-preview" aria-hidden="true">
+  <figure class="pf-preview" aria-hidden="true">
     <img src="" alt="">
-    <div class="pf-index-preview-stat">
-      <span class="pf-index-preview-val"></span>
-      <span class="pf-index-preview-lbl"></span>
-    </div>
   </figure>
 
   <!-- ── Filter bar ──────────────────────────────────── -->
@@ -1850,7 +2100,7 @@
 
     /* ── 1. Révélations au défilement ─────────────────── */
     const revealables = [
-      ['.pf-index-row', 40],
+      ['.pf-board-card', 40],
       ['.pf-card', 0],
       ['.pf-star', 60],
       ['.pf-extra', 60],
@@ -1895,7 +2145,7 @@
     /* On observe le bloc parent, jamais le chiffre : son masque le réduit à
        une largeur nulle, et un observateur ne verrait donc jamais entrer un
        élément entièrement rogné. */
-    const chiffres = '.pf-stat-val, .pf-hero-stat-num';
+    const chiffres = '.pf-stat-val, .pf-hero-stat-num, .pf-board-val';
     function ecrire(bloc) {
       bloc.querySelectorAll(chiffres).forEach(el => el.classList.add('is-written'));
     }
@@ -1907,7 +2157,7 @@
           writeIO.unobserve(entry.target);
         });
       }, { threshold: 0.35 });
-      document.querySelectorAll('.pf-stats, .pf-res-stats, .pf-hero-stat-block')
+      document.querySelectorAll('.pf-stats, .pf-res-stats, .pf-hero-stat-block, .pf-board-card')
         .forEach(bloc => writeIO.observe(bloc));
       /* Filet de sécurité, comme pour les révélations. */
       setTimeout(() => document.querySelectorAll(chiffres)
@@ -1916,8 +2166,8 @@
       document.querySelectorAll(chiffres).forEach(el => el.classList.add('is-written'));
     }
 
-    /* ── 3. Index : navigation ────────────────────────── */
-    const rows = [...document.querySelectorAll('.pf-index-row')];
+    /* ── 3. Tableau des résultats : navigation ────────── */
+    const rows = [...document.querySelectorAll('.pf-board-card')];
     function goToCard(row) {
       const target = document.getElementById(row.dataset.target);
       if (!target) return;
@@ -1939,10 +2189,8 @@
     if (fine && !reduced) {
       const cursor  = document.querySelector('.pf-cursor');
       const label   = document.querySelector('.pf-cursor-label');
-      const preview = document.querySelector('.pf-index-preview');
+      const preview = document.querySelector('.pf-preview');
       const pImg    = preview.querySelector('img');
-      const pVal    = preview.querySelector('.pf-index-preview-val');
-      const pLbl    = preview.querySelector('.pf-index-preview-lbl');
 
       document.body.classList.add('has-custom-cursor');
 
@@ -1978,18 +2226,14 @@
         label.textContent = '';
       }
 
-      /* Index : aperçu + curseur « Voir » */
+      /* Tableau des résultats : aperçu + curseur « Voir » */
+      /* Les chiffres sont désormais lisibles sur la fiche : l'aperçu ne
+         sert plus qu'aux projets qui ont un visuel à montrer. */
       rows.forEach(row => {
         row.addEventListener('mouseenter', () => {
           expand('Voir');
-          if (row.dataset.stat) {
-            preview.classList.add('is-stat');
-            pVal.textContent = row.dataset.stat;
-            pLbl.textContent = row.dataset.statLabel || '';
-          } else if (row.dataset.preview) {
-            preview.classList.remove('is-stat');
-            pImg.src = row.dataset.preview;
-          }
+          if (!row.dataset.preview) return;
+          pImg.src = row.dataset.preview;
           preview.classList.add('is-visible');
         });
         row.addEventListener('mouseleave', () => {
@@ -2007,7 +2251,7 @@
       /* Liens et boutons : simple élargissement, sans libellé */
       document.querySelectorAll('a, button').forEach(el => {
         el.addEventListener('mouseenter', () => {
-          if (el.closest('.pf-index-row')) return;
+          if (el.closest('.pf-board-card')) return;
           cursor.classList.add('is-expanded');
           label.textContent = '';
         });
