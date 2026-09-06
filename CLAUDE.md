@@ -148,6 +148,9 @@ Order proof cards within a skill by importance (descending):
 
 - `marketing.html` et `portfolio-marketing.html` suivent la direction **encre et papier** (lavis, papier de riz, vermillon en seul accent). Les autres pages (`index`, `data`, `finance`, `teaching`) gardent leurs dégradés d'origine.
 - **Le curseur bougie ne s'applique qu'aux travaux de création** : affiches, identité visuelle, design packaging. Les livrables analytiques (dashboards, segmentation, analyse produit) restent affichés normalement : leur lisibilité passe avant l'effet.
+- **Fonctionnement de la bougie** (implémenté dans `portfolio-marketing.html`) : le curseur devient une flamme, l'œuvre survolée s'affiche en niveaux de gris et ne retrouve ses couleurs que dans le halo de lumière, réchauffé d'un voile ambré. Le rayon vacille légèrement, il est proportionné à la taille de l'œuvre.
+- **Étendre la bougie à une autre carte** : poser `data-candle` sur l'`<article>`. Toutes les `.pf-img-wrap` et `.ig-item a` qu'elle contient entrent alors dans le jeu, le calque couleur est construit en JS à partir de l'image existante, sans second téléchargement.
+- **Garde-fous à conserver** : sans survol fin (tactile) ou en `prefers-reduced-motion`, les œuvres restent en couleur et aucun calque n'est créé. Une œuvre ne doit jamais rester inaccessible parce que l'effet ne peut pas s'exécuter.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
 ---

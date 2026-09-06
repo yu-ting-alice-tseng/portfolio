@@ -607,6 +607,92 @@
     body.has-custom-cursor a,
     body.has-custom-cursor button { cursor: none; }
 
+    /* ── Curseur bougie ────────────────────────────────── */
+    /* Le curseur devient une flamme au-dessus des travaux de création, qui
+       s'affichent en niveaux de gris et ne retrouvent leur couleur que sous
+       la lumière. Les livrables analytiques n'entrent jamais dans ce jeu :
+       leur lisibilité passe avant l'effet. */
+    .pf-flame {
+      display: none;
+      width: 26px;
+      height: 36px;
+      filter: drop-shadow(0 0 7px rgba(255,168,64,0.75))
+              drop-shadow(0 0 18px rgba(255,132,40,0.42));
+      transform-origin: 50% 100%;
+      animation: pf-flamme 1.15s ease-in-out infinite alternate;
+    }
+    .pf-cursor.is-candle {
+      width: 26px;
+      height: 36px;
+      background: transparent;
+      border-radius: 0;
+    }
+    .pf-cursor.is-candle .pf-flame { display: block; }
+    .pf-cursor.is-candle .pf-cursor-label { display: none; }
+    @keyframes pf-flamme {
+      0%   { transform: scale(1, 1)       skewX(0deg);    opacity: 1; }
+      35%  { transform: scale(0.94, 1.06) skewX(-2.5deg); opacity: 0.92; }
+      70%  { transform: scale(1.05, 0.95) skewX(2deg);    opacity: 1; }
+      100% { transform: scale(0.97, 1.03) skewX(-1deg);   opacity: 0.95; }
+    }
+
+    /* Les travaux de création attendent la lumière */
+    /* Valeurs de départ : le halo est fermé et centré tant que la souris
+       n'est pas entrée. Le rayon est ensuite animé en JS, image par image,
+       pour que le vacillement ne soit pas amorti par une transition CSS. */
+    .has-custom-cursor [data-candle] .pf-img-wrap,
+    .has-custom-cursor [data-candle] .ig-item a {
+      --pf-r: 0px;
+      --pf-gr: 0px;
+      --pf-x: 50%;
+      --pf-y: 50%;
+    }
+    .has-custom-cursor [data-candle] .pf-img-wrap img,
+    .has-custom-cursor [data-candle] .ig-item a img {
+      filter: grayscale(1) contrast(0.92) brightness(0.9);
+      transition: transform 0.4s ease, filter 0.5s ease;
+    }
+    /* Calque en couleur, découpé par le halo de la flamme */
+    .pf-candle-color {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      transition: transform 0.4s ease;
+      -webkit-mask-image: radial-gradient(circle var(--pf-r) at var(--pf-x) var(--pf-y), #000 0%, #000 46%, transparent 100%);
+      mask-image: radial-gradient(circle var(--pf-r) at var(--pf-x) var(--pf-y), #000 0%, #000 46%, transparent 100%);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+    /* Lumière chaude par-dessus, elle éclaire sans reteinter */
+    .pf-candle-glow {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      background: radial-gradient(circle var(--pf-gr) at var(--pf-x) var(--pf-y),
+        rgba(255,206,140,0.40) 0%,
+        rgba(255,158,66,0.20) 42%,
+        rgba(255,140,50,0.05) 70%,
+        transparent 100%);
+    }
+    .pf-img-wrap.is-lit .pf-candle-glow,
+    .ig-item a.is-lit .pf-candle-glow { opacity: 1; }
+    /* Le zoom au survol s'applique aux deux calques, sinon ils se décalent */
+    .pf-img-wrap:hover .pf-candle-color,
+    .ig-item a:hover .pf-candle-color { transform: scale(1.04); }
+
+    /* Sans survol fin ou en mouvement réduit, les œuvres restent en couleur */
+    @media (hover: none), (prefers-reduced-motion: reduce) {
+      .pf-flame { animation: none; }
+      [data-candle] .pf-img-wrap img,
+      [data-candle] .ig-item a img { filter: none !important; }
+      .pf-candle-color, .pf-candle-glow { display: none !important; }
+    }
+
     /* ── Tableau des résultats ─────────────────────────── */
     /* L'ancien sommaire ne disait que le nom des projets. Ce tableau
        montre d'abord ce qui a été obtenu : un chiffre par projet, puis
@@ -1093,7 +1179,20 @@
 
   <!-- ── Texture &amp; curseur ──────────────────────────── -->
   <div class="pf-grain" aria-hidden="true"></div>
-  <div class="pf-cursor" aria-hidden="true"><span class="pf-cursor-label"></span></div>
+  <div class="pf-cursor" aria-hidden="true">
+    <svg class="pf-flame" viewBox="0 0 26 36" aria-hidden="true">
+      <defs>
+        <radialGradient id="pf-flame-grad" cx="50%" cy="72%" r="62%">
+          <stop offset="0%"   stop-color="#fff3c4"/>
+          <stop offset="42%"  stop-color="#ffb347"/>
+          <stop offset="100%" stop-color="#e2571f"/>
+        </radialGradient>
+      </defs>
+      <path d="M13 1 C 17.8 9.2, 22.4 13.8, 22.4 21.6 A 9.4 9.4 0 0 1 3.6 21.6 C 3.6 13.8, 8.2 9.2, 13 1 Z" fill="url(#pf-flame-grad)"/>
+      <path d="M13 14.5 C 15.4 18.6, 16.8 20.8, 16.8 23.4 A 3.8 3.8 0 0 1 9.2 23.4 C 9.2 20.8, 10.6 18.6, 13 14.5 Z" fill="#fffbe8" opacity="0.92"/>
+    </svg>
+    <span class="pf-cursor-label"></span>
+  </div>
 
   <!-- ── Scroll progress ─────────────────────────────── -->
   <div class="scroll-progress-track" aria-hidden="true"></div>
@@ -1795,7 +1894,7 @@
       </div>
     </article>
 
-    <article class="pf-card" data-cat="campagne" id="aiesec-yolo">
+    <article data-candle class="pf-card" data-cat="campagne" id="aiesec-yolo">
       <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">Campagne Marketing</div>
       <span class="pf-card-tag" data-i18n="portfolio.mkt.aiesec.tag">Campagne · Direction artistique</span>
       <h2 class="pf-card-title">AIESEC – Camp International YOLO</h2>
@@ -1905,7 +2004,7 @@
       </div>
     </article>
 
-    <article class="pf-card" data-cat="community" id="guzheng-facebook">
+    <article data-candle class="pf-card" data-cat="community" id="guzheng-facebook">
       <div class="pf-card-num" data-i18n="portfolio.mkt.guzhengNum">Community Management</div>
       <span class="pf-card-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
       <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
@@ -2243,15 +2342,113 @@
       });
 
       /* Images des cartes : curseur « Agrandir » */
+      /* Les travaux de création sont exclus : ils reçoivent la flamme. */
       document.querySelectorAll('.pf-card img, .pf-img-wrap img').forEach(img => {
+        if (img.closest('[data-candle]')) return;
         img.addEventListener('mouseenter', () => expand('Agrandir'));
         img.addEventListener('mouseleave', collapse);
       });
+
+      /* ── Bougie : les travaux de création se rallument sous la flamme ── */
+      /* Règle de portée : seules les affiches, identités visuelles et
+         publications de campagne entrent dans ce jeu. Les dashboards et les
+         analyses restent en couleur et pleinement lisibles. */
+      const zones = document.querySelectorAll(
+        '[data-candle] .pf-img-wrap, [data-candle] .ig-item a'
+      );
+      /* Chaque zone en cours d'animation garde son rayon courant et sa cible :
+         l'allumage, l'extinction et le vacillement passent par la même boucle. */
+      const halos = new Map();
+
+      zones.forEach(zone => {
+        const img = zone.querySelector('img');
+        if (!img) return;
+
+        /* Le calque couleur reprend la même image et le même cadrage que la
+           version en niveaux de gris : sans cela, les deux se décaleraient. */
+        const couleur = document.createElement('span');
+        couleur.className = 'pf-candle-color';
+        couleur.setAttribute('aria-hidden', 'true');
+        const source = img.currentSrc || img.getAttribute('src');
+        couleur.style.backgroundImage = `url("${source}")`;
+        couleur.style.backgroundSize =
+          getComputedStyle(img).objectFit === 'contain' ? 'contain' : 'cover';
+
+        const lueur = document.createElement('span');
+        lueur.className = 'pf-candle-glow';
+        lueur.setAttribute('aria-hidden', 'true');
+
+        zone.append(couleur, lueur);
+
+        /* L'image peut arriver après coup (chargement différé) : on relit sa
+           source réelle une fois qu'elle est là. */
+        if (!img.complete) {
+          img.addEventListener('load', () => {
+            couleur.style.backgroundImage = `url("${img.currentSrc || img.src}")`;
+          }, { once: true });
+        }
+
+        function deplacer(e) {
+          const r = zone.getBoundingClientRect();
+          zone.style.setProperty('--pf-x', (e.clientX - r.left) + 'px');
+          zone.style.setProperty('--pf-y', (e.clientY - r.top) + 'px');
+        }
+
+        zone.addEventListener('mouseenter', e => {
+          const r = zone.getBoundingClientRect();
+          /* Le halo est proportionné à l'œuvre : une vignette Instagram et
+             une affiche ne demandent pas la même portée de lumière. */
+          const rayon = Math.max(70, Math.min(150, Math.min(r.width, r.height) * 0.42));
+          deplacer(e);
+          zone.classList.add('is-lit');
+          const etat = halos.get(zone) || { cur: 0 };
+          etat.rayon = rayon;
+          etat.cible = rayon;
+          halos.set(zone, etat);
+          cursor.classList.add('is-candle');
+          cursor.classList.remove('is-expanded');
+          label.textContent = '';
+        });
+
+        zone.addEventListener('mousemove', deplacer, { passive: true });
+
+        zone.addEventListener('mouseleave', () => {
+          zone.classList.remove('is-lit');
+          const etat = halos.get(zone);
+          if (etat) etat.cible = 0;
+          cursor.classList.remove('is-candle');
+        });
+      });
+
+      /* Vacillement : le rayon respire au lieu de rester figé. Deux sinus de
+         périodes sans rapport simple évitent une pulsation trop régulière. */
+      if (zones.length) {
+        (function vaciller(t) {
+          halos.forEach((etat, zone) => {
+            etat.cur += (etat.cible - etat.cur) * 0.18;
+            const v = etat.cible > 0
+              ? 1 + 0.035 * Math.sin(t / 190) + 0.022 * Math.sin(t / 71)
+              : 1;
+            const r = etat.cur * v;
+            zone.style.setProperty('--pf-r', r + 'px');
+            zone.style.setProperty('--pf-gr', r * 1.4 + 'px');
+            /* Éteinte, la zone quitte la boucle : rien ne tourne à vide. */
+            if (etat.cible === 0 && etat.cur < 0.5) {
+              zone.style.setProperty('--pf-r', '0px');
+              zone.style.setProperty('--pf-gr', '0px');
+              halos.delete(zone);
+            }
+          });
+          requestAnimationFrame(vaciller);
+        })(0);
+      }
 
       /* Liens et boutons : simple élargissement, sans libellé */
       document.querySelectorAll('a, button').forEach(el => {
         el.addEventListener('mouseenter', () => {
           if (el.closest('.pf-board-card')) return;
+          /* Sur un travail de création, la flamme remplace le curseur rond. */
+          if (el.closest('[data-candle]')) return;
           cursor.classList.add('is-expanded');
           label.textContent = '';
         });
