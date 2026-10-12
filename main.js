@@ -232,7 +232,7 @@
         summary:
           "Trois stages en marketing digital : SEO et campagnes Meta et Google chez KPN, réseaux sociaux chez Engoo, et depuis juillet 2026 le mediatrading chez leboncoin à Paris. Avant cela, une licence en langues et en diplomatie à Taïwan et un semestre à Paris 1. Je cherche un stage de césure de six mois à partir de janvier 2027.",
         locationLabel: "Basée à",
-        locationValue: "Lyon, France",
+        locationValue: "Paris, France",
         availabilityLabel: "Disponible à partir de",
         availabilityValue: "janvier 2027 (stage de césure de 6 mois)",
         ctaPrimary: "Me contacter",
