@@ -165,6 +165,7 @@ Order proof cards within a skill by importance (descending):
   - Catalogue : une grille de fiches (couverture, numéro, catégorie, titre, un seul chiffre clé), filtrable. Pas de tableau de résultats ni de chiffres répétés ailleurs.
   - Lecture : un seul projet affiché (`#id` dans l'URL, liens profonds et retour arrière pris en charge), avec fil d'Ariane « Tous les projets », frise de vignettes à gauche (bandeau horizontal sur mobile) et « Projet suivant » en fin de page.
   - Chaque projet : colonne gauche (titre, chiffres, outils), colonne droite (visuel, résumé court), détails complets repliés sous « Lire l'étude complète ».
+  - **Couvertures sans recadrage visible** : chaque couverture d'image est une composition au format exact 3:2 dans `assets/covers/` (œuvres entières posées sur le papier `#f3f1ea`, plusieurs pièces côte à côte ou diapositives empilées si besoin). On ne laisse jamais le CSS couper une affiche, une diapositive ou un dashboard.
   - **Une couverture n'est jamais un simple chiffre** : un projet sans image reçoit une visualisation de ses propres données (graphique, matrice, diapositive façon rapport d'affaires), construite uniquement à partir des chiffres déjà présents dans l'étude.
   - Tout texte visible existe en français et en anglais (clé i18n dans `main.js` ou paires `data-lang-show`), y compris dans les SVG et les chiffres (`8 495` / `8,495`).
   - Ouvrir une fiche fait voler sa couverture jusqu'au visuel du projet. Sans JavaScript ou en `prefers-reduced-motion`, tout reste lisible sans animation.
