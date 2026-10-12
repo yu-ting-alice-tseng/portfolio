@@ -4913,18 +4913,6 @@ html[data-theme="dark"] .page-marketing .avatar { border-color: var(--border-sub
   font-size: 0.74rem; color: var(--text-soft); text-transform: none; letter-spacing: 0;
 }
 
-/* — Le sceau : ce chiffre est accompagné d'un justificatif — */
-.page-marketing .is-sourced .stat-value::after {
-  content: "";
-  display: inline-block;
-  width: 6px; height: 6px;
-  margin-left: 0.45rem;
-  vertical-align: 0.15em;
-  border: 1px solid var(--accent);
-  background: var(--accent-soft);
-  border-radius: 1px;
-}
-
 /* — Boutons et étiquettes : angles francs — */
 .page-marketing .btn,
 .page-marketing .skill-card,
