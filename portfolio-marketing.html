@@ -1098,6 +1098,9 @@
     .pf-case-cover { margin: 0 0 0.4rem; }
     .pf-cover-wrap { position: relative; display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px; background: var(--mk-card); }
     .pf-cover-wrap > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* Pas de zoom au survol : la couverture garde la place exacte où la fiche s'est posée. */
+    .pf-cover-wrap:hover > img,
+    .pf-cover-wrap:hover .pf-candle-color { transform: none; }
     .pf-cover-hit { position: absolute; z-index: 2; display: block; }
     .pf-case-cover .pf-img-caption { margin-top: 0.5rem; }
   </style>
