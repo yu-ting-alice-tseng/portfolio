@@ -4862,40 +4862,29 @@ html[data-theme="dark"] .page-marketing .mk-grain { mix-blend-mode: screen; }
 .page-marketing .hero-kicker { color: var(--text-soft); letter-spacing: 0.2em; }
 .page-marketing .hero-kicker::before { background: var(--accent); }
 
-/* — L'œuvre en couverture, à la place de la carte de profil — */
-.mk-oeuvre { display: none; }
-.page-marketing .mk-oeuvre { display: block; margin: 0; }
-.mk-oeuvre-cadre {
-  position: relative;
-  display: block;
-  aspect-ratio: 4 / 5;
-  max-height: min(74vh, 560px);
-  margin-left: auto;
-  overflow: hidden;
+/* — La carte de profil, à l'encre sur papier — */
+html[data-theme="dark"] .page-marketing .hero-card,
+.page-marketing .hero-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: var(--text) !important;
+}
+.page-marketing .hero-card h2,
+.page-marketing .hero-card .value { color: var(--text) !important; }
+.page-marketing .hero-card .hero-role,
+.page-marketing .hero-card .label { color: var(--text-soft) !important; }
+.page-marketing .hero-card a { color: var(--accent) !important; }
+html[data-theme="dark"] .page-marketing .avatar { border-color: var(--border-subtle); }
+.page-marketing .avatar {
+  border-radius: 2px;
+  box-shadow: none;
   background: var(--bg-soft);
+  border: 1px solid var(--border-subtle);
 }
-.mk-oeuvre-cadre img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
-  filter: grayscale(1) contrast(1.1) brightness(1.02);
-  transform: scale(1.05);
-  transition: filter 1s ease, transform 1.4s cubic-bezier(0.2, 0.9, 0.25, 1);
-  -webkit-mask-image: radial-gradient(ellipse 78% 72% at 50% 46%, #000 52%, transparent 92%);
-  mask-image: radial-gradient(ellipse 78% 72% at 50% 46%, #000 52%, transparent 92%);
-}
-.mk-oeuvre:hover .mk-oeuvre-cadre img,
-.mk-oeuvre:focus-within .mk-oeuvre-cadre img { filter: grayscale(0) contrast(1); transform: scale(1); }
-.mk-oeuvre-legende {
-  position: absolute; left: 0; bottom: 1.2rem;
-  writing-mode: vertical-rl;
-  font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--text-soft);
-}
-.mk-oeuvre-note {
-  margin: 0.9rem 0 0;
-  text-align: right;
-  font-size: 0.72rem; letter-spacing: 0.04em; color: var(--text-soft);
-}
-.mk-oeuvre-note a { color: var(--accent); }
 
 /* — Les chiffres s'écrivent au lieu de défiler — */
 .page-marketing .stat-value {
@@ -4960,7 +4949,6 @@ html[data-theme="dark"] .page-marketing .mk-grain { mix-blend-mode: screen; }
   .page-marketing .stat-value { clip-path: none !important; }
   .page-marketing .mk-sep .mk-sep-filet { clip-path: none !important; }
   .page-marketing .mk-sep .mk-sep-orn { opacity: 1 !important; transform: none !important; }
-  .mk-oeuvre-cadre img { transition: none !important; }
 }
 
 /* — Étiquettes de compétences : gris d'encre au lieu du bleu d'origine — */
