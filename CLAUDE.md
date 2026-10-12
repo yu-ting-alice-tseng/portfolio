@@ -31,6 +31,15 @@ These rules apply to **every task** on this project. Read and follow them before
   - Marketing page: `--mk-accent`, etc.
   - Data/Luxury page: `--lx-gold`, etc.
 - After porting a component's shape/structure, check the page's `:root` or top-level style block and replace all colors with the correct page variables.
+- **Une page CV et son portfolio partagent la même palette.** Les éléments communs (en-tête, sélecteur de langue, bouton de thème, soulignés de navigation, barre de progression, boutons, repères de frise, liserés latéraux, logo, cadre de l'avatar et carte de profil) suivent la palette de la page, en thème clair comme en thème sombre. Les surcharges vivent dans `style.css` § 42.
+
+| Page | Fond | Accent | Secondaire | Sombre (fond / accent) |
+|---|---|---|---|---|
+| `index` | `#f2f5fb` | bleu `#2563eb` | indigo `#4f46e5`, violet `#6d28d9`, rose `#ec4899` | `#0b1220` / `#2563eb` |
+| `teaching` | `#f2f5fb` | bleu `#2563eb` | une teinte par section : cyan `#0891b2`, vert `#059669`, violet `#7c3aed`, ambre `#d97706`, rose `#e11d48` | `#0b1220` / `#2563eb` |
+| `marketing` + `portfolio-marketing` | papier `#ece9e0`, carte `#f3f1ea` | vermillon `#a8392a` (survol `#8c2e21`) | encre `#1a1815`, gris `#4a463d`, filet `#cbc7ba` | `#14130f` / `#cb5842` |
+| `data` + `portfolio-data` | menthe `#f0fdfa` | sarcelle `#0d9488` | cyan `#0891b2`, sarcelle claire `#14b8a6` | `#081b1a` / `#0d9488` |
+| `finance` + `portfolio-finance` | `#f6f8fb` | marine `#1e3a5f` | `#2d5282`, bleu acier `#2d6a9f` | `#0b1220` / `#5b8fc7` |
 
 ---
 

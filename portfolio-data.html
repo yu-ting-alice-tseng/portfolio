@@ -29,10 +29,10 @@
 
     /* ── Precision Analytics palette — Data & Market Research ── */
     :root {
-      --da-bg:           #f8fafc;
-      --da-bg-soft:      #f1f5f9;
+      --da-bg:           #f0fdfa;
+      --da-bg-soft:      #e6f7f4;
       --da-card:         #ffffff;
-      --da-card-hover:   #f8fafc;
+      --da-card-hover:   #f0fdfa;
       --da-accent:        #0d9488;
       --da-accent-light:  #14b8a6;
       --da-accent-pale:   rgba(13,148,136,0.08);
@@ -44,8 +44,8 @@
       --da-border2:      #cbd5e1;
       --da-green:        #059669;
       --da-green-pale:   rgba(5,150,105,0.08);
-      --da-insight:      #6366f1;
-      --da-insight-pale: rgba(99,102,241,0.08);
+      --da-insight:      #0891b2;
+      --da-insight-pale: rgba(8,145,178,0.08);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -68,13 +68,13 @@
       pointer-events: none;
     }
 
-    #scroll-progress { z-index: 302; background: linear-gradient(90deg, #0d9488, #14b8a6, #0d9488); }
+    #scroll-progress { z-index: 302; background: linear-gradient(90deg, #0d9488, #0891b2); }
     /* ── Top navigation bar ────────────────────────────── */
     .pf-topbar {
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(248,250,252,0.92);
+      background: rgba(240,253,250,0.92);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--da-border);
@@ -372,7 +372,7 @@
       border-radius: 0;
       margin: 1.1rem 0;
     }
-    .pf-star--action { border-left-color: rgba(99,102,241,0.6); background: rgba(99,102,241,0.06); }
+    .pf-star--action { border-left-color: rgba(8,145,178,0.6); background: rgba(8,145,178,0.06); }
     .pf-star--action .pf-star-lbl { color: var(--da-insight); }
     .pf-star--result { border-left-color: var(--da-green); background: var(--da-green-pale); }
     .pf-star--result .pf-star-lbl { color: var(--da-green); }
@@ -803,7 +803,7 @@
         </div>
       </div>
 
-      <div class="pf-star" style="border-left-color:rgba(167,139,220,0.55);background:rgba(167,139,220,0.04);">
+      <div class="pf-star" style="border-left-color:rgba(8,145,178,0.55);background:rgba(8,145,178,0.04);">
         <div class="pf-star-lbl" style="color:var(--da-insight);">
           <span data-lang-show="fr">Revue de Littérature &amp; Hypothèses</span>
           <span data-lang-show="en">Literature Review &amp; Hypotheses</span>

@@ -31,7 +31,7 @@
     :root {
       /* Teintes de base. Les composantes RVB sont isolées pour que les
          opacités puissent être composées au point d'utilisation. */
-      --mk-bg-rgb:        233,231,223;
+      --mk-bg-rgb:        236,233,224;
       --mk-accent-rgb:    168,57,42;
       --mk-accent2-rgb:   106,102,89;
 
@@ -40,7 +40,7 @@
       --mk-accent2:       rgb(var(--mk-accent2-rgb));
       --mk-accent-soft:   rgba(var(--mk-accent-rgb),0.08);
       --mk-accent-pale:   rgba(var(--mk-accent-rgb),0.04);
-      --mk-text:          #1c1b17;
+      --mk-text:          #1a1815;
       --mk-muted:         #6a6659;
       --mk-border:        #cbc7ba;
       --mk-card:          #f3f1ea;
@@ -107,7 +107,7 @@
       display: flex;
       align-items: stretch;
       gap: 0;
-      background: rgba(255,255,255,0.7);
+      background: var(--mk-card);
       border: 1px solid var(--mk-border);
       border-radius: 9999px;
       padding: 0;
@@ -132,7 +132,7 @@
     .pf-topbar .lang-btn.is-active {
       background: var(--mk-accent);
       color: #fff;
-      box-shadow: 0 2px 8px rgba(var(--mk-accent-rgb),0.3);
+      box-shadow: none;
     }
 
     /* ── Hero ──────────────────────────────────────────── */
@@ -391,7 +391,7 @@
     .pf-img-figure { display: flex; flex-direction: column; gap: 0.3rem; }
     .pf-img-caption {
       font-size: 0.72rem;
-      color: var(--text-soft, #64748b);
+      color: var(--mk-muted);
       text-align: center;
       letter-spacing: 0.02em;
     }
@@ -404,7 +404,7 @@
       border-radius: 8px;
       overflow: hidden;
       aspect-ratio: 1/1;
-      background: #0a0a18;
+      background: var(--mk-text);
     }
     .ig-item a img {
       width: 100%; height: 100%;
@@ -420,7 +420,7 @@
     .ig-item-label {
       margin-top: 0.3rem;
       font-size: 0.7rem;
-      color: var(--text-soft, #64748b);
+      color: var(--mk-muted);
       text-align: center;
       letter-spacing: 0.02em;
       line-height: 1.3;

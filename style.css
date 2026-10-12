@@ -4958,3 +4958,180 @@ html[data-theme="dark"] .page-marketing .avatar { border-color: var(--border-sub
 .page-marketing .skills-block { border-left-color: var(--eau) !important; }
 .page-marketing .skills-tools-group { border-color: var(--eau) !important; }
 .page-marketing .skills-tools-label { color: var(--eau) !important; }
+
+/* ════════════════════════════════════════════════════
+   § 42 — Cohérence des palettes par page
+   Chaque page CV et son portfolio partagent une seule
+   palette (voir CLAUDE.md § 3). Ce bloc ramène sur la
+   palette de la page les éléments communs qui restaient
+   bleu-violet : en-tête, sélecteur de langue, thème,
+   soulignés de navigation, boutons, barre de progression,
+   repères de frise, liserés latéraux, cadre de l'avatar.
+   ════════════════════════════════════════════════════ */
+
+/* — En-tête : fondu depuis le fond propre à la page — */
+.site-header {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--bg) 96%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 82%, transparent) 70%,
+    transparent 100%
+  );
+}
+html[data-theme="dark"] .site-header {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--bg) 96%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 84%, transparent) 70%,
+    transparent 100%
+  );
+}
+
+/* — Héros en thème sombre : le dégradé pastel d'origine
+     restait clair sous un texte clair (index, teaching, data) — */
+html[data-theme="dark"] .hero {
+  background: linear-gradient(145deg, #0f1a33 0%, #15163a 35%, #0e1b30 65%, #0b1a22 100%) !important;
+}
+html[data-theme="dark"] .page-data .hero {
+  background: linear-gradient(160deg, #0a2220 0%, #0d2725 45%, #0a1f24 100%) !important;
+}
+
+/* — Avatar : le fond de secours suit la page — */
+.avatar { background: var(--bg-soft); }
+
+/* ── Data ─────────────────────────────────────────── */
+.page-data .scroll-progress { box-shadow: 0 0 8px rgba(13, 148, 136, 0.45); }
+.page-data .avatar { border-color: rgba(13, 148, 136, 0.35); }
+.page-data .theme-toggle { border-color: rgba(13, 148, 136, 0.25); }
+html[data-theme="dark"] body.page-data { --surface: #0f2a28 !important; }
+html[data-theme="dark"] .page-data .lang-switch,
+html[data-theme="dark"] .page-data .theme-toggle {
+  background: rgba(15, 42, 40, 0.8) !important;
+  border-color: rgba(45, 212, 191, 0.25) !important;
+}
+html[data-theme="dark"] .page-data .theme-toggle:hover { background-color: #0f2a28 !important; }
+html[data-theme="dark"] .page-data .lang-btn:hover { background: rgba(45, 212, 191, 0.12); }
+html[data-theme="dark"] .page-data .hero-card { background: rgba(15, 42, 40, 0.85) !important; border-color: rgba(45, 212, 191, 0.18) !important; }
+html[data-theme="dark"] .page-data .avatar { border-color: rgba(45, 212, 191, 0.3); }
+html[data-theme="dark"] .page-data .btn-ghost { background-color: rgba(15, 42, 40, 0.85); border-color: rgba(45, 212, 191, 0.35); }
+html[data-theme="dark"] .page-data .btn-ghost:hover { background-color: #0f2a28; border-color: rgba(45, 212, 191, 0.6); color: #5eead4; }
+html[data-theme="dark"] .page-data .timeline-item::before { background: #0f2a28; }
+
+/* ── Finance ──────────────────────────────────────── */
+body.page-finance::before,
+body.page-finance::after {
+  background: linear-gradient(to bottom, transparent 0%, rgba(30, 58, 95, 0.18) 30%, rgba(30, 58, 95, 0.12) 70%, transparent 100%);
+}
+.page-finance .hero::before {
+  background:
+    radial-gradient(ellipse at 24% 34%, rgba(30, 58, 95, 0.14) 0%, transparent 52%),
+    radial-gradient(ellipse at 72% 20%, rgba(45, 106, 159, 0.10) 0%, transparent 48%);
+}
+.page-finance .hero::after {
+  background:
+    radial-gradient(ellipse at 58% 42%, rgba(45, 82, 130, 0.12) 0%, transparent 52%),
+    radial-gradient(ellipse at 18% 75%, rgba(45, 106, 159, 0.08) 0%, transparent 48%);
+}
+.page-finance .scroll-progress {
+  background: linear-gradient(90deg, #2d6a9f, #2d5282, #1e3a5f);
+  box-shadow: 0 0 8px rgba(30, 58, 95, 0.4);
+}
+.page-finance .site-nav a::after,
+.page-finance .nav-dropdown-toggle::after { background: linear-gradient(90deg, #1e3a5f, #2d6a9f); }
+.page-finance .lang-switch,
+.page-finance .theme-toggle { border-color: rgba(30, 58, 95, 0.2); }
+.page-finance .lang-btn:hover:not(.is-active) { background: rgba(30, 58, 95, 0.07); }
+.page-finance .lang-btn.is-active {
+  background: linear-gradient(135deg, #1e3a5f, #2d5282);
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.3);
+}
+.page-finance .btn-primary {
+  background: linear-gradient(135deg, #1e3a5f, #2d5282);
+  box-shadow: 0 8px 22px rgba(30, 58, 95, 0.28);
+}
+.page-finance .btn-primary:hover {
+  background: linear-gradient(135deg, #162c48, #1e3a5f);
+  box-shadow: 0 14px 32px rgba(30, 58, 95, 0.36);
+}
+.page-finance .btn-ghost { border-color: rgba(30, 58, 95, 0.3); }
+.page-finance .btn-ghost:hover { border-color: rgba(30, 58, 95, 0.6); color: var(--accent); }
+.page-finance .timeline-item::before { border-color: rgba(30, 58, 95, 0.4); }
+.page-finance .avatar { border-color: rgba(255, 255, 255, 0.35); background: #e8edf5; }
+html[data-theme="dark"] body.page-finance::before,
+html[data-theme="dark"] body.page-finance::after {
+  background: linear-gradient(to bottom, transparent 0%, rgba(91, 143, 199, 0.22) 30%, rgba(91, 143, 199, 0.12) 70%, transparent 100%);
+}
+html[data-theme="dark"] .page-finance .lang-btn.is-active,
+html[data-theme="dark"] .page-finance .btn-primary { background: linear-gradient(135deg, #2d5282, #5b8fc7); }
+html[data-theme="dark"] .page-finance .lang-btn:hover:not(.is-active) { background: rgba(91, 143, 199, 0.14); }
+html[data-theme="dark"] .page-finance .btn-ghost:hover { border-color: rgba(91, 143, 199, 0.55); color: #a9c6e6; }
+html[data-theme="dark"] .page-finance .timeline-item::before { border-color: rgba(91, 143, 199, 0.45); }
+html[data-theme="dark"] .page-finance .site-nav a::after,
+html[data-theme="dark"] .page-finance .nav-dropdown-toggle::after { background: linear-gradient(90deg, #5b8fc7, #2d6a9f); }
+
+/* ── Marketing : encre et vermillon, aucun bleu ───── */
+.page-marketing::before,
+.page-marketing::after { display: none; }
+.page-marketing .site-header,
+html[data-theme="dark"] .page-marketing .site-header { border-bottom-color: var(--border-subtle); }
+.page-marketing .scroll-progress { box-shadow: none; }
+.page-marketing .site-nav a::after,
+.page-marketing .nav-dropdown-toggle::after { background: var(--accent); }
+.page-marketing .lang-switch,
+.page-marketing .theme-toggle,
+html[data-theme="dark"] .page-marketing .lang-switch,
+html[data-theme="dark"] .page-marketing .theme-toggle {
+  background: var(--surface) !important;
+  border-color: var(--border-subtle) !important;
+}
+.page-marketing .lang-btn:hover:not(.is-active),
+html[data-theme="dark"] .page-marketing .lang-btn:hover:not(.is-active) { background: var(--accent-soft); color: var(--text); }
+.page-marketing .lang-btn.is-active {
+  background: var(--accent);
+  box-shadow: none;
+}
+.page-marketing .lang-btn.is-active:focus-visible { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
+html[data-theme="dark"] .page-marketing .theme-toggle:hover { background-color: var(--bg-soft) !important; }
+.page-marketing .btn-primary,
+.page-marketing .btn-primary:hover { box-shadow: none; }
+.page-marketing .btn-primary:hover { background: var(--accent-hover) !important; border-color: var(--accent-hover) !important; }
+.page-marketing .btn-ghost,
+html[data-theme="dark"] .page-marketing .btn-ghost {
+  background-color: var(--surface);
+  border-color: var(--border-subtle);
+  color: var(--text);
+}
+.page-marketing .btn-ghost:hover,
+html[data-theme="dark"] .page-marketing .btn-ghost:hover {
+  background-color: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.page-marketing .timeline-item::before,
+html[data-theme="dark"] .page-marketing .timeline-item::before {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+/* ── Data : héros clair sur la teinte de la page ──── */
+.page-data .hero {
+  background: linear-gradient(145deg, #ecfdf5 0%, #f0fdfa 40%, #ecfeff 75%, #f0fdfa 100%) !important;
+}
+
+/* ── Teaching : bandeaux de chapitre ──────────────── */
+.page-teaching .chapter-banner--alt { border-top-color: var(--t-green); }
+.page-teaching .chapter-banner--alt .chapter-number { color: var(--t-green); }
+.page-teaching .chapter-banner--accent { border-top-color: var(--t-amber); }
+.page-teaching .chapter-banner--accent .chapter-number { color: var(--t-amber); }
+html[data-theme="dark"] .chapter-banner { background: linear-gradient(135deg, #101828 0%, #16213a 100%); }
+html[data-theme="dark"] .chapter-banner--alt { background: linear-gradient(135deg, #0c1f1a 0%, #10291f 100%); }
+html[data-theme="dark"] .chapter-banner--accent { background: linear-gradient(135deg, #1f1a0c 0%, #2a210c 100%); }
+
+/* ── Trame de points et liserés restants ──────────── */
+body.page-data { background-image: radial-gradient(circle, rgba(13, 148, 136, 0.06) 1px, transparent 1px); }
+body.page-finance { background-image: radial-gradient(circle, rgba(30, 58, 95, 0.05) 1px, transparent 1px); }
+html[data-theme="dark"] body.page-data { background-image: radial-gradient(circle, rgba(45, 212, 191, 0.07) 1px, transparent 1px); }
+html[data-theme="dark"] body.page-finance { background-image: radial-gradient(circle, rgba(91, 143, 199, 0.07) 1px, transparent 1px); }
+.page-marketing .accent { background-image: none !important; }
+body.page-portfolio-marketing::before,
+body.page-portfolio-marketing::after { display: none; }
