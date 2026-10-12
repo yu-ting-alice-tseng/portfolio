@@ -921,6 +921,8 @@
           weeklyCarouselLblFR: "Version française",
           weeklyCarouselLblEN: "Version anglaise",
           board: {
+            cover1: "assets/covers/engoo-dashboard.webp",
+            cover4: "assets/covers/engoo-weekly.webp",
             readAll: "Tous les projets",
             readNext: "Projet suivant",
             readMore: "Lire l'étude complète",
@@ -1916,6 +1918,8 @@
           weeklyCarouselLblFR: "French version",
           weeklyCarouselLblEN: "English version",
           board: {
+            cover1: "assets/covers/engoo-dashboard-en.webp",
+            cover4: "assets/covers/engoo-weekly-en.webp",
             readAll: "All projects",
             readNext: "Next project",
             readMore: "Read the full case study",
@@ -2871,6 +2875,8 @@
           kyudoDesc: "為政治大學弓道社活動設計名牌——提供米色與藍色兩款配色，附實境模擬圖。",
           kyudoCap1: "名牌 – 模擬圖",
           board: {
+            cover1: "assets/covers/engoo-dashboard-en.webp",
+            cover4: "assets/covers/engoo-weekly-en.webp",
             readAll: "所有專案",
             readNext: "下一個專案",
             readMore: "閱讀完整案例",

@@ -1094,6 +1094,12 @@
     .pf-rail-thumb .is-chart { width: 100%; height: 100%; display: block; }
     .pf-slide { margin: 0; }
     .pf-slide-svg { width: 100%; height: auto; display: block; }
+    /* Couverture du projet : même image que la fiche, point d'arrivée de la transition */
+    .pf-case-cover { margin: 0 0 0.4rem; }
+    .pf-cover-wrap { position: relative; display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px; background: var(--mk-card); }
+    .pf-cover-wrap > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pf-cover-hit { position: absolute; z-index: 2; display: block; }
+    .pf-case-cover .pf-img-caption { margin-top: 0.5rem; }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -1172,7 +1178,7 @@
     </div>
     <ul class="pf-cat-grid">
       <li><a class="pf-cat-card" href="#engoo-dashboard" data-target="engoo-dashboard" data-cat="dashboard">
-        <span class="pf-cat-cover"><img src="assets/covers/engoo-dashboard.webp" alt="" loading="eager"></span>
+        <span class="pf-cat-cover"><img data-i18n-src="portfolio.mkt.board.cover1" src="assets/covers/engoo-dashboard.webp" alt="" loading="eager"></span>
         <span class="pf-cat-meta"><span class="pf-cat-n">01</span> · <span data-i18n="portfolio.mkt.board.p1Cat">Dashboard · Social Analytics</span></span>
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span>
         <span class="pf-cat-fig"><span class="pf-cat-val">+93.3%</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p1Lbl">Vues sur 3 mois</span></span>
@@ -1249,7 +1255,7 @@
         <span class="pf-cat-fig"><span class="pf-cat-val"><span data-lang-show="fr">2 240</span><span data-lang-show="en">2,240</span></span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p3Lbl">Clients analysés</span></span>
       </a></li>
       <li><a class="pf-cat-card" href="#engoo-weekly" data-target="engoo-weekly" data-cat="reporting">
-        <span class="pf-cat-cover"><img src="assets/covers/engoo-weekly.webp" alt="" loading="lazy"></span>
+        <span class="pf-cat-cover"><img data-i18n-src="portfolio.mkt.board.cover4" src="assets/covers/engoo-weekly.webp" alt="" loading="lazy"></span>
         <span class="pf-cat-meta"><span class="pf-cat-n">04</span> · <span data-i18n="portfolio.mkt.board.p4Cat">Reporting · Data Storytelling</span></span>
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span>
         <span class="pf-cat-fig"><span class="pf-cat-val">7</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p4Lbl">Diapositives par semaine</span></span>
@@ -1279,7 +1285,7 @@
     </div>
     <nav class="pf-rail" aria-label="Projets">
       <p class="pf-rail-lbl" data-i18n="portfolio.mkt.board.readProjects">Projets</p>
-      <a class="pf-rail-item" href="#engoo-dashboard" data-target="engoo-dashboard"><span class="pf-rail-thumb"><img src="assets/covers/engoo-dashboard.webp" alt="" loading="lazy"></span><span class="pf-rail-n">01</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></a>
+      <a class="pf-rail-item" href="#engoo-dashboard" data-target="engoo-dashboard"><span class="pf-rail-thumb"><img data-i18n-src="portfolio.mkt.board.cover1" src="assets/covers/engoo-dashboard.webp" alt="" loading="lazy"></span><span class="pf-rail-n">01</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></a>
       <a class="pf-rail-item" href="#bcg-beaute" data-target="bcg-beaute"><span class="pf-rail-thumb"><span class="is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
 
 
@@ -1341,7 +1347,7 @@
 <text data-lang-show="fr" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CLIENTS ENGAGÉS</text><text data-lang-show="en" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ENGAGED CUSTOMERS</text>
 <text data-lang-show="fr" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">775 $ contre 255 $ en premium</text><text data-lang-show="en" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$775 vs $255 on premium lines</text>
 </svg></span></span><span class="pf-rail-n">03</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></a>
-      <a class="pf-rail-item" href="#engoo-weekly" data-target="engoo-weekly"><span class="pf-rail-thumb"><img src="assets/covers/engoo-weekly.webp" alt="" loading="lazy"></span><span class="pf-rail-n">04</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></a>
+      <a class="pf-rail-item" href="#engoo-weekly" data-target="engoo-weekly"><span class="pf-rail-thumb"><img data-i18n-src="portfolio.mkt.board.cover4" src="assets/covers/engoo-weekly.webp" alt="" loading="lazy"></span><span class="pf-rail-n">04</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></a>
       <a class="pf-rail-item" href="#aiesec-yolo" data-target="aiesec-yolo"><span class="pf-rail-thumb"><img src="assets/covers/aiesec-yolo.webp" alt="" loading="lazy"></span><span class="pf-rail-n">05</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span></a>
       <a class="pf-rail-item" href="#guzheng-facebook" data-target="guzheng-facebook"><span class="pf-rail-thumb"><img src="assets/covers/guzheng-facebook.webp" alt="" loading="lazy"></span><span class="pf-rail-n">06</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></a>
     </nav>
@@ -1398,11 +1404,7 @@
 <!-- Lien de telechargement retire : le fichier assets/Engoo_XHS Dashboard_*.xlsx
              est absent du depot. Deposer le fichier puis retablir ce bouton. -->
 <a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-dashboard"><span data-lang-show="fr">Angle Data : architecture et méthodologie</span><span data-lang-show="en">Data angle: architecture and methodology</span></a>
-</div></aside><div class="pf-case-main"><!-- Screenshot --><div style="margin:1.25rem 0;border-radius:8px;overflow:hidden;">
-<a data-i18n-href="experience.engoo.screenshot1" href="assets/Excel_Engoo/Engoo Dashboard_FR.webp" rel="noopener noreferrer" style="display:block;" target="_blank">
-<img alt="Dashboard KPIs – Engoo XHS" data-i18n-src="experience.engoo.screenshot1" loading="lazy" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.04)'" src="assets/Excel_Engoo/Engoo Dashboard_FR.webp" style="width:100%;border-radius:8px;display:block;cursor:pointer;transition:transform 0.4s ease;"/>
-</a>
-</div><p style="font-size:0.72rem;color:var(--mk-muted);margin:0 0 1.25rem;line-height:1.5;opacity:0.8;">
+</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-cover-wrap"><img data-land data-i18n-src="portfolio.mkt.board.cover1" src="assets/covers/engoo-dashboard.webp" alt="Dashboard KPIs – Engoo XHS" width="1200" height="800"><a class="pf-cover-hit" data-i18n-href="experience.engoo.screenshot1" href="assets/Excel_Engoo/Engoo Dashboard_FR.webp" target="_blank" rel="noopener noreferrer" aria-label="Dashboard" style="inset:0"></a></div></figure><p style="font-size:0.72rem;color:var(--mk-muted);margin:0 0 1.25rem;line-height:1.5;opacity:0.8;">
 <span data-lang-show="fr">⚠ Les données du 01/10/2024 au 13/02/2025 sont réelles. Les données postérieures au 13/02/2025 sont simulées pour illustrer les fonctionnalités du dashboard.</span>
 <span data-lang-show="en">⚠ Data from 01/10/2024 to 13/02/2025 is real. Data after 13/02/2025 is simulated to demonstrate the dashboard's features.</span>
 <span data-lang-show="zh">⚠ 2024/10/01 至 2025/02/13 的數據為真實數據，2025/02/13 之後的數據為模擬數據，僅用於展示儀表板功能。</span>
@@ -1549,7 +1551,7 @@
 <span class="pf-tag">Sephora</span>
 <span class="pf-tag">Python</span>
 </div></aside><div class="pf-case-main"><div class="pf-bcg">
-<svg aria-labelledby="bcg-t bcg-d" role="img" viewBox="0 0 560 392">
+<svg data-land aria-labelledby="bcg-t bcg-d" role="img" viewBox="0 0 560 392">
 <title id="bcg-t">Matrice de portefeuille Sephora</title>
 <desc id="bcg-d">Répartition des 8 495 produits en quatre segments selon la satisfaction client et le volume d'avis : Hero 2 307 produits, Question Marks 1 801, Underperformers 2 294, Risk 1 814.</desc>
 <!-- Axes -->
@@ -1678,7 +1680,7 @@
 <span class="pf-tag">Luxury Marketing</span>
 <span class="pf-tag">Consumer Insights</span>
 <span class="pf-tag">Python</span>
-</div></aside><div class="pf-case-main"><figure class="pf-slide"><svg class="pf-slide-svg" viewBox="0 0 720 405" role="img" aria-label="Maison Beauté : conversion par campagne, achats par canal et écarts de dépense premium">
+</div></aside><div class="pf-case-main"><figure class="pf-slide"><svg data-land class="pf-slide-svg" viewBox="0 0 720 405" role="img" aria-label="Maison Beauté : conversion par campagne, achats par canal et écarts de dépense premium">
 <rect x="0.5" y="0.5" width="719" height="404" fill="var(--mk-card)" stroke="var(--mk-border)"/>
 <rect x="0" y="0" width="720" height="62" fill="var(--mk-text)"/>
 <text data-lang-show="fr" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Diagnostic Client &amp; ROI Campagnes</text><text data-lang-show="en" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Customer Diagnostic &amp; Campaign ROI</text>
@@ -1762,7 +1764,7 @@
 <p class="pf-star-txt">Second, the Response campaign records the highest conversion rate (14.9%); a systematic analysis of its triggers (timing, message, targeting) and the transposition of this mechanism to T3 Affluent and T4 Luxury segments would constitute a high-yield optimisation approach.</p>
 <p class="pf-star-txt">Finally, the low conversion rate among high-frequency web visitors argues for targeted sampling and premium bundle offers designed to transform browsing intent into high-margin purchases.</p>
 </div>
-</div></details></div></div><a class="pf-next" data-target="engoo-weekly" href="#engoo-weekly"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/engoo-weekly.webp"/></span></a></article>
+</div></details></div></div><a class="pf-next" data-target="engoo-weekly" href="#engoo-weekly"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></span><span class="pf-next-cover"><img alt="" loading="lazy" data-i18n-src="portfolio.mkt.board.cover4" src="assets/covers/engoo-weekly.webp"/></span></a></article>
 <article class="pf-case" data-cat="reporting" id="engoo-weekly">
 
 
@@ -1782,7 +1784,7 @@
 <span class="pf-tag">Bilingual</span>
 </div><div class="pf-btns">
 <a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-weekly"><span data-lang-show="fr">Angle Data : méthodologie et impact</span><span data-lang-show="en">Data angle: methodology and impact</span></a>
-</div></aside><div class="pf-case-main"><!-- FR slides --><div data-lang-show="fr">
+</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-cover-wrap"><img data-land data-i18n-src="portfolio.mkt.board.cover4" src="assets/covers/engoo-weekly.webp" alt="Engoo – Weekly Report" width="1200" height="800"></div></figure><p class="pf-case-lead" data-i18n="portfolio.mkt.weeklyDesc">Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.</p><!-- FR slides --><div data-lang-show="fr">
 <div class="ig-carousel-wrap">
 <button aria-label="Précédent" class="ig-nav ig-nav--prev">‹</button>
 <div class="ig-carousel" id="weeklyFR">
@@ -1812,7 +1814,7 @@
 <button aria-label="Next" class="ig-nav ig-nav--next">›</button>
 <div class="ig-dots" id="weeklyDotsEN"></div>
 </div>
-</div><p class="pf-case-lead" data-i18n="portfolio.mkt.weeklyDesc">Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.</p></div></div><a class="pf-next" data-target="aiesec-yolo" href="#aiesec-yolo"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/aiesec-yolo.webp"/></span></a></article>
+</div></div></div><a class="pf-next" data-target="aiesec-yolo" href="#aiesec-yolo"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/aiesec-yolo.webp"/></span></a></article>
 <article class="pf-case" data-candle="" data-cat="campagne" id="aiesec-yolo">
 
 
@@ -1839,24 +1841,11 @@
 <span class="pf-tag">Adobe Illustrator</span>
 <span class="pf-tag">AIESEC</span>
 <span class="pf-tag">Visual Design</span>
-</div></aside><div class="pf-case-main"><!-- Logo first --><div class="pf-img-figure" style="margin: 0.5rem 0 1rem;">
+</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-img-wrap pf-cover-wrap"><img data-land src="assets/covers/aiesec-yolo.webp" alt="AIESEC YOLO International Camp – Main Campaign Posters" width="1200" height="800"><a class="pf-cover-hit" href="assets/yolo-camp-main-visual-en.webp" target="_blank" rel="noopener noreferrer" aria-label="Poster – English" style="left:9.42%;top:8.75%;width:38.92%;height:82.5%"></a><a class="pf-cover-hit" href="assets/yolo-camp-main-visual-zh.webp" target="_blank" rel="noopener noreferrer" aria-label="Poster – Chinese" style="left:51.67%;top:8.75%;width:38.92%;height:82.5%"></a></div><figcaption class="pf-img-caption"><span data-i18n="portfolio.mkt.aiesec.cap1">Affiche principale – version anglaise</span> · <span data-i18n="portfolio.mkt.aiesec.cap2">Affiche principale – version chinoise</span></figcaption></figure><p class="pf-case-lead" data-i18n="portfolio.mkt.aiesec.body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Conception des visuels de campagne (affiches et publications) pour le recrutement de volontaires et de participants.</p><!-- Logo first --><div class="pf-img-figure" style="margin: 0.5rem 0 1rem;">
 <a class="pf-img-wrap" href="assets/yolo-camp-tote-bag.webp" rel="noopener noreferrer" style="aspect-ratio:16/9; display:block; background:#000;" target="_blank">
 <img alt="AIESEC YOLO Camp – Official Tote Bag Visual Design" loading="lazy" src="assets/yolo-camp-tote-bag.webp" style="object-fit:contain;"/>
 </a>
 <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap4">Identité visuelle – logo officiel</p>
-</div><!-- Campaign posters with captions --><div class="pf-imgs pf-imgs--2" style="align-items:start;">
-<div class="pf-img-figure">
-<a class="pf-img-wrap" href="assets/yolo-camp-main-visual-en.webp" rel="noopener noreferrer" style="aspect-ratio:3/4;" target="_blank">
-<img alt="AIESEC YOLO International Camp – Main Campaign Poster, English Version" loading="lazy" src="assets/yolo-camp-main-visual-en.webp"/>
-</a>
-<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap1">Affiche principale – version anglaise</p>
-</div>
-<div class="pf-img-figure">
-<a class="pf-img-wrap" href="assets/yolo-camp-main-visual-zh.webp" rel="noopener noreferrer" style="aspect-ratio:3/4;" target="_blank">
-<img alt="AIESEC YOLO International Camp – Main Campaign Poster, Chinese Version" loading="lazy" src="assets/yolo-camp-main-visual-zh.webp"/>
-</a>
-<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap2">Affiche principale – version chinoise</p>
-</div>
 </div><!-- Instagram posts carousel --><p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.igLabel" style="margin: 1.25rem 0 0.4rem;">Posts Instagram – Campagne YOLO</p><div class="ig-carousel-wrap">
 <button aria-label="Previous" class="ig-nav ig-nav--prev">‹</button>
 <div class="ig-carousel" id="yoloCarousel">
@@ -1916,7 +1905,7 @@
           <p class="pf-star-txt">Initially, the digital campaign yielded extremely low conversion rates, severely threatening our target registration goals.</p>
           <p class="pf-star-txt"><strong>Resolution:</strong> To overcome this bottleneck, I audited historical campaign data and interviewed past project leads, discovering that in-person high school outreach was historically the highest-converting channel for our target audience. I immediately executed a strategic pivot, shifting my team's focus and resources to field marketing. To support this transition and build instant trust, I overhauled the project's art direction using Canva and Adobe Illustrator to elevate visual credibility and design natively shareable content that amplified peer-to-peer organic reach. This data-driven turnaround successfully secured all target participants and surpassed our revenue budget by +53.7%.</p>
         </div>
-      </div>--><p class="pf-case-lead" data-i18n="portfolio.mkt.aiesec.body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Conception des visuels de campagne (affiches et publications) pour le recrutement de volontaires et de participants.</p></div></div><a class="pf-next" data-target="guzheng-facebook" href="#guzheng-facebook"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/guzheng-facebook.webp"/></span></a></article>
+      </div>--></div></div><a class="pf-next" data-target="guzheng-facebook" href="#guzheng-facebook"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/guzheng-facebook.webp"/></span></a></article>
 <article class="pf-case" data-candle="" data-cat="community" id="guzheng-facebook">
 
 
@@ -1932,20 +1921,7 @@
 <span class="pf-tag">Community Management</span>
 <span class="pf-tag">Facebook</span>
 <span class="pf-tag">Visual Design</span>
-</div></aside><div class="pf-case-main"><div class="pf-imgs pf-imgs--2" style="align-items:start;">
-<div class="pf-img-figure">
-<a class="pf-img-wrap" href="assets/guzheng-club-recruitment-poster.webp" rel="noopener noreferrer" style="aspect-ratio:1/1;" target="_blank">
-<img alt="NCCU Guzheng Club – Member Recruitment Poster" loading="lazy" src="assets/guzheng-club-recruitment-poster.webp"/>
-</a>
-<p class="pf-img-caption" data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</p>
-</div>
-<div class="pf-img-figure">
-<a class="pf-img-wrap" href="assets/guzheng-club-year-end-gathering.webp" rel="noopener noreferrer" style="aspect-ratio:1/1;" target="_blank">
-<img alt="NCCU Guzheng Club – Year-end Semester Gathering Event" loading="lazy" src="assets/guzheng-club-year-end-gathering.webp"/>
-</a>
-<p class="pf-img-caption" data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</p>
-</div>
-</div><p class="pf-case-lead" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p></div></div><a class="pf-next" data-target="engoo-dashboard" href="#engoo-dashboard"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/engoo-dashboard.webp"/></span></a></article>
+</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-img-wrap pf-cover-wrap"><img data-land src="assets/covers/guzheng-facebook.webp" alt="NCCU Guzheng Club – Recruitment Poster and Year-end Gathering" width="1200" height="800"><a class="pf-cover-hit" href="assets/guzheng-club-recruitment-poster.webp" target="_blank" rel="noopener noreferrer" aria-label="Recruitment poster" style="left:5.0%;top:19.5%;width:38.33%;height:60.88%"></a><a class="pf-cover-hit" href="assets/guzheng-club-year-end-gathering.webp" target="_blank" rel="noopener noreferrer" aria-label="Year-end gathering" style="left:46.67%;top:19.5%;width:48.33%;height:60.88%"></a></div><figcaption class="pf-img-caption"><span data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</span> · <span data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</span></figcaption></figure><p class="pf-case-lead" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p></div></div><a class="pf-next" data-target="engoo-dashboard" href="#engoo-dashboard"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></span><span class="pf-next-cover"><img alt="" loading="lazy" data-i18n-src="portfolio.mkt.board.cover1" src="assets/covers/engoo-dashboard.webp"/></span></a></article>
 </main>
   </div>
 
@@ -2188,6 +2164,10 @@
 
     document.documentElement.classList.add('js-cases');
 
+    /* Défilement immédiat : le site déclare scroll-behavior: smooth, et un
+       défilement animé fausserait la mesure du point d'arrivée. */
+    function jump(y) { window.scrollTo({ top: y, left: 0, behavior: 'instant' }); }
+
     function show(id) {
       const art = document.getElementById(id);
       const i = ids.indexOf(id);
@@ -2198,14 +2178,14 @@
       crumbT.replaceChildren(cards[i].querySelector('.pf-cat-name').cloneNode(true));
       crumbN.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(ids.length).padStart(2, '0');
       art.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
-      window.scrollTo(0, 0);
+      jump(0);
       /* Une navigation par ancre fait défiler le navigateur après coup. */
-      requestAnimationFrame(() => window.scrollTo(0, 0));
+      requestAnimationFrame(() => jump(0));
     }
     function showCatalog() {
       document.body.classList.remove('is-reading');
       cases.forEach(c => c.classList.remove('is-current'));
-      window.scrollTo(0, catalogY);
+      jump(catalogY);
       if (lastCard) lastCard.focus({ preventScroll: true });
     }
     function route() {
@@ -2216,14 +2196,11 @@
       history.pushState(null, '', id ? '#' + id : location.pathname + location.search);
     }
 
-    /* Premier élément visible du projet : c'est là que la couverture se pose. */
+    /* Point d'arrivée : la couverture du projet, identique à celle de la fiche. */
     function landing(art) {
-      for (const el of art.querySelector('.pf-case-main').children) {
-        if (el.classList.contains('pf-case-lead')) return null;
-        const r = el.getBoundingClientRect();
-        if (r.width && r.height) return r;
-      }
-      return null;
+      const el = art.querySelector('[data-land]');
+      const r = el && el.getBoundingClientRect();
+      return r && r.width && r.height ? { el, r } : null;
     }
     function veil(from, to, ms) {
       const v = document.createElement('div');
@@ -2250,26 +2227,39 @@
     function open(id, card) {
       catalogY = window.scrollY;
       lastCard = card;
-      const img = card.querySelector('.pf-cat-cover > img, .pf-cat-cover > svg');
-      if (reduced || !img) { swap(id); return; }
-      const from = img.getBoundingClientRect();
+      const src = card.querySelector('.pf-cat-cover > img, .pf-cat-cover > svg');
+      if (reduced || !src) { swap(id); return; }
+      const from = src.getBoundingClientRect();
       const fly = document.createElement('div');
       fly.className = 'pf-fly';
-      fly.appendChild(img.cloneNode());
+      fly.appendChild(src.cloneNode(true));
       Object.assign(fly.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' });
       const { v } = veil(1, 1, 1);
       document.body.appendChild(fly);
       push(id);
       show(id);
-      const to = landing(document.getElementById(id));
-      if (!to) { fly.remove(); v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 320, fill: 'forwards' }).finished.then(() => v.remove()); return; }
+      const land = landing(document.getElementById(id));
+      if (!land) {
+        fly.remove();
+        v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 320, fill: 'forwards' }).finished.then(() => v.remove());
+        return;
+      }
+      const { el, r: to } = land;
+      /* La couverture d'arrivée reste masquée pendant le vol : on ne voit
+         qu'une seule image, qui se pose exactement à sa place. */
+      el.style.visibility = 'hidden';
+      const cs = getComputedStyle(el);
+      const wrapRadius = getComputedStyle(el.parentElement).borderRadius;
+      const endFilter = cs.filter && cs.filter !== 'none' ? cs.filter : 'none';
       v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 700, easing: 'ease-in', fill: 'forwards' });
       fly.animate([
-        { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' },
-        { left: to.left + 'px', top: to.top + 'px', width: to.width + 'px', height: to.height + 'px' }
-      ], { duration: 700, easing: ease, fill: 'forwards' }).finished
-        .then(() => fly.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, fill: 'forwards' }).finished)
-        .then(() => { fly.remove(); v.remove(); });
+        { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px', borderRadius: '0px', filter: 'none' },
+        { left: to.left + 'px', top: to.top + 'px', width: to.width + 'px', height: to.height + 'px', borderRadius: wrapRadius, filter: endFilter }
+      ], { duration: 700, easing: ease, fill: 'forwards' }).finished.then(() => {
+        el.style.visibility = '';
+        fly.remove();
+        v.remove();
+      });
     }
 
     function plain(e) { return !(e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1); }
@@ -2295,7 +2285,7 @@
        ce script : on ramène la lecture en haut du projet. */
     window.addEventListener('load', () => {
       if (!document.body.classList.contains('is-reading')) return;
-      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, 0)));
+      requestAnimationFrame(() => requestAnimationFrame(() => jump(0)));
     });
 
     /* ── 4. Curseur sur mesure &amp; aperçu flottant ─────── */
