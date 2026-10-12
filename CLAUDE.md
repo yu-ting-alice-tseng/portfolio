@@ -161,6 +161,12 @@ Order proof cards within a skill by importance (descending):
 - **Étendre la bougie à une autre carte** : poser `data-candle` sur l'`<article>`. Toutes les `.pf-img-wrap` et `.ig-item a` qu'elle contient entrent alors dans le jeu, le calque couleur est construit en JS à partir de l'image existante, sans second téléchargement.
 - **Garde-fous à conserver** : sans survol fin (tactile) ou en `prefers-reduced-motion`, les œuvres restent en couleur et aucun calque n'est créé. Une œuvre ne doit jamais rester inaccessible parce que l'effet ne peut pas s'exécuter.
 - **La carte de profil du héros garde la photo** sur toutes les pages, marketing comprise : on ne la remplace jamais par une œuvre. Les travaux se montrent dans le portfolio.
+- **Structure de `portfolio-marketing.html` : catalogue puis lecture, un projet à la fois.**
+  - Catalogue : une grille de fiches (couverture, numéro, catégorie, titre, un seul chiffre clé), filtrable. Pas de tableau de résultats ni de chiffres répétés ailleurs.
+  - Lecture : un seul projet affiché (`#id` dans l'URL, liens profonds et retour arrière pris en charge), avec fil d'Ariane « Tous les projets », frise de vignettes à gauche (bandeau horizontal sur mobile) et « Projet suivant » en fin de page.
+  - Chaque projet : colonne gauche (titre, chiffres, outils), colonne droite (visuel, résumé court), détails complets repliés sous « Lire l'étude complète ».
+  - Ouvrir une fiche fait voler sa couverture jusqu'au visuel du projet. Sans JavaScript ou en `prefers-reduced-motion`, tout reste lisible sans animation.
+  - Ajouter un projet : une fiche dans `.pf-cat-grid`, une vignette dans `.pf-rail`, un `<article class="pf-case">` avec son lien `.pf-next`, et mettre à jour le lien « Projet suivant » du projet précédent.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
 ---

@@ -916,6 +916,10 @@
           weeklyCarouselLblFR: "Version française",
           weeklyCarouselLblEN: "Version anglaise",
           board: {
+            readAll: "Tous les projets",
+            readNext: "Projet suivant",
+            readMore: "Lire l'étude complète",
+            readProjects: "Projets",
             title: "Résultats des Projets",
             intro: "Chaque fiche donne le résultat obtenu avant le nom du projet. Cliquez sur une fiche pour ouvrir l'étude de cas correspondante.",
             p1Name: "Engoo · Dashboard Xiaohongshu",
@@ -1902,6 +1906,10 @@
           weeklyCarouselLblFR: "French version",
           weeklyCarouselLblEN: "English version",
           board: {
+            readAll: "All projects",
+            readNext: "Next project",
+            readMore: "Read the full case study",
+            readProjects: "Projects",
             title: "Project Results",
             intro: "Each card leads with the result before the project name. Click a card to open the matching case study.",
             p1Name: "Engoo · Xiaohongshu Dashboard",
@@ -2848,6 +2856,10 @@
           kyudoDesc: "為政治大學弓道社活動設計名牌——提供米色與藍色兩款配色，附實境模擬圖。",
           kyudoCap1: "名牌 – 模擬圖",
           board: {
+            readAll: "所有專案",
+            readNext: "下一個專案",
+            readMore: "閱讀完整案例",
+            readProjects: "專案",
             title: "專案成果",
             intro: "每張卡片先呈現成果，再標示專案名稱。點擊卡片即可開啟對應的案例研究。",
             p1Name: "Engoo · 小紅書儀表板",

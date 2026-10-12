@@ -693,241 +693,6 @@
       .pf-candle-color, .pf-candle-glow { display: none !important; }
     }
 
-    /* ── Tableau des résultats ─────────────────────────── */
-    /* L'ancien sommaire ne disait que le nom des projets. Ce tableau
-       montre d'abord ce qui a été obtenu : un chiffre par projet, puis
-       ses preuves, chacune ramenée à une échelle annoncée. */
-    .pf-board {
-      position: relative;
-      z-index: 2;
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 1rem 2rem 3.5rem;
-    }
-    .pf-board-eyebrow {
-      font-size: 0.64rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--mk-muted);
-      margin: 0 0 0.4rem;
-    }
-    .pf-board-intro {
-      font-size: 0.86rem;
-      line-height: 1.6;
-      color: var(--mk-muted);
-      max-width: 46ch;
-      margin: 0 0 1.5rem;
-    }
-    .pf-board-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      gap: 1.15rem;
-    }
-    .pf-board-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      padding: 1.35rem 1.4rem 1.5rem;
-      background: var(--mk-card);
-      border: 1px solid var(--mk-border);
-      cursor: pointer;
-      transition: background 0.36s ease, transform 0.42s cubic-bezier(.22,1,.36,1);
-    }
-    .pf-board-card:hover,
-    .pf-board-card:focus-visible {
-      background: var(--mk-accent-pale);
-      border-color: rgba(var(--mk-accent-rgb),0.35);
-      transform: translateY(-3px);
-      outline: none;
-    }
-    .pf-board-card:focus-visible { box-shadow: inset 0 0 0 2px var(--mk-accent); }
-    .pf-board-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-    .pf-board-num {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      color: var(--mk-muted);
-      font-variant-numeric: tabular-nums;
-      transition: color 0.32s ease;
-    }
-    .pf-board-cat {
-      font-size: 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-align: right;
-      color: var(--mk-muted);
-      transition: color 0.32s ease;
-    }
-    .pf-board-card:hover .pf-board-num,
-    .pf-board-card:hover .pf-board-cat,
-    .pf-board-card:focus-visible .pf-board-num,
-    .pf-board-card:focus-visible .pf-board-cat { color: var(--mk-accent); }
-    .pf-board-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.3rem, 2.2vw, 1.62rem);
-      font-weight: 500;
-      line-height: 1.15;
-      color: var(--mk-text);
-      margin: 0;
-      /* Deux lignes réservées : les chiffres restent alignés d'une fiche à l'autre */
-      min-height: 2.3em;
-      text-wrap: balance;
-    }
-    /* Le chiffre du projet : ce que le lecteur doit retenir en premier */
-    .pf-board-figure {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      margin: 0.15rem 0 0.2rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--mk-border);
-    }
-    .pf-board-val {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.3rem, 4.6vw, 3rem);
-      font-weight: 600;
-      line-height: 1;
-      color: var(--mk-accent);
-      font-variant-numeric: tabular-nums;
-      clip-path: inset(0 100% 0 0);
-      transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
-    }
-    .pf-board-val.is-written { clip-path: inset(0 0 0 0); }
-    .pf-board-lbl {
-      font-size: 0.59rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--mk-muted);
-    }
-    /* Jauges : plusieurs mesures comparables sur une même échelle */
-    .pf-board-bars {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-    }
-    .pf-board-bars > li + li { margin-top: 0.1rem; }
-    .pf-board-bar-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.6rem;
-      font-size: 0.66rem;
-      letter-spacing: 0.04em;
-      color: var(--mk-muted);
-      margin-bottom: 0.28rem;
-    }
-    .pf-board-bar-val {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 500;
-      color: var(--mk-text);
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
-    }
-    .pf-board-track {
-      display: block;
-      height: 3px;
-      background: rgba(var(--mk-accent-rgb),0.12);
-      overflow: hidden;
-    }
-    .pf-board-fill {
-      display: block;
-      height: 100%;
-      width: calc(var(--v) * 1%);
-      background: var(--mk-accent);
-      transform-origin: left;
-      transition: width 1s cubic-bezier(0.25, 0.8, 0.3, 1);
-    }
-    /* Largeur nulle au départ seulement si le script gère la révélation */
-    .pf-board-card[data-reveal] .pf-board-fill { width: 0; }
-    .pf-board-card[data-reveal].is-revealed .pf-board-fill { width: calc(var(--v) * 1%); }
-    /* Chiffres clés : mesures d'unités différentes, donc sans jauge */
-    /* Pas de filet sous les chiffres clés : un trait plein se lirait comme
-       une jauge remplie à 100%, ce que ces mesures ne signifient pas. */
-    .pf-board-chips {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-    }
-    .pf-board-chip {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.75rem;
-      font-size: 0.66rem;
-      letter-spacing: 0.04em;
-      color: var(--mk-muted);
-    }
-    .pf-board-chip-val {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 500;
-      color: var(--mk-text);
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
-    }
-    .pf-board-scale {
-      font-size: 0.58rem;
-      line-height: 1.5;
-      letter-spacing: 0.04em;
-      color: var(--mk-muted);
-      margin: 0.2rem 0 0;
-      font-style: italic;
-    }
-    .pf-board-card::after {
-      content: '';
-      position: absolute;
-      left: -1px;
-      bottom: -1px;
-      width: calc(100% + 2px);
-      height: 2px;
-      background: var(--mk-accent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.52s cubic-bezier(.22,1,.36,1);
-      pointer-events: none;
-    }
-    .pf-board-card:hover::after,
-    .pf-board-card:focus-visible::after { transform: scaleX(1); }
-
-    /* Aperçu flottant qui suit le curseur */
-    .pf-preview {
-      position: fixed;
-      top: 0; left: 0;
-      z-index: 998;
-      width: 300px;
-      margin: 0;
-      pointer-events: none;
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0.94);
-      transition: opacity 0.34s ease, transform 0.48s cubic-bezier(.22,1,.36,1);
-      will-change: transform;
-    }
-    .pf-preview.is-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    .pf-preview img {
-      display: block;
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      border-radius: 4px;
-      box-shadow: 0 18px 48px rgba(var(--mk-accent-rgb),0.18);
-    }
-
     /* ── Révélations au défilement ─────────────────────── */
     /* L'état masqué n'est appliqué que si le script a pu poser la classe
        .js-reveal sur <html>. Sans JavaScript, ou si le script échoue,
@@ -1169,6 +934,159 @@
       .pf-extras { padding: 2.25rem 1.25rem 0; }
       .pf-topbar-inner { padding: 0 1.25rem; }
     }
+    /* ── Catalogue : une fiche par projet ──────────────── */
+    .pf-cat { max-width: 1240px; margin: 0 auto; padding: 0 2rem 4rem; }
+    .pf-cat .pf-filters { margin: 0 0 2.2rem; padding-left: 0; padding-right: 0; }
+    .pf-cat-grid {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.8rem 2rem;
+    }
+    .pf-cat-grid > li.is-hidden { display: none; }
+    .pf-cat-card { display: block; color: inherit; text-decoration: none; }
+    .pf-cat-cover {
+      display: flex; align-items: center; justify-content: center;
+      aspect-ratio: 3 / 2; overflow: hidden; background: var(--mk-card);
+      border: 1px solid var(--mk-border);
+      transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.25, 1), border-color 0.3s;
+    }
+    .pf-cat-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .pf-cat-cover.is-type, .pf-next-cover.is-type, .pf-rail-thumb .is-type {
+      font-family: 'Cormorant Garamond', serif; color: var(--mk-accent); font-size: 3.2rem; font-weight: 400;
+    }
+    .pf-cat-card:hover .pf-cat-cover,
+    .pf-cat-card:focus-visible .pf-cat-cover { transform: translateY(-6px); border-color: var(--mk-accent); }
+    .pf-cat-card:focus-visible { outline: none; }
+    .pf-cat-meta {
+      display: block; margin-top: 1rem;
+      font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mk-muted);
+    }
+    .pf-cat-name {
+      display: block; margin: 0.35rem 0 0.55rem;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; line-height: 1.15; color: var(--mk-text);
+    }
+    .pf-cat-fig { display: flex; align-items: baseline; gap: 0.6rem; }
+    .pf-cat-val { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--mk-accent); white-space: nowrap; }
+    .pf-cat-lbl { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mk-muted); }
+
+    /* ── Lecture : un projet à la fois ─────────────────── */
+    /* Sans JavaScript, tous les projets restent lisibles à la suite :
+       le mode lecture n'est activé que par le script (html.js-cases). */
+    .pf-reader { max-width: 1240px; margin: 0 auto; padding: 0 2rem 3rem; }
+    .pf-crumb, .pf-rail { display: none; }
+    .pf-reader .pf-grid { columns: auto; max-width: none; padding: 0; }
+    .pf-case { padding: 2.6rem 0 0; border-top: 1px solid var(--mk-border); }
+    .pf-case-grid { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 3.4rem; }
+    .pf-case-side { align-self: start; position: sticky; top: 120px; }
+    .pf-case-kicker {
+      margin: 0 0 0.6rem; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mk-muted);
+    }
+    .pf-case-n { color: var(--mk-accent); }
+    .pf-case-side .pf-card-title { font-size: 1.95rem; line-height: 1.12; margin: 0 0 1.6rem; }
+    .pf-case-figs, .pf-case-side .pf-res-stats {
+      display: flex !important; flex-direction: column; gap: 1rem; margin: 0 0 1.6rem; padding: 0;
+      border: 0 !important; background: none !important;
+    }
+    .pf-case-figs > div, .pf-case-side .pf-res-stat { align-items: flex-start; text-align: left;
+      display: flex; flex-direction: column; gap: 0.15rem; padding: 0 !important; background: none !important; border: 0 !important; }
+    .pf-case-side .pf-res-stat::before { display: none !important; }
+    .pf-case-side .pf-stat-val { order: 0; font-size: 1.85rem; line-height: 1; }
+    .pf-case-side .pf-stat-lbl { order: 1; }
+    .pf-case-side .pf-tags { margin-top: 0; }
+    .pf-case-side .pf-btns { margin-top: 1rem; }
+    .pf-case-main > :first-child { margin-top: 0 !important; }
+    .pf-case-lead p, p.pf-case-lead { font-size: 0.98rem; line-height: 1.75; color: var(--mk-text); margin: 1.2rem 0 0; }
+    .pf-case-more { margin-top: 1.6rem; border-top: 1px solid var(--mk-border); }
+    .pf-case-more > summary {
+      cursor: pointer; list-style: none; padding: 1rem 0;
+      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mk-accent);
+    }
+    .pf-case-more > summary::-webkit-details-marker { display: none; }
+    .pf-case-more > summary::after { content: " +"; }
+    .pf-case-more[open] > summary::after { content: " −"; }
+    .pf-case-more .pf-star { margin-top: 0; }
+    .pf-case-more .pf-star + .pf-star { margin-top: 1rem; }
+
+    .pf-next {
+      display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 3.4rem; align-items: center;
+      margin-top: 3rem; padding: 2rem 0 0.5rem; border-top: 1px solid var(--mk-text);
+      color: inherit; text-decoration: none;
+    }
+    .pf-next-lbl { display: block; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mk-muted); }
+    .pf-next-name { display: block; margin-top: 0.4rem; font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; line-height: 1.15; }
+    .pf-next-name::after { content: " →"; color: var(--mk-accent); }
+    .pf-next-cover {
+      display: flex; align-items: center; justify-content: center; height: 150px; overflow: hidden;
+      background: var(--mk-card); border: 1px solid var(--mk-border); transition: border-color 0.3s;
+    }
+    .pf-next-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .pf-next:hover .pf-next-cover { border-color: var(--mk-accent); }
+
+    /* Mode lecture (activé par le script) */
+    html.js-cases .pf-case { display: none; border-top: 0; padding-top: 1.4rem; }
+    html.js-cases .pf-case.is-current { display: block; }
+    html.js-cases .pf-reader { display: none; }
+    html.js-cases body.is-reading .pf-reader { display: block; }
+    html.js-cases body.is-reading .pf-hero,
+    html.js-cases body.is-reading .pf-cat,
+    html.js-cases body.is-reading .pf-extras { display: none; }
+    html.js-cases .pf-crumb {
+      display: flex; align-items: center; gap: 0.8rem;
+      position: sticky; top: 52px; z-index: 150; margin: 0 -2rem; padding: 0.75rem 2rem;
+      background: rgba(var(--mk-bg-rgb), 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--mk-border); font-size: 0.76rem; color: var(--mk-muted);
+    }
+    .pf-crumb-back { color: var(--mk-accent); text-decoration: none; white-space: nowrap; }
+    .pf-crumb-back::before { content: "← "; }
+    .pf-crumb-title { color: var(--mk-text); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pf-crumb-count { margin-left: auto; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    html.js-cases .pf-rail { display: block; position: fixed; left: 1.6rem; top: 150px; z-index: 50; width: 150px; }
+    .pf-rail-lbl { margin: 0 0 0.8rem; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mk-muted); }
+    .pf-rail-item { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.55rem; text-decoration: none; color: var(--mk-muted); opacity: 0.6; transition: opacity 0.25s; }
+    .pf-rail-item:hover, .pf-rail-item.is-current { opacity: 1; }
+    .pf-rail-item.is-current { color: var(--mk-accent); }
+    .pf-rail-thumb {
+      flex: 0 0 auto; width: 46px; height: 34px; overflow: hidden; display: flex; align-items: center; justify-content: center;
+      background: var(--mk-card); outline: 1px solid var(--mk-border); outline-offset: 2px;
+    }
+    .pf-rail-item.is-current .pf-rail-thumb { outline: 1.5px solid var(--mk-accent); }
+    .pf-rail-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .pf-rail-thumb .is-type { font-size: 0.85rem !important; }
+    .pf-rail-n { font-size: 0.7rem; font-variant-numeric: tabular-nums; }
+    .pf-rail-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    html.js-cases body.is-reading .pf-grid { padding-left: 120px; }
+
+    /* Transition : la couverture de la fiche rejoint celle du projet */
+    .pf-fly { position: fixed; z-index: 400; overflow: hidden; pointer-events: none; margin: 0; }
+    .pf-fly img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .pf-veil { position: fixed; inset: 0; z-index: 399; background: var(--mk-bg); pointer-events: none; }
+
+    @media (max-width: 1100px) {
+      html.js-cases body.is-reading .pf-grid { padding-left: 0; }
+      html.js-cases .pf-rail {
+        position: sticky; top: 98px; left: auto; width: auto; z-index: 140;
+        display: flex; gap: 0.5rem; overflow-x: auto; margin: 0 -2rem; padding: 0.6rem 2rem;
+        background: rgba(var(--mk-bg-rgb), 0.94); border-bottom: 1px solid var(--mk-border);
+        scrollbar-width: none;
+      }
+      .pf-rail::-webkit-scrollbar { display: none; }
+      .pf-rail-lbl, .pf-rail-n { display: none; }
+      .pf-rail-item { margin: 0; }
+    }
+    @media (max-width: 860px) {
+      .pf-cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.2rem; }
+      .pf-case-grid, .pf-next { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+      .pf-case-side { position: static; }
+      .pf-case-figs, .pf-case-side .pf-res-stats { flex-direction: row; flex-wrap: wrap; gap: 1rem 1.6rem; }
+    }
+    @media (max-width: 540px) {
+      .pf-cat { padding: 0 1rem 3rem; }
+      .pf-reader { padding: 0 1rem 2.5rem; }
+      html.js-cases .pf-crumb, html.js-cases .pf-rail { margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+      .pf-cat-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pf-cat-cover { transition: none; }
+    }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -1232,755 +1150,558 @@
         Campagnes orientées données, direction artistique et gestion de communauté — une approche conjuguant rigueur analytique et création visuelle au service de la performance.
       </p>
     </div>
-    <div class="pf-hero-right">
-      <div class="pf-hero-stat-block">
-        <span class="pf-hero-stat-num">8</span>
-        <span class="pf-hero-stat-label" data-i18n="portfolio.mkt.heroStatProjets">Projets</span>
-      </div>
-      <div class="pf-hero-stat-block">
-        <span class="pf-hero-stat-num">+93%</span>
-        <span class="pf-hero-stat-label" data-i18n="portfolio.mkt.heroStatGrowth">Croissance XHS</span>
-      </div>
-      <div class="pf-hero-stat-block">
-        <span class="pf-hero-stat-num">60+</span>
-        <span class="pf-hero-stat-label" data-i18n="portfolio.mkt.heroStatPart">Participants AIESEC</span>
-      </div>
-    </div>
   </section>
 
-  <!-- ── Tableau des résultats ───────────────────────── -->
-  <section class="pf-board" aria-labelledby="board-title">
-    <p class="pf-board-eyebrow" id="board-title" data-i18n="portfolio.mkt.board.title">Résultats des Projets</p>
-    <p class="pf-board-intro" data-i18n="portfolio.mkt.board.intro">Chaque fiche donne le résultat obtenu avant le nom du projet. Cliquez sur une fiche pour ouvrir l'étude de cas correspondante.</p>
-    <ol class="pf-board-list">
-
-      <li class="pf-board-card" data-target="engoo-dashboard" data-preview="assets/Excel_Engoo/Engoo Dashboard_FR.webp" tabindex="0" role="link">
-        <div class="pf-board-head">
-          <span class="pf-board-num">01</span>
-          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p1Cat">Dashboard · Social Analytics</span>
-        </div>
-        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</h3>
-        <p class="pf-board-figure">
-          <span class="pf-board-val">+93.3%</span>
-          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p1Lbl">Vues sur 3 mois</span>
-        </p>
-        <ul class="pf-board-bars">
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p1Bar1">Vues</span>
-              <span class="pf-board-bar-val">+93.3%</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:93.3"></span></span>
-          </li>
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p1Bar2">Interactions</span>
-              <span class="pf-board-bar-val">+89.1%</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:89.1"></span></span>
-          </li>
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p1Bar3">Abonnés</span>
-              <span class="pf-board-bar-val">+69.7%</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:69.7"></span></span>
-          </li>
-        </ul>
-        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p1Scale">Croissance sur 3 mois, jauges graduées de 0 à 100%.</p>
-      </li>
-
-      <li class="pf-board-card" data-target="bcg-beaute" tabindex="0" role="link">
-        <div class="pf-board-head">
-          <span class="pf-board-num">02</span>
-          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p2Cat">BCG · Beauty Analytics</span>
-        </div>
-        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</h3>
-        <p class="pf-board-figure">
-          <span class="pf-board-val">8 495</span>
-          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p2Lbl">Produits analysés</span>
-        </p>
-        <ul class="pf-board-bars">
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p2Bar1">Note moyenne du catalogue</span>
-              <span class="pf-board-bar-val">4,23/5</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:84.6"></span></span>
-          </li>
-        </ul>
-        <ul class="pf-board-chips">
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p2Chip1">Avis clients traités</span>
-            <span class="pf-board-chip-val">32K+</span>
-          </li>
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p2Chip2">Lecture du portefeuille</span>
-            <span class="pf-board-chip-val" data-i18n="portfolio.mkt.board.p2Chip2Val">Matrice BCG</span>
-          </li>
-        </ul>
-        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p2Scale">Jauge graduée de 0 à 5, échelle de notation Sephora.</p>
-      </li>
-
-      <li class="pf-board-card" data-target="maison-beaute" tabindex="0" role="link">
-        <div class="pf-board-head">
-          <span class="pf-board-num">03</span>
-          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p3Cat">Segmentation · ROI</span>
-        </div>
-        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</h3>
-        <p class="pf-board-figure">
-          <span class="pf-board-val">2 240</span>
-          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p3Lbl">Clients analysés</span>
-        </p>
-        <ul class="pf-board-bars">
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p3Bar1">Conversion, campagne Response</span>
-              <span class="pf-board-bar-val">14,9%</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:14.9"></span></span>
-          </li>
-        </ul>
-        <ul class="pf-board-chips">
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p3Chip1">Écart de dépense Mass vs Luxury</span>
-            <span class="pf-board-chip-val">18x</span>
-          </li>
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p3Chip2">Valeur du client engagé</span>
-            <span class="pf-board-chip-val">3x</span>
-          </li>
-        </ul>
-        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p3Scale">Jauge graduée de 0 à 100% de la base ciblée.</p>
-      </li>
-
-      <li class="pf-board-card" data-target="engoo-weekly" data-preview="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" tabindex="0" role="link">
-        <div class="pf-board-head">
-          <span class="pf-board-num">04</span>
-          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p4Cat">Reporting · Data Storytelling</span>
-        </div>
-        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</h3>
-        <p class="pf-board-figure">
-          <span class="pf-board-val">7</span>
-          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p4Lbl">Diapositives par semaine</span>
-        </p>
-        <ul class="pf-board-chips">
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p4Chip1">Langues de diffusion</span>
-            <span class="pf-board-chip-val">FR / EN</span>
-          </li>
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p4Chip2">Cadence de production</span>
-            <span class="pf-board-chip-val" data-i18n="portfolio.mkt.board.p4Chip2Val">Hebdomadaire</span>
-          </li>
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p4Chip3">Destinataire</span>
-            <span class="pf-board-chip-val" data-i18n="portfolio.mkt.board.p4Chip3Val">Équipe de direction</span>
-          </li>
-        </ul>
-        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p4Scale">Format du livrable remis chaque semaine pendant le stage.</p>
-      </li>
-
-      <li class="pf-board-card" data-target="aiesec-yolo" data-preview="assets/yolo-camp-tote-bag.webp" tabindex="0" role="link">
-        <div class="pf-board-head">
-          <span class="pf-board-num">05</span>
-          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique</span>
-        </div>
-        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</h3>
-        <p class="pf-board-figure">
-          <span class="pf-board-val">+53.7%</span>
-          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p5Lbl">Objectif budgétaire dépassé</span>
-        </p>
-        <ul class="pf-board-chips">
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p5Chip1">Participants accueillis</span>
-            <span class="pf-board-chip-val">60+</span>
-          </li>
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p5Chip2">Volontaires recrutés</span>
-            <span class="pf-board-chip-val">15</span>
-          </li>
-          <li class="pf-board-chip">
-            <span data-i18n="portfolio.mkt.board.p5Chip3">Équipe marketing pilotée</span>
-            <span class="pf-board-chip-val">4</span>
-          </li>
-        </ul>
-        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p5Scale">Résultats de l'édition 2025 du camp, AIESEC in NCCU.</p>
-      </li>
-
-      <li class="pf-board-card" data-target="guzheng-facebook" data-preview="assets/guzheng-club-recruitment-poster.webp" tabindex="0" role="link">
-        <div class="pf-board-head">
-          <span class="pf-board-num">06</span>
-          <span class="pf-board-cat" data-i18n="portfolio.mkt.board.p6Cat">Community Management</span>
-        </div>
-        <h3 class="pf-board-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</h3>
-        <p class="pf-board-figure">
-          <span class="pf-board-val">100 %</span>
-          <span class="pf-board-lbl" data-i18n="portfolio.mkt.board.p6Lbl">Places pourvues à chaque recrutement</span>
-        </p>
-        <ul class="pf-board-bars">
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p6Bar1">Places pourvues</span>
-              <span class="pf-board-bar-val">100 %</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:100"></span></span>
-          </li>
-          <li>
-            <span class="pf-board-bar-head">
-              <span data-i18n="portfolio.mkt.board.p6Bar2">Fidélisation des membres</span>
-              <span class="pf-board-bar-val">80 %</span>
-            </span>
-            <span class="pf-board-track"><span class="pf-board-fill" style="--v:80"></span></span>
-          </li>
-        </ul>
-        <p class="pf-board-scale" data-i18n="portfolio.mkt.board.p6Scale">Jauges graduées de 0 à 100% de l'effectif du club.</p>
-      </li>
-
-    </ol>
-  </section>
-
-  <figure class="pf-preview" aria-hidden="true">
-    <img src="" alt="">
-  </figure>
-
+  <!-- ── Catalogue : une fiche par projet ───────────── -->
+  <section class="pf-cat" id="projets" aria-label="Projets">
   <!-- ── Filter bar ──────────────────────────────────── -->
-  <div class="pf-filters">
-    <button class="filter-btn is-active" data-filter="all" data-i18n="portfolio.mkt.filterAll">Tous</button>
-    <button class="filter-btn" data-filter="dashboard" data-i18n="portfolio.mkt.filterDashboard">Dashboard</button>
-    <button class="filter-btn" data-filter="campagne" data-i18n="portfolio.mkt.filterCampagne">Campagnes</button>
-    <button class="filter-btn" data-filter="reporting" data-i18n="portfolio.mkt.filterReporting">Reporting</button>
-    <button class="filter-btn" data-filter="community" data-i18n="portfolio.mkt.filterCommunity">Communauté</button>
-    <button class="filter-btn" data-filter="analyse">Analyse des Données</button>
-  </div>
+    <div class="pf-filters" role="group">
+      <button class="filter-btn is-active" data-filter="all" data-i18n="portfolio.mkt.filterAll">Tous</button>
+      <button class="filter-btn" data-filter="dashboard" data-i18n="portfolio.mkt.filterDashboard">Dashboard</button>
+      <button class="filter-btn" data-filter="campagne" data-i18n="portfolio.mkt.filterCampagne">Campagnes</button>
+      <button class="filter-btn" data-filter="reporting" data-i18n="portfolio.mkt.filterReporting">Reporting</button>
+      <button class="filter-btn" data-filter="community" data-i18n="portfolio.mkt.filterCommunity">Communauté</button>
+      <button class="filter-btn" data-filter="analyse">Analyse des Données</button>
+    </div>
+    <ul class="pf-cat-grid">
+      <li><a class="pf-cat-card" href="#engoo-dashboard" data-target="engoo-dashboard" data-cat="dashboard">
+        <span class="pf-cat-cover"><img src="assets/Excel_Engoo/Engoo Dashboard_FR.webp" alt="" loading="eager"></span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">01</span> · <span data-i18n="portfolio.mkt.board.p1Cat">Dashboard · Social Analytics</span></span>
+        <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span>
+        <span class="pf-cat-fig"><span class="pf-cat-val">+93.3%</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p1Lbl">Vues sur 3 mois</span></span>
+      </a></li>
+      <li><a class="pf-cat-card" href="#bcg-beaute" data-target="bcg-beaute" data-cat="analyse">
+        <span class="pf-cat-cover is-type">8 495</span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">02</span> · <span data-i18n="portfolio.mkt.board.p2Cat">BCG · Beauty Analytics</span></span>
+        <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span>
+        <span class="pf-cat-fig"><span class="pf-cat-val">8 495</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p2Lbl">Produits analysés</span></span>
+      </a></li>
+      <li><a class="pf-cat-card" href="#maison-beaute" data-target="maison-beaute" data-cat="analyse">
+        <span class="pf-cat-cover is-type">2 240</span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">03</span> · <span data-i18n="portfolio.mkt.board.p3Cat">Segmentation · ROI</span></span>
+        <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span>
+        <span class="pf-cat-fig"><span class="pf-cat-val">2 240</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p3Lbl">Clients analysés</span></span>
+      </a></li>
+      <li><a class="pf-cat-card" href="#engoo-weekly" data-target="engoo-weekly" data-cat="reporting">
+        <span class="pf-cat-cover"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" alt="" loading="lazy"></span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">04</span> · <span data-i18n="portfolio.mkt.board.p4Cat">Reporting · Data Storytelling</span></span>
+        <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span>
+        <span class="pf-cat-fig"><span class="pf-cat-val">7</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p4Lbl">Diapositives par semaine</span></span>
+      </a></li>
+      <li><a class="pf-cat-card" href="#aiesec-yolo" data-target="aiesec-yolo" data-cat="campagne">
+        <span class="pf-cat-cover"><img src="assets/yolo-camp-main-visual-en.webp" alt="" loading="lazy"></span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">05</span> · <span data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique</span></span>
+        <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span>
+        <span class="pf-cat-fig"><span class="pf-cat-val">+53.7%</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p5Lbl">Objectif budgétaire dépassé</span></span>
+      </a></li>
+      <li><a class="pf-cat-card" href="#guzheng-facebook" data-target="guzheng-facebook" data-cat="community">
+        <span class="pf-cat-cover"><img src="assets/guzheng-club-recruitment-poster.webp" alt="" loading="lazy"></span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">06</span> · <span data-i18n="portfolio.mkt.board.p6Cat">Community Management</span></span>
+        <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span>
+        <span class="pf-cat-fig"><span class="pf-cat-val">100 %</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p6Lbl">Places pourvues à chaque recrutement</span></span>
+      </a></li>
+    </ul>
+  </section>
 
-  <!-- ── Projects ────────────────────────────────────── -->
+  <!-- ── Lecture : un projet à la fois ──────────────── -->
+  <div class="pf-reader" id="lecture">
+    <div class="pf-crumb">
+      <a class="pf-crumb-back" href="#projets" data-i18n="portfolio.mkt.board.readAll">Tous les projets</a>
+      <span class="pf-crumb-sep" aria-hidden="true">/</span>
+      <span class="pf-crumb-title"></span>
+      <span class="pf-crumb-count"></span>
+    </div>
+    <nav class="pf-rail" aria-label="Projets">
+      <p class="pf-rail-lbl" data-i18n="portfolio.mkt.board.readProjects">Projets</p>
+      <a class="pf-rail-item" href="#engoo-dashboard" data-target="engoo-dashboard"><span class="pf-rail-thumb"><img src="assets/Excel_Engoo/Engoo Dashboard_FR.webp" alt="" loading="lazy"></span><span class="pf-rail-n">01</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></a>
+      <a class="pf-rail-item" href="#bcg-beaute" data-target="bcg-beaute"><span class="pf-rail-thumb"><span class="is-type">8 495</span></span><span class="pf-rail-n">02</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></a>
+      <a class="pf-rail-item" href="#maison-beaute" data-target="maison-beaute"><span class="pf-rail-thumb"><span class="is-type">2 240</span></span><span class="pf-rail-n">03</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></a>
+      <a class="pf-rail-item" href="#engoo-weekly" data-target="engoo-weekly"><span class="pf-rail-thumb"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" alt="" loading="lazy"></span><span class="pf-rail-n">04</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></a>
+      <a class="pf-rail-item" href="#aiesec-yolo" data-target="aiesec-yolo"><span class="pf-rail-thumb"><img src="assets/yolo-camp-main-visual-en.webp" alt="" loading="lazy"></span><span class="pf-rail-n">05</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span></a>
+      <a class="pf-rail-item" href="#guzheng-facebook" data-target="guzheng-facebook"><span class="pf-rail-thumb"><img src="assets/guzheng-club-recruitment-poster.webp" alt="" loading="lazy"></span><span class="pf-rail-n">06</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></a>
+    </nav>
+
   <main class="pf-grid">
+<!-- ── 01 · Engoo Dashboard (featured) ──────────── -->
+<article class="pf-case" data-cat="dashboard" id="engoo-dashboard">
 
-    <!-- ── 01 · Engoo Dashboard (featured) ──────────── -->
-    <article class="pf-card pf-card--featured" data-cat="dashboard" id="engoo-dashboard">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.engoo.num">Étude de cas complète</div>
-      <span class="pf-card-tag" data-i18n="portfolio.mkt.engoo.tag">Dashboard Excel - Social Analytics - A/B Testing</span>
-      <h2 class="pf-card-title">
-        Engoo, DMM.com Group —<br>Dashboard de Performance des Réseaux Sociaux (Xiaohongshu)
-      </h2>
 
-      <div class="pf-star">
-        <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.sitLbl">Situation - Contexte &amp; Défi</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Engoo (groupe DMM.com) cible les apprenants sinophones via <strong>Xiaohongshu (RedNote)</strong>, réseau de 300 M+ utilisateurs actifs, à mi-chemin entre Instagram et Pinterest. À mon arrivée : présence sporadique, aucun outil de suivi structuré, décisions éditoriales fondées sur l'intuition.<br><strong>Le défi :</strong> mesurer objectivement quel contenu génère de l'engagement, sans budget analytics tiers (XHS n'expose pas d'API publique).</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Engoo (DMM.com Group) targets Mandarin-speaking learners via <strong>Xiaohongshu (RedNote)</strong>, a 300M+ user platform bridging Instagram and Pinterest. Upon joining: sporadic posting, no structured tracking tool, editorial decisions driven by intuition.<br><strong>The challenge:</strong> objectively measure which content drives engagement, without a third-party analytics budget (XHS exposes no public API).</p>
-        </div>
-        <div data-lang-show="zh">
-          <p class="pf-star-txt">Engoo（DMM.com 集團）透過<strong>小紅書（300M+ 用戶）</strong>觸及中文學習者。我加入時，帳號發文不穩定、缺乏追蹤工具，所有內容決策仰賴直覺。<br><strong>挑戰：</strong>在無第三方分析工具預算的情況下（小紅書不開放 API），以數據客觀評估哪類內容最能驅動互動。</p>
-        </div>
-      </div>
 
-      <div class="pf-star">
-        <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.actLbl">Action - Construction du dashboard</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Conception d'un <strong>classeur Excel à 3 feuilles</strong> entièrement autonome :</p>
-          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
-            <li><strong>Données brutes :</strong> 12 métriques quotidiennes : vues, likes, sauvegardes, partages, commentaires, abonnés, taux d'engagement, CTR, taux de complétion vidéo, portée.</li>
-            <li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI, graphiques de comparaison des formats, moyennes mobiles. Zéro mise à jour manuelle.</li>
-            <li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour comparer n'importe quelles deux périodes : calcul automatique des écarts en % pour chaque KPI.</li>
-          </ul>
-          <p class="pf-star-txt" style="margin-top:0.5rem;">Mise en forme conditionnelle pour les jours outliers ; formules DÉCALER+INDIRECT pour les fenêtres glissantes.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Designed a self-contained <strong>3-sheet Excel workbook</strong>:</p>
-          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
-            <li><strong>Raw data:</strong> daily entry of 12 metrics: views, likes, saves, shares, comments, followers, engagement rate, CTR, video completion rate, reach.</li>
-            <li><strong>Dynamic dashboard (PivotTables):</strong> KPI time-series curves, content format comparison charts, rolling averages. Zero manual updates.</li>
-            <li><strong>Dynamic A/B module:</strong> two drop-down selectors to compare any two periods: automatic % variance calculation per KPI.</li>
-          </ul>
-          <p class="pf-star-txt" style="margin-top:0.5rem;">Conditional formatting to flag outlier days; OFFSET+INDIRECT formulas for sliding time windows.</p>
-        </div>
-        <div data-lang-show="zh">
-          <p class="pf-star-txt">設計了一套完全自主運作的 <strong>Excel 三表工作流</strong>：</p>
-          <ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
-            <li><strong>原始數據表：</strong>每日輸入 12 項指標：瀏覽次數、按讚、收藏、分享、留言、粉絲數、互動率、CTR、影片完看率、觸及人數。</li>
-            <li><strong>動態儀表板（樞紐分析表）：</strong>各 KPI 時間趨勢圖、內容格式比較圖、滾動平均值，零手動更新。</li>
-            <li><strong>動態 A/B 比較模組：</strong>兩個下拉選單自由選取任意時段，自動計算各 KPI 變化百分比。</li>
-          </ul>
-          <p class="pf-star-txt" style="margin-top:0.5rem;">條件式格式標記異常日；OFFSET+INDIRECT 公式實現滑動窗口分析。</p>
-        </div>
-      </div>
 
-      <!-- Screenshot -->
-      <div style="margin:1.25rem 0;border-radius:8px;overflow:hidden;">
-        <a href="assets/Excel_Engoo/Engoo Dashboard_FR.webp"
-           data-i18n-href="experience.engoo.screenshot1"
-           target="_blank" rel="noopener noreferrer"
-           style="display:block;">
-          <img src="assets/Excel_Engoo/Engoo Dashboard_FR.webp"
-               data-i18n-src="experience.engoo.screenshot1"
-               alt="Dashboard KPIs – Engoo XHS"
-               loading="lazy"
-               style="width:100%;border-radius:8px;display:block;cursor:pointer;transition:transform 0.4s ease;"
-               onmouseover="this.style.transform='scale(1.04)'"
-               onmouseout="this.style.transform='scale(1)'">
-        </a>
-      </div>
-      <p style="font-size:0.72rem;color:var(--mk-muted);margin:0 0 1.25rem;line-height:1.5;opacity:0.8;">
-        <span data-lang-show="fr">⚠ Les données du 01/10/2024 au 13/02/2025 sont réelles. Les données postérieures au 13/02/2025 sont simulées pour illustrer les fonctionnalités du dashboard.</span>
-        <span data-lang-show="en">⚠ Data from 01/10/2024 to 13/02/2025 is real. Data after 13/02/2025 is simulated to demonstrate the dashboard's features.</span>
-        <span data-lang-show="zh">⚠ 2024/10/01 至 2025/02/13 的數據為真實數據，2025/02/13 之後的數據為模擬數據，僅用於展示儀表板功能。</span>
-      </p>
 
-      <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.resLbl">Résultats - Impact sur 3 mois</div>
 
-        <!-- Stat chips — language-neutral numbers -->
-        <div class="pf-res-stats pf-cordes">
-          <div class="pf-res-stat" style="--val:93.3">
-            <span class="pf-stat-val">+93.3%</span>
-            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resVues">Vues</span>
-          </div>
-          <div class="pf-res-stat" style="--val:89.1">
-            <span class="pf-stat-val">+89.1%</span>
-            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resInter">Interactions</span>
-          </div>
-          <div class="pf-res-stat" style="--val:69.7">
-            <span class="pf-stat-val">+69.7%</span>
-            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resAbonnes">Abonnés</span>
-          </div>
-          <div class="pf-res-stat is-baisse" style="--val:30">
-            <span class="pf-stat-val">−30%</span>
-            <span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resTime">Temps reporting</span>
-          </div>
-        </div>
 
-        <div data-lang-show="fr">
-          <p class="pf-star-txt" style="margin-top:0.75rem;">Résultats documentés et mesurés via le dashboard. Le module A/B a validé <strong>+34% CTR et +28% d'engagement</strong> après pivot vers un format tutoriel court + visuel épuré. Le dashboard a également réduit de <strong>30% le temps quotidien</strong> consacré à la consolidation des données et à la production de graphiques, devenant l'outil de décision hebdomadaire de l'équipe.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt" style="margin-top:0.75rem;">All results measured and documented through the dashboard. The A/B module validated <strong>+34% CTR and +28% engagement</strong> after pivoting to a short-tutorial + clean-visual format. The dashboard also cut daily data processing and chart-building time by <strong>30%</strong>, becoming the team's weekly editorial decision tool.</p>
-        </div>
-        <div data-lang-show="zh">
-          <p class="pf-star-txt" style="margin-top:0.75rem;">所有數據透過儀表板量化記錄。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 <strong>34%</strong>、互動率提升 <strong>28%</strong>。儀表板同時將每日數據整理與製圖時間縮短 <strong>30%</strong>，成為團隊每週決策的核心工具。</p>
-        </div>
-      </div>
 
-      <div class="pf-star pf-star--insight">
-        <div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">L'analyse des comportements d'engagement révèle que le taux de sauvegarde constitue un indicateur fiable de la valeur perçue du contenu : les publications éducatives génèrent deux à trois fois plus de sauvegardes que les contenus promotionnels, ce qui oriente directement la hiérarchisation des sujets éditoriaux.</p>
-          <p class="pf-star-txt">Par ailleurs, la semaine affichant la plus forte progression de vues (+40 %) coïncide avec l'adoption d'une charte visuelle cohérente plutôt qu'avec une augmentation de la fréquence de publication, confirmant que la cohérence de la marque exerce un effet supérieur à la cadence.</p>
-          <p class="pf-star-txt">Enfin, le protocole A/B a mis en évidence que le format constitue une variable indépendante du sujet : la combinaison tutoriel court et visuel épuré a produit une hausse de +34 % du CTR sur des contenus thématiquement identiques, une relation causale impossible à établir sans dispositif expérimental rigoureux.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Analysis of engagement behaviours indicates that the save rate is a reliable proxy for perceived content value: educational posts generate two to three times more saves than promotional content, providing a directly actionable signal for prioritising editorial topics.</p>
-          <p class="pf-star-txt">Furthermore, the week recording the strongest growth in views (+40%) coincided with the adoption of a consistent visual identity rather than an increase in posting frequency, confirming that brand coherence has a greater effect than publication cadence.</p>
-          <p class="pf-star-txt">Finally, the A/B protocol demonstrated that format operates as a variable independent of topic: the short-tutorial combined with a clean visual produced a +34% increase in CTR across thematically identical content, a causal relationship that could only be established through formal experimental design.</p>
-        </div>
-        <div data-lang-show="zh">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>教育型內容作為意圖指標：</strong>收藏數（遠高於推廣貼文 2 – 3 倍）反映小紅書用戶對資訊價值的高度重視，可直接指導選題優先順序。</li>
-            <li><strong>品牌一致性優於發文頻率：</strong>成長加速最顯著的一週（+40% 瀏覽）對應視覺識別系統的建立，而非發文頻率的提升。</li>
-            <li><strong>格式是獨立於主題的變數：</strong>「短教程 + 簡潔視覺」轉型在相同主題下帶來 CTR +34%，唯有 A/B 測試才能正式驗證此因果關係。</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="pf-stats">
-        <div><span class="pf-stat-val">12</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statMet">Métriques / jour</span></div>
-        <div><span class="pf-stat-val">+93.3%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statVues">Vues · 3 mois</span></div>
-        <div><span class="pf-stat-val">+89.1%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statInter">Interactions</span></div>
-        <div><span class="pf-stat-val">A/B</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.statAb">Module A/B dynamique</span></div>
-      </div>
 
-      <div class="pf-btns">
-        <!--
+
+
+
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">01</span> · <span data-i18n="portfolio.mkt.board.p1Cat">Dashboard · Social Analytics</span></p><h2 class="pf-card-title">
+        Engoo, DMM.com Group —<br/>Dashboard de Performance des Réseaux Sociaux (Xiaohongshu)
+      </h2><div class="pf-res-stats pf-cordes pf-case-figs">
+<div class="pf-res-stat" style="--val:93.3">
+<span class="pf-stat-val">+93.3%</span>
+<span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resVues">Vues</span>
+</div>
+<div class="pf-res-stat" style="--val:89.1">
+<span class="pf-stat-val">+89.1%</span>
+<span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resInter">Interactions</span>
+</div>
+<div class="pf-res-stat" style="--val:69.7">
+<span class="pf-stat-val">+69.7%</span>
+<span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resAbonnes">Abonnés</span>
+</div>
+<div class="pf-res-stat is-baisse" style="--val:30">
+<span class="pf-stat-val">−30%</span>
+<span class="pf-stat-lbl" data-i18n="portfolio.mkt.engoo.resTime">Temps reporting</span>
+</div>
+</div><div class="pf-tags">
+<span class="pf-tag">Excel</span>
+<span class="pf-tag">Dashboard</span>
+<span class="pf-tag">Pivot Tables</span>
+<span class="pf-tag">A/B Testing</span>
+<span class="pf-tag">KPI Tracking</span>
+<span class="pf-tag">Xiaohongshu</span>
+<span class="pf-tag">Data Storytelling</span>
+</div><div class="pf-btns">
+<!--
         <a href="assets/250508_作品集_社群經營與設計_c.pdf"
            class="pf-btn pf-btn--primary" target="_blank" rel="noopener noreferrer"
            data-i18n="portfolio.viewPdf">Voir le portfolio créatif (PDF)</a>
            -->
-        <!-- Lien de telechargement retire : le fichier assets/Engoo_XHS Dashboard_*.xlsx
+<!-- Lien de telechargement retire : le fichier assets/Engoo_XHS Dashboard_*.xlsx
              est absent du depot. Deposer le fichier puis retablir ce bouton. -->
-        <a href="portfolio-data.html#xhs-dashboard"
-           class="pf-btn pf-btn--ghost">Angle Data : architecture et méthodologie</a>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">Excel</span>
-        <span class="pf-tag">Dashboard</span>
-        <span class="pf-tag">Pivot Tables</span>
-        <span class="pf-tag">A/B Testing</span>
-        <span class="pf-tag">KPI Tracking</span>
-        <span class="pf-tag">Xiaohongshu</span>
-        <span class="pf-tag">Data Storytelling</span>
-      </div>
-    </article>
+<a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-dashboard">Angle Data : architecture et méthodologie</a>
+</div></aside><div class="pf-case-main"><!-- Screenshot --><div style="margin:1.25rem 0;border-radius:8px;overflow:hidden;">
+<a data-i18n-href="experience.engoo.screenshot1" href="assets/Excel_Engoo/Engoo Dashboard_FR.webp" rel="noopener noreferrer" style="display:block;" target="_blank">
+<img alt="Dashboard KPIs – Engoo XHS" data-i18n-src="experience.engoo.screenshot1" loading="lazy" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.04)'" src="assets/Excel_Engoo/Engoo Dashboard_FR.webp" style="width:100%;border-radius:8px;display:block;cursor:pointer;transition:transform 0.4s ease;"/>
+</a>
+</div><p style="font-size:0.72rem;color:var(--mk-muted);margin:0 0 1.25rem;line-height:1.5;opacity:0.8;">
+<span data-lang-show="fr">⚠ Les données du 01/10/2024 au 13/02/2025 sont réelles. Les données postérieures au 13/02/2025 sont simulées pour illustrer les fonctionnalités du dashboard.</span>
+<span data-lang-show="en">⚠ Data from 01/10/2024 to 13/02/2025 is real. Data after 13/02/2025 is simulated to demonstrate the dashboard's features.</span>
+<span data-lang-show="zh">⚠ 2024/10/01 至 2025/02/13 的數據為真實數據，2025/02/13 之後的數據為模擬數據，僅用於展示儀表板功能。</span>
+</p><div class="pf-case-lead"><p data-lang-show="fr">Le compte Xiaohongshu d'Engoo n'avait aucun outil de suivi : j'ai construit un dashboard Excel de 12 métriques quotidiennes avec un module de comparaison A/B. Il a validé le passage au format tutoriel court (+34% de CTR) et réduit de 30% le temps de reporting quotidien.</p><p data-lang-show="en">Engoo's Xiaohongshu account had no tracking tool: I built an Excel dashboard of 12 daily metrics with an A/B comparison module. It validated the switch to a short-tutorial format (+34% CTR) and cut daily reporting time by 30%.</p><p data-lang-show="zh">Engoo 的小紅書帳號原本沒有任何追蹤工具：我建立了每日 12 項指標的 Excel 儀表板與 A/B 比較模組，驗證了短教程格式（CTR +34%），並將每日報表時間縮短 30%。</p></div><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><div class="pf-star">
+<div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.sitLbl">Situation - Contexte &amp; Défi</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">Engoo (groupe DMM.com) cible les apprenants sinophones via <strong>Xiaohongshu (RedNote)</strong>, réseau de 300 M+ utilisateurs actifs, à mi-chemin entre Instagram et Pinterest. À mon arrivée : présence sporadique, aucun outil de suivi structuré, décisions éditoriales fondées sur l'intuition.<br/><strong>Le défi :</strong> mesurer objectivement quel contenu génère de l'engagement, sans budget analytics tiers (XHS n'expose pas d'API publique).</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">Engoo (DMM.com Group) targets Mandarin-speaking learners via <strong>Xiaohongshu (RedNote)</strong>, a 300M+ user platform bridging Instagram and Pinterest. Upon joining: sporadic posting, no structured tracking tool, editorial decisions driven by intuition.<br/><strong>The challenge:</strong> objectively measure which content drives engagement, without a third-party analytics budget (XHS exposes no public API).</p>
+</div>
+<div data-lang-show="zh">
+<p class="pf-star-txt">Engoo（DMM.com 集團）透過<strong>小紅書（300M+ 用戶）</strong>觸及中文學習者。我加入時，帳號發文不穩定、缺乏追蹤工具，所有內容決策仰賴直覺。<br/><strong>挑戰：</strong>在無第三方分析工具預算的情況下（小紅書不開放 API），以數據客觀評估哪類內容最能驅動互動。</p>
+</div>
+</div><div class="pf-star">
+<div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.actLbl">Action - Construction du dashboard</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">Conception d'un <strong>classeur Excel à 3 feuilles</strong> entièrement autonome :</p>
+<ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+<li><strong>Données brutes :</strong> 12 métriques quotidiennes : vues, likes, sauvegardes, partages, commentaires, abonnés, taux d'engagement, CTR, taux de complétion vidéo, portée.</li>
+<li><strong>Dashboard dynamique (TCD) :</strong> courbes temporelles par KPI, graphiques de comparaison des formats, moyennes mobiles. Zéro mise à jour manuelle.</li>
+<li><strong>Module A/B dynamique :</strong> deux listes déroulantes pour comparer n'importe quelles deux périodes : calcul automatique des écarts en % pour chaque KPI.</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.5rem;">Mise en forme conditionnelle pour les jours outliers ; formules DÉCALER+INDIRECT pour les fenêtres glissantes.</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">Designed a self-contained <strong>3-sheet Excel workbook</strong>:</p>
+<ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+<li><strong>Raw data:</strong> daily entry of 12 metrics: views, likes, saves, shares, comments, followers, engagement rate, CTR, video completion rate, reach.</li>
+<li><strong>Dynamic dashboard (PivotTables):</strong> KPI time-series curves, content format comparison charts, rolling averages. Zero manual updates.</li>
+<li><strong>Dynamic A/B module:</strong> two drop-down selectors to compare any two periods: automatic % variance calculation per KPI.</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.5rem;">Conditional formatting to flag outlier days; OFFSET+INDIRECT formulas for sliding time windows.</p>
+</div>
+<div data-lang-show="zh">
+<p class="pf-star-txt">設計了一套完全自主運作的 <strong>Excel 三表工作流</strong>：</p>
+<ul class="pf-star-txt" style="margin:0.5rem 0 0;padding-left:1.2rem;">
+<li><strong>原始數據表：</strong>每日輸入 12 項指標：瀏覽次數、按讚、收藏、分享、留言、粉絲數、互動率、CTR、影片完看率、觸及人數。</li>
+<li><strong>動態儀表板（樞紐分析表）：</strong>各 KPI 時間趨勢圖、內容格式比較圖、滾動平均值，零手動更新。</li>
+<li><strong>動態 A/B 比較模組：</strong>兩個下拉選單自由選取任意時段，自動計算各 KPI 變化百分比。</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.5rem;">條件式格式標記異常日；OFFSET+INDIRECT 公式實現滑動窗口分析。</p>
+</div>
+</div><div class="pf-star pf-star--result">
+<div class="pf-star-lbl" data-i18n="portfolio.mkt.engoo.resLbl">Résultats - Impact sur 3 mois</div>
+<!-- Stat chips — language-neutral numbers -->
 
-    <article class="pf-card pf-card--featured" data-cat="analyse" id="bcg-beaute">
-      <div class="pf-card-num">Analyse Produit</div>
-      <span class="pf-card-tag">BCG Matrix · Product Portfolio · Beauty Analytics</span>
-      <h2 class="pf-card-title">
-        <span data-lang-show="fr">Sephora — Intelligence Produit &amp; Stratégie de Portefeuille Beauté</span>
-        <span data-lang-show="en">Sephora — Product Intelligence &amp; Beauty Portfolio Strategy</span>
-      </h2>
+<div data-lang-show="fr">
+<p class="pf-star-txt" style="margin-top:0.75rem;">Résultats documentés et mesurés via le dashboard. Le module A/B a validé <strong>+34% CTR et +28% d'engagement</strong> après pivot vers un format tutoriel court + visuel épuré. Le dashboard a également réduit de <strong>30% le temps quotidien</strong> consacré à la consolidation des données et à la production de graphiques, devenant l'outil de décision hebdomadaire de l'équipe.</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt" style="margin-top:0.75rem;">All results measured and documented through the dashboard. The A/B module validated <strong>+34% CTR and +28% engagement</strong> after pivoting to a short-tutorial + clean-visual format. The dashboard also cut daily data processing and chart-building time by <strong>30%</strong>, becoming the team's weekly editorial decision tool.</p>
+</div>
+<div data-lang-show="zh">
+<p class="pf-star-txt" style="margin-top:0.75rem;">所有數據透過儀表板量化記錄。A/B 模組驗證：轉向「短教程 + 簡潔視覺」格式後，CTR 提升 <strong>34%</strong>、互動率提升 <strong>28%</strong>。儀表板同時將每日數據整理與製圖時間縮短 <strong>30%</strong>，成為團隊每週決策的核心工具。</p>
+</div>
+</div><div class="pf-star pf-star--insight">
+<div class="pf-star-lbl" data-i18n="portfolio.insightLbl">Insights métier</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">L'analyse des comportements d'engagement révèle que le taux de sauvegarde constitue un indicateur fiable de la valeur perçue du contenu : les publications éducatives génèrent deux à trois fois plus de sauvegardes que les contenus promotionnels, ce qui oriente directement la hiérarchisation des sujets éditoriaux.</p>
+<p class="pf-star-txt">Par ailleurs, la semaine affichant la plus forte progression de vues (+40 %) coïncide avec l'adoption d'une charte visuelle cohérente plutôt qu'avec une augmentation de la fréquence de publication, confirmant que la cohérence de la marque exerce un effet supérieur à la cadence.</p>
+<p class="pf-star-txt">Enfin, le protocole A/B a mis en évidence que le format constitue une variable indépendante du sujet : la combinaison tutoriel court et visuel épuré a produit une hausse de +34 % du CTR sur des contenus thématiquement identiques, une relation causale impossible à établir sans dispositif expérimental rigoureux.</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">Analysis of engagement behaviours indicates that the save rate is a reliable proxy for perceived content value: educational posts generate two to three times more saves than promotional content, providing a directly actionable signal for prioritising editorial topics.</p>
+<p class="pf-star-txt">Furthermore, the week recording the strongest growth in views (+40%) coincided with the adoption of a consistent visual identity rather than an increase in posting frequency, confirming that brand coherence has a greater effect than publication cadence.</p>
+<p class="pf-star-txt">Finally, the A/B protocol demonstrated that format operates as a variable independent of topic: the short-tutorial combined with a clean visual produced a +34% increase in CTR across thematically identical content, a causal relationship that could only be established through formal experimental design.</p>
+</div>
+<div data-lang-show="zh">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>教育型內容作為意圖指標：</strong>收藏數（遠高於推廣貼文 2 – 3 倍）反映小紅書用戶對資訊價值的高度重視，可直接指導選題優先順序。</li>
+<li><strong>品牌一致性優於發文頻率：</strong>成長加速最顯著的一週（+40% 瀏覽）對應視覺識別系統的建立，而非發文頻率的提升。</li>
+<li><strong>格式是獨立於主題的變數：</strong>「短教程 + 簡潔視覺」轉型在相同主題下帶來 CTR +34%，唯有 A/B 測試才能正式驗證此因果關係。</li>
+</ul>
+</div>
+</div></details></div></div><a class="pf-next" data-target="bcg-beaute" href="#bcg-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></span><span class="pf-next-cover is-type">8 495</span></a></article>
+<article class="pf-case" data-cat="analyse" id="bcg-beaute">
 
-      <div class="pf-star">
-        <div class="pf-star-lbl">Contexte & Problématique</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Sephora propose un catalogue de <strong>8 495 produits</strong> couvrant Skincare, Fragrance, Makeup, Hair Care et Bath &amp; Body. Avec 32 000+ avis clients, un prix moyen de <strong>51,70 $</strong> et une note moyenne de <strong>4,23/5</strong>, comment distinguer les produits à défendre des SKUs à risque ? <strong>Objectif :</strong> appliquer une matrice BCG au portefeuille beauté pour orienter les décisions marketing et commerciales.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Sephora's catalog spans <strong>8,495 products</strong> across Skincare, Fragrance, Makeup, Hair Care, and Bath &amp; Body. With 32,000+ customer reviews, an average price of <strong>$51.70</strong>, and an average rating of <strong>4.23/5</strong>, how do you distinguish which products to defend from which SKUs are at risk? <strong>Objective:</strong> apply a BCG matrix to the beauty portfolio to guide marketing and commercial decisions.</p>
-        </div>
-      </div>
 
-      <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl">BCG Portfolio Segmentation · 8 495 produits</div>
-        <div data-lang-show="fr">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Hero (Stars) — 2 307 produits (27,2%) :</strong> Volume élevé + note élevée (≥ 4,29). Protéger, amplifier, mettre en avant. Top brand : Anastasia Beverly Hills.</li>
-            <li><strong>Question Marks — 1 801 produits (21,2%) :</strong> Note élevée mais faible volume : potentiel marketing inexploité. Cibler avec des campagnes de visibilité et du seeding influenceur pour les convertir en Stars.</li>
-            <li><strong>Risk (Dogs) — 1 814 produits (21,4%) :</strong> Volume élevé mais note faible : risque de réputation. Reformuler ou déréférencer prioritairement avant que les avis négatifs n'érodent la marque globale.</li>
-            <li><strong>Underperformers — 2 294 produits (27%) :</strong> Faible volume + note faible. Rationaliser l'assortiment, candidats au délistage.</li>
-            <li><strong>Non notés — 279 produits :</strong> Invisibles dans les recherches filtrées par avis : activer les programmes de collecte d'avis en priorité.</li>
-          </ul>
-        </div>
-        <div data-lang-show="en">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Hero (Stars) — 2,307 products (27.2%):</strong> High volume + high rating (≥ 4.29). Protect, amplify, feature. Top brand: Anastasia Beverly Hills.</li>
-            <li><strong>Question Marks — 1,801 products (21.2%):</strong> High rating but low volume: untapped marketing upside. Target with visibility campaigns and influencer seeding to convert to Stars.</li>
-            <li><strong>Risk (Dogs) — 1,814 products (21.4%):</strong> High volume but low rating: reputation risk. Reformulate or delist as a priority before negative reviews erode the overall brand.</li>
-            <li><strong>Underperformers — 2,294 products (27%):</strong> Low volume + low rating. Rationalise assortment, candidates for delisting.</li>
-            <li><strong>Unrated — 279 products:</strong> Invisible in review-filtered searches: activate review collection programs as first priority.</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="pf-star pf-star--insight">
-        <div class="pf-star-lbl">Discussion</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">L'analyse identifie trois implications opérationnelles. Les 1 801 produits classés en Question Marks présentent déjà un niveau de satisfaction élevé (note moyenne ≥ 4,29) mais souffrent d'un déficit de visibilité ; un programme de seeding influenceur associé à une mise en avant éditoriale constituerait un levier d'adoption à moindre coût, sans nécessiter de reformulation produit.</p>
-          <p class="pf-star-txt">Par ailleurs, les 32 000 avis clients intègrent des données démographiques structurées (type de peau, carnation, couleur des yeux) qui représentent une ressource directement exploitable pour la personnalisation des campagnes beauté et la construction d'audiences similaires en ciblage publicitaire.</p>
-          <p class="pf-star-txt">Enfin, les 1 814 produits Risk Dogs combinent un volume d'avis significatif et un faible score de satisfaction ; un traitement prioritaire de ces références s'impose afin d'enrayer l'érosion potentielle de la valeur de marque Sephora avant que les signaux négatifs n'atteignent une masse critique.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">The analysis identifies three operational implications. The 1,801 Question Mark products already achieve high satisfaction (average rating ≥ 4.29) but suffer from a visibility deficit; an influencer seeding programme combined with editorial promotion would constitute a low-cost adoption lever, requiring no product reformulation.</p>
-          <p class="pf-star-txt">Furthermore, the 32,000+ customer reviews contain structured demographic data (skin type, skin tone, eye colour) representing a directly exploitable resource for beauty campaign personalisation and lookalike audience construction in paid targeting.</p>
-          <p class="pf-star-txt">Finally, the 1,814 Risk Dog products combine significant review volume with low satisfaction scores; prioritised remediation of these references is warranted to pre-empt the potential erosion of Sephora brand equity before negative signals reach a critical mass.</p>
-        </div>
-      </div>
 
-      <div class="pf-bcg">
-        <svg viewBox="0 0 560 392" role="img" aria-labelledby="bcg-t bcg-d">
-          <title id="bcg-t">Matrice de portefeuille Sephora</title>
-          <desc id="bcg-d">Répartition des 8 495 produits en quatre segments selon la satisfaction client et le volume d'avis : Hero 2 307 produits, Question Marks 1 801, Underperformers 2 294, Risk 1 814.</desc>
 
-          <!-- Axes -->
-          <line x1="70" y1="170" x2="530" y2="170" stroke="var(--mk-border)" stroke-width="1"/>
-          <line x1="300" y1="26"  x2="300" y2="314" stroke="var(--mk-border)" stroke-width="1"/>
 
-          <!-- Légendes des axes -->
-          <text x="300" y="344" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" fill="var(--mk-muted)">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
-          <text x="30" y="170" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" fill="var(--mk-muted)" transform="rotate(-90 30 170)">SATISFACTION  ·  NOTE →</text>
 
-          <!-- Question Marks : forte satisfaction, faible visibilité -->
-          <g class="pf-bcg-quad">
-            <rect x="70" y="26" width="230" height="144" fill="transparent"/>
-            <circle cx="185" cy="88" r="30" fill="rgba(var(--mk-accent-rgb),0.16)" stroke="var(--mk-accent)" stroke-width="1"/>
-            <text x="185" y="84" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">1 801</text>
-            <text x="185" y="99" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">21,2 %</text>
-            <text x="185" y="140" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent)">QUESTION MARKS</text>
-          </g>
 
-          <!-- Hero (Stars) : forte satisfaction, forte visibilité -->
-          <g class="pf-bcg-quad">
-            <rect x="300" y="26" width="230" height="144" fill="transparent"/>
-            <circle cx="415" cy="88" r="34" fill="rgba(var(--mk-accent-rgb),0.16)" stroke="var(--mk-accent)" stroke-width="1"/>
-            <text x="415" y="84" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">2 307</text>
-            <text x="415" y="99" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">27,2 %</text>
-            <text x="415" y="144" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent)">HERO · STARS</text>
-          </g>
 
-          <!-- Underperformers : faible satisfaction, faible visibilité -->
-          <g class="pf-bcg-quad">
-            <rect x="70" y="170" width="230" height="144" fill="transparent"/>
-            <circle cx="185" cy="248" r="34" fill="rgba(var(--mk-accent2-rgb),0.14)" stroke="var(--mk-accent2)" stroke-width="1"/>
-            <text x="185" y="244" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">2 294</text>
-            <text x="185" y="259" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">27 %</text>
-            <text x="185" y="304" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent2)">UNDERPERFORMERS</text>
-          </g>
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">02</span> · <span data-i18n="portfolio.mkt.board.p2Cat">BCG · Beauty Analytics</span></p><h2 class="pf-card-title">
+<span data-lang-show="fr">Sephora — Intelligence Produit &amp; Stratégie de Portefeuille Beauté</span>
+<span data-lang-show="en">Sephora — Product Intelligence &amp; Beauty Portfolio Strategy</span>
+</h2><div class="pf-stats pf-case-figs">
+<div><span class="pf-stat-val">8 495</span><span class="pf-stat-lbl">Produits analysés</span></div>
+<div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl">Avis clients</span></div>
+<div><span class="pf-stat-val">4,23/5</span><span class="pf-stat-lbl">Note moyenne catalogue</span></div>
+<div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl">Matrice de portefeuille</span></div>
+</div><div class="pf-tags">
+<span class="pf-tag">BCG Matrix</span>
+<span class="pf-tag">Product Portfolio</span>
+<span class="pf-tag">Beauty E-commerce</span>
+<span class="pf-tag">Review Analytics</span>
+<span class="pf-tag">Brand Strategy</span>
+<span class="pf-tag">Sephora</span>
+<span class="pf-tag">Python</span>
+</div></aside><div class="pf-case-main"><div class="pf-bcg">
+<svg aria-labelledby="bcg-t bcg-d" role="img" viewbox="0 0 560 392">
+<title id="bcg-t">Matrice de portefeuille Sephora</title>
+<desc id="bcg-d">Répartition des 8 495 produits en quatre segments selon la satisfaction client et le volume d'avis : Hero 2 307 produits, Question Marks 1 801, Underperformers 2 294, Risk 1 814.</desc>
+<!-- Axes -->
+<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
+<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
+<!-- Légendes des axes -->
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
+<!-- Question Marks : forte satisfaction, faible visibilité -->
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
+<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">QUESTION MARKS</text>
+</g>
+<!-- Hero (Stars) : forte satisfaction, forte visibilité -->
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
+<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
+</g>
+<!-- Underperformers : faible satisfaction, faible visibilité -->
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
+<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 294</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS</text>
+</g>
+<!-- Risk (Dogs) : faible satisfaction, forte visibilité -->
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
+<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 814</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK · DOGS</text>
+</g>
+</svg>
+<p class="pf-bcg-caption">Aire des cercles proportionnelle au nombre de produits. Les quatre segments totalisent 8 216 références, soit 96,8 % du catalogue analysé.</p>
+</div><div class="pf-case-lead"><p data-lang-show="fr">Comment distinguer, dans un catalogue Sephora de 8 495 produits, ceux à défendre des références à risque ? J'ai appliqué une matrice BCG croisant volume d'avis et note client pour classer le portefeuille en quatre segments et orienter les décisions marketing et commerciales.</p><p data-lang-show="en">How do you tell which of Sephora's 8,495 products to defend and which are at risk? I applied a BCG matrix crossing review volume and customer rating to sort the portfolio into four segments and guide marketing and commercial decisions.</p><p data-lang-show="zh">在 Sephora 8,495 項商品中，哪些該重點守護、哪些有風險？我以評論量與顧客評分建立 BCG 矩陣，將產品組合分為四個區塊，作為行銷與商業決策的依據。</p></div><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><div class="pf-star">
+<div class="pf-star-lbl">Contexte &amp; Problématique</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">Sephora propose un catalogue de <strong>8 495 produits</strong> couvrant Skincare, Fragrance, Makeup, Hair Care et Bath &amp; Body. Avec 32 000+ avis clients, un prix moyen de <strong>51,70 $</strong> et une note moyenne de <strong>4,23/5</strong>, comment distinguer les produits à défendre des SKUs à risque ? <strong>Objectif :</strong> appliquer une matrice BCG au portefeuille beauté pour orienter les décisions marketing et commerciales.</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">Sephora's catalog spans <strong>8,495 products</strong> across Skincare, Fragrance, Makeup, Hair Care, and Bath &amp; Body. With 32,000+ customer reviews, an average price of <strong>$51.70</strong>, and an average rating of <strong>4.23/5</strong>, how do you distinguish which products to defend from which SKUs are at risk? <strong>Objective:</strong> apply a BCG matrix to the beauty portfolio to guide marketing and commercial decisions.</p>
+</div>
+</div><div class="pf-star pf-star--result">
+<div class="pf-star-lbl">BCG Portfolio Segmentation · 8 495 produits</div>
+<div data-lang-show="fr">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Hero (Stars) — 2 307 produits (27,2%) :</strong> Volume élevé + note élevée (≥ 4,29). Protéger, amplifier, mettre en avant. Top brand : Anastasia Beverly Hills.</li>
+<li><strong>Question Marks — 1 801 produits (21,2%) :</strong> Note élevée mais faible volume : potentiel marketing inexploité. Cibler avec des campagnes de visibilité et du seeding influenceur pour les convertir en Stars.</li>
+<li><strong>Risk (Dogs) — 1 814 produits (21,4%) :</strong> Volume élevé mais note faible : risque de réputation. Reformuler ou déréférencer prioritairement avant que les avis négatifs n'érodent la marque globale.</li>
+<li><strong>Underperformers — 2 294 produits (27%) :</strong> Faible volume + note faible. Rationaliser l'assortiment, candidats au délistage.</li>
+<li><strong>Non notés — 279 produits :</strong> Invisibles dans les recherches filtrées par avis : activer les programmes de collecte d'avis en priorité.</li>
+</ul>
+</div>
+<div data-lang-show="en">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Hero (Stars) — 2,307 products (27.2%):</strong> High volume + high rating (≥ 4.29). Protect, amplify, feature. Top brand: Anastasia Beverly Hills.</li>
+<li><strong>Question Marks — 1,801 products (21.2%):</strong> High rating but low volume: untapped marketing upside. Target with visibility campaigns and influencer seeding to convert to Stars.</li>
+<li><strong>Risk (Dogs) — 1,814 products (21.4%):</strong> High volume but low rating: reputation risk. Reformulate or delist as a priority before negative reviews erode the overall brand.</li>
+<li><strong>Underperformers — 2,294 products (27%):</strong> Low volume + low rating. Rationalise assortment, candidates for delisting.</li>
+<li><strong>Unrated — 279 products:</strong> Invisible in review-filtered searches: activate review collection programs as first priority.</li>
+</ul>
+</div>
+</div><div class="pf-star pf-star--insight">
+<div class="pf-star-lbl">Discussion</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">L'analyse identifie trois implications opérationnelles. Les 1 801 produits classés en Question Marks présentent déjà un niveau de satisfaction élevé (note moyenne ≥ 4,29) mais souffrent d'un déficit de visibilité ; un programme de seeding influenceur associé à une mise en avant éditoriale constituerait un levier d'adoption à moindre coût, sans nécessiter de reformulation produit.</p>
+<p class="pf-star-txt">Par ailleurs, les 32 000 avis clients intègrent des données démographiques structurées (type de peau, carnation, couleur des yeux) qui représentent une ressource directement exploitable pour la personnalisation des campagnes beauté et la construction d'audiences similaires en ciblage publicitaire.</p>
+<p class="pf-star-txt">Enfin, les 1 814 produits Risk Dogs combinent un volume d'avis significatif et un faible score de satisfaction ; un traitement prioritaire de ces références s'impose afin d'enrayer l'érosion potentielle de la valeur de marque Sephora avant que les signaux négatifs n'atteignent une masse critique.</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">The analysis identifies three operational implications. The 1,801 Question Mark products already achieve high satisfaction (average rating ≥ 4.29) but suffer from a visibility deficit; an influencer seeding programme combined with editorial promotion would constitute a low-cost adoption lever, requiring no product reformulation.</p>
+<p class="pf-star-txt">Furthermore, the 32,000+ customer reviews contain structured demographic data (skin type, skin tone, eye colour) representing a directly exploitable resource for beauty campaign personalisation and lookalike audience construction in paid targeting.</p>
+<p class="pf-star-txt">Finally, the 1,814 Risk Dog products combine significant review volume with low satisfaction scores; prioritised remediation of these references is warranted to pre-empt the potential erosion of Sephora brand equity before negative signals reach a critical mass.</p>
+</div>
+</div></details></div></div><a class="pf-next" data-target="maison-beaute" href="#maison-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></span><span class="pf-next-cover is-type">2 240</span></a></article>
+<article class="pf-case" data-cat="analyse" id="maison-beaute">
 
-          <!-- Risk (Dogs) : faible satisfaction, forte visibilité -->
-          <g class="pf-bcg-quad">
-            <rect x="300" y="170" width="230" height="144" fill="transparent"/>
-            <circle cx="415" cy="248" r="30" fill="rgba(var(--mk-accent2-rgb),0.14)" stroke="var(--mk-accent2)" stroke-width="1"/>
-            <text x="415" y="244" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="21" fill="var(--mk-text)">1 814</text>
-            <text x="415" y="259" text-anchor="middle" font-family="Outfit, sans-serif" font-size="9.5" fill="var(--mk-muted)">21,4 %</text>
-            <text x="415" y="300" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" fill="var(--mk-accent2)">RISK · DOGS</text>
-          </g>
-        </svg>
-        <p class="pf-bcg-caption">Aire des cercles proportionnelle au nombre de produits. Les quatre segments totalisent 8 216 références, soit 96,8 % du catalogue analysé.</p>
-      </div>
 
-      <div class="pf-stats">
-        <div><span class="pf-stat-val">8 495</span><span class="pf-stat-lbl">Produits analysés</span></div>
-        <div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl">Avis clients</span></div>
-        <div><span class="pf-stat-val">4,23/5</span><span class="pf-stat-lbl">Note moyenne catalogue</span></div>
-        <div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl">Matrice de portefeuille</span></div>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">BCG Matrix</span>
-        <span class="pf-tag">Product Portfolio</span>
-        <span class="pf-tag">Beauty E-commerce</span>
-        <span class="pf-tag">Review Analytics</span>
-        <span class="pf-tag">Brand Strategy</span>
-        <span class="pf-tag">Sephora</span>
-        <span class="pf-tag">Python</span>
-      </div>
-    </article>
 
-    <article class="pf-card pf-card--featured" data-cat="analyse" id="maison-beaute">
-      <div class="pf-card-num">Analyse Marketing</div>
-      <span class="pf-card-tag">Python · Segmentation · Campaign ROI</span>
-      <h2 class="pf-card-title">
-        <span data-lang-show="fr">Maison Beauté — Diagnostic Personnalité Client &amp; ROI Campagnes</span>
-        <span data-lang-show="en">Maison Beauté — Customer Personality &amp; Campaign ROI Diagnostic</span>
-      </h2>
-      <p class="pf-card-body" style="font-style:italic;">
-        <span data-lang-show="fr">Analyse stratégique de 2 240 clients · 6 campagnes · Corrélation revenu – dépense premium · Segmentation omni-canal</span>
-        <span data-lang-show="en">Strategic analysis of 2,240 customers · 6 campaigns · Income – premium spend correlation · Omni-channel segmentation</span>
-      </p>
 
-      <div class="pf-star">
-        <div class="pf-star-lbl">Contexte & Problématique</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Maison Beauté, marque de parfumerie et soin haut de gamme, dispose d'un portefeuille de 2 240 clients sans stratégie claire pour identifier les segments à fort potentiel. <strong>Objectif :</strong> diagnostiquer la personnalité client, mesurer le ROI de 6 campagnes et identifier les leviers de croissance du chiffre d'affaires premium (fragrances &amp; skincare luxe).</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">Maison Beauté, a premium fragrance and skincare brand, holds a portfolio of 2,240 customers with no clear strategy to identify high-potential segments. <strong>Objective:</strong> diagnose customer personality, measure ROI across 6 campaigns, and identify revenue levers for premium lines (fragrances &amp; luxury skincare).</p>
-        </div>
-      </div>
 
-      <div class="pf-star" style="border-left-color:rgba(var(--mk-accent2-rgb),0.5);background:rgba(var(--mk-accent2-rgb),0.05);border-radius:0 8px 8px 0;">
-        <div class="pf-star-lbl" style="color:var(--mk-insight);">
-          <span data-lang-show="fr">Méthodologie &amp; Données</span>
-          <span data-lang-show="en">Methodology &amp; Data</span>
-        </div>
-        <div data-lang-show="fr">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Dataset :</strong> 2 240 clients, 24 variables comportementales et démographiques (âge, revenu, historique d'achats, réponses aux campagnes). 24 revenus manquants imputés par la moyenne populationnelle.</li>
-            <li><strong>Segmentation revenu :</strong> Quartiles T1 à T4 : de la clientèle Mass (&lt;25%) au segment Luxe (Top 25%).</li>
-            <li><strong>Segmentation canal :</strong> Trois profils : True Omni-Channel (47,2%), Counter-First (27,6%), Digital-First (25,0%).</li>
-            <li><strong>Corrélations :</strong> Revenu ↔ dépense premium (r = 0,59) · Visites web ↔ achats web (r = −0,06).</li>
-            <li><strong>Profilage campagnes :</strong> Taux d'acceptation sur 6 campagnes + segmentation par niveau d'engagement (0, 1, 2+ campagnes acceptées).</li>
-          </ul>
-        </div>
-        <div data-lang-show="en">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Dataset:</strong> 2,240 customers, 24 behavioural and demographic variables (age, income, purchase history, campaign responses). 24 missing incomes imputed with population mean.</li>
-            <li><strong>Income segmentation:</strong> Quartiles T1 – T4: from Mass tier (&lt;25%) to Luxury tier (Top 25%).</li>
-            <li><strong>Channel segmentation:</strong> Three profiles: True Omni-Channel (47.2%), Counter-First (27.6%), Digital-First (25.0%).</li>
-            <li><strong>Correlations:</strong> Income ↔ premium spend (r = 0.59) · Web visits ↔ web purchases (r = −0.06).</li>
-            <li><strong>Campaign profiling:</strong> Acceptance rate across 6 campaigns + segmentation by engagement tier (0, 1, 2+ accepted campaigns).</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="pf-star pf-star--result">
-        <div class="pf-star-lbl">Résultats</div>
-        <div data-lang-show="fr">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Gradient de prémiumisation (18x) :</strong> La dépense premium moyenne grimpe de <strong>39 $</strong> (T1 Mass) à <strong>708 $</strong> (T4 Luxury). Le revenu explique 59% de la variance de la dépense premium.</li>
-            <li><strong>L'engagement multiplie la valeur client (3x) :</strong> Les clients ayant accepté 2+ campagnes dépensent <strong>775 $</strong> en produits premium contre <strong>255 $</strong> pour les non-engagés.</li>
-            <li><strong>Campagne « Response » — standout :</strong> Taux de conversion de <strong>14,9%</strong>, le double de la meilleure campagne historique (Campagne 4 : 7,5%). La Campagne 2 stagne à seulement 1,3%.</li>
-            <li><strong>Le canal physique résiste :</strong> Le comptoir beauté représente <strong>46,2%</strong> des achats (12 970 transactions) contre 32,6% pour le web et 21,2% pour le catalogue.</li>
-            <li><strong>Signal d'alarme digital :</strong> Corrélation visites web ↔ achats web de <strong>r = −0,06</strong>, le trafic web ne convertit pas en panier.</li>
-            <li><strong>Profil du consommateur idéal :</strong> Revenu <strong>60 186 $</strong> · Âge <strong>~45 ans</strong> · Dépense premium <strong>564 $</strong> · Segment T4 Luxury · Génération X (35 – 49 ans).</li>
-          </ul>
-        </div>
-        <div data-lang-show="en">
-          <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-            <li><strong>Premiumisation gradient (18x):</strong> Average premium spend climbs from <strong>$39</strong> (T1 Mass) to <strong>$708</strong> (T4 Luxury). Income accounts for 59% of premium spend variance.</li>
-            <li><strong>Engagement multiplies customer value (3x):</strong> Customers who accepted 2+ campaigns spend <strong>$775</strong> on premium lines vs <strong>$255</strong> for unengaged customers.</li>
-            <li><strong>"Response" campaign — standout performer:</strong> Conversion rate of <strong>14.9%</strong>, roughly double the best historical campaign (Campaign 4: 7.5%). Campaign 2 lagged at just 1.3%.</li>
-            <li><strong>Physical channel holds strong:</strong> The beauty counter accounts for <strong>46.2%</strong> of purchases (12,970 transactions) vs 32.6% web and 21.2% catalogue.</li>
-            <li><strong>Digital warning signal:</strong> Web visits ↔ web purchases correlation of <strong>r = −0.06</strong>, web traffic is not converting to baskets.</li>
-            <li><strong>Ideal consumer profile:</strong> Income <strong>$60,186</strong> · Age <strong>~45</strong> · Premium spend <strong>$564</strong> · T4 Luxury · Gen X (35 – 49).</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="pf-star pf-star--insight">
-        <div class="pf-star-lbl">Discussion</div>
-        <div data-lang-show="fr">
-          <p class="pf-star-txt">Les résultats suggèrent trois axes prioritaires. En premier lieu, le segment omni-canal (47 % des clients) représente un levier sous-exploité : équiper les conseillers en comptoir pour capturer les profils comportementaux et déclencher des parcours de réachat en ligne permettrait de convertir ce cœur de clientèle en acheteurs digitaux récurrents sur les lignes fragrances et skincare premium.</p>
-          <p class="pf-star-txt">En second lieu, la campagne Response affiche le taux de conversion le plus élevé (14,9 %) ; l'analyse systématique de ses déclencheurs (timing, message, ciblage) et la transposition de cette mécanique aux segments T3 Affluent et T4 Luxury constitueraient une approche d'optimisation à fort potentiel de rendement.</p>
-          <p class="pf-star-txt">Enfin, le faible taux de transformation des visiteurs web à haute fréquence plaide pour des offres d'échantillonnage et de bundles premium ciblées, visant à convertir une intention de navigation en achat à haute marge.</p>
-        </div>
-        <div data-lang-show="en">
-          <p class="pf-star-txt">The findings point to three priority directions. First, the omni-channel segment (47% of customers) represents an under-leveraged asset: equipping in-store advisors to capture behavioural profiles and trigger personalised repurchase journeys online would convert this core customer base into recurring digital buyers across premium fragrance and skincare lines.</p>
-          <p class="pf-star-txt">Second, the Response campaign records the highest conversion rate (14.9%); a systematic analysis of its triggers (timing, message, targeting) and the transposition of this mechanism to T3 Affluent and T4 Luxury segments would constitute a high-yield optimisation approach.</p>
-          <p class="pf-star-txt">Finally, the low conversion rate among high-frequency web visitors argues for targeted sampling and premium bundle offers designed to transform browsing intent into high-margin purchases.</p>
-        </div>
-      </div>
 
-      <div class="pf-stats">
-        <div><span class="pf-stat-val">2 240</span><span class="pf-stat-lbl">Clients analysés</span></div>
-        <div><span class="pf-stat-val">18x</span><span class="pf-stat-lbl">Écart Mass vs Luxury spend</span></div>
-        <div><span class="pf-stat-val">14,9%</span><span class="pf-stat-lbl">Conversion · Campagne Response</span></div>
-        <div><span class="pf-stat-val">3x</span><span class="pf-stat-lbl">Valeur client engagé vs non-engagé</span></div>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">Customer Segmentation</span>
-        <span class="pf-tag">Campaign ROI</span>
-        <span class="pf-tag">Omni-Channel</span>
-        <span class="pf-tag">Correlation Analysis</span>
-        <span class="pf-tag">Luxury Marketing</span>
-        <span class="pf-tag">Consumer Insights</span>
-        <span class="pf-tag">Python</span>
-      </div>
-    </article>
 
-    <article class="pf-card pf-card--featured" data-cat="reporting" id="engoo-weekly">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.weeklyNum">Reporting · Synthèse</div>
-      <span class="pf-card-tag" data-i18n="portfolio.mkt.weeklyTag">PowerPoint · Data Storytelling · Reporting</span>
-      <h2 class="pf-card-title" data-i18n="portfolio.mkt.weeklyTitle">Engoo – Rapport hebdomadaire XHS</h2>
-      <p class="pf-card-body" data-i18n="portfolio.mkt.weeklyDesc">Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.</p>
 
-      <!-- FR slides -->
-      <div data-lang-show="fr">
-        <div class="ig-carousel-wrap">
-          <button class="ig-nav ig-nav--prev" aria-label="Précédent">&#8249;</button>
-          <div class="ig-carousel" id="weeklyFR">
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" alt="Rapport hebdomadaire – Diapositive 1" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive2.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive2.webp" alt="Rapport hebdomadaire – Diapositive 2" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive3.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive3.webp" alt="Rapport hebdomadaire – Diapositive 3" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive4.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive4.webp" alt="Rapport hebdomadaire – Diapositive 4" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive5.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive5.webp" alt="Rapport hebdomadaire – Diapositive 5" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive6.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive6.webp" alt="Rapport hebdomadaire – Diapositive 6" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive7.PNG" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive7.PNG" alt="Rapport hebdomadaire – Diapositive 7" loading="lazy"></a></div>
-          </div>
-          <button class="ig-nav ig-nav--next" aria-label="Suivant">&#8250;</button>
-          <div class="ig-dots" id="weeklyDotsFR"></div>
-        </div>
-      </div>
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">03</span> · <span data-i18n="portfolio.mkt.board.p3Cat">Segmentation · ROI</span></p><h2 class="pf-card-title">
+<span data-lang-show="fr">Maison Beauté — Diagnostic Personnalité Client &amp; ROI Campagnes</span>
+<span data-lang-show="en">Maison Beauté — Customer Personality &amp; Campaign ROI Diagnostic</span>
+</h2><div class="pf-stats pf-case-figs">
+<div><span class="pf-stat-val">2 240</span><span class="pf-stat-lbl">Clients analysés</span></div>
+<div><span class="pf-stat-val">18x</span><span class="pf-stat-lbl">Écart Mass vs Luxury spend</span></div>
+<div><span class="pf-stat-val">14,9%</span><span class="pf-stat-lbl">Conversion · Campagne Response</span></div>
+<div><span class="pf-stat-val">3x</span><span class="pf-stat-lbl">Valeur client engagé vs non-engagé</span></div>
+</div><div class="pf-tags">
+<span class="pf-tag">Customer Segmentation</span>
+<span class="pf-tag">Campaign ROI</span>
+<span class="pf-tag">Omni-Channel</span>
+<span class="pf-tag">Correlation Analysis</span>
+<span class="pf-tag">Luxury Marketing</span>
+<span class="pf-tag">Consumer Insights</span>
+<span class="pf-tag">Python</span>
+</div></aside><div class="pf-case-main"><div class="pf-case-lead"><p data-lang-show="fr">Maison Beauté, marque de parfumerie et soin haut de gamme, n'avait pas de stratégie pour cibler ses 2 240 clients. J'ai segmenté la clientèle par revenu et par canal et mesuré le ROI de 6 campagnes : la campagne Response convertit à 14,9%, et les clients engagés dépensent 3 fois plus en produits premium.</p><p data-lang-show="en">Maison Beauté, a premium fragrance and skincare brand, had no strategy to target its 2,240 customers. I segmented them by income and channel and measured the ROI of 6 campaigns: the Response campaign converts at 14.9%, and engaged customers spend 3 times more on premium products.</p><p data-lang-show="zh">高端香氛與保養品牌 Maison Beauté 對 2,240 位顧客缺乏明確的經營策略。我依收入與通路進行分群，並衡量 6 檔活動的 ROI：Response 活動轉換率達 14.9%，高參與顧客在高端商品上的消費是一般顧客的 3 倍。</p></div><details class="pf-case-more" open><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><p class="pf-card-body" style="font-style:italic;">
+<span data-lang-show="fr">Analyse stratégique de 2 240 clients · 6 campagnes · Corrélation revenu – dépense premium · Segmentation omni-canal</span>
+<span data-lang-show="en">Strategic analysis of 2,240 customers · 6 campaigns · Income – premium spend correlation · Omni-channel segmentation</span>
+</p><div class="pf-star">
+<div class="pf-star-lbl">Contexte &amp; Problématique</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">Maison Beauté, marque de parfumerie et soin haut de gamme, dispose d'un portefeuille de 2 240 clients sans stratégie claire pour identifier les segments à fort potentiel. <strong>Objectif :</strong> diagnostiquer la personnalité client, mesurer le ROI de 6 campagnes et identifier les leviers de croissance du chiffre d'affaires premium (fragrances &amp; skincare luxe).</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">Maison Beauté, a premium fragrance and skincare brand, holds a portfolio of 2,240 customers with no clear strategy to identify high-potential segments. <strong>Objective:</strong> diagnose customer personality, measure ROI across 6 campaigns, and identify revenue levers for premium lines (fragrances &amp; luxury skincare).</p>
+</div>
+</div><div class="pf-star" style="border-left-color:rgba(var(--mk-accent2-rgb),0.5);background:rgba(var(--mk-accent2-rgb),0.05);border-radius:0 8px 8px 0;">
+<div class="pf-star-lbl" style="color:var(--mk-insight);">
+<span data-lang-show="fr">Méthodologie &amp; Données</span>
+<span data-lang-show="en">Methodology &amp; Data</span>
+</div>
+<div data-lang-show="fr">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Dataset :</strong> 2 240 clients, 24 variables comportementales et démographiques (âge, revenu, historique d'achats, réponses aux campagnes). 24 revenus manquants imputés par la moyenne populationnelle.</li>
+<li><strong>Segmentation revenu :</strong> Quartiles T1 à T4 : de la clientèle Mass (&lt;25%) au segment Luxe (Top 25%).</li>
+<li><strong>Segmentation canal :</strong> Trois profils : True Omni-Channel (47,2%), Counter-First (27,6%), Digital-First (25,0%).</li>
+<li><strong>Corrélations :</strong> Revenu ↔ dépense premium (r = 0,59) · Visites web ↔ achats web (r = −0,06).</li>
+<li><strong>Profilage campagnes :</strong> Taux d'acceptation sur 6 campagnes + segmentation par niveau d'engagement (0, 1, 2+ campagnes acceptées).</li>
+</ul>
+</div>
+<div data-lang-show="en">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Dataset:</strong> 2,240 customers, 24 behavioural and demographic variables (age, income, purchase history, campaign responses). 24 missing incomes imputed with population mean.</li>
+<li><strong>Income segmentation:</strong> Quartiles T1 – T4: from Mass tier (&lt;25%) to Luxury tier (Top 25%).</li>
+<li><strong>Channel segmentation:</strong> Three profiles: True Omni-Channel (47.2%), Counter-First (27.6%), Digital-First (25.0%).</li>
+<li><strong>Correlations:</strong> Income ↔ premium spend (r = 0.59) · Web visits ↔ web purchases (r = −0.06).</li>
+<li><strong>Campaign profiling:</strong> Acceptance rate across 6 campaigns + segmentation by engagement tier (0, 1, 2+ accepted campaigns).</li>
+</ul>
+</div>
+</div><div class="pf-star pf-star--result">
+<div class="pf-star-lbl">Résultats</div>
+<div data-lang-show="fr">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Gradient de prémiumisation (18x) :</strong> La dépense premium moyenne grimpe de <strong>39 $</strong> (T1 Mass) à <strong>708 $</strong> (T4 Luxury). Le revenu explique 59% de la variance de la dépense premium.</li>
+<li><strong>L'engagement multiplie la valeur client (3x) :</strong> Les clients ayant accepté 2+ campagnes dépensent <strong>775 $</strong> en produits premium contre <strong>255 $</strong> pour les non-engagés.</li>
+<li><strong>Campagne « Response » — standout :</strong> Taux de conversion de <strong>14,9%</strong>, le double de la meilleure campagne historique (Campagne 4 : 7,5%). La Campagne 2 stagne à seulement 1,3%.</li>
+<li><strong>Le canal physique résiste :</strong> Le comptoir beauté représente <strong>46,2%</strong> des achats (12 970 transactions) contre 32,6% pour le web et 21,2% pour le catalogue.</li>
+<li><strong>Signal d'alarme digital :</strong> Corrélation visites web ↔ achats web de <strong>r = −0,06</strong>, le trafic web ne convertit pas en panier.</li>
+<li><strong>Profil du consommateur idéal :</strong> Revenu <strong>60 186 $</strong> · Âge <strong>~45 ans</strong> · Dépense premium <strong>564 $</strong> · Segment T4 Luxury · Génération X (35 – 49 ans).</li>
+</ul>
+</div>
+<div data-lang-show="en">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Premiumisation gradient (18x):</strong> Average premium spend climbs from <strong>$39</strong> (T1 Mass) to <strong>$708</strong> (T4 Luxury). Income accounts for 59% of premium spend variance.</li>
+<li><strong>Engagement multiplies customer value (3x):</strong> Customers who accepted 2+ campaigns spend <strong>$775</strong> on premium lines vs <strong>$255</strong> for unengaged customers.</li>
+<li><strong>"Response" campaign — standout performer:</strong> Conversion rate of <strong>14.9%</strong>, roughly double the best historical campaign (Campaign 4: 7.5%). Campaign 2 lagged at just 1.3%.</li>
+<li><strong>Physical channel holds strong:</strong> The beauty counter accounts for <strong>46.2%</strong> of purchases (12,970 transactions) vs 32.6% web and 21.2% catalogue.</li>
+<li><strong>Digital warning signal:</strong> Web visits ↔ web purchases correlation of <strong>r = −0.06</strong>, web traffic is not converting to baskets.</li>
+<li><strong>Ideal consumer profile:</strong> Income <strong>$60,186</strong> · Age <strong>~45</strong> · Premium spend <strong>$564</strong> · T4 Luxury · Gen X (35 – 49).</li>
+</ul>
+</div>
+</div><div class="pf-star pf-star--insight">
+<div class="pf-star-lbl">Discussion</div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">Les résultats suggèrent trois axes prioritaires. En premier lieu, le segment omni-canal (47 % des clients) représente un levier sous-exploité : équiper les conseillers en comptoir pour capturer les profils comportementaux et déclencher des parcours de réachat en ligne permettrait de convertir ce cœur de clientèle en acheteurs digitaux récurrents sur les lignes fragrances et skincare premium.</p>
+<p class="pf-star-txt">En second lieu, la campagne Response affiche le taux de conversion le plus élevé (14,9 %) ; l'analyse systématique de ses déclencheurs (timing, message, ciblage) et la transposition de cette mécanique aux segments T3 Affluent et T4 Luxury constitueraient une approche d'optimisation à fort potentiel de rendement.</p>
+<p class="pf-star-txt">Enfin, le faible taux de transformation des visiteurs web à haute fréquence plaide pour des offres d'échantillonnage et de bundles premium ciblées, visant à convertir une intention de navigation en achat à haute marge.</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">The findings point to three priority directions. First, the omni-channel segment (47% of customers) represents an under-leveraged asset: equipping in-store advisors to capture behavioural profiles and trigger personalised repurchase journeys online would convert this core customer base into recurring digital buyers across premium fragrance and skincare lines.</p>
+<p class="pf-star-txt">Second, the Response campaign records the highest conversion rate (14.9%); a systematic analysis of its triggers (timing, message, targeting) and the transposition of this mechanism to T3 Affluent and T4 Luxury segments would constitute a high-yield optimisation approach.</p>
+<p class="pf-star-txt">Finally, the low conversion rate among high-frequency web visitors argues for targeted sampling and premium bundle offers designed to transform browsing intent into high-margin purchases.</p>
+</div>
+</div></details></div></div><a class="pf-next" data-target="engoo-weekly" href="#engoo-weekly"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp"/></span></a></article>
+<article class="pf-case" data-cat="reporting" id="engoo-weekly">
 
-      <!-- EN slides -->
-      <div data-lang-show="en">
-        <div class="ig-carousel-wrap">
-          <button class="ig-nav ig-nav--prev" aria-label="Previous">&#8249;</button>
-          <div class="ig-carousel" id="weeklyEN">
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive1.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive1.webp" alt="Weekly Report – Slide 1" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive2.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive2.webp" alt="Weekly Report – Slide 2" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive3.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive3.webp" alt="Weekly Report – Slide 3" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive4.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive4.webp" alt="Weekly Report – Slide 4" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive5.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive5.webp" alt="Weekly Report – Slide 5" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive6.webp" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive6.webp" alt="Weekly Report – Slide 6" loading="lazy"></a></div>
-            <div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive7.PNG" target="_blank" rel="noopener noreferrer"><img src="assets/Engoo_Weekly%20Report_EN/Diapositive7.PNG" alt="Weekly Report – Slide 7" loading="lazy"></a></div>
-          </div>
-          <button class="ig-nav ig-nav--next" aria-label="Next">&#8250;</button>
-          <div class="ig-dots" id="weeklyDotsEN"></div>
-        </div>
-      </div>
 
-      <div class="pf-btns">
-        <a href="portfolio-data.html#xhs-weekly"
-           class="pf-btn pf-btn--ghost">Angle Data : méthodologie et impact</a>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">PowerPoint</span>
-        <span class="pf-tag">Data Storytelling</span>
-        <span class="pf-tag">Reporting</span>
-        <span class="pf-tag">Xiaohongshu</span>
-        <span class="pf-tag">Bilingual</span>
-      </div>
-    </article>
 
-    <article data-candle class="pf-card" data-cat="campagne" id="aiesec-yolo">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.aiesec.num">Campagne Marketing</div>
-      <span class="pf-card-tag" data-i18n="portfolio.mkt.aiesec.tag">Campagne · Direction artistique</span>
-      <h2 class="pf-card-title">AIESEC – Camp International YOLO</h2>
-      <!-- Logo first -->
-      <div class="pf-img-figure" style="margin: 0.5rem 0 1rem;">
-        <a href="assets/yolo-camp-tote-bag.webp" target="_blank" rel="noopener noreferrer"
-           class="pf-img-wrap" style="aspect-ratio:16/9; display:block; background:#000;">
-          <img src="assets/yolo-camp-tote-bag.webp" alt="AIESEC YOLO Camp – Official Tote Bag Visual Design" loading="lazy" style="object-fit:contain;">
-        </a>
-        <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap4">Identité visuelle – logo officiel</p>
-      </div>
-      <!-- Campaign posters with captions -->
-      <div class="pf-imgs pf-imgs--2" style="align-items:start;">
-        <div class="pf-img-figure">
-          <a href="assets/yolo-camp-main-visual-en.webp" target="_blank" rel="noopener noreferrer"
-             class="pf-img-wrap" style="aspect-ratio:3/4;">
-            <img src="assets/yolo-camp-main-visual-en.webp" alt="AIESEC YOLO International Camp – Main Campaign Poster, English Version" loading="lazy">
-          </a>
-          <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap1">Affiche principale – version anglaise</p>
-        </div>
-        <div class="pf-img-figure">
-          <a href="assets/yolo-camp-main-visual-zh.webp" target="_blank" rel="noopener noreferrer"
-             class="pf-img-wrap" style="aspect-ratio:3/4;">
-            <img src="assets/yolo-camp-main-visual-zh.webp" alt="AIESEC YOLO International Camp – Main Campaign Poster, Chinese Version" loading="lazy">
-          </a>
-          <p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap2">Affiche principale – version chinoise</p>
-        </div>
-      </div>
 
-      <!-- Instagram posts carousel -->
-      <p class="pf-img-caption" style="margin: 1.25rem 0 0.4rem;" data-i18n="portfolio.mkt.aiesec.igLabel">Posts Instagram – Campagne YOLO</p>
-      <div class="ig-carousel-wrap">
-        <button class="ig-nav ig-nav--prev" aria-label="Previous">&#8249;</button>
-        <div class="ig-carousel" id="yoloCarousel">
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-event-recap-cover.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-event-recap-cover.webp" alt="AIESEC YOLO Camp – Instagram Post: Event Recap Cover" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-foreign-volunteers.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-foreign-volunteers.webp" alt="AIESEC YOLO Camp – Instagram Post: International Volunteers" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-courses-workshops.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-courses-workshops.webp" alt="AIESEC YOLO Camp – Instagram Post: Courses and Workshops" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-diverse-activities.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-diverse-activities.webp" alt="AIESEC YOLO Camp – Instagram Post: Diverse Activities" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-group-presentations.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-group-presentations.webp" alt="AIESEC YOLO Camp – Instagram Post: Group Presentations" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-event-introduction.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-event-introduction.webp" alt="AIESEC YOLO Camp – Instagram Post: Event Introduction" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-signup-cta.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-signup-cta.webp" alt="AIESEC YOLO Camp – Instagram Post: Sign-up Call to Action" loading="lazy">
-            </a>
-          </div>
-          <div class="ig-item">
-            <a href="assets/Social%20Media_YOLO/yolo-follow-cta.webp" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Social%20Media_YOLO/yolo-follow-cta.webp" alt="AIESEC YOLO Camp – Instagram Post: Follow Us Call to Action" loading="lazy">
-            </a>
-          </div>
-        </div>
-        <button class="ig-nav ig-nav--next" aria-label="Next">&#8250;</button>
-        <div class="ig-dots" id="yoloDots"></div>
-      </div>
 
-      <p class="pf-card-body" data-i18n="portfolio.mkt.aiesec.body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Conception des visuels de campagne (affiches et publications) pour le recrutement de volontaires et de participants.</p>
-      <div class="pf-stats">
-        <div><span class="pf-stat-val">15</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statVol">Volontaires recrutés</span></div>
-        <div><span class="pf-stat-val">60+</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statPart">Participants</span></div>
-        <div><span class="pf-stat-val">+53.7%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statBudget">Objectif budgétaire dépassé</span></div>
-      </div>
-      <!-- <div class="pf-star pf-star--insight">
+
+
+
+
+
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">04</span> · <span data-i18n="portfolio.mkt.board.p4Cat">Reporting · Data Storytelling</span></p><h2 class="pf-card-title" data-i18n="portfolio.mkt.weeklyTitle">Engoo – Rapport hebdomadaire XHS</h2><div class="pf-stats pf-case-figs"><div><span class="pf-stat-val">7</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.board.p4Lbl">Diapositives par semaine</span></div><div><span class="pf-stat-val">FR / EN</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.board.p4Chip1">Langues de diffusion</span></div><div><span class="pf-stat-val" data-i18n="portfolio.mkt.board.p4Chip2Val">Hebdomadaire</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.board.p4Chip2">Cadence de production</span></div></div><div class="pf-tags">
+<span class="pf-tag">PowerPoint</span>
+<span class="pf-tag">Data Storytelling</span>
+<span class="pf-tag">Reporting</span>
+<span class="pf-tag">Xiaohongshu</span>
+<span class="pf-tag">Bilingual</span>
+</div><div class="pf-btns">
+<a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-weekly">Angle Data : méthodologie et impact</a>
+</div></aside><div class="pf-case-main"><!-- FR slides --><div data-lang-show="fr">
+<div class="ig-carousel-wrap">
+<button aria-label="Précédent" class="ig-nav ig-nav--prev">‹</button>
+<div class="ig-carousel" id="weeklyFR">
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 1" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive2.webp" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 2" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive2.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive3.webp" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 3" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive3.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive4.webp" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 4" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive4.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive5.webp" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 5" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive5.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive6.webp" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 6" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive6.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_FR/Diapositive7.PNG" rel="noopener noreferrer" target="_blank"><img alt="Rapport hebdomadaire – Diapositive 7" loading="lazy" src="assets/Engoo_Weekly%20Report_FR/Diapositive7.PNG"/></a></div>
+</div>
+<button aria-label="Suivant" class="ig-nav ig-nav--next">›</button>
+<div class="ig-dots" id="weeklyDotsFR"></div>
+</div>
+</div><!-- EN slides --><div data-lang-show="en">
+<div class="ig-carousel-wrap">
+<button aria-label="Previous" class="ig-nav ig-nav--prev">‹</button>
+<div class="ig-carousel" id="weeklyEN">
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive1.webp" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 1" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive1.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive2.webp" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 2" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive2.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive3.webp" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 3" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive3.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive4.webp" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 4" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive4.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive5.webp" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 5" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive5.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive6.webp" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 6" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive6.webp"/></a></div>
+<div class="ig-item ig-item--slide"><a href="assets/Engoo_Weekly%20Report_EN/Diapositive7.PNG" rel="noopener noreferrer" target="_blank"><img alt="Weekly Report – Slide 7" loading="lazy" src="assets/Engoo_Weekly%20Report_EN/Diapositive7.PNG"/></a></div>
+</div>
+<button aria-label="Next" class="ig-nav ig-nav--next">›</button>
+<div class="ig-dots" id="weeklyDotsEN"></div>
+</div>
+</div><p class="pf-case-lead" data-i18n="portfolio.mkt.weeklyDesc">Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.</p></div></div><a class="pf-next" data-target="aiesec-yolo" href="#aiesec-yolo"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/yolo-camp-main-visual-en.webp"/></span></a></article>
+<article class="pf-case" data-candle="" data-cat="campagne" id="aiesec-yolo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">05</span> · <span data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique</span></p><h2 class="pf-card-title">AIESEC – Camp International YOLO</h2><div class="pf-stats pf-case-figs">
+<div><span class="pf-stat-val">15</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statVol">Volontaires recrutés</span></div>
+<div><span class="pf-stat-val">60+</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statPart">Participants</span></div>
+<div><span class="pf-stat-val">+53.7%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statBudget">Objectif budgétaire dépassé</span></div>
+</div><div class="pf-tags">
+<span class="pf-tag">Campaign Management</span>
+<span class="pf-tag">Art Direction</span>
+<span class="pf-tag">Canva</span>
+<span class="pf-tag">Adobe Illustrator</span>
+<span class="pf-tag">AIESEC</span>
+<span class="pf-tag">Visual Design</span>
+</div></aside><div class="pf-case-main"><!-- Logo first --><div class="pf-img-figure" style="margin: 0.5rem 0 1rem;">
+<a class="pf-img-wrap" href="assets/yolo-camp-tote-bag.webp" rel="noopener noreferrer" style="aspect-ratio:16/9; display:block; background:#000;" target="_blank">
+<img alt="AIESEC YOLO Camp – Official Tote Bag Visual Design" loading="lazy" src="assets/yolo-camp-tote-bag.webp" style="object-fit:contain;"/>
+</a>
+<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap4">Identité visuelle – logo officiel</p>
+</div><!-- Campaign posters with captions --><div class="pf-imgs pf-imgs--2" style="align-items:start;">
+<div class="pf-img-figure">
+<a class="pf-img-wrap" href="assets/yolo-camp-main-visual-en.webp" rel="noopener noreferrer" style="aspect-ratio:3/4;" target="_blank">
+<img alt="AIESEC YOLO International Camp – Main Campaign Poster, English Version" loading="lazy" src="assets/yolo-camp-main-visual-en.webp"/>
+</a>
+<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap1">Affiche principale – version anglaise</p>
+</div>
+<div class="pf-img-figure">
+<a class="pf-img-wrap" href="assets/yolo-camp-main-visual-zh.webp" rel="noopener noreferrer" style="aspect-ratio:3/4;" target="_blank">
+<img alt="AIESEC YOLO International Camp – Main Campaign Poster, Chinese Version" loading="lazy" src="assets/yolo-camp-main-visual-zh.webp"/>
+</a>
+<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap2">Affiche principale – version chinoise</p>
+</div>
+</div><!-- Instagram posts carousel --><p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.igLabel" style="margin: 1.25rem 0 0.4rem;">Posts Instagram – Campagne YOLO</p><div class="ig-carousel-wrap">
+<button aria-label="Previous" class="ig-nav ig-nav--prev">‹</button>
+<div class="ig-carousel" id="yoloCarousel">
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-event-recap-cover.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Event Recap Cover" loading="lazy" src="assets/Social%20Media_YOLO/yolo-event-recap-cover.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-foreign-volunteers.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: International Volunteers" loading="lazy" src="assets/Social%20Media_YOLO/yolo-foreign-volunteers.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-courses-workshops.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Courses and Workshops" loading="lazy" src="assets/Social%20Media_YOLO/yolo-courses-workshops.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-diverse-activities.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Diverse Activities" loading="lazy" src="assets/Social%20Media_YOLO/yolo-diverse-activities.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-group-presentations.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Group Presentations" loading="lazy" src="assets/Social%20Media_YOLO/yolo-group-presentations.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-event-introduction.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Event Introduction" loading="lazy" src="assets/Social%20Media_YOLO/yolo-event-introduction.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-signup-cta.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Sign-up Call to Action" loading="lazy" src="assets/Social%20Media_YOLO/yolo-signup-cta.webp"/>
+</a>
+</div>
+<div class="ig-item">
+<a href="assets/Social%20Media_YOLO/yolo-follow-cta.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Instagram Post: Follow Us Call to Action" loading="lazy" src="assets/Social%20Media_YOLO/yolo-follow-cta.webp"/>
+</a>
+</div>
+</div>
+<button aria-label="Next" class="ig-nav ig-nav--next">›</button>
+<div class="ig-dots" id="yoloDots"></div>
+</div><!-- <div class="pf-star pf-star--insight">
         <div class="pf-star-lbl">
           <span data-lang-show="fr">Défi</span>
           <span data-lang-show="en">Challenge</span>
@@ -1993,50 +1714,38 @@
           <p class="pf-star-txt">Initially, the digital campaign yielded extremely low conversion rates, severely threatening our target registration goals.</p>
           <p class="pf-star-txt"><strong>Resolution:</strong> To overcome this bottleneck, I audited historical campaign data and interviewed past project leads, discovering that in-person high school outreach was historically the highest-converting channel for our target audience. I immediately executed a strategic pivot, shifting my team's focus and resources to field marketing. To support this transition and build instant trust, I overhauled the project's art direction using Canva and Adobe Illustrator to elevate visual credibility and design natively shareable content that amplified peer-to-peer organic reach. This data-driven turnaround successfully secured all target participants and surpassed our revenue budget by +53.7%.</p>
         </div>
-      </div>-->
-      <div class="pf-tags">
-        <span class="pf-tag">Campaign Management</span>
-        <span class="pf-tag">Art Direction</span>
-        <span class="pf-tag">Canva</span>
-        <span class="pf-tag">Adobe Illustrator</span>
-        <span class="pf-tag">AIESEC</span>
-        <span class="pf-tag">Visual Design</span>
-      </div>
-    </article>
+      </div>--><p class="pf-case-lead" data-i18n="portfolio.mkt.aiesec.body">Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU. Conception des visuels de campagne (affiches et publications) pour le recrutement de volontaires et de participants.</p></div></div><a class="pf-next" data-target="guzheng-facebook" href="#guzheng-facebook"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/guzheng-club-recruitment-poster.webp"/></span></a></article>
+<article class="pf-case" data-candle="" data-cat="community" id="guzheng-facebook">
 
-    <article data-candle class="pf-card" data-cat="community" id="guzheng-facebook">
-      <div class="pf-card-num" data-i18n="portfolio.mkt.guzhengNum">Community Management</div>
-      <span class="pf-card-tag" data-i18n="portfolio.guzheng.tag">Community Management</span>
-      <h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2>
-      <div class="pf-imgs pf-imgs--2" style="align-items:start;">
-        <div class="pf-img-figure">
-          <a href="assets/guzheng-club-recruitment-poster.webp" target="_blank" rel="noopener noreferrer"
-             class="pf-img-wrap" style="aspect-ratio:1/1;">
-            <img src="assets/guzheng-club-recruitment-poster.webp" alt="NCCU Guzheng Club – Member Recruitment Poster" loading="lazy">
-          </a>
-          <p class="pf-img-caption" data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</p>
-        </div>
-        <div class="pf-img-figure">
-          <a href="assets/guzheng-club-year-end-gathering.webp" target="_blank" rel="noopener noreferrer"
-             class="pf-img-wrap" style="aspect-ratio:1/1;">
-            <img src="assets/guzheng-club-year-end-gathering.webp" alt="NCCU Guzheng Club – Year-end Semester Gathering Event" loading="lazy">
-          </a>
-          <p class="pf-img-caption" data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</p>
-        </div>
-      </div>
-      <p class="pf-card-body" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p>
-      <div class="pf-stats">
-        <div><span class="pf-stat-val" data-i18n="portfolio.guzheng.stat1Val">100 %</span><span class="pf-stat-lbl" data-i18n="portfolio.guzheng.stat1Lbl">Places pourvues à chaque recrutement</span></div>
-        <div><span class="pf-stat-val" data-i18n="portfolio.guzheng.stat2Val">80 %</span><span class="pf-stat-lbl" data-i18n="portfolio.guzheng.stat2Lbl">Fidélisation des membres</span></div>
-      </div>
-      <div class="pf-tags">
-        <span class="pf-tag">Community Management</span>
-        <span class="pf-tag">Facebook</span>
-        <span class="pf-tag">Visual Design</span>
-      </div>
-    </article>
 
-  </main>
+
+
+
+
+
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-i18n="portfolio.mkt.board.p6Cat">Community Management</span></p><h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2><div class="pf-stats pf-case-figs">
+<div><span class="pf-stat-val" data-i18n="portfolio.guzheng.stat1Val">100 %</span><span class="pf-stat-lbl" data-i18n="portfolio.guzheng.stat1Lbl">Places pourvues à chaque recrutement</span></div>
+<div><span class="pf-stat-val" data-i18n="portfolio.guzheng.stat2Val">80 %</span><span class="pf-stat-lbl" data-i18n="portfolio.guzheng.stat2Lbl">Fidélisation des membres</span></div>
+</div><div class="pf-tags">
+<span class="pf-tag">Community Management</span>
+<span class="pf-tag">Facebook</span>
+<span class="pf-tag">Visual Design</span>
+</div></aside><div class="pf-case-main"><div class="pf-imgs pf-imgs--2" style="align-items:start;">
+<div class="pf-img-figure">
+<a class="pf-img-wrap" href="assets/guzheng-club-recruitment-poster.webp" rel="noopener noreferrer" style="aspect-ratio:1/1;" target="_blank">
+<img alt="NCCU Guzheng Club – Member Recruitment Poster" loading="lazy" src="assets/guzheng-club-recruitment-poster.webp"/>
+</a>
+<p class="pf-img-caption" data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</p>
+</div>
+<div class="pf-img-figure">
+<a class="pf-img-wrap" href="assets/guzheng-club-year-end-gathering.webp" rel="noopener noreferrer" style="aspect-ratio:1/1;" target="_blank">
+<img alt="NCCU Guzheng Club – Year-end Semester Gathering Event" loading="lazy" src="assets/guzheng-club-year-end-gathering.webp"/>
+</a>
+<p class="pf-img-caption" data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</p>
+</div>
+</div><p class="pf-case-lead" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p></div></div><a class="pf-next" data-target="engoo-dashboard" href="#engoo-dashboard"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/Excel_Engoo/Engoo Dashboard_FR.webp"/></span></a></article>
+</main>
+  </div>
 
   <!-- ── Autres travaux ──────────────────────────────── -->
   <section class="pf-extras" id="autres-travaux">
@@ -2112,9 +1821,9 @@
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
       const activeBtn = document.querySelector(`.filter-btn[data-filter="${f}"]`);
       if (activeBtn) activeBtn.classList.add('is-active');
-      document.querySelectorAll('.pf-card[data-cat]').forEach(card => {
+      document.querySelectorAll('.pf-cat-card[data-cat]').forEach(card => {
         const cats = card.dataset.cat.split(' ');
-        card.classList.toggle('is-hidden', f !== 'all' && !cats.includes(f));
+        card.parentElement.classList.toggle('is-hidden', f !== 'all' && !cats.includes(f));
       });
     }
     document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -2199,9 +1908,7 @@
 
     /* ── 1. Révélations au défilement ─────────────────── */
     const revealables = [
-      ['.pf-board-card', 40],
-      ['.pf-card', 0],
-      ['.pf-star', 60],
+      ['.pf-cat-grid > li', 50],
       ['.pf-extra', 60],
     ];
     revealables.forEach(([sel, step]) => {
@@ -2256,7 +1963,7 @@
           writeIO.unobserve(entry.target);
         });
       }, { threshold: 0.35 });
-      document.querySelectorAll('.pf-stats, .pf-res-stats, .pf-hero-stat-block, .pf-board-card')
+      document.querySelectorAll('.pf-stats, .pf-res-stats')
         .forEach(bloc => writeIO.observe(bloc));
       /* Filet de sécurité, comme pour les révélations. */
       setTimeout(() => document.querySelectorAll(chiffres)
@@ -2265,31 +1972,131 @@
       document.querySelectorAll(chiffres).forEach(el => el.classList.add('is-written'));
     }
 
-    /* ── 3. Tableau des résultats : navigation ────────── */
-    const rows = [...document.querySelectorAll('.pf-board-card')];
-    function goToCard(row) {
-      const target = document.getElementById(row.dataset.target);
-      if (!target) return;
-      /* Un filtre actif peut masquer la carte visée : on rétablit « Tous ». */
-      if (target.classList.contains('is-hidden')) {
-        const all = document.querySelector('.filter-btn[data-filter="all"]');
-        if (all) all.click();
-      }
-      target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    /* ── 3. Catalogue et lecture, un projet à la fois ─── */
+    /* Le mode lecture n'existe que si ce script tourne : sans lui, la page
+       garde tous les projets à la suite du catalogue, ancres comprises. */
+    const cards     = [...document.querySelectorAll('.pf-cat-card')];
+    const cases     = [...document.querySelectorAll('.pf-case')];
+    const ids       = cases.map(c => c.id);
+    const railItems = [...document.querySelectorAll('.pf-rail-item')];
+    const crumbT    = document.querySelector('.pf-crumb-title');
+    const crumbN    = document.querySelector('.pf-crumb-count');
+    const ease      = 'cubic-bezier(0.2, 0.9, 0.25, 1)';
+    let catalogY = 0, lastCard = null;
+
+    document.documentElement.classList.add('js-cases');
+
+    function show(id) {
+      const art = document.getElementById(id);
+      const i = ids.indexOf(id);
+      cases.forEach(c => c.classList.toggle('is-current', c === art));
+      railItems.forEach(r => r.classList.toggle('is-current', r.dataset.target === id));
+      document.body.classList.add('is-reading');
+      /* Le titre reprend le nœud traduit de la fiche : il suit le changement de langue. */
+      crumbT.replaceChildren(cards[i].querySelector('.pf-cat-name').cloneNode(true));
+      crumbN.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(ids.length).padStart(2, '0');
+      art.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
+      window.scrollTo(0, 0);
     }
-    rows.forEach(row => {
-      row.addEventListener('click', () => goToCard(row));
-      row.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToCard(row); }
+    function showCatalog() {
+      document.body.classList.remove('is-reading');
+      cases.forEach(c => c.classList.remove('is-current'));
+      window.scrollTo(0, catalogY);
+      if (lastCard) lastCard.focus({ preventScroll: true });
+    }
+    function route() {
+      const id = decodeURIComponent(location.hash.slice(1));
+      if (ids.includes(id)) show(id); else showCatalog();
+    }
+    function push(id) {
+      history.pushState(null, '', id ? '#' + id : location.pathname + location.search);
+    }
+
+    /* Premier élément visible du projet : c'est là que la couverture se pose. */
+    function landing(art) {
+      for (const el of art.querySelector('.pf-case-main').children) {
+        if (el.classList.contains('pf-case-lead')) return null;
+        const r = el.getBoundingClientRect();
+        if (r.width && r.height) return r;
+      }
+      return null;
+    }
+    function veil(from, to, ms) {
+      const v = document.createElement('div');
+      v.className = 'pf-veil';
+      document.body.appendChild(v);
+      const a = v.animate([{ opacity: from }, { opacity: to }], { duration: ms, fill: 'forwards' });
+      return { v, a };
+    }
+
+    /* Passage d'un projet à l'autre (frise, projet suivant) : fondu simple. */
+    function swap(id) {
+      push(id);
+      if (reduced) { show(id); return; }
+      const { v, a } = veil(0, 1, 180);
+      a.finished.then(() => {
+        show(id);
+        v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 320, fill: 'forwards' })
+          .finished.then(() => v.remove());
       });
+    }
+
+    /* Ouverture depuis le catalogue : la couverture de la fiche rejoint
+       le visuel du projet pendant que la page change en dessous. */
+    function open(id, card) {
+      catalogY = window.scrollY;
+      lastCard = card;
+      const img = card.querySelector('.pf-cat-cover img');
+      if (reduced || !img) { swap(id); return; }
+      const from = img.getBoundingClientRect();
+      const fly = document.createElement('div');
+      fly.className = 'pf-fly';
+      fly.appendChild(img.cloneNode());
+      Object.assign(fly.style, { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' });
+      const { v } = veil(1, 1, 1);
+      document.body.appendChild(fly);
+      push(id);
+      show(id);
+      const to = landing(document.getElementById(id));
+      if (!to) { fly.remove(); v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 320, fill: 'forwards' }).finished.then(() => v.remove()); return; }
+      v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 700, easing: 'ease-in', fill: 'forwards' });
+      fly.animate([
+        { left: from.left + 'px', top: from.top + 'px', width: from.width + 'px', height: from.height + 'px' },
+        { left: to.left + 'px', top: to.top + 'px', width: to.width + 'px', height: to.height + 'px' }
+      ], { duration: 700, easing: ease, fill: 'forwards' }).finished
+        .then(() => fly.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, fill: 'forwards' }).finished)
+        .then(() => { fly.remove(); v.remove(); });
+    }
+
+    function plain(e) { return !(e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1); }
+    cards.forEach(card => card.addEventListener('click', e => {
+      if (!plain(e)) return;
+      e.preventDefault();
+      open(card.dataset.target, card);
+    }));
+    document.querySelectorAll('.pf-rail-item, .pf-next').forEach(a => a.addEventListener('click', e => {
+      if (!plain(e)) return;
+      e.preventDefault();
+      swap(a.dataset.target);
+    }));
+    document.querySelector('.pf-crumb-back').addEventListener('click', e => {
+      e.preventDefault();
+      push('');
+      showCatalog();
+    });
+    window.addEventListener('popstate', route);
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    route();
+    /* À l'arrivée par un lien profond, le navigateur saute à l'ancre après
+       ce script : on ramène la lecture en haut du projet. */
+    window.addEventListener('load', () => {
+      if (document.body.classList.contains('is-reading')) window.scrollTo(0, 0);
     });
 
     /* ── 4. Curseur sur mesure &amp; aperçu flottant ─────── */
     if (fine && !reduced) {
       const cursor  = document.querySelector('.pf-cursor');
       const label   = document.querySelector('.pf-cursor-label');
-      const preview = document.querySelector('.pf-preview');
-      const pImg    = preview.querySelector('img');
 
       document.body.classList.add('has-custom-cursor');
 
@@ -2302,19 +2109,7 @@
         cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
       }, { passive: true });
 
-      document.addEventListener('mouseleave', () => {
-        cursor.classList.remove('is-active');
-        preview.classList.remove('is-visible');
-      });
-
-      /* L'aperçu suit le curseur avec un léger retard (effet de traîne) */
-      (function follow() {
-        px += (cx - px) * 0.12;
-        py += (cy - py) * 0.12;
-        preview.style.transform =
-          `translate(${px}px, ${py}px) translate(-50%, -50%) scale(${preview.classList.contains('is-visible') ? 1 : 0.94})`;
-        requestAnimationFrame(follow);
-      })();
+      document.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
 
       function expand(text) {
         cursor.classList.add('is-expanded');
@@ -2325,25 +2120,15 @@
         label.textContent = '';
       }
 
-      /* Tableau des résultats : aperçu + curseur « Voir » */
-      /* Les chiffres sont désormais lisibles sur la fiche : l'aperçu ne
-         sert plus qu'aux projets qui ont un visuel à montrer. */
-      rows.forEach(row => {
-        row.addEventListener('mouseenter', () => {
-          expand('Voir');
-          if (!row.dataset.preview) return;
-          pImg.src = row.dataset.preview;
-          preview.classList.add('is-visible');
-        });
-        row.addEventListener('mouseleave', () => {
-          collapse();
-          preview.classList.remove('is-visible');
-        });
+      /* Catalogue : curseur « Voir » sur chaque fiche */
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => expand('Voir'));
+        card.addEventListener('mouseleave', collapse);
       });
 
       /* Images des cartes : curseur « Agrandir » */
       /* Les travaux de création sont exclus : ils reçoivent la flamme. */
-      document.querySelectorAll('.pf-card img, .pf-img-wrap img').forEach(img => {
+      document.querySelectorAll('.pf-case img, .pf-img-wrap img').forEach(img => {
         if (img.closest('[data-candle]')) return;
         img.addEventListener('mouseenter', () => expand('Agrandir'));
         img.addEventListener('mouseleave', collapse);
@@ -2446,7 +2231,7 @@
       /* Liens et boutons : simple élargissement, sans libellé */
       document.querySelectorAll('a, button').forEach(el => {
         el.addEventListener('mouseenter', () => {
-          if (el.closest('.pf-board-card')) return;
+          if (el.closest('.pf-cat-card')) return;
           /* Sur un travail de création, la flamme remplace le curseur rond. */
           if (el.closest('[data-candle]')) return;
           cursor.classList.add('is-expanded');
