@@ -1087,6 +1087,12 @@
     @media (prefers-reduced-motion: reduce) {
       .pf-cat-cover { transition: none; }
     }
+    /* Couvertures en graphique (Sephora, Maison Beauté) */
+    .pf-cat-cover.is-chart, .pf-next-cover.is-chart { padding: 0.6rem; }
+    .is-chart svg, .pf-fly svg { width: 100%; height: 100%; display: block; }
+    .pf-rail-thumb .is-chart { width: 100%; height: 100%; display: block; }
+    .pf-slide { margin: 0; }
+    .pf-slide-svg { width: 100%; height: auto; display: block; }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -1161,7 +1167,7 @@
       <button class="filter-btn" data-filter="campagne" data-i18n="portfolio.mkt.filterCampagne">Campagnes</button>
       <button class="filter-btn" data-filter="reporting" data-i18n="portfolio.mkt.filterReporting">Reporting</button>
       <button class="filter-btn" data-filter="community" data-i18n="portfolio.mkt.filterCommunity">Communauté</button>
-      <button class="filter-btn" data-filter="analyse">Analyse des Données</button>
+      <button class="filter-btn" data-filter="analyse" data-i18n="portfolio.mkt.filterAnalyse">Analyse des Données</button>
     </div>
     <ul class="pf-cat-grid">
       <li><a class="pf-cat-card" href="#engoo-dashboard" data-target="engoo-dashboard" data-cat="dashboard">
@@ -1171,16 +1177,75 @@
         <span class="pf-cat-fig"><span class="pf-cat-val">+93.3%</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p1Lbl">Vues sur 3 mois</span></span>
       </a></li>
       <li><a class="pf-cat-card" href="#bcg-beaute" data-target="bcg-beaute" data-cat="analyse">
-        <span class="pf-cat-cover is-type">8 495</span>
+        <span class="pf-cat-cover is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
+
+
+
+<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
+<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
+
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
+<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">QUESTION MARKS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
+<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
+<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 294</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
+<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 814</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK · DOGS</text>
+</g>
+</svg></span>
         <span class="pf-cat-meta"><span class="pf-cat-n">02</span> · <span data-i18n="portfolio.mkt.board.p2Cat">BCG · Beauty Analytics</span></span>
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span>
-        <span class="pf-cat-fig"><span class="pf-cat-val">8 495</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p2Lbl">Produits analysés</span></span>
+        <span class="pf-cat-fig"><span class="pf-cat-val"><span data-lang-show="fr">8 495</span><span data-lang-show="en">8,495</span></span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p2Lbl">Produits analysés</span></span>
       </a></li>
       <li><a class="pf-cat-card" href="#maison-beaute" data-target="maison-beaute" data-cat="analyse">
-        <span class="pf-cat-cover is-type">2 240</span>
+        <span class="pf-cat-cover is-chart"><svg class="pf-slide-svg" viewBox="0 0 720 405" aria-hidden="true" focusable="false">
+<rect x="0.5" y="0.5" width="719" height="404" fill="var(--mk-card)" stroke="var(--mk-border)"/>
+<rect x="0" y="0" width="720" height="62" fill="var(--mk-text)"/>
+<text data-lang-show="fr" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Diagnostic Client &amp; ROI Campagnes</text><text data-lang-show="en" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Customer Diagnostic &amp; Campaign ROI</text>
+<text data-lang-show="fr" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2 240 CLIENTS</text><text data-lang-show="en" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2,240 CUSTOMERS</text>
+<text data-lang-show="fr" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION PAR CAMPAGNE</text><text data-lang-show="en" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION BY CAMPAIGN</text>
+<text data-lang-show="fr" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><text data-lang-show="en" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><rect x="36" y="146" width="250.0" height="14" fill="var(--mk-accent)"/><text data-lang-show="fr" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14,9 %</text><text data-lang-show="en" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14.9%</text><text data-lang-show="fr" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 4</text><text data-lang-show="en" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 4</text><rect x="36" y="192" width="125.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7,5 %</text><text data-lang-show="en" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7.5%</text><text data-lang-show="fr" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 2</text><text data-lang-show="en" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 2</text><rect x="36" y="238" width="21.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1,3 %</text><text data-lang-show="en" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1.3%</text>
+<text data-lang-show="fr" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ACHATS PAR CANAL</text><text data-lang-show="en" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PURCHASES BY CHANNEL</text>
+<rect x="400" y="140" width="131.2" height="44" fill="var(--mk-accent)"/><text data-lang-show="fr" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46,2 %</text><text data-lang-show="en" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46.2%</text><text data-lang-show="fr" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Comptoir beauté</text><text data-lang-show="en" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Beauty counter</text><rect x="531.2" y="140" width="92.6" height="44" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32,6 %</text><text data-lang-show="en" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32.6%</text><text data-lang-show="fr" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><text data-lang-show="en" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><rect x="623.8000000000001" y="140" width="60.2" height="44" fill="var(--mk-border)"/><text data-lang-show="fr" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21,2 %</text><text data-lang-show="en" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21.2%</text><text data-lang-show="fr" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text><text data-lang-show="en" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text>
+<line x1="36" y1="284" x2="684" y2="284" stroke="var(--mk-border)"/>
+<text x="36" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">18x</text>
+<text data-lang-show="fr" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">DÉPENSE PREMIUM</text><text data-lang-show="en" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PREMIUM SPEND</text>
+<text data-lang-show="fr" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">39 $ (T1 Mass) → 708 $ (T4 Luxury)</text><text data-lang-show="en" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$39 (T1 Mass) → $708 (T4 Luxury)</text>
+<text x="400" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">3x</text>
+<text data-lang-show="fr" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CLIENTS ENGAGÉS</text><text data-lang-show="en" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ENGAGED CUSTOMERS</text>
+<text data-lang-show="fr" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">775 $ contre 255 $ en premium</text><text data-lang-show="en" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$775 vs $255 on premium lines</text>
+</svg></span>
         <span class="pf-cat-meta"><span class="pf-cat-n">03</span> · <span data-i18n="portfolio.mkt.board.p3Cat">Segmentation · ROI</span></span>
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span>
-        <span class="pf-cat-fig"><span class="pf-cat-val">2 240</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p3Lbl">Clients analysés</span></span>
+        <span class="pf-cat-fig"><span class="pf-cat-val"><span data-lang-show="fr">2 240</span><span data-lang-show="en">2,240</span></span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p3Lbl">Clients analysés</span></span>
       </a></li>
       <li><a class="pf-cat-card" href="#engoo-weekly" data-target="engoo-weekly" data-cat="reporting">
         <span class="pf-cat-cover"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" alt="" loading="lazy"></span>
@@ -1214,8 +1279,67 @@
     <nav class="pf-rail" aria-label="Projets">
       <p class="pf-rail-lbl" data-i18n="portfolio.mkt.board.readProjects">Projets</p>
       <a class="pf-rail-item" href="#engoo-dashboard" data-target="engoo-dashboard"><span class="pf-rail-thumb"><img src="assets/Excel_Engoo/Engoo Dashboard_FR.webp" alt="" loading="lazy"></span><span class="pf-rail-n">01</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p1Name">Engoo · Dashboard Xiaohongshu</span></a>
-      <a class="pf-rail-item" href="#bcg-beaute" data-target="bcg-beaute"><span class="pf-rail-thumb"><span class="is-type">8 495</span></span><span class="pf-rail-n">02</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></a>
-      <a class="pf-rail-item" href="#maison-beaute" data-target="maison-beaute"><span class="pf-rail-thumb"><span class="is-type">2 240</span></span><span class="pf-rail-n">03</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></a>
+      <a class="pf-rail-item" href="#bcg-beaute" data-target="bcg-beaute"><span class="pf-rail-thumb"><span class="is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
+
+
+
+<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
+<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
+
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
+<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">QUESTION MARKS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
+<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
+<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 294</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
+<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 814</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK · DOGS</text>
+</g>
+</svg></span></span><span class="pf-rail-n">02</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></a>
+      <a class="pf-rail-item" href="#maison-beaute" data-target="maison-beaute"><span class="pf-rail-thumb"><span class="is-chart"><svg class="pf-slide-svg" viewBox="0 0 720 405" aria-hidden="true" focusable="false">
+<rect x="0.5" y="0.5" width="719" height="404" fill="var(--mk-card)" stroke="var(--mk-border)"/>
+<rect x="0" y="0" width="720" height="62" fill="var(--mk-text)"/>
+<text data-lang-show="fr" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Diagnostic Client &amp; ROI Campagnes</text><text data-lang-show="en" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Customer Diagnostic &amp; Campaign ROI</text>
+<text data-lang-show="fr" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2 240 CLIENTS</text><text data-lang-show="en" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2,240 CUSTOMERS</text>
+<text data-lang-show="fr" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION PAR CAMPAGNE</text><text data-lang-show="en" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION BY CAMPAIGN</text>
+<text data-lang-show="fr" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><text data-lang-show="en" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><rect x="36" y="146" width="250.0" height="14" fill="var(--mk-accent)"/><text data-lang-show="fr" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14,9 %</text><text data-lang-show="en" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14.9%</text><text data-lang-show="fr" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 4</text><text data-lang-show="en" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 4</text><rect x="36" y="192" width="125.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7,5 %</text><text data-lang-show="en" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7.5%</text><text data-lang-show="fr" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 2</text><text data-lang-show="en" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 2</text><rect x="36" y="238" width="21.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1,3 %</text><text data-lang-show="en" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1.3%</text>
+<text data-lang-show="fr" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ACHATS PAR CANAL</text><text data-lang-show="en" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PURCHASES BY CHANNEL</text>
+<rect x="400" y="140" width="131.2" height="44" fill="var(--mk-accent)"/><text data-lang-show="fr" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46,2 %</text><text data-lang-show="en" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46.2%</text><text data-lang-show="fr" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Comptoir beauté</text><text data-lang-show="en" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Beauty counter</text><rect x="531.2" y="140" width="92.6" height="44" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32,6 %</text><text data-lang-show="en" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32.6%</text><text data-lang-show="fr" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><text data-lang-show="en" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><rect x="623.8000000000001" y="140" width="60.2" height="44" fill="var(--mk-border)"/><text data-lang-show="fr" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21,2 %</text><text data-lang-show="en" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21.2%</text><text data-lang-show="fr" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text><text data-lang-show="en" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text>
+<line x1="36" y1="284" x2="684" y2="284" stroke="var(--mk-border)"/>
+<text x="36" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">18x</text>
+<text data-lang-show="fr" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">DÉPENSE PREMIUM</text><text data-lang-show="en" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PREMIUM SPEND</text>
+<text data-lang-show="fr" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">39 $ (T1 Mass) → 708 $ (T4 Luxury)</text><text data-lang-show="en" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$39 (T1 Mass) → $708 (T4 Luxury)</text>
+<text x="400" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">3x</text>
+<text data-lang-show="fr" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CLIENTS ENGAGÉS</text><text data-lang-show="en" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ENGAGED CUSTOMERS</text>
+<text data-lang-show="fr" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">775 $ contre 255 $ en premium</text><text data-lang-show="en" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$775 vs $255 on premium lines</text>
+</svg></span></span><span class="pf-rail-n">03</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></a>
       <a class="pf-rail-item" href="#engoo-weekly" data-target="engoo-weekly"><span class="pf-rail-thumb"><img src="assets/Engoo_Weekly%20Report_FR/Diapositive1.webp" alt="" loading="lazy"></span><span class="pf-rail-n">04</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p4Name">Engoo · Rapport Hebdomadaire</span></a>
       <a class="pf-rail-item" href="#aiesec-yolo" data-target="aiesec-yolo"><span class="pf-rail-thumb"><img src="assets/yolo-camp-main-visual-en.webp" alt="" loading="lazy"></span><span class="pf-rail-n">05</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span></a>
       <a class="pf-rail-item" href="#guzheng-facebook" data-target="guzheng-facebook"><span class="pf-rail-thumb"><img src="assets/guzheng-club-recruitment-poster.webp" alt="" loading="lazy"></span><span class="pf-rail-n">06</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></a>
@@ -1238,7 +1362,7 @@
 
 
 <div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">01</span> · <span data-i18n="portfolio.mkt.board.p1Cat">Dashboard · Social Analytics</span></p><h2 class="pf-card-title">
-        Engoo, DMM.com Group —<br/>Dashboard de Performance des Réseaux Sociaux (Xiaohongshu)
+        <span data-lang-show="fr">Engoo, DMM.com Group —<br/>Dashboard de Performance des Réseaux Sociaux (Xiaohongshu)</span><span data-lang-show="en">Engoo, DMM.com Group —<br/>Social Media Performance Dashboard (Xiaohongshu)</span>
       </h2><div class="pf-res-stats pf-cordes pf-case-figs">
 <div class="pf-res-stat" style="--val:93.3">
 <span class="pf-stat-val">+93.3%</span>
@@ -1272,7 +1396,7 @@
            -->
 <!-- Lien de telechargement retire : le fichier assets/Engoo_XHS Dashboard_*.xlsx
              est absent du depot. Deposer le fichier puis retablir ce bouton. -->
-<a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-dashboard">Angle Data : architecture et méthodologie</a>
+<a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-dashboard"><span data-lang-show="fr">Angle Data : architecture et méthodologie</span><span data-lang-show="en">Data angle: architecture and methodology</span></a>
 </div></aside><div class="pf-case-main"><!-- Screenshot --><div style="margin:1.25rem 0;border-radius:8px;overflow:hidden;">
 <a data-i18n-href="experience.engoo.screenshot1" href="assets/Excel_Engoo/Engoo Dashboard_FR.webp" rel="noopener noreferrer" style="display:block;" target="_blank">
 <img alt="Dashboard KPIs – Engoo XHS" data-i18n-src="experience.engoo.screenshot1" loading="lazy" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.04)'" src="assets/Excel_Engoo/Engoo Dashboard_FR.webp" style="width:100%;border-radius:8px;display:block;cursor:pointer;transition:transform 0.4s ease;"/>
@@ -1353,7 +1477,50 @@
 <li><strong>格式是獨立於主題的變數：</strong>「短教程 + 簡潔視覺」轉型在相同主題下帶來 CTR +34%，唯有 A/B 測試才能正式驗證此因果關係。</li>
 </ul>
 </div>
-</div></details></div></div><a class="pf-next" data-target="bcg-beaute" href="#bcg-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></span><span class="pf-next-cover is-type">8 495</span></a></article>
+</div></details></div></div><a class="pf-next" data-target="bcg-beaute" href="#bcg-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></span><span class="pf-next-cover is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
+
+
+
+<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
+<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
+
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
+<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">QUESTION MARKS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
+<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
+<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
+<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 294</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS</text>
+</g>
+
+<g class="pf-bcg-quad">
+<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
+<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
+<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 814</text>
+<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
+<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK · DOGS</text>
+</g>
+</svg></span></a></article>
 <article class="pf-case" data-cat="analyse" id="bcg-beaute">
 
 
@@ -1368,10 +1535,10 @@
 <span data-lang-show="fr">Sephora — Intelligence Produit &amp; Stratégie de Portefeuille Beauté</span>
 <span data-lang-show="en">Sephora — Product Intelligence &amp; Beauty Portfolio Strategy</span>
 </h2><div class="pf-stats pf-case-figs">
-<div><span class="pf-stat-val">8 495</span><span class="pf-stat-lbl">Produits analysés</span></div>
-<div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl">Avis clients</span></div>
-<div><span class="pf-stat-val">4,23/5</span><span class="pf-stat-lbl">Note moyenne catalogue</span></div>
-<div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl">Matrice de portefeuille</span></div>
+<div><span class="pf-stat-val"><span data-lang-show="fr">8 495</span><span data-lang-show="en">8,495</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Produits analysés</span><span data-lang-show="en">Products analysed</span></span></div>
+<div><span class="pf-stat-val">32K+</span><span class="pf-stat-lbl"><span data-lang-show="fr">Avis clients</span><span data-lang-show="en">Customer reviews</span></span></div>
+<div><span class="pf-stat-val"><span data-lang-show="fr">4,23/5</span><span data-lang-show="en">4.23/5</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Note moyenne catalogue</span><span data-lang-show="en">Average catalogue rating</span></span></div>
+<div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl"><span data-lang-show="fr">Matrice de portefeuille</span><span data-lang-show="en">Portfolio matrix</span></span></div>
 </div><div class="pf-tags">
 <span class="pf-tag">BCG Matrix</span>
 <span class="pf-tag">Product Portfolio</span>
@@ -1381,15 +1548,17 @@
 <span class="pf-tag">Sephora</span>
 <span class="pf-tag">Python</span>
 </div></aside><div class="pf-case-main"><div class="pf-bcg">
-<svg aria-labelledby="bcg-t bcg-d" role="img" viewbox="0 0 560 392">
+<svg aria-labelledby="bcg-t bcg-d" role="img" viewBox="0 0 560 392">
 <title id="bcg-t">Matrice de portefeuille Sephora</title>
 <desc id="bcg-d">Répartition des 8 495 produits en quatre segments selon la satisfaction client et le volume d'avis : Hero 2 307 produits, Question Marks 1 801, Underperformers 2 294, Risk 1 814.</desc>
 <!-- Axes -->
 <line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
 <line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
 <!-- Légendes des axes -->
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
+<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
+          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
 <!-- Question Marks : forte satisfaction, faible visibilité -->
 <g class="pf-bcg-quad">
 <rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
@@ -1423,9 +1592,9 @@
 <text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK · DOGS</text>
 </g>
 </svg>
-<p class="pf-bcg-caption">Aire des cercles proportionnelle au nombre de produits. Les quatre segments totalisent 8 216 références, soit 96,8 % du catalogue analysé.</p>
+<p class="pf-bcg-caption"><span data-lang-show="fr">Aire des cercles proportionnelle au nombre de produits. Les quatre segments totalisent 8 216 références, soit 96,8 % du catalogue analysé.</span><span data-lang-show="en">Circle area is proportional to the number of products. The four segments total 8,216 references, or 96.8% of the catalogue analysed.</span></p>
 </div><div class="pf-case-lead"><p data-lang-show="fr">Comment distinguer, dans un catalogue Sephora de 8 495 produits, ceux à défendre des références à risque ? J'ai appliqué une matrice BCG croisant volume d'avis et note client pour classer le portefeuille en quatre segments et orienter les décisions marketing et commerciales.</p><p data-lang-show="en">How do you tell which of Sephora's 8,495 products to defend and which are at risk? I applied a BCG matrix crossing review volume and customer rating to sort the portfolio into four segments and guide marketing and commercial decisions.</p><p data-lang-show="zh">在 Sephora 8,495 項商品中，哪些該重點守護、哪些有風險？我以評論量與顧客評分建立 BCG 矩陣，將產品組合分為四個區塊，作為行銷與商業決策的依據。</p></div><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><div class="pf-star">
-<div class="pf-star-lbl">Contexte &amp; Problématique</div>
+<div class="pf-star-lbl"><span data-lang-show="fr">Contexte &amp; Problématique</span><span data-lang-show="en">Context &amp; Problem</span></div>
 <div data-lang-show="fr">
 <p class="pf-star-txt">Sephora propose un catalogue de <strong>8 495 produits</strong> couvrant Skincare, Fragrance, Makeup, Hair Care et Bath &amp; Body. Avec 32 000+ avis clients, un prix moyen de <strong>51,70 $</strong> et une note moyenne de <strong>4,23/5</strong>, comment distinguer les produits à défendre des SKUs à risque ? <strong>Objectif :</strong> appliquer une matrice BCG au portefeuille beauté pour orienter les décisions marketing et commerciales.</p>
 </div>
@@ -1433,7 +1602,7 @@
 <p class="pf-star-txt">Sephora's catalog spans <strong>8,495 products</strong> across Skincare, Fragrance, Makeup, Hair Care, and Bath &amp; Body. With 32,000+ customer reviews, an average price of <strong>$51.70</strong>, and an average rating of <strong>4.23/5</strong>, how do you distinguish which products to defend from which SKUs are at risk? <strong>Objective:</strong> apply a BCG matrix to the beauty portfolio to guide marketing and commercial decisions.</p>
 </div>
 </div><div class="pf-star pf-star--result">
-<div class="pf-star-lbl">BCG Portfolio Segmentation · 8 495 produits</div>
+<div class="pf-star-lbl"><span data-lang-show="fr">Segmentation BCG du Portefeuille · 8 495 produits</span><span data-lang-show="en">BCG Portfolio Segmentation · 8,495 products</span></div>
 <div data-lang-show="fr">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
 <li><strong>Hero (Stars) — 2 307 produits (27,2%) :</strong> Volume élevé + note élevée (≥ 4,29). Protéger, amplifier, mettre en avant. Top brand : Anastasia Beverly Hills.</li>
@@ -1464,7 +1633,23 @@
 <p class="pf-star-txt">Furthermore, the 32,000+ customer reviews contain structured demographic data (skin type, skin tone, eye colour) representing a directly exploitable resource for beauty campaign personalisation and lookalike audience construction in paid targeting.</p>
 <p class="pf-star-txt">Finally, the 1,814 Risk Dog products combine significant review volume with low satisfaction scores; prioritised remediation of these references is warranted to pre-empt the potential erosion of Sephora brand equity before negative signals reach a critical mass.</p>
 </div>
-</div></details></div></div><a class="pf-next" data-target="maison-beaute" href="#maison-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></span><span class="pf-next-cover is-type">2 240</span></a></article>
+</div></details></div></div><a class="pf-next" data-target="maison-beaute" href="#maison-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p3Name">Maison Beauté · Diagnostic Client</span></span><span class="pf-next-cover is-chart"><svg class="pf-slide-svg" viewBox="0 0 720 405" aria-hidden="true" focusable="false">
+<rect x="0.5" y="0.5" width="719" height="404" fill="var(--mk-card)" stroke="var(--mk-border)"/>
+<rect x="0" y="0" width="720" height="62" fill="var(--mk-text)"/>
+<text data-lang-show="fr" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Diagnostic Client &amp; ROI Campagnes</text><text data-lang-show="en" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Customer Diagnostic &amp; Campaign ROI</text>
+<text data-lang-show="fr" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2 240 CLIENTS</text><text data-lang-show="en" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2,240 CUSTOMERS</text>
+<text data-lang-show="fr" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION PAR CAMPAGNE</text><text data-lang-show="en" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION BY CAMPAIGN</text>
+<text data-lang-show="fr" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><text data-lang-show="en" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><rect x="36" y="146" width="250.0" height="14" fill="var(--mk-accent)"/><text data-lang-show="fr" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14,9 %</text><text data-lang-show="en" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14.9%</text><text data-lang-show="fr" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 4</text><text data-lang-show="en" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 4</text><rect x="36" y="192" width="125.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7,5 %</text><text data-lang-show="en" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7.5%</text><text data-lang-show="fr" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 2</text><text data-lang-show="en" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 2</text><rect x="36" y="238" width="21.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1,3 %</text><text data-lang-show="en" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1.3%</text>
+<text data-lang-show="fr" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ACHATS PAR CANAL</text><text data-lang-show="en" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PURCHASES BY CHANNEL</text>
+<rect x="400" y="140" width="131.2" height="44" fill="var(--mk-accent)"/><text data-lang-show="fr" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46,2 %</text><text data-lang-show="en" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46.2%</text><text data-lang-show="fr" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Comptoir beauté</text><text data-lang-show="en" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Beauty counter</text><rect x="531.2" y="140" width="92.6" height="44" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32,6 %</text><text data-lang-show="en" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32.6%</text><text data-lang-show="fr" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><text data-lang-show="en" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><rect x="623.8000000000001" y="140" width="60.2" height="44" fill="var(--mk-border)"/><text data-lang-show="fr" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21,2 %</text><text data-lang-show="en" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21.2%</text><text data-lang-show="fr" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text><text data-lang-show="en" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text>
+<line x1="36" y1="284" x2="684" y2="284" stroke="var(--mk-border)"/>
+<text x="36" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">18x</text>
+<text data-lang-show="fr" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">DÉPENSE PREMIUM</text><text data-lang-show="en" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PREMIUM SPEND</text>
+<text data-lang-show="fr" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">39 $ (T1 Mass) → 708 $ (T4 Luxury)</text><text data-lang-show="en" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$39 (T1 Mass) → $708 (T4 Luxury)</text>
+<text x="400" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">3x</text>
+<text data-lang-show="fr" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CLIENTS ENGAGÉS</text><text data-lang-show="en" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ENGAGED CUSTOMERS</text>
+<text data-lang-show="fr" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">775 $ contre 255 $ en premium</text><text data-lang-show="en" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$775 vs $255 on premium lines</text>
+</svg></span></a></article>
 <article class="pf-case" data-cat="analyse" id="maison-beaute">
 
 
@@ -1480,10 +1665,10 @@
 <span data-lang-show="fr">Maison Beauté — Diagnostic Personnalité Client &amp; ROI Campagnes</span>
 <span data-lang-show="en">Maison Beauté — Customer Personality &amp; Campaign ROI Diagnostic</span>
 </h2><div class="pf-stats pf-case-figs">
-<div><span class="pf-stat-val">2 240</span><span class="pf-stat-lbl">Clients analysés</span></div>
-<div><span class="pf-stat-val">18x</span><span class="pf-stat-lbl">Écart Mass vs Luxury spend</span></div>
-<div><span class="pf-stat-val">14,9%</span><span class="pf-stat-lbl">Conversion · Campagne Response</span></div>
-<div><span class="pf-stat-val">3x</span><span class="pf-stat-lbl">Valeur client engagé vs non-engagé</span></div>
+<div><span class="pf-stat-val"><span data-lang-show="fr">2 240</span><span data-lang-show="en">2,240</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Clients analysés</span><span data-lang-show="en">Customers analysed</span></span></div>
+<div><span class="pf-stat-val">18x</span><span class="pf-stat-lbl"><span data-lang-show="fr">Écart Mass vs Luxury spend</span><span data-lang-show="en">Mass vs Luxury spend gap</span></span></div>
+<div><span class="pf-stat-val"><span data-lang-show="fr">14,9%</span><span data-lang-show="en">14.9%</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Conversion · Campagne Response</span><span data-lang-show="en">Conversion · Response campaign</span></span></div>
+<div><span class="pf-stat-val">3x</span><span class="pf-stat-lbl"><span data-lang-show="fr">Valeur client engagé vs non-engagé</span><span data-lang-show="en">Engaged vs unengaged customer value</span></span></div>
 </div><div class="pf-tags">
 <span class="pf-tag">Customer Segmentation</span>
 <span class="pf-tag">Campaign ROI</span>
@@ -1492,11 +1677,27 @@
 <span class="pf-tag">Luxury Marketing</span>
 <span class="pf-tag">Consumer Insights</span>
 <span class="pf-tag">Python</span>
-</div></aside><div class="pf-case-main"><div class="pf-case-lead"><p data-lang-show="fr">Maison Beauté, marque de parfumerie et soin haut de gamme, n'avait pas de stratégie pour cibler ses 2 240 clients. J'ai segmenté la clientèle par revenu et par canal et mesuré le ROI de 6 campagnes : la campagne Response convertit à 14,9%, et les clients engagés dépensent 3 fois plus en produits premium.</p><p data-lang-show="en">Maison Beauté, a premium fragrance and skincare brand, had no strategy to target its 2,240 customers. I segmented them by income and channel and measured the ROI of 6 campaigns: the Response campaign converts at 14.9%, and engaged customers spend 3 times more on premium products.</p><p data-lang-show="zh">高端香氛與保養品牌 Maison Beauté 對 2,240 位顧客缺乏明確的經營策略。我依收入與通路進行分群，並衡量 6 檔活動的 ROI：Response 活動轉換率達 14.9%，高參與顧客在高端商品上的消費是一般顧客的 3 倍。</p></div><details class="pf-case-more" open><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><p class="pf-card-body" style="font-style:italic;">
+</div></aside><div class="pf-case-main"><figure class="pf-slide"><svg class="pf-slide-svg" viewBox="0 0 720 405" role="img" aria-label="Maison Beauté : conversion par campagne, achats par canal et écarts de dépense premium">
+<rect x="0.5" y="0.5" width="719" height="404" fill="var(--mk-card)" stroke="var(--mk-border)"/>
+<rect x="0" y="0" width="720" height="62" fill="var(--mk-text)"/>
+<text data-lang-show="fr" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Diagnostic Client &amp; ROI Campagnes</text><text data-lang-show="en" x="36" y="39" font-family="'Cormorant Garamond', serif" font-size="24" fill="var(--mk-bg)">Maison Beauté · Customer Diagnostic &amp; Campaign ROI</text>
+<text data-lang-show="fr" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2 240 CLIENTS</text><text data-lang-show="en" x="684" y="38" text-anchor="end" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-bg)">2,240 CUSTOMERS</text>
+<text data-lang-show="fr" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION PAR CAMPAGNE</text><text data-lang-show="en" x="36" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CONVERSION BY CAMPAIGN</text>
+<text data-lang-show="fr" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><text data-lang-show="en" x="36" y="138" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Response</text><rect x="36" y="146" width="250.0" height="14" fill="var(--mk-accent)"/><text data-lang-show="fr" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14,9 %</text><text data-lang-show="en" x="296.0" y="159" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">14.9%</text><text data-lang-show="fr" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 4</text><text data-lang-show="en" x="36" y="184" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 4</text><rect x="36" y="192" width="125.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7,5 %</text><text data-lang-show="en" x="171.8" y="205" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">7.5%</text><text data-lang-show="fr" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campagne 2</text><text data-lang-show="en" x="36" y="230" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">Campaign 2</text><rect x="36" y="238" width="21.8" height="14" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1,3 %</text><text data-lang-show="en" x="67.8" y="251" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">1.3%</text>
+<text data-lang-show="fr" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ACHATS PAR CANAL</text><text data-lang-show="en" x="400" y="104" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PURCHASES BY CHANNEL</text>
+<rect x="400" y="140" width="131.2" height="44" fill="var(--mk-accent)"/><text data-lang-show="fr" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46,2 %</text><text data-lang-show="en" x="400" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">46.2%</text><text data-lang-show="fr" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Comptoir beauté</text><text data-lang-show="en" x="400" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Beauty counter</text><rect x="531.2" y="140" width="92.6" height="44" fill="var(--mk-accent2)"/><text data-lang-show="fr" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32,6 %</text><text data-lang-show="en" x="531.2" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">32.6%</text><text data-lang-show="fr" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><text data-lang-show="en" x="531.2" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Web</text><rect x="623.8000000000001" y="140" width="60.2" height="44" fill="var(--mk-border)"/><text data-lang-show="fr" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21,2 %</text><text data-lang-show="en" x="623.8000000000001" y="212" font-family="'Cormorant Garamond', serif" font-size="22" fill="var(--mk-text)">21.2%</text><text data-lang-show="fr" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text><text data-lang-show="en" x="623.8000000000001" y="230" font-family="Outfit, sans-serif" font-size="12" fill="var(--mk-muted)">Catalogue</text>
+<line x1="36" y1="284" x2="684" y2="284" stroke="var(--mk-border)"/>
+<text x="36" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">18x</text>
+<text data-lang-show="fr" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">DÉPENSE PREMIUM</text><text data-lang-show="en" x="118" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">PREMIUM SPEND</text>
+<text data-lang-show="fr" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">39 $ (T1 Mass) → 708 $ (T4 Luxury)</text><text data-lang-show="en" x="118" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$39 (T1 Mass) → $708 (T4 Luxury)</text>
+<text x="400" y="342" font-family="'Cormorant Garamond', serif" font-size="48" fill="var(--mk-accent)">3x</text>
+<text data-lang-show="fr" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">CLIENTS ENGAGÉS</text><text data-lang-show="en" x="468" y="322" font-family="Outfit, sans-serif" font-size="12" letter-spacing="1.6" fill="var(--mk-muted)">ENGAGED CUSTOMERS</text>
+<text data-lang-show="fr" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">775 $ contre 255 $ en premium</text><text data-lang-show="en" x="468" y="344" font-family="Outfit, sans-serif" font-size="14" fill="var(--mk-text)">$775 vs $255 on premium lines</text>
+</svg></figure><div class="pf-case-lead"><p data-lang-show="fr">Maison Beauté, marque de parfumerie et soin haut de gamme, n'avait pas de stratégie pour cibler ses 2 240 clients. J'ai segmenté la clientèle par revenu et par canal et mesuré le ROI de 6 campagnes : la campagne Response convertit à 14,9%, et les clients engagés dépensent 3 fois plus en produits premium.</p><p data-lang-show="en">Maison Beauté, a premium fragrance and skincare brand, had no strategy to target its 2,240 customers. I segmented them by income and channel and measured the ROI of 6 campaigns: the Response campaign converts at 14.9%, and engaged customers spend 3 times more on premium products.</p><p data-lang-show="zh">高端香氛與保養品牌 Maison Beauté 對 2,240 位顧客缺乏明確的經營策略。我依收入與通路進行分群，並衡量 6 檔活動的 ROI：Response 活動轉換率達 14.9%，高參與顧客在高端商品上的消費是一般顧客的 3 倍。</p></div><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><p class="pf-card-body" style="font-style:italic;">
 <span data-lang-show="fr">Analyse stratégique de 2 240 clients · 6 campagnes · Corrélation revenu – dépense premium · Segmentation omni-canal</span>
 <span data-lang-show="en">Strategic analysis of 2,240 customers · 6 campaigns · Income – premium spend correlation · Omni-channel segmentation</span>
 </p><div class="pf-star">
-<div class="pf-star-lbl">Contexte &amp; Problématique</div>
+<div class="pf-star-lbl"><span data-lang-show="fr">Contexte &amp; Problématique</span><span data-lang-show="en">Context &amp; Problem</span></div>
 <div data-lang-show="fr">
 <p class="pf-star-txt">Maison Beauté, marque de parfumerie et soin haut de gamme, dispose d'un portefeuille de 2 240 clients sans stratégie claire pour identifier les segments à fort potentiel. <strong>Objectif :</strong> diagnostiquer la personnalité client, mesurer le ROI de 6 campagnes et identifier les leviers de croissance du chiffre d'affaires premium (fragrances &amp; skincare luxe).</p>
 </div>
@@ -1527,7 +1728,7 @@
 </ul>
 </div>
 </div><div class="pf-star pf-star--result">
-<div class="pf-star-lbl">Résultats</div>
+<div class="pf-star-lbl"><span data-lang-show="fr">Résultats</span><span data-lang-show="en">Results</span></div>
 <div data-lang-show="fr">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
 <li><strong>Gradient de prémiumisation (18x) :</strong> La dépense premium moyenne grimpe de <strong>39 $</strong> (T1 Mass) à <strong>708 $</strong> (T4 Luxury). Le revenu explique 59% de la variance de la dépense premium.</li>
@@ -1579,7 +1780,7 @@
 <span class="pf-tag">Xiaohongshu</span>
 <span class="pf-tag">Bilingual</span>
 </div><div class="pf-btns">
-<a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-weekly">Angle Data : méthodologie et impact</a>
+<a class="pf-btn pf-btn--ghost" href="portfolio-data.html#xhs-weekly"><span data-lang-show="fr">Angle Data : méthodologie et impact</span><span data-lang-show="en">Data angle: methodology and impact</span></a>
 </div></aside><div class="pf-case-main"><!-- FR slides --><div data-lang-show="fr">
 <div class="ig-carousel-wrap">
 <button aria-label="Précédent" class="ig-nav ig-nav--prev">‹</button>
@@ -1626,7 +1827,7 @@
 
 
 
-<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">05</span> · <span data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique</span></p><h2 class="pf-card-title">AIESEC – Camp International YOLO</h2><div class="pf-stats pf-case-figs">
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">05</span> · <span data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique</span></p><h2 class="pf-card-title"><span data-lang-show="fr">AIESEC – Camp International YOLO</span><span data-lang-show="en">AIESEC – YOLO International Camp</span></h2><div class="pf-stats pf-case-figs">
 <div><span class="pf-stat-val">15</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statVol">Volontaires recrutés</span></div>
 <div><span class="pf-stat-val">60+</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statPart">Participants</span></div>
 <div><span class="pf-stat-val">+53.7%</span><span class="pf-stat-lbl" data-i18n="portfolio.mkt.aiesec.statBudget">Objectif budgétaire dépassé</span></div>
@@ -1749,22 +1950,22 @@
 
   <!-- ── Autres travaux ──────────────────────────────── -->
   <section class="pf-extras" id="autres-travaux">
-    <h2 class="pf-extras-title">Autres Travaux</h2>
-    <p class="pf-extras-intro">Travaux de design réalisés dans un cadre associatif ou personnel.</p>
+    <h2 class="pf-extras-title"><span data-lang-show="fr">Autres Travaux</span><span data-lang-show="en">Other Work</span></h2>
+    <p class="pf-extras-intro"><span data-lang-show="fr">Travaux de design réalisés dans un cadre associatif ou personnel.</span><span data-lang-show="en">Design work created for student associations or as personal projects.</span></p>
     <ul class="pf-extras-list">
       <li class="pf-extra">
-        <span class="pf-extra-tag">Design · Affiche</span>
-        <h3 class="pf-extra-title">Affiche - Thème Penwards 2024</h3>
-        <p class="pf-extra-desc">Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024). Exercice de composition et de typographie, sans participation au concours.</p>
+        <span class="pf-extra-tag"><span data-lang-show="fr">Design · Affiche</span><span data-lang-show="en">Design · Poster</span></span>
+        <h3 class="pf-extra-title"><span data-lang-show="fr">Affiche - Thème Penwards 2024</span><span data-lang-show="en">Poster - Penwards 2024 Theme</span></h3>
+        <p class="pf-extra-desc"><span data-lang-show="fr">Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024). Exercice de composition et de typographie, sans participation au concours.</span><span data-lang-show="en">Poster created as a personal project, inspired by the theme of the 18th Penwards packaging design competition (2024). An exercise in composition and typography, without entering the competition.</span></p>
         <div class="pf-extra-tags">
           <span class="pf-tag">Visual Design</span>
           <span class="pf-tag">Typography</span>
         </div>
       </li>
       <li class="pf-extra">
-        <span class="pf-extra-tag">Design · Supports événementiels</span>
-        <h3 class="pf-extra-title">Club de Kyudo de NCCU - Badge Nominatif</h3>
-        <p class="pf-extra-desc">Conception de badges nominatifs pour les activités du club de kyudo de NCCU, déclinaison en deux coloris avec maquette de présentation.</p>
+        <span class="pf-extra-tag"><span data-lang-show="fr">Design · Supports événementiels</span><span data-lang-show="en">Design · Event Materials</span></span>
+        <h3 class="pf-extra-title"><span data-lang-show="fr">Club de Kyudo de NCCU - Badge Nominatif</span><span data-lang-show="en">NCCU Kyudo Club - Name Badge</span></h3>
+        <p class="pf-extra-desc"><span data-lang-show="fr">Conception de badges nominatifs pour les activités du club de kyudo de NCCU, déclinaison en deux coloris avec maquette de présentation.</span><span data-lang-show="en">Name badges designed for NCCU kyudo club activities, in two colourways with a presentation mockup.</span></p>
         <div class="pf-extra-tags">
           <span class="pf-tag">Visual Design</span>
           <span class="pf-tag">Print</span>
@@ -1839,7 +2040,7 @@
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => applyLang(btn.dataset.lang));
     });
-    applyLang('fr');
+    applyLang((() => { try { return localStorage.getItem('pf-lang') || 'fr'; } catch (e) { return 'fr'; } })());
   </script>
 
   <script>
@@ -1997,6 +2198,8 @@
       crumbN.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(ids.length).padStart(2, '0');
       art.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
       window.scrollTo(0, 0);
+      /* Une navigation par ancre fait défiler le navigateur après coup. */
+      requestAnimationFrame(() => window.scrollTo(0, 0));
     }
     function showCatalog() {
       document.body.classList.remove('is-reading');
@@ -2046,7 +2249,7 @@
     function open(id, card) {
       catalogY = window.scrollY;
       lastCard = card;
-      const img = card.querySelector('.pf-cat-cover img');
+      const img = card.querySelector('.pf-cat-cover > img, .pf-cat-cover > svg');
       if (reduced || !img) { swap(id); return; }
       const from = img.getBoundingClientRect();
       const fly = document.createElement('div');
@@ -2090,7 +2293,8 @@
     /* À l'arrivée par un lien profond, le navigateur saute à l'ancre après
        ce script : on ramène la lecture en haut du projet. */
     window.addEventListener('load', () => {
-      if (document.body.classList.contains('is-reading')) window.scrollTo(0, 0);
+      if (!document.body.classList.contains('is-reading')) return;
+      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, 0)));
     });
 
     /* ── 4. Curseur sur mesure &amp; aperçu flottant ─────── */
@@ -2111,7 +2315,9 @@
 
       document.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
 
+      const enLang = () => !!document.querySelector('.lang-btn.is-active[data-lang="en"]');
       function expand(text) {
+        if (enLang()) text = { 'Voir': 'View', 'Agrandir': 'Zoom' }[text] || text;
         cursor.classList.add('is-expanded');
         label.textContent = text;
       }
