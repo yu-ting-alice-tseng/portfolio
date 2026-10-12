@@ -165,7 +165,16 @@ Order proof cards within a skill by importance (descending):
 
 ---
 
-## 17. Pas de Nom Chinois sur le Site
+## 17. Ligne Entreprise d'une Expérience
+
+- Format : **nom de l'entreprise (avec le groupe si besoin), puis `·`, puis une courte description de l'entreprise**.
+  - ✅ `leboncoin, Adevinta · Régie publicitaire`
+  - ❌ `leboncoin · Adevinta` (le groupe n'est pas une description)
+- Ce qui suit `·` décrit toujours l'activité de l'entreprise, jamais un autre nom.
+
+---
+
+## 18. Pas de Nom Chinois sur le Site
 
 - Les candidatures visent des entreprises hors de Taïwan : le site affiche uniquement **Yu-Ting Tseng**, jamais le nom chinois.
 - Cela vaut pour toutes les pages et toutes les langues, y compris la version chinoise.

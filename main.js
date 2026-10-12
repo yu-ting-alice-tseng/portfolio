@@ -677,7 +677,7 @@
         leboncoin: {
           period: "07/2026 – 01/2027",
           title: "Traffic Manager / AdOps",                 // point1-4 → index.html | mkPoint → marketing.html
-          company: "leboncoin · Adevinta",
+          company: "leboncoin, Adevinta · Régie publicitaire",
           point1: "Programmation et déploiement de 20+ campagnes display multi-formats via les outils d'ad serving.",
           point2: "Pilotage et optimisation de 10+ campagnes en simultané pour atteindre et dépasser les objectifs contractuels.",
           point3: "Rapports de diffusion dès le lancement et bilans détaillés avec analyse des KPIs.",
@@ -691,7 +691,7 @@
           dataPoint3: "Paramétrer 20+ campagnes display multi-formats dans les outils d'ad serving.",
           dataPoint4: "Restituer les résultats de campagnes au pôle commercial, aux clients et à la régie.",
           finTitle: "Traffic Manager / AdOps (Stage)",  // → finance.html
-          finCompany: "leboncoin · Adevinta",
+          finCompany: "leboncoin, Adevinta · Régie publicitaire",
           finPoint1: "Suivi de 10+ campagnes simultanées et contrôle de l'atteinte, voire du dépassement, des objectifs contractuels.",
           finPoint2: "Mise en ligne de 20+ campagnes display multi-formats conformément aux engagements pris auprès des annonceurs.",
           finPoint3: "Rapports de diffusion dès le lancement et bilans de fin de campagne : synthèse des performances et des KPIs.",
@@ -1674,7 +1674,7 @@
         leboncoin: {
           period: "07/2026 – 01/2027",
           title: "Traffic Manager / AdOps",
-          company: "leboncoin · Adevinta",
+          company: "leboncoin, Adevinta · Advertising Sales House",
           point1: "Set-up and deployment of 20+ multi-format display campaigns via ad serving tools.",
           point2: "Management and optimisation of 10+ simultaneous campaigns to meet and exceed contractual objectives.",
           point3: "Delivery reports from launch and detailed end-of-campaign reviews with KPI analysis.",
@@ -1688,7 +1688,7 @@
           dataPoint3: "Configure 20+ multi-format display campaigns in ad serving tools.",
           dataPoint4: "Report campaign results back to the sales team, clients and the sales house.",
           finTitle: "Traffic Manager / AdOps (Internship)",
-          finCompany: "leboncoin · Adevinta",
+          finCompany: "leboncoin, Adevinta · Advertising Sales House",
           finPoint1: "Monitored 10+ simultaneous campaigns and checked that contractual objectives were met or exceeded.",
           finPoint2: "Launched 20+ multi-format display campaigns in line with the commitments made to advertisers.",
           finPoint3: "Produced delivery reports from launch and end-of-campaign reviews summarising performance and KPIs.",
@@ -2640,7 +2640,7 @@
         leboncoin: {
           period: "2026/07 –2027/01",
           title: "Traffic Manager / AdOps",
-          company: "leboncoin · Adevinta",
+          company: "leboncoin, Adevinta · 廣告代理商",
           point1: "透過 ad serving 工具設定並上線 20+ 檔多格式 display 廣告活動。",
           point2: "同時管理並優化 10+ 檔廣告活動，達成並超越合約目標。",
           point3: "自上線起製作投放報告，並撰寫含 KPI 分析的完整結案報告。",
@@ -2654,7 +2654,7 @@
           dataPoint3: "在 ad serving 工具中設定 20+ 檔多格式 display 廣告活動。",
           dataPoint4: "向業務部門、客戶與廣告平台回報廣告活動成果。",
           finTitle: "Traffic Manager / AdOps（實習）",
-          finCompany: "leboncoin · Adevinta",
+          finCompany: "leboncoin, Adevinta · 廣告代理商",
           finPoint1: "追蹤 10+ 檔同時進行的廣告活動，確認合約目標達成甚至超越。",
           finPoint2: "依照對廣告主的承諾，上線 20+ 檔多格式 display 廣告活動。",
           finPoint3: "自上線起製作投放報告，並撰寫結案報告：彙整成效與 KPI。",
@@ -4563,7 +4563,7 @@
         {
           type: "Stage",
           title: "Traffic Manager / AdOps – Mise en ligne des campagnes display",
-          org: "leboncoin · Adevinta",
+          org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Mise en ligne des campagnes display et suivi opérationnel de leur diffusion sur un portefeuille de campagnes."],
           actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
@@ -4577,7 +4577,7 @@
           data:      { text: "Source of the delivery data used to produce go-live reports and end-of-campaign reviews." },
         },
         proofs: [
-          { type: "Internship", title: "Traffic Manager / AdOps – Display Campaign Go-Live", org: "leboncoin · Adevinta", meta: [], points: ["Launched display campaigns and monitored their delivery across a portfolio of campaigns."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+          { type: "Internship", title: "Traffic Manager / AdOps – Display Campaign Go-Live", org: "leboncoin, Adevinta · Advertising Sales House", meta: [], points: ["Launched display campaigns and monitored their delivery across a portfolio of campaigns."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
         ],
       },
     },
@@ -4592,7 +4592,7 @@
         {
           type: "Stage",
           title: "Traffic Manager / AdOps – Diffusion & reporting des campagnes",
-          org: "leboncoin · Adevinta",
+          org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Suivi de la diffusion des campagnes display et production des rapports de mise en ligne et des bilans de campagnes."],
           actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
@@ -4606,7 +4606,7 @@
           data:      { text: "Extracting and consolidating delivery and performance data for go-live reports and end-of-campaign reviews." },
         },
         proofs: [
-          { type: "Internship", title: "Traffic Manager / AdOps – Campaign Delivery & Reporting", org: "leboncoin · Adevinta", meta: [], points: ["Monitored display campaign delivery and produced go-live reports and end-of-campaign reviews."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+          { type: "Internship", title: "Traffic Manager / AdOps – Campaign Delivery & Reporting", org: "leboncoin, Adevinta · Advertising Sales House", meta: [], points: ["Monitored display campaign delivery and produced go-live reports and end-of-campaign reviews."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
         ],
       },
     },
@@ -4622,7 +4622,7 @@
         {
           type: "Stage",
           title: "Traffic Manager / AdOps – Suivi d'un portefeuille de campagnes",
-          org: "leboncoin · Adevinta",
+          org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Suivi de l'avancement et des échéances des campagnes display en lien avec les équipes commerciales."],
           actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
@@ -4637,7 +4637,7 @@
           finance:   { text: "Tracking deadlines and deliverables across a portfolio of campaigns, ensuring commitments made to advertisers are met." },
         },
         proofs: [
-          { type: "Internship", title: "Traffic Manager / AdOps – Campaign Portfolio Tracking", org: "leboncoin · Adevinta", meta: [], points: ["Tracked the progress and deadlines of display campaigns together with the sales teams."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+          { type: "Internship", title: "Traffic Manager / AdOps – Campaign Portfolio Tracking", org: "leboncoin, Adevinta · Advertising Sales House", meta: [], points: ["Tracked the progress and deadlines of display campaigns together with the sales teams."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
         ],
       },
     },
@@ -4653,7 +4653,7 @@
         {
           type: "Stage",
           title: "Traffic Manager / AdOps – Coordination avec les équipes commerciales",
-          org: "leboncoin · Adevinta",
+          org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Échanges quotidiens avec les équipes commerciales pour assurer la fluidité de la communication entre l'annonceur et la régie."],
           actions: [{ label: "Voir l'expérience", href: "#exp-leboncoin" }],
@@ -4668,7 +4668,7 @@
           finance:   { text: "Daily interface with the sales teams, ensuring the reliability and traceability of the information shared with the client." },
         },
         proofs: [
-          { type: "Internship", title: "Traffic Manager / AdOps – Coordination with Sales Teams", org: "leboncoin · Adevinta", meta: [], points: ["Daily exchanges with the sales teams to keep communication smooth between the advertiser and the sales house."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
+          { type: "Internship", title: "Traffic Manager / AdOps – Coordination with Sales Teams", org: "leboncoin, Adevinta · Advertising Sales House", meta: [], points: ["Daily exchanges with the sales teams to keep communication smooth between the advertiser and the sales house."], actions: [{ label: "View experience", href: "#exp-leboncoin" }] },
         ],
       },
     },
