@@ -5123,3 +5123,31 @@ html[data-theme="dark"] body.page-finance { background-image: radial-gradient(ci
 .page-marketing .accent { background-image: none !important; }
 body.page-portfolio-marketing::before,
 body.page-portfolio-marketing::after { display: none; }
+
+/* ════════════════════════════════════════════════════
+   § 43 — Pinceau (ink-cursor.js)
+   Trait d'encre derrière le curseur et goutte au clic,
+   dans la couleur de la page. Le curseur natif reste.
+   ════════════════════════════════════════════════════ */
+body { --trail: var(--accent); }
+body.page-marketing { --trail: var(--text); }
+body.page-portfolio-marketing { --trail: var(--mk-text); }
+body.page-portfolio-data { --trail: var(--da-accent); }
+body.page-portfolio-finance { --trail: var(--fi-accent); }
+.ink-trail {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 997;
+  pointer-events: none;
+}
+.ink-drop {
+  position: fixed;
+  z-index: 997;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .ink-trail, .ink-drop { display: none !important; }
+}

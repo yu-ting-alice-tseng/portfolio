@@ -1120,6 +1120,41 @@
     .pf-cover-wrap:hover .pf-candle-color { transform: none; }
     .pf-cover-hit { position: absolute; z-index: 2; display: block; }
     .pf-case-cover .pf-img-caption { margin-top: 0.5rem; }
+    /* ── Votre visite : le CTR du visiteur, replié dans un coin ── */
+    .pf-visit { position: fixed; left: 1.4rem; bottom: 1.2rem; z-index: 160; font-family: 'Outfit', sans-serif; }
+    .pf-visit[hidden] { display: none; }
+    .pf-visit-tab {
+      position: relative; display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.42rem 0.8rem; border: 1px solid var(--mk-border); border-radius: 2px;
+      background: rgba(var(--mk-bg-rgb), 0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      color: var(--mk-muted); font: inherit; cursor: pointer;
+      opacity: 0.72; transition: opacity 0.25s ease, border-color 0.25s ease;
+    }
+    .pf-visit-tab:hover, .pf-visit.is-open .pf-visit-tab { opacity: 1; border-color: var(--mk-accent); }
+    .pf-visit-k { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.18em; }
+    .pf-visit-tab .pf-visit-ctr { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--mk-accent); line-height: 1; }
+    .pf-visit-plus {
+      position: absolute; right: 0.35rem; top: -0.2rem; font-size: 0.68rem; font-weight: 600; color: var(--mk-accent);
+      opacity: 0; pointer-events: none;
+    }
+    .pf-visit-plus.is-on { animation: pf-visit-plus 0.9s ease-out; }
+    @keyframes pf-visit-plus { 0% { opacity: 0; transform: translateY(4px); } 25% { opacity: 1; } 100% { opacity: 0; transform: translateY(-12px); } }
+    .pf-visit-panel {
+      position: absolute; left: 0; bottom: calc(100% + 0.5rem); width: 268px;
+      padding: 0.9rem 1rem 0.85rem; background: var(--mk-card); border: 1px solid var(--mk-border);
+      opacity: 0; transform: translateY(6px); pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.3s cubic-bezier(.22,1,.36,1);
+    }
+    .pf-visit.is-open .pf-visit-panel { opacity: 1; transform: none; pointer-events: auto; }
+    .pf-visit-title { margin: 0 0 0.6rem; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mk-muted); }
+    .pf-visit-stats { display: flex; gap: 1.3rem; margin: 0; }
+    .pf-visit-stats div { display: flex; flex-direction: column-reverse; }
+    .pf-visit-stats dt { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mk-muted); }
+    .pf-visit-stats dd { margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; line-height: 1.05; color: var(--mk-text); }
+    .pf-visit-stats dd.is-accent { color: var(--mk-accent); }
+    .pf-visit-note { margin: 0.7rem 0 0; font-size: 0.7rem; line-height: 1.5; color: var(--mk-muted); }
+    @media (max-width: 540px) { .pf-visit { left: 0.8rem; bottom: 0.8rem; } }
+    @media (prefers-reduced-motion: reduce) { .pf-visit-plus.is-on { animation: none; } }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -1973,6 +2008,24 @@
   </section>
 
 
+  <!-- ── Votre visite : impressions, clics et CTR du visiteur ── -->
+  <aside class="pf-visit" hidden>
+    <div class="pf-visit-panel" id="pf-visit-panel">
+      <p class="pf-visit-title"><span data-lang-show="fr">Votre visite</span><span data-lang-show="en">Your visit</span></p>
+      <dl class="pf-visit-stats">
+        <div><dt>Impressions</dt><dd class="pf-visit-imp">0</dd></div>
+        <div><dt><span data-lang-show="fr">Clics</span><span data-lang-show="en">Clicks</span></dt><dd class="pf-visit-clk">0</dd></div>
+        <div><dt>CTR</dt><dd class="pf-visit-ctr is-accent">0 %</dd></div>
+      </dl>
+      <p class="pf-visit-note"><span data-lang-show="fr">Les indicateurs que je suis en AdOps, appliqués à votre visite : une fiche vue compte une impression, une fiche ouverte un clic. Rien ne quitte votre navigateur.</span><span data-lang-show="en">The metrics I track in AdOps, applied to your visit: a project card seen counts as an impression, a card opened as a click. Nothing leaves your browser.</span></p>
+    </div>
+    <button class="pf-visit-tab" type="button" aria-expanded="false" aria-controls="pf-visit-panel">
+      <span class="pf-visit-k">CTR</span>
+      <span class="pf-visit-ctr">0 %</span>
+      <span class="pf-visit-plus" aria-hidden="true">+1</span>
+    </button>
+  </aside>
+
   <!-- ── Page footer ─────────────────────────────────── -->
   <footer class="pf-footer">
     <a href="marketing.html" class="pf-footer-link" data-i18n="portfolio.mkt.footerBack">← Retour à Marketing</a>
@@ -2498,5 +2551,67 @@
     }
   })();
   </script>
+  <!-- ── Votre visite ─────────────────────────────────── -->
+  <script>
+  (function () {
+    /* Une fiche du catalogue vue compte une impression (au plus une par fiche
+       et par affichage du catalogue), une fiche ouverte compte un clic.
+       Les chiffres restent dans sessionStorage : rien n'est envoyé. */
+    const box = document.querySelector('.pf-visit');
+    const cards = [...document.querySelectorAll('.pf-cat-card')];
+    if (!box || !cards.length) return;
+    const tab = box.querySelector('.pf-visit-tab');
+    const plus = box.querySelector('.pf-visit-plus');
+    let st = { imp: 0, clk: 0 };
+    try { st = Object.assign(st, JSON.parse(sessionStorage.getItem('pf-visit') || '{}')); } catch (e) {}
+    const save = () => { try { sessionStorage.setItem('pf-visit', JSON.stringify(st)); } catch (e) {} };
+    const en = () => !!document.querySelector('.lang-btn.is-active[data-lang="en"]');
+    function fmt(v) {
+      const s = v.toFixed(1);
+      return en() ? s + '%' : s.replace('.', ',') + ' %';
+    }
+    function render() {
+      const ctr = st.imp ? (st.clk / st.imp) * 100 : 0;
+      box.querySelectorAll('.pf-visit-ctr').forEach(el => { el.textContent = fmt(ctr); });
+      box.querySelector('.pf-visit-imp').textContent = st.imp;
+      box.querySelector('.pf-visit-clk').textContent = st.clk;
+      if (st.imp) box.hidden = false;
+    }
+    let seen = new Set();
+    const io = new IntersectionObserver(entries => {
+      if (document.body.classList.contains('is-reading')) return;
+      entries.forEach(ent => {
+        const id = ent.target.dataset.target;
+        if (!ent.isIntersecting || seen.has(id)) return;
+        if (ent.target.parentElement.classList.contains('is-hidden')) return;
+        seen.add(id); st.imp++; save(); render();
+      });
+    }, { threshold: 0.5 });
+    cards.forEach(c => io.observe(c));
+    /* Retour au catalogue : un nouvel affichage, de nouvelles impressions possibles. */
+    new MutationObserver(() => {
+      if (!document.body.classList.contains('is-reading')) {
+        seen = new Set();
+        cards.forEach(c => { io.unobserve(c); io.observe(c); });
+      }
+    }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    cards.forEach(c => c.addEventListener('click', () => {
+      st.clk++; save(); render();
+      plus.classList.remove('is-on'); void plus.offsetWidth; plus.classList.add('is-on');
+    }));
+    tab.addEventListener('click', () => {
+      const open = box.classList.toggle('is-open');
+      tab.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', e => {
+      if (!box.contains(e.target) && box.classList.contains('is-open')) {
+        box.classList.remove('is-open'); tab.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => setTimeout(render, 0)));
+    render();
+  })();
+  </script>
+  <script src="ink-cursor.js"></script>
 </body>
 </html>
