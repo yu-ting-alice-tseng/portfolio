@@ -5185,3 +5185,6 @@ body.page-portfolio-finance .filter-btn:hover:not(.is-active) { background: tran
 body.page-portfolio-marketing .filter-btn.is-active,
 body.page-portfolio-data .filter-btn.is-active,
 body.page-portfolio-finance .filter-btn.is-active { box-shadow: none !important; }
+
+/* ── Marketing : pas de filet bleu-violet hérité en tête des sections alternées ── */
+.page-marketing .section-alt::before { display: none !important; }
