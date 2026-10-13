@@ -5125,29 +5125,63 @@ body.page-portfolio-marketing::before,
 body.page-portfolio-marketing::after { display: none; }
 
 /* ════════════════════════════════════════════════════
-   § 43 — Pinceau (ink-cursor.js)
-   Trait d'encre derrière le curseur et goutte au clic,
-   dans la couleur de la page. Le curseur natif reste.
+   § 43 — Lavis (ink-cursor.js, pages marketing uniquement)
+   Curseur goutte d'encre, lavis pâle autour de l'élément
+   survolé, ondes d'encre au clic, dans l'encre de la page.
    ════════════════════════════════════════════════════ */
-body { --trail: var(--accent); }
 body.page-marketing { --trail: var(--text); }
 body.page-portfolio-marketing { --trail: var(--mk-text); }
-body.page-portfolio-data { --trail: var(--da-accent); }
-body.page-portfolio-finance { --trail: var(--fi-accent); }
-.ink-trail {
+body.has-ink-dot,
+body.has-ink-dot a,
+body.has-ink-dot button,
+body.has-ink-dot summary,
+body.has-ink-dot label { cursor: none; }
+body.has-ink-dot input,
+body.has-ink-dot textarea,
+body.has-ink-dot select { cursor: auto; }
+.ink-dot {
   position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 997;
+  left: 0; top: 0;
+  z-index: 1000;
+  width: 0; height: 0;
   pointer-events: none;
 }
-.ink-drop {
-  position: fixed;
-  z-index: 997;
-  pointer-events: none;
-  transform-origin: 50% 50%;
+.ink-dot svg {
+  position: absolute;
+  left: -12px; top: -12px;
+  width: 24px; height: 24px;
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1), opacity 0.2s ease;
 }
+.ink-dot.is-over svg { transform: scale(0.62); }
+.ink-dot.is-hidden svg { opacity: 0; }
+.ink-wash {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 996;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition: opacity 0.45s ease;
+}
+.ink-wash svg { display: block; overflow: visible; opacity: 0.11; transform: scale(0.97); transition: transform 0.6s cubic-bezier(.22,1,.36,1); }
+.ink-wash.is-on { opacity: 1; }
+.ink-wash.is-on svg { transform: none; }
+html[data-theme="dark"] .ink-wash { mix-blend-mode: screen; }
+html[data-theme="dark"] .ink-wash svg { opacity: 0.22; }
+.ink-ripple {
+  position: fixed;
+  z-index: 996;
+  pointer-events: none;
+}
+.ink-ripple circle { transform-box: fill-box; transform-origin: center; }
 @media (hover: none), (prefers-reduced-motion: reduce) {
-  .ink-trail, .ink-drop { display: none !important; }
+  .ink-dot, .ink-wash, .ink-ripple { display: none !important; }
 }
+
+/* ── Filtres des portfolios : ni bleu ni halo hérités de l'index ── */
+body.page-portfolio-marketing .filter-btn:hover:not(.is-active) { background: transparent !important; border-color: transparent !important; color: var(--mk-text) !important; }
+body.page-portfolio-data .filter-btn:hover:not(.is-active) { background: transparent !important; border-color: transparent !important; color: var(--da-text) !important; }
+body.page-portfolio-finance .filter-btn:hover:not(.is-active) { background: transparent !important; border-color: transparent !important; color: var(--fi-text) !important; }
+body.page-portfolio-marketing .filter-btn.is-active,
+body.page-portfolio-data .filter-btn.is-active,
+body.page-portfolio-finance .filter-btn.is-active { box-shadow: none !important; }

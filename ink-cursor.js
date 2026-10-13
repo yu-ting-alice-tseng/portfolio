@@ -1,127 +1,141 @@
 /* ════════════════════════════════════════════════════
-   Pinceau : le curseur laisse un trait d'encre qui sèche
+   Lavis : le curseur est une goutte d'encre
    ────────────────────────────────────────────────────
-   - Le trait s'affine quand la main va vite et s'épaissit
-     quand elle ralentit, comme la pression d'un pinceau.
-   - Un clic dépose une goutte d'encre qui s'étale dans le
-     papier puis s'efface.
-   - La couleur suit la palette de la page : variable CSS
-     --trail posée sur <body> (voir style.css § 43).
-   - Rien sur écran tactile ni en mouvement réduit ; le
-     curseur natif n'est jamais masqué par ce script.
+   Chargé uniquement par marketing.html et
+   portfolio-marketing.html (direction encre et papier).
+   - Curseur : un petit point d'encre aux bords vivants,
+     qui suit la main avec une légère inertie.
+   - Survol d'un élément cliquable : le papier boit
+     l'encre autour de lui, un lavis pâle s'épanouit sur
+     son pourtour sans jamais couvrir son contenu.
+   - Clic : la goutte tombe dans l'eau, des ondes d'encre
+     s'élargissent puis s'effacent.
+   - La couleur vient de --trail (style.css § 43).
+   - Rien au toucher ni en mouvement réduit. Le curseur
+     natif réapparaît dans les champs de saisie. Sur les
+     travaux de création, la flamme de la bougie
+     (portfolio-marketing) remplace la goutte.
    ════════════════════════════════════════════════════ */
 (function () {
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!fine || reduced) return;
 
-  const LIFE = 800;          // durée de vie d'un point du trait (ms)
-  const MAX_W = 6.5, MIN_W = 1.1;
-  const ALPHA = 0.5;
-
-  const canvas = document.createElement('canvas');
-  canvas.className = 'ink-trail';
-  canvas.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-
-  let dpr = 1, color = '#1a1815';
-  function resize() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = window.innerHeight * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  function readColor() {
+  const NS = 'http://www.w3.org/2000/svg';
+  const CLICKABLE = 'a[href], button, summary, label, [role="button"], [role="link"], .pf-cat-card';
+  const TYPING = 'input, textarea, select, [contenteditable="true"]';
+  let color = '#1a1815';
+  const readColor = () => {
     const c = getComputedStyle(document.body).getPropertyValue('--trail').trim();
     if (c) color = c;
-  }
-  resize();
+    document.documentElement.style.setProperty('--ink-color', color);
+  };
   readColor();
-  window.addEventListener('resize', resize);
-  /* Changement de thème : la couleur est relue. */
   new MutationObserver(readColor).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-  /* La flamme de la bougie a la priorité : pas de trait sur les œuvres éclairées. */
-  const candle = () => {
-    const c = document.querySelector('.pf-cursor.is-candle');
-    return !!c;
-  };
+  /* Filtres partagés : bords de la goutte, lavis, ondes. */
+  const defs = document.createElementNS(NS, 'svg');
+  defs.setAttribute('width', '0'); defs.setAttribute('height', '0');
+  defs.setAttribute('aria-hidden', 'true');
+  defs.style.position = 'absolute';
+  defs.innerHTML =
+    '<filter id="ink-edge" x="-50%" y="-50%" width="200%" height="200%">' +
+      '<feTurbulence type="fractalNoise" baseFrequency="0.22" numOctaves="2" seed="3" result="n"/>' +
+      '<feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter>' +
+    '<filter id="ink-wash" x="-30%" y="-30%" width="160%" height="160%">' +
+      '<feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="9" result="n"/>' +
+      '<feDisplacementMap in="SourceGraphic" in2="n" scale="22"/><feGaussianBlur stdDeviation="11"/></filter>' +
+    '<filter id="ink-ring" x="-30%" y="-30%" width="160%" height="160%">' +
+      '<feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="5" result="n"/>' +
+      '<feDisplacementMap in="SourceGraphic" in2="n" scale="7"/><feGaussianBlur stdDeviation="0.5"/></filter>';
+  document.body.appendChild(defs);
 
-  const pts = [];
-  let running = false, last = null;
+  /* La goutte */
+  const dot = document.createElement('div');
+  dot.className = 'ink-dot';
+  dot.setAttribute('aria-hidden', 'true');
+  dot.innerHTML = '<svg viewBox="-12 -12 24 24"><circle r="5" fill="var(--ink-color)" filter="url(#ink-edge)"/></svg>';
+  document.body.appendChild(dot);
+  document.body.classList.add('has-ink-dot');
+
+  /* Le lavis de survol */
+  const wash = document.createElement('div');
+  wash.className = 'ink-wash';
+  wash.setAttribute('aria-hidden', 'true');
+  wash.innerHTML = '<svg><rect fill="none" stroke="var(--ink-color)" filter="url(#ink-wash)"/></svg>';
+  document.body.appendChild(wash);
+  const washSvg = wash.querySelector('svg'), washRect = wash.querySelector('rect');
+
+  let mx = -100, my = -100, dx = -100, dy = -100, target = null, shown = false;
+  const candle = () => !!document.querySelector('.pf-cursor.is-candle');
 
   window.addEventListener('mousemove', e => {
-    const t = performance.now();
-    if (candle()) { last = null; return; }
-    let w = MAX_W;
-    if (last) {
-      const dist = Math.hypot(e.clientX - last.x, e.clientY - last.y);
-      const dt = Math.max(1, t - last.t);
-      const v = dist / dt;                         // px par ms
-      const target = Math.max(MIN_W, MAX_W - v * 2.6);
-      w = last.w + (target - last.w) * 0.35;       // la pression varie sans à-coups
-      if (dist < 1.5) return;
-    }
-    last = { x: e.clientX, y: e.clientY, t, w };
-    pts.push(last);
-    if (!running) { running = true; requestAnimationFrame(draw); }
+    mx = e.clientX; my = e.clientY;
+    if (!shown) { dx = mx; dy = my; shown = true; }
+    const t = e.target;
+    const typing = t.closest && t.closest(TYPING);
+    dot.classList.toggle('is-hidden', !!typing || candle());
+    const hit = !typing && t.closest ? t.closest(CLICKABLE) : null;
+    setTarget(hit && !hit.closest('[data-candle] .pf-img-wrap') ? hit : null);
   }, { passive: true });
-  document.addEventListener('mouseleave', () => { last = null; });
-  /* Le défilement déplace la page sous le trait : on repart d'un trait neuf. */
-  window.addEventListener('scroll', () => { last = null; }, { passive: true });
+  document.addEventListener('mouseleave', () => { dot.classList.add('is-hidden'); setTarget(null); });
+  document.addEventListener('mouseenter', () => dot.classList.remove('is-hidden'));
 
-  function draw(now) {
-    ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
-    while (pts.length && now - pts[0].t > LIFE) pts.shift();
-    ctx.strokeStyle = color;
-    /* Chaque segment va du milieu du précédent au milieu du suivant, en
-       courbe : les segments se raccordent bout à bout, sans recouvrement,
-       donc sans points plus sombres aux jointures. */
-    ctx.lineCap = 'butt';
-    ctx.lineJoin = 'round';
-    for (let i = 1; i < pts.length; i++) {
-      const a = pts[i - 1], b = pts[i];
-      if (b.t - a.t > 120) continue;               // levée du pinceau
-      const p0 = i > 1 && a.t - pts[i - 2].t <= 120 ? pts[i - 2] : a;
-      const age = (now - b.t) / LIFE;
-      ctx.globalAlpha = ALPHA * Math.pow(1 - age, 1.6);
-      ctx.lineWidth = b.w * (1 - age * 0.45);
-      ctx.beginPath();
-      ctx.moveTo((p0.x + a.x) / 2, (p0.y + a.y) / 2);
-      ctx.quadraticCurveTo(a.x, a.y, (a.x + b.x) / 2, (a.y + b.y) / 2);
-      ctx.stroke();
-    }
-    ctx.globalAlpha = 1;
-    if (pts.length) requestAnimationFrame(draw);
-    else { running = false; ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr); }
+  function setTarget(el) {
+    if (el === target) return;
+    target = el;
+    dot.classList.toggle('is-over', !!el);
+    if (el) { placeWash(); wash.classList.add('is-on'); }
+    else wash.classList.remove('is-on');
+  }
+  function placeWash() {
+    /* Sur une fiche du catalogue, le lavis entoure sa couverture. */
+    const box = target.matches('.pf-cat-card') ? (target.querySelector('.pf-cat-cover') || target) : target;
+    const r = box.getBoundingClientRect();
+    const sw = Math.max(10, Math.min(30, Math.min(r.width, r.height) * 0.22));
+    const pad = sw * 1.6;
+    const w = r.width + pad * 2, h = r.height + pad * 2;
+    wash.style.transform = `translate(${r.left - pad}px, ${r.top - pad}px)`;
+    washSvg.setAttribute('width', w); washSvg.setAttribute('height', h);
+    washRect.setAttribute('x', pad - sw / 2); washRect.setAttribute('y', pad - sw / 2);
+    washRect.setAttribute('width', r.width + sw); washRect.setAttribute('height', r.height + sw);
+    washRect.setAttribute('rx', Math.min(18, sw));
+    washRect.setAttribute('stroke-width', sw);
   }
 
-  /* Goutte d'encre au clic : une tache qui boit le papier, puis s'efface. */
-  let seed = 1;
+  (function loop() {
+    /* Légère inertie : la goutte suit la main comme l'encre suit le pinceau. */
+    dx += (mx - dx) * 0.35; dy += (my - dy) * 0.35;
+    dot.style.transform = `translate(${dx}px, ${dy}px)`;
+    if (target) {
+      if (!target.isConnected || !target.getClientRects().length) setTarget(null);
+      else placeWash();
+    }
+    requestAnimationFrame(loop);
+  })();
+
+  /* Clic : la goutte tombe dans l'eau. */
   window.addEventListener('pointerdown', e => {
-    if (e.pointerType !== 'mouse' || e.button !== 0) return;
-    if (candle()) return;
-    seed = (seed % 97) + 3;
-    const size = 64;
+    if (e.pointerType !== 'mouse' || e.button !== 0 || candle()) return;
+    if (e.target.closest && e.target.closest(TYPING)) return;
+    const s = 150;
     const d = document.createElement('div');
-    d.className = 'ink-drop';
+    d.className = 'ink-ripple';
     d.setAttribute('aria-hidden', 'true');
-    d.style.left = (e.clientX - size / 2) + 'px';
-    d.style.top = (e.clientY - size / 2) + 'px';
+    d.style.left = (e.clientX - s / 2) + 'px';
+    d.style.top = (e.clientY - s / 2) + 'px';
     d.innerHTML =
-      `<svg width="${size}" height="${size}" viewBox="-32 -32 64 64">` +
-      `<defs><filter id="ink-f${seed}" x="-50%" y="-50%" width="200%" height="200%">` +
-      `<feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="3" seed="${seed}" result="n"/>` +
-      `<feDisplacementMap in="SourceGraphic" in2="n" scale="9"/><feGaussianBlur stdDeviation="0.6"/></filter></defs>` +
-      `<g filter="url(#ink-f${seed})" fill="${color}">` +
-      `<circle r="15" opacity="0.16"/><circle r="7.5" opacity="0.5"/></g>` +
-      `<circle cx="${(seed % 2 ? 1 : -1) * 17}" cy="${(seed % 3 ? -1 : 1) * 11}" r="1.6" fill="${color}" opacity="0.45"/>` +
-      `</svg>`;
+      `<svg width="${s}" height="${s}" viewBox="${-s / 2} ${-s / 2} ${s} ${s}">` +
+      '<g fill="none" stroke="var(--ink-color)" filter="url(#ink-ring)">' +
+      '<circle class="r1" r="16" stroke-width="1.9"/><circle class="r2" r="16" stroke-width="1.5"/><circle class="r3" r="16" stroke-width="1.2"/></g>' +
+      '<circle class="core" r="6" fill="var(--ink-color)" filter="url(#ink-edge)"/></svg>';
     document.body.appendChild(d);
-    d.animate(
-      [{ transform: 'scale(0.35)', opacity: 0.95 }, { transform: 'scale(1)', opacity: 0.85, offset: 0.25 }, { transform: 'scale(1.08)', opacity: 0 }],
-      { duration: 1000, easing: 'cubic-bezier(.2,.8,.3,1)', fill: 'forwards' }
-    ).finished.then(() => d.remove());
+    const ring = (sel, delay, to, op) => d.querySelector(sel).animate(
+      [{ transform: 'scale(0.3)', opacity: op }, { transform: `scale(${to})`, opacity: 0 }],
+      { duration: 1100, delay, easing: 'cubic-bezier(.15,.7,.3,1)', fill: 'both' });
+    ring('.r1', 0, 1.2, 0.7); ring('.r2', 140, 2.4, 0.45);
+    ring('.r3', 280, 3.9, 0.28).finished.then(() => d.remove());
+    d.querySelector('.core').animate([{ transform: 'scale(1.3)', opacity: 0.75 }, { transform: 'scale(0.6)', opacity: 0 }],
+      { duration: 700, easing: 'ease-out', fill: 'forwards' });
   });
 })();

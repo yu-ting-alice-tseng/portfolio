@@ -567,9 +567,8 @@
     }
 
     /* ── Curseur sur mesure ────────────────────────────── */
-    /* Un réticule à l'encre ; au survol d'un élément cliquable, quatre
-       coins vermillon viennent l'encadrer, comme un viseur qui fait la mise
-       au point. Rien ne recouvre le contenu. */
+    /* Le curseur courant est la goutte d'encre d'ink-cursor.js ; cet élément
+       ne porte plus que la flamme de la bougie, sur les travaux de création. */
     .pf-cursor {
       position: fixed;
       top: 0; left: 0;
@@ -577,48 +576,13 @@
       pointer-events: none;
       display: grid;
       place-items: center;
-      width: 17px; height: 17px;
+      width: 26px; height: 36px;
       transform: translate(-50%, -50%);
-      transition: width 0.25s cubic-bezier(.22,1,.36,1), height 0.25s cubic-bezier(.22,1,.36,1), opacity 0.3s ease;
       opacity: 0;
+      transition: opacity 0.25s ease;
     }
-    .pf-cursor::before, .pf-cursor::after {
-      content: ""; position: absolute; background: var(--mk-text);
-    }
-    .pf-cursor::before { left: 50%; top: 0; bottom: 0; width: 1px; transform: translateX(-50%); }
-    .pf-cursor::after  { top: 50%; left: 0; right: 0; height: 1px; transform: translateY(-50%); }
-    .pf-cursor.is-active { opacity: 1; }
-    .pf-cursor.is-expanded { width: 11px; height: 11px; }
-    .pf-cursor.is-expanded::before, .pf-cursor.is-expanded::after { background: var(--mk-accent); }
+    .pf-cursor.is-active.is-candle { opacity: 1; }
     .pf-cursor-label { display: none; }
-
-    .pf-frame {
-      position: fixed;
-      top: 0; left: 0;
-      z-index: 998;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.2s ease,
-                  transform 0.28s cubic-bezier(.22,1,.36,1),
-                  width 0.28s cubic-bezier(.22,1,.36,1),
-                  height 0.28s cubic-bezier(.22,1,.36,1);
-    }
-    .pf-frame.is-on { opacity: 1; }
-    .pf-frame i {
-      position: absolute;
-      width: var(--pf-k, 14px); height: var(--pf-k, 14px);
-      border: 0 solid var(--mk-accent);
-    }
-    .pf-frame i:nth-child(1) { left: 0;  top: 0;    border-left-width: 1.5px;  border-top-width: 1.5px; }
-    .pf-frame i:nth-child(2) { right: 0; top: 0;    border-right-width: 1.5px; border-top-width: 1.5px; }
-    .pf-frame i:nth-child(3) { left: 0;  bottom: 0; border-left-width: 1.5px;  border-bottom-width: 1.5px; }
-    .pf-frame i:nth-child(4) { right: 0; bottom: 0; border-right-width: 1.5px; border-bottom-width: 1.5px; }
-    .pf-frame-label {
-      position: absolute; left: 0; bottom: 100%; margin-bottom: 6px;
-      font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 600;
-      letter-spacing: 0.18em; text-transform: uppercase; color: var(--mk-accent);
-      white-space: nowrap;
-    }
     /* Le curseur natif ne disparaît que si le curseur sur mesure est actif */
     body.has-custom-cursor,
     body.has-custom-cursor a,
@@ -642,7 +606,6 @@
       width: 26px;
       height: 36px;
     }
-    .pf-cursor.is-candle::before, .pf-cursor.is-candle::after { display: none; }
     .pf-cursor.is-candle .pf-flame { display: block; }
     .pf-cursor.is-candle .pf-cursor-label { display: none; }
     @keyframes pf-flamme {
@@ -749,7 +712,7 @@
 
     /* ── Écrans tactiles : pas de curseur ni d'aperçu ──── */
     @media (hover: none) {
-      .pf-cursor, .pf-frame { display: none !important; }
+      .pf-cursor { display: none !important; }
       body.has-custom-cursor,
       body.has-custom-cursor a,
       body.has-custom-cursor button { cursor: auto; }
@@ -769,7 +732,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       .pf-grain { display: none; }
-      .pf-cursor, .pf-frame { display: none !important; }
+      .pf-cursor { display: none !important; }
       body.has-custom-cursor,
       body.has-custom-cursor a,
       body.has-custom-cursor button { cursor: auto; }
@@ -2361,7 +2324,7 @@
       requestAnimationFrame(() => requestAnimationFrame(() => jump(0)));
     });
 
-    /* ── 4. Curseur sur mesure : réticule et cadre de visée ── */
+    /* ── 4. Bougie : la flamme sur les travaux de création ── */
     if (fine && !reduced) {
       const cursor  = document.querySelector('.pf-cursor');
       const label   = document.querySelector('.pf-cursor-label');
@@ -2378,70 +2341,8 @@
 
       document.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
 
-      const enLang = () => !!document.querySelector('.lang-btn.is-active[data-lang="en"]');
-
-      /* Le cadre de visée : quatre coins posés autour de l'élément survolé. */
-      const frame = document.createElement('div');
-      frame.className = 'pf-frame';
-      frame.setAttribute('aria-hidden', 'true');
-      frame.innerHTML = '<i></i><i></i><i></i><i></i><span class="pf-frame-label"></span>';
-      document.body.appendChild(frame);
-      const frameLbl = frame.querySelector('.pf-frame-label');
-      let target = null, framing = false;
-
-      function place() {
-        const r = target.getBoundingClientRect();
-        const pad = 6;
-        const w = r.width + pad * 2, h = r.height + pad * 2;
-        frame.style.setProperty('--pf-k', Math.max(6, Math.min(14, Math.min(w, h) / 3)) + 'px');
-        frame.style.width = w + 'px';
-        frame.style.height = h + 'px';
-        frame.style.transform = `translate(${r.left - pad}px, ${r.top - pad}px)`;
-      }
-      /* Tant qu'un élément est visé, le cadre le suit (défilement, mise en
-         page) et se retire dès qu'il n'est plus survolé ou plus affiché. */
-      function track() {
-        if (!target) { framing = false; return; }
-        if (!target.isConnected || !target.matches(':hover') || !target.getClientRects().length) { collapse(); framing = false; return; }
-        place();
-        requestAnimationFrame(track);
-      }
-      function expand(text, el) {
-        if (enLang()) text = { 'Voir': 'View', 'Agrandir': 'Zoom' }[text] || text;
-        cursor.classList.add('is-expanded');
-        frameLbl.textContent = text || '';
-        if (!el) return;
-        const first = !frame.classList.contains('is-on');
-        target = el;
-        if (first) {
-          /* Première visée : le cadre apparaît en place, sans glisser depuis l'ancienne. */
-          frame.style.transition = 'opacity 0.2s ease';
-          place();
-          frame.getBoundingClientRect();
-          frame.style.transition = '';
-        }
-        frame.classList.add('is-on');
-        if (!framing) { framing = true; requestAnimationFrame(track); }
-      }
-      function collapse() {
-        cursor.classList.remove('is-expanded');
-        frame.classList.remove('is-on');
-        target = null;
-      }
-
-      /* Catalogue : curseur « Voir » sur chaque fiche */
-      cards.forEach(card => {
-        card.addEventListener('mouseenter', () => expand('Voir', card.querySelector('.pf-cat-cover')));
-        card.addEventListener('mouseleave', collapse);
-      });
-
-      /* Images des cartes : curseur « Agrandir » */
-      /* Les travaux de création sont exclus : ils reçoivent la flamme. */
-      document.querySelectorAll('.pf-case img, .pf-img-wrap img').forEach(img => {
-        if (img.closest('[data-candle]')) return;
-        img.addEventListener('mouseenter', () => expand('Agrandir', img));
-        img.addEventListener('mouseleave', collapse);
-      });
+      /* Le survol des éléments cliquables est rendu par ink-cursor.js (lavis). */
+      function collapse() {}
 
       /* ── Bougie : les travaux de création se rallument sous la flamme ── */
       /* Règle de portée : seules les affiches, identités visuelles et
@@ -2536,18 +2437,6 @@
         })(0);
       }
 
-      /* Liens et boutons : le cadre se pose autour, sans libellé */
-      document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          if (el.closest('.pf-cat-card')) return;
-          /* Sur un travail de création, la flamme remplace le curseur rond. */
-          if (el.closest('[data-candle]')) return;
-          /* Dans la frise, le cadre vise la vignette, pas toute la ligne. */
-          const visee = el.querySelector('.pf-rail-thumb') || el;
-          expand(el.classList.contains('pf-cover-hit') ? 'Agrandir' : '', visee);
-        });
-        el.addEventListener('mouseleave', collapse);
-      });
     }
   })();
   </script>
