@@ -177,6 +177,7 @@ Order proof cards within a skill by importance (descending):
   - Tout texte visible existe en français et en anglais (clé i18n dans `main.js` ou paires `data-lang-show`), y compris dans les SVG et les chiffres (`8 495` / `8,495`).
   - Ouvrir une fiche fait voler sa couverture jusqu'à la couverture identique en tête du projet (élément `[data-land]`), qui reste masquée pendant le vol : une seule image, qui se pose exactement à sa place. Tout nouveau projet doit avoir cette couverture d'arrivée, et le défilement du script reste immédiat (`behavior: 'instant'`), car `scroll-behavior: smooth` fausserait la mesure. Sans JavaScript ou en `prefers-reduced-motion`, tout reste lisible sans animation.
   - Ajouter un projet : une fiche dans `.pf-cat-grid`, une vignette dans `.pf-rail`, un `<article class="pf-case">` avec son lien `.pf-next`, et mettre à jour le lien « Projet suivant » du projet précédent.
+- **Séparation des sections de `marketing.html` : grecque chinoise (回紋).** Deux filets d'encre et, au centre, deux spirales carrées de grecque à l'encre encadrant un losange vermillon évidé ; les filets s'ouvrent depuis le centre puis le motif se pose. Tout ornement ajouté sur les pages marketing reste dans ce répertoire classique chinois (grecque, sceau, lavis), jamais un fleuron occidental.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
 ---

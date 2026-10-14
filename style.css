@@ -4819,7 +4819,7 @@ html[data-theme="dark"] .page-marketing .mk-grain { mix-blend-mode: screen; }
   box-shadow: none !important;
 }
 
-/* — Séparation des sections : fleuron à la feuille d'orchidée — */
+/* — Séparation des sections : filets d'encre et motif de grecque chinoise (回紋) — */
 .mk-sep { display: none; }
 .page-marketing .mk-sep {
   display: flex;
@@ -4832,8 +4832,9 @@ html[data-theme="dark"] .page-marketing .mk-grain { mix-blend-mode: screen; }
 .mk-sep-filet { flex: 1; height: 6px; min-width: 0; }
 .mk-sep-filet path { fill: var(--eau); }
 .mk-sep-orn { flex: none; }
-.mk-sep-orn .feuille { fill: var(--text); }
+.mk-sep-orn .huiwen { fill: none; stroke: var(--text); stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; }
 .mk-sep-orn .coeur { fill: var(--accent); }
+.mk-sep-orn .jour { fill: var(--bg); }
 /* les filets s'ouvrent depuis le centre, le fleuron se pose ensuite */
 .page-marketing .mk-sep .mk-sep-filet:first-child { clip-path: inset(0 0 0 100%); }
 .page-marketing .mk-sep .mk-sep-filet:last-child  { clip-path: inset(0 100% 0 0); }
@@ -5188,3 +5189,19 @@ body.page-portfolio-finance .filter-btn.is-active { box-shadow: none !important;
 
 /* ── Marketing : pas de filet bleu-violet hérité en tête des sections alternées ── */
 .page-marketing .section-alt::before { display: none !important; }
+
+/* ── Marketing : surfaces encore bleu nuit en thème sombre, puces bleues ── */
+html[data-theme="dark"] .page-marketing .skills-block,
+html[data-theme="dark"] .page-marketing .skill-card,
+html[data-theme="dark"] .page-marketing .course-chip,
+html[data-theme="dark"] .page-marketing .nav-dropdown,
+html[data-theme="dark"] .page-marketing .skip-link,
+html[data-theme="dark"] .page-marketing .skill-preview {
+  background: var(--surface) !important;
+  border-color: var(--border-subtle) !important;
+}
+.page-marketing .edu-degree-chip,
+.page-marketing .edu-degree-chip--minor {
+  background: var(--accent-soft) !important;
+  border-color: var(--border-subtle) !important;
+}
