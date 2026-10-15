@@ -190,6 +190,7 @@ Order proof cards within a skill by importance (descending):
   - **séparations pincées** : quand le toit se pose, les deux filets d'encre vibrent comme une corde pincée puis se calment ; un survol les pince à nouveau ;
   - **bandeau de 21 cordes** (`.mk-guzheng`, `marketing.html` uniquement, entre le contact et le pied de page) : cordes horizontales, chevalets (雁柱) en diagonale dont celui du milieu en vermillon ; la main ou le doigt qui traverse une corde la fait vibrer ; légende FR/EN « Effleurez les cordes du guzheng » ;
   - **son coupé par défaut**, jamais de lecture automatique : il ne s'active que par le bouton « Activer le son » (gamme pentatonique en ré, synthèse dans le navigateur, aucun fichier audio) ;
+  - **puces des expériences en chevalets (雁柱)** sur `marketing.html` : la première puce de l'expérience la plus récente de chaque frise en vermillon ;
   - en `prefers-reduced-motion`, rien ne vibre.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
