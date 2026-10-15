@@ -5356,3 +5356,24 @@ html[data-theme="dark"] .page-marketing .contact-form textarea {
 .mk-corde-pied { position: absolute; left: 0; top: -6px; width: 100%; height: 12px; overflow: visible; }
 .mk-corde-pied path { fill: none; stroke: var(--border-subtle); stroke-width: 1; vector-effect: non-scaling-stroke; transition: stroke 0.4s ease; }
 .mk-corde-pied.is-pincee path { stroke: var(--accent); stroke-opacity: 0.8; }
+/* Puce de compétence sélectionnée : vermillon plein, sans dégradé rose-violet */
+.page-marketing .skill-card.is-skill-active,
+html[data-theme="dark"] .page-marketing .skill-card.is-skill-active {
+  background: var(--accent) !important;
+  background-image: none !important;
+  color: var(--surface) !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+}
+html[data-theme="dark"] .page-marketing .skill-card.is-skill-active { color: var(--text) !important; }
+/* Derniers reliquats bleus et violets de la page marketing, ramenés à la palette */
+.page-marketing .experience-filter,
+html[data-theme="dark"] .page-marketing .experience-filter { border-color: var(--border-subtle) !important; }
+.page-marketing .experience-filter.is-active,
+html[data-theme="dark"] .page-marketing .experience-filter.is-active { box-shadow: none !important; border-color: var(--accent) !important; }
+.page-marketing .skill-preview { border-color: var(--border-subtle) !important; }
+.page-marketing .proof-card { border-left-color: var(--border-subtle) !important; }
+.page-marketing .timeline-item,
+html[data-theme="dark"] .page-marketing .timeline-item { border-left-color: var(--border-subtle) !important; }
+.page-marketing .edu-degree-chip--minor,
+html[data-theme="dark"] .page-marketing .edu-degree-chip--minor { color: var(--text-soft) !important; }
