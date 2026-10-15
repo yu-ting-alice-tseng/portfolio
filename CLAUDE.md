@@ -183,6 +183,8 @@ Order proof cards within a skill by importance (descending):
   - **coins de fenêtre ajourée (窗櫺角花)** : grecque en équerre aux quatre angles de la carte de profil, des certifications et des distinctions (masque CSS coloré par `--text`) ;
   - **double poutre (額枋)** au-dessus de chaque titre de section : un trait épais, un trait fin et un petit sceau vermillon ;
   - repères de frise en **tuiles d'about (瓦當)** : cercle, cerne intérieur, point central ; la plus récente de chaque frise en vermillon ;
+  - **porte de lune derrière la carte de profil** (`.mk-moongate`) : grand double cercle et glace craquelée (冰裂紋) très pâle, centrés sur la carte ; masquée sous 700 px de large pour ne jamais passer sous le texte ;
+  - **logo « sceau sous l'avant-toit » (簷下之印)** sur `marketing.html` uniquement : petit toit au trait d'encre au-dessus d'un sceau vermillon « YT ». Les autres pages gardent le losange à leurs couleurs ;
   - aucune surface bleue ou dégradée sur la page marketing : cartes, formulaire et champs prennent `--surface`, `--bg` et `--border-subtle`.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
