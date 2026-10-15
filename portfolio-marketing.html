@@ -1150,6 +1150,13 @@
       .lb-fond, .lb-cadre { transition: none; }
       .lb.is-droite .lb-img, .lb.is-gauche .lb-img { animation: none; }
     }
+    /* ── Guzheng intégré (guzheng.js) : bouton note et dernière corde, aux couleurs --mk-* ── */
+    .page-portfolio-marketing .mk-son { border-color: var(--mk-border); background: var(--mk-card); color: var(--mk-muted); margin-left: 0.6rem; }
+    .page-portfolio-marketing .mk-son:hover, .page-portfolio-marketing .mk-son:focus-visible,
+    .page-portfolio-marketing .mk-son.is-on { color: var(--mk-accent); border-color: var(--mk-accent); }
+    .pf-footer.has-corde { border-top-color: transparent; position: relative; }
+    .page-portfolio-marketing .mk-corde-pied path { stroke: var(--mk-border); }
+    .page-portfolio-marketing .mk-corde-pied.is-pincee path { stroke: var(--mk-accent); }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -1208,6 +1215,9 @@
         <button class="lang-btn" data-lang="zh" type="button">CN</button>
         -->
       </div>
+      <button class="mk-son" type="button" aria-pressed="false" hidden>
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="tige" d="M6 12.2V3.2l7-1.6v9"/><circle cx="4.3" cy="12.4" r="1.9"/><circle cx="11.3" cy="11" r="1.9"/><path class="barre" d="M2 14.2 14.4 1.8"/></svg>
+        </button>
     </div>
   </header>
 

@@ -187,12 +187,13 @@ Order proof cards within a skill by importance (descending):
   - **porte de lune derrière la carte de profil** (`.mk-moongate`) : grand double cercle et glace craquelée (冰裂紋) très pâle, centrés sur la carte ; masquée sous 700 px de large pour ne jamais passer sous le texte ;
   - **logo « sceau sous l'avant-toit » (簷下之印)** sur `marketing.html` uniquement : petit toit au trait d'encre au-dessus d'un sceau vermillon « YT ». Les autres pages gardent le losange à leurs couleurs ;
   - aucune surface bleue ou dégradée sur la page marketing : cartes, formulaire et champs prennent `--surface`, `--bg` et `--border-subtle`.
-- **Guzheng** (`guzheng.js`, chargé par `marketing.html` et `portfolio-marketing.html`), clin d'œil au club de guzheng :
-  - **séparations pincées** : quand le toit se pose, les deux filets d'encre vibrent comme une corde pincée puis se calment ; un survol les pince à nouveau ;
-  - **bandeau de 21 cordes** (`.mk-guzheng`, `marketing.html` uniquement, entre le contact et le pied de page) : cordes horizontales, chevalets (雁柱) en diagonale dont celui du milieu en vermillon ; la main ou le doigt qui traverse une corde la fait vibrer ; légende FR/EN « Effleurez les cordes du guzheng » ;
-  - **son coupé par défaut**, jamais de lecture automatique : il ne s'active que par le bouton « Activer le son » (gamme pentatonique en ré, synthèse dans le navigateur, aucun fichier audio) ;
+- **Guzheng : la page entière est un instrument** (`guzheng.js`, chargé par `marketing.html` et `portfolio-marketing.html`), clin d'œil au club de guzheng :
+  - **chaque séparation est une corde** : quand le toit se pose, les deux filets d'encre vibrent comme une corde pincée puis se calment ; un survol les pince à nouveau. De haut en bas, les cordes montent la gamme pentatonique en ré (ré, mi, fa#, la, si, ré…) ;
+  - **le filet du pied de page est la dernière corde** : il vibre en vermillon et sonne un ré grave quand on arrive en bas, pour refermer la phrase ;
+  - **son coupé par défaut**, jamais de lecture automatique : il ne s'active que par le **bouton note** de l'en-tête (`.mk-son`, à côté du bouton de thème, barré tant que le son est coupé, info-bulle FR/EN). Le choix suit le visiteur d'une page marketing à l'autre pendant la session ; synthèse dans le navigateur, aucun fichier audio ;
   - **puces des expériences en chevalets (雁柱)** sur `marketing.html` : la première puce de l'expérience la plus récente de chaque frise en vermillon ;
-  - en `prefers-reduced-motion`, rien ne vibre.
+  - en `prefers-reduced-motion`, rien ne vibre (le son reste disponible sur demande) ;
+  - l'ancien bandeau de 21 cordes au-dessus du pied de page a été retiré (jugé plaqué). **Pour y revenir** : la dernière version qui l'affiche est le commit `b44eeae` sur `main` ; annuler les commits « Guzheng intégré » suivants avec `git revert` suffit.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
 ---

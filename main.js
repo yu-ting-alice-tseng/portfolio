@@ -168,11 +168,6 @@
     // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
-      guzheng: {                         // → marketing.html (cordes au-dessus du pied de page)
-        hint: "Effleurez les cordes du guzheng",
-        soundOn: "Activer le son",
-        soundOff: "Couper le son",
-      },
       a11y: { skipLink: "Aller au contenu" }, // → TOUTES les pages
       simpleNav: {                       // → TOUTES les pages (nav header)
         resume: "Résumé",
@@ -1206,11 +1201,6 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
       brandName: "Yu‑Ting Tseng",
-      guzheng: {
-        hint: "Brush across the guzheng strings",
-        soundOn: "Turn sound on",
-        soundOff: "Turn sound off",
-      },
       a11y: { skipLink: "Skip to content" },
       simpleNav: {
         resume: "Resume",
@@ -2207,11 +2197,6 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
       brandName: "Yu‑Ting Tseng",
-      guzheng: {
-        hint: "輕撫古箏琴弦",
-        soundOn: "開啟聲音",
-        soundOff: "關閉聲音",
-      },
       a11y: { skipLink: "跳至內容" },
       simpleNav: {
         resume: "履歷",

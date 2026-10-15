@@ -86,10 +86,15 @@
           <button class="lang-btn" data-lang="zh" type="button">CN</button>
           -->
         </div>
-        <button class="theme-toggle" type="button" aria-label="Basculer entre thème clair et sombre">
-          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
+        <div class="mk-outils">
+          <button class="mk-son" type="button" aria-pressed="false" hidden>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="tige" d="M6 12.2V3.2l7-1.6v9"/><circle cx="4.3" cy="12.4" r="1.9"/><circle cx="11.3" cy="11" r="1.9"/><path class="barre" d="M2 14.2 14.4 1.8"/></svg>
+          </button>
+          <button class="theme-toggle" type="button" aria-label="Basculer entre thème clair et sombre">
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -939,64 +944,6 @@
         </div>
       </section>
     </main>
-
-    <!-- Guzheng : 21 cordes et leurs chevalets (雁柱), en clin d'œil au club de guzheng -->
-    <div class="mk-guzheng">
-      <div class="mk-guzheng-inner">
-        <svg class="mk-guzheng-cordes" viewBox="0 0 1160 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path class="corde" data-y="8.00" d="M0 8.00 H1160" stroke-width="0.70" style="--o:0.220"/>
-          <path class="corde" data-y="13.20" d="M0 13.20 H1160" stroke-width="0.73" style="--o:0.232"/>
-          <path class="corde" data-y="18.40" d="M0 18.40 H1160" stroke-width="0.76" style="--o:0.244"/>
-          <path class="corde" data-y="23.60" d="M0 23.60 H1160" stroke-width="0.79" style="--o:0.256"/>
-          <path class="corde" data-y="28.80" d="M0 28.80 H1160" stroke-width="0.82" style="--o:0.268"/>
-          <path class="corde" data-y="34.00" d="M0 34.00 H1160" stroke-width="0.85" style="--o:0.280"/>
-          <path class="corde" data-y="39.20" d="M0 39.20 H1160" stroke-width="0.88" style="--o:0.292"/>
-          <path class="corde" data-y="44.40" d="M0 44.40 H1160" stroke-width="0.91" style="--o:0.304"/>
-          <path class="corde" data-y="49.60" d="M0 49.60 H1160" stroke-width="0.94" style="--o:0.316"/>
-          <path class="corde" data-y="54.80" d="M0 54.80 H1160" stroke-width="0.97" style="--o:0.328"/>
-          <path class="corde" data-y="60.00" d="M0 60.00 H1160" stroke-width="1.00" style="--o:0.340"/>
-          <path class="corde" data-y="65.20" d="M0 65.20 H1160" stroke-width="1.03" style="--o:0.352"/>
-          <path class="corde" data-y="70.40" d="M0 70.40 H1160" stroke-width="1.06" style="--o:0.364"/>
-          <path class="corde" data-y="75.60" d="M0 75.60 H1160" stroke-width="1.09" style="--o:0.376"/>
-          <path class="corde" data-y="80.80" d="M0 80.80 H1160" stroke-width="1.12" style="--o:0.388"/>
-          <path class="corde" data-y="86.00" d="M0 86.00 H1160" stroke-width="1.15" style="--o:0.400"/>
-          <path class="corde" data-y="91.20" d="M0 91.20 H1160" stroke-width="1.18" style="--o:0.412"/>
-          <path class="corde" data-y="96.40" d="M0 96.40 H1160" stroke-width="1.21" style="--o:0.424"/>
-          <path class="corde" data-y="101.60" d="M0 101.60 H1160" stroke-width="1.24" style="--o:0.436"/>
-          <path class="corde" data-y="106.80" d="M0 106.80 H1160" stroke-width="1.27" style="--o:0.448"/>
-          <path class="corde" data-y="112.00" d="M0 112.00 H1160" stroke-width="1.30" style="--o:0.460"/>
-          <path class="chevalet" transform="translate(232.0 8.00)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(274.1 13.20)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(314.9 18.40)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(353.5 23.60)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(389.1 28.80)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(421.7 34.00)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(451.6 39.20)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(479.6 44.40)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(507.0 49.60)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(534.9 54.80)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet is-mid" transform="translate(564.6 60.00)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(596.9 65.20)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(632.3 70.40)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(670.7 75.60)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(711.4 80.80)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(753.4 86.00)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(795.5 91.20)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(836.5 96.40)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(875.3 101.60)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(911.2 106.80)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-          <path class="chevalet" transform="translate(944.0 112.00)" d="M-1 -5.4 h2 M0 -5.2 L-3 0 M0 -5.2 L3 0"/>
-        </svg>
-        <div class="mk-guzheng-bar">
-          <span class="mk-guzheng-hint" data-i18n="guzheng.hint">Effleurez les cordes du guzheng</span>
-          <button class="mk-guzheng-son" type="button" aria-pressed="false" hidden>
-            <svg class="son-icone" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 6h3l4-3v10l-4-3H2z"/><path class="ondes" d="M11 5.5c1 1.4 1 3.6 0 5M13 3.8c1.9 2.4 1.9 6 0 8.4"/><path class="muet" d="M11 6l4 4M15 6l-4 4"/></svg>
-            <span class="son-off" data-i18n="guzheng.soundOn">Activer le son</span>
-            <span class="son-on" data-i18n="guzheng.soundOff">Couper le son</span>
-          </button>
-        </div>
-      </div>
-    </div>
 
     <footer class="site-footer">
       <div class="container footer-inner">

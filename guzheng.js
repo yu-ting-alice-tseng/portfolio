@@ -1,16 +1,19 @@
 /* ════════════════════════════════════════════════════
-   Guzheng : des cordes qu'on pince
+   Guzheng : la page entière est un instrument
    ────────────────────────────────────────────────────
    Chargé uniquement par marketing.html et
    portfolio-marketing.html.
-   - Séparations (.mk-sep) : quand le toit se pose, les
-     deux filets d'encre vibrent comme une corde pincée,
-     puis se calment ; un survol les pince à nouveau.
-   - Bandeau .mk-guzheng (marketing.html) : 21 cordes et
-     leurs chevalets ; la main qui les traverse les fait
-     vibrer. Le son (gamme pentatonique en ré, synthèse
-     Karplus-Strong) est coupé par défaut et ne s'active
-     que sur demande, par le bouton prévu.
+   - Chaque séparation (.mk-sep) est une corde : quand le
+     toit se pose, ses deux filets vibrent puis se calment ;
+     un survol la pince à nouveau. Les cordes montent la
+     gamme pentatonique en ré, de haut en bas de la page
+     (ré, mi, fa#, la, si, ré…).
+   - Le filet du pied de page est la dernière corde : un ré
+     grave qui referme la phrase quand on arrive en bas.
+   - Le son est coupé par défaut, jamais lancé tout seul :
+     il ne s'active que par le bouton note de l'en-tête
+     (.mk-son). Le choix suit le visiteur d'une page à
+     l'autre pendant la session (sessionStorage).
    - Rien ne bouge en mouvement réduit ; le son reste
      disponible sur demande.
    ════════════════════════════════════════════════════ */
@@ -20,10 +23,9 @@
   /* Une corde vibrante : déplacement maximal au point pincé,
      nul aux extrémités, oscillation amortie. */
   function vibrate(opts) {
-    const { x0, x1, pluck, amp, dur, freq, draw, done } = opts;
+    const { pluck, amp, dur, freq, draw, done } = opts;
     const start = performance.now();
-    const span = x1 - x0;
-    const p = Math.min(0.92, Math.max(0.08, (pluck - x0) / span));
+    const p = Math.min(0.92, Math.max(0.08, pluck));
     (function frame(now) {
       const t = (now - start) / 1000;
       if (t * 1000 >= dur) { done(); return; }
@@ -32,6 +34,41 @@
       requestAnimationFrame(frame);
     })(start);
   }
+
+  /* ── Son : coupé par défaut, synthèse d'une corde pincée (Karplus-Strong) ── */
+  const AC = window.AudioContext || window.webkitAudioContext;
+  const KEY = 'mk-son';
+  let ctx = null, on = false;
+  try { on = sessionStorage.getItem(KEY) === '1'; } catch (e) {}
+  const cache = {};
+  const PENTA = [0, 2, 4, 7, 9];                          // ré, mi, fa#, la, si
+  const midiOf = step => 62 + 12 * Math.floor(step / 5) + PENTA[step % 5];   // ré 4 et au-dessus
+  function buffer(midi, seconds) {
+    const id = midi + ':' + seconds;
+    if (cache[id]) return cache[id];
+    const sr = ctx.sampleRate, f = 440 * Math.pow(2, (midi - 69) / 12);
+    const N = Math.max(2, Math.round(sr / f)), len = Math.floor(sr * seconds);
+    const b = ctx.createBuffer(1, len, sr), d = b.getChannelData(0);
+    for (let n = 0; n < N; n++) d[n] = Math.random() * 2 - 1;
+    const decay = midi < 60 ? 0.998 : 0.996;
+    for (let n = N; n < len; n++) d[n] = decay * 0.5 * (d[n - N] + d[n - N + 1]);
+    return (cache[id] = b);
+  }
+  function sound(midi, seconds, gain) {
+    if (!on || !ctx || ctx.state !== 'running') return;
+    const src = ctx.createBufferSource(), g = ctx.createGain();
+    src.buffer = buffer(midi, seconds);
+    g.gain.value = gain;
+    src.connect(g).connect(ctx.destination);
+    src.start();
+  }
+  function wake() {
+    if (!on || !AC) return;
+    if (!ctx) ctx = new AC();
+    if (ctx.state === 'suspended') ctx.resume();
+  }
+  /* Un choix gardé d'une page à l'autre attend le premier geste du visiteur. */
+  ['pointerdown', 'keydown', 'touchstart'].forEach(t => window.addEventListener(t, wake, { passive: true }));
 
   /* ── Séparations : les filets deviennent des cordes ── */
   function bandPath(y, half, disp, w) {
@@ -44,21 +81,25 @@
     return top + bot + ' Z';
   }
   function pluckSep(sep) {
-    if (reduced || sep._ringing) return;
+    if (sep._ringing) return;
     sep._ringing = true;
+    sound(midiOf(sep._step), 1.8, 0.2);
+    if (reduced) { setTimeout(() => { sep._ringing = false; }, 600); return; }
     const filets = [...sep.querySelectorAll('.mk-sep-filet path')];
     let left = filets.length;
+    if (!left) { sep._ringing = false; return; }
     filets.forEach((path, i) => {
       if (!path._orig) path._orig = path.getAttribute('d');
       path.ownerSVGElement.style.overflow = 'visible';
       vibrate({
-        x0: 0, x1: 1, pluck: i ? 0.3 : 0.7, amp: 2.2, dur: 1100, freq: 7,
+        pluck: i ? 0.3 : 0.7, amp: 2.2, dur: 1100, freq: 7,
         draw: f => path.setAttribute('d', bandPath(3, 0.8, f, 600)),
         done: () => { path.setAttribute('d', path._orig); if (!--left) sep._ringing = false; }
       });
     });
   }
-  const seps = document.querySelectorAll('.mk-sep');
+  const seps = [...document.querySelectorAll('.mk-sep')];
+  seps.forEach((s, i) => { s._step = i; });
   if (seps.length && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -72,91 +113,76 @@
     });
   }
 
-  /* ── Bandeau : un guzheng de 21 cordes ── */
-  const band = document.querySelector('.mk-guzheng');
-  if (!band) return;
-  const svg = band.querySelector('.mk-guzheng-cordes');
-  const cordes = [...svg.querySelectorAll('.corde')];
-  const W = svg.viewBox.baseVal.width;
-  const ys = cordes.map(c => parseFloat(c.dataset.y));
-  const last = new Array(cordes.length).fill(0);
-
-  /* Son : coupé par défaut, synthèse d'une corde pincée */
-  let ctx = null, on = false;
-  const cache = {};
-  const PENTA = [0, 2, 4, 7, 9];                     // ré, mi, fa#, la, si
-  const midi = i => 38 + 12 * Math.floor(i / 5) + PENTA[i % 5];   // corde du haut : ré grave
-  function buffer(i) {
-    if (cache[i]) return cache[i];
-    const sr = ctx.sampleRate, f = 440 * Math.pow(2, (midi(i) - 69) / 12);
-    const N = Math.max(2, Math.round(sr / f)), len = Math.floor(sr * 1.8);
-    const b = ctx.createBuffer(1, len, sr), d = b.getChannelData(0);
-    for (let n = 0; n < N; n++) d[n] = Math.random() * 2 - 1;
-    const decay = 0.996 - i * 0.0004;
-    for (let n = N; n < len; n++) d[n] = decay * 0.5 * (d[n - N] + d[n - N + 1]);
-    return (cache[i] = b);
-  }
-  function sound(i) {
-    if (!on || !ctx) return;
-    const src = ctx.createBufferSource(), g = ctx.createGain();
-    src.buffer = buffer(i);
-    g.gain.value = 0.22;
-    src.connect(g).connect(ctx.destination);
-    src.start();
-  }
-
-  function pluck(i, x) {
-    const now = performance.now();
-    if (now - last[i] < 90) return;
-    last[i] = now;
-    sound(i);
-    if (reduced) return;
-    const c = cordes[i], y = ys[i];
-    c.classList.add('is-pincee');
-    vibrate({
-      x0: 0, x1: W, pluck: x, amp: 4.5, dur: 900, freq: 9 + i * 0.35,
-      draw: f => {
-        let d = '';
-        for (let k = 0; k <= 40; k++) { const u = k / 40; d += (k ? ' L' : 'M') + (u * W).toFixed(1) + ' ' + (y + f(u)).toFixed(2); }
-        c.setAttribute('d', d);
-      },
-      done: () => { c.setAttribute('d', `M0 ${y} H${W}`); c.classList.remove('is-pincee'); }
-    });
-  }
-
-  /* La main traverse les cordes : chaque corde franchie est pincée */
-  let prev = null;
-  function toLocal(e) {
-    const r = svg.getBoundingClientRect();
-    return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * svg.viewBox.baseVal.height };
-  }
-  svg.addEventListener('pointermove', e => {
-    const p = toLocal(e);
-    if (prev) {
-      const lo = Math.min(prev.y, p.y), hi = Math.max(prev.y, p.y);
-      ys.forEach((y, i) => { if (y >= lo && y <= hi && lo !== hi) pluck(i, p.x); });
+  /* ── Pied de page : la dernière corde, un ré grave ── */
+  const foot = document.querySelector('.page-marketing .site-footer .footer-inner, .pf-footer');
+  if (foot) {
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'mk-corde-pied');
+    svg.setAttribute('viewBox', '0 0 1000 12');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('aria-hidden', 'true');
+    const line = document.createElementNS(NS, 'path');
+    line.setAttribute('d', 'M0 6 H1000');
+    svg.appendChild(line);
+    foot.classList.add('has-corde');
+    foot.prepend(svg);
+    let ringing = false;
+    const pluckFoot = x => {
+      if (ringing) return;
+      ringing = true;
+      sound(50, 3, 0.26);
+      if (reduced) { setTimeout(() => { ringing = false; }, 800); return; }
+      svg.classList.add('is-pincee');
+      vibrate({
+        pluck: x, amp: 3.4, dur: 1600, freq: 5,
+        draw: f => {
+          let d = '';
+          for (let k = 0; k <= 50; k++) { const u = k / 50; d += (k ? ' L' : 'M') + (u * 1000).toFixed(1) + ' ' + (6 + f(u)).toFixed(2); }
+          line.setAttribute('d', d);
+        },
+        done: () => { line.setAttribute('d', 'M0 6 H1000'); svg.classList.remove('is-pincee'); ringing = false; }
+      });
+    };
+    if ('IntersectionObserver' in window) {
+      const fio = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { fio.disconnect(); setTimeout(() => pluckFoot(0.5), 300); }
+      }), { threshold: 1 });
+      fio.observe(svg);
     }
-    prev = p;
-  });
-  svg.addEventListener('pointerleave', () => { prev = null; });
-  svg.addEventListener('pointerdown', e => {
-    const p = toLocal(e);
-    let best = 0;
-    ys.forEach((y, i) => { if (Math.abs(y - p.y) < Math.abs(ys[best] - p.y)) best = i; });
-    pluck(best, p.x);
-  });
-
-  const btn = band.querySelector('.mk-guzheng-son');
-  const AC = window.AudioContext || window.webkitAudioContext;
-  if (btn && AC) {
-    btn.hidden = false;
-    btn.addEventListener('click', () => {
-      on = !on;
-      if (on && !ctx) ctx = new AC();
-      if (ctx && ctx.state === 'suspended') ctx.resume();
-      btn.setAttribute('aria-pressed', String(on));
-      band.classList.toggle('is-sonore', on);
-      if (on) sound(10);
+    svg.addEventListener('pointerenter', e => {
+      const r = svg.getBoundingClientRect();
+      pluckFoot((e.clientX - r.left) / r.width);
     });
   }
+
+  /* ── Bouton de l'en-tête : écouter la page ── */
+  const btn = document.querySelector('.mk-son');
+  if (!btn || !AC) return;
+  const T = {
+    fr: ['Écouter la page (son coupé)', 'Couper le son'],
+    en: ['Listen to the page (sound off)', 'Turn sound off'],
+    zh: ['聆聽這一頁（目前靜音）', '關閉聲音']
+  };
+  const label = () => {
+    const l = (document.documentElement.lang || 'fr').slice(0, 2);
+    const t = (T[l] || T.fr)[on ? 1 : 0];
+    btn.setAttribute('aria-label', t);
+    btn.title = t;
+  };
+  const sync = () => {
+    btn.setAttribute('aria-pressed', String(on));
+    btn.classList.toggle('is-on', on);
+    label();
+  };
+  btn.hidden = false;
+  sync();
+  btn.addEventListener('click', () => {
+    on = !on;
+    try { sessionStorage.setItem(KEY, on ? '1' : '0'); } catch (e) {}
+    wake();
+    sync();
+    if (on) setTimeout(() => sound(62, 1.8, 0.2), 30);
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => setTimeout(label, 0)));
 })();

@@ -5364,37 +5364,6 @@ html[data-theme="dark"] .page-marketing .brand-mark--sceau .sceau-lettres { fill
 /* sur téléphone, la carte occupe toute la largeur : la porte déborderait sous le titre */
 @media (max-width: 700px) { .page-marketing .mk-moongate { display: none; } }
 @media (prefers-reduced-motion: reduce) { .page-marketing .mk-moongate { animation: none; } }
-/* Guzheng : 21 cordes et leurs chevalets (雁柱) entre le contact et le pied de page */
-.mk-guzheng { display: none; }
-.page-marketing .mk-guzheng { display: block; padding: 2.4rem 0 0.4rem; }
-.mk-guzheng-inner { max-width: var(--container); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
-.mk-guzheng-cordes { display: block; width: 100%; height: auto; overflow: visible; cursor: inherit; touch-action: pan-y; }
-.mk-guzheng-cordes .corde { fill: none; stroke: var(--text); stroke-opacity: var(--o); transition: stroke 0.3s ease; }
-.mk-guzheng-cordes .corde.is-pincee { stroke: var(--accent); stroke-opacity: 0.8; }
-.mk-guzheng-cordes .chevalet { fill: none; stroke: var(--text); stroke-opacity: 0.55; stroke-width: 1.1; stroke-linecap: round; }
-.mk-guzheng-cordes .chevalet.is-mid { stroke: var(--accent); stroke-opacity: 1; }
-.mk-guzheng-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.8rem; }
-.mk-guzheng-hint { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-soft); }
-.mk-guzheng-son {
-  display: inline-flex; align-items: center; gap: 0.45rem;
-  font: inherit; font-size: 0.75rem; color: var(--text-soft);
-  background: none; border: 1px solid var(--border-subtle); border-radius: 2px;
-  padding: 0.35rem 0.7rem; cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease;
-}
-.mk-guzheng-son[hidden] { display: none; }
-.mk-guzheng-son:hover, .mk-guzheng-son:focus-visible { color: var(--accent); border-color: var(--accent); }
-.mk-guzheng-son .son-icone { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; stroke-linecap: round; }
-.mk-guzheng-son .son-icone path:first-child { fill: currentColor; stroke: none; }
-.mk-guzheng-son .ondes, .mk-guzheng-son .son-on { display: none; }
-.mk-guzheng.is-sonore .mk-guzheng-son { color: var(--accent); border-color: var(--accent); }
-.mk-guzheng.is-sonore .mk-guzheng-son .ondes, .mk-guzheng.is-sonore .mk-guzheng-son .son-on { display: inline; }
-.mk-guzheng.is-sonore .mk-guzheng-son .muet, .mk-guzheng.is-sonore .mk-guzheng-son .son-off { display: none; }
-.mk-guzheng-cordes .corde, .mk-guzheng-cordes .chevalet { vector-effect: non-scaling-stroke; }
-.mk-guzheng-son { white-space: nowrap; }
-@media (max-width: 600px) {
-  .mk-guzheng-cordes { height: 104px; }
-  .mk-guzheng-hint { font-size: 0.66rem; letter-spacing: 0.1em; }
-}
 /* Puces en chevalets de guzheng (雁柱) : la première puce de l'expérience la plus récente en vermillon */
 .page-marketing .timeline-points li { list-style: none; position: relative; }
 .page-marketing .timeline-points li::marker { content: none; }
@@ -5412,3 +5381,26 @@ html[data-theme="dark"] .page-marketing .brand-mark--sceau .sceau-lettres { fill
           mask: var(--yanzhu) center / contain no-repeat;
 }
 .page-marketing .timeline-item:first-child .timeline-points li:first-child::before { background: var(--accent); opacity: 1; }
+
+/* Guzheng intégré : bouton note de l'en-tête et dernière corde du pied de page (guzheng.js) */
+.mk-son[hidden] { display: none; }
+.mk-son {
+  -webkit-appearance: none; appearance: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; margin-left: 0.6rem; padding: 0;
+  border-radius: 999px; border: 1px solid var(--border-subtle);
+  background: var(--surface); color: var(--text-soft);
+  cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease;
+}
+.mk-son:hover, .mk-son:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+.mk-son svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+.mk-son svg circle { fill: currentColor; stroke: none; }
+.mk-son.is-on { color: var(--accent); border-color: var(--accent); }
+.mk-son.is-on .barre { display: none; }
+.mk-outils { display: inline-flex; align-items: center; }
+.mk-outils .mk-son { margin-left: 0; }
+.mk-son + .theme-toggle { margin-left: 0.4rem; }
+.footer-inner.has-corde { border-top-color: transparent !important; position: relative; }
+.mk-corde-pied { position: absolute; left: 0; top: -6px; width: 100%; height: 12px; overflow: visible; }
+.mk-corde-pied path { fill: none; stroke: var(--border-subtle); stroke-width: 1; vector-effect: non-scaling-stroke; transition: stroke 0.4s ease; }
+.mk-corde-pied.is-pincee path { stroke: var(--accent); stroke-opacity: 0.8; }
