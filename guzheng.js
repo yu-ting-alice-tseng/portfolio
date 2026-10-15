@@ -104,7 +104,7 @@
     const io = new IntersectionObserver(entries => entries.forEach(e => {
       if (!e.isIntersecting) return;
       io.unobserve(e.target);
-      /* le toit se pose vers 1,1 s : la corde vibre à cet instant */
+      /* les cordes se posent vers 1,1 s : la séparation vibre à cet instant */
       setTimeout(() => pluckSep(e.target), 1050);
     }), { threshold: 0.6 });
     seps.forEach(s => {
