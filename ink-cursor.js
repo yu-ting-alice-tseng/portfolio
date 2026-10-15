@@ -1,20 +1,18 @@
 /* ════════════════════════════════════════════════════
-   Lavis : le curseur est une goutte d'encre
+   Lavis : l'encre répond à la main
    ────────────────────────────────────────────────────
    Chargé uniquement par marketing.html et
    portfolio-marketing.html (direction encre et papier).
-   - Curseur : un petit point d'encre aux bords vivants,
-     qui suit la main avec une légère inertie.
+   - Curseur : la flèche native, sans retard ni substitut.
    - Survol d'un élément cliquable : le papier boit
      l'encre autour de lui, un lavis pâle s'épanouit sur
      son pourtour sans jamais couvrir son contenu.
    - Clic : la goutte tombe dans l'eau, des ondes d'encre
      s'élargissent puis s'effacent.
    - La couleur vient de --trail (style.css § 43).
-   - Rien au toucher ni en mouvement réduit. Le curseur
-     natif réapparaît dans les champs de saisie. Sur les
+   - Rien au toucher ni en mouvement réduit. Sur les
      travaux de création, la flamme de la bougie
-     (portfolio-marketing) remplace la goutte.
+     (portfolio-marketing) prend le relais.
    ════════════════════════════════════════════════════ */
 (function () {
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -50,14 +48,6 @@
       '<feDisplacementMap in="SourceGraphic" in2="n" scale="7"/><feGaussianBlur stdDeviation="0.5"/></filter>';
   document.body.appendChild(defs);
 
-  /* La goutte */
-  const dot = document.createElement('div');
-  dot.className = 'ink-dot';
-  dot.setAttribute('aria-hidden', 'true');
-  dot.innerHTML = '<svg viewBox="-12 -12 24 24"><circle r="5" fill="var(--ink-color)" filter="url(#ink-edge)"/></svg>';
-  document.body.appendChild(dot);
-  document.body.classList.add('has-ink-dot');
-
   /* Le lavis de survol */
   const wash = document.createElement('div');
   wash.className = 'ink-wash';
@@ -66,25 +56,20 @@
   document.body.appendChild(wash);
   const washSvg = wash.querySelector('svg'), washRect = wash.querySelector('rect');
 
-  let mx = -100, my = -100, dx = -100, dy = -100, target = null, shown = false;
+  let target = null;
   const candle = () => !!document.querySelector('.pf-cursor.is-candle');
 
   window.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    if (!shown) { dx = mx; dy = my; shown = true; }
     const t = e.target;
     const typing = t.closest && t.closest(TYPING);
-    dot.classList.toggle('is-hidden', !!typing || candle());
     const hit = !typing && t.closest ? t.closest(CLICKABLE) : null;
     setTarget(hit && !hit.closest('[data-candle] .pf-img-wrap') ? hit : null);
   }, { passive: true });
-  document.addEventListener('mouseleave', () => { dot.classList.add('is-hidden'); setTarget(null); });
-  document.addEventListener('mouseenter', () => dot.classList.remove('is-hidden'));
+  document.addEventListener('mouseleave', () => setTarget(null));
 
   function setTarget(el) {
     if (el === target) return;
     target = el;
-    dot.classList.toggle('is-over', !!el);
     if (el) { placeWash(); wash.classList.add('is-on'); }
     else wash.classList.remove('is-on');
   }
@@ -104,9 +89,6 @@
   }
 
   (function loop() {
-    /* Légère inertie : la goutte suit la main comme l'encre suit le pinceau. */
-    dx += (mx - dx) * 0.35; dy += (my - dy) * 0.35;
-    dot.style.transform = `translate(${dx}px, ${dy}px)`;
     if (target) {
       if (!target.isConnected || !target.getClientRects().length) setTarget(null);
       else placeWash();

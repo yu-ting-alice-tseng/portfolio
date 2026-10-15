@@ -583,10 +583,11 @@
     }
     .pf-cursor.is-active.is-candle { opacity: 1; }
     .pf-cursor-label { display: none; }
-    /* Le curseur natif ne disparaît que si le curseur sur mesure est actif */
-    body.has-custom-cursor,
-    body.has-custom-cursor a,
-    body.has-custom-cursor button { cursor: none; }
+    /* La flèche native reste partout ; elle ne cède la place qu'à la flamme,
+       au-dessus des travaux de création */
+    body.has-custom-cursor [data-candle] .pf-img-wrap,
+    body.has-custom-cursor [data-candle] .pf-img-wrap a,
+    body.has-custom-cursor [data-candle] .ig-item a { cursor: none; }
 
     /* ── Curseur bougie ────────────────────────────────── */
     /* Le curseur devient une flamme au-dessus des travaux de création, qui
@@ -1009,6 +1010,7 @@
     html.js-cases body.is-reading .pf-reader { display: block; }
     html.js-cases body.is-reading .pf-hero,
     html.js-cases body.is-reading .pf-cat,
+    html.js-cases body.is-reading .pf-sep-wrap,
     html.js-cases body.is-reading .pf-extras { display: none; }
     html.js-cases .pf-crumb {
       display: flex; align-items: center; gap: 0.8rem;
