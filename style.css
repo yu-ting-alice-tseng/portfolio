@@ -5209,3 +5209,122 @@ html[data-theme="dark"] .page-marketing .skill-preview {
   background: var(--accent-soft) !important;
   border-color: var(--border-subtle) !important;
 }
+
+/* ════════════════════════════════════════════════════
+   § 44 Marketing : vocabulaire de l'architecture chinoise
+   ────────────────────────────────────────────────────
+   Porte de lune (avatar), coins de fenêtre ajourée (cartes),
+   double poutre de façade (titres de section), tuiles d'about
+   (repères de la frise). Encre de la page, vermillon pour seul
+   accent ; tout suit le thème sombre via les variables.
+   ════════════════════════════════════════════════════ */
+/* Porte de lune (月洞門) : le portrait se lit à travers une porte ronde */
+.page-marketing .hero-card .avatar,
+html[data-theme="dark"] .page-marketing .hero-card .avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-position: center 22%;
+  border: 1.5px solid var(--text);
+  box-shadow: 0 0 0 5px var(--surface), 0 0 0 6px var(--text);
+  margin: 6px 0 1.5rem 6px;
+}
+/* Coins de fenêtre ajourée (窗櫺角花) : grecque en équerre aux quatre angles */
+.page-marketing .hero-card,
+.page-marketing .cert-card { position: relative; }
+.page-marketing .hero-card::after,
+.page-marketing .cert-card::after,
+.page-marketing .award-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 7px;
+  pointer-events: none;
+  background: var(--text);
+  opacity: 0.5;
+  --kc-tl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Cpath d='M1 25V1h24M5 21V5h16M9 17V9h8v5h-5'/%3E%3C/svg%3E");
+  --kc-tr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Cpath d='M25 25V1H1M21 21V5H5M17 17V9H9v5h5'/%3E%3C/svg%3E");
+  --kc-bl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Cpath d='M1 1v24h24M5 5v16h16M9 9v8h8v-5h-5'/%3E%3C/svg%3E");
+  --kc-br: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Cpath d='M25 1v24H1M21 5v16H5M17 9v8H9v-5h5'/%3E%3C/svg%3E");
+  -webkit-mask: var(--kc-tl) top left / 26px no-repeat, var(--kc-tr) top right / 26px no-repeat, var(--kc-bl) bottom left / 26px no-repeat, var(--kc-br) bottom right / 26px no-repeat;
+          mask: var(--kc-tl) top left / 26px no-repeat, var(--kc-tr) top right / 26px no-repeat, var(--kc-bl) bottom left / 26px no-repeat, var(--kc-br) bottom right / 26px no-repeat;
+}
+.page-marketing .cert-card::after,
+.page-marketing .award-card::after { inset: 5px; opacity: 0.4; -webkit-mask-size: 18px; mask-size: 18px; }
+/* Double poutre (額枋) et sceau vermillon au-dessus des titres de section */
+.page-marketing .section-header::before {
+  width: 64px !important;
+  height: 6px !important;
+  background: none !important;
+  border-top: 2.4px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  box-sizing: border-box;
+  margin-bottom: 0.95rem;
+}
+.page-marketing .section-header::after {
+  content: "";
+  position: absolute;
+  left: 70px;
+  top: -0.5px;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+}
+/* Tuiles d'about (瓦當) : les repères de la frise, la plus récente en vermillon */
+.page-marketing .timeline-item::before,
+html[data-theme="dark"] .page-marketing .timeline-item::before {
+  left: -8.5px;
+  top: 1.35rem;
+  bottom: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 1;
+  transform: none;
+  z-index: 2;
+  border: 1.4px solid var(--text);
+  background: radial-gradient(circle, var(--text) 0 1.9px, transparent 2.5px), var(--bg);
+  box-shadow: inset 0 0 0 2.2px var(--bg), inset 0 0 0 3.2px var(--text);
+}
+.page-marketing .section-alt .timeline-item::before { background: radial-gradient(circle, var(--text) 0 1.9px, transparent 2.5px), var(--bg-soft); box-shadow: inset 0 0 0 2.2px var(--bg-soft), inset 0 0 0 3.2px var(--text); }
+.page-marketing .timeline-item:first-child::before,
+html[data-theme="dark"] .page-marketing .timeline-item:first-child::before {
+  border-color: var(--accent);
+  background: radial-gradient(circle, var(--accent) 0 1.9px, transparent 2.5px), var(--bg);
+  box-shadow: inset 0 0 0 2.2px var(--bg), inset 0 0 0 3.2px var(--accent);
+}
+/* Distinctions : papier de la page au lieu du dégradé bleu-violet, coins de fenêtre ajourée */
+.page-marketing .award-card,
+.page-marketing .award-card--featured,
+html[data-theme="dark"] .page-marketing .award-card {
+  background: var(--surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  position: relative;
+}
+.page-marketing .award-card::before { display: none !important; }
+.page-marketing .award-badge {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  border-color: transparent !important;
+}
+.page-marketing .contact-form,
+html[data-theme="dark"] .page-marketing .contact-form {
+  background: var(--surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+.page-marketing .contact-form input,
+.page-marketing .contact-form textarea,
+html[data-theme="dark"] .page-marketing .contact-form input,
+html[data-theme="dark"] .page-marketing .contact-form textarea {
+  background: var(--bg) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 2px !important;
+  color: var(--text) !important;
+}
+.page-marketing .contact-form input:focus,
+.page-marketing .contact-form textarea:focus { border-color: var(--accent) !important; box-shadow: 0 0 0 3px var(--accent-soft) !important; }
