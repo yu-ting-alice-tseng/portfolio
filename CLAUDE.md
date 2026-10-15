@@ -186,6 +186,11 @@ Order proof cards within a skill by importance (descending):
   - **porte de lune derrière la carte de profil** (`.mk-moongate`) : grand double cercle et glace craquelée (冰裂紋) très pâle, centrés sur la carte ; masquée sous 700 px de large pour ne jamais passer sous le texte ;
   - **logo « sceau sous l'avant-toit » (簷下之印)** sur `marketing.html` uniquement : petit toit au trait d'encre au-dessus d'un sceau vermillon « YT ». Les autres pages gardent le losange à leurs couleurs ;
   - aucune surface bleue ou dégradée sur la page marketing : cartes, formulaire et champs prennent `--surface`, `--bg` et `--border-subtle`.
+- **Guzheng** (`guzheng.js`, chargé par `marketing.html` et `portfolio-marketing.html`), clin d'œil au club de guzheng :
+  - **séparations pincées** : quand le toit se pose, les deux filets d'encre vibrent comme une corde pincée puis se calment ; un survol les pince à nouveau ;
+  - **bandeau de 21 cordes** (`.mk-guzheng`, `marketing.html` uniquement, entre le contact et le pied de page) : cordes horizontales, chevalets (雁柱) en diagonale dont celui du milieu en vermillon ; la main ou le doigt qui traverse une corde la fait vibrer ; légende FR/EN « Effleurez les cordes du guzheng » ;
+  - **son coupé par défaut**, jamais de lecture automatique : il ne s'active que par le bouton « Activer le son » (gamme pentatonique en ré, synthèse dans le navigateur, aucun fichier audio) ;
+  - en `prefers-reduced-motion`, rien ne vibre.
 - La cohérence entre les deux directions passe par le **vocabulaire d'animation** (apparition, survol, rythme des chiffres), pas par la couleur.
 
 ---

@@ -168,6 +168,11 @@
     // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
+      guzheng: {                         // → marketing.html (cordes au-dessus du pied de page)
+        hint: "Effleurez les cordes du guzheng",
+        soundOn: "Activer le son",
+        soundOff: "Couper le son",
+      },
       a11y: { skipLink: "Aller au contenu" }, // → TOUTES les pages
       simpleNav: {                       // → TOUTES les pages (nav header)
         resume: "Résumé",
@@ -1201,6 +1206,11 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
       brandName: "Yu‑Ting Tseng",
+      guzheng: {
+        hint: "Brush across the guzheng strings",
+        soundOn: "Turn sound on",
+        soundOff: "Turn sound off",
+      },
       a11y: { skipLink: "Skip to content" },
       simpleNav: {
         resume: "Resume",
@@ -2196,7 +2206,12 @@
     // ─── zh ──────────────────────────────────────────────────────────────────
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
-      brandName: "曾郁庭 Yu-Ting Tseng",
+      brandName: "Yu‑Ting Tseng",
+      guzheng: {
+        hint: "輕撫古箏琴弦",
+        soundOn: "開啟聲音",
+        soundOff: "關閉聲音",
+      },
       a11y: { skipLink: "跳至內容" },
       simpleNav: {
         resume: "履歷",
@@ -2245,7 +2260,7 @@
         availabilityValue: "2027 年 1 月（6 個月間隔年實習）",
         ctaPrimary: "聯絡我",
         ctaSecondary: "查看我的經歷",
-        cardName: "曾郁庭 Yu-Ting Tseng",
+        cardName: "Yu‑Ting Tseng",
         cardRole: "數位行銷 · 數據分析",
         cardEmailLabel: "電子郵件",
         cardPhoneLabel: "電話",
@@ -2819,7 +2834,7 @@
         insightLbl: "行銷洞察",
         mkt: {
           heroTitle2: "& 創意設計",
-          heroEyebrow: "曾郁庭 · 精選作品 · 2024–2025",
+          heroEyebrow: "Yu-Ting Tseng · 精選作品 · 2024–2025",
           heroDesc: "數據驅動的行銷活動、視覺方向與社群管理——創意視覺與績效分析交匯的專案。",
           heroStatProjets: "專案",
           heroStatGrowth: "小紅書成長",
@@ -2934,7 +2949,7 @@
         data: {
           heroTitle1: "數據 &",
           heroTitle2: "市場研究",
-          heroEyebrow: "曾郁庭 · 數據 & 市場研究",
+          heroEyebrow: "Yu-Ting Tseng · 數據 & 市場研究",
           heroDesc: "Excel 儀表板、量化分析與市場研究——以嚴謹分析提供可執行決策。",
           heroStatProjets: "專案",
           heroStatGrowth: "小紅書成長",
@@ -2988,7 +3003,7 @@
         fin: {
           heroTitle1: "財務 &",
           heroTitle2: "量化分析",
-          heroEyebrow: "曾郁庭 · 財務 & 量化分析",
+          heroEyebrow: "Yu-Ting Tseng · 財務 & 量化分析",
           heroDesc: "量化財務研究與實證建模——嚴謹分析，為投資決策提供可執行洞察。",
           heroStatProj: "專案",
           heroStatData: "M&A 數據",
