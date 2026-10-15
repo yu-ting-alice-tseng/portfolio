@@ -895,11 +895,11 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--border-subtle);
+      background: var(--mk-border);
       transition: background 0.2s, transform 0.2s;
     }
     .ig-dot.active {
-      background: var(--accent);
+      background: var(--mk-accent);
       transform: scale(1.3);
     }
     @media (max-width: 640px) {
@@ -1121,6 +1121,35 @@
     .pf-cat-etat i { width: 6px; height: 6px; border-radius: 50%; border: 1.2px solid var(--mk-muted); }
     .pf-cat-etat.is-ouverte { color: var(--mk-accent); }
     .pf-cat-etat.is-ouverte i { background: var(--mk-accent); border-color: var(--mk-accent); }
+    /* ── Visionneuse (lightbox.js) : l'image agrandie au centre, flèches pour parcourir le projet ── */
+    html.lb-ouvert { overflow: hidden; }
+    .lb { position: fixed; inset: 0; z-index: 400; display: grid; place-items: center; }
+    .lb[hidden] { display: none; }
+    .lb-fond { position: absolute; inset: 0; background: rgba(var(--mk-bg-rgb), 0.9); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.22s ease; }
+    .lb-cadre { position: relative; margin: 0; display: flex; flex-direction: column; align-items: center; gap: 0.7rem; max-width: min(92vw, 1400px); opacity: 0; transform: scale(0.97); transition: opacity 0.22s ease, transform 0.28s cubic-bezier(.22,1,.36,1); }
+    .lb.is-on .lb-fond, .lb.is-on .lb-cadre { opacity: 1; transform: none; }
+    .lb-img { display: block; max-width: min(92vw, 1400px); max-height: 80vh; width: auto; height: auto; object-fit: contain; background: var(--mk-card); border: 1px solid var(--mk-border); box-shadow: 0 18px 50px rgba(26, 24, 21, 0.18); }
+    .lb.is-droite .lb-img { animation: lb-droite 0.32s cubic-bezier(.22,1,.36,1); }
+    .lb.is-gauche .lb-img { animation: lb-gauche 0.32s cubic-bezier(.22,1,.36,1); }
+    @keyframes lb-droite { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+    @keyframes lb-gauche { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+    .lb-btn { position: absolute; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--mk-border); background: var(--mk-card); color: var(--mk-text); font: 300 1.6rem/1 'Cormorant Garamond', serif; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease; }
+    .lb-btn:hover, .lb-btn:focus-visible { border-color: var(--mk-accent); color: var(--mk-accent); outline: none; }
+    .lb-prev { left: clamp(0.6rem, 2.5vw, 2rem); top: 50%; transform: translateY(-50%); }
+    .lb-next { right: clamp(0.6rem, 2.5vw, 2rem); top: 50%; transform: translateY(-50%); }
+    .lb-close { right: clamp(0.6rem, 2.5vw, 2rem); top: clamp(0.6rem, 2.5vw, 1.6rem); font-size: 1.5rem; }
+    .lb.is-seule .lb-prev, .lb.is-seule .lb-next { display: none; }
+    .lb-compte { position: absolute; left: 50%; bottom: clamp(0.6rem, 2vh, 1.4rem); transform: translateX(-50%); margin: 0; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--mk-muted); }
+    .pf-case a[href$=".webp"], .pf-case a[href$=".png"], .pf-case a[href$=".PNG"], .pf-case a[href$=".jpg"] { cursor: zoom-in; }
+    @media (max-width: 640px) {
+      .lb-img { max-height: 72vh; }
+      .lb-prev, .lb-next { top: auto; bottom: 0.8rem; transform: none; width: 42px; height: 42px; }
+      .lb-compte { bottom: 1.9rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lb-fond, .lb-cadre { transition: none; }
+      .lb.is-droite .lb-img, .lb.is-gauche .lb-img { animation: none; }
+    }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -2513,5 +2542,6 @@
   </script>
   <script src="ink-cursor.js"></script>
   <script src="guzheng.js"></script>
+  <script src="lightbox.js"></script>
 </body>
 </html>
