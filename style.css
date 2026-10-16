@@ -5188,6 +5188,8 @@ html[data-theme="dark"] .ink-wash svg { opacity: 0.22; }
 @media (hover: none), (prefers-reduced-motion: reduce) {
   .ink-dot, .ink-wash, .ink-ripple { display: none !important; }
 }
+/* Image agrandie : l'encre s'efface aussitôt, rien ne passe devant la visionneuse. */
+html.lb-ouvert .ink-wash, html.lb-ouvert .ink-ripple { display: none !important; }
 
 /* ── Filtres des portfolios : ni bleu ni halo hérités de l'index ── */
 body.page-portfolio-marketing .filter-btn:hover:not(.is-active) { background: transparent !important; border-color: transparent !important; color: var(--mk-text) !important; }

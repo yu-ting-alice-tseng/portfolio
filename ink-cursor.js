@@ -61,6 +61,7 @@
 
   window.addEventListener('mousemove', e => {
     const t = e.target;
+    if (document.documentElement.classList.contains('lb-ouvert')) { setTarget(null); return; }
     const typing = t.closest && t.closest(TYPING);
     const hit = !typing && t.closest ? t.closest(CLICKABLE) : null;
     setTarget(hit && !hit.closest('[data-candle] .pf-img-wrap') ? hit : null);
@@ -90,7 +91,8 @@
 
   (function loop() {
     if (target) {
-      if (!target.isConnected || !target.getClientRects().length) setTarget(null);
+      if (document.documentElement.classList.contains('lb-ouvert')) setTarget(null);
+      else if (!target.isConnected || !target.getClientRects().length) setTarget(null);
       else placeWash();
     }
     requestAnimationFrame(loop);
