@@ -43,9 +43,12 @@
     '<filter id="ink-wash" x="-30%" y="-30%" width="160%" height="160%">' +
       '<feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="9" result="n"/>' +
       '<feDisplacementMap in="SourceGraphic" in2="n" scale="22"/><feGaussianBlur stdDeviation="11"/></filter>' +
+    '<filter id="ink-bloom" x="-80%" y="-80%" width="260%" height="260%">' +
+      '<feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="13" result="n"/>' +
+      '<feDisplacementMap in="SourceGraphic" in2="n" scale="9"/><feGaussianBlur stdDeviation="2.4"/></filter>' +
     '<filter id="ink-ring" x="-30%" y="-30%" width="160%" height="160%">' +
       '<feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="5" result="n"/>' +
-      '<feDisplacementMap in="SourceGraphic" in2="n" scale="7"/><feGaussianBlur stdDeviation="0.5"/></filter>';
+      '<feDisplacementMap in="SourceGraphic" in2="n" scale="4"/><feGaussianBlur stdDeviation="0.6"/></filter>';
   document.body.appendChild(defs);
 
   /* Le lavis de survol */
@@ -104,28 +107,53 @@
     requestAnimationFrame(loop);
   })();
 
-  /* Clic : la goutte tombe dans l'eau. */
+  /* Clic : la goutte tombe dans l'eau. Les ondes s'élargissent en
+     ralentissant, s'amincissent et pâlissent à mesure qu'elles
+     s'éloignent (le rayon est animé, jamais l'échelle, pour que le
+     trait reste fin) ; au centre, l'encre se diffuse en nuage. */
+  const RINGS = [ // départ (ms), rayon final, épaisseur, opacité
+    { at: 0,   to: 34, w: 1.4, a: 0.55 },
+    { at: 170, to: 52, w: 1.0, a: 0.32 },
+    { at: 360, to: 70, w: 0.7, a: 0.18 }
+  ];
+  const DUR = 1250, BLOOM = 1500;
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
   window.addEventListener('pointerdown', e => {
     if (e.pointerType !== 'mouse' || e.button !== 0 || candle()) return;
     if (e.target.closest && e.target.closest(TYPING)) return;
-    const s = 150;
+    const s = 160;
     const d = document.createElement('div');
     d.className = 'ink-ripple';
     d.setAttribute('aria-hidden', 'true');
     d.style.left = (e.clientX - s / 2) + 'px';
     d.style.top = (e.clientY - s / 2) + 'px';
+    /* Une onde à peine ovale et inclinée au hasard : l'eau n'est jamais un compas. */
+    const tilt = Math.round(Math.random() * 180), squash = (0.9 + Math.random() * 0.06).toFixed(3);
     d.innerHTML =
       `<svg width="${s}" height="${s}" viewBox="${-s / 2} ${-s / 2} ${s} ${s}">` +
-      '<g fill="none" stroke="var(--ink-color)" filter="url(#ink-ring)">' +
-      '<circle class="r1" r="16" stroke-width="1.9"/><circle class="r2" r="16" stroke-width="1.5"/><circle class="r3" r="16" stroke-width="1.2"/></g>' +
-      '<circle class="core" r="6" fill="var(--ink-color)" filter="url(#ink-edge)"/></svg>';
+      `<g transform="rotate(${tilt}) scale(1 ${squash})" fill="none" stroke="var(--ink-color)" filter="url(#ink-ring)">` +
+      RINGS.map(() => '<circle r="0" opacity="0"/>').join('') + '</g>' +
+      '<circle class="core" r="3" fill="var(--ink-color)" filter="url(#ink-bloom)"/></svg>';
     document.body.appendChild(d);
-    const ring = (sel, delay, to, op) => d.querySelector(sel).animate(
-      [{ transform: 'scale(0.3)', opacity: op }, { transform: `scale(${to})`, opacity: 0 }],
-      { duration: 1100, delay, easing: 'cubic-bezier(.15,.7,.3,1)', fill: 'both' });
-    ring('.r1', 0, 1.2, 0.7); ring('.r2', 140, 2.4, 0.45);
-    ring('.r3', 280, 3.9, 0.28).finished.then(() => d.remove());
-    d.querySelector('.core').animate([{ transform: 'scale(1.3)', opacity: 0.75 }, { transform: 'scale(0.6)', opacity: 0 }],
-      { duration: 700, easing: 'ease-out', fill: 'forwards' });
+    const rings = d.querySelectorAll('g circle'), core = d.querySelector('.core');
+    const t0 = performance.now();
+    (function step(now) {
+      const el = now - t0;
+      RINGS.forEach((g, k) => {
+        const t = Math.min(1, Math.max(0, (el - g.at) / DUR));
+        if (t <= 0) return;
+        const c = rings[k];
+        c.setAttribute('r', (4 + (g.to - 4) * easeOut(t)).toFixed(2));
+        c.setAttribute('stroke-width', (g.w * (1 - 0.6 * t)).toFixed(2));
+        /* l'onde naît en un souffle puis s'efface lentement */
+        const fadeIn = Math.min(1, t / 0.08);
+        c.setAttribute('opacity', (g.a * fadeIn * Math.pow(1 - t, 1.6)).toFixed(3));
+      });
+      const b = Math.min(1, el / BLOOM);
+      core.setAttribute('r', (3 + 13 * easeOut(b)).toFixed(2));
+      core.setAttribute('opacity', (0.42 * Math.pow(1 - b, 2)).toFixed(3));
+      if (el < RINGS[RINGS.length - 1].at + DUR) requestAnimationFrame(step);
+      else d.remove();
+    })(t0);
   });
 })();
