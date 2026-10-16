@@ -545,7 +545,7 @@
         caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance, NCCU. Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
       },
       marketingHero: {                     // → marketing.html (section héro)
-        kicker: "Contenu · Campagnes · Diffusion",
+        kicker: "Analyse · Contenu · Diffusion",
         cordierTitle: "Résultats de campagnes",
         corde1: "+93,3 % de vues · Engoo",
         corde2: "+89,1 % d'interactions · Engoo",
@@ -1559,7 +1559,7 @@
         caseStudyDesc: "Academic support for finance and risk management courses at the College of Global Banking and Finance of NCCU. Student guidance, course material preparation and coordination across two mandates.",
       },
       marketingHero: {
-        kicker: "Content · Campaigns · Ad delivery",
+        kicker: "Analysis · Content · Ad delivery",
         cordierTitle: "Campaign results",
         corde1: "+93.3% views · Engoo",
         corde2: "+89.1% interactions · Engoo",
@@ -2537,7 +2537,7 @@
         caseStudyDesc: "協助政治大學全球銀行與財務學院的財務及風險管理課程，提供學術支援、備課協調，共歷兩屆任期。",
       },
       marketingHero: {
-        kicker: "內容 · 廣告活動 · 投放",
+        kicker: "分析 · 內容 · 投放",
         cordierTitle: "廣告活動成果",
         corde1: "瀏覽量 +93.3% · Engoo",
         corde2: "互動量 +89.1% · Engoo",
