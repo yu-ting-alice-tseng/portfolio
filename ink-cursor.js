@@ -69,6 +69,12 @@
   document.addEventListener('mouseleave', () => setTarget(null));
 
   function setTarget(el) {
+    /* Un grand bloc (fiche, projet suivant) a son propre survol : pas de lavis autour. */
+    if (el) {
+      const b = el.matches('.pf-cat-card') ? (el.querySelector('.pf-cat-cover') || el) : el;
+      const r = b.getBoundingClientRect();
+      if (Math.min(r.width, r.height) > 90) el = null;
+    }
     if (el === target) return;
     target = el;
     if (el) { placeWash(); wash.classList.add('is-on'); }

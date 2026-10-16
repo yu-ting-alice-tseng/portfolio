@@ -5355,3 +5355,21 @@ html[data-theme="dark"] .page-marketing .experience-filter.is-active { box-shado
 html[data-theme="dark"] .page-marketing .timeline-item { border-left-color: var(--border-subtle) !important; }
 .page-marketing .edu-degree-chip--minor,
 html[data-theme="dark"] .page-marketing .edu-degree-chip--minor { color: var(--text-soft) !important; }
+
+/* ════════════════════════════════════════════════════
+   § 45 Papier xuan (marketing.html, portfolio-marketing.html)
+   Le fond est une feuille de papier de riz : nuages de
+   densité et fibres, sous le contenu seulement. Les œuvres
+   et les cartes restent nettes, sans grain par-dessus.
+   ════════════════════════════════════════════════════ */
+body.page-marketing,
+body.page-portfolio-marketing {
+  background-image: url("assets/xuan-paper.webp") !important;
+  background-size: 640px 640px !important;
+  background-repeat: repeat !important;
+}
+html[data-theme="dark"] body.page-marketing {
+  background-image: url("assets/xuan-paper-dark.webp") !important;
+}
+.page-marketing .mk-grain,
+.page-portfolio-marketing .pf-grain { display: none !important; }
