@@ -83,7 +83,8 @@ Proofread every piece of new content for:
 
 ## 9. Experience Reframing — Never Delete Entries
 
-- **Never remove** an experience or education entry, even if it seems unrelated to the page's domain.
+- **Never remove** an experience or education entry from the site as a whole.
+- **Exception (demande de l'utilisatrice) :** chaque page CV se concentre sur les expériences et compétences liées à son domaine. Une expérience sans rapport avec le domaine peut quitter une page à condition de rester sur la page de son propre domaine (ex. TutorABC, Weber et la traduction freelance ne figurent plus sur `index`, ils restent sur `teaching`).
 - Instead, **reframe the description** to highlight the transferable skills relevant to that page's domain (finance, marketing, data, teaching, etc.).
 - Do not invent fictional tasks — only reframe or emphasize real aspects of the experience from a different angle.
 
@@ -130,7 +131,7 @@ Order proof cards within a skill by importance (descending):
 
 - Lorsqu'une même expérience apparaît sur plusieurs pages, **le style d'écriture et les compétences mises en avant doivent être différents sur chaque page**.
 - Ne jamais dupliquer les mêmes puces d'une page à l'autre : chaque page reçoit sa propre variante de clés i18n (`point…` pour index, `mkPoint…` pour marketing, `dataPoint…` pour data, `finPoint…` pour finance).
-- Le style suit celui déjà utilisé sur la page : phrases nominales courtes sur index et finance, verbes à l'infinitif sur marketing et data.
+- **Toutes les puces de CV s'écrivent en phrases nominales** (« Pilotage de… », « Conception de… »), sur toutes les pages, jamais à l'infinitif. En anglais, les puces gardent le verbe d'action habituel des CV anglophones.
 - Les compétences signalées suivent le domaine de la page (marketing : diffusion, relation annonceur ; data : consolidation et analyse des indicateurs ; finance : exécution des engagements, synthèse de performance).
 - Reformuler uniquement à partir de faits réels : changer l'angle, jamais inventer de nouvelles missions.
 
@@ -215,6 +216,43 @@ Order proof cards within a skill by importance (descending):
 
 ---
 
+## 19. Statut et Coordonnées
+
+- Yu-Ting Tseng est en **année de césure 2026 – 2027** (stages uniquement), toujours étudiante à emlyon, retour en M2 ensuite. Elle est **basée à Paris** ; emlyon reste situé à Lyon.
+- La ligne « Statut : Année de césure (2026 – 2027), puis M2 » figure dans la formation emlyon de chaque page CV.
+
+---
+
+## 20. Format des Dates et des Nombres
+
+- **Dates : toujours `MM/AAAA`** (`08/2025 – 06/2026`), dans toutes les langues, jamais « Août 2023 », « Sep. 2024 » ni « 2025/08 ». En cours : `Présent` / `Present` / `至今`.
+- **Nombres en français** : virgule décimale et espace insécable avant `%`, `€` et les unités (`+89,1 %`, `3 250 €`, `5 h`). En anglais : `+89.1%`, `€3,250`. Préférer « plus de 20 » à « 20+ » dans les phrases françaises.
+- Un chiffre affiché dans toutes les langues ne s'écrit jamais en dur : clé `nums.*` dans `main.js` sur les pages CV, paires `data-lang-show` sur les portfolios.
+
+---
+
+## 21. Sections des Pages CV
+
+- **Pas de section « Distinctions & Bourses »** : retirée à la demande. Le Certificate of Excellence reste mentionné dans la formation NCCU.
+- **Bénévolat présent sur toutes les pages CV** (`index`, `marketing`, `data`, `finance`), même contenu que sur `index`.
+- **Compétences sans sous-catégories** : une liste de puces par bloc, sans doublon. `index` n'affiche pas le bloc Finance.
+
+---
+
+## 22. Projets sur Données Publiques
+
+- Tout projet réalisé hors entreprise sur un jeu de données public porte la mention **« Projet personnel »** (catégorie de la fiche) et une ligne **Source des données** sous le résumé (`.pf-case-source`).
+- Sephora : Kaggle « Sephora Products and Skincare Reviews ». Maison Beauté : Kaggle « Customer Personality Analysis », marque fictive servant de cadre au cas.
+
+---
+
+## 23. CV PDF Téléchargeables
+
+- Chaque page CV (`index`, `marketing`, `data`, `finance`) a un bouton « Télécharger le CV (PDF) » dans le héros ; le lien change avec la langue (clés `cv.*`, la version chinoise renvoie au PDF anglais).
+- Les PDF (`assets/cv/`) sont **générés depuis les pages** par `tools/build-cv.js` : ne jamais les modifier à la main. **Après toute modification de contenu d'une page CV, relancer le script** (serveur local sur le port 8765, Playwright requis) et committer les PDF.
+
+---
+
 ## Quick Pre-Publish Checklist
 
 Before finalizing any new text, component, or section:
@@ -230,3 +268,5 @@ Before finalizing any new text, component, or section:
 - [ ] Une expérience présente sur plusieurs pages a un style et des compétences différents sur chaque page
 - [ ] Language matches the page's language version
 - [ ] Aucun nom chinois affiché sur le site
+- [ ] Dates en `MM/AAAA`, nombres au format de la langue
+- [ ] CV PDF régénérés si le contenu d'une page CV a changé

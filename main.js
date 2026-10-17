@@ -168,6 +168,13 @@
     // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
+      cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
+        download: "Télécharger le CV (PDF)",
+        general: "assets/cv/CV_Yu-Ting_Tseng_General_FR.pdf",
+        marketing: "assets/cv/CV_Yu-Ting_Tseng_Marketing_FR.pdf",
+        data: "assets/cv/CV_Yu-Ting_Tseng_Data_FR.pdf",
+        finance: "assets/cv/CV_Yu-Ting_Tseng_Finance_FR.pdf",
+      },
       nums: {                             // → valeurs chiffrées des pages CV (format propre à chaque langue)
         views: "+93,3 %",
         subs: "+69,7 %",
@@ -1213,6 +1220,13 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
       brandName: "Yu‑Ting Tseng",
+      cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
+        download: "Download CV (PDF)",
+        general: "assets/cv/CV_Yu-Ting_Tseng_General_EN.pdf",
+        marketing: "assets/cv/CV_Yu-Ting_Tseng_Marketing_EN.pdf",
+        data: "assets/cv/CV_Yu-Ting_Tseng_Data_EN.pdf",
+        finance: "assets/cv/CV_Yu-Ting_Tseng_Finance_EN.pdf",
+      },
       nums: {                             // → valeurs chiffrées des pages CV (format propre à chaque langue)
         views: "+93.3%",
         subs: "+69.7%",
@@ -2224,6 +2238,13 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
       brandName: "Yu‑Ting Tseng",
+      cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
+        download: "下載履歷（PDF）",
+        general: "assets/cv/CV_Yu-Ting_Tseng_General_EN.pdf",
+        marketing: "assets/cv/CV_Yu-Ting_Tseng_Marketing_EN.pdf",
+        data: "assets/cv/CV_Yu-Ting_Tseng_Data_EN.pdf",
+        finance: "assets/cv/CV_Yu-Ting_Tseng_Finance_EN.pdf",
+      },
       nums: {                             // → valeurs chiffrées des pages CV (format propre à chaque langue)
         views: "+93.3%",
         subs: "+69.7%",
