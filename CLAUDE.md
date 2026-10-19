@@ -235,7 +235,7 @@ Order proof cards within a skill by importance (descending):
 
 - **Pas de section « Distinctions & Bourses »** : retirée à la demande. Le Certificate of Excellence reste mentionné dans la formation NCCU.
 - **Bénévolat présent sur toutes les pages CV** (`index`, `marketing`, `data`, `finance`), même contenu que sur `index`.
-- **Compétences sans sous-catégories** : une liste de puces par bloc, sans doublon. `index` n'affiche pas le bloc Finance.
+- **Compétences : toujours garder les sous-catégories** (« Stratégie », « Contenu », « Référencement Naturel (SEO) »…). Les aplatir en une seule liste par bloc a été essayé puis refusé : trop chargé, illisible. `index` n'affiche pas le bloc Finance.
 
 ---
 
