@@ -243,6 +243,7 @@ Order proof cards within a skill by importance (descending):
 
 - Tout projet réalisé hors entreprise sur un jeu de données public porte la mention **« Projet personnel »** (catégorie de la fiche) et une ligne **Source des données** sous le résumé (`.pf-case-source`).
 - Sephora : Kaggle « Sephora Products and Skincare Reviews ». Maison Beauté : Kaggle « Customer Personality Analysis », marque fictive servant de cadre au cas.
+- Chocolat FMCG et Maison Luxe (`portfolio-data.html`) : projets personnels sur jeux de données publics (confirmé par l'utilisatrice). Le nom exact des jeux de données n'a pas encore été fourni : la ligne indique seulement « jeu de données public » ; la compléter dès que l'utilisatrice donne la source.
 
 ---
 
@@ -260,6 +261,7 @@ Order proof cards within a skill by importance (descending):
 - **Équivalences :** papier xuan → **papier millimétré** (grille fine de 12 px et grille forte de 60 px, en dégradés CSS, sous le contenu) ; guzheng → **petit graphique en barres** (symbole `#da-graphe` : axe, sept barres claires cernées, la dernière pleine en sarcelle, courbe de tendance) dans les séparations `.da-sep` ; logo « YT » au-dessus de quatre barres (`.brand-mark--graphe`) ; coup de pinceau sous les titres des fiches → trait sarcelle de 2 px.
 - **Styles :** `style.css` § 46 pour `data.html` (le bloc `<style>` en ligne de la page a été retiré). `portfolio-data.html` garde ses styles dans la page, variables `--da-*`.
 - **`portfolio-data.html`** suit la structure de `portfolio-marketing.html` (§ 16) : catalogue filtrable (Tous, Dashboard, Analyse, Recherche, Reporting), lecture d'un projet à la fois (`#id`), frise de vignettes, « Projet suivant », couverture qui vole jusqu'à `[data-land]`, études complètes repliées, état « Vue / Ouverte » (clé `pf-etat-data`), visionneuse `lightbox.js`. Les couvertures sans image sont des graphiques tirés des chiffres de l'étude (M&A, Chocolat, Maison Luxe), en FR et EN. Le chiffre de chaque fiche met en avant la méthode (12 métriques, 3 hypothèses, 990 236 transactions, 2 176 SKUs, 7 diapositives), pas le même chiffre que la fiche marketing.
+- Couvertures images de `portfolio-data.html` : versions recomposées sur fond blanc (`--da-card`) au lieu du papier marketing, `assets/covers/engoo-dashboard-data(-en).webp` et `engoo-weekly-data(-en).webp`, clés `portfolio.data.coverDash` et `portfolio.data.coverWeekly`.
 - Identifiants des projets : `xhs-dashboard`, `ma-risque-politique`, `chocolat-fmcg`, `maison-luxe`, `xhs-weekly`.
 
 ---
