@@ -156,7 +156,7 @@ Order proof cards within a skill by importance (descending):
 
 ## 16. Page Marketing : Direction Visuelle et Portée des Effets
 
-- `marketing.html` et `portfolio-marketing.html` suivent la direction **encre et papier** (lavis, papier de riz, vermillon en seul accent). Les autres pages (`index`, `data`, `finance`, `teaching`) gardent leurs dégradés d'origine.
+- `marketing.html` et `portfolio-marketing.html` suivent la direction **encre et papier** (lavis, papier de riz, vermillon en seul accent). `data.html` et `portfolio-data.html` reprennent la même mise en page dans leur propre vocabulaire (voir § 24). Les autres pages (`index`, `finance`, `teaching`) gardent leurs dégradés d'origine.
 - **Le curseur bougie ne s'applique qu'aux travaux de création** : affiches, identité visuelle, design packaging. Les livrables analytiques (dashboards, segmentation, analyse produit) restent affichés normalement : leur lisibilité passe avant l'effet.
 - **Fonctionnement de la bougie** (implémenté dans `portfolio-marketing.html`) : le curseur devient une flamme, l'œuvre survolée s'affiche en niveaux de gris et ne retrouve ses couleurs que dans le halo de lumière, réchauffé d'un voile ambré. Le rayon vacille légèrement, il est proportionné à la taille de l'œuvre.
 - **Effets de curseur réservés à la direction marketing** : `index`, `data`, `finance`, `teaching`, `portfolio-data` et `portfolio-finance` gardent le curseur natif, sans trait, sans cadre ni aucun effet.
@@ -250,6 +250,17 @@ Order proof cards within a skill by importance (descending):
 
 - Chaque page CV (`index`, `marketing`, `data`, `finance`) a un bouton « Télécharger le CV (PDF) » dans le héros ; le lien change avec la langue (clés `cv.*`, la version chinoise renvoie au PDF anglais).
 - Les PDF (`assets/cv/`) sont **générés depuis les pages** par `tools/build-cv.js` : ne jamais les modifier à la main. **Après toute modification de contenu d'une page CV, relancer le script** (serveur local sur le port 8765, Playwright requis) et committer les PDF.
+
+---
+
+## 24. Pages Data : la Mise en Page de Marketing, la Logique de Data
+
+- **Demande de l'utilisatrice :** `data.html` et `portfolio-data.html` reprennent le design des pages marketing (mêmes compositions, cartes plates, filets fins, chiffres qui s'écrivent, repères de frise en cercles, catalogue puis lecture), mais **le contenu et le vocabulaire visuel suivent la logique data**. Ne jamais y importer le guzheng, le papier xuan, le vermillon, le curseur lavis, la bougie ni le son.
+- **Palette inchangée** (§ 3) : menthe `#f0fdfa`, sarcelle `#0d9488` en seul accent, cyan `#0891b2` en secondaire, encre `#0f172a` ; sombre `#081b1a`.
+- **Équivalences :** papier xuan → **papier millimétré** (grille fine de 12 px et grille forte de 60 px, en dégradés CSS, sous le contenu) ; guzheng → **petit graphique en barres** (symbole `#da-graphe` : axe, sept barres claires cernées, la dernière pleine en sarcelle, courbe de tendance) dans les séparations `.da-sep` ; logo « YT » au-dessus de quatre barres (`.brand-mark--graphe`) ; coup de pinceau sous les titres des fiches → trait sarcelle de 2 px.
+- **Styles :** `style.css` § 46 pour `data.html` (le bloc `<style>` en ligne de la page a été retiré). `portfolio-data.html` garde ses styles dans la page, variables `--da-*`.
+- **`portfolio-data.html`** suit la structure de `portfolio-marketing.html` (§ 16) : catalogue filtrable (Tous, Dashboard, Analyse, Recherche, Reporting), lecture d'un projet à la fois (`#id`), frise de vignettes, « Projet suivant », couverture qui vole jusqu'à `[data-land]`, études complètes repliées, état « Vue / Ouverte » (clé `pf-etat-data`), visionneuse `lightbox.js`. Les couvertures sans image sont des graphiques tirés des chiffres de l'étude (M&A, Chocolat, Maison Luxe), en FR et EN. Le chiffre de chaque fiche met en avant la méthode (12 métriques, 3 hypothèses, 990 236 transactions, 2 176 SKUs, 7 diapositives), pas le même chiffre que la fiche marketing.
+- Identifiants des projets : `xhs-dashboard`, `ma-risque-politique`, `chocolat-fmcg`, `maison-luxe`, `xhs-weekly`.
 
 ---
 

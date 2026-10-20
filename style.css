@@ -5373,3 +5373,358 @@ html[data-theme="dark"] body.page-marketing {
 }
 .page-marketing .mk-grain,
 .page-portfolio-marketing .pf-grain { display: none !important; }
+
+/* ════════════════════════════════════════════════════
+   § 46 Page data : la mise en page de marketing, en sarcelle
+   ────────────────────────────────────────────────────
+   Même édition que marketing.html (§ 41, § 44) : fond
+   uni, cartes plates, filets fins, chiffres qui s'écrivent,
+   repères de frise en cercles. Le vocabulaire change :
+   papier millimétré au lieu du papier xuan, un petit
+   graphique en barres au lieu du guzheng, sarcelle pour
+   seul accent. Curseur natif, aucun son (CLAUDE.md § 16).
+   ════════════════════════════════════════════════════ */
+body.page-data {
+  --accent:        #0d9488;
+  --accent-hover:  #0f766e;
+  --accent-soft:   rgba(13, 148, 136, 0.08);
+  --bg:            #f0fdfa;
+  --bg-soft:       #e3f6f2;
+  --bg-alt:        #ffffff;
+  --surface:       #ffffff;
+  --text:          #0f172a;
+  --text-soft:     #475569;
+  --head:          #0b1220;
+  --border-subtle: #cfe3df;
+  --eau:           #9fcac3;
+  --grille:        rgba(13, 148, 136, 0.07);
+  --grille-forte:  rgba(13, 148, 136, 0.11);
+  background-color: var(--bg) !important;
+}
+html[data-theme="dark"] body.page-data {
+  --accent:        #0d9488 !important;
+  --accent-hover:  #14b8a6 !important;
+  --accent-soft:   rgba(13, 148, 136, 0.16) !important;
+  --bg:            #081b1a !important;
+  --bg-soft:       #0b2322 !important;
+  --bg-alt:        #0f2a28 !important;
+  --surface:       #0f2a28 !important;
+  --text:          #e2f1ee !important;
+  --text-soft:     #9dbab5 !important;
+  --head:          #f0faf8 !important;
+  --border-subtle: #1d3b38 !important;
+  --eau:           #2c524e !important;
+  --grille:        rgba(45, 212, 191, 0.045) !important;
+  --grille-forte:  rgba(45, 212, 191, 0.08) !important;
+  background-color: var(--bg) !important;
+}
+
+/* — Papier millimétré : sous le contenu, jamais par-dessus — */
+body.page-data,
+html[data-theme="dark"] body.page-data {
+  background-image:
+    linear-gradient(var(--grille-forte) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grille-forte) 1px, transparent 1px),
+    linear-gradient(var(--grille) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grille) 1px, transparent 1px) !important;
+  background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px !important;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px !important;
+}
+body.page-data::before,
+body.page-data::after { display: none !important; }
+
+/* — Neutralisation des dégradés d'origine — */
+.page-data .hero,
+html[data-theme="dark"] .page-data .hero { background: transparent !important; background-image: none !important; }
+.page-data .section-alt,
+html[data-theme="dark"] .page-data .section-alt {
+  background: color-mix(in srgb, var(--bg-soft) 70%, transparent) !important;
+  background-image: none !important;
+}
+.page-data .hero::before,
+.page-data .hero::after,
+.page-data .hero-card::before,
+.page-data .section-alt::before { display: none !important; }
+.page-data .accent {
+  background: none !important;
+  background-image: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: var(--accent) !important;
+}
+.page-data .scroll-progress {
+  background: var(--accent) !important;
+  background-image: none !important;
+  height: 2px !important;
+  box-shadow: none !important;
+}
+.page-data .site-header,
+html[data-theme="dark"] .page-data .site-header { border-bottom-color: var(--border-subtle); }
+.page-data .site-nav a::after,
+.page-data .nav-dropdown-toggle::after { background: var(--accent); }
+
+/* — Séparation des sections : deux filets et un graphique en barres — */
+.da-sep { display: none; }
+.page-data .da-sep,
+.page-portfolio-data .da-sep {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+.da-sep-filet { flex: 1; height: 1px; min-width: 0; background: var(--eau); }
+.da-sep-orn { flex: none; overflow: visible; }
+@media (max-width: 540px) { .da-sep-orn { width: 132px; height: 40px; } }
+/* le graphique (symbole #da-graphe) : axe et graduations à l'encre, barres
+   claires cernées, la plus récente pleine en sarcelle, courbe de tendance */
+#da-graphe .g-axe { fill: none; stroke: var(--text); stroke-width: 1.2; stroke-linecap: round; }
+#da-graphe .g-grad { stroke: var(--text); stroke-width: 0.8; stroke-opacity: 0.55; }
+#da-graphe .g-repere { stroke: var(--text); stroke-width: 0.5; stroke-opacity: 0.22; stroke-dasharray: 2 3; }
+#da-graphe .g-barre { fill: var(--bg-soft); stroke: var(--text); stroke-width: 1; }
+#da-graphe .g-barre.is-cle { fill: var(--accent); stroke: var(--accent); }
+#da-graphe .g-courbe { fill: none; stroke: var(--text); stroke-width: 1.1; stroke-linejoin: round; stroke-linecap: round; }
+#da-graphe .g-point { fill: var(--surface); stroke: var(--text); stroke-width: 1; }
+#da-graphe .g-point.is-cle { fill: var(--accent); stroke: var(--accent); }
+/* les filets s'ouvrent depuis le centre, puis le graphique apparaît */
+.da-sep .da-sep-filet:first-child { clip-path: inset(0 0 0 100%); }
+.da-sep .da-sep-filet:last-child  { clip-path: inset(0 100% 0 0); }
+.da-sep .da-sep-orn { opacity: 0; transform: translateY(6px); }
+.da-sep.is-visible .da-sep-filet,
+.da-sep.is-revealed .da-sep-filet,
+.pf-case.is-current .da-sep .da-sep-filet {
+  clip-path: inset(0);
+  transition: clip-path 1s cubic-bezier(0.3, 0.75, 0.3, 1);
+}
+.da-sep.is-visible .da-sep-orn,
+.da-sep.is-revealed .da-sep-orn,
+.pf-case.is-current .da-sep .da-sep-orn {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease 0.45s, transform 0.65s cubic-bezier(0.25, 0.9, 0.3, 1) 0.45s;
+}
+.page-data .section { border-top: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .da-sep .da-sep-filet { clip-path: none !important; }
+  .da-sep .da-sep-orn { opacity: 1 !important; transform: none !important; }
+}
+
+/* — Au-dessus des titres de section : un simple trait — */
+.page-data .section-header::before {
+  background: var(--text) !important;
+  background-image: none !important;
+  width: 28px !important;
+  height: 1px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  opacity: 1;
+  margin-bottom: 0.9rem;
+}
+.page-data .section-header::after,
+.page-data .section-header h2::after { display: none !important; }
+.page-data .hero-kicker { color: var(--text-soft); }
+.page-data .hero-kicker::before { background: var(--accent); }
+
+/* — La carte de profil, à plat sur la feuille — */
+.page-data .hero-card,
+html[data-theme="dark"] .page-data .hero-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: var(--text) !important;
+  position: relative;
+  z-index: 1;
+}
+.page-data .hero-card h2,
+.page-data .hero-card .value { color: var(--text) !important; }
+.page-data .hero-card .hero-role,
+.page-data .hero-card .label { color: var(--text-soft) !important; }
+.page-data .hero-card a { color: var(--accent) !important; }
+/* Portrait rond, double cerne (la photo reste la photo) */
+.page-data .hero-card .avatar,
+html[data-theme="dark"] .page-data .hero-card .avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-position: center 22%;
+  background: var(--bg-soft);
+  border: 1.5px solid var(--text);
+  box-shadow: 0 0 0 5px var(--surface), 0 0 0 6px var(--text);
+  margin: 6px 0 1.5rem 6px;
+}
+
+/* — Les chiffres s'écrivent au lieu de défiler — */
+.page-data .stat-value {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.page-data .is-visible .stat-value { clip-path: inset(0 0 0 0); }
+.page-data .exp-stats {
+  background: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--eau) !important;
+  border-bottom: 1px solid var(--eau) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.1rem 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 2.6rem;
+}
+.page-data .exp-stat { background: none; border: 0; padding: 0; text-align: left; }
+.page-data .exp-stat .stat-label { font-size: 0.74rem; color: var(--text-soft); text-transform: none; letter-spacing: 0; }
+@media (prefers-reduced-motion: reduce) { .page-data .stat-value { clip-path: none !important; } }
+
+/* — Boutons et étiquettes : angles francs, sarcelle pleine — */
+.page-data .btn,
+.page-data .skill-card,
+.page-data .experience-filter,
+.page-data .tag,
+.page-data .course-chip { border-radius: 2px; }
+.page-data .btn-primary,
+html[data-theme="dark"] .page-data .btn-primary {
+  background: var(--accent) !important;
+  background-image: none !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.page-data .btn-primary:hover { background: var(--accent-hover) !important; border-color: var(--accent-hover) !important; }
+.page-data .btn-ghost,
+html[data-theme="dark"] .page-data .btn-ghost {
+  background-color: var(--surface);
+  border-color: var(--border-subtle);
+  color: var(--text);
+}
+.page-data .btn-ghost:hover,
+html[data-theme="dark"] .page-data .btn-ghost:hover {
+  background-color: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.page-data .lang-switch,
+.page-data .theme-toggle,
+html[data-theme="dark"] .page-data .lang-switch,
+html[data-theme="dark"] .page-data .theme-toggle {
+  background: var(--surface) !important;
+  border-color: var(--border-subtle) !important;
+}
+.page-data .lang-btn:hover:not(.is-active),
+html[data-theme="dark"] .page-data .lang-btn:hover:not(.is-active) { background: var(--accent-soft); color: var(--text); }
+.page-data .lang-btn.is-active { background: var(--accent); background-image: none; box-shadow: none; }
+.page-data .lang-btn.is-active:focus-visible { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
+html[data-theme="dark"] .page-data .theme-toggle:hover { background-color: var(--bg-soft) !important; }
+.page-data .skill-card,
+html[data-theme="dark"] .page-data .skill-card { border-color: var(--border-subtle) !important; }
+html[data-theme="dark"] .page-data .skill-card:not(.is-skill-active) { background: var(--surface) !important; }
+.page-data .skill-card:hover { box-shadow: none !important; }
+.page-data .skill-card.is-skill-active,
+html[data-theme="dark"] .page-data .skill-card.is-skill-active {
+  background: var(--accent) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+}
+.page-data .experience-filter,
+html[data-theme="dark"] .page-data .experience-filter { border-color: var(--border-subtle) !important; }
+.page-data .experience-filter.is-active,
+html[data-theme="dark"] .page-data .experience-filter.is-active {
+  background: var(--head) !important;
+  border-color: var(--head) !important;
+  color: var(--bg) !important;
+  box-shadow: none !important;
+}
+
+/* — Surfaces : la feuille, pas de dégradé — */
+.page-data .skill-preview,
+.page-data .edu-card,
+html[data-theme="dark"] .page-data .skills-block,
+html[data-theme="dark"] .page-data .skill-preview,
+html[data-theme="dark"] .page-data .course-chip,
+html[data-theme="dark"] .page-data .nav-dropdown,
+html[data-theme="dark"] .page-data .skip-link {
+  background: var(--surface) !important;
+  background-image: none !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+.page-data .edu-degree-chip,
+.page-data .edu-degree-chip--minor {
+  background: var(--accent-soft) !important;
+  border-color: var(--border-subtle) !important;
+}
+.page-data .edu-degree-chip--minor,
+html[data-theme="dark"] .page-data .edu-degree-chip--minor { color: var(--text-soft) !important; }
+.page-data .skills-subtitle { color: var(--text-soft) !important; border-left-color: var(--eau) !important; }
+.page-data .skills-subtitle--sub { color: var(--eau) !important; }
+.page-data .skills-block { border-left-color: var(--eau) !important; }
+.page-data .skills-tools-group { border-color: var(--eau) !important; }
+.page-data .skills-tools-label { color: var(--text-soft) !important; }
+.page-data .proof-card { border-left-color: var(--border-subtle) !important; }
+.page-data .award-card,
+.page-data .award-card--featured,
+html[data-theme="dark"] .page-data .award-card {
+  background: var(--surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+.page-data .award-card::before { display: none !important; }
+.page-data .contact-form,
+html[data-theme="dark"] .page-data .contact-form {
+  background: var(--surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+.page-data .contact-form input,
+.page-data .contact-form textarea,
+html[data-theme="dark"] .page-data .contact-form input,
+html[data-theme="dark"] .page-data .contact-form textarea {
+  background: var(--bg) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 2px !important;
+  color: var(--text) !important;
+}
+.page-data .contact-form input:focus,
+.page-data .contact-form textarea:focus { border-color: var(--accent) !important; box-shadow: 0 0 0 3px var(--accent-soft) !important; }
+
+/* — Frise : liseré fin, repères en petits cercles, le plus récent plein en sarcelle — */
+.page-data .timeline-item,
+html[data-theme="dark"] .page-data .timeline-item { border-radius: 0; border-left-color: var(--border-subtle) !important; }
+.page-data .timeline-item:hover { background-color: transparent !important; }
+.page-data .timeline-item::before,
+html[data-theme="dark"] .page-data .timeline-item::before {
+  left: -5.5px;
+  top: 1.45rem;
+  bottom: auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text) !important;
+  box-shadow: none;
+  opacity: 1;
+  transform: none;
+  z-index: 2;
+  background: var(--bg);
+}
+.page-data .section-alt .timeline-item::before { background: var(--bg-soft); }
+.page-data .timeline-item:first-child::before,
+html[data-theme="dark"] .page-data .timeline-item:first-child::before { border-color: var(--accent) !important; background: var(--accent); }
+.page-data .timeline-points li::marker { color: var(--border-subtle); }
+
+/* — Logo : « YT » au-dessus d'un petit graphique, data uniquement — */
+.page-data .brand-mark--graphe .logo-lettres { fill: var(--text); }
+.page-data .brand-mark--graphe .logo-axe { stroke: var(--text); stroke-width: 1; fill: none; }
+.page-data .brand-mark--graphe .logo-barre { fill: var(--text); }
+.page-data .brand-mark--graphe .logo-barre.is-cle { fill: var(--accent); }
+.page-data .brand:hover .brand-mark--graphe { transform: translateY(-1px); filter: none; }

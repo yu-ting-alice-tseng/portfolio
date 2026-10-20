@@ -26,223 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <style>
-    /* ────────────────────────────────────────────────
-       DATA PAGE – teal theme, full override
-       Accent: #0d9488 (teal-600)
-       Secondary: #0891b2 (cyan-600)
-    ──────────────────────────────────────────────── */
-    .page-data {
-      --accent:       #0d9488;
-      --accent-hover: #0f766e;
-      --accent-soft:  rgba(13,148,136,0.10);
-      --bg:           #f0fdfa;   /* teal-50 */
-      --bg-soft:      #ccfbf1;   /* teal-100 */
-      --bg-alt:       #ffffff;
-    }
-    .page-data {
-      background-color: #f0fdfa !important;
-    }
-
-    /* ?? Decorative side lines ?? */
-    .page-data::before, .page-data::after {
-      background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(13,148,136,0.22) 18%,
-        rgba(8,145,178,0.18) 55%,
-        rgba(20,184,166,0.12) 82%,
-        transparent 100%
-      );
-    }
-
-    /* ?? Scroll progress bar ?? */
-    .page-data .scroll-progress {
-      background: linear-gradient(90deg, #0d9488, #0891b2) !important;
-    }
-
-    /* ?? Hero background orbs ?? */
-    .page-data .hero::before {
-      background:
-        radial-gradient(ellipse at 24% 34%, rgba(13,148,136,0.18) 0%, transparent 52%),
-        radial-gradient(ellipse at 72% 20%, rgba(8,145,178,0.12) 0%, transparent 48%),
-        radial-gradient(ellipse at 48% 78%, rgba(20,184,166,0.08) 0%, transparent 44%) !important;
-    }
-    .page-data .hero::after {
-      background:
-        radial-gradient(ellipse at 58% 42%, rgba(8,145,178,0.14) 0%, transparent 52%),
-        radial-gradient(ellipse at 18% 75%, rgba(13,148,136,0.09) 0%, transparent 48%),
-        radial-gradient(ellipse at 84% 22%, rgba(20,184,166,0.08) 0%, transparent 44%) !important;
-    }
-
-    /* Hero background grid dot color */
-    .page-data .hero {
-      background-image:
-        linear-gradient(rgba(13,148,136,0.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(13,148,136,0.055) 1px, transparent 1px);
-    }
-
-    /* Hero card glow */
-    .page-data .hero-card::before {
-      background: radial-gradient(circle, rgba(13,148,136,0.12), transparent 70%);
-    }
-
-    /* ?? h1 accent gradient text ?? */
-    .page-data .accent {
-      background-image: linear-gradient(120deg, #0d9488, #0891b2);
-    }
-
-    /* ?? Nav underlines ?? */
-    .page-data .site-nav a::after,
-    .page-data .nav-dropdown-toggle::after {
-      background: linear-gradient(90deg, #0d9488, #0891b2);
-    }
-
-    /* ?? Section header accent bar ?? */
-    .page-data .section-header::before {
-      background: linear-gradient(90deg, #0d9488, #0891b2) !important;
-    }
-
-    /* ?? Buttons ?? */
-    .page-data .btn-primary {
-      background: linear-gradient(135deg, #0d9488, #0891b2);
-      box-shadow: 0 8px 22px rgba(13,148,136,0.28);
-    }
-    .page-data .btn-primary:hover {
-      background: linear-gradient(135deg, #0f766e, #0369a1);
-      box-shadow: 0 14px 32px rgba(13,148,136,0.38);
-    }
-    .page-data .btn-ghost {
-      border-color: rgba(13,148,136,0.45);
-    }
-    .page-data .btn-ghost:hover {
-      border-color: rgba(13,148,136,0.75);
-      background-color: rgba(13,148,136,0.05);
-    }
-
-    /* ?? Experience card left border ?? */
-    .page-data .exp-card,
-    .page-data .experience-item {
-      border-left-color: rgba(13,148,136,0.35);
-    }
-
-    /* ?? Education cards ?? */
-    .page-data .edu-card {
-      background: linear-gradient(135deg, rgba(13,148,136,0.04) 0%, #ffffff 50%);
-      border: 1px solid rgba(13,148,136,0.15);
-      box-shadow: 0 4px 20px rgba(13,148,136,0.07);
-    }
-    .page-data .edu-card:hover {
-      box-shadow: 0 10px 28px rgba(13,148,136,0.16), 0 2px 8px rgba(15,23,42,0.08);
-    }
-    .page-data .edu-degree-chip {
-      background: rgba(13,148,136,0.08);
-      border: 1px solid rgba(13,148,136,0.22);
-    }
-    .page-data .edu-degree-chip--minor {
-      background: rgba(8,145,178,0.07);
-      border-color: rgba(8,145,178,0.22);
-      color: #0891b2;
-    }
-
-    /* ?? Skill cards ?? */
-    .page-data .skill-card.is-skill-active {
-      background: linear-gradient(135deg, #0d9488, #0891b2) !important;
-      box-shadow: 0 2px 8px rgba(13,148,136,0.30) !important;
-    }
-    .page-data .skill-card:hover {
-      box-shadow: 0 4px 12px rgba(13,148,136,0.12) !important;
-    }
-
-    /* ?? Contact / form inputs ?? */
-    .page-data input:focus,
-    .page-data textarea:focus,
-    .page-data select:focus {
-      border-color: rgba(13,148,136,0.75);
-      box-shadow: 0 0 0 3px rgba(13,148,136,0.12);
-    }
-
-    /* ?? Lang toggle ?? */
-    /* Section-alt (Formation académique, Contact) */
-    .page-data .section-alt {
-      background-image:
-        radial-gradient(ellipse at 6% 50%,  rgba(13,148,136,0.06) 0%, transparent 46%),
-        radial-gradient(ellipse at 94% 50%, rgba(8,145,178,0.05) 0%, transparent 46%),
-        radial-gradient(ellipse at 50% 0%,  rgba(20,184,166,0.04) 0%, transparent 40%),
-        linear-gradient(160deg, #f0fdfa 0%, #f0fdfa 50%, #ecfeff 100%) !important;
-    }
-    .page-data .section-alt::before {
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(13,148,136,0.28) 30%,
-        rgba(8,145,178,0.45) 50%,
-        rgba(13,148,136,0.28) 70%,
-        transparent 100%
-      ) !important;
-    }
-
-    /* Timeline items (Formation) */
-    .page-data .timeline-item {
-      border-left-color: rgba(13,148,136,0.15) !important;
-    }
-    .page-data .timeline-item::before {
-      border-color: rgba(13,148,136,0.40) !important;
-    }
-    .page-data .timeline-item:hover {
-      background-color: rgba(13,148,136,0.04) !important;
-    }
-
-    /* Education degree chips */
-    .page-data .edu-degree-chip {
-      background: rgba(13,148,136,0.08);
-      border-color: rgba(13,148,136,0.22);
-    }
-
-    /* Skill preview panel */
-    .page-data .skill-preview {
-      background: linear-gradient(
-        152deg,
-        rgba(13,148,136,0.07) 0%,
-        rgba(255,255,255,0.99) 38%,
-        rgba(8,145,178,0.04) 100%
-      );
-      border-color: rgba(13,148,136,0.20);
-      box-shadow: 0 10px 40px rgba(13,148,136,0.10), 0 2px 8px rgba(15,23,42,0.04), inset 0 1px 0 rgba(255,255,255,0.96);
-    }
-
-    /* Award / distinction cards */
-    .page-data .award-card {
-      background: linear-gradient(145deg, #f0fdfa 0%, #ffffff 60%, #f0fdfa 100%);
-    }
-    .page-data .award-card::before {
-      background: radial-gradient(circle at center, rgba(13,148,136,0.12), transparent 65%);
-    }
-    .page-data .award-card--featured {
-      background: linear-gradient(145deg, #ccfbf1 0%, #f0fdfa 60%, #cffafe 100%);
-      border-color: rgba(13,148,136,0.25);
-    }
-    .page-data .award-card--featured::before {
-      background: radial-gradient(circle at center, rgba(8,145,178,0.14), transparent 65%);
-    }
-
-    /* Contact form */
-    .page-data .contact-form {
-      background: linear-gradient(148deg, #ffffff 0%, #f0fdfa 100%);
-    }
-
-    .page-data .lang-switch { border-color: rgba(13,148,136,0.25); }
-    .page-data .lang-btn:hover:not(.is-active) { background: rgba(13,148,136,0.08); }
-    .page-data .lang-btn.is-active {
-      background: linear-gradient(135deg, #0d9488, #0891b2);
-      box-shadow: 0 2px 8px rgba(13,148,136,0.30);
-    }
-    .page-data .lang-btn.is-active:focus-visible {
-      box-shadow: 0 2px 8px rgba(13,148,136,0.30), 0 0 0 2px #fff, 0 0 0 4px #0d9488;
-    }
-  </style>
   </head>
   <body class="page-data">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="da-graphe" viewBox="0 0 200 60"><path class="g-repere" d="M14 20 H186 M14 35 H186"/><rect class="g-barre" x="28" y="38" width="12" height="14"/><rect class="g-barre" x="50" y="30" width="12" height="22"/><rect class="g-barre" x="72" y="34" width="12" height="18"/><rect class="g-barre" x="94" y="25" width="12" height="27"/><rect class="g-barre" x="116" y="28" width="12" height="24"/><rect class="g-barre" x="138" y="19" width="12" height="33"/><rect class="g-barre is-cle" x="160" y="12" width="12" height="40"/><path class="g-axe" d="M14 5 V52 H186"/><path class="g-grad" d="M34 52 V55 M56 52 V55 M78 52 V55 M100 52 V55 M122 52 V55 M144 52 V55 M166 52 V55 M11 20 H14 M11 35 H14"/><path class="g-courbe" d="M34 34 L56 26 L78 30 L100 21 L122 24 L144 15 L166 8"/><circle class="g-point" cx="34" cy="34" r="2.3"/><circle class="g-point" cx="56" cy="26" r="2.3"/><circle class="g-point" cx="78" cy="30" r="2.3"/><circle class="g-point" cx="100" cy="21" r="2.3"/><circle class="g-point" cx="122" cy="24" r="2.3"/><circle class="g-point" cx="144" cy="15" r="2.3"/><circle class="g-point is-cle" cx="166" cy="8" r="2.6"/></symbol>
+  </svg>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4HC6D6D"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -254,19 +42,14 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <span class="brand-mark">
+          <span class="brand-mark brand-mark--graphe">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="yt-grad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#0d9488"/>
-                  <stop offset="60%" stop-color="#0891b2"/>
-                  <stop offset="100%" stop-color="#06b6d4"/>
-                </linearGradient>
-              </defs>
-              <rect x="4" y="4" width="28" height="28" rx="5" transform="rotate(45 18 18)" fill="url(#yt-grad)"/>
-              <rect x="5.5" y="5.5" width="25" height="25" rx="4.2" transform="rotate(45 18 18)" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
-              <text x="7.5" y="22.5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="13" font-weight="700" fill="white" letter-spacing="-0.5">Y</text>
-              <text x="17.5" y="22.5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.88)" letter-spacing="-0.5">T</text>
+              <text class="logo-lettres" x="18" y="16" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="14" font-weight="700">YT</text>
+              <rect class="logo-barre" x="9" y="27" width="3" height="5"/>
+              <rect class="logo-barre" x="14.5" y="25" width="3" height="7"/>
+              <rect class="logo-barre" x="20" y="26" width="3" height="6"/>
+              <rect class="logo-barre is-cle" x="25.5" y="22" width="3" height="10"/>
+              <path class="logo-axe" d="M6 20.5 V32 H31"/>
             </svg>
           </span>
           <span class="brand-text" data-i18n="brandName">Yu‑Ting Tseng</span>
@@ -387,6 +170,12 @@
           </aside>
         </div>
       </section>
+
+      <div class="da-sep" data-reveal aria-hidden="true">
+        <span class="da-sep-filet"></span>
+        <svg class="da-sep-orn" width="200" height="60" viewBox="0 0 200 60" focusable="false"><use href="#da-graphe" width="200" height="60"/></svg>
+        <span class="da-sep-filet"></span>
+      </div>
 
       <!-- ?? Skills ?????????????????????????????????? -->
       <section class="section" id="skills">
@@ -524,6 +313,12 @@
         </div>
       </section>
 
+      <div class="da-sep" data-reveal aria-hidden="true">
+        <span class="da-sep-filet"></span>
+        <svg class="da-sep-orn" width="200" height="60" viewBox="0 0 200 60" focusable="false"><use href="#da-graphe" width="200" height="60"/></svg>
+        <span class="da-sep-filet"></span>
+      </div>
+
       <!-- ?? Education ??????????????????????????????? -->
       <section class="section section-alt" id="education">
         <div class="container">
@@ -635,6 +430,12 @@
           </div>
         </div>
       </section>
+
+      <div class="da-sep" data-reveal aria-hidden="true">
+        <span class="da-sep-filet"></span>
+        <svg class="da-sep-orn" width="200" height="60" viewBox="0 0 200 60" focusable="false"><use href="#da-graphe" width="200" height="60"/></svg>
+        <span class="da-sep-filet"></span>
+      </div>
 
       <!-- ?? Experience ??????????????????????????????? -->
       <section class="section" id="experience">
@@ -764,6 +565,12 @@
         </div>
       </section>
 
+      <div class="da-sep" data-reveal aria-hidden="true">
+        <span class="da-sep-filet"></span>
+        <svg class="da-sep-orn" width="200" height="60" viewBox="0 0 200 60" focusable="false"><use href="#da-graphe" width="200" height="60"/></svg>
+        <span class="da-sep-filet"></span>
+      </div>
+
       <section class="section section-alt" id="volunteer">
         <div class="container">
           <header class="section-header" data-reveal>
@@ -846,6 +653,12 @@
           </div>
         </div>
       </section>
+
+      <div class="da-sep" data-reveal aria-hidden="true">
+        <span class="da-sep-filet"></span>
+        <svg class="da-sep-orn" width="200" height="60" viewBox="0 0 200 60" focusable="false"><use href="#da-graphe" width="200" height="60"/></svg>
+        <span class="da-sep-filet"></span>
+      </div>
 
       <!-- ?? Contact ?????????????????????????????????? -->
       <section class="section" id="contact">

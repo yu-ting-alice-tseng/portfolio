@@ -1,7 +1,7 @@
 /* ════════════════════════════════════════════════════
    Visionneuse : une image agrandie au centre de la page
    ────────────────────────────────────────────────────
-   Chargé par portfolio-marketing.html. Tout lien vers une
+   Chargé par portfolio-marketing.html et portfolio-data.html. Tout lien vers une
    image (.webp, .png, .jpg, .gif) à l'intérieur d'un projet
    s'ouvre ici au lieu d'un nouvel onglet ; les flèches
    parcourent les autres images visibles du même projet.
