@@ -5380,9 +5380,9 @@ html[data-theme="dark"] body.page-marketing {
    Même édition que marketing.html (§ 41, § 44) : fond
    uni, cartes plates, filets fins, chiffres qui s'écrivent,
    repères de frise en cercles. Le vocabulaire change :
-   papier millimétré au lieu du papier xuan, un petit
-   graphique en barres au lieu du guzheng, sarcelle pour
-   seul accent. Curseur natif, aucun son (CLAUDE.md § 16).
+   papier à cordes au lieu du papier xuan, guzheng vu de
+   dessus comme un graphique au lieu du guzheng à l'encre,
+   sarcelle pour seul accent. Curseur natif, aucun son (CLAUDE.md § 16).
    ════════════════════════════════════════════════════ */
 body.page-data {
   --accent:        #0d9488;
@@ -5397,8 +5397,7 @@ body.page-data {
   --head:          #0b1220;
   --border-subtle: #cfe3df;
   --eau:           #9fcac3;
-  --grille:        rgba(13, 148, 136, 0.07);
-  --grille-forte:  rgba(13, 148, 136, 0.11);
+  --corde-gong:    rgba(13, 148, 136, 0.2);
   background-color: var(--bg) !important;
 }
 html[data-theme="dark"] body.page-data {
@@ -5414,21 +5413,17 @@ html[data-theme="dark"] body.page-data {
   --head:          #f0faf8 !important;
   --border-subtle: #1d3b38 !important;
   --eau:           #2c524e !important;
-  --grille:        rgba(45, 212, 191, 0.045) !important;
-  --grille-forte:  rgba(45, 212, 191, 0.08) !important;
+  --corde-gong:    rgba(45, 212, 191, 0.16) !important;
   background-color: var(--bg) !important;
 }
 
-/* — Papier millimétré : sous le contenu, jamais par-dessus — */
+/* — Papier à cordes : une corde sarcelle tous les 70 px (la corde verte du
+     guzheng qui marque la note gong), sous le contenu, jamais par-dessus — */
 body.page-data,
 html[data-theme="dark"] body.page-data {
-  background-image:
-    linear-gradient(var(--grille-forte) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grille-forte) 1px, transparent 1px),
-    linear-gradient(var(--grille) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grille) 1px, transparent 1px) !important;
-  background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px !important;
-  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px !important;
+  background-image: linear-gradient(var(--corde-gong) 1px, transparent 1px) !important;
+  background-size: 100% 70px !important;
+  background-position: 0 -1px !important;
 }
 body.page-data::before,
 body.page-data::after { display: none !important; }
@@ -5462,7 +5457,7 @@ html[data-theme="dark"] .page-data .site-header { border-bottom-color: var(--bor
 .page-data .site-nav a::after,
 .page-data .nav-dropdown-toggle::after { background: var(--accent); }
 
-/* — Séparation des sections : deux filets et un graphique en barres — */
+/* — Séparation des sections : deux filets et un guzheng vu de dessus — */
 .da-sep { display: none; }
 .page-data .da-sep,
 .page-portfolio-data .da-sep {
@@ -5475,17 +5470,18 @@ html[data-theme="dark"] .page-data .site-header { border-bottom-color: var(--bor
 }
 .da-sep-filet { flex: 1; height: 1px; min-width: 0; background: var(--eau); }
 .da-sep-orn { flex: none; overflow: visible; }
-@media (max-width: 540px) { .da-sep-orn { width: 132px; height: 40px; } }
-/* le graphique (symbole #da-graphe) : axe et graduations à l'encre, barres
-   claires cernées, la plus récente pleine en sarcelle, courbe de tendance */
-#da-graphe .g-axe { fill: none; stroke: var(--text); stroke-width: 1.2; stroke-linecap: round; }
-#da-graphe .g-grad { stroke: var(--text); stroke-width: 0.8; stroke-opacity: 0.55; }
-#da-graphe .g-repere { stroke: var(--text); stroke-width: 0.5; stroke-opacity: 0.22; stroke-dasharray: 2 3; }
-#da-graphe .g-barre { fill: var(--bg-soft); stroke: var(--text); stroke-width: 1; }
-#da-graphe .g-barre.is-cle { fill: var(--accent); stroke: var(--accent); }
-#da-graphe .g-courbe { fill: none; stroke: var(--text); stroke-width: 1.1; stroke-linejoin: round; stroke-linecap: round; }
-#da-graphe .g-point { fill: var(--surface); stroke: var(--text); stroke-width: 1; }
-#da-graphe .g-point.is-cle { fill: var(--accent); stroke: var(--accent); }
+@media (max-width: 540px) { .da-sep-orn { width: 150px; height: 35px; } }
+/* le guzheng (symbole #da-guzheng), en plan : table claire cernée d'encre,
+   deux sillets, dix cordes comme des lignes de graphique (5e et 10e en
+   sarcelle, les cordes vertes du gong), chevalets posés en arc et reliés
+   par une courbe de tendance en pointillé, le plus haut en sarcelle */
+#da-guzheng .z-corps { fill: var(--surface); stroke: var(--text); stroke-width: 1.2; stroke-linejoin: round; }
+#da-guzheng .z-sillet { stroke: var(--text); stroke-width: 1.6; stroke-linecap: round; }
+#da-guzheng .z-corde { stroke: var(--text); stroke-width: 0.45; stroke-opacity: 0.5; }
+#da-guzheng .z-corde.is-gong { stroke: var(--accent); stroke-opacity: 0.9; stroke-width: 0.6; }
+#da-guzheng .z-ch { fill: none; stroke: var(--text); stroke-width: 1.2; stroke-linejoin: round; stroke-linecap: round; }
+#da-guzheng .z-ch.is-cle { stroke: var(--accent); stroke-width: 1.7; }
+#da-guzheng .z-courbe { fill: none; stroke: var(--accent); stroke-width: 0.8; stroke-dasharray: 2.5 2.5; stroke-opacity: 0.8; }
 /* les filets s'ouvrent depuis le centre, puis le graphique apparaît */
 .da-sep .da-sep-filet:first-child { clip-path: inset(0 0 0 100%); }
 .da-sep .da-sep-filet:last-child  { clip-path: inset(0 100% 0 0); }
@@ -5722,9 +5718,11 @@ html[data-theme="dark"] .page-data .timeline-item::before {
 html[data-theme="dark"] .page-data .timeline-item:first-child::before { border-color: var(--accent) !important; background: var(--accent); }
 .page-data .timeline-points li::marker { color: var(--border-subtle); }
 
-/* — Logo : « YT » au-dessus d'un petit graphique, data uniquement — */
-.page-data .brand-mark--graphe .logo-lettres { fill: var(--text); }
-.page-data .brand-mark--graphe .logo-axe { stroke: var(--text); stroke-width: 1; fill: none; }
-.page-data .brand-mark--graphe .logo-barre { fill: var(--text); }
-.page-data .brand-mark--graphe .logo-barre.is-cle { fill: var(--accent); }
-.page-data .brand:hover .brand-mark--graphe { transform: translateY(-1px); filter: none; }
+/* — Logo : « YT » au-dessus d'un petit guzheng en plan, data uniquement — */
+.page-data .brand-mark--guzheng .logo-lettres { fill: var(--text); }
+.page-data .brand-mark--guzheng .logo-corps { fill: none; stroke: var(--text); stroke-width: 1; }
+.page-data .brand-mark--guzheng .logo-sillet { stroke: var(--text); stroke-width: 1; }
+.page-data .brand-mark--guzheng .logo-cordes { stroke: var(--text); stroke-width: 0.35; stroke-opacity: 0.6; }
+.page-data .brand-mark--guzheng .logo-chevalet { fill: none; stroke: var(--text); stroke-width: 0.7; }
+.page-data .brand-mark--guzheng .logo-chevalet.is-cle { stroke: var(--accent); stroke-width: 1; }
+.page-data .brand:hover .brand-mark--guzheng { transform: translateY(-1px); filter: none; }
