@@ -113,8 +113,10 @@
     });
   }
 
-  /* ── Pied de page : la dernière corde, un ré grave ── */
-  const foot = document.querySelector('.page-marketing .site-footer .footer-inner, .page-data .site-footer .footer-inner, .pf-footer');
+  /* ── Pied de page : la dernière corde, un ré grave ──
+     Pas sur portfolio-data : le guzheng de la séparation juste au-dessus
+     tient déjà la dernière ligne, deux traits côte à côte faisaient doublon. */
+  const foot = document.querySelector('.page-marketing .site-footer .footer-inner, .page-data .site-footer .footer-inner, .page-portfolio-marketing .pf-footer');
   if (foot) {
     const NS = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(NS, 'svg');
