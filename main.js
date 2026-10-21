@@ -3316,7 +3316,7 @@
       title: "R – Analyse Statistique",
       text: "Utilisation de RStudio pour l'analyse statistique, la visualisation et les études académiques.",
       byPage: {
-        finance:   { text: "Régressions OLS et Logit, analyse de panel et tests d'hypothèses appliqués à la recherche en finance quantitative (M&A, données LSEG)." },
+        finance:   { text: "Corrélations, régressions OLS et Logit et tests d'hypothèses appliqués à la recherche en finance quantitative (M&A, données LSEG)." },
         data:      { text: "Méthodes quantitatives : régressions, ANOVA, visualisations statistiques et études de marché pour des analyses actionnables." },
         marketing: { text: "Études de marché et segmentation : R utilisé pour analyser les données d'audience et valider les stratégies de contenu." },
       },
@@ -3324,7 +3324,7 @@
         title: "R – Statistical Analysis",
         text: "Using RStudio for statistical analysis, visualisation and academic research.",
         byPage: {
-          finance:   { text: "OLS and logit regressions, panel data analysis and hypothesis testing applied to quantitative finance research (M&A, LSEG data)." },
+          finance:   { text: "Correlation analysis, OLS and logit regressions and hypothesis testing applied to quantitative finance research (M&A, LSEG data)." },
           data:      { text: "Quantitative methods: regressions, ANOVA, statistical visualisation and market studies for actionable insights." },
           marketing: { text: "Market research and audience segmentation: R used to analyse audience data and validate content strategies." },
         },
@@ -3493,10 +3493,10 @@
           type: "Projet académique",
           title: "Risky Deals – M&A & Risque Politique (Amérique Latine)",
           org: "emlyon business school",
-          meta: ["R · OLS · Logit · Panel Data"],
+          meta: ["R · Pearson · OLS · Logit"],
           points: [
-            "3 hypothèses testées sur données empiriques 2000 – 2024 (LSEG / Refinitiv, WGI, POLCON III).",
-            "Régression OLS panel (H1 volume M&A), modèle Logit (H2 abandon), OLS sur prime d'acquisition (H3).",
+            "3 hypothèses testées sur données 2000 – 2024 (LSEG / Refinitiv, WGI, POLCON III, FSI) : H1 partiellement confirmée, H2 confirmée par FSI et POLCON III, H3 non concluante.",
+            "Corrélations de Pearson et régressions linéaires (H1 volume M&A, H3 prime d'acquisition), régression logistique binomiale (H2 abandon).",
           ],
           actions: [{ label: "Voir le rapport", href: "assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf" }],
         },
