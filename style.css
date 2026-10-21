@@ -5142,6 +5142,7 @@ body.page-portfolio-marketing::after { display: none; }
    ════════════════════════════════════════════════════ */
 body.page-marketing { --trail: var(--text); }
 body.page-portfolio-marketing { --trail: var(--mk-text); }
+body.page-portfolio-data { --trail: var(--da-text); }
 body.has-ink-dot,
 body.has-ink-dot a,
 body.has-ink-dot button,
@@ -5375,55 +5376,56 @@ html[data-theme="dark"] body.page-marketing {
 .page-portfolio-marketing .pf-grain { display: none !important; }
 
 /* ════════════════════════════════════════════════════
-   § 46 Page data : la mise en page de marketing, en sarcelle
+   § 46 Page data : tout le design de marketing, en céladon
    ────────────────────────────────────────────────────
-   Même édition que marketing.html (§ 41, § 44) : fond
-   uni, cartes plates, filets fins, chiffres qui s'écrivent,
-   repères de frise en cercles. Le vocabulaire change :
-   papier à cordes au lieu du papier xuan, guzheng vu de
-   dessus comme un graphique au lieu du guzheng à l'encre,
-   sarcelle pour seul accent. Curseur natif, aucun son (CLAUDE.md § 16).
+   Même direction que marketing.html (§ 41, § 43 à § 45) :
+   papier xuan, filets d'encre, cartes plates, chiffres qui
+   s'écrivent, repères de frise en cercles, curseur lavis
+   (ink-cursor.js) et séparations qui vibrent et sonnent
+   (guzheng.js, son coupé par défaut). Le lien avec la data :
+   papier retinté céladon, sarcelle à la place du vermillon,
+   et un guzheng vu de dessus dessiné comme un graphique.
    ════════════════════════════════════════════════════ */
 body.page-data {
   --accent:        #0d9488;
   --accent-hover:  #0f766e;
-  --accent-soft:   rgba(13, 148, 136, 0.08);
-  --bg:            #f0fdfa;
-  --bg-soft:       #e3f6f2;
-  --bg-alt:        #ffffff;
-  --surface:       #ffffff;
-  --text:          #0f172a;
-  --text-soft:     #475569;
-  --head:          #0b1220;
-  --border-subtle: #cfe3df;
-  --eau:           #9fcac3;
-  --corde-gong:    rgba(13, 148, 136, 0.2);
+  --accent-soft:   rgba(13, 148, 136, 0.09);
+  --bg:            #e4ece7;
+  --bg-soft:       #dbe5df;
+  --bg-alt:        #eef3ef;
+  --surface:       #eef3ef;
+  --text:          #16211f;
+  --text-soft:     #44524f;
+  --head:          #101a18;
+  --border-subtle: #c3cfc9;
+  --eau:           #aebdb6;
+  --trail:         var(--text);
   background-color: var(--bg) !important;
 }
 html[data-theme="dark"] body.page-data {
   --accent:        #0d9488 !important;
   --accent-hover:  #14b8a6 !important;
   --accent-soft:   rgba(13, 148, 136, 0.16) !important;
-  --bg:            #081b1a !important;
-  --bg-soft:       #0b2322 !important;
-  --bg-alt:        #0f2a28 !important;
-  --surface:       #0f2a28 !important;
-  --text:          #e2f1ee !important;
-  --text-soft:     #9dbab5 !important;
-  --head:          #f0faf8 !important;
-  --border-subtle: #1d3b38 !important;
-  --eau:           #2c524e !important;
-  --corde-gong:    rgba(45, 212, 191, 0.16) !important;
+  --bg:            #111816 !important;
+  --bg-soft:       #161f1d !important;
+  --bg-alt:        #1a2422 !important;
+  --surface:       #1a2422 !important;
+  --text:          #e3ebe7 !important;
+  --text-soft:     #a9b8b2 !important;
+  --head:          #f0f5f2 !important;
+  --border-subtle: #2c3835 !important;
+  --eau:           #43524e !important;
   background-color: var(--bg) !important;
 }
 
-/* — Papier à cordes : une corde sarcelle tous les 70 px (la corde verte du
-     guzheng qui marque la note gong), sous le contenu, jamais par-dessus — */
-body.page-data,
+/* — Papier xuan retinté céladon, sous le contenu seulement (comme § 45) — */
+body.page-data {
+  background-image: url("assets/xuan-paper-celadon.webp") !important;
+  background-size: 640px 640px !important;
+  background-repeat: repeat !important;
+}
 html[data-theme="dark"] body.page-data {
-  background-image: linear-gradient(var(--corde-gong) 1px, transparent 1px) !important;
-  background-size: 100% 70px !important;
-  background-position: 0 -1px !important;
+  background-image: url("assets/xuan-paper-celadon-dark.webp") !important;
 }
 body.page-data::before,
 body.page-data::after { display: none !important; }
@@ -5457,10 +5459,9 @@ html[data-theme="dark"] .page-data .site-header { border-bottom-color: var(--bor
 .page-data .site-nav a::after,
 .page-data .nav-dropdown-toggle::after { background: var(--accent); }
 
-/* — Séparation des sections : deux filets et un guzheng vu de dessus — */
-.da-sep { display: none; }
-.page-data .da-sep,
-.page-portfolio-data .da-sep {
+/* — Séparation des sections : deux filets d'encre et un guzheng vu de dessus.
+     Mêmes classes que marketing (.mk-sep) : guzheng.js les fait vibrer et sonner. — */
+.page-data .mk-sep {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -5468,41 +5469,36 @@ html[data-theme="dark"] .page-data .site-header { border-bottom-color: var(--bor
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
-.da-sep-filet { flex: 1; height: 1px; min-width: 0; background: var(--eau); }
-.da-sep-orn { flex: none; overflow: visible; }
-@media (max-width: 540px) { .da-sep-orn { width: 150px; height: 35px; } }
+.page-data .mk-sep-filet path { fill: var(--eau); }
+@media (max-width: 540px) { .page-data .mk-sep-orn, .page-portfolio-data .mk-sep-orn { width: 150px; height: 35px; } }
 /* le guzheng (symbole #da-guzheng), en plan : table claire cernée d'encre,
    deux sillets, dix cordes comme des lignes de graphique (5e et 10e en
    sarcelle, les cordes vertes du gong), chevalets posés en arc et reliés
    par une courbe de tendance en pointillé, le plus haut en sarcelle */
-#da-guzheng .z-corps { fill: var(--surface); stroke: var(--text); stroke-width: 1.2; stroke-linejoin: round; }
-#da-guzheng .z-sillet { stroke: var(--text); stroke-width: 1.6; stroke-linecap: round; }
-#da-guzheng .z-corde { stroke: var(--text); stroke-width: 0.45; stroke-opacity: 0.5; }
-#da-guzheng .z-corde.is-gong { stroke: var(--accent); stroke-opacity: 0.9; stroke-width: 0.6; }
-#da-guzheng .z-ch { fill: none; stroke: var(--text); stroke-width: 1.2; stroke-linejoin: round; stroke-linecap: round; }
-#da-guzheng .z-ch.is-cle { stroke: var(--accent); stroke-width: 1.7; }
-#da-guzheng .z-courbe { fill: none; stroke: var(--accent); stroke-width: 0.8; stroke-dasharray: 2.5 2.5; stroke-opacity: 0.8; }
-/* les filets s'ouvrent depuis le centre, puis le graphique apparaît */
-.da-sep .da-sep-filet:first-child { clip-path: inset(0 0 0 100%); }
-.da-sep .da-sep-filet:last-child  { clip-path: inset(0 100% 0 0); }
-.da-sep .da-sep-orn { opacity: 0; transform: translateY(6px); }
-.da-sep.is-visible .da-sep-filet,
-.da-sep.is-revealed .da-sep-filet,
-.pf-case.is-current .da-sep .da-sep-filet {
+#da-guzheng .z-corps { fill: var(--surface); stroke: var(--text); stroke-width: 1.4; stroke-linejoin: round; }
+#da-guzheng .z-sillet { stroke: var(--text); stroke-width: 1.8; stroke-linecap: round; }
+#da-guzheng .z-corde { stroke: var(--text); stroke-width: 0.5; stroke-opacity: 0.6; }
+#da-guzheng .z-corde.is-gong { stroke: var(--accent); stroke-opacity: 1; stroke-width: 0.7; }
+#da-guzheng .z-ch { fill: none; stroke: var(--text); stroke-width: 1.3; stroke-linejoin: round; stroke-linecap: round; }
+#da-guzheng .z-ch.is-cle { stroke: var(--accent); stroke-width: 1.8; }
+#da-guzheng .z-courbe { fill: none; stroke: var(--accent); stroke-width: 0.9; stroke-dasharray: 2.5 2.5; }
+/* les filets s'ouvrent depuis le centre, puis le guzheng se pose */
+.page-data .mk-sep .mk-sep-filet:first-child { clip-path: inset(0 0 0 100%); }
+.page-data .mk-sep .mk-sep-filet:last-child  { clip-path: inset(0 100% 0 0); }
+.page-data .mk-sep .mk-sep-orn { opacity: 0; transform: translateY(-8px) scale(0.96); }
+.page-data .mk-sep.is-visible .mk-sep-filet {
   clip-path: inset(0);
   transition: clip-path 1s cubic-bezier(0.3, 0.75, 0.3, 1);
 }
-.da-sep.is-visible .da-sep-orn,
-.da-sep.is-revealed .da-sep-orn,
-.pf-case.is-current .da-sep .da-sep-orn {
+.page-data .mk-sep.is-visible .mk-sep-orn {
   opacity: 1;
   transform: none;
   transition: opacity 0.6s ease 0.45s, transform 0.65s cubic-bezier(0.25, 0.9, 0.3, 1) 0.45s;
 }
 .page-data .section { border-top: 0; }
 @media (prefers-reduced-motion: reduce) {
-  .da-sep .da-sep-filet { clip-path: none !important; }
-  .da-sep .da-sep-orn { opacity: 1 !important; transform: none !important; }
+  .page-data .mk-sep .mk-sep-filet { clip-path: none !important; }
+  .page-data .mk-sep .mk-sep-orn { opacity: 1 !important; transform: none !important; }
 }
 
 /* — Au-dessus des titres de section : un simple trait — */
@@ -5720,9 +5716,9 @@ html[data-theme="dark"] .page-data .timeline-item:first-child::before { border-c
 
 /* — Logo : « YT » au-dessus d'un petit guzheng en plan, data uniquement — */
 .page-data .brand-mark--guzheng .logo-lettres { fill: var(--text); }
-.page-data .brand-mark--guzheng .logo-corps { fill: none; stroke: var(--text); stroke-width: 1; }
-.page-data .brand-mark--guzheng .logo-sillet { stroke: var(--text); stroke-width: 1; }
-.page-data .brand-mark--guzheng .logo-cordes { stroke: var(--text); stroke-width: 0.35; stroke-opacity: 0.6; }
-.page-data .brand-mark--guzheng .logo-chevalet { fill: none; stroke: var(--text); stroke-width: 0.7; }
-.page-data .brand-mark--guzheng .logo-chevalet.is-cle { stroke: var(--accent); stroke-width: 1; }
+.page-data .brand-mark--guzheng .logo-corps { fill: var(--text); stroke: none; }
+.page-data .brand-mark--guzheng .logo-sillet { stroke: var(--surface); stroke-width: 0.6; }
+.page-data .brand-mark--guzheng .logo-cordes { stroke: var(--surface); stroke-width: 0.35; }
+.page-data .brand-mark--guzheng .logo-chevalet { fill: none; stroke: var(--surface); stroke-width: 0.7; }
+.page-data .brand-mark--guzheng .logo-chevalet.is-cle { stroke: var(--accent); stroke-width: 1.1; }
 .page-data .brand:hover .brand-mark--guzheng { transform: translateY(-1px); filter: none; }

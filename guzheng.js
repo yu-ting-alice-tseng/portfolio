@@ -1,8 +1,8 @@
 /* ════════════════════════════════════════════════════
    Guzheng : la page entière est un instrument
    ────────────────────────────────────────────────────
-   Chargé uniquement par marketing.html et
-   portfolio-marketing.html.
+   Chargé par marketing.html, portfolio-marketing.html,
+   data.html et portfolio-data.html.
    - Chaque séparation (.mk-sep) est une corde : quand le
      toit se pose, ses deux filets vibrent puis se calment ;
      un survol la pince à nouveau. Les cordes montent la
@@ -114,7 +114,7 @@
   }
 
   /* ── Pied de page : la dernière corde, un ré grave ── */
-  const foot = document.querySelector('.page-marketing .site-footer .footer-inner, .pf-footer');
+  const foot = document.querySelector('.page-marketing .site-footer .footer-inner, .page-data .site-footer .footer-inner, .pf-footer');
   if (foot) {
     const NS = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(NS, 'svg');

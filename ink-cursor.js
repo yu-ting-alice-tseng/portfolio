@@ -1,8 +1,8 @@
 /* ════════════════════════════════════════════════════
    Lavis : l'encre répond à la main
    ────────────────────────────────────────────────────
-   Chargé uniquement par marketing.html et
-   portfolio-marketing.html (direction encre et papier).
+   Chargé par marketing.html, portfolio-marketing.html,
+   data.html et portfolio-data.html (direction encre et papier).
    - Curseur : la flèche native, sans retard ni substitut.
    - Survol d'un élément cliquable : le papier boit
      l'encre autour de lui, un lavis pâle s'épanouit sur

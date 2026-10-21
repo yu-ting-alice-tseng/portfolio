@@ -38,7 +38,7 @@ These rules apply to **every task** on this project. Read and follow them before
 | `index` | `#f2f5fb` | bleu `#2563eb` | indigo `#4f46e5`, violet `#6d28d9`, rose `#ec4899` | `#0b1220` / `#2563eb` |
 | `teaching` | `#f2f5fb` | bleu `#2563eb` | une teinte par section : cyan `#0891b2`, vert `#059669`, violet `#7c3aed`, ambre `#d97706`, rose `#e11d48` | `#0b1220` / `#2563eb` |
 | `marketing` + `portfolio-marketing` | papier `#ece9e0`, carte `#f3f1ea` | vermillon `#a8392a` (survol `#8c2e21`) | encre `#1a1815`, gris `#4a463d`, filet `#cbc7ba` | `#14130f` / `#cb5842` |
-| `data` + `portfolio-data` | menthe `#f0fdfa` | sarcelle `#0d9488` | cyan `#0891b2`, sarcelle claire `#14b8a6` | `#081b1a` / `#0d9488` |
+| `data` + `portfolio-data` | papier céladon `#e4ece7`, carte `#eef3ef` | sarcelle `#0d9488` (survol `#0f766e`) | encre `#16211f`, gris `#44524f`, filet `#c3cfc9` | `#111816` / `#0d9488` |
 | `finance` + `portfolio-finance` | `#f6f8fb` | marine `#1e3a5f` | `#2d5282`, bleu acier `#2d6a9f` | `#0b1220` / `#5b8fc7` |
 
 ---
@@ -156,11 +156,11 @@ Order proof cards within a skill by importance (descending):
 
 ## 16. Page Marketing : Direction Visuelle et Portée des Effets
 
-- `marketing.html` et `portfolio-marketing.html` suivent la direction **encre et papier** (lavis, papier de riz, vermillon en seul accent). `data.html` et `portfolio-data.html` reprennent la même mise en page dans leur propre vocabulaire (voir § 24). Les autres pages (`index`, `finance`, `teaching`) gardent leurs dégradés d'origine.
+- `marketing.html` et `portfolio-marketing.html` suivent la direction **encre et papier** (lavis, papier de riz, vermillon en seul accent). `data.html` et `portfolio-data.html` reprennent tout ce design en céladon et sarcelle (voir § 24). Les autres pages (`index`, `finance`, `teaching`) gardent leurs dégradés d'origine.
 - **Le curseur bougie ne s'applique qu'aux travaux de création** : affiches, identité visuelle, design packaging. Les livrables analytiques (dashboards, segmentation, analyse produit) restent affichés normalement : leur lisibilité passe avant l'effet.
 - **Fonctionnement de la bougie** (implémenté dans `portfolio-marketing.html`) : le curseur devient une flamme, l'œuvre survolée s'affiche en niveaux de gris et ne retrouve ses couleurs que dans le halo de lumière, réchauffé d'un voile ambré. Le rayon vacille légèrement, il est proportionné à la taille de l'œuvre.
-- **Effets de curseur réservés à la direction marketing** : `index`, `data`, `finance`, `teaching`, `portfolio-data` et `portfolio-finance` gardent le curseur natif, sans trait, sans cadre ni aucun effet.
-- **Curseur « lavis »** (`ink-cursor.js`, chargé uniquement par `marketing.html` et `portfolio-marketing.html`), tout dans le vocabulaire de l'encre, jamais de réticule ni de cadre de visée :
+- **Effets de curseur réservés aux directions marketing et data** : `index`, `finance`, `teaching` et `portfolio-finance` gardent le curseur natif, sans trait, sans cadre ni aucun effet. `data` et `portfolio-data` ont le curseur lavis (§ 24), jamais la bougie.
+- **Curseur « lavis »** (`ink-cursor.js`, chargé par `marketing.html`, `portfolio-marketing.html`, `data.html` et `portfolio-data.html`), tout dans le vocabulaire de l'encre, jamais de réticule ni de cadre de visée :
   - curseur : **la flèche native**, jamais remplacée ni retardée (la goutte d'encre qui suivait la main a été retirée : elle masquait la flèche et traînait derrière le geste ; un plectre de guzheng a aussi été écarté, peu compréhensible hors de Chine) ;
   - survol d'un **petit** élément cliquable (bouton, lien, puce) : un lavis pâle s'épanouit sur son pourtour, comme le papier qui boit l'encre, sans couvrir son contenu ;
   - survol d'un **grand bloc** (fiche du catalogue, « Projet suivant », tout élément de plus de 90 px dans sa plus petite dimension) : **jamais de lavis autour**, il faisait une auréole grise « sale ». À la place, un coup de pinceau à l'encre se trace de gauche à droite sous le titre (`.pf-cat-name`, `.pf-next-name`), la couverture se soulève ou prend le liseré vermillon, la flèche avance ;
@@ -189,7 +189,7 @@ Order proof cards within a skill by importance (descending):
   - **logo** (`marketing.html` uniquement, `.brand-mark--cordes`) : « YT » à l'encre au-dessus d'un petit guzheng vu de dessus, chevalet vermillon. Les autres pages gardent le losange à leurs couleurs ;
   - aucune surface bleue, violette ou dégradée sur la page marketing (y compris la puce de compétence sélectionnée, en vermillon plein) : cartes, formulaire et champs prennent `--surface`, `--bg` et `--border-subtle` ;
   - **versions précédentes** : cordes et chevalets en fragments au commit `1ae91b7`, version architecture au commit `d073067`.
-- **Guzheng : la page entière est un instrument** (`guzheng.js`, chargé par `marketing.html` et `portfolio-marketing.html`), clin d'œil au club de guzheng :
+- **Guzheng : la page entière est un instrument** (`guzheng.js`, chargé par `marketing.html`, `portfolio-marketing.html`, `data.html` et `portfolio-data.html`), clin d'œil au club de guzheng :
   - **chaque séparation est une corde** : quand le guzheng se pose, les deux filets d'encre vibrent comme une corde pincée puis se calment ; un survol les pince à nouveau. De haut en bas, les cordes montent la gamme pentatonique en ré (ré, mi, fa#, la, si, ré…) ;
   - **le filet du pied de page est la dernière corde** : il vibre en vermillon et sonne un ré grave quand on arrive en bas, pour refermer la phrase ;
   - **son coupé par défaut**, jamais de lecture automatique : il ne s'active que par le **bouton note** de l'en-tête (`.mk-son`, à côté du bouton de thème, barré tant que le son est coupé, info-bulle FR/EN). Le choix suit le visiteur d'une page marketing à l'autre pendant la session ; synthèse dans le navigateur, aucun fichier audio ;
@@ -254,18 +254,17 @@ Order proof cards within a skill by importance (descending):
 
 ---
 
-## 24. Pages Data : la Mise en Page de Marketing, la Logique de Data
+## 24. Pages Data : Tout le Design de Marketing, Relié à la Data
 
-- **Demande de l'utilisatrice :** `data.html` et `portfolio-data.html` reprennent le design des pages marketing (mêmes compositions, cartes plates, filets fins, chiffres qui s'écrivent, repères de frise en cercles, catalogue puis lecture), mais **le contenu et le vocabulaire visuel suivent la logique data**. Ne jamais y importer le guzheng, le papier xuan, le vermillon, le curseur lavis, la bougie ni le son.
-- **Palette inchangée** (§ 3) : menthe `#f0fdfa`, sarcelle `#0d9488` en seul accent, cyan `#0891b2` en secondaire, encre `#0f172a` ; sombre `#081b1a`.
-- **Un seul motif, comme sur marketing : le guzheng**, mais dessiné à la manière d'un graphique (choix de l'utilisatrice, le graphique en barres jugé trop impersonnel a été remplacé) :
-  - **séparations `.da-sep`** : deux filets et un guzheng vu de dessus (symbole `#da-guzheng`, 240 × 56, 150 px de large sur téléphone) : table claire cernée d'encre, deux sillets, dix cordes fines comme des lignes de graphique, la 5e et la 10e en sarcelle (les cordes vertes qui marquent la note gong sur un vrai guzheng), chevalets agrandis et posés en arc comme sur l'instrument, reliés par une courbe de tendance en pointillé sarcelle, le plus haut chevalet en sarcelle. Pas de règle graduée ;
-  - **fond « papier à cordes »** : une seule corde sarcelle tous les 70 px, sans les lignes grises (version avec lignes grises comparée puis écartée : trop proche d'une feuille de cahier). Le papier millimétré a été retiré ;
-  - **logo** (`.brand-mark--guzheng`) : « YT » au-dessus d'un petit guzheng en plan, un chevalet en sarcelle ;
-  - trait sarcelle de 2 px sous les titres des fiches au survol (à la place du coup de pinceau).
-- **Styles :** `style.css` § 46 pour `data.html` (le bloc `<style>` en ligne de la page a été retiré). `portfolio-data.html` garde ses styles dans la page, variables `--da-*`.
+- **Demande de l'utilisatrice (direction B « papier céladon », choisie parmi trois propositions) :** `data.html` et `portfolio-data.html` reprennent **tout le design marketing** (papier xuan, filets d'encre, cartes plates, chiffres qui s'écrivent, repères de frise en cercles, catalogue puis lecture, coup de pinceau sous les titres des fiches, curseur lavis, séparations qui vibrent et sonnent), reliés à la data par la couleur et par le dessin du guzheng. Le contenu suit la logique data. Pas de bougie (réservée aux travaux de création).
+- **Palette (§ 3)** : papier xuan retinté céladon `#e4ece7` (`assets/xuan-paper-celadon.webp`, sombre `assets/xuan-paper-celadon-dark.webp` sur `#111816`), cartes `#eef3ef`, encre `#16211f`, sarcelle `#0d9488` à la place du vermillon. Si la teinte change, refaire les deux images (même règle que § 45).
+- **Le guzheng vu de dessus, dessiné comme un graphique** (symbole `#da-guzheng`, 240 × 56, 150 px sur téléphone, passé au filtre d'encre `#mk-encre`) : table claire cernée d'encre, deux sillets, dix cordes fines comme des lignes de graphique, la 5e et la 10e en sarcelle (les cordes vertes qui marquent la note gong), chevalets posés en arc comme sur l'instrument, reliés par une courbe de tendance en pointillé sarcelle, le plus haut chevalet en sarcelle.
+- **Séparations** : mêmes classes que marketing (`.mk-sep`, filets d'encre `.mk-sep-filet`, `.mk-sep-orn` qui reprend `#da-guzheng`), donc `guzheng.js` les fait vibrer et sonner ; dernière corde au pied de page ; bouton note `.mk-son` dans l'en-tête (son coupé par défaut, même choix de session que marketing).
+- **Logo** (`.brand-mark--guzheng`) : « YT » au-dessus d'un petit guzheng en plan à l'encre, un chevalet en sarcelle.
+- **Versions écartées** : graphique en barres, papier millimétré, papier à cordes sarcelle (avec ou sans lignes grises).
+- **Styles :** `style.css` § 46 pour `data.html`. `portfolio-data.html` garde ses styles dans la page, variables `--da-*`.
 - **`portfolio-data.html`** suit la structure de `portfolio-marketing.html` (§ 16) : catalogue filtrable (Tous, Dashboard, Analyse, Recherche, Reporting), lecture d'un projet à la fois (`#id`), frise de vignettes, « Projet suivant », couverture qui vole jusqu'à `[data-land]`, études complètes repliées, état « Vue / Ouverte » (clé `pf-etat-data`), visionneuse `lightbox.js`. Les couvertures sans image sont des graphiques tirés des chiffres de l'étude (M&A, Chocolat, Maison Luxe), en FR et EN. Le chiffre de chaque fiche met en avant la méthode (12 métriques, 3 hypothèses, 990 236 transactions, 2 176 SKUs, 7 diapositives), pas le même chiffre que la fiche marketing.
-- Couvertures images de `portfolio-data.html` : versions recomposées sur fond blanc (`--da-card`) au lieu du papier marketing, `assets/covers/engoo-dashboard-data(-en).webp` et `engoo-weekly-data(-en).webp`, clés `portfolio.data.coverDash` et `portfolio.data.coverWeekly`.
+- Couvertures images de `portfolio-data.html` : versions recomposées sur la carte céladon `#eef3ef` au lieu du papier marketing, `assets/covers/engoo-dashboard-data(-en).webp` et `engoo-weekly-data(-en).webp`, clés `portfolio.data.coverDash` et `portfolio.data.coverWeekly`.
 - Identifiants des projets : `xhs-dashboard`, `ma-risque-politique`, `chocolat-fmcg`, `maison-luxe`, `xhs-weekly`.
 
 ---
