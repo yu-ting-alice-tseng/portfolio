@@ -251,6 +251,7 @@ Order proof cards within a skill by importance (descending):
 
 - Chaque page CV (`index`, `marketing`, `data`, `finance`) a un bouton « Télécharger le CV (PDF) » dans le héros ; le lien change avec la langue (clés `cv.*`, la version chinoise renvoie au PDF anglais).
 - Les PDF (`assets/cv/`) sont **générés depuis les pages** par `tools/build-cv.js` : ne jamais les modifier à la main. **Après toute modification de contenu d'une page CV, relancer le script** (serveur local sur le port 8765, Playwright requis) et committer les PDF.
+- **Contenu du PDF** : le bénévolat n'y figure pas (il reste sur les pages CV, § 21). Chaque entrée s'écrit sur deux lignes : école ou entreprise en gras à gauche et dates à droite, puis intitulé (diplôme ou poste) en italique à gauche et lieu à droite.
 
 ---
 

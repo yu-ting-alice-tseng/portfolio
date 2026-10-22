@@ -1,5 +1,5 @@
 // Génère les CV PDF (FR et EN) à partir du contenu des pages du site.
-// Le CV reprend exactement ce que chaque page affiche : aucune donnée n'est saisie ici.
+// Le CV reprend exactement ce que chaque page affiche (sauf le bénévolat, laissé hors du PDF) : aucune donnée n'est saisie ici.
 //
 // Utilisation (depuis la racine du site) :
 //   npx serve -l 8765 .            (ou python -m http.server 8765)
@@ -70,24 +70,27 @@ function scrape() {
     education: items('education'),
     experience: items('experience'),
     extra: items('extracurricular'),
-    volunteer: items('volunteer'),
   };
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 function render(d, pal, photo) {
-  const entry = (it, compact) => `
+  const entry = (it) => `
     <div class="it">
       <div class="it-head">
-        <div><b>${esc(it.title)}</b>${it.org ? `<span class="org"> · ${esc(it.org)}</span>` : ''}</div>
-        <div class="when">${esc(it.period)}${it.location ? `<span class="loc">${esc(it.location)}</span>` : ''}</div>
+        <b>${esc(it.org || it.title)}</b>
+        <span class="when">${esc(it.period)}</span>
       </div>
-      ${compact ? '' : [...it.rows, it.gpa].filter(Boolean).map((r) => `<div class="row">${esc(r)}</div>`).join('')}
-      ${compact || !it.points.length ? '' : `<ul>${it.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`}
+      ${it.org || it.location ? `<div class="it-sub">
+        <span class="role">${it.org ? esc(it.title) : ''}</span>
+        <span class="loc">${esc(it.location)}</span>
+      </div>` : ''}
+      ${[...it.rows, it.gpa].filter(Boolean).map((r) => `<div class="row">${esc(r)}</div>`).join('')}
+      ${!it.points.length ? '' : `<ul>${it.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`}
     </div>`;
-  const block = (sec, compact) => sec && sec.items.length ? `
-    <section><h2>${esc(sec.title)}</h2>${sec.items.map((it) => entry(it, compact)).join('')}</section>` : '';
+  const block = (sec) => sec && sec.items.length ? `
+    <section><h2>${esc(sec.title)}</h2>${sec.items.map(entry).join('')}</section>` : '';
   const skills = d.skills.filter((b) => b.chips.length);
   return `<!doctype html><html lang="${d.lang}"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -103,16 +106,16 @@ function render(d, pal, photo) {
   .contact span + span::before { content: '\\00a0\\00a0·\\00a0\\00a0'; color: #9aa0ab; }
   h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.09em; color: ${pal.accent}; margin: 8px 0 3px; padding: 2px 6px; background: ${pal.soft}; border-radius: 3px; font-weight: 600; }
   .it { margin: 0 0 4px; break-inside: avoid; }
-  .it-head { display: flex; justify-content: space-between; gap: 10px; }
-  .org { color: #4a5160; }
-  .when { white-space: nowrap; color: #4a5160; text-align: right; }
-  .loc { display: block; font-size: 7.4pt; color: #7a808c; }
+  .it-head, .it-sub { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .it-head b { font-weight: 600; color: #111; }
+  .when { white-space: nowrap; color: #4a5160; text-align: right; font-weight: 500; }
+  .role { font-style: italic; color: #2b3140; }
+  .loc { white-space: nowrap; font-size: 7.4pt; color: #7a808c; text-align: right; }
   .row { color: #4a5160; }
   ul { margin: 1px 0 0; padding-left: 13px; }
   li { margin: 0; }
   .sk { display: grid; grid-template-columns: 30mm 1fr; gap: 1px 8px; }
   .sk b { font-weight: 600; color: #111; }
-  .compact .it { margin-bottom: 2px; }
 </style></head><body>
 <header>
   ${photo ? `<img src="${photo}" alt="">` : ''}
@@ -128,7 +131,6 @@ function render(d, pal, photo) {
 ${block(d.education)}
 ${block(d.experience)}
 ${block(d.extra)}
-<div class="compact">${block(d.volunteer, true)}</div>
 <section><h2>${esc(d.skillsTitle)}</h2><div class="sk">${skills.map((b) =>
   `<b>${esc(b.title)}</b><span>${b.chips.map(esc).join(' · ')}</span>`).join('')}</div></section>
 </body></html>`;
