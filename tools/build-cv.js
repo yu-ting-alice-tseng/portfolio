@@ -62,11 +62,28 @@ function scrape() {
     email: (document.querySelector('a[href^="mailto:"]') || {}).textContent || '',
     linkedin: linkedin ? linkedin.href.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '',
     skillsTitle: txt(skills.querySelector('.section-header h2')),
-    skills: [...skills.querySelectorAll('.skills-block')].map((b) => ({
-      area: b.getAttribute('data-skill-area'),
-      title: txt(b.querySelector('h3')),
-      chips: [...new Set([...b.querySelectorAll('.skill-card')].map(txt))],
-    })),
+    // Compétences par bloc puis par sous-catégorie, comme sur la page (§ 21)
+    skills: [...skills.querySelectorAll('.skills-block')].map((b) => {
+      const chips = (el) => [...new Set([...el.querySelectorAll('.skill-card')].map(txt))];
+      const groups = [...b.querySelectorAll('.skills-subgroup')].map((g) => {
+        const parts = [];
+        let cur = null;
+        for (const el of g.children) {
+          if (el.matches('.skills-subtitle--sub')) parts.push(cur = { label: txt(el), chips: [] });
+          else if (el.matches('.skills-tools-group')) parts.push({ label: txt(el.querySelector('.skills-tools-label')), chips: chips(el) });
+          else if (el.matches('.skills-cards')) {
+            if (!cur) parts.push(cur = { label: '', chips: [] });
+            cur.chips.push(...chips(el));
+          }
+        }
+        return { title: txt(g.querySelector('.skills-subtitle')), parts: parts.filter((x) => x.chips.length) };
+      }).filter((g) => g.parts.length);
+      // Compétences posées directement dans le bloc, hors sous-catégorie
+      const inGroups = new Set(groups.flatMap((g) => g.parts.flatMap((x) => x.chips)));
+      const loose = chips(b).filter((c) => !inGroups.has(c));
+      if (groups.length && loose.length) groups.unshift({ title: '', parts: [{ label: '', chips: loose }] });
+      return { title: txt(b.querySelector('h3')), groups, chips: chips(b) };
+    }),
     education: items('education'),
     experience: items('experience'),
     extra: items('extracurricular'),
@@ -92,6 +109,12 @@ function render(d, pal, photo) {
   const block = (sec) => sec && sec.items.length ? `
     <section><h2>${esc(sec.title)}</h2>${sec.items.map(entry).join('')}</section>` : '';
   const skills = d.skills.filter((b) => b.chips.length);
+  const chipList = (c) => c.map(esc).join(' · ');
+  const skillBlock = (b) => b.groups.length ? `
+    <div class="sk-block"><h3>${esc(b.title)}</h3><div class="sk">${b.groups.map((g) => !g.title ? `<div class="sk-wide">${chipList(g.parts[0].chips)}</div>` :
+      `<b>${esc(g.title)}</b><div>${g.parts.map((x) =>
+        `<div>${x.label ? `<i>${esc(x.label)} :</i> ` : ''}${chipList(x.chips)}</div>`).join('')}</div>`).join('')}</div></div>` : `
+    <div class="sk-block"><div class="sk"><b class="sk-solo">${esc(b.title)}</b><div>${chipList(b.chips)}</div></div></div>`;
   return `<!doctype html><html lang="${d.lang}"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -112,10 +135,16 @@ function render(d, pal, photo) {
   .role { font-style: italic; color: #2b3140; }
   .loc { white-space: nowrap; font-size: 7.4pt; color: #7a808c; text-align: right; }
   .row { color: #4a5160; }
-  ul { margin: 1px 0 0; padding-left: 13px; }
-  li { margin: 0; }
-  .sk { display: grid; grid-template-columns: 30mm 1fr; gap: 1px 8px; }
-  .sk b { font-weight: 600; color: #111; }
+  ul { margin: 1px 0 0; padding: 0; list-style: none; }
+  li { margin: 0; padding-left: 11px; position: relative; }
+  li::before { content: ''; position: absolute; left: 2px; top: 0.58em; width: 3.4px; height: 3.4px; border-radius: 50%; background: ${pal.accent}; }
+  .sk-block { margin: 0 0 4px; break-inside: avoid; }
+  .sk-block h3 { font-size: 8.4pt; font-weight: 600; color: ${pal.accent}; margin: 0 0 1px; padding-bottom: 1px; border-bottom: 0.5px solid ${pal.soft}; }
+  .sk { display: grid; grid-template-columns: 34mm 1fr; gap: 1px 8px; }
+  .sk b { font-weight: 500; color: #2b3140; }
+  .sk b.sk-solo { font-weight: 600; color: ${pal.accent}; }
+  .sk i { color: #4a5160; }
+  .sk-wide { grid-column: 1 / -1; }
 </style></head><body>
 <header>
   ${photo ? `<img src="${photo}" alt="">` : ''}
@@ -131,8 +160,7 @@ function render(d, pal, photo) {
 ${block(d.education)}
 ${block(d.experience)}
 ${block(d.extra)}
-<section><h2>${esc(d.skillsTitle)}</h2><div class="sk">${skills.map((b) =>
-  `<b>${esc(b.title)}</b><span>${b.chips.map(esc).join(' · ')}</span>`).join('')}</div></section>
+<section><h2>${esc(d.skillsTitle)}</h2>${skills.map(skillBlock).join('')}</section>
 </body></html>`;
 }
 
@@ -148,7 +176,20 @@ ${block(d.extra)}
       const p = await ctx.newPage();
       await p.goto(`${BASE}/${page}.html`, { waitUntil: 'load' });
       const data = await p.evaluate(scrape);
+      await p.setViewportSize({ width: Math.round((210 - 24) * 96 / 25.4), height: 1000 });
+      await p.emulateMedia({ media: 'print' });
       await p.setContent(render(data, pal, photo), { waitUntil: 'networkidle' });
+      // Quelques lignes seules sur la dernière page : on resserre légèrement (au plus 7 %) pour les rapatrier
+      await p.evaluate(() => {
+        const pageH = (297 - 21) * 96 / 25.4;
+        const h = document.body.scrollHeight;
+        const full = Math.floor(h / pageH);
+        if (full >= 1 && h > full * pageH && h - full * pageH < pageH * 0.15) {
+          const z = (full * pageH - 8) / h;
+          if (z >= 0.93) document.body.style.zoom = z;
+        }
+        return h / pageH;
+      }).then((n) => console.log('  pages estimées', n.toFixed(2)));
       const file = path.join(OUT, `CV_Yu-Ting_Tseng_${pal.name}_${lang.toUpperCase()}.pdf`);
       await p.pdf({ path: file, format: 'A4', printBackground: true, preferCSSPageSize: true });
       console.log('écrit', path.relative(process.cwd(), file));
