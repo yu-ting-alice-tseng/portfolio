@@ -253,7 +253,13 @@ Order proof cards within a skill by importance (descending):
 - Les PDF (`assets/cv/`) sont **générés depuis les pages** par `tools/build-cv.js` : ne jamais les modifier à la main. **Après toute modification de contenu d'une page CV, relancer le script** (serveur local sur le port 8765, Playwright requis) et committer les PDF.
 - **Contenu du PDF** : le bénévolat n'y figure pas (il reste sur les pages CV, § 21). Chaque entrée s'écrit sur deux lignes : école ou entreprise en gras à gauche et dates à droite, puis intitulé (diplôme ou poste) en italique à gauche et lieu à droite.
 - **Puces du PDF** : petits points dessinés en CSS à la couleur d'accent de la page (le glyphe de la police apparaissait à moitié coupé).
-- **Compétences du PDF** : toujours classées comme sur la page, bloc puis sous-catégorie (libellé à gauche, compétences à droite, sous-niveaux comme « SEA » ou « Outils » en italique). Jamais une longue liste à plat. Les compétences posées hors sous-catégorie restent en tête du bloc, sans libellé inventé.
+- **Compétences du PDF** : classées par bloc puis sous-catégorie (libellé à gauche, compétences à droite, sous-niveaux comme « SEA » ou « Outils » en italique). Jamais une longue liste à plat. L'ordre est fixé pour chaque CV dans `SKILLS` (`tools/build-cv.js`), avec les `data-skill` et les clés `skills.*` du site : aucun texte saisi à la main, aucun libellé inventé. Le script signale toute compétence de la page absente du CV.
+  - **Du plus important au moins important pour le métier visé**, blocs comme sous-catégories et compétences (ex. Finance en tête du CV Finance).
+  - **Libellés des sous-catégories sur une seule ligne** (colonne à la largeur du plus long libellé).
+  - **Toutes les capacités d'analyse dans le bloc Data** (« Data, Reporting & Automation » sur marketing, « Data & Analytics » ailleurs) : Google Analytics, Études de Marché, Veille Concurrentielle, Benchmarking, Analyse Stratégique.
+  - **SEO dans « Marketing Performance »** à côté de SEA, SMM et Display & AdOps, ses outils juste en dessous, en retrait.
+  - **Langues par ordre d'importance** : français, anglais, japonais, puis mandarin.
+  - **Retiré du CV** : « Développement Web » (HTML · CSS), jugé secondaire. Il reste sur le site.
 - **Pas de page presque vide** : si la dernière page ne porte que quelques lignes, le script resserre le contenu (7 % au plus) pour tenir sur une page de moins.
 
 ---
