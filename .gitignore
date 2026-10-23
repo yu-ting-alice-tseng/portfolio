@@ -12,3 +12,6 @@ assets/**/Replication-Package/
 
 # Auto-sync log (local only)
 auto-sync.log
+
+# Fichiers verrou Office (Excel ouvert)
+~$*

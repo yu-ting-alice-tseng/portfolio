@@ -666,33 +666,6 @@
       .pf-footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
       .pf-topbar-inner { padding: 0 1.25rem; }
     }
-    /* ── TCD du dashboard XHS (xhs-pivot.js) ── */
-    .pf-star--tcd { background: var(--da-card); border-left-color: var(--da-accent); }
-    .pf-tcd { margin-top: 0.9rem; }
-    .pf-tcd-champs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.7rem 0.9rem; }
-    .pf-tcd-champ { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
-    .pf-tcd-lbl { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--da-muted); }
-    .pf-tcd-champ select {
-      width: 100%; font: 400 0.8rem 'Outfit', sans-serif; color: var(--da-text);
-      background: var(--da-bg); border: 1px solid var(--da-border); border-radius: 0;
-      padding: 0.4rem 0.5rem; cursor: pointer;
-    }
-    .pf-tcd-champ select:hover { border-color: var(--da-text-soft); }
-    .pf-tcd-champ select:focus-visible { outline: 1.5px solid var(--da-accent); outline-offset: 1px; }
-    .pf-tcd-cadre { margin-top: 1rem; overflow-x: auto; border: 1px solid var(--da-border); background: var(--da-bg); }
-    .pf-tcd-cadre:focus-visible { outline: 1.5px solid var(--da-accent); outline-offset: 2px; }
-    .pf-tcd-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; font-variant-numeric: tabular-nums; color: var(--da-text); }
-    .pf-tcd-table caption { caption-side: top; text-align: left; padding: 0.6rem 0.75rem; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--da-text); border-bottom: 1px solid var(--da-border); }
-    .pf-tcd-table th, .pf-tcd-table td { padding: 0.42rem 0.75rem; border-bottom: 1px solid var(--da-border); white-space: nowrap; }
-    .pf-tcd-table thead th { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--da-muted); text-align: right; background: var(--da-card); }
-    .pf-tcd-table thead th:first-child, .pf-tcd-table tbody th, .pf-tcd-table tfoot th { text-align: left; }
-    .pf-tcd-table tbody th { font-weight: 500; color: var(--da-text-soft); }
-    .pf-tcd-table td { text-align: right; }
-    .pf-tcd-table td.is-chaud { background: rgba(var(--da-accent-rgb), calc(0.04 + var(--i, 0) * 0.3)); }
-    .pf-tcd-table .is-total, .pf-tcd-table tfoot th, .pf-tcd-table tfoot td { font-weight: 600; color: var(--da-text); }
-    .pf-tcd-table tfoot th, .pf-tcd-table tfoot td { border-top: 1.5px solid var(--da-text); border-bottom: none; background: var(--da-card); }
-    .pf-tcd-table tbody tr:hover th, .pf-tcd-table tbody tr:hover td.is-total { color: var(--da-accent); }
-    .pf-tcd-note { font-size: 0.74rem; line-height: 1.6; color: var(--da-muted); margin: 0.6rem 0 0; }
   </style>
 </head>
 <body class="page-portfolio-data">
@@ -814,8 +787,7 @@
         <span class="pf-tag"><span data-lang-show="fr">Formules Avancées</span><span data-lang-show="en">Advanced Formulas</span></span>
       </div>
 <div class="pf-btns">
-        <!-- Lien de telechargement retire : le fichier assets/Engoo_XHS Dashboard_*.xlsx
-             est absent du depot. Deposer le fichier puis retablir ce bouton. -->
+        <a class="pf-btn pf-btn--primary" data-lang-show="fr" href="assets/Engoo_Excel/Engoo_XHS%20Dashboard_FR_261023.xlsx" download>Télécharger le dashboard (Excel)</a><a class="pf-btn pf-btn--primary" data-lang-show="en" href="assets/Engoo_Excel/Engoo_XHS%20Dashboard_EN_261023.xlsx" download>Download the dashboard (Excel)</a>
         <a href="portfolio-marketing.html#engoo-dashboard" class="pf-btn pf-btn--ghost"><span data-lang-show="fr">Angle Marketing : contexte et création</span><span data-lang-show="en">Marketing angle: context and creation</span></a>
       </div>
 </aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-cover-wrap"><img data-land data-i18n-src="portfolio.data.coverDash" src="assets/covers/engoo-dashboard-data.webp" alt="Dashboard KPIs – Engoo XHS" width="1200" height="800"><a class="pf-cover-hit" data-i18n-href="experience.engoo.screenshot1" href="assets/Engoo_Excel/Engoo Dashboard_FR.webp" target="_blank" rel="noopener noreferrer" aria-label="Dashboard" style="inset:0"></a></div></figure><p class="pf-case-note"><span data-lang-show="fr">⚠ J'ai repris le compte, inactif jusque-là, de 12/2024 à 02/2025 : les progressions sur 3 mois portent sur cette période. Les données du 01/10/2024 au 13/02/2025 sont réelles. Les données postérieures au 13/02/2025 sont simulées pour illustrer les fonctionnalités du dashboard.</span><span data-lang-show="en">⚠ I took over the account, previously inactive, from 12/2024 to 02/2025: the 3-month growth figures cover this period. Data from 01/10/2024 to 13/02/2025 is real. Data after 13/02/2025 is simulated to demonstrate the dashboard's features.</span><span data-lang-show="zh">⚠ 我於 12/2024 至 02/2025 接手經營原本閒置的帳號，3 個月的成長數據即指這段期間。01/10/2024 至 13/02/2025 的數據為真實數據，13/02/2025 之後的數據為模擬數據，僅用於展示儀表板功能。</span></p><p class="pf-case-lead" data-i18n="dataHero.caseStudyDesc">Construction d'un tableau de bord Excel complet pour suivre 11 métriques quotidiennes du compte Xiaohongshu d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.</p><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary>
@@ -858,13 +830,6 @@
             <li><strong>動態 A/B 比較模組：</strong>兩個下拉選單自由選取任意時段，自動計算各 KPI 變化百分比。</li>
           </ul>
         </div>
-      </div>
-
-      <div class="pf-star pf-star--tcd">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Tableau Croisé Dynamique · À Vous de Croiser</span><span data-lang-show="en">Pivot Table · Try It Yourself</span></div>
-        <p class="pf-star-txt"><span data-lang-show="fr">Les données réelles du classeur, jour par jour, dans un TCD comme dans Excel : choisissez les lignes, les colonnes, l'indicateur, la synthèse et la période.</span><span data-lang-show="en">The workbook's real daily data in a pivot table, just like in Excel: pick the rows, columns, metric, summary function and period.</span></p>
-        <div id="xhs-tcd" class="pf-tcd"></div>
-        <p class="pf-case-source"><span data-lang-show="fr">Source des données : feuille « Données » du dashboard Excel, 136 jours réels du 01/10/2024 au 13/02/2025. Les données simulées postérieures ne sont pas reprises.</span><span data-lang-show="en">Data source: "Data" sheet of the Excel dashboard, 136 real days from 01/10/2024 to 13/02/2025. Later simulated data is not included.</span></p>
       </div>
 
       <div class="pf-star pf-star--result">
@@ -1644,6 +1609,5 @@
   <script src="ink-cursor.js"></script>
   <script src="guzheng.js"></script>
   <script src="lightbox.js"></script>
-  <script src="xhs-pivot.js"></script>
 </body>
 </html>
