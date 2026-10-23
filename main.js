@@ -4040,7 +4040,7 @@
         },
       ],
     },
-    // ?? Finance – Analyse & Contrôle de Gestion ?????????????????????
+    // ── Finance – Analyse & Contrôle de Gestion ─────────────────────
     "fin-accounting": {
       title: "Financial Accounting",
       text: "Maîtrise des états financiers (bilan, compte de résultat, flux de trésorerie), des normes comptables et de la comptabilité en partie double.",
@@ -4309,7 +4309,7 @@
       ],
     },
 
-    // ?? Data & Analytics (nouvelles entrées) ?????????????????????????
+    // ── Data & Analytics (nouvelles entrées) ─────────────────────────
     "data-kpi": {
       title: "KPI Tracking & Reporting",
       text: "Suivi de KPIs marketing et business, construction de tableaux de bord et reporting périodique.",
@@ -4380,7 +4380,7 @@
       ],
     },
 
-    // ?? Marketing Digital (nouvelles entrées) ????????????????????????
+    // ── Marketing Digital (nouvelles entrées) ────────────────────────
     // Stratégie
     "mkt-veille": {
       title: "Veille Concurrentielle",
@@ -4445,7 +4445,7 @@
         },
       ],
     },
-    // ?? Consulting & Strategy ????????????????????
+    // ── Consulting & Strategy ────────────────────
     "cons-strategy": {
       title: "Analyse Stratégique (SWOT, PESTEL, Porter)",
       text: "Analyse d'entreprises et de marchés via les frameworks SWOT, PESTEL et les 5 forces de Porter.",
@@ -4590,7 +4590,7 @@
       ],
     },
 
-    // ?? Individual AI Tools ??????????????????????????????????????????
+    // ── Individual AI Tools ──────────────────────────────────────────
     "ai-chatgpt": {
       title: "ChatGPT",
       text: "Utilisation quotidienne de ChatGPT pour la rédaction, la synthèse, l'analyse et la génération de code.",
@@ -4638,7 +4638,7 @@
       ]},
     },
 
-    // ?? Microsoft Office Suite ????????????????????????????????????????
+    // ── Microsoft Office Suite ────────────────────────────────────────
     "office-microsoft": {
       title: "Microsoft Office (Word · Excel · PowerPoint)",
       text: "Maîtrise de la suite Microsoft Office pour la rédaction de documents professionnels, la modélisation de données et la création de présentations impactantes.",
@@ -4788,7 +4788,7 @@
       en: { title: "Notion", text: "Project organisation, structured note-taking and work database management via Notion.", proofs: [{ type: "Practice", title: "Project Management & Notes", org: "Notion", meta: [], points: ["Planning academic and personal projects, content databases."] }] },
     },
 
-    // ?? Creative Tools ???????????????????????????????????????????????
+    // ── Creative Tools ───────────────────────────────────────────────
     // Events & Coordination
     "mkt-event-management": {
       title: "Organisation d'événements",
@@ -5001,7 +5001,7 @@
       },
     },
 
-    // ?? Office Suite ?????????????????????????????????????????????????
+    // ── Office Suite ─────────────────────────────────────────────────
     "office-word": {
       title: "Microsoft Word",
       text: "Rédaction et mise en forme de documents professionnels : rapports, notes de synthèse et supports académiques.",
@@ -5219,7 +5219,7 @@
     });
   });
 
-  // ?? Shared filter animation helper ????????????????
+  // ── Shared filter animation helper ────────────────
   const FADE_DURATION = 190; // ms — must match CSS .filter-fade-out transition
 
   function animateFilterItem(el, show) {
@@ -5253,7 +5253,7 @@
     }
   }
 
-  // ?? Reset preview to default placeholder ??????????
+  // ── Reset preview to default placeholder ──────────
   function resetSkillPreview() {
     if (!previewContainer || !previewTitle || !previewText || !previewProofs) return;
     const lang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
@@ -5375,7 +5375,7 @@
     applyExtraFilter("all");
   }
 
-  // ?? Scroll progress bar ???????????????????????????????
+  // ── Scroll progress bar ───────────────────────────────
   const progressBar = document.getElementById("scroll-progress");
   if (progressBar) {
     function updateProgress() {
@@ -5387,7 +5387,7 @@
     updateProgress();
   }
 
-  // ?? Scroll reveal ?????????????????????????????????????
+  // ── Scroll reveal ─────────────────────────────────────
   const revealEls = document.querySelectorAll("[data-reveal]");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -5422,7 +5422,7 @@
     }
   }
 
-  // ?? Active nav on scroll ??????????????????????????????
+  // ── Active nav on scroll ──────────────────────────────
   const desktopNavLinks = document.querySelectorAll(".site-nav a[href^='#']");
   const navSections = Array.from(desktopNavLinks)
     .map((a) => document.querySelector(a.getAttribute("href")))
@@ -5444,7 +5444,7 @@
     navSections.forEach((s) => navObserver.observe(s));
   }
 
-  // ?? Hero card mouse tilt ??????????????????????????????
+  // ── Hero card mouse tilt ──────────────────────────────
   if (!prefersReducedMotion) {
     const heroCard = document.querySelector(".hero-card");
     if (heroCard) {
