@@ -1008,7 +1008,6 @@
         },
         data: {                            // → portfolio-data.html
           coverDash: "assets/covers/engoo-dashboard-data.webp",
-          coverWeekly: "assets/covers/engoo-weekly-data.webp",
           heroTitle1: "Data &",
           heroTitle2: "Recherche de marché",
           heroEyebrow: "Yu-Ting Tseng · Data & Recherche de marché",
@@ -2037,7 +2036,6 @@
         },
         data: {
           coverDash: "assets/covers/engoo-dashboard-data-en.webp",
-          coverWeekly: "assets/covers/engoo-weekly-data-en.webp",
           heroTitle1: "Data &",
           heroTitle2: "Market Research",
           heroEyebrow: "Yu-Ting Tseng · Data & Market Research",
@@ -3027,7 +3025,6 @@
         },
         data: {
           coverDash: "assets/covers/engoo-dashboard-data-en.webp",
-          coverWeekly: "assets/covers/engoo-weekly-data-en.webp",
           heroTitle1: "數據 &",
           heroTitle2: "市場研究",
           heroEyebrow: "Yu-Ting Tseng · 數據 & 市場研究",
