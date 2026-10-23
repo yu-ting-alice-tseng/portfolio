@@ -727,7 +727,11 @@
         },
         kpn: {
           period: "01/2025 – 06/2025",
-          title: "Assistante Marketing Digital",     // point1-4 → index + marketing.html
+          title: "Assistante Marketing Digital",
+          pythonPoint: "Automatisation du reporting client par scripts Python : 5 à 10 minutes gagnées par client chaque semaine.",
+          mkPythonPoint: "Automatisation des reportings de campagne destinés aux clients grâce à des scripts Python : 5 à 10 minutes économisées par client et par semaine.",
+          dataPythonPoint: "Développement de scripts Python de consolidation des données de reporting client, supprimant des tâches répétitives : 5 à 10 minutes gagnées par client chaque semaine.",
+          finPythonPoint: "Automatisation par Python de la consolidation des données de reporting, pour un suivi plus rapide des performances clients (5 à 10 minutes gagnées par client et par semaine).",     // point1-4 → index + marketing.html
           company: "KPN · Agence de marketing digital",
           point1: "Analyse des tendances et benchmarks sectoriels pour orienter la création de contenus web : plus de 10 articles positionnés dans le Top 10 Google.",
           mkPoint1: "Analyse des tendances et benchmarks sectoriels pour orienter la création de contenus web : plus de 10 articles positionnés dans le Top 10 Google et cités dans les réponses des IA génératives.",   // → marketing.html
@@ -757,7 +761,6 @@
           finCompany: "Engoo, DMM.com · Plateforme internationale d'apprentissage des langues en ligne",
           finPoint1: "Analyse de marché approfondie pour développer et affiner les stratégies marketing sur le segment du chinois simplifié.",
           finPoint2: "Gestion des métriques de performance et de contenu sur Xiaohongshu : +93,3 % de vues, +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
-          pythonPoint: "Script Python d'automatisation de la consolidation des données quotidiennes, pour un reporting plus efficace au quotidien.",
           mkPoint1: "Tableaux de bord automatisés sur Excel pour piloter la performance marketing : temps de traitement des données réduit de 30 %.",
           mkPoint2: "Contenus REDnote fondés sur une veille des tendances : visibilité +93,3 %, engagement +89,1 % et abonnés +69,7 %.",
           mkPoint3: "Analyses de marché et veille concurrentielle pour optimiser la stratégie marketing sur le segment du chinois simplifié.",
@@ -1767,6 +1770,10 @@
           company: "KPN · Digital marketing agency",
           period: "01/2025 – 06/2025",
           title: "Digital Marketing Assistant",
+          pythonPoint: "Automated client reporting with Python scripts, saving 5 to 10 minutes per client each week.",
+          mkPythonPoint: "Streamlined client campaign reporting with Python scripts, freeing 5 to 10 minutes per client every week.",
+          dataPythonPoint: "Built Python scripts to consolidate client reporting data, removing repetitive tasks and saving 5 to 10 minutes per client each week.",
+          finPythonPoint: "Automated reporting data consolidation in Python, speeding up client performance tracking (5 to 10 minutes saved per client per week).",
           point1: "Analysed industry trends and conducted competitive benchmarks to guide web content creation aligned with user expectations, positioning 10+ articles in Google's Top 10.",
           mkPoint1: "Analysed industry trends and sector benchmarks to guide web content creation, ranking 10+ articles in Google's Top 10 and getting them cited in generative AI answers.",   // → marketing.html
           point2: "Monitored Meta and Google advertising campaign performance through reporting dashboards, optimising CTR (+9.5%) and conversion rate (+5.1%) via A/B testing.",
@@ -1795,7 +1802,6 @@
           finCompany: "Engoo, DMM.com · International Online Language Learning Platform",
           finPoint1: "Performed market analysis to develop and refine marketing strategies for the Simplified Chinese market.",
           finPoint2: "Managed channel performance and content metrics for Xiaohongshu, boosting views by 93.3%, engagement by 89.1% and followers by 69.7% within 3 months.",
-          pythonPoint: "Developed a Python script to automate the daily data consolidation process, improving the efficiency of reporting operations every day.",
           portfolioLink: "View creations (PDF)",
           excelLink: "Download XHS Dashboard (Excel)",
           excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",   // fichier absent du depot : lien retire des pages
@@ -2776,6 +2782,10 @@
           company: "KPN · 數位行銷公司",
           period: "01/2025 – 06/2025",
           title: "數位行銷助理",
+          pythonPoint: "以 Python 腳本自動化客戶報告，每位客戶每週節省 5 至 10 分鐘。",
+          mkPythonPoint: "運用 Python 腳本簡化客戶廣告成效報告，每位客戶每週省下 5 至 10 分鐘。",
+          dataPythonPoint: "開發 Python 腳本整合客戶報告數據，免除重複作業，每位客戶每週節省 5 至 10 分鐘。",
+          finPythonPoint: "以 Python 自動整合報告數據，加快客戶成效追蹤（每位客戶每週節省 5 至 10 分鐘）。",
           point1: "SEO 優化（站內／技術）及內容建議。",
           mkPoint1: "分析產業趨勢與競品基準，引導網站內容製作：逾 10 篇文章進入 Google 前 10 名，並獲生成式 AI 回答引用。",   // → marketing.html
           point2: "追蹤 KPI 與績效分析（流量、CTR、轉換率）。",
@@ -2799,7 +2809,6 @@
           dataPoint1: "建立動態 Excel 儀表板，追蹤 11 項每日指標，具備自動 A/B 比較及 KPI 視覺化功能，每週節省 5 小時報告時間。",
           dataPoint2: "執行深入市場分析與競爭監測，針對簡體中文市場（小紅書 / REDnote）優化內容策略。",
           dataPoint3: "部署基於 STP 模型的數據驅動內容策略，3 個月內瀏覽量 +93.3%、互動量 +89.1%、追蹤者 +69.7%。",
-          pythonPoint: "開發 Python 腳本自動化每日數據整合流程，提升每日報告作業效率。",
           finTitle: "行銷助理（實習）",
           finCompany: "Engoo, DMM.com · 國際線上語言學習平台",
           finPoint1: "執行市場分析，針對簡體中文市場開發並優化行銷策略。",
@@ -3378,7 +3387,7 @@
       byPage: {
         finance:   { text: "Automatisation de la consolidation de données financières et génération de rapports de performance marketing (CTR, CVR, ROI)." },
         data:      { text: "Scripts de nettoyage de données, calcul d'indicateurs et automatisation de la consolidation de données quotidiennes." },
-        marketing: { text: "Script Python d'automatisation de la consolidation des données Xiaohongshu, réduisant le temps de reporting quotidien." },
+        marketing: { text: "Scripts Python d'automatisation du reporting client chez KPN : 5 à 10 minutes gagnées par client chaque semaine." },
       },
       en: {
         title: "Python – Analysis & Automation",
@@ -3386,32 +3395,17 @@
         byPage: {
           finance:   { text: "Automated financial data consolidation and marketing performance report generation (CTR, CVR, ROI)." },
           data:      { text: "Data cleaning scripts, metric computation and automated daily data consolidation pipelines." },
-          marketing: { text: "Python automation script for Xiaohongshu data consolidation, cutting daily reporting time significantly." },
+          marketing: { text: "Python scripts automating client reporting at KPN, saving 5 to 10 minutes per client each week." },
         },
         proofs: [
-          { type: "Portfolio", title: "XHS Weekly Report – Synthesis & Reporting", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Reporting", "Synthesis", "PowerPoint", "Data Storytelling"], points: ["Bilingual weekly report (EN/FR) distilling Xiaohongshu account performance into 7 actionable slides: key metrics, weekly trends and editorial recommendations for the management team."], actions: [{ label: "Download – French version", href: "assets/Engoo_Weekly Report_FR.pptx" }, { label: "Download – English version", href: "assets/Engoo_Weekly Report_EN.pptx" }, { label: "View Data Portfolio", href: "portfolio-data.html#xhs-weekly" }] },
           { type: "Personal Tool", title: "PDF Converter & Merger", org: "Python · win32com · pypdf", meta: ["Drag-and-drop · Word / PowerPoint / Excel / Images – PDF"], points: ["Drag-and-drop conversion of Word (.docx), PowerPoint (.pptx), Excel (.xlsx) and image files (JPG/PNG) to PDF via the Microsoft Office COM API.", "Automatic merging of multiple PDFs into a single file when all dropped files are already PDFs."] },
           { type: "Personal Tool", title: "Auto-Push – Automatic GitHub Sync", org: "Git CLI · Batch Script", meta: ["File watch · git commit + push · every 100s"], points: ["Watch script that detects local changes every 100 seconds and automatically runs git add – commit – push to the main branch.", "Keeps local files permanently in sync with GitHub without manual intervention."] },
-          { type: "Internship", title: "Marketing Assistant – XHS Data Consolidation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Developed a Python script to automate daily Xiaohongshu data consolidation, reducing reporting time."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+          { type: "Internship", title: "Digital Marketing Assistant – Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: [], points: ["Automated client reporting with Python scripts, saving 5 to 10 minutes per client each week."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
           { type: "Experience", title: "Research Assistant", org: "Institute of International Relations, NCCU", meta: [], points: ["Data collection, cleaning and processing for academic research."], actions: [{ label: "View experience", href: "#exp-research" }] },
           { type: "Course", title: "Programming 101 (Python)", org: "National Chengchi University (NCCU)", meta: ["Academic course"], points: ["Programming fundamentals and application to data analysis."] },
         ],
       },
       proofs: [
-        {
-          type: "Portfolio",
-          title: "Rapport Hebdomadaire XHS – Synthèse & Reporting",
-          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
-          meta: ["Reporting", "Synthèse", "PowerPoint", "Data Storytelling"],
-          points: [
-            "Rapport hebdomadaire bilingue (EN/FR) synthétisant les performances du compte Xiaohongshu en 7 diapositives : indicateurs clés, tendances hebdomadaires et recommandations éditoriales pour l'équipe de direction.",
-          ],
-          actions: [
-            { label: "Télécharger – Version française", href: "assets/Engoo_Weekly Report_FR.pptx" },
-            { label: "Télécharger – Version anglaise", href: "assets/Engoo_Weekly Report_EN.pptx" },
-            { label: "Voir le portfolio Data", href: "portfolio-data.html#xhs-weekly" },
-          ],
-        },
         {
           type: "Outil Personnel",
           title: "PDF Converter & Merger",
@@ -3434,11 +3428,11 @@
         },
         {
           type: "Stage",
-          title: "Assistante Marketing – Consolidation de Données XHS",
-          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
+          title: "Assistante Marketing Digital – Automatisation du Reporting Client",
+          org: "KPN · Agence de marketing digital",
           meta: [],
-          points: ["Développement d'un script Python d'automatisation de la consolidation des données Xiaohongshu quotidiennes, réduisant le temps de reporting."],
-          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
+          points: ["Automatisation du reporting client par scripts Python : 5 à 10 minutes gagnées par client chaque semaine."],
+          actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }],
         },
         {
           type: "Expérience",
@@ -4633,11 +4627,9 @@
       text: "Automatisation de processus marketing répétitifs via des scripts Python, pour optimiser le reporting et la consolidation de données.",
       proofs: [
         { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
-        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
       ],
       en: { title: "Marketing Automation", text: "Automating repetitive marketing processes via Python scripts to optimise reporting and data consolidation.", proofs: [
         { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
-        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
       ]},
     },
     "ai-vibe-coding": {
@@ -4646,12 +4638,10 @@
       proofs: [
         { type: "Projet Personnel", title: "Portfolio & outils d'automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] },
         { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
-        { type: "Stage", title: "Automatisation de la consolidation de données", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Python"], points: ["Développement d'un script Python d'automatisation de la consolidation de données quotidiennes, améliorant l'efficacité du processus de reporting chaque jour."] },
       ],
       en: { title: "Vibe Coding", text: "AI-assisted development – using generative models to prototype, debug and produce code interactively.", proofs: [
         { type: "Personal Project", title: "Portfolio & Automation Tools", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Built this portfolio and automation scripts via vibe coding workflows."] },
         { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
-        { type: "Internship", title: "Daily Data Consolidation Automation", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Python"], points: ["Developed a Python script to automate daily data consolidation, improving reporting process efficiency every day."] },
       ]},
     },
 
