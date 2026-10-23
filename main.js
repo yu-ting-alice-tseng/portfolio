@@ -590,7 +590,7 @@
         caseStudyTitle: "Dashboard Analytics & Croissance Xiaohongshu",
         caseStudyS: "Situation : Engoo gérait son compte Xiaohongshu sans outil de mesure centralisé, rendant impossible la quantification de l'engagement et l'optimisation du ROI du contenu.",
         caseStudyA: "Action : Conception d'un dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) permettant une comparaison A/B automatique des périodes pour piloter la stratégie STP.",
-        caseStudyR: "Résultat : Automatisation du reporting (gain de 5 h par semaine) et croissance de 89 % des interactions grâce à l'identification des formats visuels gagnants.",
+        caseStudyR: "Résultat : Automatisation du reporting (temps quotidien de reporting réduit de 30 %) et croissance de 89 % des interactions grâce à l'identification des formats visuels gagnants.",
         caseStudyInsight1: " – Les miniatures de type 'Educational Tips' génèrent un CTR 25 % supérieur aux 'Life Hacks'.",
         caseStudyInsight2: " – Le 'Golden Time' de publication pour le segment cible se situe entre 19 h et 21 h.",
         caseStudyTemplate: "Consulter le modèle interactif (Excel)",
@@ -754,7 +754,7 @@
           point2: "Veille concurrentielle, analyse d'audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
           point4: "Traduction de 67 articles (anglais → chinois simplifié) couvrant des thèmes business, tech et culture.",
-          dataPoint1: "Dashboard Excel dynamique : 11 métriques quotidiennes, comparaison A/B automatisée et visualisation des KPI, soit 5 h de reporting gagnées par semaine.",
+          dataPoint1: "Dashboard Excel dynamique : 11 métriques quotidiennes, comparaison A/B automatisée et visualisation des KPI, pour 30 % de temps de reporting quotidien en moins.",
           dataPoint2: "Analyses de marché approfondies et veille concurrentielle pour optimiser la stratégie de contenu sur le segment du chinois simplifié (REDnote / Xiaohongshu).",
           dataPoint3: "Stratégie de contenu data-driven fondée sur le modèle STP : +93,3 % de vues, +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
           finTitle: "Assistante Marketing (Stage)",
@@ -1638,7 +1638,7 @@
         caseStudyTitle: "Analytics Dashboard & Xiaohongshu Growth",
         caseStudyS: "Situation: Engoo lacked a centralized tool to track Xiaohongshu performance, making it difficult to quantify engagement and optimize content ROI.",
         caseStudyA: "Action: Developed a dynamic Excel dashboard (Pivot Tables, Nested Formulas) featuring automated A/B period comparison to drive the STP strategy.",
-        caseStudyR: "Result: Automated reporting saved 5h/week and led to an 89% interaction increase by identifying winning visual styles.",
+        caseStudyR: "Result: Automated reporting cut daily reporting time by 30% and led to an 89% interaction increase by identifying winning visual styles.",
         caseStudyInsight1: " – 'Educational Tips' thumbnails deliver a 25% higher CTR than 'Life Hacks' style.",
         caseStudyInsight2: " – The optimal posting 'Golden Time' for the target segment is 7:00 PM – 9:00 PM.",
         caseStudyTemplate: "View Interactive Excel Template",
@@ -1796,7 +1796,7 @@
           point2: "Competitive monitoring, audience analysis and visual adaptation by target sub-segment.",
           point3: "Created Meta content (Facebook & Instagram) aligned with trends and brand identity.",
           point4: "Translated 67 English articles on business, technology and culture into Simplified Chinese.",
-          dataPoint1: "Built a dynamic Excel dashboard – 11 daily metrics, automated A/B comparison and KPI visualisation – cutting reporting time by 5h/week.",
+          dataPoint1: "Built a dynamic Excel dashboard – 11 daily metrics, automated A/B comparison and KPI visualisation – cutting daily reporting time by 30%.",
           dataPoint2: "Conducted in-depth market analyses and competitive monitoring to optimise the content strategy for the simplified Chinese market (REDnote / Xiaohongshu).",
           dataPoint3: "Deployed a data-driven content strategy based on the STP model – +93.3% views, +89.1% interactions and +69.7% followers in 3 months.",
           finTitle: "Marketing Assistant (Internship)",
@@ -2652,7 +2652,7 @@
         caseStudyTitle: "分析儀表板與小紅書成長策略 | Excel Analytics",
         caseStudyS: "情境（Situation）：Engoo 缺乏集中追蹤小紅書表現的工具，導致難以量化互動成效並優化內容 ROI。",
         caseStudyA: "行動（Action）：設計動態 Excel 儀表板（樞紐分析表、巢狀公式），具備自動 A/B 期間比較功能，驅動 STP 策略執行。",
-        caseStudyR: "結果（Result）：每週節省 5 小時報告時間，透過識別最佳視覺風格，推動互動量增長 89%。",
+        caseStudyR: "結果（Result）：每日報告時間減少 30%，並透過識別最佳視覺風格，推動互動量增長 89%。",
         caseStudyInsight1: "──「教育技巧」封面縮圖的點擊率（CTR）比「生活技巧」風格高出 25%。",
         caseStudyInsight2: "──目標受眾的最佳發布「黃金時段」為晚上 7 點至 9 點。",
         caseStudyTemplate: "查看互動式 Excel 模板",
@@ -2808,7 +2808,7 @@
           point2: "競爭監測、受眾分析，並依目標細分族群調整視覺內容。",
           point3: "創作符合趨勢與品牌調性的 Meta（Facebook & Instagram）內容。",
           point4: "翻譯 67 篇英文文章（英文→簡體中文），主題涵蓋商業、科技與文化。",
-          dataPoint1: "建立動態 Excel 儀表板，追蹤 11 項每日指標，具備自動 A/B 比較及 KPI 視覺化功能，每週節省 5 小時報告時間。",
+          dataPoint1: "建立動態 Excel 儀表板，追蹤 11 項每日指標，具備自動 A/B 比較及 KPI 視覺化功能，每日報告時間減少 30%。",
           dataPoint2: "執行深入市場分析與競爭監測，針對簡體中文市場（小紅書 / REDnote）優化內容策略。",
           dataPoint3: "部署基於 STP 模型的數據驅動內容策略，3 個月內瀏覽量 +93.3%、互動量 +89.1%、追蹤者 +69.7%。",
           finTitle: "行銷助理（實習）",
@@ -3981,18 +3981,8 @@
     },
     "prog-vba": {
       title: "VBA – Macros & Automatisation",
-      text: "Macros VBA pour automatiser le traitement de données, la mise à jour de dashboards et la génération de rapports.",
+      text: "Macros VBA pour automatiser le traitement de données et le reporting, pratiquées en cours à NCCU.",
       proofs: [
-        {
-          type: "Stage",
-          title: "Assistante Marketing",
-          org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
-          meta: [],
-          points: [
-            "Développement de macros VBA pour automatiser la mise à jour du dashboard de performance XHS et la génération de rapports hebdomadaires.",
-          ],
-          actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
-        },
         {
           type: "Cours",
           title: "Introduction to Data Analysis and Programming (VBA & Access)",
@@ -4008,7 +3998,7 @@
     "prog-sql": {
       title: "SQL (requêtes de base)",
       text:
-        "?criture de requêtes SQL de base pour interroger et agréger des données.",
+        "Écriture de requêtes SQL de base pour interroger et agréger des données.",
       links: [
         {
           label: "Projets académiques de data analysis",
