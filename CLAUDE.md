@@ -234,7 +234,8 @@ Order proof cards within a skill by importance (descending):
 
 - **Pas de section « Distinctions & Bourses »** : retirée à la demande. Le Certificate of Excellence reste mentionné dans la formation NCCU.
 - **Bénévolat présent sur toutes les pages CV** (`index`, `marketing`, `data`, `finance`), même contenu que sur `index`.
-- **Formation sur `marketing.html`** : pas de ligne « Spécialisation : Finance & Comptabilité », pas de nom d'école après « GPA » (le libellé est simplement « GPA »), pas de puce sous l'échange Paris 1.
+- **Formation (toutes les pages)** : pas de nom d'école après « GPA » (le libellé est simplement « GPA »), pas de puce « Approfondissement des politiques européennes et internationales » sous l'échange Paris 1. La ligne « Spécialisation : Finance & Comptabilité » ne figure que sur `finance.html`.
+- **leboncoin** : toujours « plus de 20 campagnes simultanées » (« 20+ » en anglais et en chinois), sur toutes les pages.
 - **Compétences : toujours garder les sous-catégories** (« Stratégie », « Contenu », « Référencement Naturel (SEO) »…). Les aplatir en une seule liste par bloc a été essayé puis refusé : trop chargé, illisible. `index` n'affiche pas le bloc Finance.
 
 ---
