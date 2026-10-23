@@ -1361,7 +1361,9 @@
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => applyLang(btn.dataset.lang));
     });
-    applyLang((() => { try { return localStorage.getItem('pf-lang') || 'fr'; } catch (e) { return 'fr'; } })());
+    // Une langue sans bouton sur la page (le chinois, masqué) revient au français
+    const langSauvee = (() => { try { return localStorage.getItem('pf-lang') || 'fr'; } catch (e) { return 'fr'; } })();
+    applyLang(document.querySelector(`.lang-btn[data-lang="${langSauvee}"]`) ? langSauvee : 'fr');
   </script>
 
   <!-- ── Catalogue et lecture ────────────────────────── -->

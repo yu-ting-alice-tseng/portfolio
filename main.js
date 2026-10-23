@@ -3337,9 +3337,15 @@
     });
   });
 
-  // Load saved language preference, default to French
-  const _savedLang = (() => { try { return localStorage.getItem("pf-lang") || "fr"; } catch(e) { return "fr"; } })();
-  const _savedBtn = document.querySelector(`.lang-btn[data-lang="${_savedLang}"]`);
+  // Load saved language preference, default to French.
+  // A language without a visible button on this page (e.g. CN, kept only on teaching)
+  // falls back to French, so a hidden version is never shown.
+  let _savedLang = (() => { try { return localStorage.getItem("pf-lang") || "fr"; } catch(e) { return "fr"; } })();
+  let _savedBtn = document.querySelector(`.lang-btn[data-lang="${_savedLang}"]`);
+  if (!_savedBtn) {
+    _savedLang = "fr";
+    _savedBtn = document.querySelector('.lang-btn[data-lang="fr"]');
+  }
   if (_savedBtn) {
     langButtons.forEach((b) => b.classList.remove("is-active"));
     _savedBtn.classList.add("is-active");
