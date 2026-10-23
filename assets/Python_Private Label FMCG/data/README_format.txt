@@ -1,0 +1,13 @@
+填寫格式
+- cal_year、cal_quarter：日曆年與日曆季度（1 至 4）。P&G 會計年度到 6 月：FY2023 Q1（7 – 9 月）填 2022 年第 3 季
+- fiscal_label：財報原本的期間名稱（例：Q3 2023、FY23 Q1），方便回頭查核
+- segment_type：category（品類或事業群）或 region（地區）
+- 成長率：百分比數字，不加 % 符號（+5.8% 填 5.8，-0.6% 填 -0.6）
+- organic_growth、price_mix、volume：照財報口徑抄錄（Unilever：USG、UPG、UVG；Nestlé：OG、pricing、RIG；Danone：LFL、price/mix、volume；P&G：organic sales、price + mix、volume）
+- 只填單季數字。財報只給年初至今累計數時，該列留空並在 note 註明
+- growth_basis：照財報原文（underlying、organic、like-for-like）
+- premium：1 = 高端或品牌力強，0 = 大眾。依 premium_rule 寫下的規則判斷，規則要在看結果之前定好
+- country：Eurostat 國家代碼（FR、DE、ES、IT、NL、BE、PL…），兩份國家資料要用同一套代碼
+- food_hicp_rch：Eurostat HICP 食品年增率（%）
+- pl_value_share、pl_volume_share：自有品牌市占（%），以金額或以數量計，照來源原文
+- 沒有資料的格子留空，不要填 0
