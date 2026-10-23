@@ -1183,9 +1183,9 @@
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span>
         <span class="pf-cat-fig"><span class="pf-cat-val"><span data-lang-show="fr">+53,7 %</span><span data-lang-show="en">+53.7%</span><span data-lang-show="zh">+53.7%</span></span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p5Lbl">Objectif budgétaire dépassé</span></span>
       </a></li>
-      <li><a class="pf-cat-card" href="#guzheng-facebook" data-target="guzheng-facebook" data-cat="community">
+      <li><a class="pf-cat-card" href="#guzheng-facebook" data-target="guzheng-facebook" data-cat="community design">
         <span class="pf-cat-cover"><img src="assets/covers/guzheng-facebook.webp" alt="" loading="lazy"></span>
-        <span class="pf-cat-meta"><span class="pf-cat-n">06</span> · <span data-i18n="portfolio.mkt.board.p6Cat">Community Management</span></span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">06</span> · <span data-i18n="portfolio.mkt.board.p6Cat">Community Management · Design</span></span>
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span>
         <span class="pf-cat-fig"><span class="pf-cat-val">100 %</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p6Lbl">Places pourvues à chaque recrutement</span></span>
       </a></li>
@@ -1847,7 +1847,7 @@
 
 
 
-<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-i18n="portfolio.mkt.board.p6Cat">Community Management</span></p><h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2><div class="pf-stats pf-case-figs">
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-i18n="portfolio.mkt.board.p6Cat">Community Management · Design</span></p><h2 class="pf-card-title" data-i18n="portfolio.guzheng.title">政大古箏社 – Page Facebook</h2><div class="pf-stats pf-case-figs">
 <div><span class="pf-stat-val" data-i18n="portfolio.guzheng.stat1Val">100 %</span><span class="pf-stat-lbl" data-i18n="portfolio.guzheng.stat1Lbl">Places pourvues à chaque recrutement</span></div>
 <div><span class="pf-stat-val" data-i18n="portfolio.guzheng.stat2Val">80 %</span><span class="pf-stat-lbl" data-i18n="portfolio.guzheng.stat2Lbl">Fidélisation des membres</span></div>
 </div><div class="pf-tags">
@@ -1922,7 +1922,9 @@
       });
       document.querySelectorAll('.pf-design').forEach(d =>
         d.classList.toggle('is-hidden', f !== 'all' && f !== 'design'));
-      document.querySelectorAll('.pf-design').forEach(d => d.classList.toggle('is-solo', f === 'design'));
+      // Sans fiche de projet visible au-dessus, les petites fiches remontent en tête
+      const solo = !document.querySelector('.pf-cat-grid > li:not(.is-hidden)');
+      document.querySelectorAll('.pf-design').forEach(d => d.classList.toggle('is-solo', solo));
     }
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
