@@ -10,9 +10,7 @@
    - Clic : la goutte tombe dans l'eau, des ondes d'encre
      s'élargissent puis s'effacent.
    - La couleur vient de --trail (style.css § 43).
-   - Rien au toucher ni en mouvement réduit. Sur les
-     travaux de création, la flamme de la bougie
-     (portfolio-marketing) prend le relais.
+   - Rien au toucher ni en mouvement réduit.
    ════════════════════════════════════════════════════ */
 (function () {
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -60,14 +58,13 @@
   const washSvg = wash.querySelector('svg'), washRect = wash.querySelector('rect');
 
   let target = null;
-  const candle = () => !!document.querySelector('.pf-cursor.is-candle');
 
   window.addEventListener('mousemove', e => {
     const t = e.target;
     if (document.documentElement.classList.contains('lb-ouvert')) { setTarget(null); return; }
     const typing = t.closest && t.closest(TYPING);
     const hit = !typing && t.closest ? t.closest(CLICKABLE) : null;
-    setTarget(hit && !hit.closest('[data-candle] .pf-img-wrap') ? hit : null);
+    setTarget(hit);
   }, { passive: true });
   document.addEventListener('mouseleave', () => setTarget(null));
 
@@ -119,7 +116,7 @@
   const DUR = 1250, BLOOM = 1500;
   const easeOut = t => 1 - Math.pow(1 - t, 3);
   window.addEventListener('pointerdown', e => {
-    if (e.pointerType !== 'mouse' || e.button !== 0 || candle()) return;
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
     if (e.target.closest && e.target.closest(TYPING)) return;
     const s = 160;
     const d = document.createElement('div');

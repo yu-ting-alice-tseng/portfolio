@@ -11,7 +11,7 @@
    ════════════════════════════════════════════════════ */
 (function () {
   const IMG = /\.(webp|png|jpe?g|gif)(\?.*)?$/i;
-  const SCOPE = '.pf-case, .pf-extras';
+  const SCOPE = '.pf-case, .pf-design';
   const T = {
     fr: { dialog: "Image agrandie", prev: "Image précédente", next: "Image suivante", close: "Fermer" },
     en: { dialog: "Enlarged image", prev: "Previous image", next: "Next image", close: "Close" },

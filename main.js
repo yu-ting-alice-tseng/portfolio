@@ -902,6 +902,7 @@
           filterDesign: "Design Visuel",
           filterCommunity: "Communauté",
           filterAnalyse: "Analyse des Données",
+          filterDesign: "Design",
           engoo: {
             num: "Étude de cas",
             tag: "Excel · TCD · Dashboard · Séries temporelles",
@@ -1933,6 +1934,7 @@
           filterDesign: "Visual Design",
           filterCommunity: "Social Media",
           filterAnalyse: "Data Analysis",
+          filterDesign: "Design",
           engoo: {
             num: "Case Study",
             tag: "Excel · PivotTables · Dashboard · Time Series",
@@ -2931,6 +2933,7 @@
           filterDesign: "視覺設計",
           filterCommunity: "社群管理",
           filterAnalyse: "數據分析",
+          filterDesign: "設計",
           engoo: {
             num: "01 · 完整案例研究",
             tag: "Excel 儀表板 · 社群分析 · A/B 測試",
