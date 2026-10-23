@@ -590,7 +590,7 @@
         caseStudyTitle: "Dashboard Analytics & Croissance Xiaohongshu",
         caseStudyS: "Situation : Engoo gérait son compte Xiaohongshu sans outil de mesure centralisé, rendant impossible la quantification de l'engagement et l'optimisation du ROI du contenu.",
         caseStudyA: "Action : Conception d'un dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) permettant une comparaison A/B automatique des périodes pour piloter la stratégie STP.",
-        caseStudyR: "Résultat : Automatisation du reporting (temps quotidien de reporting réduit de 30 %) et croissance de 89 % des interactions grâce à l'identification des formats visuels gagnants.",
+        caseStudyR: "Résultat : temps quotidien de reporting réduit de 30 % et croissance de 89 % des interactions grâce à l'identification des formats visuels gagnants.",
         caseStudyInsight2: " – Le 'Golden Time' de publication pour le segment cible se situe entre 19 h et 21 h.",
         caseStudyTemplate: "Consulter le modèle interactif (Excel)",
       },
@@ -760,7 +760,7 @@
           finCompany: "Engoo, DMM.com · Plateforme internationale d'apprentissage des langues en ligne",
           finPoint1: "Analyse de marché approfondie pour développer et affiner les stratégies marketing sur le segment du chinois simplifié.",
           finPoint2: "Gestion des métriques de performance et de contenu sur Xiaohongshu : +93,3 % de vues, +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
-          mkPoint1: "Tableaux de bord automatisés sur Excel pour piloter la performance marketing : temps de traitement des données réduit de 30 %.",
+          mkPoint1: "Tableaux de bord dynamiques sur Excel pour piloter la performance marketing : temps de traitement des données réduit de 30 %.",
           mkPoint2: "Contenus REDnote fondés sur une veille des tendances : visibilité +93,3 %, engagement +89,1 % et abonnés +69,7 %.",
           mkPoint3: "Analyses de marché et veille concurrentielle pour optimiser la stratégie marketing sur le segment du chinois simplifié.",
           mkPoint4: "Coordination des flux de localisation avec le pôle contenu, pour une image de marque homogène à l'international.",
@@ -1634,7 +1634,7 @@
         caseStudyTitle: "Analytics Dashboard & Xiaohongshu Growth",
         caseStudyS: "Situation: Engoo lacked a centralized tool to track Xiaohongshu performance, making it difficult to quantify engagement and optimize content ROI.",
         caseStudyA: "Action: Developed a dynamic Excel dashboard (Pivot Tables, Nested Formulas) featuring automated A/B period comparison to drive the STP strategy.",
-        caseStudyR: "Result: Automated reporting cut daily reporting time by 30% and led to an 89% interaction increase by identifying winning visual styles.",
+        caseStudyR: "Result: Daily reporting time cut by 30% and an 89% interaction increase by identifying winning visual styles.",
         caseStudyInsight2: " – The optimal posting 'Golden Time' for the target segment is 7:00 PM – 9:00 PM.",
         caseStudyTemplate: "View Interactive Excel Template",
       },
@@ -3527,7 +3527,7 @@
           title: "Assistante Marketing",
           org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
-          points: ["Dashboard de suivi de performance marketing et automatisation de rapports."],
+          points: ["Dashboard Excel de suivi de la performance marketing, avec comparaison A/B de périodes."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
@@ -3566,7 +3566,7 @@
       byPage: {
         finance:   { text: "Modèles Excel avancés pour le reporting financier, le suivi de KPIs (CTR, CVR, ROI) et la gestion de budgets publicitaires mensuels." },
         data:      { text: "Dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) pour suivre 11 métriques quotidiennes et comparer des périodes A/B." },
-        marketing: { text: "Suivi de la performance des campagnes : automatisation du tableau de bord XHS (11 KPIs/jour, comparaison A/B de périodes)." },
+        marketing: { text: "Suivi de la performance des campagnes : conception du tableau de bord XHS (11 KPIs/jour, comparaison A/B de périodes)." },
       },
       en: {
         title: "Excel - TOSA 950/1000",
@@ -3574,7 +3574,7 @@
         byPage: {
           finance:   { text: "Advanced Excel models for financial reporting, KPI tracking (CTR, CVR, ROI) and monthly ad-budget management." },
           data:      { text: "Dynamic Excel dashboard (Pivot Tables, nested formulas) tracking 11 daily metrics with automated A/B period comparison." },
-          marketing: { text: "Campaign performance tracking: built and automated the XHS dashboard (11 KPIs/day, A/B period comparison) to optimise content strategy." },
+          marketing: { text: "Campaign performance tracking: built the XHS dashboard (11 KPIs/day, A/B period comparison) to optimise content strategy." },
         },
       },
     },
