@@ -950,7 +950,7 @@
           weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
           weeklyTitle: "Engoo – Rapport hebdomadaire XHS",
-          weeklyDesc: "Rapport hebdomadaire bilingue (EN/FR) produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en 7 diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.",
+          weeklyDesc: "Rapport hebdomadaire produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.",
           weeklyCarouselLblFR: "Version française",
           weeklyCarouselLblEN: "Version anglaise",
           board: {
@@ -1982,7 +1982,7 @@
           weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
           weeklyTitle: "Engoo – XHS Weekly Report",
-          weeklyDesc: "Bilingual weekly report (EN/FR) produced during the Engoo internship, distilling Xiaohongshu account performance into 7 clear, actionable slides : key metrics, weekly trends and editorial recommendations for the management team.",
+          weeklyDesc: "Weekly report produced during the Engoo internship, distilling Xiaohongshu account performance into clear, actionable slides: key metrics, weekly trends and editorial recommendations for the management team.",
           weeklyCarouselLblFR: "French version",
           weeklyCarouselLblEN: "English version",
           board: {
