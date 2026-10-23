@@ -920,7 +920,7 @@
           aiesec: {
             num: "Campagne Marketing",
             tag: "Canva · Illustrator",
-            body: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU, un séjour entièrement en anglais destiné aux lycéens. Plan marketing établi à partir des données des éditions précédentes et d'une étude de marché, puis conception des visuels de campagne (affiches et publications) pour le recrutement de volontaires et de participants. Résultat : 15 volontaires et plus de 60 participants recrutés, objectif budgétaire dépassé de 53,7 %.",
+            body: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO d'AIESEC in NCCU, un séjour entièrement en anglais destiné aux lycéens. Après un démarrage digital peu concluant, plan marketing réorienté à partir des données des éditions précédentes et d'une étude de marché (promotion sur le terrain dans les lycées), avec conception des visuels de campagne (affiches et publications) pour le recrutement de volontaires et de participants. Résultat : 15 volontaires et plus de 60 participants recrutés, objectif budgétaire dépassé de 53,7 %.",
             statVol: "Volontaires Recrutés",
             statPart: "Participants",
             statBudget: "Objectif Budgétaire Dépassé",
@@ -1948,7 +1948,7 @@
           aiesec: {
             num: "Marketing Campaign",
             tag: "Canva · Illustrator",
-            body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp, a fully English-language program for high school students. Built the marketing plan on data from previous editions and market research, then designed the campaign visuals (posters and social posts) for volunteer and participant recruitment. Result: 15 volunteers and 60+ participants recruited, budget target exceeded by 53.7%.",
+            body: "Led the 4-person marketing team for AIESEC in NCCU's YOLO international camp, a fully English-language program for high school students. After a weak digital start, reshaped the marketing plan using data from previous editions and market research (in-person outreach in high schools), and designed the campaign visuals (posters and social posts) for volunteer and participant recruitment. Result: 15 volunteers and 60+ participants recruited, budget target exceeded by 53.7%.",
             statVol: "Volunteers Recruited",
             statPart: "Participants",
             statBudget: "Budget Target Exceeded",
@@ -2943,7 +2943,7 @@
           aiesec: {
             num: "02 · 行銷活動",
             tag: "行銷活動 · 視覺方向",
-            body: "帶領 AIESEC NCCU YOLO 國際營隊行銷小組（4 人），依往年資料與市場調查制定行銷方案，並設計活動視覺（海報與貼文），招募志工與參與學員。成果：招募 15 名志工、超過 60 名學員，超越預算目標 53.7%。",
+            body: "帶領 AIESEC NCCU YOLO 國際營隊行銷小組（4 人），數位宣傳初期成效不佳後，依往年資料與市場調查調整行銷方案（改以高中現場宣傳為主），並設計活動視覺（海報與貼文），招募志工與參與學員。成果：招募 15 名志工、超過 60 名學員，超越預算目標 53.7%。",
             statVol: "志工招募人數",
             statPart: "參與人數",
             statBudget: "超越預算目標",
