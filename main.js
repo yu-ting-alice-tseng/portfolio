@@ -711,7 +711,7 @@
           point3: "Rapports de diffusion dès le lancement et bilans détaillés avec analyse des KPI.",
           point4: "Interface opérationnelle entre le pôle commercial, les clients et la régie.",
           mkPoint1: "Mise en ligne de plus de 20 campagnes display multiformats dans les outils d'ad serving.",   // → marketing.html
-          mkPoint2: "Optimisation de la diffusion de plus de 10 campagnes simultanées pour atteindre et dépasser les objectifs contractuels.",
+          mkPoint2: "Optimisation de la diffusion de plus de 20 campagnes simultanées pour atteindre et dépasser les objectifs contractuels.",
           mkPoint3: "Élaboration des rapports de diffusion dès le lancement et rédaction de bilans détaillés intégrant l'analyse des KPI.",
           mkPoint4: "Interface opérationnelle entre le pôle commercial, les clients et la régie, au service de la fluidité des flux de travail.",
           dataPoint1: "Consolidation des données de diffusion de plus de 10 campagnes simultanées pour suivre leur performance face aux objectifs contractuels.",   // → data.html
@@ -730,6 +730,7 @@
           title: "Assistante Marketing Digital",     // point1-4 → index + marketing.html
           company: "KPN · Agence de marketing digital",
           point1: "Analyse des tendances et benchmarks sectoriels pour orienter la création de contenus web : plus de 10 articles positionnés dans le Top 10 Google.",
+          mkPoint1: "Analyse des tendances et benchmarks sectoriels pour orienter la création de contenus web : plus de 10 articles positionnés dans le Top 10 Google et cités dans les réponses des IA génératives.",   // → marketing.html
           point2: "Pilotage de la performance des campagnes Meta et Google par des reportings et des tests A/B : CTR +9,5 % et taux de conversion +5,1 %.",
           point3: "Collaboration transversale avec les pôles CRM et technique pour aligner la production de contenu sur les objectifs de visibilité de la marque.",
           point4: "Projet de recherche sur les facteurs de positionnement Google par régressions statistiques, pour affiner la stratégie SEO de l'agence.",
@@ -1749,7 +1750,7 @@
           point3: "Delivery reports from launch and detailed end-of-campaign reviews with KPI analysis.",
           point4: "Operational interface between the sales team, clients and the sales house.",
           mkPoint1: "Set up and deploy 20+ multi-format display campaigns via ad serving tools.",
-          mkPoint2: "Manage and optimise the performance of 10+ campaigns simultaneously to meet and exceed contractual objectives.",
+          mkPoint2: "Manage and optimise the performance of 20+ campaigns simultaneously to meet and exceed contractual objectives.",
           mkPoint3: "Build delivery reports from launch and write detailed end-of-campaign reviews including KPI analysis.",
           mkPoint4: "Act as the operational interface between the sales team, clients and the sales house to keep workflows running smoothly.",
           dataPoint1: "Consolidate delivery data from 10+ simultaneous campaigns to track their performance against contractual objectives.",
@@ -1768,6 +1769,7 @@
           period: "01/2025 – 06/2025",
           title: "Digital Marketing Assistant",
           point1: "Analysed industry trends and conducted competitive benchmarks to guide web content creation aligned with user expectations, positioning 10+ articles in Google's Top 10.",
+          mkPoint1: "Analysed industry trends and sector benchmarks to guide web content creation, ranking 10+ articles in Google's Top 10 and getting them cited in generative AI answers.",   // → marketing.html
           point2: "Monitored Meta and Google advertising campaign performance through reporting dashboards, optimising CTR (+9.5%) and conversion rate (+5.1%) via A/B testing.",
           point3: "Collaborated cross-functionally with CRM and technical teams to align content production with brand visibility objectives.",
           point4: "Led a quantitative research project on Google ranking factors using statistical regressions, enabling the agency to refine its SEO strategy.",
@@ -2758,7 +2760,7 @@
           point3: "自上線起製作投放報告，並撰寫含 KPI 分析的完整結案報告。",
           point4: "擔任業務部門、客戶與廣告平台之間的營運窗口。",
           mkPoint1: "透過 ad serving 工具設定並上線 20+ 檔多格式 display 廣告活動。",
-          mkPoint2: "同時管理並優化 10+ 檔廣告活動的成效，達成並超越合約目標。",
+          mkPoint2: "同時管理並優化 20+ 檔廣告活動的成效，達成並超越合約目標。",
           mkPoint3: "自上線起製作投放報告，並撰寫整合 KPI 分析的完整結案報告。",
           mkPoint4: "擔任業務部門、客戶與廣告平台之間的營運窗口，確保工作流程順暢。",
           dataPoint1: "彙整 10+ 檔同時進行中廣告活動的投放數據，追蹤其相對於合約目標的成效。",
@@ -2777,6 +2779,7 @@
           period: "01/2025 – 06/2025",
           title: "數位行銷助理",
           point1: "SEO 優化（站內／技術）及內容建議。",
+          mkPoint1: "分析產業趨勢與競品基準，引導網站內容製作：逾 10 篇文章進入 Google 前 10 名，並獲生成式 AI 回答引用。",   // → marketing.html
           point2: "追蹤 KPI 與績效分析（流量、CTR、轉換率）。",
           point3: "SEA 廣告活動管理與報告。",
           dataPoint1: "主導量化研究專案，找出數位績效驅動因素，並將數據整合為具體策略建議提供給團隊。",
