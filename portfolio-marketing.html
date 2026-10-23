@@ -745,7 +745,7 @@
     .pf-extras {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 3rem 2rem 0;
+      padding: 3rem 2rem 4.5rem;
       border-top: 1px solid var(--mk-border);
     }
     .pf-extras-title {
@@ -779,6 +779,8 @@
       border: 1px solid var(--mk-border);
       border-radius: 10px;
     }
+    /* Les deux visuels sont au format 16:9 : l'œuvre entière, sans recadrage. */
+    .pf-extra-img { aspect-ratio: 16 / 9; margin-bottom: 0.5rem; }
     .pf-extra-tag {
       font-size: 0.64rem;
       font-weight: 600;
@@ -911,7 +913,7 @@
       .pf-grid { padding: 2rem 1.25rem 3rem; }
       .pf-filters { padding: 0 1.25rem; }
       .pf-footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
-      .pf-extras { padding: 2.25rem 1.25rem 0; }
+      .pf-extras { padding: 2.25rem 1.25rem 3rem; }
       .pf-topbar-inner { padding: 0 1.25rem; }
     }
     /* ── Catalogue : une fiche par projet ──────────────── */
@@ -2032,7 +2034,8 @@
     <h2 class="pf-extras-title"><span data-lang-show="fr">Autres Travaux</span><span data-lang-show="en">Other Work</span></h2>
     <p class="pf-extras-intro"><span data-lang-show="fr">Travaux de design réalisés dans un cadre associatif ou personnel.</span><span data-lang-show="en">Design work created for student associations or as personal projects.</span></p>
     <ul class="pf-extras-list">
-      <li class="pf-extra">
+      <li class="pf-extra" data-candle>
+        <a class="pf-img-wrap pf-extra-img" href="assets/penwards-design-award.webp" target="_blank" rel="noopener noreferrer"><img src="assets/penwards-design-award.webp" alt="Penwards 2024 – Poster" width="1366" height="768" loading="lazy"></a>
         <span class="pf-extra-tag"><span data-lang-show="fr">Design · Affiche</span><span data-lang-show="en">Design · Poster</span></span>
         <h3 class="pf-extra-title"><span data-lang-show="fr">Affiche - Thème Penwards 2024</span><span data-lang-show="en">Poster - Penwards 2024 Theme</span></h3>
         <p class="pf-extra-desc"><span data-lang-show="fr">Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024). Exercice de composition et de typographie, sans participation au concours.</span><span data-lang-show="en">Poster created as a personal project, inspired by the theme of the 18th Penwards packaging design competition (2024). An exercise in composition and typography, without entering the competition.</span></p>
@@ -2041,7 +2044,8 @@
           <span class="pf-tag">Typography</span>
         </div>
       </li>
-      <li class="pf-extra">
+      <li class="pf-extra" data-candle>
+        <a class="pf-img-wrap pf-extra-img" href="assets/kyudo-name-badge.webp" target="_blank" rel="noopener noreferrer"><img src="assets/kyudo-name-badge.webp" alt="NCCU Kyudo Club – Name Badge Mockup" width="1600" height="900" loading="lazy"></a>
         <span class="pf-extra-tag"><span data-lang-show="fr">Design · Supports événementiels</span><span data-lang-show="en">Design · Event Materials</span></span>
         <h3 class="pf-extra-title"><span data-lang-show="fr">Club de Kyudo de NCCU - Badge Nominatif</span><span data-lang-show="en">NCCU Kyudo Club - Name Badge</span></h3>
         <p class="pf-extra-desc"><span data-lang-show="fr">Conception de badges nominatifs pour les activités du club de kyudo de NCCU, déclinaison en deux coloris avec maquette de présentation.</span><span data-lang-show="en">Name badges designed for NCCU kyudo club activities, in two colourways with a presentation mockup.</span></p>

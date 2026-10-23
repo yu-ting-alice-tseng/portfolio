@@ -169,6 +169,7 @@ Order proof cards within a skill by importance (descending):
   - couleur `--trail` (`style.css` § 43), l'encre de la page ; rien au toucher ni en mouvement réduit ; sur les travaux de création, la flamme de la bougie prend le relais.
 - **État des fiches du catalogue (`portfolio-marketing.html` uniquement)** : à côté de la catégorie, chaque fiche affiche « ○ Vue » (restée au moins une seconde à moitié visible) puis « ● Ouverte » en vermillon (projet ouvert par la fiche, la vignette ou « Projet suivant »), en FR/EN. Chaque fiche ne compte qu'une fois ; l'état reste dans `sessionStorage`, rien n'est envoyé. L'ancien onglet flottant « CTR » a été retiré à la demande : il comptait de nouvelles impressions à chaque retour au catalogue et se lisait mal. Ne pas le réintroduire.
 - **Visionneuse (`lightbox.js`, `portfolio-marketing.html`)** : tout lien vers une image dans un projet s'ouvre agrandi au centre de la page, jamais dans un nouvel onglet ; flèches à gauche et à droite (clavier ← →, glisser au toucher) pour parcourir les images visibles du même projet, compteur « 3 / 7 », fermeture par ×, Échap ou clic sur le fond. Fond papier voilé, cadre et boutons aux couleurs `--mk-*`. Pas de légende visible (les textes alternatifs ne sont pas tous traduits). Sans JavaScript, le lien ouvre l'image comme avant.
+- **« Autres Travaux » (`portfolio-marketing.html`)** : chaque carte montre son visuel en tête (format 16:9, œuvre entière, visionneuse au clic, bougie via `data-candle`), jamais un simple texte : la section sert à montrer les créations. Marge basse de la section pour que les cartes ne collent pas au filet du pied de page.
 - **Étendre la bougie à une autre carte** : poser `data-candle` sur l'`<article>`. Toutes les `.pf-img-wrap` et `.ig-item a` qu'elle contient entrent alors dans le jeu, le calque couleur est construit en JS à partir de l'image existante, sans second téléchargement.
 - **Garde-fous à conserver** : sans survol fin (tactile) ou en `prefers-reduced-motion`, les œuvres restent en couleur et aucun calque n'est créé. Une œuvre ne doit jamais rester inaccessible parce que l'effet ne peut pas s'exécuter.
 - **La carte de profil du héros garde la photo** sur toutes les pages, marketing comprise : on ne la remplace jamais par une œuvre. Les travaux se montrent dans le portfolio.
@@ -213,6 +214,7 @@ Order proof cards within a skill by importance (descending):
 
 - Les candidatures visent des entreprises hors de Taïwan : le site affiche uniquement **Yu-Ting Tseng**, jamais le nom chinois.
 - Cela vaut pour toutes les pages et toutes les langues, y compris la version chinoise.
+- **Exception (validée par l'utilisatrice) :** le visuel des badges du club de kyudo (`assets/kyudo-name-badge.webp`, « Autres Travaux » de `portfolio-marketing.html`) reste tel quel, avec le prénom imprimé sur le badge : c'est l'œuvre elle-même.
 
 ---
 
