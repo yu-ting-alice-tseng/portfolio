@@ -1032,7 +1032,7 @@
           },
           ma: {
             num: "Recherche empirique · Finance quantitative",
-            subtitle: "Étude empirique (2000 – 2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Le risque politique freine-t-il les M&A transfrontalières en Amérique Latine ? Étude empirique sur 2000 – 2024 : trois hypothèses (volume, abandon, prime) testées avec trois indices de risque politique (WGI, POLCON III, FSI) et les données de transactions LSEG / Refinitiv.",
             sitLbl: "Introduction",
             actLbl: "Méthodologie",
             resLbl: "Résultats",
@@ -1076,7 +1076,7 @@
           filterDistinction: "Distinctions",
           ma: {
             num: "Recherche empirique · Finance quantitative",
-            subtitle: "Étude empirique (2000 – 2024) · 3 hypothèses · Données : LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Le risque politique freine-t-il les M&A transfrontalières en Amérique Latine ? Étude empirique sur 2000 – 2024 : trois hypothèses (volume, abandon, prime) testées avec trois indices de risque politique (WGI, POLCON III, FSI) et les données de transactions LSEG / Refinitiv.",
             sitLbl: "Introduction",
             actLbl: "Méthodologie",
             resLbl: "Résultats",
@@ -2061,7 +2061,7 @@
           },
           ma: {
             num: "Empirical Research · Quantitative Finance",
-            subtitle: "Empirical study (2000 – 2024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Does political risk hold back cross-border M&A in Latin America? Empirical study over 2000 – 2024: three hypotheses (volume, abandonment, premium) tested with three political risk indices (WGI, POLCON III, FSI) and LSEG / Refinitiv deal data.",
             sitLbl: "Introduction",
             actLbl: "Methodology",
             resLbl: "Results",
@@ -2105,7 +2105,7 @@
           filterDistinction: "Awards",
           ma: {
             num: "Empirical Research · Quantitative Finance",
-            subtitle: "Empirical study (2000 – 2024) · 3 hypotheses · Data: LSEG Workspace / Refinitiv, WGI, POLCON III, FSI",
+            subtitle: "Does political risk hold back cross-border M&A in Latin America? Empirical study over 2000 – 2024: three hypotheses (volume, abandonment, premium) tested with three political risk indices (WGI, POLCON III, FSI) and LSEG / Refinitiv deal data.",
             sitLbl: "Introduction",
             actLbl: "Methodology",
             resLbl: "Results",
@@ -3051,7 +3051,7 @@
           },
           ma: {
             num: "02 · 實證研究 · 量化財務",
-            subtitle: "實證研究（2000–2024）· 3 項假說 · 數據來源：LSEG Workspace / Refinitiv、WGI、POLCON III、FSI",
+            subtitle: "政治風險是否抑制拉丁美洲的跨境併購？以 2000 – 2024 年資料進行實證研究：結合三項政治風險指數（WGI、POLCON III、FSI）與 LSEG / Refinitiv 交易資料，檢驗三項假說（交易量、交易取消、收購溢價）。",
             sitLbl: "情境",
             actLbl: "研究方法",
             resLbl: "主要發現",
@@ -3095,7 +3095,7 @@
           filterDistinction: "榮譽獎項",
           ma: {
             num: "01 · 實證研究 · 量化財務",
-            subtitle: "實證研究（2000–2024）· 3 項假說 · 數據來源：LSEG Workspace / Refinitiv、WGI、POLCON III、FSI",
+            subtitle: "政治風險是否抑制拉丁美洲的跨境併購？以 2000 – 2024 年資料進行實證研究：結合三項政治風險指數（WGI、POLCON III、FSI）與 LSEG / Refinitiv 交易資料，檢驗三項假說（交易量、交易取消、收購溢價）。",
             sitLbl: "情境",
             actLbl: "研究方法",
             resLbl: "主要發現",
