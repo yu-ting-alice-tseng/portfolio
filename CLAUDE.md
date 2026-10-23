@@ -78,6 +78,7 @@ Proofread every piece of new content for:
 
 - Match the language of the page — do not place English content on a French page or vice versa.
 - **Version chinoise invisible en ligne** : seule `teaching` garde le bouton CN. Sur toutes les autres pages (CV et portfolios), une langue enregistrée sans bouton visible sur la page (`pf-lang = zh` venu de `teaching`) revient au français à l'ouverture ; aucun texte chinois ne doit s'afficher (`main.js` et scripts `applyLang` des portfolios).
+- **Étiquettes des projets (`.pf-tag`, tous les portfolios) traduites aussi** (demande de l'utilisatrice) : paire `data-lang-show` FR / EN (« Tableaux Croisés Dynamiques » / « Pivot Tables », « Suivi des KPI » / « KPI Tracking »…). Restent identiques dans les deux langues les noms d'outils, de marques et d'organisations (Excel, Python, R, PowerPoint, Canva, Adobe Illustrator, Facebook, Xiaohongshu, Sephora, AIESEC, LSEG · Refinitiv), les sigles (FMCG, M&A, Logit) et les termes déjà employés tels quels dans le texte français des pages (Dashboard, Reporting, Community Management).
 - **Exception:** some terms are intentionally kept in their original language (e.g. "SEO", specific tool names the user has chosen to keep). When in doubt about whether a term should be translated, **ask the user**.
 
 ---
