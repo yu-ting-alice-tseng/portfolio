@@ -251,8 +251,10 @@ Order proof cards within a skill by importance (descending):
 
 - Chaque page CV (`index`, `marketing`, `data`, `finance`) a un bouton « Télécharger le CV (PDF) » dans le héros ; le lien change avec la langue (clés `cv.*`, la version chinoise renvoie au PDF anglais).
 - Les PDF (`assets/cv/`) sont **générés depuis les pages** par `tools/build-cv.js` : ne jamais les modifier à la main. **Après toute modification de contenu d'une page CV, relancer le script** (serveur local sur le port 8765, Playwright requis) et committer les PDF.
-- **Contenu du PDF** : le bénévolat n'y figure pas (il reste sur les pages CV, § 21). Chaque entrée s'écrit sur deux lignes : école ou entreprise en gras à gauche et dates à droite, puis intitulé (diplôme ou poste) en italique à gauche et lieu à droite.
-- **Puces du PDF** : petits points dessinés en CSS à la couleur d'accent de la page (le glyphe de la police apparaissait à moitié coupé).
+- **Contenu du PDF** : le bénévolat n'y figure pas (il reste sur les pages CV, § 21). Chaque entrée s'écrit sur deux lignes, dates à droite de la première, lieu à droite de la seconde :
+  - **expériences et associations** : poste en gras, puis entreprise ou association en italique ;
+  - **formation** : école en gras, puis diplôme en italique.
+- **Puces du PDF** : caractère « • » d'une police système (DejaVu Sans), placé en absolu à la couleur d'accent, même taille sur chaque ligne. Ni le glyphe d'Outfit (à moitié coupé) ni un petit rond CSS (taille irrégulière à l'affichage).
 - **Compétences du PDF** : classées par bloc puis sous-catégorie (libellé à gauche, compétences à droite, sous-niveaux comme « SEA » ou « Outils » en italique). Jamais une longue liste à plat. L'ordre est fixé pour chaque CV dans `SKILLS` (`tools/build-cv.js`), avec les `data-skill` et les clés `skills.*` du site : aucun texte saisi à la main, aucun libellé inventé. Le script signale toute compétence de la page absente du CV.
   - **Du plus important au moins important pour le métier visé**, blocs comme sous-catégories et compétences (ex. Finance en tête du CV Finance).
   - **Libellés des sous-catégories sur une seule ligne** (colonne à la largeur du plus long libellé).

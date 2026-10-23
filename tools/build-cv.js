@@ -188,21 +188,25 @@ function scrape() {
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 function render(d, pal, photo) {
-  const entry = (it) => `
+  // Formation : école en gras puis diplôme. Expériences et associations : poste en gras puis entreprise (demande de l'utilisatrice).
+  const entry = (it, roleFirst) => {
+    const [top, sub] = !it.org ? [it.title, ''] : roleFirst ? [it.title, it.org] : [it.org, it.title];
+    return `
     <div class="it">
       <div class="it-head">
-        <b>${esc(it.org || it.title)}</b>
+        <b>${esc(top)}</b>
         <span class="when">${esc(it.period)}</span>
       </div>
-      ${it.org || it.location ? `<div class="it-sub">
-        <span class="role">${it.org ? esc(it.title) : ''}</span>
+      ${sub || it.location ? `<div class="it-sub">
+        <span class="role">${esc(sub)}</span>
         <span class="loc">${esc(it.location)}</span>
       </div>` : ''}
       ${[...it.rows, it.gpa].filter(Boolean).map((r) => `<div class="row">${esc(r)}</div>`).join('')}
       ${!it.points.length ? '' : `<ul>${it.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`}
     </div>`;
-  const block = (sec) => sec && sec.items.length ? `
-    <section><h2>${esc(sec.title)}</h2>${sec.items.map(entry).join('')}</section>` : '';
+  };
+  const block = (sec, roleFirst) => sec && sec.items.length ? `
+    <section><h2>${esc(sec.title)}</h2>${sec.items.map((it) => entry(it, roleFirst)).join('')}</section>` : '';
   const chipList = (c) => c.map(esc).join(' · ');
   const skillBlock = (b) => b.chips ? `<b class="sk-solo">${esc(b.title)}</b><div>${chipList(b.chips)}</div>` :
     `<h3>${esc(b.title)}</h3>${b.groups.map((g) => `<b>${esc(g.title)}</b><div>${g.parts.map((x) =>
@@ -229,7 +233,7 @@ function render(d, pal, photo) {
   .row { color: #4a5160; }
   ul { margin: 1px 0 0; padding: 0; list-style: none; }
   li { margin: 0; padding-left: 11px; position: relative; }
-  li::before { content: ''; position: absolute; left: 2px; top: 0.58em; width: 3.4px; height: 3.4px; border-radius: 50%; background: ${pal.accent}; }
+  li::before { content: '\\2022'; position: absolute; left: 1px; top: 0; width: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif; font-size: 9pt; line-height: calc(8.4pt * 1.38); color: ${pal.accent}; }
   .sk { display: grid; grid-template-columns: max-content 1fr; gap: 1px 12px; }
   .sk h3 { grid-column: 1 / -1; font-size: 8.4pt; font-weight: 600; color: ${pal.accent}; margin: 4px 0 1px; padding-bottom: 1px; border-bottom: 0.5px solid ${pal.soft}; break-after: avoid; }
   .sk h3:first-child { margin-top: 0; }
@@ -251,8 +255,8 @@ function render(d, pal, photo) {
   </div>
 </header>
 ${block(d.education)}
-${block(d.experience)}
-${block(d.extra)}
+${block(d.experience, true)}
+${block(d.extra, true)}
 <section><h2>${esc(d.skillsTitle)}</h2><div class="sk">${d.skills.map(skillBlock).join('')}</div></section>
 </body></html>`;
 }
