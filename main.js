@@ -3489,7 +3489,7 @@
     },
     "data-statistics": {
       title: "Statistiques & Méthodes Quantitatives",
-      text: "Maîtrise des méthodes quantitatives – régression OLS et Logit, analyse de panel, tests d'hypothèses, statistiques descriptives et inférentielles – appliquées à la recherche académique et aux études de marché.",
+      text: "Maîtrise des méthodes quantitatives – régression OLS et Logit, corrélations, tests d'hypothèses, statistiques descriptives et inférentielles – appliquées à la recherche académique et aux études de marché.",
       byPage: {
         finance:   { text: "Régressions OLS et Logit sur données LSEG/Refinitiv (2000 – 2024) pour tester l'impact du risque politique sur les opérations M&A." },
         data:      { text: "Méthodes quantitatives appliquées : régressions multivariées, analyse de corrélation et tests d'hypothèses pour la recherche et l'analyse de marché." },
@@ -3497,7 +3497,7 @@
       },
       en: {
         title: "Statistics & Quantitative Methods",
-        text: "Proficient in quantitative methods – OLS and logit regression, panel data analysis, hypothesis testing, descriptive and inferential statistics – applied to academic research and market studies.",
+        text: "Proficient in quantitative methods – OLS and logit regression, correlation analysis, hypothesis testing, descriptive and inferential statistics – applied to academic research and market studies.",
         byPage: {
           finance:   { text: "OLS and logit regressions on LSEG/Refinitiv data (2000 – 2024) to test the impact of political risk on M&A transactions." },
           data:      { text: "Applied quantitative methods: multivariate regressions, correlation analysis and hypothesis testing for research and market analysis." },
