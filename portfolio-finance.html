@@ -443,6 +443,12 @@
     .pf-btn--ghost:hover { background: var(--fi-accent-pale); border-color: var(--fi-accent); }
 
     /* ── Results callout ───────────────────────────────── */
+    .pf-refs { margin: 1.6rem 0 0.4rem; padding-top: 0.9rem; border-top: 1px solid var(--fi-border); }
+    .pf-refs-title { font-size: 0.59rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fi-accent); margin: 0 0 0.5rem; }
+    .pf-refs-list { list-style: none; margin: 0; padding: 0; font-size: 0.76rem; line-height: 1.6; color: var(--fi-muted); }
+    .pf-refs-list li { padding-left: 1.6em; text-indent: -1.6em; margin: 0 0 0.4rem; overflow-wrap: anywhere; }
+    .pf-refs-list a { color: inherit; text-decoration: underline; text-decoration-color: var(--fi-border); text-underline-offset: 2px; }
+    .pf-refs-list a:hover { color: var(--fi-accent); text-decoration-color: currentColor; }
     .pf-result-callout {
       padding: 0.9rem 1.1rem;
       background: var(--fi-green-pale);
@@ -616,7 +622,7 @@
         <div data-lang-show="fr">
           <p class="pf-star-txt">La relation entre instabilité politique et flux M&amp;A cross-border s'appuie sur la <strong>théorie institutionnelle</strong> (Henisz, 2000) et sur les travaux consacrés à l'incertitude électorale (Cao, Li et Liu, 2017) : des contre-pouvoirs faibles rendent les politiques moins prévisibles et augmentent les coûts de transaction et l'incertitude de valorisation. La littérature oppose toutefois une logique de dissuasion à une logique d'opportunité, certains acquéreurs voyant dans l'instabilité un levier de négociation. Trois indices complémentaires mesurent le risque politique :</p>
           <ul class="pf-star-txt" style="margin:0.5rem 0 0.8rem;padding-left:1.2rem;">
-            <li><strong>WGI-PV</strong> (World Governance Indicators, Banque Mondiale) : dimension « Stabilité politique et absence de violence », notée de −2,5 à +2,5 (score élevé = pays plus stable). Mesure la <em>perception</em> de la stabilité politique, en moyenne annuelle sur les pays de la région.</li>
+            <li><strong>WGI-PV</strong> (Worldwide Governance Indicators, Banque Mondiale) : dimension « Stabilité politique et absence de violence », notée de −2,5 à +2,5 (score élevé = pays plus stable). Mesure la <em>perception</em> de la stabilité politique, en moyenne annuelle sur les pays de la région.</li>
             <li><strong>POLCON III</strong> (Political Constraint Index, Henisz) : mesure le degré de <em>contrainte institutionnelle</em> pesant sur l'exécutif, c'est-à-dire le nombre de contre-pouvoirs effectifs dans le système politique. Échelle de 0 à 1 : un POLCON élevé signifie une plus grande prévisibilité des politiques et un risque de retournement réduit.</li>
             <li><strong>FSI</strong> (Fragile States Index, Fund for Peace) : mesure la <em>fragilité de l'État</em> sur une échelle de 0 à 120 (score élevé = État plus fragile), à travers des indicateurs sociaux, économiques et sécuritaires (cohésion sociale, inégalités, droits humains, intervention extérieure). Capte des risques d'instabilité profonde que le WGI ou POLCON ne couvrent pas.</li>
           </ul>
@@ -630,7 +636,7 @@
         <div data-lang-show="en">
           <p class="pf-star-txt">The relationship between political instability and cross-border M&amp;A flows builds on <strong>institutional theory</strong> (Henisz, 2000) and on research into electoral uncertainty (Cao, Li and Liu, 2017): weak checks and balances make policy less predictable and raise transaction costs and valuation uncertainty. The literature, however, contrasts a deterrence logic with an opportunity logic, as some acquirers treat instability as a bargaining lever. Three complementary indices measure political risk:</p>
           <ul class="pf-star-txt" style="margin:0.5rem 0 0.8rem;padding-left:1.2rem;">
-            <li><strong>WGI-PV</strong> (World Governance Indicators, World Bank): the “Political Stability and Absence of Violence” dimension, scored from −2.5 to +2.5 (higher = more stable country). Measures <em>perceived</em> political stability, averaged across the region each year.</li>
+            <li><strong>WGI-PV</strong> (Worldwide Governance Indicators, World Bank): the “Political Stability and Absence of Violence” dimension, scored from −2.5 to +2.5 (higher = more stable country). Measures <em>perceived</em> political stability, averaged across the region each year.</li>
             <li><strong>POLCON III</strong> (Political Constraint Index, Henisz): measures the degree of <em>institutional constraint</em> on the executive, i.e. how many effective veto players exist in the political system. On a 0 to 1 scale, a high POLCON score means greater policy predictability and a lower risk of abrupt policy reversal.</li>
             <li><strong>FSI</strong> (Fragile States Index, Fund for Peace): measures <em>state fragility</em> on a 0 to 120 scale (higher = more fragile state) through social, economic and security indicators (social cohesion, inequality, human rights, external intervention). Captures deep instability risks that WGI or POLCON alone do not fully cover.</li>
           </ul>
@@ -666,7 +672,7 @@
             <li><strong>H2 – Abandon :</strong> corrélation de Pearson et régression logistique binomiale (GLM, lien logit) du taux d'abandon annuel (transactions abandonnées / annoncées) sur chaque indice.</li>
             <li><strong>H3 – Prime :</strong> corrélation de Pearson et régression linéaire simple de la prime d'acquisition à 4 semaines (%) sur chaque indice.</li>
             <li><strong>Limites :</strong> analyses bivariées et exploratoires, sans variables de contrôle (croissance du PIB, cycles des matières premières, marché mondial des M&amp;A) : les résultats décrivent des associations, pas des liens de causalité. Les transactions abandonnées avant leur annonce n'apparaissent dans aucune base de données.</li>
-            <li><strong>Sources :</strong> LSEG Workspace / Refinitiv et IMAA Institute (transactions, 2000 – 2024), Banque Mondiale (WGI), Henisz (POLCON III), Fund for Peace (FSI, 2006 – 2024). Analyses réalisées sous R.</li>
+            <li><strong>Sources :</strong> LSEG Workspace / Refinitiv (LSEG, 2026) et IMAA Institute (s.d.) pour les transactions (2000 – 2024), Banque Mondiale (World Bank, 2025) pour le WGI, Henisz (2025) pour POLCON III, Fund for Peace (2025) pour le FSI (2006 – 2024). Analyses réalisées sous R. Références complètes en fin d'étude.</li>
           </ul>
         </div>
         <div data-lang-show="en">
@@ -676,7 +682,7 @@
             <li><strong>H2 – Abandonment:</strong> Pearson correlation and binomial logistic regression (GLM, logit link) of the annual abandonment rate (abandoned / announced deals) on each index.</li>
             <li><strong>H3 – Premium:</strong> Pearson correlation and simple linear regression of the 4-week acquisition premium (%) on each index.</li>
             <li><strong>Limitations:</strong> bivariate, exploratory analyses with no control variables (GDP growth, commodity cycles, global M&amp;A conditions): the results describe associations, not causal effects. Deals abandoned before announcement do not appear in any database.</li>
-            <li><strong>Data sources:</strong> LSEG Workspace / Refinitiv and IMAA Institute (deals, 2000 – 2024), World Bank (WGI), Henisz (POLCON III), Fund for Peace (FSI, 2006 – 2024). Analyses run in R.</li>
+            <li><strong>Data sources:</strong> LSEG Workspace / Refinitiv (LSEG, 2026) and IMAA Institute (n.d.) for deals (2000 – 2024), World Bank (2025) for WGI, Henisz (2025) for POLCON III, Fund for Peace (2025) for FSI (2006 – 2024). Analyses run in R. Full references at the end of the study.</li>
           </ul>
         </div>
         <div data-lang-show="zh">
@@ -686,7 +692,7 @@
             <li><strong>H2 – 交易取消：</strong>Pearson 相關與二項邏輯斯迴歸（GLM，logit 連結），以各指數解釋年度交易取消率（取消／宣布交易數）。</li>
             <li><strong>H3 – 收購溢價：</strong>Pearson 相關與簡單線性迴歸，以各指數解釋 4 週收購溢價（%）。</li>
             <li><strong>研究限制：</strong>雙變數探索性分析，未納入控制變數（GDP 成長、原物料循環、全球 M&amp;A 景氣），結果僅呈現關聯而非因果；宣布前即告吹的交易不會出現在任何資料庫中。</li>
-            <li><strong>資料來源：</strong>LSEG Workspace / Refinitiv 與 IMAA Institute（交易資料，2000 – 2024）、世界銀行（WGI）、Henisz（POLCON III）、和平基金會（FSI，2006 – 2024），以 R 進行分析。</li>
+            <li><strong>資料來源：</strong>交易資料（2000 – 2024）取自 LSEG Workspace / Refinitiv（LSEG, 2026）與 IMAA Institute（n.d.），WGI 取自世界銀行（World Bank, 2025），POLCON III 取自 Henisz（2025），FSI（2006 – 2024）取自和平基金會（Fund for Peace, 2025），以 R 進行分析。完整文獻列於研究末尾。</li>
           </ul>
         </div>
       </div>
@@ -786,6 +792,8 @@
           </ul>
         </div>
       </div>
+
+      <section class="pf-refs"><p class="pf-refs-title"><span data-lang-show="fr">Références</span><span data-lang-show="en">References</span><span data-lang-show="zh">參考文獻</span></p><ol class="pf-refs-list"><li>Cao, X., Li, Y., &amp; Liu, X. (2017). Electoral cycles and cross-border acquisitions. <em>Journal of Corporate Finance, 43</em>, 271–294. <a href="https://doi.org/10.1016/j.jcorpfin.2017.01.006" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jcorpfin.2017.01.006</a></li><li>Fund for Peace. (2025). <em>Fragile States Index 2025 annual report</em>. <a href="https://fragilestatesindex.org" target="_blank" rel="noopener noreferrer">https://fragilestatesindex.org</a></li><li>Henisz, W. J. (2000). The institutional environment for economic growth. <em>Economics &amp; Politics, 12</em>(1), 1–31. <a href="https://doi.org/10.1111/1468-0343.00066" target="_blank" rel="noopener noreferrer">https://doi.org/10.1111/1468-0343.00066</a></li><li><span data-lang-show="fr">Henisz, W. J. (2025). <em>POLCON dataset 2025</em> [Jeu de données]. University of Pennsylvania, Wharton School. <a href="https://mgmt.wharton.upenn.edu/faculty/heniszpolcon/polcondataset/" target="_blank" rel="noopener noreferrer">https://mgmt.wharton.upenn.edu/faculty/heniszpolcon/polcondataset/</a></span><span data-lang-show="en">Henisz, W. J. (2025). <em>POLCON dataset 2025</em> [Data set]. University of Pennsylvania, Wharton School. <a href="https://mgmt.wharton.upenn.edu/faculty/heniszpolcon/polcondataset/" target="_blank" rel="noopener noreferrer">https://mgmt.wharton.upenn.edu/faculty/heniszpolcon/polcondataset/</a></span><span data-lang-show="zh">Henisz, W. J. (2025). <em>POLCON dataset 2025</em> [資料集]. University of Pennsylvania, Wharton School. <a href="https://mgmt.wharton.upenn.edu/faculty/heniszpolcon/polcondataset/" target="_blank" rel="noopener noreferrer">https://mgmt.wharton.upenn.edu/faculty/heniszpolcon/polcondataset/</a></span></li><li><span data-lang-show="fr">IMAA Institute. (s.d.). <em>M&amp;A Latin America</em> [Jeu de données]. Institute for Mergers, Acquisitions and Alliances.</span><span data-lang-show="en">IMAA Institute. (n.d.). <em>M&amp;A Latin America</em> [Data set]. Institute for Mergers, Acquisitions and Alliances.</span><span data-lang-show="zh">IMAA Institute. (n.d.). <em>M&amp;A Latin America</em> [資料集]. Institute for Mergers, Acquisitions and Alliances.</span></li><li><span data-lang-show="fr">LSEG. (2026). <em>Mergers &amp; Acquisitions dataset</em> [Jeu de données]. LSEG Workspace.</span><span data-lang-show="en">LSEG. (2026). <em>Mergers &amp; Acquisitions dataset</em> [Data set]. LSEG Workspace.</span><span data-lang-show="zh">LSEG. (2026). <em>Mergers &amp; Acquisitions dataset</em> [資料集]. LSEG Workspace.</span></li><li><span data-lang-show="fr">Schipperus, R. (2025). <em>Country risk and acquisition premiums: Evidence from cross-border M&amp;A</em> [Document de travail non publié]. emlyon business school.</span><span data-lang-show="en">Schipperus, R. (2025). <em>Country risk and acquisition premiums: Evidence from cross-border M&amp;A</em> [Unpublished working paper]. emlyon business school.</span><span data-lang-show="zh">Schipperus, R. (2025). <em>Country risk and acquisition premiums: Evidence from cross-border M&amp;A</em> [未出版工作論文]. emlyon business school.</span></li><li><span data-lang-show="fr">World Bank. (2025). <em>Worldwide governance indicators</em> [Jeu de données]. <a href="https://info.worldbank.org/governance/wgi/" target="_blank" rel="noopener noreferrer">https://info.worldbank.org/governance/wgi/</a></span><span data-lang-show="en">World Bank. (2025). <em>Worldwide governance indicators</em> [Data set]. <a href="https://info.worldbank.org/governance/wgi/" target="_blank" rel="noopener noreferrer">https://info.worldbank.org/governance/wgi/</a></span><span data-lang-show="zh">World Bank. (2025). <em>Worldwide governance indicators</em> [資料集]. <a href="https://info.worldbank.org/governance/wgi/" target="_blank" rel="noopener noreferrer">https://info.worldbank.org/governance/wgi/</a></span></li></ol></section>
 
       <div class="pf-stats">
         <div><span class="pf-stat-val">3</span><span class="pf-stat-lbl" data-i18n="portfolio.fin.ma.statHypo">Hypothèses testées</span></div>
