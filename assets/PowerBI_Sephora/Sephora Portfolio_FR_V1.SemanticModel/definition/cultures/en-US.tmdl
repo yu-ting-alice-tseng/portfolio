@@ -381,6 +381,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Produit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -632,6 +642,86 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Marque": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -780,7 +870,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Average Rating": {
+			          "Note Moyenne": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -906,7 +996,17 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Reviews (log scale)": {
+			          "Avis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Avis (échelle log)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2108,6 +2208,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "Catégorie": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2907,6 +3017,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Gamme de Prix": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3400,6 +3520,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Note": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3987,6 +4117,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Titre de l'Avis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5015,6 +5155,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.614
 			          }
+			        },
+			        {
+			          "Produits": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5130,6 +5280,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Marques": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5249,7 +5409,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Average Price": {
+			          "Prix Moyen": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5365,7 +5525,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Average Rating": {
+			          "Note Moyenne": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5375,7 +5535,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Overall Average Rating": {
+			          "Note Moyenne Globale": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5627,6 +5787,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.491
 			          }
+			        },
+			        {
+			          "Avis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5751,7 +5921,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Average Review Rating": {
+			          "Note Moyenne des Avis": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5877,7 +6047,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Recommendation Rate": {
+			          "Taux de Recommandation": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6009,7 +6179,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Sephora Exclusive Share": {
+			          "Part Exclusivités Sephora": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6263,7 +6433,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Online-Only Share": {
+			          "Part Exclusivement en Ligne": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6336,6 +6506,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.625
+			          }
+			        },
+			        {
+			          "Produits Hero": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6459,6 +6639,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.625
 			          }
+			        },
+			        {
+			          "Produits Hidden Gem": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6525,6 +6715,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.625
 			          }
+			        },
+			        {
+			          "Produits Risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6590,6 +6790,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.625
+			          }
+			        },
+			        {
+			          "Produits Underperformer": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7201,6 +7411,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Part du Segment": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7489,7 +7709,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "New Product Share": {
+			          "Part de Nouveautés": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7619,6 +7839,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Favoris Médians": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7740,6 +7970,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Avis Médians": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7865,7 +8105,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Limited Edition Share": {
+			          "Part d'Éditions Limitées": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7968,6 +8208,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "Part en Rupture de Stock": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8105,7 +8355,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Reviews Rated Below 4★": {
+			          "Avis Notés sous 4★": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -8296,6 +8546,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "Trimestre": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9645,7 +9905,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "All Reviews": {
+			          "Tous les Avis": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -9677,7 +9937,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Below 4★": {
+			          "Sous 4★": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -9921,6 +10181,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.452
 			          }
+			        },
+			        {
+			          "Thème": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "NameType": "Name"
@@ -10010,7 +10280,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Products Rated Below 4★": {
+			          "Produits Notés sous 4★": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -10140,6 +10410,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.491
 			          }
+			        },
+			        {
+			          "Avis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10261,6 +10541,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Tranche de Note": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -10512,6 +10802,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Part des Avis": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10633,6 +10933,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Part des Produits": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -10808,7 +11118,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "New Average Rating": {
+			          "Note Moyenne des Nouveautés": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -10934,7 +11244,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Existing Average Rating": {
+			          "Note Moyenne des Produits Existants": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -11129,6 +11439,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Tranche de Note": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]

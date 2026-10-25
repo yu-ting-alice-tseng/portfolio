@@ -49,9 +49,9 @@ table Calendar
 	column 'Year Quarter'
 		lineageTag: 1f11d1da-a2e7-4c18-a0e2-3b82d1ae4bbb
 		summarizeBy: none
-		sortByColumn: YearQuarterNum
 		isNameInferred
 		sourceColumn: [Year Quarter]
+		sortByColumn: YearQuarterNum
 
 		annotation SummarizationSetBy = Automatic
 

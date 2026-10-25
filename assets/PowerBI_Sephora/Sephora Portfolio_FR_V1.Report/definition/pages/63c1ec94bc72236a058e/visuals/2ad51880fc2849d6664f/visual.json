@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2ad51880fc2849d6664f",
   "position": {
-    "x": 644.7058823529412,
+    "x": 644.70588235294122,
     "y": 214.11764705882354,
     "z": 8000,
     "height": 320,
-    "width": 625.8823529411765,
+    "width": 625.88235294117646,
     "tabOrder": 7000
   },
   "visual": {
@@ -58,8 +58,8 @@
               },
               "queryRef": "_Measures.Reviews",
               "nativeQueryRef": "Reviews",
-              "format": "#,0",
-              "displayName": "Avis"
+              "displayName": "Avis",
+              "format": "#,0"
             },
             {
               "field": {
@@ -212,7 +212,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "134.25570706770898D"
+                  "Value": "185.32336009892043D"
                 }
               }
             }
