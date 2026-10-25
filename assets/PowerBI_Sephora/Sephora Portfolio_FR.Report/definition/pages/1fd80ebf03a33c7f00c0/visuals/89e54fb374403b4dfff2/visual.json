@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.primary_category",
               "nativeQueryRef": "Primary Category",
-              "active": true
+              "active": true,
+              "displayName": "Catégorie"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "_Measures.Avg Price",
-              "nativeQueryRef": "Avg Price"
+              "nativeQueryRef": "Avg Price",
+              "displayName": "Prix Moyen"
             }
           ]
         }
@@ -163,7 +165,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'List Price in USD'"
+                  "Value": "'Prix Catalogue en USD'"
                 }
               }
             }
@@ -176,7 +178,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Average Price by Category'"
+                  "Value": "'Prix Moyen par Catégorie'"
                 }
               }
             }

@@ -212,12 +212,12 @@ table reviews
 			
 			SWITCH (
 			    TRUE (),
-			    ISBLANK ( reviews[rating] ), "Unrated",
-			    reviews[rating] < 3, "Below 3.0★",
-			    reviews[rating] < 3.5, "3.0–3.5★",
-			    reviews[rating] < 4, "3.5–4.0★",
-			    reviews[rating] < 4.5, "4.0–4.5★",
-			    "4.5–5.0★"
+			    ISBLANK ( reviews[rating] ), "Non Noté",
+			    reviews[rating] < 3, "Moins de 3,0★",
+			    reviews[rating] < 3.5, "3,0 – 3,5★",
+			    reviews[rating] < 4, "3,5 – 4,0★",
+			    reviews[rating] < 4.5, "4,0 – 4,5★",
+			    "4,5 – 5,0★"
 			)
 		lineageTag: 35b789f7-bbd5-4414-96f9-f6fddfcd59dd
 		summarizeBy: none

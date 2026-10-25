@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.Product Name",
               "nativeQueryRef": "Product Name",
-              "active": true
+              "active": true,
+              "displayName": "Produit"
             }
           ]
         }
@@ -434,7 +435,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "'Unrated'"
+                              "Value": "'Non Noté'"
                             }
                           }
                         ]

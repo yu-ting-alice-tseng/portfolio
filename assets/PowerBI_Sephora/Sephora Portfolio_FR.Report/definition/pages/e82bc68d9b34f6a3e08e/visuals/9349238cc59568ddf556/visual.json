@@ -48,7 +48,7 @@
               "queryRef": "product_info.primary_category",
               "nativeQueryRef": "Category",
               "active": true,
-              "displayName": "Category"
+              "displayName": "Catégorie"
             }
           ]
         },
@@ -66,7 +66,8 @@
                 }
               },
               "queryRef": "_Measures.Segment Share Rated",
-              "nativeQueryRef": "Segment Share Rated"
+              "nativeQueryRef": "Segment Share Rated",
+              "displayName": "Part du Segment"
             }
           ]
         }
@@ -379,7 +380,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Segment Mix by Category'"
+                  "Value": "'Segments par Catégorie'"
                 }
               }
             },

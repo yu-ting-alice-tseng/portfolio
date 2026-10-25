@@ -3,7 +3,7 @@
   "name": "6d92d180c98ea32d6968",
   "position": {
     "x": 10.909090909090908,
-    "y": 480.90909090909088,
+    "y": 480.9090909090909,
     "z": 8000,
     "height": 226.36363636363635,
     "width": 629.090909090909,
@@ -28,7 +28,7 @@
               },
               "queryRef": "product_info.Product Name",
               "nativeQueryRef": "Product",
-              "displayName": "Product"
+              "displayName": "Produit"
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "product_info.Brand Name",
               "nativeQueryRef": "Brand",
-              "displayName": "Brand"
+              "displayName": "Marque"
             },
             {
               "field": {
@@ -58,7 +58,7 @@
               },
               "queryRef": "Sum(reviews.rating)",
               "nativeQueryRef": "Rating",
-              "displayName": "Rating"
+              "displayName": "Note"
             },
             {
               "field": {
@@ -73,7 +73,7 @@
               },
               "queryRef": "reviews.review_title",
               "nativeQueryRef": "Review Title",
-              "displayName": "Review Title"
+              "displayName": "Titre de l'Avis"
             }
           ]
         }
@@ -424,7 +424,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Skin Care only'"
+                  "Value": "'Soin uniquement'"
                 }
               }
             }
@@ -437,7 +437,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Review Feed'"
+                  "Value": "'Fil des Avis'"
                 }
               }
             }

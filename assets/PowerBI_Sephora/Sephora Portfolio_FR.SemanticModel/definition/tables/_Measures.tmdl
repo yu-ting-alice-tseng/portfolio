@@ -10,7 +10,7 @@ table _Measures
 		lineageTag: b86e9d89-b94a-40de-981b-8798caf7c292
 
 	measure 'Avg Price' = AVERAGE ( product_info[price_usd] )
-		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		formatString: #,0.00\ \$;-#,0.00\ \$;#,0.00\ \$
 		lineageTag: 69f589da-8cd1-4ee7-abd1-87fc2686a4ea
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -88,7 +88,7 @@ table _Measures
 			
 			DIVIDE (
 			    [Products],
-			    CALCULATE ( [Products], ALL ( product_info[Segment] ), product_info[Segment] <> "Unrated" )
+			    CALCULATE ( [Products], ALL ( product_info[Segment] ), product_info[Segment] <> "Non Noté" )
 			)
 		formatString: 0\ %;-0\ %;0\ %
 		lineageTag: b1f4e0e2-fac8-4ee8-a0bd-68580f7b3ee4
@@ -134,13 +134,13 @@ table _Measures
 			
 			SWITCH (
 			    SELECTEDVALUE ( Themes[Theme] ),
-			    "No Visible Results", CALCULATE ( [Skincare Reviews], reviews[theme_no_results] = 1 ),
-			    "Price & Value", CALCULATE ( [Skincare Reviews], reviews[theme_price] = 1 ),
-			    "Irritation & Breakouts", CALCULATE ( [Skincare Reviews], reviews[theme_irritation] = 1 ),
-			    "Texture & Feel", CALCULATE ( [Skincare Reviews], reviews[theme_texture] = 1 ),
-			    "Scent", CALCULATE ( [Skincare Reviews], reviews[theme_scent] = 1 ),
+			    "Aucun Résultat Visible", CALCULATE ( [Skincare Reviews], reviews[theme_no_results] = 1 ),
+			    "Prix & Rapport Qualité-Prix", CALCULATE ( [Skincare Reviews], reviews[theme_price] = 1 ),
+			    "Irritations & Imperfections", CALCULATE ( [Skincare Reviews], reviews[theme_irritation] = 1 ),
+			    "Texture & Sensation", CALCULATE ( [Skincare Reviews], reviews[theme_texture] = 1 ),
+			    "Odeur", CALCULATE ( [Skincare Reviews], reviews[theme_scent] = 1 ),
 			    "Packaging", CALCULATE ( [Skincare Reviews], reviews[theme_packaging] = 1 ),
-			    "Hydration", CALCULATE ( [Skincare Reviews], reviews[theme_hydration] = 1 )
+			    "Hydratation", CALCULATE ( [Skincare Reviews], reviews[theme_hydration] = 1 )
 			)
 		formatString: 0
 		lineageTag: 63ffcdab-38aa-44ea-8f5f-e684f3834ed3

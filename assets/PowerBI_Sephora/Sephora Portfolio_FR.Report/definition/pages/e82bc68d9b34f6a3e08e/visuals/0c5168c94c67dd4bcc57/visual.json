@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "0c5168c94c67dd4bcc57",
   "position": {
-    "x": 63.999999999999972,
+    "x": 63.99999999999997,
     "y": 0,
     "z": 2000,
     "height": 37.5,
@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.Brand Name",
               "nativeQueryRef": "Brand Name",
-              "active": true
+              "active": true,
+              "displayName": "Marque"
             }
           ]
         }
@@ -434,7 +435,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "'Unrated'"
+                              "Value": "'Non Noté'"
                             }
                           }
                         ]

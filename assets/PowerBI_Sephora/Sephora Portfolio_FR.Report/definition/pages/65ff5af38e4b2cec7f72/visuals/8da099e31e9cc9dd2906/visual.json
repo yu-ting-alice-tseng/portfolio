@@ -28,7 +28,7 @@
               },
               "queryRef": "_Measures.Skin Care Reviews",
               "nativeQueryRef": "Reviews",
-              "displayName": "Reviews",
+              "displayName": "Avis",
               "format": "#,0"
             },
             {
@@ -49,7 +49,7 @@
               },
               "queryRef": "Sum(reviews.rating)",
               "nativeQueryRef": "Average Review Rating",
-              "displayName": "Average Review Rating"
+              "displayName": "Note Moyenne des Avis"
             },
             {
               "field": {
@@ -64,7 +64,7 @@
               },
               "queryRef": "_Measures.Low Rating Share",
               "nativeQueryRef": "Reviews Rated Below 4★",
-              "displayName": "Reviews Rated Below 4★"
+              "displayName": "Avis Notés sous 4★"
             },
             {
               "field": {
@@ -79,7 +79,7 @@
               },
               "queryRef": "_Measures.Recommend Rate",
               "nativeQueryRef": "Recommendation Rate",
-              "displayName": "Recommendation Rate"
+              "displayName": "Taux de Recommandation"
             }
           ]
         }

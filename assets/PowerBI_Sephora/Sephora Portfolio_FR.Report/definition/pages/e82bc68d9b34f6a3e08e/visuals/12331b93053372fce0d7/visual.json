@@ -47,7 +47,7 @@
               },
               "queryRef": "_Measures.Avg Price",
               "nativeQueryRef": "Average Price",
-              "displayName": "Average Price"
+              "displayName": "Prix Moyen"
             },
             {
               "field": {
@@ -62,7 +62,7 @@
               },
               "queryRef": "_Measures.Avg Rating",
               "nativeQueryRef": "Average Rating",
-              "displayName": "Average Rating"
+              "displayName": "Note Moyenne"
             },
             {
               "field": {
@@ -77,7 +77,7 @@
               },
               "queryRef": "_Measures.Median Reviews",
               "nativeQueryRef": "Median Reviews",
-              "displayName": "Median Reviews"
+              "displayName": "Avis Médians"
             },
             {
               "field": {
@@ -91,7 +91,8 @@
                 }
               },
               "queryRef": "_Measures.Median Loves",
-              "nativeQueryRef": "Median Loves"
+              "nativeQueryRef": "Median Loves",
+              "displayName": "Favoris Médians"
             },
             {
               "field": {
@@ -106,7 +107,7 @@
               },
               "queryRef": "_Measures.Online Share",
               "nativeQueryRef": "Online-Only Share",
-              "displayName": "Online-Only Share"
+              "displayName": "Part Exclusivement en Ligne"
             },
             {
               "field": {
@@ -121,7 +122,7 @@
               },
               "queryRef": "_Measures.New Share",
               "nativeQueryRef": "New Product Share",
-              "displayName": "New Product Share"
+              "displayName": "Part de Nouveautés"
             },
             {
               "field": {
@@ -136,7 +137,7 @@
               },
               "queryRef": "_Measures.Limited Share",
               "nativeQueryRef": "Limited Edition Share",
-              "displayName": "Limited Edition Share"
+              "displayName": "Part d'Éditions Limitées"
             },
             {
               "field": {
@@ -150,7 +151,8 @@
                 }
               },
               "queryRef": "_Measures.Out of Stock Share",
-              "nativeQueryRef": "Out of Stock Share"
+              "nativeQueryRef": "Out of Stock Share",
+              "displayName": "Part en Rupture de Stock"
             }
           ]
         }
@@ -415,7 +417,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Segment Profile'"
+                  "Value": "'Profil des Segments'"
                 }
               }
             },

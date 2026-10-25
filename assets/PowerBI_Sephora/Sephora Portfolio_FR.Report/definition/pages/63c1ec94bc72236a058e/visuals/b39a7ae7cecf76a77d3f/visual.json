@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.Rating Band",
               "nativeQueryRef": "Rating Band",
-              "active": true
+              "active": true,
+              "displayName": "Tranche de Note"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "_Measures.Products",
-              "nativeQueryRef": "Products"
+              "nativeQueryRef": "Products",
+              "displayName": "Produits"
             }
           ]
         }
@@ -342,7 +344,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Skin Care only'"
+                  "Value": "'Soin uniquement'"
                 }
               }
             }
@@ -355,7 +357,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Products by Rating Band'"
+                  "Value": "'Produits par Tranche de Note'"
                 }
               }
             }

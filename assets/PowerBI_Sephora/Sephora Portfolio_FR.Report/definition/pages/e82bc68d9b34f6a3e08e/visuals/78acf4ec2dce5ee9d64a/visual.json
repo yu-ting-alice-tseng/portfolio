@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.Brand Name",
               "nativeQueryRef": "Brand Name",
-              "active": true
+              "active": true,
+              "displayName": "Marque"
             }
           ]
         },
@@ -64,7 +65,8 @@
                 }
               },
               "queryRef": "_Measures.Products",
-              "nativeQueryRef": "Products"
+              "nativeQueryRef": "Products",
+              "displayName": "Produits"
             }
           ]
         }
@@ -361,7 +363,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Segment Mix by Brand'"
+                  "Value": "'Segments par Marque'"
                 }
               }
             }

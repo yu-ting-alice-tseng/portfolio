@@ -49,6 +49,7 @@ table Calendar
 	column 'Year Quarter'
 		lineageTag: 1f11d1da-a2e7-4c18-a0e2-3b82d1ae4bbb
 		summarizeBy: none
+		sortByColumn: YearQuarterNum
 		isNameInferred
 		sourceColumn: [Year Quarter]
 
@@ -88,17 +89,17 @@ table Calendar
 				    CALENDAR ( DATE ( 2008, 1, 1 ), DATE ( 2023, 12, 31 ) ),
 				    "Year", YEAR ( [Date] ),
 				    "MonthNum", MONTH ( [Date] ),
-				    "Month", FORMAT ( [Date], "MMM" ),
-				    "Quarter", "Q" & QUARTER ( [Date] ),
-				    "Year Quarter", YEAR ( [Date] ) & " Q" & QUARTER ( [Date] ),
+				    "Month", FORMAT ( [Date], "MMM", "fr-FR" ),
+				    "Quarter", "T" & QUARTER ( [Date] ),
+				    "Year Quarter", "T" & QUARTER ( [Date] ) & " " & YEAR ( [Date] ),
 				    "YearQuarterNum", YEAR ( [Date] ) * 10 + QUARTER ( [Date] ),
 				    "Season",
 				        SWITCH (
 				            TRUE (),
-				            MONTH ( [Date] ) IN { 3, 4, 5 }, "Spring",
-				            MONTH ( [Date] ) IN { 6, 7, 8 }, "Summer",
-				            MONTH ( [Date] ) IN { 9, 10, 11 }, "Autumn",
-				            "Winter"
+				            MONTH ( [Date] ) IN { 3, 4, 5 }, "Printemps",
+				            MONTH ( [Date] ) IN { 6, 7, 8 }, "Été",
+				            MONTH ( [Date] ) IN { 9, 10, 11 }, "Automne",
+				            "Hiver"
 				        ),
 				    "SeasonNum",
 				        SWITCH (

@@ -103,7 +103,7 @@ table product_info
 
 	column price_usd
 		dataType: double
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: #,0\ \$;-#,0\ \$;#,0\ \$
 		lineageTag: 23ba489d-778a-427f-b45b-7e27465d8f12
 		summarizeBy: none
 		sourceColumn: price_usd
@@ -247,7 +247,7 @@ table product_info
 			RETURN
 			    SWITCH (
 			        TRUE (),
-			        ISBLANK ( product_info[Rating] ), "Unrated",
+			        ISBLANK ( product_info[Rating] ), "Non Noté",
 			        product_info[Rating] >= mr && product_info[Reviews] >= mv, "Hero",
 			        product_info[Rating] >= mr, "Hidden Gem",
 			        product_info[Reviews] >= mv, "Risk",
@@ -262,10 +262,10 @@ table product_info
 			
 			SWITCH (
 			    TRUE (),
-			    product_info[price_usd] < 25, "Under $25",
-			    product_info[price_usd] < 50, "$25–50",
-			    product_info[price_usd] < 100, "$50–100",
-			    "$100+"
+			    product_info[price_usd] < 25, "Moins de 25 $",
+			    product_info[price_usd] < 50, "25 – 50 $",
+			    product_info[price_usd] < 100, "50 – 100 $",
+			    "Plus de 100 $"
 			)
 		lineageTag: afcc8791-c581-4d4c-b245-7c2a1297f663
 		summarizeBy: none
@@ -296,12 +296,12 @@ table product_info
 			
 			SWITCH (
 			    TRUE (),
-			    ISBLANK ( product_info[Rating] ), "Unrated",
-			    product_info[Rating] < 3, "Below 3.0★",
-			    product_info[Rating] < 3.5, "3.0–3.5★",
-			    product_info[Rating] < 4, "3.5–4.0★",
-			    product_info[Rating] < 4.5, "4.0–4.5★",
-			    "4.5–5.0★"
+			    ISBLANK ( product_info[Rating] ), "Non Noté",
+			    product_info[Rating] < 3, "Moins de 3,0★",
+			    product_info[Rating] < 3.5, "3,0 – 3,5★",
+			    product_info[Rating] < 4, "3,5 – 4,0★",
+			    product_info[Rating] < 4.5, "4,0 – 4,5★",
+			    "4,5 – 5,0★"
 			)
 		lineageTag: abdcb48a-1ee8-44a0-8264-31e455ac8509
 		summarizeBy: none
@@ -363,9 +363,12 @@ table product_info
 				        {"child_max_price", type number},
 				        {"child_min_price", type number}
 				    }, "en-US"),
-				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type All",{{"primary_category", "Primary Category"}, {"brand_name", "Brand Name"}, {"reviews", "Reviews"}, {"rating", "Rating"}, {"product_name", "Product Name"}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type All",{{"primary_category", "Primary Category"}, {"brand_name", "Brand Name"}, {"reviews", "Reviews"}, {"rating", "Rating"}, {"product_name", "Product Name"}}),
+				    // Version française : noms des catégories traduits
+				    CategoriesFR = [#"Skincare" = "Soin", #"Makeup" = "Maquillage", #"Hair" = "Cheveux", #"Fragrance" = "Parfum", #"Bath & Body" = "Bain & Corps", #"Mini Size" = "Formats Mini", #"Men" = "Homme", #"Tools & Brushes" = "Accessoires & Pinceaux", #"Gifts" = "Cadeaux"],
+				    #"Translated Categories" = Table.TransformColumns(#"Renamed Columns", {{"Primary Category", each Record.FieldOrDefault(CategoriesFR, _, _), type text}})
 				in
-				    #"Renamed Columns"
+				    #"Translated Categories"
 
 	annotation PBI_NavigationStepName = Navigation
 

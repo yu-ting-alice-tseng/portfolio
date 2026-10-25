@@ -28,7 +28,8 @@
               },
               "queryRef": "_Measures.Hero Products",
               "nativeQueryRef": "Hero Products",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Produits Hero"
             },
             {
               "field": {
@@ -43,7 +44,8 @@
               },
               "queryRef": "_Measures.Question Mark Products",
               "nativeQueryRef": "Question Mark Products",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Produits Hidden Gem"
             },
             {
               "field": {
@@ -58,7 +60,8 @@
               },
               "queryRef": "_Measures.Risk Products",
               "nativeQueryRef": "Risk Products",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Produits Risk"
             },
             {
               "field": {
@@ -73,7 +76,8 @@
               },
               "queryRef": "_Measures.Underperformer Products",
               "nativeQueryRef": "Underperformer Products",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Produits Underperformer"
             }
           ]
         }

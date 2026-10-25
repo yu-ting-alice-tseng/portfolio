@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Min(product_info.Brand Name)",
-              "nativeQueryRef": "First Brand Name"
+              "nativeQueryRef": "First Brand Name",
+              "displayName": "Marque"
             },
             {
               "field": {
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "_Measures.Reviews",
-              "nativeQueryRef": "Reviews"
+              "nativeQueryRef": "Reviews",
+              "displayName": "Avis"
             },
             {
               "field": {
@@ -60,7 +62,8 @@
                 }
               },
               "queryRef": "_Measures.Avg Rating",
-              "nativeQueryRef": "Avg Rating"
+              "nativeQueryRef": "Avg Rating",
+              "displayName": "Note Moyenne"
             }
           ]
         },
@@ -775,7 +778,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "'Unrated'"
+                              "Value": "'Non Noté'"
                             }
                           }
                         ]

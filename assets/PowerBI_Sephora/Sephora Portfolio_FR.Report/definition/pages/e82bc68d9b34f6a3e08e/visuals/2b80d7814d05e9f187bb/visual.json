@@ -28,7 +28,7 @@
               },
               "queryRef": "product_info.Product Name",
               "nativeQueryRef": "Product",
-              "displayName": "Product"
+              "displayName": "Produit"
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "product_info.Brand Name",
               "nativeQueryRef": "Brand",
-              "displayName": "Brand"
+              "displayName": "Marque"
             },
             {
               "field": {
@@ -57,7 +57,8 @@
                 }
               },
               "queryRef": "product_info.Reviews",
-              "nativeQueryRef": "Reviews"
+              "nativeQueryRef": "Reviews",
+              "displayName": "Avis"
             },
             {
               "field": {
@@ -72,7 +73,7 @@
               },
               "queryRef": "product_info.Rating",
               "nativeQueryRef": "Average Rating",
-              "displayName": "Average Rating"
+              "displayName": "Note Moyenne"
             }
           ]
         }
@@ -178,7 +179,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Most Reviewed Products'"
+                  "Value": "'Produits les Plus Commentés'"
                 }
               }
             }

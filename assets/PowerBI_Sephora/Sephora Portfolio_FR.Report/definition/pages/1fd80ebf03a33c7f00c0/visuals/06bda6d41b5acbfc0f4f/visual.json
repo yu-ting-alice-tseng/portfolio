@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.primary_category",
               "nativeQueryRef": "Primary Category",
-              "active": true
+              "active": true,
+              "displayName": "Catégorie"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "product_info.Price Tier",
-              "nativeQueryRef": "Price Tier"
+              "nativeQueryRef": "Price Tier",
+              "displayName": "Gamme de Prix"
             }
           ]
         },
@@ -64,7 +66,8 @@
                 }
               },
               "queryRef": "_Measures.Products",
-              "nativeQueryRef": "Products"
+              "nativeQueryRef": "Products",
+              "displayName": "Produits"
             }
           ]
         }
@@ -296,7 +299,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'Under $25'"
+                        "Value": "'Moins de 25 $'"
                       }
                     }
                   }
@@ -337,7 +340,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'$25–50'"
+                        "Value": "'25 – 50 $'"
                       }
                     }
                   }
@@ -378,7 +381,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'$50–100'"
+                        "Value": "'50 – 100 $'"
                       }
                     }
                   }
@@ -419,7 +422,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'$100+'"
+                        "Value": "'Plus de 100 $'"
                       }
                     }
                   }
@@ -503,7 +506,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Price Tier Mix by Category'"
+                  "Value": "'Gammes de Prix par Catégorie'"
                 }
               }
             },

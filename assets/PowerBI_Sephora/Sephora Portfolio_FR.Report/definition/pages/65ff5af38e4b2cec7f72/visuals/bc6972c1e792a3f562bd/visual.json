@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "bc6972c1e792a3f562bd",
   "position": {
-    "x": 649.41176470588232,
+    "x": 649.4117647058823,
     "y": 481.1764705882353,
     "z": 0,
     "height": 225.88235294117646,
-    "width": 622.35294117647061,
+    "width": 622.3529411764706,
     "tabOrder": 4000
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "Themes.Theme",
               "nativeQueryRef": "Theme",
-              "active": true
+              "active": true,
+              "displayName": "Thème"
             }
           ]
         },
@@ -47,7 +48,7 @@
               },
               "queryRef": "_Measures.Theme Share",
               "nativeQueryRef": "All Reviews",
-              "displayName": "All Reviews"
+              "displayName": "Tous les Avis"
             },
             {
               "field": {
@@ -62,7 +63,7 @@
               },
               "queryRef": "_Measures.Theme Share Low",
               "nativeQueryRef": "Below 4★",
-              "displayName": "Below 4★"
+              "displayName": "Sous 4★"
             }
           ]
         }
@@ -282,7 +283,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Share of Reviews Mentioning Each Theme'"
+                  "Value": "'Part des Avis Citant Chaque Thème'"
                 }
               }
             }

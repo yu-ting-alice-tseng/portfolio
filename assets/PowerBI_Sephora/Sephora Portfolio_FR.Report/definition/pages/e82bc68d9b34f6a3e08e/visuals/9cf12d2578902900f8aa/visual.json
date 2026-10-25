@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Sephora Product Intelligence",
+                    "value": "Analyse des Produits Sephora",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Constantia",
@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Portfolio Matrix",
+                    "value": "Matrice du Portefeuille",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Constantia",

@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "71e60c8c4ee71b0a9c58",
   "position": {
-    "x": 79.736842105263165,
+    "x": 79.73684210526316,
     "y": 0,
     "z": 2000,
     "height": 42.142857142857146,
@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.primary_category",
               "nativeQueryRef": "Primary Category",
-              "active": true
+              "active": true,
+              "displayName": "Catégorie"
             }
           ]
         }

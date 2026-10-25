@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Sephora Product Intelligence",
+                    "value": "Analyse des Produits Sephora",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Constantia",
@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Customer Voice",
+                    "value": "Voix du Client",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Constantia",

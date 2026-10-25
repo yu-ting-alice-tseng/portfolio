@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2ad51880fc2849d6664f",
   "position": {
-    "x": 644.70588235294122,
+    "x": 644.7058823529412,
     "y": 214.11764705882354,
     "z": 8000,
     "height": 320,
-    "width": 625.88235294117646,
+    "width": 625.8823529411765,
     "tabOrder": 7000
   },
   "visual": {
@@ -28,7 +28,7 @@
               },
               "queryRef": "product_info.Brand Name",
               "nativeQueryRef": "Brand",
-              "displayName": "Brand"
+              "displayName": "Marque"
             },
             {
               "field": {
@@ -42,7 +42,8 @@
                 }
               },
               "queryRef": "_Measures.Products",
-              "nativeQueryRef": "Products"
+              "nativeQueryRef": "Products",
+              "displayName": "Produits"
             },
             {
               "field": {
@@ -57,7 +58,8 @@
               },
               "queryRef": "_Measures.Reviews",
               "nativeQueryRef": "Reviews",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Avis"
             },
             {
               "field": {
@@ -72,7 +74,7 @@
               },
               "queryRef": "_Measures.Avg Rating",
               "nativeQueryRef": "Average Rating",
-              "displayName": "Average Rating"
+              "displayName": "Note Moyenne"
             },
             {
               "field": {
@@ -92,7 +94,7 @@
               },
               "queryRef": "product_info.loves_count",
               "nativeQueryRef": "Average Loves",
-              "displayName": "Average Loves",
+              "displayName": "Favoris Moyens",
               "format": "#,0"
             },
             {
@@ -108,7 +110,7 @@
               },
               "queryRef": "_Measures.Avg Price",
               "nativeQueryRef": "Average Price",
-              "displayName": "Average Price"
+              "displayName": "Prix Moyen"
             }
           ]
         }
@@ -246,7 +248,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top Brands by Reviews'"
+                  "Value": "'Marques les Plus Commentées'"
                 }
               }
             }

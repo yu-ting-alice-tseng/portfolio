@@ -28,7 +28,7 @@
               },
               "queryRef": "_Measures.Avg Rating",
               "nativeQueryRef": "Overall Average Rating",
-              "displayName": "Overall Average Rating"
+              "displayName": "Note Moyenne Globale"
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "_Measures.New Avg Rating",
               "nativeQueryRef": "New Average Rating",
-              "displayName": "New Average Rating"
+              "displayName": "Note Moyenne des Nouveautés"
             },
             {
               "field": {
@@ -58,7 +58,7 @@
               },
               "queryRef": "_Measures.Established Avg Rating",
               "nativeQueryRef": "Existing Average Rating",
-              "displayName": "Existing Average Rating"
+              "displayName": "Note Moyenne des Produits Existants"
             },
             {
               "field": {
@@ -73,7 +73,7 @@
               },
               "queryRef": "_Measures.Low Rating Share1",
               "nativeQueryRef": "Products Rated Below 4★",
-              "displayName": "Products Rated Below 4★",
+              "displayName": "Produits Notés sous 4★",
               "format": "0.0 %;-0.0 %;0.0 %"
             },
             {
@@ -94,7 +94,7 @@
               },
               "queryRef": "CountNonNull(product_info.loves_count)",
               "nativeQueryRef": "Average Loves per Product",
-              "displayName": "Average Loves per Product",
+              "displayName": "Favoris Moyens par Produit",
               "format": "#,0"
             },
             {
@@ -115,7 +115,7 @@
               },
               "queryRef": "CountNonNull(product_info.Reviews)",
               "nativeQueryRef": "Sum of Reviews",
-              "displayName": "Reviews",
+              "displayName": "Avis",
               "format": "#,0"
             }
           ]

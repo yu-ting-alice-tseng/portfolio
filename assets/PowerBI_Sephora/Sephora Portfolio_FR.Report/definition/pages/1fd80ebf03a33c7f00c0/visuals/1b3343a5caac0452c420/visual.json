@@ -28,7 +28,8 @@
               },
               "queryRef": "_Measures.Products",
               "nativeQueryRef": "Products",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Produits"
             },
             {
               "field": {
@@ -42,7 +43,8 @@
                 }
               },
               "queryRef": "_Measures.Brands",
-              "nativeQueryRef": "Brands"
+              "nativeQueryRef": "Brands",
+              "displayName": "Marques"
             },
             {
               "field": {
@@ -57,8 +59,8 @@
               },
               "queryRef": "_Measures.Avg Price",
               "nativeQueryRef": "Average Price",
-              "displayName": "Average Price",
-              "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
+              "displayName": "Prix Moyen",
+              "format": "#,0.00\\ \\$;-#,0.00\\ \\$;#,0.00\\ \\$"
             },
             {
               "field": {
@@ -73,7 +75,7 @@
               },
               "queryRef": "_Measures.Avg Rating",
               "nativeQueryRef": "Average Rating",
-              "displayName": "Average Rating"
+              "displayName": "Note Moyenne"
             },
             {
               "field": {
@@ -88,7 +90,7 @@
               },
               "queryRef": "_Measures.Exclusive Share",
               "nativeQueryRef": "Sephora Exclusive Share",
-              "displayName": "Sephora Exclusive Share"
+              "displayName": "Part Exclusivités Sephora"
             },
             {
               "field": {
@@ -103,7 +105,7 @@
               },
               "queryRef": "_Measures.Online Share",
               "nativeQueryRef": "Online-Only Share",
-              "displayName": "Online-Only Share",
+              "displayName": "Part Exclusivement en Ligne",
               "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]

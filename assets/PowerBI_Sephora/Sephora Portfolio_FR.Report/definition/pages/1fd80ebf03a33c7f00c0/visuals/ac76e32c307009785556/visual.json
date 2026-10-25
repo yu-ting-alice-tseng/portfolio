@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.primary_category",
               "nativeQueryRef": "Primary Category",
-              "active": true
+              "active": true,
+              "displayName": "Catégorie"
             }
           ]
         },
@@ -47,7 +48,8 @@
               },
               "queryRef": "_Measures.Products",
               "nativeQueryRef": "Products",
-              "format": "#,0"
+              "format": "#,0",
+              "displayName": "Produits"
             }
           ]
         }
@@ -167,7 +169,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Products by Category'"
+                  "Value": "'Produits par Catégorie'"
                 }
               }
             },

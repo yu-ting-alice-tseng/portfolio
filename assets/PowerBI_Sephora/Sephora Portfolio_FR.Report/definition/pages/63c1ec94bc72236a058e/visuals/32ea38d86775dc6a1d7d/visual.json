@@ -6,7 +6,7 @@
     "y": 214.07407407407405,
     "z": 5000,
     "height": 320,
-    "width": 623.33333333333326,
+    "width": 623.3333333333333,
     "tabOrder": 5000
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "product_info.Primary Category",
               "nativeQueryRef": "Primary Category",
-              "active": true
+              "active": true,
+              "displayName": "Catégorie"
             }
           ]
         },
@@ -47,7 +48,7 @@
               },
               "queryRef": "_Measures.Review Share",
               "nativeQueryRef": "Review Share",
-              "displayName": "Review Share",
+              "displayName": "Part des Avis",
               "format": "0.0 %;-0.0 %;0.0 %"
             },
             {
@@ -63,7 +64,8 @@
               },
               "queryRef": "_Measures.Product Share",
               "nativeQueryRef": "Product Share",
-              "format": "0.0 %;-0.0 %;0.0 %"
+              "format": "0.0 %;-0.0 %;0.0 %",
+              "displayName": "Part des Produits"
             }
           ]
         }
@@ -533,7 +535,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Skin Care only'"
+                  "Value": "'Soin uniquement'"
                 }
               }
             }
@@ -546,7 +548,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Review vs Product Share'"
+                  "Value": "'Part des Avis vs Part des Produits'"
                 }
               }
             },

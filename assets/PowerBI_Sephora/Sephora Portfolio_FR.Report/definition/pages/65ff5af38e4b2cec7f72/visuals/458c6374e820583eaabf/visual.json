@@ -28,7 +28,8 @@
               },
               "queryRef": "reviews.Skincare Rating Band",
               "nativeQueryRef": "Skincare Rating Band",
-              "active": true
+              "active": true,
+              "displayName": "Tranche de Note"
             }
           ]
         },
@@ -47,7 +48,7 @@
               },
               "queryRef": "_Measures.Skin Care Reviews",
               "nativeQueryRef": "Reviews",
-              "displayName": "Reviews",
+              "displayName": "Avis",
               "format": "#,0"
             }
           ]
@@ -371,7 +372,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Skin Care only'"
+                  "Value": "'Soin uniquement'"
                 }
               }
             }
@@ -384,7 +385,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Reviews by Rating Band'"
+                  "Value": "'Avis par Tranche de Note'"
                 }
               }
             }
