@@ -1,0 +1,25 @@
+table Themes
+	lineageTag: efd8bbf9-02d2-4045-8688-f3dc0beab112
+
+	column Theme
+		dataType: string
+		lineageTag: 74c459a0-1c44-4553-8d17-d405ead197ac
+		summarizeBy: none
+		sourceColumn: Theme
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Themes = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8stXCMsszkzKSVUISi0uzSkpVorViVYKKMpMTlWIKTUwMDJTCEvMKU0FC3sWFWWWJJZk5ufB5JyKUhOz80uh2kJSK0pKi+Aa3VJTc8DiwcmpeSUQgxOTsxPTM/PSwTyPypQisHFKsbEA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Theme = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Theme", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Theme", "Theme"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

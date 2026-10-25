@@ -1,0 +1,373 @@
+table product_info
+	lineageTag: 98adf093-19a8-4220-8e6b-428612606a24
+
+	column product_id
+		dataType: string
+		lineageTag: bd8f63dc-cf6c-4914-aaf4-a8f497964932
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: f87559b5-f252-4f26-a62f-01244ec94e07
+		summarizeBy: none
+		sourceColumn: Product Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand_id
+		dataType: string
+		lineageTag: e7adda7f-04dc-48ba-a0aa-4ec769f116e0
+		summarizeBy: none
+		sourceColumn: brand_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name'
+		dataType: string
+		lineageTag: da475fe3-2573-478c-803c-867012bd5801
+		summarizeBy: none
+		sourceColumn: Brand Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column loves_count
+		dataType: int64
+		formatString: 0
+		lineageTag: ca33346c-5ea8-4050-aee1-c9fff4ebea65
+		summarizeBy: none
+		sourceColumn: loves_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rating
+		dataType: double
+		lineageTag: 9aaacde2-351b-4496-85ed-483def66074d
+		summarizeBy: none
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Reviews
+		dataType: int64
+		formatString: 0
+		lineageTag: a0e179a1-04ea-4acd-89a1-22ca9c8dfd80
+		summarizeBy: none
+		sourceColumn: Reviews
+
+		annotation SummarizationSetBy = Automatic
+
+	column size
+		dataType: string
+		lineageTag: 1ff47127-bce5-4171-ab08-47307c15d8e0
+		summarizeBy: none
+		sourceColumn: size
+
+		annotation SummarizationSetBy = Automatic
+
+	column variation_type
+		dataType: string
+		lineageTag: b63dd405-9add-4ffc-bcd4-45314bc20d55
+		summarizeBy: none
+		sourceColumn: variation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column variation_value
+		dataType: string
+		lineageTag: be3d6814-4b3a-4b32-a0a5-2a40d75c4cc2
+		summarizeBy: none
+		sourceColumn: variation_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column variation_desc
+		dataType: string
+		lineageTag: 2a242ea7-4f76-462e-93ff-779981235cad
+		summarizeBy: none
+		sourceColumn: variation_desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingredients
+		dataType: string
+		lineageTag: a1905a80-ea1c-4453-9622-4536570242a3
+		summarizeBy: none
+		sourceColumn: ingredients
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_usd
+		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 23ba489d-778a-427f-b45b-7e27465d8f12
+		summarizeBy: none
+		sourceColumn: price_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column value_price_usd
+		dataType: double
+		lineageTag: 135a7cac-1189-4f8b-bcd3-b638a4585382
+		summarizeBy: none
+		sourceColumn: value_price_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sale_price_usd
+		dataType: double
+		lineageTag: 6d7caac5-dc82-4407-a40e-e92ccf018d62
+		summarizeBy: none
+		sourceColumn: sale_price_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column limited_edition
+		dataType: int64
+		formatString: 0
+		lineageTag: d0b44cf5-7909-46c7-adbf-9da8e02dbe43
+		summarizeBy: none
+		sourceColumn: limited_edition
+
+		annotation SummarizationSetBy = Automatic
+
+	column new
+		dataType: int64
+		formatString: 0
+		lineageTag: ce75267b-9a1b-42b8-93f0-cb7066ae9599
+		summarizeBy: none
+		sourceColumn: new
+
+		annotation SummarizationSetBy = Automatic
+
+	column online_only
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ee55cd7-ec62-455a-be22-ff24640fbf54
+		summarizeBy: none
+		sourceColumn: online_only
+
+		annotation SummarizationSetBy = Automatic
+
+	column out_of_stock
+		dataType: int64
+		formatString: 0
+		lineageTag: a4bb4b0e-bb06-4f25-a000-778028d200ed
+		summarizeBy: none
+		sourceColumn: out_of_stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column sephora_exclusive
+		dataType: int64
+		formatString: 0
+		lineageTag: f5ebab75-a647-4713-a32f-f816a71996aa
+		summarizeBy: none
+		sourceColumn: sephora_exclusive
+
+		annotation SummarizationSetBy = Automatic
+
+	column highlights
+		dataType: string
+		lineageTag: 749336bc-6698-42df-8cc7-805bf4668e6d
+		summarizeBy: none
+		sourceColumn: highlights
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Primary Category'
+		dataType: string
+		lineageTag: 53c13934-9e77-43ec-b603-fc976c7843f8
+		summarizeBy: none
+		sourceColumn: Primary Category
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column secondary_category
+		dataType: string
+		lineageTag: ef9b122b-4e1a-41ec-b228-81316e9d2802
+		summarizeBy: none
+		sourceColumn: secondary_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column tertiary_category
+		dataType: string
+		lineageTag: 172919e5-e4ce-42c1-80cf-390b0be32ba7
+		summarizeBy: none
+		sourceColumn: tertiary_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column child_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 48818488-513a-4f2a-b9fe-0071327c7be3
+		summarizeBy: none
+		sourceColumn: child_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column child_max_price
+		dataType: double
+		lineageTag: 966291ff-248b-4a76-815c-a1c692517846
+		summarizeBy: none
+		sourceColumn: child_max_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column child_min_price
+		dataType: double
+		lineageTag: f68f85e8-1073-4178-917f-88cd6eba7ce1
+		summarizeBy: none
+		sourceColumn: child_min_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Segment =
+			
+			VAR mr = CALCULATE ( MEDIAN ( product_info[Rating] ), ALL ( product_info ) )
+			VAR mv = CALCULATE ( MEDIAN ( product_info[Reviews] ), ALL ( product_info ) )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        ISBLANK ( product_info[Rating] ), "Unrated",
+			        product_info[Rating] >= mr && product_info[Reviews] >= mv, "Hero",
+			        product_info[Rating] >= mr, "Hidden Gem",
+			        product_info[Reviews] >= mv, "Risk",
+			        "Underperformer"
+			    )
+		lineageTag: 0f0f6cf2-b135-4f22-928c-59b52509f644
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Price Tier' =
+			
+			SWITCH (
+			    TRUE (),
+			    product_info[price_usd] < 25, "Under $25",
+			    product_info[price_usd] < 50, "$25–50",
+			    product_info[price_usd] < 100, "$50–100",
+			    "$100+"
+			)
+		lineageTag: afcc8791-c581-4d4c-b245-7c2a1297f663
+		summarizeBy: none
+		sortByColumn: 'Price Tier Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Price Tier Order' =
+			
+			SWITCH (
+			    TRUE (),
+			    product_info[price_usd] < 25, 1,
+			    product_info[price_usd] < 50, 2,
+			    product_info[price_usd] < 100, 3,
+			    4
+			)
+		formatString: 0
+		lineageTag: b9cb0759-1d28-4721-b93c-70d72277d1dd
+		summarizeBy: none
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Band' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( product_info[Rating] ), "Unrated",
+			    product_info[Rating] < 3, "Below 3.0★",
+			    product_info[Rating] < 3.5, "3.0–3.5★",
+			    product_info[Rating] < 4, "3.5–4.0★",
+			    product_info[Rating] < 4.5, "4.0–4.5★",
+			    "4.5–5.0★"
+			)
+		lineageTag: abdcb48a-1ee8-44a0-8264-31e455ac8509
+		summarizeBy: none
+		sortByColumn: 'Rating Band Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Band Order' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( product_info[Rating] ), 0,
+			    product_info[Rating] < 3, 1,
+			    product_info[Rating] < 3.5, 2,
+			    product_info[Rating] < 4, 3,
+			    product_info[Rating] < 4.5, 4,
+			    5
+			)
+		formatString: 0
+		lineageTag: 01700133-3895-4a80-9b17-378df49a7864
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition product_info = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Bonita\Desktop\07_Portfolio\00_Dataset\Sephora Products and Skincare Reviews\Data Source\product_info.csv"),[Delimiter=",", Columns=27, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Use First Row as Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type All" = Table.TransformColumnTypes(#"Use First Row as Headers", {
+				        {"product_id", type text},
+				        {"product_name", type text},
+				        {"brand_id", type text},
+				        {"brand_name", type text},
+				        {"loves_count", Int64.Type},
+				        {"rating", type number},
+				        {"reviews", Int64.Type},
+				        {"size", type text},
+				        {"variation_type", type text},
+				        {"variation_value", type text},
+				        {"variation_desc", type text},
+				        {"ingredients", type text},
+				        {"price_usd", type number},
+				        {"value_price_usd", type number},
+				        {"sale_price_usd", type number},
+				        {"limited_edition", Int64.Type},
+				        {"new", Int64.Type},
+				        {"online_only", Int64.Type},
+				        {"out_of_stock", Int64.Type},
+				        {"sephora_exclusive", Int64.Type},
+				        {"highlights", type text},
+				        {"primary_category", type text},
+				        {"secondary_category", type text},
+				        {"tertiary_category", type text},
+				        {"child_count", Int64.Type},
+				        {"child_max_price", type number},
+				        {"child_min_price", type number}
+				    }, "en-US"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type All",{{"primary_category", "Primary Category"}, {"brand_name", "Brand Name"}, {"reviews", "Reviews"}, {"rating", "Rating"}, {"product_name", "Product Name"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

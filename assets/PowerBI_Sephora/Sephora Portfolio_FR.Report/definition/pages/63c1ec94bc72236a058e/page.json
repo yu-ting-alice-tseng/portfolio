@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "63c1ec94bc72236a058e",
+  "displayName": "Customer Voice",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "f6ee20cd31f28cf6632f",
+    "type": "Default",
+    "parameters": []
+  }
+}
