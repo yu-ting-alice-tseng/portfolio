@@ -98,8 +98,6 @@ Proofread every piece of new content for:
 - Also update the corresponding memory file under `memory/` if one exists (e.g. `feedback_content_creation_rules.md`).
 - Do not wait to be asked — treat any new guideline as a standing rule and record it right away.
 
----
-
 - **Fichiers de travail versionnés (demande de l'utilisatrice)** : pour mettre à jour un fichier de travail (projet Power BI `.pbip`, classeur Excel, deck PowerPoint…), **ne jamais écraser l'original** : créer une copie numérotée et modifier la copie (`…_V1`, `…_V2`, `…_V3`, etc.), l'ancienne version reste à côté. Pour un `.pbip`, copier le `.pbip`, le dossier `.Report` et le dossier `.SemanticModel`, puis mettre à jour les chemins (`.pbip`, `definition.pbir`) et le `displayName` des `.platform`. Si une page du site renvoie au fichier, mettre le lien à jour vers la nouvelle version.
 
 ---
