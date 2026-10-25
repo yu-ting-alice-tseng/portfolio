@@ -24,3 +24,5 @@ auto-sync.log
 *.pbix
 **/.pbi/cache.abf
 **/.pbi/localSettings.json
+# Jeu de données Kaggle Sephora (CSV de plusieurs centaines de Mo, à télécharger sur Kaggle)
+assets/Sephora Products and Skincare Reviews/
