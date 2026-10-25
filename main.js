@@ -167,6 +167,14 @@
     // Structure identique pour "en" et "zh" — même arborescence de clés.
     // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
+      sephoraBI: {
+        cover: "assets/covers/sephora-dashboard.webp",
+        coverData: "assets/covers/sephora-dashboard-data.webp",
+        p1: "assets/PowerBI_Sephora/sephora-powerbi-1.webp",
+        p2: "assets/PowerBI_Sephora/sephora-powerbi-2.webp",
+        p3: "assets/PowerBI_Sephora/sephora-powerbi-3.webp",
+        p4: "assets/PowerBI_Sephora/sephora-powerbi-4.webp",
+      },
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
         download: "Télécharger le CV (PDF)",
@@ -1231,6 +1239,14 @@
     // ─── en ──────────────────────────────────────────────────────────────────
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
+      sephoraBI: {
+        cover: "assets/covers/sephora-dashboard-en.webp",
+        coverData: "assets/covers/sephora-dashboard-data-en.webp",
+        p1: "assets/PowerBI_Sephora/sephora-powerbi-1-en.webp",
+        p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
+        p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
+        p4: "assets/PowerBI_Sephora/sephora-powerbi-4-en.webp",
+      },
       brandName: "Yu‑Ting Tseng",
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
         download: "Download CV (PDF)",
@@ -2261,6 +2277,14 @@
     // ─── zh ──────────────────────────────────────────────────────────────────
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
+      sephoraBI: {
+        cover: "assets/covers/sephora-dashboard-en.webp",
+        coverData: "assets/covers/sephora-dashboard-data-en.webp",
+        p1: "assets/PowerBI_Sephora/sephora-powerbi-1-en.webp",
+        p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
+        p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
+        p4: "assets/PowerBI_Sephora/sephora-powerbi-4-en.webp",
+      },
       brandName: "Yu‑Ting Tseng",
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
         download: "下載履歷（PDF）",
