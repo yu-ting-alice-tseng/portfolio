@@ -10,8 +10,10 @@ assets/Tableau_Chocolate/:
 Cleaning: the 9,764 sales rows whose product_id is not in products.csv
 (P0000 and P0201) are dropped, leaving the 990,236 transactions of the study.
 
-The .twb files follow the official Tableau 2026.1 schema
-(github.com/tableau/tableau-document-schemas). Validate with:
+The .twb files are written in format 18.1 (opened by Tableau 2020.1 and later)
+and checked against the official Tableau 2026.1 schema
+(github.com/tableau/tableau-document-schemas), minus <explain-data>, which that
+schema requires but older Tableau versions do not know. Validate with:
   python3 tools/build-tableau-chocolate.py --xsd path/to/twb_2026.1.0.xsd
 
 Usage: python3 tools/build-tableau-chocolate.py [--xsd FILE]
@@ -720,20 +722,16 @@ def workbook_xml(lang):
     _counter = _count()
     T = TEXT[lang]
     return ("<?xml version='1.0' encoding='utf-8' ?>\n"
-            f"<workbook locale={a(T['locale'])} original-version='26.1' source-build='0.0.0 (0000.0.0.0)' "
-            "source-platform='win' version='26.1' xmlns:user='http://www.tableausoftware.com/xml/user'>\n"
-            "  <document-format-change-manifest>\n"
-            "    <ManifestByVersion />\n"
-            "  </document-format-change-manifest>\n"
+            # Format 18.1 is the one Tableau 2018.1 to 2025.x still write, so any
+            # recent Tableau Public opens the file (26.1 needs Tableau 2026.1).
+            f"<workbook locale={a(T['locale'])} source-build='2020.1.0 (20201.20.0220.0623)' "
+            "source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>\n"
             + datasources_xml(lang)
             + shared_views_xml(lang)
             + worksheets_xml(lang)
             + dashboard_xml(lang)
             + windows_xml(lang)
-            + "  <explain-data enabled-for-viewer='false' extreme-values-enabled-for-all='false'>\n"
-            "    <explanation-types />\n"
-            "  </explain-data>\n"
-            "</workbook>\n")
+            + "</workbook>\n")
 
 
 def main():
@@ -755,9 +753,13 @@ def main():
             if schema.validate(doc):
                 print("  valid against", Path(xsd).name)
             else:
-                ok = False
-                for e in schema.error_log:
+                errors = [e for e in schema.error_log if "explain-data" not in e.message]
+                if errors:
+                    ok = False
+                for e in errors:
                     print(f"  line {e.line}: {e.message}")
+                if not errors:
+                    print("  valid against", Path(xsd).name, "(explain-data omitted on purpose)")
     sys.exit(0 if ok else 1)
 
 

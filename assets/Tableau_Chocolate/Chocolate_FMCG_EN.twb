@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<workbook locale="en_US" original-version='26.1' source-build='0.0.0 (0000.0.0.0)' source-platform='win' version='26.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
-  <document-format-change-manifest>
-    <ManifestByVersion />
-  </document-format-change-manifest>
+<workbook locale="en_US" source-build='2020.1.0 (20201.20.0220.0623)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <datasources>
     <datasource caption="Chocolate Sales" inline='true' name="federated.choco_main" version='18.1'>
       <connection class='federated'>
@@ -1037,7 +1034,4 @@
       <simple-id uuid="{6585C80C-272F-516D-BABF-885E6914CC0E}" />
     </window>
   </windows>
-  <explain-data enabled-for-viewer='false' extreme-values-enabled-for-all='false'>
-    <explanation-types />
-  </explain-data>
 </workbook>
