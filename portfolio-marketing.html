@@ -1789,8 +1789,8 @@
 <p class="pf-star-txt">Sephora propose <strong>8 494 produits</strong> de <strong>304 marques</strong>, des soins de la peau aux parfums, avec <strong>3 685 250 avis clients</strong>, un prix moyen de <strong>51,66 $</strong> et une note moyenne de <strong>4,19/5</strong>. <strong>Question métier :</strong> comment piloter ce portefeuille, c'est-à-dire savoir où se joue la demande, quels produits défendre ou corriger et quelles attentes clientes traiter en priorité ? Je l'ai décomposée en quatre questions, chacune traitée par une page du dashboard :</p>
 <ol class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
 <li>Que vend Sephora ? (structure du catalogue)</li>
-<li>Où se concentrent l'attention et la satisfaction des clientes ?</li>
 <li>Quels produits défendre, révéler ou corriger ?</li>
+<li>Où se concentrent l'attention et la satisfaction des clientes ?</li>
 <li>Que disent les clientes des soins de la peau ?</li>
 </ol>
 <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Démarche :</strong> nettoyage et typage des données dans Power Query (les cinq fichiers d'avis réunis en une seule table), modèle en étoile avec table calendrier, mesures DAX et filtres par catégorie, marque et produit.</p>
@@ -1799,8 +1799,8 @@
 <p class="pf-star-txt">Sephora offers <strong>8,494 products</strong> from <strong>304 brands</strong>, from skincare to fragrance, with <strong>3,685,250 customer reviews</strong>, an average price of <strong>$51.66</strong> and an average rating of <strong>4.19/5</strong>. <strong>Business question:</strong> how should this portfolio be managed, that is, where does demand lie, which products should be defended or fixed, and which customer expectations come first? I broke it down into four questions, each answered by one page of the dashboard:</p>
 <ol class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
 <li>What does Sephora sell? (catalogue structure)</li>
-<li>Where do customer attention and satisfaction concentrate?</li>
 <li>Which products should be defended, surfaced or fixed?</li>
+<li>Where do customer attention and satisfaction concentrate?</li>
 <li>What do customers say about skincare?</li>
 </ol>
 <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Approach:</strong> data cleaning and typing in Power Query (the five review files combined into one table), a star schema with a calendar table, DAX measures, and category, brand and product filters.</p>
@@ -1825,26 +1825,7 @@
 <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> a price or a rating only compares within its category, so the following pages keep the category filter.</p>
 </div>
 </div><div class="pf-star">
-<div class="pf-star-lbl"><span data-lang-show="fr">Question 2 · Où se Concentrent l'Attention et la Satisfaction ?</span><span data-lang-show="en">Question 2 · Where Do Attention and Satisfaction Concentrate?</span></div>
-<figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" src="assets/PowerBI_Sephora/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure>
-<div data-lang-show="fr">
-<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li>Le maquillage concentre 43,1 % des avis pour 27,9 % des produits. À l'inverse, les cheveux (9,8 % des avis pour 17,2 % des produits) et les parfums (9,7 % pour 16,9 %) sont peu commentés.</li>
-<li>25,7 % des produits sont notés sous 4★.</li>
-<li>La note moyenne monte avec le prix, de 4,08 sous 25 $ à 4,27 au-delà de 100 $, et les nouveautés sont mieux notées (4,40 contre 4,18).</li>
-</ul>
-<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>À retenir :</strong> l'attention des clientes ne suit pas le poids des catégories dans le catalogue. En cheveux et en parfums, de nombreux produits ont peu d'avis, donc des notes moins fiables et moins de preuve sociale pour les clientes.</p>
-</div>
-<div data-lang-show="en">
-<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li>Makeup accounts for 43.1% of reviews with 27.9% of products. Conversely, hair (9.8% of reviews for 17.2% of products) and fragrance (9.7% for 16.9%) are lightly reviewed.</li>
-<li>25.7% of products are rated below 4★.</li>
-<li>The average rating rises with price, from 4.08 under $25 to 4.27 above $100, and new products are rated higher (4.40 against 4.18).</li>
-</ul>
-<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> customer attention does not follow each category's weight in the catalogue. In hair and fragrance, many products have few reviews, hence less reliable ratings and less social proof for customers.</p>
-</div>
-</div><div class="pf-star">
-<div class="pf-star-lbl"><span data-lang-show="fr">Question 3 · Quels Produits Défendre, Révéler ou Corriger ?</span><span data-lang-show="en">Question 3 · Which Products to Defend, Surface or Fix?</span></div>
+<div class="pf-star-lbl"><span data-lang-show="fr">Question 2 · Quels Produits Défendre, Révéler ou Corriger ?</span><span data-lang-show="en">Question 2 · Which Products to Defend, Surface or Fix?</span></div>
 <div data-lang-show="fr">
 <p class="pf-star-txt">Pour classer les produits, j'ai adapté la matrice BCG : le volume d'avis (visibilité) et la note (satisfaction) remplacent la croissance du marché et la part de marché, avec les médianes du catalogue comme seuils (122 avis et 4,29★).</p>
 </div>
@@ -1869,6 +1850,25 @@
 <li><strong>Underperformers (Dogs), 2,293 products (27.0%):</strong> few reviews and a low rating. Candidates for assortment rationalisation, to be confirmed with sales data.</li>
 <li><strong>Unrated, 278 products:</strong> invisible in review-filtered searches.</li>
 </ul>
+</div>
+</div><div class="pf-star">
+<div class="pf-star-lbl"><span data-lang-show="fr">Question 3 · Où se Concentrent l'Attention et la Satisfaction ?</span><span data-lang-show="en">Question 3 · Where Do Attention and Satisfaction Concentrate?</span></div>
+<figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" src="assets/PowerBI_Sephora/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure>
+<div data-lang-show="fr">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li>Le maquillage concentre 43,1 % des avis pour 27,9 % des produits. À l'inverse, les cheveux (9,8 % des avis pour 17,2 % des produits) et les parfums (9,7 % pour 16,9 %) sont peu commentés.</li>
+<li>25,7 % des produits sont notés sous 4★.</li>
+<li>La note moyenne monte avec le prix, de 4,08 sous 25 $ à 4,27 au-delà de 100 $, et les nouveautés sont mieux notées (4,40 contre 4,18).</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>À retenir :</strong> l'attention des clientes ne suit pas le poids des catégories dans le catalogue. En cheveux et en parfums, de nombreux produits ont peu d'avis, donc des notes moins fiables et moins de preuve sociale pour les clientes.</p>
+</div>
+<div data-lang-show="en">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li>Makeup accounts for 43.1% of reviews with 27.9% of products. Conversely, hair (9.8% of reviews for 17.2% of products) and fragrance (9.7% for 16.9%) are lightly reviewed.</li>
+<li>25.7% of products are rated below 4★.</li>
+<li>The average rating rises with price, from 4.08 under $25 to 4.27 above $100, and new products are rated higher (4.40 against 4.18).</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> customer attention does not follow each category's weight in the catalogue. In hair and fragrance, many products have few reviews, hence less reliable ratings and less social proof for customers.</p>
 </div>
 </div><div class="pf-star">
 <div class="pf-star-lbl"><span data-lang-show="fr">Question 4 · Que Disent les Clientes des Soins de la Peau ?</span><span data-lang-show="en">Question 4 · What Do Customers Say About Skincare?</span></div>
@@ -1899,16 +1899,16 @@
 <div class="pf-star-lbl"><span data-lang-show="fr">Recommandations Priorisées</span><span data-lang-show="en">Prioritised Recommendations</span></div>
 <div data-lang-show="fr">
 <ol class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Priorité 1, les 1 815 produits Risk (questions 3 et 4) :</strong> le risque le plus visible, car beaucoup d'avis signifie beaucoup de clientes qui voient une note faible. Lire d'abord les avis négatifs des références les plus commentées, en commençant, pour les soins, par l'irritation et le rapport qualité-prix. Les avis précisent le type de peau, la carnation et la couleur des yeux, ce qui permet de distinguer un défaut du produit d'une teinte ou d'un public mal ciblé. Reformuler, mieux décrire ou déréférencer seulement ensuite. Indicateur : note moyenne du segment.</li>
-<li><strong>Priorité 2, les 1 801 Hidden Gems (question 3) :</strong> le levier le moins coûteux, puisque ces produits sont déjà les mieux notés (4,63) et n'ont besoin d'aucune reformulation. Vérifier d'abord leur disponibilité : 34,1 % sont vendus uniquement en ligne et 9,2 % sont en rupture, contre 11,9 % et 3,8 % pour les Hero. Tester ensuite le seeding influenceur et la mise en avant éditoriale sur un échantillon, comparé à un groupe témoin, avant de généraliser. Indicateur : nouveaux avis par produit.</li>
+<li><strong>Priorité 1, les 1 815 produits Risk (questions 2 et 4) :</strong> le risque le plus visible, car beaucoup d'avis signifie beaucoup de clientes qui voient une note faible. Lire d'abord les avis négatifs des références les plus commentées, en commençant, pour les soins, par l'irritation et le rapport qualité-prix. Les avis précisent le type de peau, la carnation et la couleur des yeux, ce qui permet de distinguer un défaut du produit d'une teinte ou d'un public mal ciblé. Reformuler, mieux décrire ou déréférencer seulement ensuite. Indicateur : note moyenne du segment.</li>
+<li><strong>Priorité 2, les 1 801 Hidden Gems (question 2) :</strong> le levier le moins coûteux, puisque ces produits sont déjà les mieux notés (4,63) et n'ont besoin d'aucune reformulation. Vérifier d'abord leur disponibilité : 34,1 % sont vendus uniquement en ligne et 9,2 % sont en rupture, contre 11,9 % et 3,8 % pour les Hero. Tester ensuite le seeding influenceur et la mise en avant éditoriale sur un échantillon, comparé à un groupe témoin, avant de généraliser. Indicateur : nouveaux avis par produit.</li>
 <li><strong>Priorité 3, les avis manquants (questions 2 et 3) :</strong> les 278 produits non notés d'abord, invisibles dans les recherches filtrées par avis, puis les catégories peu commentées au regard de leur poids dans le catalogue (cheveux, parfums). Programme de collecte d'avis (échantillons, e-mail après achat). Indicateur : avis par produit dans ces catégories.</li>
 <li><strong>À ne pas faire :</strong> déréférencer les 2 293 Underperformers sur la seule base des avis, sans les croiser avec les ventes et la marge.</li>
 </ol>
 </div>
 <div data-lang-show="en">
 <ol class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Priority 1, the 1,815 Risk products (questions 3 and 4):</strong> the most visible risk, since many reviews mean many customers seeing a low rating. Start by reading the negative reviews of the most reviewed references, beginning, for skincare, with irritation and value for money. Reviews record skin type, skin tone and eye colour, which helps separate a product defect from a shade or audience mismatch. Only then reformulate, rewrite the product page or delist. Indicator: the segment's average rating.</li>
-<li><strong>Priority 2, the 1,801 Hidden Gems (question 3):</strong> the cheapest lever, as these products already have the highest rating (4.63) and need no reformulation. Check availability first: 34.1% are sold online only and 9.2% are out of stock, against 11.9% and 3.8% for Heroes. Then test influencer seeding and editorial promotion on a sample, against a control group, before rolling it out. Indicator: new reviews per product.</li>
+<li><strong>Priority 1, the 1,815 Risk products (questions 2 and 4):</strong> the most visible risk, since many reviews mean many customers seeing a low rating. Start by reading the negative reviews of the most reviewed references, beginning, for skincare, with irritation and value for money. Reviews record skin type, skin tone and eye colour, which helps separate a product defect from a shade or audience mismatch. Only then reformulate, rewrite the product page or delist. Indicator: the segment's average rating.</li>
+<li><strong>Priority 2, the 1,801 Hidden Gems (question 2):</strong> the cheapest lever, as these products already have the highest rating (4.63) and need no reformulation. Check availability first: 34.1% are sold online only and 9.2% are out of stock, against 11.9% and 3.8% for Heroes. Then test influencer seeding and editorial promotion on a sample, against a control group, before rolling it out. Indicator: new reviews per product.</li>
 <li><strong>Priority 3, missing reviews (questions 2 and 3):</strong> first the 278 unrated products, invisible in review-filtered searches, then the categories that are lightly reviewed for their weight in the catalogue (hair, fragrance). Review collection programme (samples, post-purchase e-mail). Indicator: reviews per product in these categories.</li>
 <li><strong>What not to do:</strong> delist the 2,293 Underperformers on reviews alone, without checking sales and margin.</li>
 </ol>
