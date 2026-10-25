@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transform File from reviews'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from reviews\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["product_info","reviews","Sample File","Parameter1","Transform Sample File","Transform File","_Measures","Themes"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table product_info
+ref table reviews
+ref table Calendar
+ref table _Measures
+ref table Season
+ref table Themes
+
+ref cultureInfo en-US
+

@@ -1,0 +1,115 @@
+table Calendar
+	lineageTag: 4a981fe3-7403-4a55-8893-712a53b49df4
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 9a7a922e-549a-4ec2-987d-9fb5e98f424e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: c8339627-3488-4ff6-ae13-3727a9185e68
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNum
+		formatString: 0
+		lineageTag: 8d5d4e8c-2a23-44a9-a8a0-5580a5a91227
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 1df59ca8-f641-4285-a732-7f41b7fd55e8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 6dbee038-66a3-411b-833e-9f4199e3bfe0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Quarter'
+		lineageTag: 1f11d1da-a2e7-4c18-a0e2-3b82d1ae4bbb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Quarter]
+		sortByColumn: YearQuarterNum
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearQuarterNum
+		formatString: 0
+		lineageTag: 8177eaae-da3e-4d47-983f-a110e639f072
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearQuarterNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Season
+		lineageTag: 21bcd543-d12e-4a71-9bdf-2454193bf28a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Season]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeasonNum
+		formatString: 0
+		lineageTag: 0b378df3-86e3-4d20-9c1a-5d66554cf167
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [SeasonNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR ( DATE ( 2008, 1, 1 ), DATE ( 2023, 12, 31 ) ),
+				    "Year", YEAR ( [Date] ),
+				    "MonthNum", MONTH ( [Date] ),
+				    "Month", FORMAT ( [Date], "MMM", "fr-FR" ),
+				    "Quarter", "T" & QUARTER ( [Date] ),
+				    "Year Quarter", "T" & QUARTER ( [Date] ) & " " & YEAR ( [Date] ),
+				    "YearQuarterNum", YEAR ( [Date] ) * 10 + QUARTER ( [Date] ),
+				    "Season",
+				        SWITCH (
+				            TRUE (),
+				            MONTH ( [Date] ) IN { 3, 4, 5 }, "Printemps",
+				            MONTH ( [Date] ) IN { 6, 7, 8 }, "Été",
+				            MONTH ( [Date] ) IN { 9, 10, 11 }, "Automne",
+				            "Hiver"
+				        ),
+				    "SeasonNum",
+				        SWITCH (
+				            TRUE (),
+				            MONTH ( [Date] ) IN { 3, 4, 5 }, 1,
+				            MONTH ( [Date] ) IN { 6, 7, 8 }, 2,
+				            MONTH ( [Date] ) IN { 9, 10, 11 }, 3,
+				            4
+				        )
+				)
+
+	annotation PBI_Id = 1714993f8b974526ac8dded2da9f99ba
+

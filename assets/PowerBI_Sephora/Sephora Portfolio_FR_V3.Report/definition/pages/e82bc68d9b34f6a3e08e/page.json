@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "e82bc68d9b34f6a3e08e",
+  "displayName": "Matrice Produits",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cf0ed5a9e506ed90699d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "product_info"
+              }
+            },
+            "Property": "Reviews"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "product_info",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "p"
+                            }
+                          },
+                          "Property": "Reviews"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "ef01771b039ed7d3a2dc",
+    "type": "Default",
+    "parameters": []
+  },
+  "visualInteractions": [
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "d1ffca7ebbfb1df34833",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "5ff454bbf69c82163a46",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "9349238cc59568ddf556",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "78acf4ec2dce5ee9d64a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "12331b93053372fce0d7",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "9aaa34d11ea4a807bf5f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "9cf12d2578902900f8aa",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1b18a45350e3caba5fe9",
+      "target": "0c5168c94c67dd4bcc57",
+      "type": "NoFilter"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+table _Measures
+	lineageTag: d1bff17b-fffd-400e-bc5a-cc743b917add
+
+	measure Products = COUNTROWS ( product_info )
+		formatString: 0
+		lineageTag: 76a48423-9774-4b40-9bff-ef9f815fdbf6
+
+	measure Brands = DISTINCTCOUNT ( product_info[Brand Name] )
+		formatString: 0
+		lineageTag: b86e9d89-b94a-40de-981b-8798caf7c292
+
+	measure 'Avg Price' = AVERAGE ( product_info[price_usd] )
+		formatString: #,0.00\ \$;-#,0.00\ \$;#,0.00\ \$
+		lineageTag: 69f589da-8cd1-4ee7-abd1-87fc2686a4ea
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Avg Rating' = AVERAGE ( (product_info[Rating] ))
+		lineageTag: b0b8e453-3287-4f76-86d2-24999b38f96d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Loves' = SUM ( product_info[loves_count] )
+		formatString: 0
+		lineageTag: 4ebc8e09-05ea-492a-9a68-814b6905583d
+
+	measure 'Skincare Reviews' = COUNTROWS ( reviews )
+		formatString: 0
+		lineageTag: 866d6a1e-76e8-4629-bcba-20d049ed66ea
+
+	measure 'Skincare Review Rating' = AVERAGE ( reviews[rating] )
+		formatString: 0.00
+		lineageTag: a31575d4-c14d-445b-b230-9a0794b61307
+
+	measure 'Recommend Rate' = AVERAGE ( reviews[is_recommended] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 587694eb-9536-4e69-9102-336731868411
+
+	measure 'Exclusive Share' = DIVIDE ( CALCULATE ( [Products], product_info[sephora_exclusive] = 1 ), [Products] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 04c85916-c0ec-4791-977b-5a6a685b6025
+
+	measure 'Segment Share' = DIVIDE ( [Products], CALCULATE ( [Products], ALL ( product_info[Segment] ) ) )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 86cbcb88-d42c-4d19-b1ab-ca6604f61cdb
+
+	measure 'Online Share' = DIVIDE ( CALCULATE ( [Products], product_info[online_only] = 1 ), [Products] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 75d873a4-3616-49d8-89f1-e9cc714b17f9
+
+	measure 'Hero Products' = CALCULATE ( [Products], product_info[Segment] = "Hero" )
+		formatString: 0
+		lineageTag: 1762f194-75de-419f-b267-3826dc0f862f
+
+	measure 'Hidden Gem Products' = CALCULATE ( [Products], product_info[Segment] = "Hidden Gem" )
+		formatString: 0
+		lineageTag: 483d1081-5965-4e9e-8019-02ad3d21f19e
+
+	measure 'Risk Products' = CALCULATE ( [Products], product_info[Segment] = "Risk" )
+		formatString: 0
+		lineageTag: 30c0bec9-0d2c-45d5-9e80-eca0d574c749
+
+	measure 'Underperformer Products' = CALCULATE ( [Products], product_info[Segment] = "Underperformer" )
+		formatString: 0
+		lineageTag: 761b683c-4303-4747-a169-23a1f02564fc
+
+	measure 'Hero Share' = DIVIDE ( [Hero Products], [Products] )
+		lineageTag: 30ee0db3-676c-4055-a702-8925bcccaf15
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Hidden Gem Share' = DIVIDE ( [Hidden Gem Products], [Products] )
+		lineageTag: 9ef8bd55-921b-4d50-b098-08cabecea5c8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Risk Share' = DIVIDE ( [Risk Products], [Products] )
+		lineageTag: 5e1e142b-fff7-4163-b388-849380c23540
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Underperformer Share' = DIVIDE ( [Underperformer Products], [Products] )
+		lineageTag: 936b4675-5b83-4749-9a02-16e3dbaf2f07
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Segment Share Rated' =
+			
+			DIVIDE (
+			    [Products],
+			    CALCULATE ( [Products], ALL ( product_info[Segment] ), product_info[Segment] <> "Non Noté" )
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: b1f4e0e2-fac8-4ee8-a0bd-68580f7b3ee4
+
+	measure 'Brand Total' = CALCULATE ( [Products], ALL ( product_info[Segment] ) )
+		formatString: 0
+		lineageTag: b0650969-a866-45bd-a09e-a8772be82a4c
+
+	measure 'Brand Segment Rate' = DIVIDE ( [Products], [Brand Total] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: baa47e12-ada0-4b72-827d-67b794f2b078
+
+	measure 'New Share' = DIVIDE ( CALCULATE ( [Products], product_info[new] = 1 ), [Products] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 98af00a7-eed3-43bd-88cd-fa561d769cd4
+
+	measure 'Median Loves' = MEDIAN ( product_info[loves_count] )
+		formatString: #,0
+		lineageTag: 6787a61a-549f-4540-9772-d59a2a43ed3a
+
+	measure 'Median Reviews' = MEDIAN ( product_info[reviews] )
+		formatString: #,0
+		lineageTag: ae1e3f48-608a-470b-a5ce-34c6cf123612
+
+	measure 'Limited Share' = DIVIDE ( CALCULATE ( [Products], product_info[limited_edition] = 1 ), [Products] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 25050c91-3bf1-4a03-a8ea-fc5afffa3334
+
+	measure 'Out of Stock Share' = DIVIDE ( CALCULATE ( [Products], product_info[out_of_stock] = 1 ), [Products] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 23f18998-7ba4-4a40-b7b4-d2def9d2f5ab
+
+	measure 'Low Skincare Rating Share' = DIVIDE ( CALCULATE ( [Skincare Reviews], reviews[rating] < 4 ), [Skincare Reviews] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 68c04f78-0170-4db9-82b0-003f60941abc
+
+	measure 'Profile Coverage' = DIVIDE ( CALCULATE ( [Skincare Reviews], NOT ISBLANK ( reviews[skin_type] ) ), [Skincare Reviews] )
+		lineageTag: 0c506553-4a3e-4aae-9081-51b90cc03624
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Theme Reviews' =
+			
+			SWITCH (
+			    SELECTEDVALUE ( Themes[Theme] ),
+			    "Aucun Résultat Visible", CALCULATE ( [Skincare Reviews], reviews[theme_no_results] = 1 ),
+			    "Prix & Rapport Qualité-Prix", CALCULATE ( [Skincare Reviews], reviews[theme_price] = 1 ),
+			    "Irritations & Imperfections", CALCULATE ( [Skincare Reviews], reviews[theme_irritation] = 1 ),
+			    "Texture & Sensation", CALCULATE ( [Skincare Reviews], reviews[theme_texture] = 1 ),
+			    "Odeur", CALCULATE ( [Skincare Reviews], reviews[theme_scent] = 1 ),
+			    "Packaging", CALCULATE ( [Skincare Reviews], reviews[theme_packaging] = 1 ),
+			    "Hydratation", CALCULATE ( [Skincare Reviews], reviews[theme_hydration] = 1 )
+			)
+		formatString: 0
+		lineageTag: 63ffcdab-38aa-44ea-8f5f-e684f3834ed3
+
+	measure 'Theme Share' = DIVIDE ( [Theme Reviews], [Skincare Reviews] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 896bed95-f4f7-44eb-8152-534964327b18
+
+	measure 'Theme Share Low' = CALCULATE ( [Theme Share], reviews[rating] < 4 )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: fa0c8050-3216-48b2-96ef-47493e505985
+
+	measure 'Low Rated Share' = DIVIDE ( [Low Rated Products], [Rated Products] )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 166cdef2-454c-4eac-96a8-af623d9aef11
+
+	measure 'Total Reviews' = SUM ( product_info[Reviews] )
+		formatString: 0
+		lineageTag: 58a06979-2d98-4c96-af94-258873da9843
+
+	measure 'Review Share' = DIVIDE ( [Total Reviews], CALCULATE ( [Total Reviews], ALL ( product_info[Primary Category] ) ) )
+		lineageTag: c60e5f07-41c9-4e44-ac51-747d27bb796c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Product Share' = DIVIDE ( [Products], CALCULATE ( [Products], ALL ( product_info[Primary Category] ) ) )
+		lineageTag: c2d15637-0c76-4717-b48a-0909a0c35e2d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Low Rated Products' =
+			
+			CALCULATE (
+			    [Products],
+			    product_info[Rating] < 4,
+			    NOT ISBLANK ( product_info[Rating] )
+			)
+		formatString: 0
+		lineageTag: c9fcee4e-567f-495a-a8c6-d84f6fdd95c5
+
+	measure 'New Avg Rating' = CALCULATE ( [Avg Rating], product_info[new] = 1 )
+		lineageTag: 09634e73-3f77-43f9-8581-fcaf6be592b8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Established Avg Rating' = CALCULATE ( [Avg Rating], product_info[new] = 0 )
+		lineageTag: 9e84efff-e37c-44b3-a38b-7b34d4eff319
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rated Products' =
+			
+			CALCULATE (
+			    [Products],
+			    NOT ISBLANK ( product_info[Rating] )
+			)
+		formatString: 0
+		lineageTag: 7e922a56-f9ee-4df7-99b2-bd4083976c4f
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

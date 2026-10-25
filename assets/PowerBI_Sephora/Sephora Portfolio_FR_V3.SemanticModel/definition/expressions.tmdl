@@ -1,0 +1,53 @@
+expression Parameter1 = #"Sample File" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: cb3a16ef-51be-4b01-96d6-27f7d0f3b7aa
+	queryGroup: 'Transform File from reviews\Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Binary
+
+expression 'Sample File' =
+		let
+		    Source = Folder.Files("C:\Users\Bonita\Desktop\07_Portfolio\00_Dataset\Sephora Products and Skincare Reviews\Data Source\reviews"),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: e593396e-ab6c-4067-8845-da8b3cb4efce
+	queryGroup: 'Transform File from reviews\Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File' =
+		let
+		    Source = Csv.Document(Parameter1, [Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers",{""})
+		in
+		    #"Removed Columns"
+	lineageTag: f2a95a60-1278-466a-8dac-76a7462e203a
+	queryGroup: 'Transform File from reviews'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Transform File' =
+		let
+		    Source = (Parameter1 as binary) => let
+		    Source = Csv.Document(Parameter1, [Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers",{""})
+		in
+		    #"Removed Columns"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File""}" ]
+	lineageTag: 83b2b9f3-f7f5-48cf-bf64-51b1c0789e62
+	queryGroup: 'Transform File from reviews\Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+

@@ -1,0 +1,20 @@
+table Season
+	lineageTag: bbaffea7-6522-49ca-817c-1f7858d4de5e
+
+	column Column
+		formatString: 0
+		lineageTag: 443ef125-9c93-453b-bce6-d170ef74ee86
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Season = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 89e214d9606c4df0a4e39df0101eb7a6
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

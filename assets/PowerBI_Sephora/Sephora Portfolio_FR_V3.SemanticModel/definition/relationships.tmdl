@@ -1,0 +1,8 @@
+relationship AutoDetected_de8918ab-c9b4-43fe-982d-0f8a4ae0ecd6
+	fromColumn: reviews.product_id
+	toColumn: product_info.product_id
+
+relationship c7a02a89-7bd1-570b-bbbc-68ad1efb3afb
+	fromColumn: reviews.submission_time
+	toColumn: Calendar.Date
+

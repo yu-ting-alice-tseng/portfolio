@@ -1,0 +1,318 @@
+table reviews
+	lineageTag: 89c29e4b-251d-4d99-a249-c0690d562f68
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: a2877f12-44d5-4e3b-9d81-cb945d9fa40b
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column author_id
+		dataType: string
+		lineageTag: 7bbcfb4c-69d3-40df-a052-a7e0bfd68bf0
+		summarizeBy: none
+		sourceColumn: author_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rating
+		dataType: int64
+		formatString: 0
+		lineageTag: e744fddf-7344-4908-8f3a-1db279dec0b6
+		summarizeBy: sum
+		sourceColumn: rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_recommended
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dea8ee4-7b1d-42df-add1-6c1f5ea38629
+		summarizeBy: sum
+		sourceColumn: is_recommended
+
+		annotation SummarizationSetBy = Automatic
+
+	column helpfulness
+		dataType: double
+		lineageTag: 0f506449-5388-4332-b779-6eb04b18d8fe
+		summarizeBy: sum
+		sourceColumn: helpfulness
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_feedback_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 2525b340-c99f-4e9f-afb2-671c242530d6
+		summarizeBy: sum
+		sourceColumn: total_feedback_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_neg_feedback_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 76fd2cbe-2c2a-4d8e-9f0d-90d9dbbc1524
+		summarizeBy: sum
+		sourceColumn: total_neg_feedback_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_pos_feedback_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 48026470-983b-48f9-8db4-f66721edb452
+		summarizeBy: sum
+		sourceColumn: total_pos_feedback_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column submission_time
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 8dbfaec3-7e19-471a-a309-7985cae2e254
+		summarizeBy: none
+		sourceColumn: submission_time
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column review_text
+		dataType: string
+		lineageTag: f74fb3d5-b6a0-458e-877a-86f820fee1ac
+		summarizeBy: none
+		sourceColumn: review_text
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_title
+		dataType: string
+		lineageTag: 3852e57e-0bda-4c6c-9ecd-bbddc8df79fa
+		summarizeBy: none
+		sourceColumn: review_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column skin_tone
+		dataType: string
+		lineageTag: a945cd5d-9c79-4e7f-9d6c-130a191343be
+		summarizeBy: none
+		sourceColumn: skin_tone
+
+		annotation SummarizationSetBy = Automatic
+
+	column eye_color
+		dataType: string
+		lineageTag: db1effd2-00c6-4932-b131-fce0fb765069
+		summarizeBy: none
+		sourceColumn: eye_color
+
+		annotation SummarizationSetBy = Automatic
+
+	column skin_type
+		dataType: string
+		lineageTag: 2d0cd559-6ce7-4486-9995-35a20f28a878
+		summarizeBy: none
+		sourceColumn: skin_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column hair_color
+		dataType: string
+		lineageTag: a2048b70-c0d4-4c05-8de4-321a3943e506
+		summarizeBy: none
+		sourceColumn: hair_color
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		isHidden
+		lineageTag: 798e118b-3d0d-4c0b-a534-69a9a42136ae
+		summarizeBy: none
+		sourceColumn: product_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_irritation
+		dataType: int64
+		formatString: 0
+		lineageTag: e605cb4a-594e-42e0-ac9d-b4d32a33ef85
+		summarizeBy: sum
+		sourceColumn: theme_irritation
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_texture
+		dataType: int64
+		formatString: 0
+		lineageTag: 5aba1639-c001-448e-813f-7a96f39c8cf5
+		summarizeBy: sum
+		sourceColumn: theme_texture
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_scent
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d4a7348-9a19-41ce-a01e-d4f88a4af585
+		summarizeBy: sum
+		sourceColumn: theme_scent
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_price
+		dataType: int64
+		formatString: 0
+		lineageTag: c55cb218-4244-4dcb-a4c1-9ca1850b9ccc
+		summarizeBy: sum
+		sourceColumn: theme_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_packaging
+		dataType: int64
+		formatString: 0
+		lineageTag: b4c237ac-8c3a-4b6f-8103-84a7fdda3fb6
+		summarizeBy: sum
+		sourceColumn: theme_packaging
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_no_results
+		dataType: int64
+		formatString: 0
+		lineageTag: e73af83c-0c2a-4e00-8d46-298d23cc35d4
+		summarizeBy: sum
+		sourceColumn: theme_no_results
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme_hydration
+		dataType: int64
+		formatString: 0
+		lineageTag: cb33f167-32a6-418c-8ef1-84f2cce782cd
+		summarizeBy: sum
+		sourceColumn: theme_hydration
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Skincare Rating Band' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( reviews[rating] ), "Non Noté",
+			    reviews[rating] < 3, "Moins de 3,0★",
+			    reviews[rating] < 3.5, "3,0 – 3,5★",
+			    reviews[rating] < 4, "3,5 – 4,0★",
+			    reviews[rating] < 4.5, "4,0 – 4,5★",
+			    "4,5 – 5,0★"
+			)
+		lineageTag: 35b789f7-bbd5-4414-96f9-f6fddfcd59dd
+		summarizeBy: none
+		sortByColumn: 'Skincare Rating Band Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Skincare Rating Band Order' =
+			
+			SWITCH (
+			    TRUE (),
+			    ISBLANK ( reviews[rating] ), 0,
+			    reviews[rating] < 3, 1,
+			    reviews[rating] < 3.5, 2,
+			    reviews[rating] < 4, 3,
+			    reviews[rating] < 4.5, 4,
+			    5
+			)
+		formatString: 0
+		lineageTag: 7366df93-0440-4172-8d08-5e2908fc3cf9
+		summarizeBy: sum
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition reviews = m
+		mode: import
+		source = ```
+				let
+				    // 1. 讀取資料夾裡的所有檔案，排除隱藏檔
+				    Source = Folder.Files("C:\Users\Bonita\Desktop\07_Portfolio\00_Dataset\Sephora Products and Skincare Reviews\Data Source\reviews"),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				
+				    // 2. 對每個檔案套用 Transform File（已設好標題列、已刪除列號欄）
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File", each #"Transform File"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File"}),
+				
+				    // 3. 展開成一張表，Source.Name 保留檔名
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+				
+				    // 4. 刪除 product_info 已有的欄位
+				    #"Removed Columns" = Table.RemoveColumns(#"Expanded Table Column1", {"product_name", "brand_name", "price_usd"}),
+				
+				    // 5. 設定類型，固定用 en-US 解讀小數與日期
+				    #"Changed Type All" = Table.TransformColumnTypes(#"Removed Columns", {
+				        {"Source.Name", type text},
+				        {"author_id", type text},
+				        {"rating", Int64.Type},
+				        {"is_recommended", Int64.Type},
+				        {"helpfulness", type number},
+				        {"total_feedback_count", Int64.Type},
+				        {"total_neg_feedback_count", Int64.Type},
+				        {"total_pos_feedback_count", Int64.Type},
+				        {"submission_time", type date},
+				        {"review_text", type text},
+				        {"review_title", type text},
+				        {"skin_tone", type text},
+				        {"eye_color", type text},
+				        {"skin_type", type text},
+				        {"hair_color", type text},
+				        {"product_id", type text}
+				    }, "en-US"), 
+				
+				    // 6. 把評論標題和內容合併成小寫文字，方便搜尋關鍵字
+				    #"Added Text" = Table.AddColumn(#"Changed Type All", "text_lower",
+				        each Text.Lower(Text.Combine({[review_title], [review_text]}, " ")), type text),
+				
+				    // 7. 定義主題和對應的關鍵字
+				    Themes = {
+				        {"theme_irritation", {"irritat", "burn", "breakout", "broke me out", "broke out", "rash", "sting", "redness", "allerg", "reaction"}},
+				        {"theme_texture", {"sticky", "greasy", "oily", "heavy", "tacky", "pilling", "pills", "residue"}},
+				        {"theme_scent", {"smell", "scent", "fragrance", "odor", "stink"}},
+				        {"theme_price", {"price", "expensive", "overpriced", "worth", "money", "cost"}},
+				        {"theme_packaging", {"packag", "pump", "bottle", "jar", "leak", "broken", "tube"}},
+				        {"theme_no_results", {"didn't work", "didn’t work", "didnt work", "did not work", "not work", "no difference", "no results", "did nothing", "didn't do", "didn’t do"}},
+				        {"theme_hydration", {"hydrat", "moistur", "dry"}}
+				    },
+				
+				    // 8. 每個主題新增一欄：評論有提到任一關鍵字就是 1，否則是 0
+				    #"Added Themes" = List.Accumulate(Themes, #"Added Text",
+				        (tbl, th) => Table.AddColumn(tbl, th{0},
+				            (row) => if List.AnyTrue(List.Transform(th{1}, (k) => Text.Contains(row[text_lower], k))) then 1 else 0,
+				            Int64.Type)),
+				
+				    // 9. 刪掉暫時用的小寫文字欄，減少檔案大小
+				    #"Removed Text" = Table.RemoveColumns(#"Added Themes", {"text_lower"})
+				in
+				    #"Removed Text"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

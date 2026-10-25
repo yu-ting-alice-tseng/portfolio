@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "65ff5af38e4b2cec7f72",
+  "displayName": "Voix du Client - Soin",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "63d6564f0317ec988bb3",
+    "type": "Default",
+    "parameters": []
+  }
+}
