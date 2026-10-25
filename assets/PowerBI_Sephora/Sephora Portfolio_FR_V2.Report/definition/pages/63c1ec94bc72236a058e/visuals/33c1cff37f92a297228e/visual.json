@@ -140,6 +140,22 @@
             }
           }
         }
+      ],
+      "pages": [
+        {
+          "properties": {
+            "showPage": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "8ca8659b16bb6ab45911"
+          }
+        }
       ]
     },
     "visualContainerObjects": {

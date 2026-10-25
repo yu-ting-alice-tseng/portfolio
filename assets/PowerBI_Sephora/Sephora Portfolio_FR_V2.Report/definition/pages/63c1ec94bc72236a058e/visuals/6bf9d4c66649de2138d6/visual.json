@@ -17,6 +17,64 @@
           "projections": [
             {
               "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "product_info"
+                        }
+                      },
+                      "Property": "Reviews"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "CountNonNull(product_info.Reviews)",
+              "nativeQueryRef": "Sum of Reviews",
+              "displayName": "Avis",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "product_info"
+                        }
+                      },
+                      "Property": "loves_count"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "CountNonNull(product_info.loves_count)",
+              "nativeQueryRef": "Average Loves per Product",
+              "displayName": "Favoris Moyens par Produit",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Low Rated Share"
+                }
+              },
+              "queryRef": "_Measures.Low Rating Share1",
+              "nativeQueryRef": "Products Rated Below 4★",
+              "displayName": "Produits Notés sous 4★",
+              "format": "0.0 %;-0.0 %;0.0 %"
+            },
+            {
+              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
@@ -59,64 +117,6 @@
               "queryRef": "_Measures.Established Avg Rating",
               "nativeQueryRef": "Existing Average Rating",
               "displayName": "Note Moyenne des Produits Existants"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Low Rated Share"
-                }
-              },
-              "queryRef": "_Measures.Low Rating Share1",
-              "nativeQueryRef": "Products Rated Below 4★",
-              "displayName": "Produits Notés sous 4★",
-              "format": "0.0 %;-0.0 %;0.0 %"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "product_info"
-                        }
-                      },
-                      "Property": "loves_count"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "CountNonNull(product_info.loves_count)",
-              "nativeQueryRef": "Average Loves per Product",
-              "displayName": "Favoris Moyens par Produit",
-              "format": "#,0"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "product_info"
-                        }
-                      },
-                      "Property": "Reviews"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "CountNonNull(product_info.Reviews)",
-              "nativeQueryRef": "Sum of Reviews",
-              "displayName": "Avis",
-              "format": "#,0"
             }
           ]
         }
@@ -125,13 +125,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "product_info"
+                      }
+                    },
+                    "Property": "Reviews"
                   }
                 },
-                "Property": "Avg Rating"
+                "Function": 0
               }
             },
             "direction": "Descending"
