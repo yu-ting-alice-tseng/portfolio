@@ -389,6 +389,11 @@
     }
     .pf-img-wrap:hover img { transform: scale(1.04); }
     .pf-img-figure { display: flex; flex-direction: column; gap: 0.3rem; }
+    .pf-star-fig { margin: 0.2rem 0 0.8rem; }
+    .pf-star-fig .pf-img-wrap { border: 1px solid var(--mk-border); }
+    .pf-star-fig .pf-img-wrap img { height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+    .pf-star-fig .pf-img-wrap:hover img { transform: none; }
+    .pf-star-fig .pf-img-caption { margin-top: 0.4rem; }
     .pf-img-caption {
       font-size: 0.72rem;
       color: var(--mk-muted);
@@ -1169,51 +1174,8 @@
         <span class="pf-cat-fig"><span class="pf-cat-val">100 %</span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p6Lbl">Places pourvues à chaque recrutement</span></span>
       </a></li>
       <li><a class="pf-cat-card" href="#bcg-beaute" data-target="bcg-beaute" data-cat="analyse">
-        <span class="pf-cat-cover is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
-
-
-
-<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
-<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
-
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
-<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">HIDDEN GEMS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
-<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
-<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 293</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27,0 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS · DOGS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
-<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 815</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK</text>
-</g>
-</svg></span>
-        <span class="pf-cat-meta"><span class="pf-cat-n">06</span> · <span data-i18n="portfolio.mkt.board.p2Cat">Projet personnel · BCG · Power BI</span></span>
+        <span class="pf-cat-cover"><img src="assets/covers/sephora-dashboard.webp" alt="" loading="lazy"></span>
+        <span class="pf-cat-meta"><span class="pf-cat-n">06</span> · <span data-i18n="portfolio.mkt.board.p2Cat">Projet personnel · Analyse de Portefeuille · Power BI</span></span>
         <span class="pf-cat-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span>
         <span class="pf-cat-fig"><span class="pf-cat-val"><span data-lang-show="fr">8 494</span><span data-lang-show="en">8,494</span></span> <span class="pf-cat-lbl" data-i18n="portfolio.mkt.board.p2Lbl">Produits analysés</span></span>
       </a></li>
@@ -1313,50 +1275,7 @@
 <text data-lang-show="fr" x="446" y="356" font-family="Outfit, sans-serif" font-size="13" fill="var(--mk-text)">la tranche 6 – 12 ans s'élargit</text><text data-lang-show="en" x="446" y="356" font-family="Outfit, sans-serif" font-size="13" fill="var(--mk-text)">the 6 – 12 age group is growing</text>
 </svg></span></span><span class="pf-rail-n">04</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p7Name">Sora Education · Étude de Marché</span></a>
       <a class="pf-rail-item" href="#guzheng-facebook" data-target="guzheng-facebook"><span class="pf-rail-thumb"><img src="assets/covers/guzheng-facebook.webp" alt="" loading="lazy"></span><span class="pf-rail-n">05</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span></a>
-      <a class="pf-rail-item" href="#bcg-beaute" data-target="bcg-beaute"><span class="pf-rail-thumb"><span class="is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
-
-
-
-<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
-<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
-
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
-<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">HIDDEN GEMS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
-<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
-<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 293</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27,0 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS · DOGS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
-<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 815</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK</text>
-</g>
-</svg></span></span><span class="pf-rail-n">06</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></a>
+      <a class="pf-rail-item" href="#bcg-beaute" data-target="bcg-beaute"><span class="pf-rail-thumb"><img src="assets/covers/sephora-dashboard.webp" alt="" loading="lazy"></span><span class="pf-rail-n">06</span><span class="pf-rail-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></a>
       <a class="pf-rail-item" href="#maison-beaute" data-target="maison-beaute"><span class="pf-rail-thumb"><span class="is-chart"><svg class="pf-slide-svg" viewBox="0 0 720 405" aria-hidden="true" focusable="false">
 <rect x="0.5" y="0.5" width="719" height="404" fill="var(--mk-card)" stroke="var(--mk-border)"/>
 <rect x="0" y="0" width="720" height="62" fill="var(--mk-text)"/>
@@ -1834,50 +1753,7 @@
 <span class="pf-tag">Community Management</span>
 <span class="pf-tag">Facebook</span>
 <span class="pf-tag"><span data-lang-show="fr">Design Visuel</span><span data-lang-show="en">Visual Design</span></span>
-</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-img-wrap pf-cover-wrap"><img data-land src="assets/covers/guzheng-facebook.webp" alt="NCCU Guzheng Club – Recruitment Poster and Year-end Gathering" width="1200" height="800"><a class="pf-cover-hit" href="assets/guzheng-club-recruitment-poster.webp" target="_blank" rel="noopener noreferrer" aria-label="Recruitment poster" style="left:5.0%;top:19.5%;width:38.33%;height:60.88%"></a><a class="pf-cover-hit" href="assets/guzheng-club-year-end-gathering.webp" target="_blank" rel="noopener noreferrer" aria-label="Year-end gathering" style="left:46.67%;top:19.5%;width:48.33%;height:60.88%"></a></div><figcaption class="pf-img-caption"><span data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</span> · <span data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</span></figcaption></figure><p class="pf-case-lead" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p></div></div>      <div class="mk-sep" data-reveal aria-hidden="true"><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg><svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg></div><a class="pf-next" data-target="bcg-beaute" href="#bcg-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></span><span class="pf-next-cover is-chart"><svg class="pf-chart-svg" aria-hidden="true" focusable="false" viewBox="0 0 560 392">
-
-
-
-<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
-<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
-
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
-<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">HIDDEN GEMS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
-<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
-<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 293</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27,0 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS · DOGS</text>
-</g>
-
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
-<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 815</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK</text>
-</g>
-</svg></span></a></article>
+</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-img-wrap pf-cover-wrap"><img data-land src="assets/covers/guzheng-facebook.webp" alt="NCCU Guzheng Club – Recruitment Poster and Year-end Gathering" width="1200" height="800"><a class="pf-cover-hit" href="assets/guzheng-club-recruitment-poster.webp" target="_blank" rel="noopener noreferrer" aria-label="Recruitment poster" style="left:5.0%;top:19.5%;width:38.33%;height:60.88%"></a><a class="pf-cover-hit" href="assets/guzheng-club-year-end-gathering.webp" target="_blank" rel="noopener noreferrer" aria-label="Year-end gathering" style="left:46.67%;top:19.5%;width:48.33%;height:60.88%"></a></div><figcaption class="pf-img-caption"><span data-i18n="portfolio.guzheng.cap1">Affiche de recrutement</span> · <span data-i18n="portfolio.guzheng.cap2">Réunion de fin de semestre</span></figcaption></figure><p class="pf-case-lead" data-i18n="portfolio.guzheng.desc">Gestion de la page Facebook du club de guzheng de NCCU. Création de visuels pour les annonces d'activités, recrutement de nouveaux membres et couverture d'événements de fin d'année.</p></div></div>      <div class="mk-sep" data-reveal aria-hidden="true"><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg><svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg></div><a class="pf-next" data-target="bcg-beaute" href="#bcg-beaute"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p2Name">Sephora · Intelligence Produit</span></span><span class="pf-next-cover"><img alt="" loading="lazy" src="assets/covers/sephora-dashboard.webp"/></span></a></article>
 <article class="pf-case" data-cat="analyse" id="bcg-beaute">
 
 
@@ -1888,167 +1764,157 @@
 
 
 
-<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-i18n="portfolio.mkt.board.p2Cat">Projet personnel · BCG · Power BI</span></p><h2 class="pf-card-title">
+<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-i18n="portfolio.mkt.board.p2Cat">Projet personnel · Analyse de Portefeuille · Power BI</span></p><h2 class="pf-card-title">
 <span data-lang-show="fr">Sephora — Intelligence Produit &amp; Stratégie de Portefeuille Beauté</span>
 <span data-lang-show="en">Sephora — Product Intelligence &amp; Beauty Portfolio Strategy</span>
 </h2><div class="pf-stats pf-case-figs">
 <div><span class="pf-stat-val"><span data-lang-show="fr">8 494</span><span data-lang-show="en">8,494</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Produits analysés</span><span data-lang-show="en">Products analysed</span></span></div>
 <div><span class="pf-stat-val"><span data-lang-show="fr">3 685 250</span><span data-lang-show="en">3,685,250</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Avis clients</span><span data-lang-show="en">Customer reviews</span></span></div>
 <div><span class="pf-stat-val"><span data-lang-show="fr">4,19/5</span><span data-lang-show="en">4.19/5</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Note moyenne catalogue</span><span data-lang-show="en">Average catalogue rating</span></span></div>
-<div><span class="pf-stat-val">BCG</span><span class="pf-stat-lbl"><span data-lang-show="fr">Matrice de portefeuille</span><span data-lang-show="en">Portfolio matrix</span></span></div>
+<div><span class="pf-stat-val">4</span><span class="pf-stat-lbl"><span data-lang-show="fr">Questions d'analyse</span><span data-lang-show="en">Analysis questions</span></span></div>
 </div><div class="pf-tags">
-<span class="pf-tag"><span data-lang-show="fr">Matrice BCG</span><span data-lang-show="en">BCG Matrix</span></span>
 <span class="pf-tag"><span data-lang-show="fr">Portefeuille Produits</span><span data-lang-show="en">Product Portfolio</span></span>
-<span class="pf-tag"><span data-lang-show="fr">E-commerce Beauté</span><span data-lang-show="en">Beauty E-commerce</span></span>
 <span class="pf-tag"><span data-lang-show="fr">Analyse des Avis</span><span data-lang-show="en">Review Analytics</span></span>
+<span class="pf-tag"><span data-lang-show="fr">E-commerce Beauté</span><span data-lang-show="en">Beauty E-commerce</span></span>
 <span class="pf-tag"><span data-lang-show="fr">Stratégie de Marque</span><span data-lang-show="en">Brand Strategy</span></span>
+<span class="pf-tag"><span data-lang-show="fr">Matrice BCG</span><span data-lang-show="en">BCG Matrix</span></span>
 <span class="pf-tag">Sephora</span>
 <span class="pf-tag">Python</span>
 <span class="pf-tag">Power BI</span>
 <span class="pf-tag">DAX</span>
 <span class="pf-tag">Power Query</span>
-</div></aside><div class="pf-case-main"><div class="pf-bcg">
-<svg data-land aria-labelledby="bcg-t bcg-d" role="img" viewBox="0 0 560 392">
-<title id="bcg-t">Matrice de portefeuille Sephora</title>
-<desc id="bcg-d">Répartition des 8 494 produits en quatre segments selon la satisfaction client et le volume d'avis : Hero 2 307 produits, Hidden Gems 1 801, Underperformers 2 293, Risk 1 815.</desc>
-<!-- Axes -->
-<line stroke="var(--mk-border)" stroke-width="1" x1="70" x2="530" y1="170" y2="170"></line>
-<line stroke="var(--mk-border)" stroke-width="1" x1="300" x2="300" y1="26" y2="314"></line>
-<!-- Légendes des axes -->
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">VOLUME D'AVIS  ·  VISIBILITÉ →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" x="300" y="344">REVIEW VOLUME  ·  VISIBILITY →</text>
-<text data-lang-show="fr" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  NOTE →</text>
-          <text data-lang-show="en" fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle" transform="rotate(-90 30 170)" x="30" y="170">SATISFACTION  ·  RATING →</text>
-<!-- Hidden Gems : forte satisfaction, faible visibilité -->
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="26"></rect>
-<circle cx="185" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="30" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="84">1 801</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="99">21,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="140">HIDDEN GEMS</text>
-</g>
-<!-- Hero (Stars) : forte satisfaction, forte visibilité -->
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="26"></rect>
-<circle cx="415" cy="88" fill="rgba(var(--mk-accent-rgb),0.16)" r="34" stroke="var(--mk-accent)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="84">2 307</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="99">27,2 %</text>
-<text fill="var(--mk-accent)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="144">HERO · STARS</text>
-</g>
-<!-- Underperformers : faible satisfaction, faible visibilité -->
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="70" y="170"></rect>
-<circle cx="185" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="34" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="185" y="244">2 293</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="185" y="259">27,0 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="185" y="304">UNDERPERFORMERS · DOGS</text>
-</g>
-<!-- Risk : faible satisfaction, forte visibilité -->
-<g class="pf-bcg-quad">
-<rect fill="transparent" height="144" width="230" x="300" y="170"></rect>
-<circle cx="415" cy="248" fill="rgba(var(--mk-accent2-rgb),0.14)" r="30" stroke="var(--mk-accent2)" stroke-width="1"></circle>
-<text fill="var(--mk-text)" font-family="'Cormorant Garamond', serif" font-size="21" text-anchor="middle" x="415" y="244">1 815</text>
-<text fill="var(--mk-muted)" font-family="Outfit, sans-serif" font-size="9.5" text-anchor="middle" x="415" y="259">21,4 %</text>
-<text fill="var(--mk-accent2)" font-family="Outfit, sans-serif" font-size="11" font-weight="500" letter-spacing="1.2" text-anchor="middle" x="415" y="300">RISK</text>
-</g>
-</svg>
-<p class="pf-bcg-caption"><span data-lang-show="fr">Aire des cercles proportionnelle au nombre de produits. Les quatre segments totalisent 8 216 références, soit 96,7 % du catalogue analysé.</span><span data-lang-show="en">Circle area is proportional to the number of products. The four segments total 8,216 references, or 96.7% of the catalogue analysed.</span></p>
-</div><div class="pf-case-lead"><p data-lang-show="fr">Comment distinguer, dans un catalogue Sephora de 8 494 produits, ceux à défendre des références à risque ? J'ai appliqué une matrice BCG croisant volume d'avis et note client pour classer le portefeuille en quatre segments et orienter les décisions marketing et commerciales, puis reconstruit l'analyse dans un dashboard Power BI de quatre pages.</p><p data-lang-show="en">How do you tell which of Sephora's 8,494 products to defend and which are at risk? I applied a BCG matrix crossing review volume and customer rating to sort the portfolio into four segments and guide marketing and commercial decisions, then rebuilt the analysis as a four-page Power BI dashboard.</p><p data-lang-show="zh">在 Sephora 8,494 項商品中，哪些該重點守護、哪些有風險？我以評論量與顧客評分建立 BCG 矩陣，將產品組合分為四個區塊，作為行銷與商業決策的依據，並以 Power BI 建立四頁互動式儀表板。</p></div><p class="pf-case-source"><span data-lang-show="fr">Projet personnel · Source des données : jeu de données public Kaggle « Sephora Products and Skincare Reviews » (Inky, 2023).</span><span data-lang-show="en">Personal project · Data source: public Kaggle dataset “Sephora Products and Skincare Reviews” (Inky, 2023).</span><span data-lang-show="zh">個人專案 · 資料來源：Kaggle 公開資料集「Sephora Products and Skincare Reviews」（Inky, 2023）。</span></p><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><div class="pf-star">
+</div></aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-img-wrap pf-cover-wrap"><img data-land src="assets/covers/sephora-dashboard.webp" alt="Dashboard Power BI Sephora – 4 pages" width="1200" height="800"><a class="pf-cover-hit" href="assets/Sephora_PowerBI/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer" aria-label="Product Overview" style="left:4%;top:10.5%;width:45%;height:38%"></a><a class="pf-cover-hit" href="assets/Sephora_PowerBI/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Matrix" style="left:51%;top:10.5%;width:45%;height:38%"></a><a class="pf-cover-hit" href="assets/Sephora_PowerBI/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer" aria-label="Customer Voice" style="left:4%;top:51.5%;width:45%;height:38%"></a><a class="pf-cover-hit" href="assets/Sephora_PowerBI/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer" aria-label="Customer Voice - Skincare" style="left:51%;top:51.5%;width:45%;height:38%"></a></div><figcaption class="pf-img-caption"><span data-lang-show="fr">Dashboard Power BI · une page par question d'analyse</span><span data-lang-show="en">Power BI dashboard · one page per analysis question</span><span data-lang-show="zh">Power BI 儀表板 · 每個分析問題一頁</span></figcaption></figure><div class="pf-case-lead"><p data-lang-show="fr">Que vend Sephora, où se concentre l'attention des clientes, quels produits défendre ou corriger, et que disent les clientes des soins de la peau ? J'ai décomposé cette question de portefeuille en quatre analyses sur 8 494 produits et 1 094 411 avis, chacune construite comme une page d'un dashboard Power BI, puis traduites en recommandations priorisées.</p><p data-lang-show="en">What does Sephora sell, where does customer attention go, which products should it defend or fix, and what do customers say about skincare? I broke this portfolio question into four analyses of 8,494 products and 1,094,411 reviews, each built as one page of a Power BI dashboard, then turned them into prioritised recommendations.</p><p data-lang-show="zh">Sephora 賣什麼？顧客的關注集中在哪裡？哪些商品該守護或修正？顧客如何評價保養品？我將這個產品組合問題拆解為四項分析，涵蓋 8,494 項商品與 1,094,411 則評論，每項分析對應 Power BI 儀表板的一頁，最後整理成有優先順序的建議。</p></div><p class="pf-case-source"><span data-lang-show="fr">Projet personnel · Source des données : jeu de données public Kaggle « Sephora Products and Skincare Reviews » (Inky, 2023).</span><span data-lang-show="en">Personal project · Data source: public Kaggle dataset “Sephora Products and Skincare Reviews” (Inky, 2023).</span><span data-lang-show="zh">個人專案 · 資料來源：Kaggle 公開資料集「Sephora Products and Skincare Reviews」（Inky, 2023）。</span></p><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary><div class="pf-star">
 <div class="pf-star-lbl"><span data-lang-show="fr">Contexte &amp; Problématique</span><span data-lang-show="en">Context &amp; Problem</span></div>
 <div data-lang-show="fr">
-<p class="pf-star-txt">Sephora propose un catalogue de <strong>8 494 produits</strong> couvrant Skincare, Fragrance, Makeup, Hair Care et Bath &amp; Body. Avec <strong>3 685 250 avis clients</strong>, un prix moyen de <strong>51,66 $</strong> et une note moyenne de <strong>4,19/5</strong>, comment distinguer les produits à défendre des SKUs à risque ? <strong>Objectif :</strong> appliquer une matrice BCG au portefeuille beauté pour orienter les décisions marketing et commerciales.</p>
+<p class="pf-star-txt">Sephora propose <strong>8 494 produits</strong> de <strong>304 marques</strong>, des soins de la peau aux parfums, avec <strong>3 685 250 avis clients</strong>, un prix moyen de <strong>51,66 $</strong> et une note moyenne de <strong>4,19/5</strong>. <strong>Question métier :</strong> comment piloter ce portefeuille, c'est-à-dire savoir où se joue la demande, quels produits défendre ou corriger et quelles attentes clientes traiter en priorité ? Je l'ai décomposée en quatre questions, chacune traitée par une page du dashboard :</p>
+<ol class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
+<li>Que vend Sephora ? (structure du catalogue)</li>
+<li>Où se concentrent l'attention et la satisfaction des clientes ?</li>
+<li>Quels produits défendre, révéler ou corriger ?</li>
+<li>Que disent les clientes des soins de la peau ?</li>
+</ol>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Démarche :</strong> nettoyage et typage des données dans Power Query (les cinq fichiers d'avis réunis en une seule table), modèle en étoile avec table calendrier, mesures DAX et filtres par catégorie, marque et produit.</p>
 </div>
 <div data-lang-show="en">
-<p class="pf-star-txt">Sephora's catalog spans <strong>8,494 products</strong> across Skincare, Fragrance, Makeup, Hair Care, and Bath &amp; Body. With <strong>3,685,250 customer reviews</strong>, an average price of <strong>$51.66</strong>, and an average rating of <strong>4.19/5</strong>, how do you distinguish which products to defend from which SKUs are at risk? <strong>Objective:</strong> apply a BCG matrix to the beauty portfolio to guide marketing and commercial decisions.</p>
+<p class="pf-star-txt">Sephora offers <strong>8,494 products</strong> from <strong>304 brands</strong>, from skincare to fragrance, with <strong>3,685,250 customer reviews</strong>, an average price of <strong>$51.66</strong> and an average rating of <strong>4.19/5</strong>. <strong>Business question:</strong> how should this portfolio be managed, that is, where does demand lie, which products should be defended or fixed, and which customer expectations come first? I broke it down into four questions, each answered by one page of the dashboard:</p>
+<ol class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
+<li>What does Sephora sell? (catalogue structure)</li>
+<li>Where do customer attention and satisfaction concentrate?</li>
+<li>Which products should be defended, surfaced or fixed?</li>
+<li>What do customers say about skincare?</li>
+</ol>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Approach:</strong> data cleaning and typing in Power Query (the five review files combined into one table), a star schema with a calendar table, DAX measures, and category, brand and product filters.</p>
 </div>
-</div><div class="pf-star pf-star--result">
-<div class="pf-star-lbl"><span data-lang-show="fr">Segmentation BCG du Portefeuille · 8 494 produits</span><span data-lang-show="en">BCG Portfolio Segmentation · 8,494 products</span></div>
+</div><div class="pf-star">
+<div class="pf-star-lbl"><span data-lang-show="fr">Question 1 · Que Vend Sephora ?</span><span data-lang-show="en">Question 1 · What Does Sephora Sell?</span></div>
+<figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/Sephora_PowerBI/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Product Overview" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-1.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 1 du dashboard · Product Overview</span><span data-lang-show="en">Dashboard page 1 · Product Overview</span></figcaption></figure>
 <div data-lang-show="fr">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Hero (Stars), 2 307 produits (27,2 %) :</strong> Volume élevé + note élevée (≥ 4,29). Protéger, amplifier, mettre en avant. Top brand : Anastasia Beverly Hills.</li>
-<li><strong>Hidden Gems (Question Marks), 1 801 produits (21,2 %) :</strong> Note élevée mais faible volume : potentiel marketing inexploité. Lever d'abord les freins de distribution, puis cibler avec des campagnes de visibilité et du seeding influenceur pour les faire passer dans le segment Hero.</li>
-<li><strong>Risk, 1 815 produits (21,4 %) :</strong> Volume élevé mais note faible : risque de réputation. Reformuler ou déréférencer prioritairement avant que les avis négatifs n'érodent la marque globale.</li>
-<li><strong>Underperformers (Dogs), 2 293 produits (27,0 %) :</strong> Faible volume + note faible. Candidats à la rationalisation de l'assortiment, à confirmer par les ventes.</li>
-<li><strong>Non notés, 278 produits :</strong> Invisibles dans les recherches filtrées par avis : activer les programmes de collecte d'avis en priorité.</li>
+<li>Le catalogue repose sur quatre catégories : soins de la peau (28,5 % des produits), maquillage (27,9 %), cheveux (17,2 %) et parfums (16,9 %).</li>
+<li>Les prix varient fortement d'une catégorie à l'autre : 87,26 $ en moyenne pour les parfums, 60,51 $ pour les soins, 32,76 $ pour le maquillage.</li>
+<li>27,9 % des produits sont des exclusivités Sephora et 21,9 % sont vendus uniquement en ligne.</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>À retenir :</strong> un prix ou une note ne se compare qu'à l'intérieur de sa catégorie. Les pages suivantes gardent donc le filtre par catégorie.</p>
+</div>
+<div data-lang-show="en">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li>The catalogue rests on four categories: skincare (28.5% of products), makeup (27.9%), hair (17.2%) and fragrance (16.9%).</li>
+<li>Prices vary widely between categories: $87.26 on average for fragrance, $60.51 for skincare, $32.76 for makeup.</li>
+<li>27.9% of products are Sephora exclusives and 21.9% are sold online only.</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> a price or a rating only compares within its category, so the following pages keep the category filter.</p>
+</div>
+</div><div class="pf-star">
+<div class="pf-star-lbl"><span data-lang-show="fr">Question 2 · Où se Concentrent l'Attention et la Satisfaction ?</span><span data-lang-show="en">Question 2 · Where Do Attention and Satisfaction Concentrate?</span></div>
+<figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/Sephora_PowerBI/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure>
+<div data-lang-show="fr">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li>Le maquillage concentre 43,1 % des avis pour 27,9 % des produits. À l'inverse, les cheveux (9,8 % des avis pour 17,2 % des produits) et les parfums (9,7 % pour 16,9 %) sont peu commentés.</li>
+<li>25,7 % des produits sont notés sous 4★.</li>
+<li>La note moyenne monte avec le prix, de 4,08 sous 25 $ à 4,27 au-delà de 100 $, et les nouveautés sont mieux notées (4,40 contre 4,18).</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>À retenir :</strong> l'attention des clientes ne suit pas le poids des catégories dans le catalogue. En cheveux et en parfums, de nombreux produits ont peu d'avis, donc des notes moins fiables et moins de preuve sociale pour les clientes.</p>
+</div>
+<div data-lang-show="en">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li>Makeup accounts for 43.1% of reviews with 27.9% of products. Conversely, hair (9.8% of reviews for 17.2% of products) and fragrance (9.7% for 16.9%) are lightly reviewed.</li>
+<li>25.7% of products are rated below 4★.</li>
+<li>The average rating rises with price, from 4.08 under $25 to 4.27 above $100, and new products are rated higher (4.40 against 4.18).</li>
+</ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> customer attention does not follow each category's weight in the catalogue. In hair and fragrance, many products have few reviews, hence less reliable ratings and less social proof for customers.</p>
+</div>
+</div><div class="pf-star">
+<div class="pf-star-lbl"><span data-lang-show="fr">Question 3 · Quels Produits Défendre, Révéler ou Corriger ?</span><span data-lang-show="en">Question 3 · Which Products to Defend, Surface or Fix?</span></div>
+<div data-lang-show="fr">
+<p class="pf-star-txt">Pour classer les produits, j'ai adapté la matrice BCG : le volume d'avis (visibilité) et la note (satisfaction) remplacent la croissance du marché et la part de marché, avec les médianes du catalogue comme seuils (122 avis et 4,29★).</p>
+</div>
+<div data-lang-show="en">
+<p class="pf-star-txt">To sort the products, I adapted the BCG matrix: review volume (visibility) and rating (satisfaction) replace market growth and market share, with the catalogue medians as thresholds (122 reviews and 4.29★).</p>
+</div>
+<figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/Sephora_PowerBI/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Portfolio Matrix" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-2.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 2 du dashboard · Portfolio Matrix</span><span data-lang-show="en">Dashboard page 2 · Portfolio Matrix</span></figcaption></figure>
+<div data-lang-show="fr">
+<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
+<li><strong>Hero (Stars), 2 307 produits (27,2 %) :</strong> volume et note élevés. À protéger et à mettre en avant. Top brand : Anastasia Beverly Hills.</li>
+<li><strong>Hidden Gems (Question Marks), 1 801 produits (21,2 %) :</strong> la note moyenne la plus élevée (4,63), mais une médiane de 30 avis contre 416 pour les Hero. 34,1 % sont vendus uniquement en ligne (11,9 % des Hero), 11,4 % sont des éditions limitées (1,1 %) et 9,2 % sont en rupture (3,8 %) : leur faible visibilité tient aussi à la distribution, pas seulement au marketing.</li>
+<li><strong>Risk, 1 815 produits (21,4 %) :</strong> beaucoup d'avis mais une note sous la médiane (3,99 en moyenne), et la médiane de favoris la plus haute (29K, contre 21K pour les Hero) : beaucoup d'attentes déçues, donc un risque de réputation.</li>
+<li><strong>Underperformers (Dogs), 2 293 produits (27,0 %) :</strong> peu d'avis et une note faible. Candidats à la rationalisation de l'assortiment, à confirmer par les ventes.</li>
+<li><strong>Non notés, 278 produits :</strong> invisibles dans les recherches filtrées par avis.</li>
 </ul>
 </div>
 <div data-lang-show="en">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Hero (Stars), 2,307 products (27.2%):</strong> High volume + high rating (≥ 4.29). Protect, amplify, feature. Top brand: Anastasia Beverly Hills.</li>
-<li><strong>Hidden Gems (Question Marks), 1,801 products (21.2%):</strong> High rating but low volume: untapped marketing upside. Remove distribution barriers first, then target with visibility campaigns and influencer seeding to move them into the Hero segment.</li>
-<li><strong>Risk, 1,815 products (21.4%):</strong> High volume but low rating: reputation risk. Reformulate or delist as a priority before negative reviews erode the overall brand.</li>
-<li><strong>Underperformers (Dogs), 2,293 products (27.0%):</strong> Low volume + low rating. Candidates for assortment rationalisation, to be confirmed with sales data.</li>
-<li><strong>Unrated, 278 products:</strong> Invisible in review-filtered searches: activate review collection programs as first priority.</li>
+<li><strong>Hero (Stars), 2,307 products (27.2%):</strong> high volume and high rating. To protect and feature. Top brand: Anastasia Beverly Hills.</li>
+<li><strong>Hidden Gems (Question Marks), 1,801 products (21.2%):</strong> the highest average rating (4.63), but a median of 30 reviews against 416 for Heroes. 34.1% are sold online only (11.9% of Heroes), 11.4% are limited editions (1.1%) and 9.2% are out of stock (3.8%): their low visibility also comes from distribution, not only from marketing.</li>
+<li><strong>Risk, 1,815 products (21.4%):</strong> many reviews but a rating below the median (3.99 on average), and the highest median loves (29K, against 21K for Heroes): high expectations let down, hence a reputation risk.</li>
+<li><strong>Underperformers (Dogs), 2,293 products (27.0%):</strong> few reviews and a low rating. Candidates for assortment rationalisation, to be confirmed with sales data.</li>
+<li><strong>Unrated, 278 products:</strong> invisible in review-filtered searches.</li>
 </ul>
 </div>
 </div><div class="pf-star">
-<div class="pf-star-lbl"><span data-lang-show="fr">Dashboard Power BI · 4 Pages</span><span data-lang-show="en">Power BI Dashboard · 4 Pages</span></div>
+<div class="pf-star-lbl"><span data-lang-show="fr">Question 4 · Que Disent les Clientes des Soins de la Peau ?</span><span data-lang-show="en">Question 4 · What Do Customers Say About Skincare?</span></div>
 <div data-lang-show="fr">
-<p class="pf-star-txt">Pour rendre la segmentation vérifiable, je l'ai reconstruite dans Power BI : nettoyage et typage des données dans Power Query (les cinq fichiers d'avis réunis en une seule table), modèle en étoile avec table calendrier, mesures DAX et filtres par catégorie, marque et produit.</p>
-<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Product Overview :</strong> le catalogue (8 494 produits, 304 marques, prix moyen 51,66 $), sa répartition par catégorie et par tranche de prix.</li>
-<li><strong>Portfolio Matrix :</strong> chaque produit placé selon sa note et son volume d'avis (échelle logarithmique), coupé aux médianes de 122 avis et 4,29★, avec le profil de chaque segment et ses produits les plus commentés.</li>
-<li><strong>Customer Voice :</strong> 3 685 250 avis comptés sur les fiches produits, part des avis face à la part du catalogue, note par tranche de prix.</li>
-<li><strong>Customer Voice - Skincare :</strong> les 1 094 411 avis individuels des soins de la peau, leur évolution par trimestre et les thèmes qu'ils citent.</li>
-</ul>
+<p class="pf-star-txt">Le jeu de données ne contient d'avis individuels que pour les soins de la peau : 1 094 411 avis, analysés pour comprendre ce qui fait baisser une note.</p>
 </div>
 <div data-lang-show="en">
-<p class="pf-star-txt">To make the segmentation verifiable, I rebuilt it in Power BI: data cleaning and typing in Power Query (the five review files combined into one table), a star schema with a calendar table, DAX measures, and category, brand and product filters.</p>
-<ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Product Overview:</strong> the catalogue (8,494 products, 304 brands, $51.66 average price), split by category and price tier.</li>
-<li><strong>Portfolio Matrix:</strong> every product placed by rating and review volume (log scale), split at the medians of 122 reviews and 4.29★, with each segment's profile and its most reviewed products.</li>
-<li><strong>Customer Voice:</strong> 3,685,250 reviews counted on product pages, share of reviews against share of catalogue, rating by price tier.</li>
-<li><strong>Customer Voice - Skincare:</strong> the 1,094,411 individual skincare reviews, their trend by quarter and the themes they mention.</li>
-</ul>
+<p class="pf-star-txt">The dataset only holds individual reviews for skincare: 1,094,411 reviews, analysed to understand what pulls a rating down.</p>
 </div>
-<div class="ig-carousel-wrap">
-<button aria-label="Précédent / Previous" class="ig-nav ig-nav--prev">‹</button>
-<div class="ig-carousel" id="sephoraBI">
-<div class="ig-item ig-item--slide"><a href="assets/Sephora_PowerBI/sephora-powerbi-1.webp" rel="noopener noreferrer" target="_blank"><img alt="Dashboard Power BI Sephora – Product Overview" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-1.webp" width="1920" height="1080"/></a></div>
-<div class="ig-item ig-item--slide"><a href="assets/Sephora_PowerBI/sephora-powerbi-2.webp" rel="noopener noreferrer" target="_blank"><img alt="Dashboard Power BI Sephora – Portfolio Matrix" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-2.webp" width="1920" height="1080"/></a></div>
-<div class="ig-item ig-item--slide"><a href="assets/Sephora_PowerBI/sephora-powerbi-3.webp" rel="noopener noreferrer" target="_blank"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-3.webp" width="1920" height="1080"/></a></div>
-<div class="ig-item ig-item--slide"><a href="assets/Sephora_PowerBI/sephora-powerbi-4.webp" rel="noopener noreferrer" target="_blank"><img alt="Dashboard Power BI Sephora – Customer Voice - Skincare" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-4.webp" width="1920" height="1080"/></a></div>
-</div>
-<button aria-label="Suivant / Next" class="ig-nav ig-nav--next">›</button>
-<div class="ig-dots" id="sephoraBIDots"></div>
-</div>
-</div><div class="pf-star">
-<div class="pf-star-lbl"><span data-lang-show="fr">Ce que le Dashboard Ajoute</span><span data-lang-show="en">What the Dashboard Adds</span></div>
+<figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/Sephora_PowerBI/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice - Skincare" loading="lazy" src="assets/Sephora_PowerBI/sephora-powerbi-4.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 4 du dashboard · Customer Voice - Skincare</span><span data-lang-show="en">Dashboard page 4 · Customer Voice - Skincare</span></figcaption></figure>
 <div data-lang-show="fr">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Hidden Gems :</strong> la note moyenne la plus élevée (4,63), mais une médiane de 30 avis contre 416 pour les Hero. 34,1 % sont vendus uniquement en ligne (11,9 % des Hero), 11,4 % sont des éditions limitées (1,1 %) et 9,2 % sont en rupture (3,8 %) : leur faible visibilité tient aussi à la distribution, pas seulement au marketing.</li>
-<li><strong>Risk :</strong> la médiane de favoris la plus haute (29K, contre 21K pour les Hero) : beaucoup d'attentes, puis une note sous la médiane (3,99 en moyenne).</li>
-<li><strong>Catégories :</strong> le maquillage concentre 43,1 % des avis pour 27,9 % des produits. La note moyenne monte avec le prix, de 4,08 sous 25 $ à 4,27 au-delà de 100 $, et les nouveautés sont mieux notées (4,40 contre 4,18).</li>
-<li><strong>Soins de la peau :</strong> 84,0 % des avis recommandent le produit et 17,9 % sont notés sous 4★. Dans ces avis, l'irritation (24,1 % contre 19,4 % de l'ensemble) et le rapport qualité-prix (23,0 % contre 15,9 %) reviennent plus souvent, l'hydratation moins souvent (37,3 % contre 44,9 %). Thèmes repérés par mots-clés : une mention n'est pas toujours une plainte.</li>
+<li>84,0 % des avis recommandent le produit et 17,9 % sont notés sous 4★.</li>
+<li>Dans les avis sous 4★, l'irritation (24,1 % contre 19,4 % de l'ensemble) et le rapport qualité-prix (23,0 % contre 15,9 %) reviennent plus souvent, l'hydratation moins souvent (37,3 % contre 44,9 %).</li>
+<li>Thèmes repérés par mots-clés : une mention n'est pas toujours une plainte.</li>
 </ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>À retenir :</strong> en soins de la peau, une note basse parle d'abord de tolérance et de prix. Ce sont les premiers points à vérifier dans les avis des produits Risk.</p>
 </div>
 <div data-lang-show="en">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Hidden Gems:</strong> the highest average rating (4.63), but a median of 30 reviews against 416 for Heroes. 34.1% are sold online only (11.9% of Heroes), 11.4% are limited editions (1.1%) and 9.2% are out of stock (3.8%): their low visibility also comes from distribution, not only from marketing.</li>
-<li><strong>Risk:</strong> the highest median loves (29K, against 21K for Heroes): high expectations, then a rating below the median (3.99 on average).</li>
-<li><strong>Categories:</strong> makeup accounts for 43.1% of reviews with 27.9% of products. The average rating rises with price, from 4.08 under $25 to 4.27 above $100, and new products are rated higher (4.40 against 4.18).</li>
-<li><strong>Skincare:</strong> 84.0% of reviews recommend the product and 17.9% are rated below 4★. In those reviews, irritation (24.1% against 19.4% overall) and value for money (23.0% against 15.9%) come up more often, hydration less often (37.3% against 44.9%). Themes are detected by keywords: a mention is not always a complaint.</li>
+<li>84.0% of reviews recommend the product and 17.9% are rated below 4★.</li>
+<li>In reviews below 4★, irritation (24.1% against 19.4% overall) and value for money (23.0% against 15.9%) come up more often, hydration less often (37.3% against 44.9%).</li>
+<li>Themes are detected by keywords: a mention is not always a complaint.</li>
 </ul>
+<p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> in skincare, a low rating speaks first about tolerance and price. These are the first points to check in the reviews of Risk products.</p>
 </div>
 </div><div class="pf-star pf-star--insight">
 <div class="pf-star-lbl"><span data-lang-show="fr">Recommandations Priorisées</span><span data-lang-show="en">Prioritised Recommendations</span></div>
 <div data-lang-show="fr">
 <ol class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Priorité 1, les 1 815 produits Risk :</strong> le risque le plus visible, car beaucoup d'avis signifie beaucoup de clientes qui voient une note faible. Lire d'abord les avis négatifs des références les plus commentées : les avis précisent le type de peau, la carnation et la couleur des yeux, ce qui permet de distinguer un défaut du produit d'une teinte ou d'un public mal ciblé. Reformuler, mieux décrire ou déréférencer seulement ensuite. Indicateur : note moyenne du segment.</li>
-<li><strong>Priorité 2, les 1 801 Hidden Gems :</strong> le levier le moins coûteux, puisque ces produits sont déjà les mieux notés (4,63) et n'ont besoin d'aucune reformulation. Vérifier d'abord leur disponibilité : 34,1 % sont vendus uniquement en ligne et 9,2 % sont en rupture, contre 11,9 % et 3,8 % pour les Hero. Tester ensuite le seeding influenceur et la mise en avant éditoriale sur un échantillon, comparé à un groupe témoin, avant de généraliser. Indicateur : nouveaux avis par produit.</li>
-<li><strong>Priorité 3, les 278 produits non notés :</strong> invisibles dans les recherches filtrées par avis. Programme de collecte d'avis (échantillons, e-mail après achat).</li>
+<li><strong>Priorité 1, les 1 815 produits Risk (questions 3 et 4) :</strong> le risque le plus visible, car beaucoup d'avis signifie beaucoup de clientes qui voient une note faible. Lire d'abord les avis négatifs des références les plus commentées, en commençant, pour les soins, par l'irritation et le rapport qualité-prix. Les avis précisent le type de peau, la carnation et la couleur des yeux, ce qui permet de distinguer un défaut du produit d'une teinte ou d'un public mal ciblé. Reformuler, mieux décrire ou déréférencer seulement ensuite. Indicateur : note moyenne du segment.</li>
+<li><strong>Priorité 2, les 1 801 Hidden Gems (question 3) :</strong> le levier le moins coûteux, puisque ces produits sont déjà les mieux notés (4,63) et n'ont besoin d'aucune reformulation. Vérifier d'abord leur disponibilité : 34,1 % sont vendus uniquement en ligne et 9,2 % sont en rupture, contre 11,9 % et 3,8 % pour les Hero. Tester ensuite le seeding influenceur et la mise en avant éditoriale sur un échantillon, comparé à un groupe témoin, avant de généraliser. Indicateur : nouveaux avis par produit.</li>
+<li><strong>Priorité 3, les avis manquants (questions 2 et 3) :</strong> les 278 produits non notés d'abord, invisibles dans les recherches filtrées par avis, puis les catégories peu commentées au regard de leur poids dans le catalogue (cheveux, parfums). Programme de collecte d'avis (échantillons, e-mail après achat). Indicateur : avis par produit dans ces catégories.</li>
 <li><strong>À ne pas faire :</strong> déréférencer les 2 293 Underperformers sur la seule base des avis, sans les croiser avec les ventes et la marge.</li>
 </ol>
 </div>
 <div data-lang-show="en">
 <ol class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
-<li><strong>Priority 1, the 1,815 Risk products:</strong> the most visible risk, since many reviews mean many customers seeing a low rating. Start by reading the negative reviews of the most reviewed references: reviews record skin type, skin tone and eye colour, which helps separate a product defect from a shade or audience mismatch. Only then reformulate, rewrite the product page or delist. Indicator: the segment's average rating.</li>
-<li><strong>Priority 2, the 1,801 Hidden Gems:</strong> the cheapest lever, as these products already have the highest rating (4.63) and need no reformulation. Check availability first: 34.1% are sold online only and 9.2% are out of stock, against 11.9% and 3.8% for Heroes. Then test influencer seeding and editorial promotion on a sample, against a control group, before rolling it out. Indicator: new reviews per product.</li>
-<li><strong>Priority 3, the 278 unrated products:</strong> invisible in review-filtered searches. Review collection programme (samples, post-purchase e-mail).</li>
+<li><strong>Priority 1, the 1,815 Risk products (questions 3 and 4):</strong> the most visible risk, since many reviews mean many customers seeing a low rating. Start by reading the negative reviews of the most reviewed references, beginning, for skincare, with irritation and value for money. Reviews record skin type, skin tone and eye colour, which helps separate a product defect from a shade or audience mismatch. Only then reformulate, rewrite the product page or delist. Indicator: the segment's average rating.</li>
+<li><strong>Priority 2, the 1,801 Hidden Gems (question 3):</strong> the cheapest lever, as these products already have the highest rating (4.63) and need no reformulation. Check availability first: 34.1% are sold online only and 9.2% are out of stock, against 11.9% and 3.8% for Heroes. Then test influencer seeding and editorial promotion on a sample, against a control group, before rolling it out. Indicator: new reviews per product.</li>
+<li><strong>Priority 3, missing reviews (questions 2 and 3):</strong> first the 278 unrated products, invisible in review-filtered searches, then the categories that are lightly reviewed for their weight in the catalogue (hair, fragrance). Review collection programme (samples, post-purchase e-mail). Indicator: reviews per product in these categories.</li>
 <li><strong>What not to do:</strong> delist the 2,293 Underperformers on reviews alone, without checking sales and margin.</li>
 </ol>
 </div>
-</div><div class="pf-star">
+</div>
+<div class="pf-star">
 <div class="pf-star-lbl"><span data-lang-show="fr">Limites &amp; Prochaine Étape</span><span data-lang-show="en">Limitations &amp; Next Step</span></div>
 <div data-lang-show="fr">
 <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
@@ -2362,7 +2228,6 @@
     initCarousel('yoloCarousel',  'yoloDots',    3);  // AIESEC: 3 per view
     initCarousel('weeklyFR',      'weeklyDotsFR', 2);  // Weekly report FR: 2 per view
     initCarousel('weeklyEN',      'weeklyDotsEN', 2);  // Weekly report EN: 2 per view
-    initCarousel('sephoraBI',     'sephoraBIDots', 2); // Sephora Power BI pages: 2 per view
   </script>
 
   <!-- ── Éditorial interactif ────────────────────────── -->
