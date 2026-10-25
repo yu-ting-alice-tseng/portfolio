@@ -19,3 +19,8 @@ auto-sync.log
 # Fichiers de session R
 .RData
 .Rhistory
+
+# Power BI : le .pbix (données incluses, souvent plus de 100 Mo) et le cache local d'un projet .pbip
+*.pbix
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
