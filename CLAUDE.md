@@ -280,13 +280,12 @@ Order proof cards within a skill by importance (descending):
   - **Libellés des sous-catégories sur une seule ligne** (colonne à la largeur du plus long libellé).
   - **Capacités d'analyse dans le bloc Data** (« Data & Analytics ») sur les CV General, Data et Finance : Google Analytics, Études de Marché, Benchmarking, Analyse Stratégique.
   - **CV Marketing** (demande de l'utilisatrice) :
-    - Langues en tête des compétences ;
     - Marketing : « Stratégie » = Études de Marché · Veille Concurrentielle · Benchmarking (le cœur du métier), puis « Marketing Performance » avec SEO et SEA côte à côte (sigles seuls : SEO, SEA, SMM), SEO réduit à l'essentiel (SEO Technique, SEO On-Page, Recherche de Mots-Clés, Semrush, Google Search Console) ;
     - retirés du CV : Positionnement, Planification de Campagnes, Contenu, Événementiel & Coordination, SEO Off-Page et les outils SEO secondaires (`OMIT_PAGE`) ;
     - Data : « Dashboards & Visualisation » = Excel - TOSA 950/1000 · Power BI · Tableau · SQL · Python · R, regroupés par famille (Tableau et SQL repris des autres pages CV) ;
     - expérience « Assistante d'enseignement » retirée du PDF (`SKIP_ITEMS`), elle reste sur la page.
   - Deux-points des sous-libellés : « SEO : » en français (espace insécable), « SEO: » en anglais.
-  - **Langues par ordre d'importance** : français, anglais, japonais, puis mandarin.
+  - **Langues en tête des compétences sur tous les CV**, par ordre d'importance : français, anglais, japonais, puis mandarin.
   - **Retiré du CV** : « Développement Web » (HTML · CSS), jugé secondaire. Il reste sur le site.
 - **Pas de page presque vide** : si la dernière page ne porte que quelques lignes, le script resserre le contenu (7 % au plus) pour tenir sur une page de moins.
 

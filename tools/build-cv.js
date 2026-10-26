@@ -54,6 +54,7 @@ const SKILLS = {
     AI_ROW, OFFICE_ROW,
   ],
   index: [
+    LANG_ROW,
     { title: 'blockMarketing', groups: [
       { label: 'subMktAcq', skills: ['mkt-seo', 'mkt-sea', 'mkt-meta', 'mkt-xandr', 'mkt-gam'] },
       { label: 'subMktSocial', skills: ['mkt-xhs', 'mkt-instagram', 'mkt-facebook', 'mkt-design'] },
@@ -75,9 +76,10 @@ const SKILLS = {
       { label: 'subSoft3', skills: ['soft-communication'] },
     ] },
     { title: 'blockAI', skills: ['ai-chatgpt', 'ai-claude', 'ai-gemini', 'ai-vibe-coding', 'ai-ads'] },
-    OFFICE_ROW, LANG_ROW,
+    OFFICE_ROW,
   ],
   data: [
+    LANG_ROW,
     { title: 'blockData', groups: [
       { label: 'subData1', skills: ['data-python', 'data-sql', 'data-r'] },
       { label: 'subData2', skills: ['data-excel', 'data-powerbi', 'data-tableau'] },
@@ -85,9 +87,10 @@ const SKILLS = {
       { label: 'subDataQual', skills: ['data-kpi', 'data-segmentation', 'mkt-research'] },
       { label: 'subCons1', skills: ['cons-strategy', 'cons-benchmark'] },
     ] },
-    AI_ROW, OFFICE_ROW, LANG_ROW,
+    AI_ROW, OFFICE_ROW,
   ],
   finance: [
+    LANG_ROW,
     { title: 'blockFinance', groups: [
       { label: 'subFin2', skills: ['fin-pnl', 'fin-variance', 'fin-modeling', 'fin-cost-control', 'fin-accounting', 'fin-management'] },
       { label: 'subFin1', skills: ['fin-decision', 'fin-international', 'fin-green'] },
@@ -102,7 +105,7 @@ const SKILLS = {
     { title: 'blockConsulting', groups: [
       { label: 'subCons2', skills: ['cons-business-case', 'cons-storytelling'] },
     ] },
-    AI_ROW, OFFICE_ROW, LANG_ROW,
+    AI_ROW, OFFICE_ROW,
   ],
 };
 const OMIT = ['dev-html', 'dev-css'];
