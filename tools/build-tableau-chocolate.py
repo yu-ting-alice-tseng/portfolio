@@ -2,9 +2,14 @@
 
 Reads the raw Kaggle files in assets/SQL_Chocolate Sales/ and writes to
 assets/Tableau_Chocolate/:
-  chocolate_tableau.csv   sales aggregated by month x channel x country x product
-  Chocolat_FMCG_FR.twb    French workbook
-  Chocolate_FMCG_EN.twb   English workbook
+  Chocolat_FMCG_FR_V{n}.twb     French workbook
+  Chocolate_FMCG_EN_V{n}.twb    English workbook
+  chocolate_tableau_V{n}.csv    sales aggregated by month x channel x country x
+                                product (only when the data is rebuilt)
+
+Versioned files (request of the user): every run writes the next version
+number and never overwrites an earlier file. With --no-data, the workbooks
+read the most recent data file (chocolate_tableau.csv or _V{n}.csv).
 
 Cleaning: the 9,764 sales rows whose product_id is not in products.csv
 (P0000 and P0201) are dropped, leaving the 990,236 transactions of the study.
@@ -17,9 +22,10 @@ schema requires but older Tableau versions do not know, and <sort class='compute
 which Tableau 2026.3 expects instead of the schema's <computed-sort>. Validate with:
   python3 tools/build-tableau-chocolate.py --xsd path/to/twb_2026.1.0.xsd
 
-Usage: python3 tools/build-tableau-chocolate.py [--xsd FILE]
+Usage: python3 tools/build-tableau-chocolate.py [--no-data] [--xsd FILE]
 """
 
+import re
 import sys
 import uuid
 from pathlib import Path
@@ -47,7 +53,7 @@ MONTH_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 # ---------------------------------------------------------------- data
 
-def build_data():
+def build_data(csv_name):
     sales = pd.read_csv(SRC / "sales.csv", sep=";")
     products = pd.read_csv(SRC / "products.csv", sep=";")
     stores = pd.read_csv(SRC / "stores.csv")
@@ -84,7 +90,7 @@ def build_data():
     cols = ["year", "month", "month_fr", "month_en", "channel", "country_fr",
             "country_en", "product_id", "product_name", "brand", "category",
             "transactions", "units", "revenue", "cost", "profit", "sku_rank", "sku_cum_share", "sku_band"]
-    agg[cols].to_csv(OUT / "chocolate_tableau.csv", index=False, encoding="utf-8")
+    agg[cols].to_csv(OUT / csv_name, index=False, encoding="utf-8")
 
     # Figures shown on portfolio-data.html: fail loudly if they drift.
     R = df["revenue"].sum()
@@ -103,7 +109,7 @@ def build_data():
 
 TEXT = {
     "fr": {
-        "file": "Chocolat_FMCG_FR.twb", "locale": "fr_FR",
+        "file": "Chocolat_FMCG_FR", "locale": "fr_FR",
         "country": "country_fr", "month": "month_fr",
         "dash": "Diagnostic Commercial",
         "title": "Chocolat FMCG — Diagnostic Commercial 2023 – 2024",
@@ -158,7 +164,7 @@ TEXT = {
                    "Projet personnel · Yu-Ting Tseng"),
     },
     "en": {
-        "file": "Chocolate_FMCG_EN.twb", "locale": "en_US",
+        "file": "Chocolate_FMCG_EN", "locale": "en_US",
         "country": "country_en", "month": "month_en",
         "dash": "Commercial Diagnostic",
         "title": "Chocolate FMCG — Commercial Diagnostic 2023 – 2024",
@@ -417,7 +423,7 @@ def datasources_xml(lang):
         extra += column_xml(name, cap, dt, role, typ, fmt, formula)
     style = ""
     return ("  <datasources>\n"
-            + datasource_xml(MAIN, "Chocolate Sales", "chocolate_tableau.csv", MAIN_COLS, main_caps, extra, style)
+            + datasource_xml(MAIN, "Chocolate Sales", DATA_CSV, MAIN_COLS, main_caps, extra, style)
             + "  </datasources>\n")
 
 
@@ -850,16 +856,34 @@ def workbook_xml(lang):
             + "</workbook>\n")
 
 
+DATA_CSV = "chocolate_tableau.csv"
+
+
+def version_of(path):
+    m = re.search(r"_V(\d+)\.\w+$", path.name)
+    return int(m.group(1)) if m else 0
+
+
 def main():
+    global DATA_CSV
     xsd = None
     if "--xsd" in sys.argv:
         xsd = sys.argv[sys.argv.index("--xsd") + 1]
     OUT.mkdir(parents=True, exist_ok=True)
+    existing = list(OUT.glob("Chocolat*_V*.twb")) + list(OUT.glob("chocolate_tableau*.csv"))
+    n = max((version_of(f) for f in existing), default=0) + 1
     if "--no-data" not in sys.argv:
-        build_data()
+        DATA_CSV = f"chocolate_tableau_V{n}.csv"
+        build_data(DATA_CSV)
+    else:
+        csvs = sorted(OUT.glob("chocolate_tableau*.csv"), key=version_of)
+        DATA_CSV = csvs[-1].name
+    print("version", n, "· data", DATA_CSV)
     ok = True
     for lang in ("fr", "en"):
-        path = OUT / TEXT[lang]["file"]
+        path = OUT / f"{TEXT[lang]['file']}_V{n}.twb"
+        if path.exists():
+            sys.exit(f"{path.name} already exists: versions are never overwritten")
         path.write_text(workbook_xml(lang), encoding="utf-8")
         print("wrote", path.relative_to(ROOT))
         if xsd:
