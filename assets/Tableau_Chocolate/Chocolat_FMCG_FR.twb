@@ -981,7 +981,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run bold='true' fontcolor="#16211f" fontname="Tableau Book" fontsize='11'>Panier moyen, unités par transaction et marge : identiques sur les 4 canaux</run>
+              <run bold='true' fontcolor="#16211f" fontname="Tableau Book" fontsize='11'>Panier, unités et marge : identiques sur les 4 canaux</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1115,11 +1115,14 @@
             <column caption="Position" datatype="string" name="[Calc_Sign]" role="dimension" type="nominal">
               <calculation class='tableau' formula='IF [Calc_Ecart] &gt;= 0 THEN "Au-dessus de la moyenne" ELSE "En dessous de la moyenne" END' />
             </column>
+            <column datatype="integer" name="[month]" role="dimension" type="ordinal" />
             <column-instance column="[month_fr]" derivation="None" name="[none:month_fr:nk]" pivot='key' type="nominal" />
             <column-instance column="[Calc_Index]" derivation="User" name="[usr:Calc_Index:qk]" pivot='key' type="quantitative" />
             <column-instance column="[Calc_Ecart]" derivation="User" name="[usr:Calc_Ecart:qk]" pivot='key' type="quantitative" />
             <column-instance column="[Calc_Sign]" derivation="User" name="[usr:Calc_Sign:nk]" pivot='key' type="nominal" />
+            <column-instance column="[month]" derivation="Min" name="[min:month:qk]" pivot='key' type="quantitative" />
           </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:month_fr:nk]" direction='ASC' using="[federated.choco_main].[min:month:qk]" />
           <aggregation value='true' />
         </view>
         <style>
@@ -1136,6 +1139,16 @@
           </style-rule>
           <style-rule element='table'>
             <format attr='background-color' value="#eef3ef" />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field="[federated.choco_main].[usr:Calc_Sign:nk]" type='palette'>
+              <map to="#0d9488">
+                <bucket>"Au-dessus de la moyenne"</bucket>
+              </map>
+              <map to="#9fcfc9">
+                <bucket>"En dessous de la moyenne"</bucket>
+              </map>
+            </encoding>
           </style-rule>
         </style>
         <panes>
@@ -1228,10 +1241,10 @@
           <format attr='background-color' value="#e4ece7" />
         </style-rule>
       </style>
-      <size maxheight='1180' maxwidth='1200' minheight='1180' minwidth='1200' sizing-mode='fixed' />
+      <size maxheight='1250' maxwidth='1200' minheight='1250' minwidth='1200' sizing-mode='fixed' />
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='5932' id='3' w='97333' x='1333' y='847' type-v2='text'>
+          <zone h='5600' id='3' w='97333' x='1333' y='800' type-v2='text'>
             <formatted-text>
               <run bold='true' fontcolor="#16211f" fontname="Tableau Book" fontsize='20'>Chocolat FMCG — Diagnostic Commercial 2023 – 2024</run>
               <run>Æ&#10;</run>
@@ -1243,7 +1256,7 @@
               <format attr='background-color' value="#e4ece7" />
             </zone-style>
           </zone>
-          <zone h='9322' id='4' w='24333' x='1333' y='7288' name="KPI · CA" show-title='true'>
+          <zone h='8800' id='4' w='24333' x='1333' y='6880' name="KPI · CA" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1253,7 +1266,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='9322' id='5' w='24333' x='25667' y='7288' name="KPI · Transactions" show-title='true'>
+          <zone h='8800' id='5' w='24333' x='25667' y='6880' name="KPI · Transactions" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1263,7 +1276,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='9322' id='6' w='24333' x='50000' y='7288' name="KPI · Marge" show-title='true'>
+          <zone h='8800' id='6' w='24333' x='50000' y='6880' name="KPI · Marge" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1273,7 +1286,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='9322' id='7' w='24333' x='74333' y='7288' name="KPI · Panier Moyen" show-title='true'>
+          <zone h='8800' id='7' w='24333' x='74333' y='6880' name="KPI · Panier Moyen" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1283,28 +1296,28 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='4746' id='8' w='32444' x='1333' y='17119' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
+          <zone h='4480' id='8' w='32444' x='1333' y='16160' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#e4ece7" />
             </zone-style>
           </zone>
-          <zone h='4746' id='9' w='32444' x='33778' y='17119' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:country_fr:nk]" type-v2='filter' values='database'>
+          <zone h='4480' id='9' w='32444' x='33778' y='16160' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:country_fr:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#e4ece7" />
             </zone-style>
           </zone>
-          <zone h='4746' id='10' w='32444' x='66222' y='17119' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
+          <zone h='4480' id='10' w='32444' x='66222' y='16160' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#e4ece7" />
             </zone-style>
           </zone>
-          <zone h='19492' id='11' w='48667' x='1333' y='22373' name="Part du CA par Canal" show-title='true'>
+          <zone h='21600' id='11' w='48667' x='1333' y='21120' name="Part du CA par Canal" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1314,7 +1327,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='19492' id='12' w='48667' x='50000' y='22373' name="Canaux Identiques" show-title='true'>
+          <zone h='21600' id='12' w='48667' x='50000' y='21120' name="Canaux Identiques" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1324,7 +1337,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='22034' id='13' w='48667' x='1333' y='42373' name="Saisonnalité" show-title='true'>
+          <zone h='21600' id='13' w='48667' x='1333' y='43200' name="Saisonnalité" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1334,7 +1347,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='22034' id='14' w='48667' x='50000' y='42373' name="Courbe de Pareto" show-title='true'>
+          <zone h='21600' id='14' w='48667' x='50000' y='43200' name="Courbe de Pareto" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1344,7 +1357,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='19492' id='15' w='48667' x='1333' y='64915' name="Part du CA par Pays" show-title='true'>
+          <zone h='23200' id='15' w='48667' x='1333' y='65280' name="Part du CA par Pays" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1354,7 +1367,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='19492' id='16' w='48667' x='50000' y='64915' name="Part du CA par Catégorie" show-title='true'>
+          <zone h='23200' id='16' w='48667' x='50000' y='65280' name="Part du CA par Catégorie" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#c3cfc9" />
               <format attr='border-style' value='solid' />
@@ -1364,7 +1377,7 @@
               <format attr='background-color' value="#eef3ef" />
             </zone-style>
           </zone>
-          <zone h='14407' id='17' w='97333' x='1333' y='84915' type-v2='text'>
+          <zone h='10400' id='17' w='97333' x='1333' y='88960' type-v2='text'>
             <formatted-text>
               <run fontcolor="#44524f" fontname="Tableau Book" fontsize='9'>Contrôle qualité : indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël ni à la Saint-Valentin. Données vraisemblablement simulées : les constats décrivent le jeu de données, les recommandations restent des hypothèses. Les filtres s'appliquent à tous les graphiques sauf la courbe de Pareto (ensemble des données).</run>
               <run>Æ&#10;</run>

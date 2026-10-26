@@ -68,8 +68,8 @@ def build_data():
                   revenue=("revenue", "sum"), cost=("cost", "sum"),
                   profit=("profit", "sum"))
              .rename(columns={"store_type": "channel"}))
-    agg["month_fr"] = agg["month"].map(lambda m: f"{m:02d} {MONTH_FR[m - 1]}")
-    agg["month_en"] = agg["month"].map(lambda m: f"{m:02d} {MONTH_EN[m - 1]}")
+    agg["month_fr"] = agg["month"].map(lambda m: MONTH_FR[m - 1])
+    agg["month_en"] = agg["month"].map(lambda m: MONTH_EN[m - 1])
     for col in ("revenue", "cost", "profit"):
         agg[col] = agg[col].round(2)
     cols = ["year", "month", "month_fr", "month_en", "channel", "country_fr",
@@ -125,7 +125,7 @@ TEXT = {
         },
         "titles": {
             "canal": "Part du CA par canal",
-            "ident": "Panier moyen, unités par transaction et marge : identiques sur les 4 canaux",
+            "ident": "Panier, unités et marge : identiques sur les 4 canaux",
             "saison": "Indice de saisonnalité (100 = mois moyen) : février et décembre sans pic",
             "pareto": "Courbe de Pareto : 160 SKUs sur 200 pour atteindre 80 % du CA",
             "pays": "Part du CA par pays",
@@ -171,7 +171,7 @@ TEXT = {
         },
         "titles": {
             "canal": "Revenue share by channel",
-            "ident": "Average order value, units per transaction and margin: identical across all 4 channels",
+            "ident": "Basket, units and margin: identical across the 4 channels",
             "saison": "Seasonality index (100 = average month): no peak in February or December",
             "pareto": "Pareto curve: 160 of 200 SKUs to reach 80% of revenue",
             "pays": "Revenue share by country",
@@ -428,7 +428,7 @@ def datasources_xml(lang):
 
 def inst(field, deriv="None", typ="nominal"):
     """Column-instance name for a field: [none:channel:nk], [sum:revenue:qk], [usr:Calc_AOV:qk]."""
-    prefix = {"None": "none", "Sum": "sum", "User": "usr"}[deriv]
+    prefix = {"None": "none", "Sum": "sum", "User": "usr", "Min": "min"}[deriv]
     suffix = {"nominal": "nk", "ordinal": "ok", "quantitative": "qk"}[typ]
     return f"[{prefix}:{field}:{suffix}]"
 
@@ -604,14 +604,29 @@ def worksheets_xml(lang):
     gap = q(inst("Calc_Ecart", "User", "quantitative"))
     sign = q(inst("Calc_Sign", "User", "nominal"))
     idx = q(inst("Calc_Index", "User", "quantitative"))
-    deps = [dim(month), calc_dep("Calc_Index"), calc_dep("Calc_Ecart"), calc_dep("Calc_Sign", "nominal")]
+    deps = [dim(month), calc_dep("Calc_Index"), calc_dep("Calc_Ecart"), calc_dep("Calc_Sign", "nominal"),
+            ("month", "integer", "dimension", "ordinal", "Min", "quantitative", None)]
+    msort = (f"          <sort class='computed' column={a(mo)} direction='ASC' "
+             f"using={a(q(inst('month', 'Min', 'quantitative')))} />\n")
+    t = T["fields"]
+    palette = ("          <style-rule element='mark'>\n"
+               f"            <encoding attr='color' field={a(sign)} type='palette'>\n"
+               f"              <map to={a(TEAL)}>\n"
+               f"                <bucket>{escape(chr(34) + t['above'] + chr(34))}</bucket>\n"
+               "              </map>\n"
+               f"              <map to={a(TEAL_PALE)}>\n"
+               f"                <bucket>{escape(chr(34) + t['below'] + chr(34))}</bucket>\n"
+               "              </map>\n"
+               "            </encoding>\n"
+               "          </style-rule>\n")
     enc = (f"              <color column={a(sign)} />\n"
            f"              <text column={a(idx)} />\n")
     style = ("              <style-rule element='mark'>\n"
              "                <format attr='mark-labels-show' value='true' />\n"
              "              </style-rule>\n")
     out.append(worksheet_xml(lang, S["saison"], TT["saison"], M, deps, rows=gap, cols=mo,
-                             encodings=enc, pane_style=style, table_style=base_table_style()))
+                             encodings=enc, sort=msort, pane_style=style,
+                             table_style=base_table_style() + palette))
 
     # Pareto curve (static datasource, full dataset).
     rk = p(inst("rank", "None", "quantitative"))
@@ -659,7 +674,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1200, 1180
+W, H = 1200, 1250
 
 
 def px(v, total):
@@ -732,15 +747,15 @@ def dashboard_xml(lang):
         flt(G + i * fw, y, fw, 56, f)
     y += 62
     half = inner / 2
-    sheet(G, y, half, 230, S["canal"])
-    sheet(G + half, y, half, 230, S["ident"])
-    y += 236
-    sheet(G, y, half, 260, S["saison"])
-    sheet(G + half, y, half, 260, S["pareto"])
-    y += 266
-    sheet(G, y, half, 230, S["pays"])
-    sheet(G + half, y, half, 230, S["cat"])
-    y += 236
+    sheet(G, y, half, 270, S["canal"])
+    sheet(G + half, y, half, 270, S["ident"])
+    y += 276
+    sheet(G, y, half, 270, S["saison"])
+    sheet(G + half, y, half, 270, S["pareto"])
+    y += 276
+    sheet(G, y, half, 290, S["pays"])
+    sheet(G + half, y, half, 290, S["cat"])
+    y += 296
     text(G, y, inner, H - y - 8, run(T["note"], 9, MUTED) + br + run(T["source"], 9, MUTED))
 
     zones = "".join(z.items)

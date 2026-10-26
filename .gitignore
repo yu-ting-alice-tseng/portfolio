@@ -15,8 +15,9 @@ auto-sync.log
 
 # Fichiers verrou Office (Excel ouvert)
 ~$*
-# Tableau lock files
+# Tableau lock files and extracts (rebuilt by Tableau from the CSVs)
 ~*.twbr
+*.hyper
 
 # Fichiers de session R
 .RData
