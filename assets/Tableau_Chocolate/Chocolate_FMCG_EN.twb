@@ -694,7 +694,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Channel</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Revenue Share by Channel</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -760,7 +760,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Country</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Revenue Share by Country</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -826,7 +826,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Category</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Revenue Share by Category</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -892,7 +892,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Average Order Value, Units and Margin by Channel</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Average Order Value, Units and Margin by Channel</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1008,7 +1008,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Seasonality Index by Month (100 = Average Month)</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Seasonality Index by Month (100 = Average Month)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1078,7 +1078,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Band of 40 SKUs (Ranked by Revenue)</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Revenue Share by Band of 40 SKUs (Ranked by Revenue)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1148,22 +1148,43 @@
           <format attr='background-color' value="#F6EFE6" />
         </style-rule>
       </style>
-      <size maxheight='1600' maxwidth='1200' minheight='1600' minwidth='1200' sizing-mode='fixed' />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' sizing-mode='fixed' />
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='4750' id='3' w='97333' x='1333' y='625' type-v2='text'>
+          <zone h='7556' id='3' w='49000' x='1000' y='889' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='24'>Chocolate FMCG — Commercial Diagnostic 2023 – 2024</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='20'>Chocolate FMCG — Commercial Diagnostic 2023 – 2024</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands</run>
             </formatted-text>
             <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='6222' id='4' w='16333' x='50000' y='1333' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
+            <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='8125' id='4' w='24333' x='1333' y='5750' name="KPI · Revenue" show-title='true'>
+          <zone h='6222' id='5' w='16333' x='66333' y='1333' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:country_en:nk]" type-v2='filter' values='database'>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='6222' id='6' w='16333' x='82667' y='1333' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='11778' id='7' w='24500' x='1000' y='8889' name="KPI · Revenue" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
@@ -1173,7 +1194,7 @@
               <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='8125' id='5' w='24333' x='25667' y='5750' name="KPI · Transactions" show-title='true'>
+          <zone h='11778' id='8' w='24500' x='25500' y='8889' name="KPI · Transactions" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
@@ -1183,7 +1204,7 @@
               <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='8125' id='6' w='24333' x='50000' y='5750' name="KPI · Margin" show-title='true'>
+          <zone h='11778' id='9' w='24500' x='50000' y='8889' name="KPI · Margin" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
@@ -1193,7 +1214,7 @@
               <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='8125' id='7' w='24333' x='74333' y='5750' name="KPI · AOV" show-title='true'>
+          <zone h='11778' id='10' w='24500' x='74500' y='8889' name="KPI · AOV" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
@@ -1203,41 +1224,20 @@
               <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='3250' id='8' w='32444' x='1333' y='14250' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
-            <zone-style>
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='3250' id='9' w='32444' x='33778' y='14250' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:country_en:nk]" type-v2='filter' values='database'>
-            <zone-style>
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='3250' id='10' w='32444' x='66222' y='14250' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
-            <zone-style>
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='3375' id='11' w='97333' x='1333' y='17875' type-v2='text'>
+          <zone h='8000' id='11' w='32667' x='1000' y='21333' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>1</run>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Uncaptured Seasonality</run>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='18'>1</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='16'>   Uncaptured Seasonality</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>No peak in February or December: the index stays between 93 and 102.</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>No peak in February or December: the index stays between 93 and 102.</run>
             </formatted-text>
             <zone-style>
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='16250' id='12' w='97333' x='1333' y='21500' name="Seasonality" show-title='true'>
+          <zone h='36667' id='12' w='32667' x='1000' y='29778' name="Seasonality" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
@@ -1247,106 +1247,99 @@
               <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='3375' id='13' w='97333' x='1333' y='38375' type-v2='text'>
+          <zone h='32222' id='13' w='32667' x='1000' y='66889' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>2</run>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   No Hero Product</run>
-              <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>160 of 200 SKUs to reach 80% of revenue, vs. about 20% under the Pareto rule.</run>
-            </formatted-text>
-            <zone-style>
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='16250' id='14' w='48667' x='1333' y='42000' name="SKU Concentration" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='16250' id='15' w='48667' x='50000' y='42000' name="Revenue Share by Category" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='3375' id='16' w='97333' x='1333' y='58875' type-v2='text'>
-            <formatted-text>
-              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>3</run>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Undifferentiated Channels</run>
-              <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Same basket, units and margin across the 4 channels; Germany accounts for 12% of revenue.</run>
-            </formatted-text>
-            <zone-style>
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='16250' id='17' w='48667' x='1333' y='62500' name="Revenue Share by Channel" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='16250' id='18' w='48667' x='50000' y='62500' name="Basket, Units and Margin by Channel" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='16250' id='19' w='48667' x='1333' y='79125' name="Revenue Share by Country" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='16250' id='20' w='48667' x='50000' y='79125' type-v2='text'>
-            <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='14'>Data Quality Check</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='13'>Data Quality Check</run>
               <run>Æ&#10;</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Identical indicators across all 4 channels, every margin at 40%, no peak at Christmas or Valentine's Day, six competing groups under one roof: most likely simulated data. The findings describe the dataset, and the recommendations remain hypotheses to test. Filters apply to every chart; SKU ranks are computed on the full dataset.</run>
-            </formatted-text>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='3750' id='21' w='97333' x='1333' y='95750' type-v2='text'>
-            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>Identical indicators across all 4 channels, every margin at 40%, no peak at Christmas or Valentine's Day, six competing groups under one roof: most likely simulated data. The findings describe the dataset, and the recommendations remain hypotheses to test. Filters apply to every chart; SKU ranks are computed on the full dataset.</run>
+              <run>Æ&#10;</run>
+              <run>Æ&#10;</run>
               <run fontcolor="#8A7462" fontname="Corbel" fontsize='9'>Data source: Kaggle “Chocolate Sales Dataset 2023 - 2024” (Nguyen, n.d.) · Personal project · Yu-Ting Tseng</run>
             </formatted-text>
             <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='10' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='8000' id='14' w='32667' x='33667' y='21333' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='18'>2</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='16'>   No Hero Product</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>160 of 200 SKUs to reach 80% of revenue, vs. about 20% under the Pareto rule.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='32444' id='15' w='32667' x='33667' y='29778' name="SKU Concentration" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='36444' id='16' w='32667' x='33667' y='62667' name="Revenue Share by Category" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='8000' id='17' w='32667' x='66333' y='21333' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='18'>3</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='16'>   Undifferentiated Channels</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>Same basket, units and margin across the 4 channels; Germany accounts for 12% of revenue.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
               <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='21111' id='18' w='32667' x='66333' y='29778' name="Revenue Share by Channel" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='22889' id='19' w='32667' x='66333' y='51333' name="Basket, Units and Margin by Channel" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='24444' id='20' w='32667' x='66333' y='74667' name="Revenue Share by Country" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
         </zone>

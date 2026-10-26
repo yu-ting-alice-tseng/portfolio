@@ -432,7 +432,7 @@ def inst(field, deriv="None", typ="nominal"):
 
 def worksheet_xml(lang, name, title, ds, deps, rows="", cols="", mark="Bar", encodings="",
                   sort="", pane_style="", table_style="", fit="", panes=None,
-                  title_font=TITLE_FONT, title_size=14, title_color=INK):
+                  title_font=TITLE_FONT, title_size=13, title_color=INK):
     """deps: list of (field, datatype, role, type, derivation, instance_type)."""
     dep_cols, dep_inst = [], []
     seen = set()
@@ -658,7 +658,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1200, 1600
+W, H = 1600, 900
 
 
 def px(v, total):
@@ -676,14 +676,14 @@ class Zones:
         self.items.append(body.format(attrs=attrs))
 
 
-def zone_style(bg=CARD, border=True):
+def zone_style(bg=CARD, border=True, margin=6, padding=8):
     b = (f"              <format attr='border-color' value={a(RULE)} />\n"
          "              <format attr='border-style' value='solid' />\n"
          "              <format attr='border-width' value='1' />\n") if border else ""
     return ("            <zone-style>\n"
             + b +
-            "              <format attr='margin' value='6' />\n"
-            "              <format attr='padding' value='8' />\n"
+            f"              <format attr='margin' value='{margin}' />\n"
+            f"              <format attr='padding' value='{padding}' />\n"
             f"              <format attr='background-color' value={a(bg)} />\n"
             "            </zone-style>\n")
 
@@ -694,10 +694,10 @@ def dashboard_xml(lang):
     z = Zones()
     G = 16  # outer gutter
 
-    def text(x, y, w, h, runs, bg=PAPER, border=False):
+    def text(x, y, w, h, runs, bg=PAPER, border=False, margin=2, padding=4):
         body = (f"          <zone {{attrs}} type-v2='text'>\n"
                 "            <formatted-text>\n" + runs +
-                "            </formatted-text>\n" + zone_style(bg, border) +
+                "            </formatted-text>\n" + zone_style(bg, border, margin, padding) +
                 "          </zone>\n")
         z.add(x, y, w, h, body)
 
@@ -718,44 +718,46 @@ def dashboard_xml(lang):
 
     br = "              <run>Æ&#10;</run>\n"  # Tableau's line break inside formatted text
 
+    # 16:9 (1600 x 900), one screen: header with filters, KPI row, then one
+    # column per finding of the study.
     inner = W - 2 * G
-    half = inner / 2
-    text(G, 10, inner, 76, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
+    head = inner / 2
+    text(G, 8, head, 68, run(T["title"], 20, INK, font=TITLE_FONT) + br + run(T["subtitle"], 10, MUTED))
+    fw = (inner - head) / 3
+    for i, f in enumerate(("channel", T["country"], "category")):
+        flt(G + head + i * fw, 12, fw, 56, f)
 
-    y = 92
+    y = 80
     kw = inner / 4
     for i, key in enumerate(("ca", "trans", "marge", "aov")):
-        sheet(G + i * kw, y, kw, 130, S[key])
-    y += 136
-    fw = inner / 3
-    for i, f in enumerate(("channel", T["country"], "category")):
-        flt(G + i * fw, y, fw, 52, f)
-    y += 58
+        sheet(G + i * kw, y, kw, 106, S[key])
+    y += 112
 
-    # One block per finding of the study: numbered header, then its charts.
-    def section(y, n):
+    cw = inner / 3
+    bottom = H - 8
+
+    def column(c, n, charts):
+        """Finding header, then charts stacked down to the bottom: (key or None, height)."""
+        x = G + c * cw
         num, name, detail = T["sections"][n]
-        text(G, y, inner, 54, run(num, 20, RASPBERRY, font=TITLE_FONT)
-             + run("   " + name, 18, INK, font=TITLE_FONT) + br + run(detail, 11, MUTED))
-        return y + 58
+        text(x, y, cw, 72, run(num, 18, RASPBERRY, font=TITLE_FONT)
+             + run("   " + name, 16, INK, font=TITLE_FONT) + br + run(detail, 10, MUTED))
+        yy = y + 76
+        for k, (key, h) in enumerate(charts):
+            if k == len(charts) - 1:
+                h = bottom - yy
+            if key is None:
+                text(x, yy, cw, h,
+                     run(T["note_title"], 13, INK, font=TITLE_FONT) + br + br
+                     + run(T["note"], 10, MUTED) + br + br + run(T["source"], 9, MUTED),
+                     bg=CARD, border=True, margin=6, padding=10)
+            else:
+                sheet(x, yy, cw, h, S[key])
+            yy += h + 4
 
-    y = section(y, 0)
-    sheet(G, y, inner, 260, S["saison"])
-    y += 270
-    y = section(y, 1)
-    sheet(G, y, half, 260, S["pareto"])
-    sheet(G + half, y, half, 260, S["cat"])
-    y += 270
-    y = section(y, 2)
-    sheet(G, y, half, 260, S["canal"])
-    sheet(G + half, y, half, 260, S["ident"])
-    y += 266
-    sheet(G, y, half, 260, S["pays"])
-    text(G + half, y, half, 260,
-         run(T["note_title"], 14, INK, font=TITLE_FONT) + br + br + run(T["note"], 11, MUTED),
-         bg=CARD, border=True)
-    y += 266
-    text(G, y, inner, H - y - 8, run(T["source"], 9, MUTED))
+    column(0, 0, [("saison", 330), (None, 0)])
+    column(1, 1, [("pareto", 292), ("cat", 0)])
+    column(2, 2, [("canal", 190), ("ident", 206), ("pays", 0)])
 
     zones = "".join(z.items)
     return ("  <dashboards>\n"
