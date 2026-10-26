@@ -694,7 +694,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Part du CA par Canal</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Canal</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -760,7 +760,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Part du CA par Pays</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Pays</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -826,7 +826,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Part du CA par Catégorie</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Catégorie</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -892,7 +892,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Panier Moyen, Unités et Marge par Canal</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Panier Moyen, Unités et Marge par Canal</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1008,7 +1008,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Indice de Saisonnalité par Mois (100 = Mois Moyen)</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Indice de Saisonnalité par Mois (100 = Mois Moyen)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1078,7 +1078,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="13">Part du CA par Tranche de 40 SKUs (Classés par CA)</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Tranche de 40 SKUs (Classés par CA)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1148,14 +1148,14 @@
           <format attr='background-color' value="#F6EFE6" />
         </style-rule>
       </style>
-      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' sizing-mode='fixed' />
+      <size maxheight='1640' maxwidth='1200' minheight='1640' minwidth='1200' sizing-mode='fixed' />
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='7556' id='3' w='49000' x='1000' y='889' type-v2='text'>
+          <zone h='4878' id='3' w='97333' x='1333' y='488' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='20'>Chocolat FMCG — Diagnostic Commercial 2023 – 2024</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='24'>Chocolat FMCG — Diagnostic Commercial 2023 – 2024</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>990 236 transactions · 4 canaux · 6 pays · 200 SKUs · 6 marques</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>990 236 transactions · 4 canaux · 6 pays · 200 SKUs · 6 marques</run>
             </formatted-text>
             <zone-style>
               <format attr='margin' value='2' />
@@ -1163,73 +1163,73 @@
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='6222' id='4' w='16333' x='50000' y='1333' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
+          <zone h='7317' id='4' w='24333' x='1333' y='5732' name="KPI · CA" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='7317' id='5' w='24333' x='25667' y='5732' name="KPI · Transactions" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='7317' id='6' w='24333' x='50000' y='5732' name="KPI · Marge" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='7317' id='7' w='24333' x='74333' y='5732' name="KPI · Panier Moyen" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='3171' id='8' w='32444' x='1333' y='13415' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='6222' id='5' w='16333' x='66333' y='1333' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:country_fr:nk]" type-v2='filter' values='database'>
+          <zone h='3171' id='9' w='32444' x='33778' y='13415' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:country_fr:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='6222' id='6' w='16333' x='82667' y='1333' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
+          <zone h='3171' id='10' w='32444' x='66222' y='13415' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='11778' id='7' w='24500' x='1000' y='8889' name="KPI · CA" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='11778' id='8' w='24500' x='25500' y='8889' name="KPI · Transactions" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='11778' id='9' w='24500' x='50000' y='8889' name="KPI · Marge" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='11778' id='10' w='24500' x='74500' y='8889' name="KPI · Panier Moyen" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='8000' id='11' w='32667' x='1000' y='21333' type-v2='text'>
+          <zone h='3902' id='11' w='97333' x='1333' y='17073' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#B23A48" fontname="Constantia" fontsize='18'>1</run>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='16'>   Saisonnalité Non Captée</run>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>1</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Saisonnalité Non Captée</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>Aucun pic en février ni en décembre : l'indice reste entre 93 et 102.</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Aucun pic en février ni en décembre : l'indice reste entre 93 et 102.</run>
             </formatted-text>
             <zone-style>
               <format attr='margin' value='2' />
@@ -1237,7 +1237,7 @@
               <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='36667' id='12' w='32667' x='1000' y='29778' name="Saisonnalité" show-title='true'>
+          <zone h='15854' id='12' w='97333' x='1333' y='21220' name="Saisonnalité" show-title='true'>
             <zone-style>
               <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
@@ -1247,99 +1247,106 @@
               <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='32222' id='13' w='32667' x='1000' y='66889' type-v2='text'>
+          <zone h='3902' id='13' w='97333' x='1333' y='37683' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='13'>Contrôle Qualité des Données</run>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>2</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Portefeuille sans Produit Phare</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>160 SKUs sur 200 pour atteindre 80 % du CA, contre environ 20 % selon la règle de Pareto.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='15854' id='14' w='48667' x='1333' y='41829' name="Concentration des SKUs" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='15854' id='15' w='48667' x='50000' y='41829' name="Part du CA par Catégorie" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='3902' id='16' w='97333' x='1333' y='58293' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>3</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Canaux Indifférenciés</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Même panier, mêmes unités et même marge sur les 4 canaux ; l'Allemagne pèse 12 % du CA.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='15854' id='17' w='48667' x='1333' y='62439' name="Part du CA par Canal" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='15854' id='18' w='48667' x='50000' y='62439' name="Panier, Unités et Marge par Canal" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='15854' id='19' w='48667' x='1333' y='78659' name="Part du CA par Pays" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='15854' id='20' w='48667' x='50000' y='78659' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='14'>Contrôle Qualité des Données</run>
               <run>Æ&#10;</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>Indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël ni à la Saint-Valentin, six groupes concurrents dans une seule entreprise : données vraisemblablement simulées. Les constats décrivent le jeu de données, les recommandations restent des hypothèses à tester. Les filtres s'appliquent à tous les graphiques ; le rang des SKUs est calculé sur l'ensemble des données.</run>
-              <run>Æ&#10;</run>
-              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël ni à la Saint-Valentin, six groupes concurrents dans une seule entreprise : données vraisemblablement simulées. Les constats décrivent le jeu de données, les recommandations restent des hypothèses à tester. Les filtres s'appliquent à tous les graphiques ; le rang des SKUs est calculé sur l'ensemble des données.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='12' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='4634' id='21' w='97333' x='1333' y='94878' type-v2='text'>
+            <formatted-text>
               <run fontcolor="#8A7462" fontname="Corbel" fontsize='9'>Source des données : Kaggle « Chocolate Sales Dataset 2023 - 2024 » (Nguyen, s.d.) · Projet personnel · Yu-Ting Tseng</run>
             </formatted-text>
             <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='10' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='8000' id='14' w='32667' x='33667' y='21333' type-v2='text'>
-            <formatted-text>
-              <run fontcolor="#B23A48" fontname="Constantia" fontsize='18'>2</run>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='16'>   Portefeuille sans Produit Phare</run>
-              <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>160 SKUs sur 200 pour atteindre 80 % du CA, contre environ 20 % selon la règle de Pareto.</run>
-            </formatted-text>
-            <zone-style>
               <format attr='margin' value='2' />
               <format attr='padding' value='4' />
               <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='32444' id='15' w='32667' x='33667' y='29778' name="Concentration des SKUs" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='36444' id='16' w='32667' x='33667' y='62667' name="Part du CA par Catégorie" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='8000' id='17' w='32667' x='66333' y='21333' type-v2='text'>
-            <formatted-text>
-              <run fontcolor="#B23A48" fontname="Constantia" fontsize='18'>3</run>
-              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='16'>   Canaux Indifférenciés</run>
-              <run>Æ&#10;</run>
-              <run fontcolor="#8A7462" fontname="Corbel" fontsize='10'>Même panier, mêmes unités et même marge sur les 4 canaux ; l'Allemagne pèse 12 % du CA.</run>
-            </formatted-text>
-            <zone-style>
-              <format attr='margin' value='2' />
-              <format attr='padding' value='4' />
-              <format attr='background-color' value="#F6EFE6" />
-            </zone-style>
-          </zone>
-          <zone h='21111' id='18' w='32667' x='66333' y='29778' name="Part du CA par Canal" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='22889' id='19' w='32667' x='66333' y='51333' name="Panier, Unités et Marge par Canal" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
-            </zone-style>
-          </zone>
-          <zone h='24444' id='20' w='32667' x='66333' y='74667' name="Part du CA par Pays" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E8DCCB" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
         </zone>

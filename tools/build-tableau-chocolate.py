@@ -432,7 +432,7 @@ def inst(field, deriv="None", typ="nominal"):
 
 def worksheet_xml(lang, name, title, ds, deps, rows="", cols="", mark="Bar", encodings="",
                   sort="", pane_style="", table_style="", fit="", panes=None,
-                  title_font=TITLE_FONT, title_size=13, title_color=INK):
+                  title_font=TITLE_FONT, title_size=14, title_color=INK):
     """deps: list of (field, datatype, role, type, derivation, instance_type)."""
     dep_cols, dep_inst = [], []
     seen = set()
@@ -658,7 +658,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1600, 900
+W, H = 1200, 1640
 
 
 def px(v, total):
@@ -718,46 +718,45 @@ def dashboard_xml(lang):
 
     br = "              <run>Æ&#10;</run>\n"  # Tableau's line break inside formatted text
 
-    # 16:9 (1600 x 900), one screen: header with filters, KPI row, then one
-    # column per finding of the study.
+    # Report layout, read top to bottom (the user preferred it to 16:9 for a
+    # business analysis): header, KPIs, filters, then one block per finding.
     inner = W - 2 * G
-    head = inner / 2
-    text(G, 8, head, 68, run(T["title"], 20, INK, font=TITLE_FONT) + br + run(T["subtitle"], 10, MUTED))
-    fw = (inner - head) / 3
-    for i, f in enumerate(("channel", T["country"], "category")):
-        flt(G + head + i * fw, 12, fw, 56, f)
+    half = inner / 2
+    text(G, 8, inner, 80, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
 
-    y = 80
+    y = 94
     kw = inner / 4
     for i, key in enumerate(("ca", "trans", "marge", "aov")):
-        sheet(G + i * kw, y, kw, 106, S[key])
-    y += 112
+        sheet(G + i * kw, y, kw, 120, S[key])
+    y += 126
+    fw = inner / 3
+    for i, f in enumerate(("channel", T["country"], "category")):
+        flt(G + i * fw, y, fw, 52, f)
+    y += 60
 
-    cw = inner / 3
-    bottom = H - 8
-
-    def column(c, n, charts):
-        """Finding header, then charts stacked down to the bottom: (key or None, height)."""
-        x = G + c * cw
+    def section(y, n):
         num, name, detail = T["sections"][n]
-        text(x, y, cw, 72, run(num, 18, RASPBERRY, font=TITLE_FONT)
-             + run("   " + name, 16, INK, font=TITLE_FONT) + br + run(detail, 10, MUTED))
-        yy = y + 76
-        for k, (key, h) in enumerate(charts):
-            if k == len(charts) - 1:
-                h = bottom - yy
-            if key is None:
-                text(x, yy, cw, h,
-                     run(T["note_title"], 13, INK, font=TITLE_FONT) + br + br
-                     + run(T["note"], 10, MUTED) + br + br + run(T["source"], 9, MUTED),
-                     bg=CARD, border=True, margin=6, padding=10)
-            else:
-                sheet(x, yy, cw, h, S[key])
-            yy += h + 4
+        text(G, y, inner, 64, run(num, 20, RASPBERRY, font=TITLE_FONT)
+             + run("   " + name, 18, INK, font=TITLE_FONT) + br + run(detail, 11, MUTED))
+        return y + 68
 
-    column(0, 0, [("saison", 330), (None, 0)])
-    column(1, 1, [("pareto", 292), ("cat", 0)])
-    column(2, 2, [("canal", 190), ("ident", 206), ("pays", 0)])
+    y = section(y, 0)
+    sheet(G, y, inner, 260, S["saison"])
+    y += 270
+    y = section(y, 1)
+    sheet(G, y, half, 260, S["pareto"])
+    sheet(G + half, y, half, 260, S["cat"])
+    y += 270
+    y = section(y, 2)
+    sheet(G, y, half, 260, S["canal"])
+    sheet(G + half, y, half, 260, S["ident"])
+    y += 266
+    sheet(G, y, half, 260, S["pays"])
+    text(G + half, y, half, 260,
+         run(T["note_title"], 14, INK, font=TITLE_FONT) + br + br + run(T["note"], 11, MUTED),
+         bg=CARD, border=True, margin=6, padding=12)
+    y += 266
+    text(G, y, inner, H - y - 8, run(T["source"], 9, MUTED))
 
     zones = "".join(z.items)
     return ("  <dashboards>\n"
