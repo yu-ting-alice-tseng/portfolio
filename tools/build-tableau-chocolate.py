@@ -198,9 +198,11 @@ TEXT = {
 }
 
 # Palette of portfolio-data.html (CLAUDE.md § 3 and § 24).
-INK, MUTED, RULE, CARD, PAPER = "#16211f", "#44524f", "#c3cfc9", "#eef3ef", "#e4ece7"
-TEAL, TEAL_DARK, TEAL_PALE = "#0d9488", "#0f766e", "#9fcfc9"
-FONT = "Tableau Book"
+# Theme chosen by the user: "Champagne Rosewood Constantia" (Power BI theme
+# file), carried over to Tableau: colours, Constantia titles, Corbel text.
+INK, MUTED, RULE, CARD, PAPER = "#3A332C", "#8C8279", "#E6DDCF", "#FFFFFF", "#F5F1EA"
+ACCENT, ACCENT_SOFT, DARK = "#9A7650", "#C9A9A0", "#3A332C"
+TITLE_FONT, FONT = "Constantia", "Corbel"
 
 MAIN = "federated.choco_main"
 PARETO = "federated.choco_pareto"
@@ -402,10 +404,10 @@ def datasources_xml(lang):
     style = ("      <style>\n"
              "        <style-rule element='mark'>\n"
              "          <encoding attr='color' field='[usr:Calc_Sign:nk]' type='palette'>\n"
-             f"            <map to={a(TEAL)}>\n"
+             f"            <map to={a(ACCENT)}>\n"
              f"              <bucket>{escape(chr(34) + t['above'] + chr(34))}</bucket>\n"
              "            </map>\n"
-             f"            <map to={a(TEAL_PALE)}>\n"
+             f"            <map to={a(ACCENT_SOFT)}>\n"
              f"              <bucket>{escape(chr(34) + t['below'] + chr(34))}</bucket>\n"
              "            </map>\n"
              "          </encoding>\n"
@@ -434,7 +436,8 @@ def inst(field, deriv="None", typ="nominal"):
 
 
 def worksheet_xml(lang, name, title, ds, deps, rows="", cols="", mark="Bar", encodings="",
-                  sort="", pane_style="", table_style="", fit="", panes=None):
+                  sort="", pane_style="", table_style="", fit="", panes=None,
+                  title_font=TITLE_FONT, title_size=16, title_color=INK):
     """deps: list of (field, datatype, role, type, derivation, instance_type)."""
     dep_cols, dep_inst = [], []
     seen = set()
@@ -455,7 +458,7 @@ def worksheet_xml(lang, name, title, ds, deps, rows="", cols="", mark="Bar", enc
     title_xml = ("        <layout-options>\n"
                  "          <title>\n"
                  "            <formatted-text>\n"
-                 f"              <run bold='true' fontcolor={a(INK)} fontname={a(FONT)} fontsize='11'>{escape(title)}</run>\n"
+                 f"              <run fontcolor={a(title_color)} fontname={a(title_font)} fontsize={a(title_size)}>{escape(title)}</run>\n"
                  "            </formatted-text>\n"
                  "          </title>\n"
                  "        </layout-options>\n")
@@ -505,7 +508,7 @@ def mark_color(color):
 
 def text_style(size):
     return ("              <style-rule element='mark'>\n"
-            f"                <format attr='mark-color' value={a(TEAL)} />\n"
+            f"                <format attr='mark-color' value={a(ACCENT)} />\n"
             "              </style-rule>\n")
 
 
@@ -513,10 +516,12 @@ def base_table_style():
     return ("          <style-rule element='axis'>\n"
             f"            <format attr='color' value={a(MUTED)} />\n"
             f"            <format attr='font-family' value={a(FONT)} />\n"
+            "            <format attr='font-size' value='11' />\n"
             "          </style-rule>\n"
             "          <style-rule element='label'>\n"
             f"            <format attr='color' value={a(INK)} />\n"
             f"            <format attr='font-family' value={a(FONT)} />\n"
+            "            <format attr='font-size' value='11' />\n"
             "          </style-rule>\n"
             "          <style-rule element='gridline'>\n"
             "            <format attr='line-visibility' value='off' />\n"
@@ -558,15 +563,17 @@ def worksheets_xml(lang):
             fld = q(inst("transactions", "Sum", "quantitative"))
         enc = f"              <text column={a(fld)} />\n"
         style = ("              <style-rule element='mark'>\n"
-                 f"                <format attr='mark-color' value={a(TEAL)} />\n"
+                 f"                <format attr='mark-color' value={a(ACCENT)} />\n"
                  "              </style-rule>\n"
                  "              <style-rule element='cell'>\n"
-                 f"                <format attr='font-size' value='26' />\n"
-                 f"                <format attr='color' value={a(TEAL_DARK)} />\n"
+                 f"                <format attr='font-family' value={a(TITLE_FONT)} />\n"
+                 f"                <format attr='font-size' value='34' />\n"
+                 f"                <format attr='color' value={a(ACCENT)} />\n"
                  "                <format attr='text-align' value='center' />\n"
                  "              </style-rule>\n")
         out.append(worksheet_xml(lang, S[key], T["kpi"][key], M, deps, mark="Text",
-                                 encodings=enc, pane_style=style, table_style=base_table_style()))
+                                 encodings=enc, pane_style=style, table_style=base_table_style(),
+                                 title_font=FONT, title_size=12, title_color=MUTED))
 
     # Bar charts of revenue share, sorted descending.
     def share_sheet(key, field, calc, color):
@@ -583,18 +590,18 @@ def worksheets_xml(lang):
                              encodings=enc, sort=sort, pane_style=mark_color(color),
                              table_style=base_table_style())
 
-    out.append(share_sheet("canal", "channel", "Calc_Part_Canal", TEAL))
-    out.append(share_sheet("pays", country, "Calc_Part_Pays", TEAL))
-    out.append(share_sheet("cat", "category", "Calc_Part_Cat", TEAL))
+    out.append(share_sheet("canal", "channel", "Calc_Part_Canal", ACCENT))
+    out.append(share_sheet("pays", country, "Calc_Part_Pays", ACCENT))
+    out.append(share_sheet("cat", "category", "Calc_Part_Cat", ACCENT))
 
     # Identical channels: AOV, UPT and margin side by side.
     ch = q(inst("channel"))
     aov, upt, mg = (q(inst(c, "User", "quantitative")) for c in ("Calc_AOV", "Calc_UPT", "Calc_Marge"))
     deps = [dim("channel"), calc_dep("Calc_AOV"), calc_dep("Calc_UPT"), calc_dep("Calc_Marge")]
-    panes = [(None, "Bar", f"              <text column={a(aov)} />\n", mark_color(TEAL)),
-             (("1", aov), "Bar", f"              <text column={a(aov)} />\n", mark_color(TEAL)),
-             (("2", upt), "Bar", f"              <text column={a(upt)} />\n", mark_color(TEAL_PALE)),
-             (("3", mg), "Bar", f"              <text column={a(mg)} />\n", mark_color(MUTED))]
+    panes = [(None, "Bar", f"              <text column={a(aov)} />\n", mark_color(ACCENT)),
+             (("1", aov), "Bar", f"              <text column={a(aov)} />\n", mark_color(ACCENT)),
+             (("2", upt), "Bar", f"              <text column={a(upt)} />\n", mark_color(ACCENT_SOFT)),
+             (("3", mg), "Bar", f"              <text column={a(mg)} />\n", mark_color(DARK))]
     out.append(worksheet_xml(lang, S["ident"], TT["ident"], M, deps, rows=ch,
                              cols=f"({aov} + {upt} + {mg})", panes=panes,
                              table_style=base_table_style()))
@@ -611,10 +618,10 @@ def worksheets_xml(lang):
     t = T["fields"]
     palette = ("          <style-rule element='mark'>\n"
                f"            <encoding attr='color' field={a(sign)} type='palette'>\n"
-               f"              <map to={a(TEAL)}>\n"
+               f"              <map to={a(ACCENT)}>\n"
                f"                <bucket>{escape(chr(34) + t['above'] + chr(34))}</bucket>\n"
                "              </map>\n"
-               f"              <map to={a(TEAL_PALE)}>\n"
+               f"              <map to={a(ACCENT_SOFT)}>\n"
                f"                <bucket>{escape(chr(34) + t['below'] + chr(34))}</bucket>\n"
                "              </map>\n"
                "            </encoding>\n"
@@ -636,7 +643,7 @@ def worksheets_xml(lang):
             ("product_name", "string", "dimension", "nominal", "None", "nominal", None)]
     enc = f"              <tooltip column={a(p(inst('product_name')))} />\n"
     style = ("              <style-rule element='mark'>\n"
-             f"                <format attr='mark-color' value={a(TEAL)} />\n"
+             f"                <format attr='mark-color' value={a(ACCENT)} />\n"
              "              </style-rule>\n")
     out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], PARETO, deps, rows=cum, cols=rk,
                              mark="Line", encodings=enc, pane_style=style,
@@ -727,15 +734,15 @@ def dashboard_xml(lang):
               f"param={a(f'[{MAIN}].' + inst(field))} type-v2='filter' values='database'>\n"
               + zone_style(PAPER, False) + "          </zone>\n")
 
-    def run(txt, size, color=INK, bold=False):
+    def run(txt, size, color=INK, bold=False, font=FONT):
         b = " bold='true'" if bold else ""
-        return (f"              <run{b} fontcolor={a(color)} fontname={a(FONT)} "
+        return (f"              <run{b} fontcolor={a(color)} fontname={a(font)} "
                 f"fontsize='{size}'>{escape(txt)}</run>\n")
 
     br = "              <run>Æ&#10;</run>\n"  # Tableau's line break inside formatted text
 
     inner = W - 2 * G
-    text(G, 10, inner, 70, run(T["title"], 20, INK, True) + br + run(T["subtitle"], 11, MUTED))
+    text(G, 10, inner, 70, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
 
     y = 86
     kw = inner / 4
