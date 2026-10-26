@@ -1228,9 +1228,9 @@
       <size maxheight="1180" maxwidth="1200" minheight="1180" minwidth="1200" sizing-mode="fixed"/>
       <zones>
         <zone h="100000" id="2" type-v2="layout-basic" w="100000" x="0" y="0">
-          <zone h="9322" id="4" w="24333" x="1333" y="7288" name="KPI · Revenue">
+          <zone h="100000" id="90" param="vert" w="100000" x="0" y="0" type-v2="layout-flow"><zone h="100000" id="4" w="100000" x="0" y="0" name="KPI · Revenue">
             </zone>
-          </zone>
+          </zone></zone>
       </zones>
       <simple-id uuid="{9DE7E241-4193-5573-BEBE-844F0D080D8C}"/>
     </dashboard>
