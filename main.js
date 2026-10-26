@@ -3537,7 +3537,7 @@
             "3 hypothèses testées sur données 2000 – 2024 (LSEG / Refinitiv, WGI, POLCON III, FSI) : H1 partiellement confirmée, H2 confirmée par FSI et POLCON III, H3 non concluante.",
             "Corrélations de Pearson et régressions linéaires (H1 volume M&A, H3 prime d'acquisition), régression logistique binomiale (H2 abandon).",
           ],
-          actions: [{ label: "Voir le rapport", href: "assets/R_M%26A%20Deal%20Analysis/RECAPSS_Group%202_Final%20Paper.pdf" }],
+          actions: [{ label: "Voir le projet", href: "portfolio-data.html#ma-risque-politique" }],
         },
       ],
     },
@@ -5112,7 +5112,7 @@
     const actionMap = activeLang === "en" ? {
       "Voir l'expérience": "View experience", "Voir la formation": "View education",
       "Ouvrir le certificat": "Open certificate", "Voir le portfolio": "View portfolio",
-      "Voir activités": "View activities", "Voir le rapport": "Read report",
+      "Voir activités": "View activities", "Voir le rapport": "Read report", "Voir le projet": "View project",
       "Ouvrir": "Open", "Voir l'engagement": "View engagement",
     } : {};
 

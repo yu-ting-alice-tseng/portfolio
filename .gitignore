@@ -28,3 +28,11 @@ auto-sync.log
 **/.pbi/localSettings.json
 # Jeu de données Kaggle Sephora (CSV de plusieurs centaines de Mo, à télécharger sur Kaggle)
 assets/Sephora Products and Skincare Reviews/
+
+# Fichiers gardés en local uniquement (jamais publiés)
+# Données LSEG / SDC Platinum : licence de l'école, pas de diffusion publique
+assets/**/M&A_LatAm_Transactions_Dataset*.xlsx
+# Rapport de groupe RECAPSS : noms complets des camarades
+assets/**/RECAPSS_Group 2_Final Paper.pdf
+# Portfolio PDF d'origine avec le nom chinois (version publiée : _c_V1.pdf)
+assets/250508_作品集_社群經營與設計_c.pdf
