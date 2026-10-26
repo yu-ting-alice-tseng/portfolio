@@ -1383,7 +1383,38 @@
   </dashboards>
   <windows>
     <window class='dashboard' maximized='true' name="Commercial Diagnostic">
-      <viewpoints />
+      <viewpoints>
+        <viewpoint name="KPI · Revenue">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Transactions">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Margin">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · AOV">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Revenue Share by Channel">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Identical Channels">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Seasonality">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Pareto Curve">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Revenue Share by Country">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Revenue Share by Category">
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
       <active id='-1' />
       <simple-id uuid="{6E15D119-C51D-5080-9829-49687628BC9C}" />
     </window>

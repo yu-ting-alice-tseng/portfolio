@@ -788,7 +788,13 @@ def windows_xml(lang):
     T = TEXT[lang]
     out = ["  <windows>\n",
            f"    <window class='dashboard' maximized='true' name={a(T['dash'])}>\n",
-           "      <viewpoints />\n",
+           # Tableau 2026.3 stops with an internal error when a sheet shown in
+           # the dashboard has no viewpoint in the dashboard window.
+           "      <viewpoints>\n",
+           *(f"        <viewpoint name={a(name)}>\n"
+             "          <zoom type='entire-view' />\n"
+             "        </viewpoint>\n" for name in T["sheets"].values()),
+           "      </viewpoints>\n",
            f"      <active id='-1' />\n",
            f"      <simple-id uuid={a(sid())} />\n",
            "    </window>\n"]

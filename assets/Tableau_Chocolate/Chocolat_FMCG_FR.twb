@@ -1383,7 +1383,38 @@
   </dashboards>
   <windows>
     <window class='dashboard' maximized='true' name="Diagnostic Commercial">
-      <viewpoints />
+      <viewpoints>
+        <viewpoint name="KPI · CA">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Transactions">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Marge">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Panier Moyen">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Part du CA par Canal">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Canaux Identiques">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Saisonnalité">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Courbe de Pareto">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Part du CA par Pays">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Part du CA par Catégorie">
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
       <active id='-1' />
       <simple-id uuid="{6E15D119-C51D-5080-9829-49687628BC9C}" />
     </window>

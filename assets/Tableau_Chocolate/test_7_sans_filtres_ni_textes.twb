@@ -1224,24 +1224,156 @@
   <dashboards>
     <dashboard name="Commercial Diagnostic">
       <style>
-        </style>
+        <style-rule element="table">
+          <format attr="background-color" value="#e4ece7"/>
+        </style-rule>
+      </style>
       <size maxheight="1180" maxwidth="1200" minheight="1180" minwidth="1200" sizing-mode="fixed"/>
       <zones>
         <zone h="100000" id="2" type-v2="layout-basic" w="100000" x="0" y="0">
-          <zone h="100000" id="90" param="vert" w="100000" x="0" y="0" type-v2="layout-flow"><zone h="100000" id="4" w="100000" x="0" y="0" name="KPI · Revenue">
-            </zone>
-          </zone></zone>
+          <zone h="9322" id="4" w="24333" x="1333" y="7288" name="KPI · Revenue" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="9322" id="5" w="24333" x="25667" y="7288" name="KPI · Transactions" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="9322" id="6" w="24333" x="50000" y="7288" name="KPI · Margin" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="9322" id="7" w="24333" x="74333" y="7288" name="KPI · AOV" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="19492" id="11" w="48667" x="1333" y="22373" name="Revenue Share by Channel" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="19492" id="12" w="48667" x="50000" y="22373" name="Identical Channels" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="22034" id="13" w="48667" x="1333" y="42373" name="Seasonality" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="22034" id="14" w="48667" x="50000" y="42373" name="Pareto Curve" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="19492" id="15" w="48667" x="1333" y="64915" name="Revenue Share by Country" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          <zone h="19492" id="16" w="48667" x="50000" y="64915" name="Revenue Share by Category" show-title="true">
+            <zone-style>
+              <format attr="border-color" value="#c3cfc9"/>
+              <format attr="border-style" value="solid"/>
+              <format attr="border-width" value="1"/>
+              <format attr="margin" value="6"/>
+              <format attr="padding" value="8"/>
+              <format attr="background-color" value="#eef3ef"/>
+            </zone-style>
+          </zone>
+          </zone>
       </zones>
       <simple-id uuid="{9DE7E241-4193-5573-BEBE-844F0D080D8C}"/>
     </dashboard>
   </dashboards>
   <windows>
     <window class="dashboard" maximized="true" name="Commercial Diagnostic">
-      <viewpoints><viewpoint name="KPI · Revenue"><zoom type="entire-view"/></viewpoint></viewpoints>
+      <viewpoints>
+        <viewpoint name="KPI · Revenue">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="KPI · Transactions">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="KPI · Margin">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="KPI · AOV">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="Revenue Share by Channel">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="Identical Channels">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="Seasonality">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="Pareto Curve">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="Revenue Share by Country">
+          <zoom type="entire-view"/>
+        </viewpoint>
+        <viewpoint name="Revenue Share by Category">
+          <zoom type="entire-view"/>
+        </viewpoint>
+      </viewpoints>
       <active id="-1"/>
       <simple-id uuid="{6E15D119-C51D-5080-9829-49687628BC9C}"/>
     </window>
-    <window class="worksheet" name="KPI · Revenue">
+    <window class="worksheet" hidden="true" name="KPI · Revenue">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1264,7 +1396,7 @@
       </cards>
       <simple-id uuid="{46682FF2-C016-5F04-9863-DDB6B26E8851}"/>
     </window>
-    <window class="worksheet" name="KPI · Transactions">
+    <window class="worksheet" hidden="true" name="KPI · Transactions">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1287,7 +1419,7 @@
       </cards>
       <simple-id uuid="{30973010-9C4E-53AC-A4F9-A64B6413E051}"/>
     </window>
-    <window class="worksheet" name="KPI · Margin">
+    <window class="worksheet" hidden="true" name="KPI · Margin">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1310,7 +1442,7 @@
       </cards>
       <simple-id uuid="{139ADAC6-2FDF-5ADC-A562-FCB074E396B4}"/>
     </window>
-    <window class="worksheet" name="KPI · AOV">
+    <window class="worksheet" hidden="true" name="KPI · AOV">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1333,7 +1465,7 @@
       </cards>
       <simple-id uuid="{E0A7F367-F560-57F1-A4D9-3E4D67146FD7}"/>
     </window>
-    <window class="worksheet" name="Revenue Share by Channel">
+    <window class="worksheet" hidden="true" name="Revenue Share by Channel">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1356,7 +1488,7 @@
       </cards>
       <simple-id uuid="{434C660B-2264-5272-9D8E-EF4C13489116}"/>
     </window>
-    <window class="worksheet" name="Identical Channels">
+    <window class="worksheet" hidden="true" name="Identical Channels">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1379,7 +1511,7 @@
       </cards>
       <simple-id uuid="{55F0380F-8903-5E4A-9555-07E1DB0CABEC}"/>
     </window>
-    <window class="worksheet" name="Seasonality">
+    <window class="worksheet" hidden="true" name="Seasonality">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1402,7 +1534,7 @@
       </cards>
       <simple-id uuid="{7DE28E6E-2654-5221-8B9A-FC7FBA014ACE}"/>
     </window>
-    <window class="worksheet" name="Pareto Curve">
+    <window class="worksheet" hidden="true" name="Pareto Curve">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1425,7 +1557,7 @@
       </cards>
       <simple-id uuid="{0BB59587-55F0-5D48-86C3-31EDF836D309}"/>
     </window>
-    <window class="worksheet" name="Revenue Share by Country">
+    <window class="worksheet" hidden="true" name="Revenue Share by Country">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1448,7 +1580,7 @@
       </cards>
       <simple-id uuid="{41EE1938-1915-5726-BA56-DDAFB9DDEC4F}"/>
     </window>
-    <window class="worksheet" name="Revenue Share by Category">
+    <window class="worksheet" hidden="true" name="Revenue Share by Category">
       <cards>
         <edge name="left">
           <strip size="160">
