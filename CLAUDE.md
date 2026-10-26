@@ -278,8 +278,14 @@ Order proof cards within a skill by importance (descending):
 - **Compétences du PDF** : classées par bloc puis sous-catégorie (libellé à gauche, compétences à droite, sous-niveaux comme « SEA » ou « Outils » en italique). Jamais une longue liste à plat. L'ordre est fixé pour chaque CV dans `SKILLS` (`tools/build-cv.js`), avec les `data-skill` et les clés `skills.*` du site : aucun texte saisi à la main, aucun libellé inventé. Le script signale toute compétence de la page absente du CV.
   - **Du plus important au moins important pour le métier visé**, blocs comme sous-catégories et compétences (ex. Finance en tête du CV Finance).
   - **Libellés des sous-catégories sur une seule ligne** (colonne à la largeur du plus long libellé).
-  - **Toutes les capacités d'analyse dans le bloc Data** (« Data, Reporting & Automation » sur marketing, « Data & Analytics » ailleurs) : Google Analytics, Études de Marché, Veille Concurrentielle, Benchmarking, Analyse Stratégique.
-  - **SEO dans « Marketing Performance »** à côté de SEA, SMM et Display & AdOps, ses outils juste en dessous, en retrait.
+  - **Capacités d'analyse dans le bloc Data** (« Data & Analytics ») sur les CV General, Data et Finance : Google Analytics, Études de Marché, Benchmarking, Analyse Stratégique.
+  - **CV Marketing** (demande de l'utilisatrice) :
+    - Langues en tête des compétences ;
+    - Marketing : « Stratégie » = Études de Marché · Veille Concurrentielle · Benchmarking (le cœur du métier), puis « Marketing Performance » avec SEO et SEA côte à côte (sigles seuls : SEO, SEA, SMM), SEO réduit à l'essentiel (SEO Technique, SEO On-Page, Recherche de Mots-Clés, Semrush, Google Search Console) ;
+    - retirés du CV : Positionnement, Planification de Campagnes, Contenu, Événementiel & Coordination, SEO Off-Page et les outils SEO secondaires (`OMIT_PAGE`) ;
+    - Data : « Dashboards & Visualisation » = Excel - TOSA 950/1000 · Power BI · Tableau · SQL · Python · R, regroupés par famille (Tableau et SQL repris des autres pages CV) ;
+    - expérience « Assistante d'enseignement » retirée du PDF (`SKIP_ITEMS`), elle reste sur la page.
+  - Deux-points des sous-libellés : « SEO : » en français (espace insécable), « SEO: » en anglais.
   - **Langues par ordre d'importance** : français, anglais, japonais, puis mandarin.
   - **Retiré du CV** : « Développement Web » (HTML · CSS), jugé secondaire. Il reste sur le site.
 - **Pas de page presque vide** : si la dernière page ne porte que quelques lignes, le script resserre le contenu (7 % au plus) pour tenir sur une page de moins.

@@ -32,30 +32,26 @@ const OFFICE_ROW = { title: 'blockOffice', skills: ['office-microsoft', 'office-
 const AI_ROW = { title: 'blockAI', skills: ['ai-chatgpt', 'ai-claude', 'ai-gemini', 'ai-vibe-coding'] };
 const SKILLS = {
   marketing: [
+    LANG_ROW,
     { title: 'blockMarketing', groups: [
-      { label: 'subMktPerf', parts: [
+      { label: 'subMktStrategie', skills: ['mkt-research', 'mkt-veille', 'mkt-benchmarking'] },
+      { label: 'subMktPerf', acronyms: true, parts: [
+        { label: 'subMkt1', skills: ['mkt-seo-technical', 'mkt-seo-onpage', 'mkt-seo-keyword', 'mkt-semrush', 'mkt-gsc'] },
         { label: 'subMkt2', skills: ['mkt-sea', 'mkt-gkp'] },
         { label: 'subContent2', skills: ['mkt-meta', 'mkt-mbs', 'mkt-xhs'] },
         { label: 'subMktDisplay', skills: ['mkt-xandr', 'mkt-gam'] },
-        { label: 'subMkt1', skills: ['mkt-seo-technical', 'mkt-seo-onpage', 'mkt-seo-offpage', 'mkt-seo-keyword'] },
-        { label: 'toolsLabel', sub: true, skills: ['mkt-semrush', 'mkt-ahrefs', 'mkt-screaming-frog', 'mkt-similarweb', 'mkt-gtrends', 'mkt-gsc'] },
       ] },
-      { label: 'subMktStrategie', skills: ['mkt-positionnement', 'mkt-campaign'] },
-      { label: 'subMktContenu', skills: ['mkt-content-strategy', 'mkt-design'] },
-      { label: 'blockEvents', skills: ['mkt-event-management', 'mkt-event-hosting', 'mkt-vendor-coordination'] },
     ] },
     { title: 'blockDataMarketing', groups: [
+      { label: 'subData2', skills: ['data-excel', 'data-powerbi', 'data-tableau', 'data-sql', 'data-python', 'data-r'] },
       { label: 'subMktDataTech', skills: ['mkt-analytics', 'data-marketing-automation'] },
-      { label: 'subData2', skills: ['data-excel', 'data-powerbi'] },
-      { label: 'subDataQual', skills: ['mkt-research', 'mkt-veille', 'mkt-benchmarking'] },
       { label: 'subDataQuant', skills: ['data-statistics', 'mkt-ab-testing'] },
-      { label: 'subData1', skills: ['data-python', 'data-r'] },
     ] },
     { title: 'blockCreative', groups: [
       { label: 'subCreativeGraphic', skills: ['creative-canva', 'creative-figma', 'creative-illustrator', 'creative-acrobat', 'creative-blender'] },
       { label: 'subCreativeVideo', skills: ['creative-capcut'] },
     ] },
-    AI_ROW, OFFICE_ROW, LANG_ROW,
+    AI_ROW, OFFICE_ROW,
   ],
   index: [
     { title: 'blockMarketing', groups: [
@@ -110,14 +106,31 @@ const SKILLS = {
   ],
 };
 const OMIT = ['dev-html', 'dev-css'];
+// Écartés d'un CV précis à la demande de l'utilisatrice (ils restent sur la page)
+const OMIT_PAGE = {
+  marketing: ['mkt-seo-offpage', 'mkt-ahrefs', 'mkt-screaming-frog', 'mkt-similarweb', 'mkt-gtrends',
+    'mkt-positionnement', 'mkt-campaign', 'mkt-content-strategy', 'mkt-design',
+    'mkt-event-management', 'mkt-event-hosting', 'mkt-vendor-coordination'],
+};
+// Expériences retirées d'un CV précis, par id de la page (elles restent sur le site)
+const SKIP_ITEMS = {
+  marketing: ['exp-teaching'],
+};
+
+// « Référencement Naturel (SEO) » ou « SEA (Search Engine Advertising) » → le sigle seul
+const acronym = (t) => {
+  const m = t.match(/^(.*?)\s*\((.*)\)$/);
+  if (!m) return t;
+  return [m[1], m[2]].find((x) => /^[A-Z]{2,5}$/.test(x.trim())) || t;
+};
 
 // Résout l'ordre SKILLS avec les textes de la page ; signale toute compétence de la page oubliée
 function layoutSkills(page, d, fallback) {
   const label = (k) => d.labels[k] || fallback.labels[k] || (() => { throw new Error(`${page} : libellé skills.${k} introuvable`); })();
   const used = new Set();
   const list = (ids) => ids.map((id) => {
-    const t = d.skillText[id];
-    if (!t) throw new Error(`${page} : compétence ${id} absente de la page`);
+    const t = d.skillText[id] || fallback.skillText[id];
+    if (!t) throw new Error(`${page} : compétence ${id} absente des pages CV`);
     used.add(id);
     return t;
   });
@@ -126,11 +139,11 @@ function layoutSkills(page, d, fallback) {
     chips: b.skills ? list(b.skills) : null,
     groups: (b.groups || []).map((g) => ({
       title: label(g.label),
-      parts: g.parts ? g.parts.map((x) => ({ label: label(x.label), sub: !!x.sub, chips: list(x.skills) }))
+      parts: g.parts ? g.parts.map((x) => ({ label: g.acronyms ? acronym(label(x.label)) : label(x.label), sub: !!x.sub, chips: list(x.skills) }))
         : [{ label: '', chips: list(g.skills) }],
     })),
   }));
-  const missing = Object.keys(d.skillText).filter((id) => !used.has(id) && !OMIT.includes(id));
+  const missing = Object.keys(d.skillText).filter((id) => !used.has(id) && !OMIT.includes(id) && !(OMIT_PAGE[page] || []).includes(id));
   if (missing.length) console.warn(`  ${page} : compétences de la page absentes du CV : ${missing.join(', ')}`);
   return out;
 }
@@ -146,6 +159,7 @@ function scrape() {
     return {
       title: txt(s.querySelector('.section-header h2')),
       items: [...s.querySelectorAll('.timeline-item')].map((a) => ({
+        id: a.id,
         period: txt(a.querySelector('.timeline-period')),
         location: txt(a.querySelector('.timeline-location')),
         title: txt(a.querySelector('.timeline-body h3')),
@@ -210,7 +224,7 @@ function render(d, pal, photo) {
   const chipList = (c) => c.map(esc).join(' · ');
   const skillBlock = (b) => b.chips ? `<b class="sk-solo">${esc(b.title)}</b><div>${chipList(b.chips)}</div>` :
     `<h3>${esc(b.title)}</h3>${b.groups.map((g) => `<b>${esc(g.title)}</b><div>${g.parts.map((x) =>
-      `<div${x.sub ? ' class="sk-under"' : ''}>${x.label ? `<i>${esc(x.label)} :</i> ` : ''}${chipList(x.chips)}</div>`).join('')}</div>`).join('')}`;
+      `<div${x.sub ? ' class="sk-under"' : ''}>${x.label ? `<i>${esc(x.label)}${d.lang === 'fr' ? '\u00a0:' : ':'}</i> ` : ''}${chipList(x.chips)}</div>`).join('')}</div>`).join('')}`;
   return `<!doctype html><html lang="${d.lang}"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -276,9 +290,14 @@ ${block(d.extra, true)}
       scraped[page] = await p.evaluate(scrape);
       await ctx.close();
     }
-    const fallback = { labels: Object.assign({}, ...Object.values(scraped).map((d) => d.labels)) };
+    const fallback = {
+      labels: Object.assign({}, ...Object.values(scraped).map((d) => d.labels)),
+      skillText: Object.assign({}, ...Object.values(scraped).map((d) => d.skillText)),
+    };
     for (const [page, pal] of Object.entries(PAGES)) {
-      const data = { ...scraped[page], skills: layoutSkills(page, scraped[page], fallback) };
+      const d = scraped[page];
+      const skip = (sec) => sec && { ...sec, items: sec.items.filter((it) => !(SKIP_ITEMS[page] || []).includes(it.id)) };
+      const data = { ...d, experience: skip(d.experience), extra: skip(d.extra), skills: layoutSkills(page, d, fallback) };
       const ctx = await browser.newContext();
       const p = await ctx.newPage();
       await p.setViewportSize({ width: Math.round((210 - 24) * 96 / 25.4), height: 1000 });
