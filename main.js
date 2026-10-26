@@ -604,8 +604,8 @@
       },
       dataHero: {                          // → data.html (section héro)
         kicker: "Analyse · Reporting · Méthodes quantitatives",
-        title1: "Tableaux de bord, régressions",
-        title2: "et rapports de campagne.",
+        title1: "Des données fiables",
+        title2: "pour des décisions éclairées.",
         summary: "Excel (TOSA 950/1000), Python, R, SQL, Power BI et Tableau. Je transforme des données brutes en tableaux de bord lisibles, je vérifie des hypothèses par des méthodes quantitatives comme la régression et je traduis les chiffres en recommandations concrètes pour les équipes marketing et métier, avec une attention constante à la fiabilité des données.",
         ctaPrimary: "Voir le portfolio",
         ctaSecondary: "Voir mes expériences",
@@ -1656,8 +1656,8 @@
       },
       dataHero: {
         kicker: "Analysis · Reporting · Quantitative methods",
-        title1: "Dashboards, regressions",
-        title2: "and campaign reports.",
+        title1: "Reliable data",
+        title2: "for informed decisions.",
         summary: "Excel (TOSA 950/1000), Python, R, SQL, Power BI and Tableau. I turn raw data into clear dashboards, test hypotheses with quantitative methods such as regression, and translate the numbers into concrete recommendations for marketing and business teams, with constant attention to data reliability.",
         ctaPrimary: "View portfolio",
         ctaSecondary: "View my experience",
@@ -2674,8 +2674,8 @@
       },
       dataHero: {
         kicker: "分析 · 報表 · 量化方法",
-        title1: "儀表板、迴歸分析，",
-        title2: "還有廣告成效報告。",
+        title1: "可靠的數據，",
+        title2: "支撐明智的決策。",
         summary: "Excel（TOSA 950/1000）、Python、R、SQL、Power BI 與 Tableau。擅長將原始數據整理成清晰的儀表板，以迴歸等量化方法驗證假設，並將數字轉化為行銷與業務團隊可執行的具體建議，同時嚴謹把關數據的可靠性。",
         ctaPrimary: "查看作品集",
         ctaSecondary: "查看我的經歷",
