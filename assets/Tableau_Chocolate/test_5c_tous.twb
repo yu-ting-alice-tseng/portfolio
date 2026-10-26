@@ -1224,161 +1224,31 @@
   <dashboards>
     <dashboard name="Commercial Diagnostic">
       <style>
-        <style-rule element="table">
-          <format attr="background-color" value="#e4ece7"/>
-        </style-rule>
-      </style>
+        </style>
       <size maxheight="1180" maxwidth="1200" minheight="1180" minwidth="1200" sizing-mode="fixed"/>
       <zones>
         <zone h="100000" id="2" type-v2="layout-basic" w="100000" x="0" y="0">
-          <zone h="5932" id="3" w="97333" x="1333" y="847" type-v2="text">
-            <formatted-text>
-              <run bold="true" fontcolor="#16211f" fontname="Tableau Book" fontsize="20">Chocolate FMCG — Commercial Intelligence Diagnostic 2023 – 2024</run>
-              <run>Æ
-</run>
-              <run fontcolor="#44524f" fontname="Tableau Book" fontsize="11">990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands</run>
-            </formatted-text>
-            <zone-style>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#e4ece7"/>
-            </zone-style>
+          <zone h="9322" id="4" w="24333" x="1333" y="7288" name="KPI · Revenue">
+            </zone>
+          <zone h="9322" id="5" w="24333" x="25667" y="7288" name="KPI · Transactions">
+            </zone>
+          <zone h="9322" id="6" w="24333" x="50000" y="7288" name="KPI · Margin">
+            </zone>
+          <zone h="9322" id="7" w="24333" x="74333" y="7288" name="KPI · AOV">
+            </zone>
+          <zone h="19492" id="11" w="48667" x="1333" y="22373" name="Revenue Share by Channel">
+            </zone>
+          <zone h="19492" id="12" w="48667" x="50000" y="22373" name="Identical Channels">
+            </zone>
+          <zone h="22034" id="13" w="48667" x="1333" y="42373" name="Seasonality">
+            </zone>
+          <zone h="22034" id="14" w="48667" x="50000" y="42373" name="Pareto Curve">
+            </zone>
+          <zone h="19492" id="15" w="48667" x="1333" y="64915" name="Revenue Share by Country">
+            </zone>
+          <zone h="19492" id="16" w="48667" x="50000" y="64915" name="Revenue Share by Category">
+            </zone>
           </zone>
-          <zone h="9322" id="4" w="24333" x="1333" y="7288" name="KPI · Revenue" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="9322" id="5" w="24333" x="25667" y="7288" name="KPI · Transactions" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="9322" id="6" w="24333" x="50000" y="7288" name="KPI · Margin" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="9322" id="7" w="24333" x="74333" y="7288" name="KPI · AOV" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="4746" id="8" w="32444" x="1333" y="17119" mode="checkdropdown" name="Revenue Share by Channel" param="[federated.choco_main].[none:channel:nk]" type-v2="filter" values="database">
-            <zone-style>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#e4ece7"/>
-            </zone-style>
-          </zone>
-          <zone h="4746" id="9" w="32444" x="33778" y="17119" mode="checkdropdown" name="Revenue Share by Channel" param="[federated.choco_main].[none:country_en:nk]" type-v2="filter" values="database">
-            <zone-style>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#e4ece7"/>
-            </zone-style>
-          </zone>
-          <zone h="4746" id="10" w="32444" x="66222" y="17119" mode="checkdropdown" name="Revenue Share by Channel" param="[federated.choco_main].[none:category:nk]" type-v2="filter" values="database">
-            <zone-style>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#e4ece7"/>
-            </zone-style>
-          </zone>
-          <zone h="19492" id="11" w="48667" x="1333" y="22373" name="Revenue Share by Channel" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="19492" id="12" w="48667" x="50000" y="22373" name="Identical Channels" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="22034" id="13" w="48667" x="1333" y="42373" name="Seasonality" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="22034" id="14" w="48667" x="50000" y="42373" name="Pareto Curve" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="19492" id="15" w="48667" x="1333" y="64915" name="Revenue Share by Country" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="19492" id="16" w="48667" x="50000" y="64915" name="Revenue Share by Category" show-title="true">
-            <zone-style>
-              <format attr="border-color" value="#c3cfc9"/>
-              <format attr="border-style" value="solid"/>
-              <format attr="border-width" value="1"/>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#eef3ef"/>
-            </zone-style>
-          </zone>
-          <zone h="14407" id="17" w="97333" x="1333" y="84915" type-v2="text">
-            <formatted-text>
-              <run fontcolor="#44524f" fontname="Tableau Book" fontsize="9">Data quality check: identical indicators across all 4 channels, every margin at 40%, no peak at Christmas or Valentine's Day. Most likely simulated data: the findings describe the dataset, and the recommendations remain hypotheses. Filters apply to every chart except the Pareto curve (full dataset).</run>
-              <run>Æ
-</run>
-              <run fontcolor="#44524f" fontname="Tableau Book" fontsize="9">Data source: Kaggle “Chocolate Sales Dataset 2023 - 2024” (Nguyen, n.d.) · Personal project · Yu-Ting Tseng</run>
-            </formatted-text>
-            <zone-style>
-              <format attr="margin" value="6"/>
-              <format attr="padding" value="8"/>
-              <format attr="background-color" value="#e4ece7"/>
-            </zone-style>
-          </zone>
-        </zone>
       </zones>
       <simple-id uuid="{9DE7E241-4193-5573-BEBE-844F0D080D8C}"/>
     </dashboard>

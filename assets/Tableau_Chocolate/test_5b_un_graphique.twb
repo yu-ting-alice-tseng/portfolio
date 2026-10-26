@@ -510,6 +510,30 @@
       </object-graph>
     </datasource>
   </datasources>
+  <shared-views>
+    <shared-view name="federated.choco_main">
+      <datasources>
+        <datasource caption="Chocolate Sales" name="federated.choco_main"/>
+      </datasources>
+      <datasource-dependencies datasource="federated.choco_main">
+        <column datatype="string" name="[channel]" role="dimension" type="nominal"/>
+        <column datatype="string" name="[country_en]" role="dimension" type="nominal"/>
+        <column datatype="string" name="[category]" role="dimension" type="nominal"/>
+        <column-instance column="[channel]" derivation="None" name="[none:channel:nk]" pivot="key" type="nominal"/>
+        <column-instance column="[country_en]" derivation="None" name="[none:country_en:nk]" pivot="key" type="nominal"/>
+        <column-instance column="[category]" derivation="None" name="[none:category:nk]" pivot="key" type="nominal"/>
+      </datasource-dependencies>
+      <filter class="categorical" column="[federated.choco_main].[none:channel:nk]">
+        <groupfilter function="level-members" level="[none:channel:nk]" user:ui-enumeration="all" user:ui-marker="enumerate"/>
+      </filter>
+      <filter class="categorical" column="[federated.choco_main].[none:country_en:nk]">
+        <groupfilter function="level-members" level="[none:country_en:nk]" user:ui-enumeration="all" user:ui-marker="enumerate"/>
+      </filter>
+      <filter class="categorical" column="[federated.choco_main].[none:category:nk]">
+        <groupfilter function="level-members" level="[none:category:nk]" user:ui-enumeration="all" user:ui-marker="enumerate"/>
+      </filter>
+    </shared-view>
+  </shared-views>
   <worksheets>
     <worksheet name="KPI · Revenue">
         <layout-options>
@@ -1197,8 +1221,27 @@
       <simple-id uuid="{AB8D5BC0-C394-5A88-BA0D-4D4024507699}"/>
     </worksheet>
   </worksheets>
+  <dashboards>
+    <dashboard name="Commercial Diagnostic">
+      <style>
+        </style>
+      <size maxheight="1180" maxwidth="1200" minheight="1180" minwidth="1200" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="2" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="9322" id="4" w="24333" x="1333" y="7288" name="KPI · Revenue">
+            </zone>
+          </zone>
+      </zones>
+      <simple-id uuid="{9DE7E241-4193-5573-BEBE-844F0D080D8C}"/>
+    </dashboard>
+  </dashboards>
   <windows>
-    <window class="worksheet" name="KPI · Revenue" maximized="true">
+    <window class="dashboard" maximized="true" name="Commercial Diagnostic">
+      <viewpoints/>
+      <active id="-1"/>
+      <simple-id uuid="{6E15D119-C51D-5080-9829-49687628BC9C}"/>
+    </window>
+    <window class="worksheet" hidden="true" name="KPI · Revenue">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1221,7 +1264,7 @@
       </cards>
       <simple-id uuid="{46682FF2-C016-5F04-9863-DDB6B26E8851}"/>
     </window>
-    <window class="worksheet" name="KPI · Transactions">
+    <window class="worksheet" hidden="true" name="KPI · Transactions">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1244,7 +1287,7 @@
       </cards>
       <simple-id uuid="{30973010-9C4E-53AC-A4F9-A64B6413E051}"/>
     </window>
-    <window class="worksheet" name="KPI · Margin">
+    <window class="worksheet" hidden="true" name="KPI · Margin">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1267,7 +1310,7 @@
       </cards>
       <simple-id uuid="{139ADAC6-2FDF-5ADC-A562-FCB074E396B4}"/>
     </window>
-    <window class="worksheet" name="KPI · AOV">
+    <window class="worksheet" hidden="true" name="KPI · AOV">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1290,7 +1333,7 @@
       </cards>
       <simple-id uuid="{E0A7F367-F560-57F1-A4D9-3E4D67146FD7}"/>
     </window>
-    <window class="worksheet" name="Revenue Share by Channel">
+    <window class="worksheet" hidden="true" name="Revenue Share by Channel">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1313,7 +1356,7 @@
       </cards>
       <simple-id uuid="{434C660B-2264-5272-9D8E-EF4C13489116}"/>
     </window>
-    <window class="worksheet" name="Identical Channels">
+    <window class="worksheet" hidden="true" name="Identical Channels">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1336,7 +1379,7 @@
       </cards>
       <simple-id uuid="{55F0380F-8903-5E4A-9555-07E1DB0CABEC}"/>
     </window>
-    <window class="worksheet" name="Seasonality">
+    <window class="worksheet" hidden="true" name="Seasonality">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1359,7 +1402,7 @@
       </cards>
       <simple-id uuid="{7DE28E6E-2654-5221-8B9A-FC7FBA014ACE}"/>
     </window>
-    <window class="worksheet" name="Pareto Curve">
+    <window class="worksheet" hidden="true" name="Pareto Curve">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1382,7 +1425,7 @@
       </cards>
       <simple-id uuid="{0BB59587-55F0-5D48-86C3-31EDF836D309}"/>
     </window>
-    <window class="worksheet" name="Revenue Share by Country">
+    <window class="worksheet" hidden="true" name="Revenue Share by Country">
       <cards>
         <edge name="left">
           <strip size="160">
@@ -1405,7 +1448,7 @@
       </cards>
       <simple-id uuid="{41EE1938-1915-5726-BA56-DDAFB9DDEC4F}"/>
     </window>
-    <window class="worksheet" name="Revenue Share by Category">
+    <window class="worksheet" hidden="true" name="Revenue Share by Category">
       <cards>
         <edge name="left">
           <strip size="160">
