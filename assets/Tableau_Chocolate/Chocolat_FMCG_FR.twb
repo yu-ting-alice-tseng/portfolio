@@ -808,7 +808,7 @@
             <column-instance column="[Calc_Part_Canal]" derivation="User" name="[usr:Calc_Part_Canal:qk]" pivot='key' type="quantitative" />
             <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot='key' type="quantitative" />
           </datasource-dependencies>
-          <computed-sort column="[federated.choco_main].[none:channel:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
+          <sort class='computed' column="[federated.choco_main].[none:channel:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
           <aggregation value='true' />
         </view>
         <style>
@@ -872,7 +872,7 @@
             <column-instance column="[Calc_Part_Pays]" derivation="User" name="[usr:Calc_Part_Pays:qk]" pivot='key' type="quantitative" />
             <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot='key' type="quantitative" />
           </datasource-dependencies>
-          <computed-sort column="[federated.choco_main].[none:country_fr:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
+          <sort class='computed' column="[federated.choco_main].[none:country_fr:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
           <aggregation value='true' />
         </view>
         <style>
@@ -936,7 +936,7 @@
             <column-instance column="[Calc_Part_Cat]" derivation="User" name="[usr:Calc_Part_Cat:qk]" pivot='key' type="quantitative" />
             <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot='key' type="quantitative" />
           </datasource-dependencies>
-          <computed-sort column="[federated.choco_main].[none:category:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
+          <sort class='computed' column="[federated.choco_main].[none:category:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
           <aggregation value='true' />
         </view>
         <style>

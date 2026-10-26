@@ -14,7 +14,8 @@ The .twb files copy the header, feature manifest, object model and window
 cards of a workbook saved by Tableau Desktop 2026.3 (the user's version), and
 are checked against the official Tableau 2026.1 schema
 (github.com/tableau/tableau-document-schemas), minus <explain-data>, which that
-schema requires but older Tableau versions do not know. Validate with:
+schema requires but older Tableau versions do not know, and <sort class='computed'>,
+which Tableau 2026.3 expects instead of the schema's <computed-sort>. Validate with:
   python3 tools/build-tableau-chocolate.py --xsd path/to/twb_2026.1.0.xsd
 
 Usage: python3 tools/build-tableau-chocolate.py [--xsd FILE]
@@ -571,7 +572,9 @@ def worksheets_xml(lang):
     def share_sheet(key, field, calc, color):
         f_inst = q(inst(field))
         c_inst = q(inst(calc, "User", "quantitative"))
-        sort = (f"          <computed-sort column={a(f_inst)} direction='DESC' "
+        # Tableau 2026.3 still reads <sort class='computed'>; the 2026.1 schema
+        # names it <computed-sort>, which 2026.3 rejects.
+        sort = (f"          <sort class='computed' column={a(f_inst)} direction='DESC' "
                 f"using={a(q(inst('revenue', 'Sum', 'quantitative')))} />\n")
         deps = [dim(field), calc_dep(calc),
                 ("revenue", "real", "measure", "quantitative", "Sum", "quantitative", None)]
@@ -845,13 +848,14 @@ def main():
             if schema.validate(doc):
                 print("  valid against", Path(xsd).name)
             else:
-                errors = [e for e in schema.error_log if "explain-data" not in e.message]
+                errors = [e for e in schema.error_log
+                          if "explain-data" not in e.message and "Element 'sort'" not in e.message]
                 if errors:
                     ok = False
                 for e in errors:
                     print(f"  line {e.line}: {e.message}")
                 if not errors:
-                    print("  valid against", Path(xsd).name, "(explain-data omitted on purpose)")
+                    print("  valid against", Path(xsd).name, "(except explain-data and sort, on purpose)")
     sys.exit(0 if ok else 1)
 
 
