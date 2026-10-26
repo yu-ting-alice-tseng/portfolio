@@ -10,8 +10,9 @@ assets/Tableau_Chocolate/:
 Cleaning: the 9,764 sales rows whose product_id is not in products.csv
 (P0000 and P0201) are dropped, leaving the 990,236 transactions of the study.
 
-The .twb files are written in format 18.1 (opened by Tableau 2020.1 and later)
-and checked against the official Tableau 2026.1 schema
+The .twb files copy the header, feature manifest, object model and window
+cards of a workbook saved by Tableau Desktop 2026.3 (the user's version), and
+are checked against the official Tableau 2026.1 schema
 (github.com/tableau/tableau-document-schemas), minus <explain-data>, which that
 schema requires but older Tableau versions do not know. Validate with:
   python3 tools/build-tableau-chocolate.py --xsd path/to/twb_2026.1.0.xsd
@@ -291,9 +292,57 @@ def column_xml(name, caption, datatype, role, typ, fmt=None, formula=None, hidde
             f"      </column>\n")
 
 
+REMOTE_TYPE = {"integer": 20, "real": 5, "string": 129}
+
+
+def metadata_xml(csv, cols, obj):
+    """Metadata records written by Tableau 2026.3 for a CSV read as en_US."""
+    parent = "[" + csv + "]"
+    out = ["        <metadata-records>\n",
+           "          <metadata-record class='capability'>\n",
+           "            <remote-name />\n",
+           "            <remote-type>0</remote-type>\n",
+           f"            <parent-name>{escape(parent)}</parent-name>\n",
+           "            <remote-alias />\n",
+           "            <aggregation>Count</aggregation>\n",
+           "            <contains-null>true</contains-null>\n",
+           "            <attributes>\n"]
+    for k, v in (("character-set", "UTF-8"), ("collation", "en_US"), ("currency", "$"),
+                 ("decimal-char", "."), ("header-row", "true"), ("locale", "en_US"),
+                 ("single-char", ""), ("thousands-char", ",")):
+        out.append(f"              <attribute datatype='string' name={a(k)}>{escape(chr(34) + v + chr(34))}</attribute>\n")
+    out += ["            </attributes>\n", "          </metadata-record>\n"]
+    for i, (c, dt, _, _) in enumerate(cols):
+        out += ["          <metadata-record class='column'>\n",
+                f"            <remote-name>{escape(c)}</remote-name>\n",
+                f"            <remote-type>{REMOTE_TYPE[dt]}</remote-type>\n",
+                f"            <local-name>{escape('[' + c + ']')}</local-name>\n",
+                f"            <parent-name>{escape(parent)}</parent-name>\n",
+                f"            <remote-alias>{escape(c)}</remote-alias>\n",
+                f"            <ordinal>{i}</ordinal>\n",
+                f"            <local-type>{dt}</local-type>\n",
+                f"            <aggregation>{'Count' if dt == 'string' else 'Sum'}</aggregation>\n"]
+        if dt == "string":
+            out += ["            <scale>1</scale>\n", "            <width>1073741823</width>\n"]
+        out.append("            <contains-null>true</contains-null>\n")
+        if dt == "string":
+            out.append("            <collation flag='0' name='LEN_RUS' />\n")
+        out += [f"            <object-id>{escape('[' + obj + ']')}</object-id>\n",
+                "          </metadata-record>\n"]
+    out.append("        </metadata-records>\n")
+    return "".join(out)
+
+
 def datasource_xml(name, caption, csv, cols, captions, extra="", style=""):
     conn = name.replace("federated.", "textscan.")
     table = csv.replace(".csv", "#csv")
+    obj = csv + "_" + uuid.uuid5(uuid.NAMESPACE_URL, "choco-object-" + csv).hex.upper()
+    relation = (f"        <relation connection={a(conn)} name={a(csv)} table={a('[' + table + ']')} type='table'>\n"
+                "          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>\n"
+                + "".join(f"            <column datatype={a(dt)} name={a(c)} ordinal='{i}' />\n"
+                          for i, (c, dt, _, _) in enumerate(cols))
+                + "          </columns>\n"
+                "        </relation>\n")
     out = [f"    <datasource caption={a(caption)} inline='true' name={a(name)} version='18.1'>\n",
            "      <connection class='federated'>\n",
            "        <named-connections>\n",
@@ -301,18 +350,28 @@ def datasource_xml(name, caption, csv, cols, captions, extra="", style=""):
            f"            <connection class='textscan' directory='.' filename={a(csv)} password='' server='' />\n",
            "          </named-connection>\n",
            "        </named-connections>\n",
-           f"        <relation connection={a(conn)} name={a(csv)} table={a('[' + table + ']')} type='table'>\n",
-           "          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>\n"]
-    for i, (c, dt, _, _) in enumerate(cols):
-        out.append(f"            <column datatype={a(dt)} name={a(c)} ordinal='{i}' />\n")
-    out += ["          </columns>\n", "        </relation>\n", "      </connection>\n",
-            "      <aliases enabled='yes' />\n"]
+           relation,
+           metadata_xml(csv, cols, obj),
+           "      </connection>\n",
+           "      <aliases enabled='yes' />\n",
+           f"      <column caption={a(csv)} datatype='table' "
+           f"name={a('[__tableau_internal_object_id__].[' + obj + ']')} role='measure' type='quantitative' />\n"]
     for c, dt, role, typ in cols:
         cap, fmt, hidden = captions.get(c, (c, None, True))
         out.append(column_xml(c, cap, dt, role, typ, fmt, hidden=hidden))
     out.append(extra)
     out.append(style)
-    out.append("    </datasource>\n")
+    deep = relation.replace("\n        ", "\n                ").replace("        <relation", "              <relation", 1)
+    out += ["      <object-graph>\n",
+            "        <objects>\n",
+            f"          <object caption={a(csv)} id={a(obj)}>\n",
+            "            <properties context=''>\n",
+            deep,
+            "            </properties>\n",
+            "          </object>\n",
+            "        </objects>\n",
+            "      </object-graph>\n",
+            "    </datasource>\n"]
     return "".join(out)
 
 
@@ -700,6 +759,28 @@ def dashboard_xml(lang):
             "  </dashboards>\n")
 
 
+CARDS = ("      <cards>\n"
+         "        <edge name='left'>\n"
+         "          <strip size='160'>\n"
+         "            <card type='pages' />\n"
+         "            <card type='filters' />\n"
+         "            <card type='marks' />\n"
+         "          </strip>\n"
+         "        </edge>\n"
+         "        <edge name='top'>\n"
+         "          <strip size='2147483647'>\n"
+         "            <card type='columns' />\n"
+         "          </strip>\n"
+         "          <strip size='2147483647'>\n"
+         "            <card type='rows' />\n"
+         "          </strip>\n"
+         "          <strip size='30'>\n"
+         "            <card type='title' />\n"
+         "          </strip>\n"
+         "        </edge>\n"
+         "      </cards>\n")
+
+
 def windows_xml(lang):
     T = TEXT[lang]
     out = ["  <windows>\n",
@@ -710,7 +791,7 @@ def windows_xml(lang):
            "    </window>\n"]
     for name in T["sheets"].values():
         out += [f"    <window class='worksheet' hidden='true' name={a(name)}>\n",
-                "      <cards />\n",
+                CARDS,
                 f"      <simple-id uuid={a(sid())} />\n",
                 "    </window>\n"]
     out.append("  </windows>\n")
@@ -722,10 +803,21 @@ def workbook_xml(lang):
     _counter = _count()
     T = TEXT[lang]
     return ("<?xml version='1.0' encoding='utf-8' ?>\n"
-            # Format 18.1 is the one Tableau 2018.1 to 2025.x still write, so any
-            # recent Tableau Public opens the file (26.1 needs Tableau 2026.1).
-            f"<workbook locale={a(T['locale'])} source-build='2020.1.0 (20201.20.0220.0623)' "
-            "source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>\n"
+            # Header and feature manifest copied from a workbook saved by Tableau
+            # Desktop 2026.3: without the manifest, Tableau treats the file as an
+            # old document and its upgrade steps reject it.
+            f"<workbook locale={a(T['locale'])} original-version='18.1' "
+            "source-build='2026.3.0 (20263.26.1022.1645)' source-platform='win' version='18.1' "
+            "xmlns:user='http://www.tableausoftware.com/xml/user'>\n"
+            "  <document-format-change-manifest>\n"
+            "    <AnimationOnByDefault />\n"
+            "    <MarkAnimation />\n"
+            "    <ObjectModelEncapsulateLegacy />\n"
+            "    <ObjectModelTableType />\n"
+            "    <SchemaViewerObjectModel />\n"
+            "    <SheetIdentifierTracking />\n"
+            "    <WindowsPersistSimpleIdentifiers />\n"
+            "  </document-format-change-manifest>\n"
             + datasources_xml(lang)
             + shared_views_xml(lang)
             + worksheets_xml(lang)
