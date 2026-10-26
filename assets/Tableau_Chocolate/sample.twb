@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20263.26.1022.1645                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='4c1a83110a0e5d26a6bba5e5c2545d22890ba5c62200d4063a2538e15f089e56' _.fcp.WorkbookFingerprinting.true...creator-author-id='4c1a83110a0e5d26a6bba5e5c2545d22890ba5c62200d4063a2538e15f089e56' _.fcp.WorkbookFingerprinting.true...creator-license-type='free' _.fcp.WorkbookFingerprinting.true...creator-machine-id='76690e966e32ae3326a5edeaf41902db42f851eec320286eacd8cf26e0519be9' _.fcp.WorkbookFingerprinting.true...license-type='free' _.fcp.WorkbookFingerprinting.true...machine-id='76690e966e32ae3326a5edeaf41902db42f851eec320286eacd8cf26e0519be9' original-version='18.1' source-build='2026.3.0 (20263.26.1022.1645)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='chocolate_tableau' inline='true' name='federated.0j3ad5n1891zs41eb6che00l3fe0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='chocolate_tableau' name='textscan.18obhz209zq01i0zsjdwj1pdlalk'>
+            <connection class='textscan' directory='C:/Users/Bonita/Desktop/07_Portfolio/21_Personal Website/portfolio/assets/Tableau_Chocolate' filename='chocolate_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.18obhz209zq01i0zsjdwj1pdlalk' name='chocolate_tableau.csv' table='[chocolate_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+            <column datatype='integer' name='year' ordinal='0' />
+            <column datatype='integer' name='month' ordinal='1' />
+            <column datatype='string' name='month_fr' ordinal='2' />
+            <column datatype='string' name='month_en' ordinal='3' />
+            <column datatype='string' name='channel' ordinal='4' />
+            <column datatype='string' name='country_fr' ordinal='5' />
+            <column datatype='string' name='country_en' ordinal='6' />
+            <column datatype='string' name='product_id' ordinal='7' />
+            <column datatype='string' name='product_name' ordinal='8' />
+            <column datatype='string' name='brand' ordinal='9' />
+            <column datatype='string' name='category' ordinal='10' />
+            <column datatype='integer' name='transactions' ordinal='11' />
+            <column datatype='integer' name='units' ordinal='12' />
+            <column datatype='real' name='revenue' ordinal='13' />
+            <column datatype='real' name='cost' ordinal='14' />
+            <column datatype='real' name='profit' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_fr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_fr]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>month_fr</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_en</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_en]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>month_en</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>channel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[channel]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>channel</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_fr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_fr]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>country_fr</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_en</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_en]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>country_en</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_name]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>product_name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>brand</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[brand]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>brand</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transactions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[transactions]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>transactions</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>units</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[units]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>units</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>cost</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>profit</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='chocolate_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5]' role='measure' type='quantitative' />
+      <column caption='Brand' datatype='string' name='[brand]' role='dimension' type='nominal' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Channel' datatype='string' name='[channel]' role='dimension' type='nominal' />
+      <column caption='Cost' datatype='real' name='[cost]' role='measure' type='quantitative' />
+      <column caption='Country En' datatype='string' name='[country_en]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Fr' datatype='string' name='[country_fr]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Month En' datatype='string' name='[month_en]' role='dimension' type='nominal' />
+      <column caption='Month Fr' datatype='string' name='[month_fr]' role='dimension' type='nominal' />
+      <column caption='Product Id' datatype='string' name='[product_id]' role='dimension' type='nominal' />
+      <column caption='Product Name' datatype='string' name='[product_name]' role='dimension' type='nominal' />
+      <column caption='Profit' datatype='real' name='[profit]' role='measure' type='quantitative' />
+      <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+      <column caption='Transactions' datatype='integer' name='[transactions]' role='measure' type='quantitative' />
+      <column caption='Units' datatype='integer' name='[units]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;France&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='chocolate_tableau.csv' id='chocolate_tableau.csv_142B566782DA49D188531BC6755FA4D5'>
+            <properties context=''>
+              <relation connection='textscan.18obhz209zq01i0zsjdwj1pdlalk' name='chocolate_tableau.csv' table='[chocolate_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='integer' name='year' ordinal='0' />
+                  <column datatype='integer' name='month' ordinal='1' />
+                  <column datatype='string' name='month_fr' ordinal='2' />
+                  <column datatype='string' name='month_en' ordinal='3' />
+                  <column datatype='string' name='channel' ordinal='4' />
+                  <column datatype='string' name='country_fr' ordinal='5' />
+                  <column datatype='string' name='country_en' ordinal='6' />
+                  <column datatype='string' name='product_id' ordinal='7' />
+                  <column datatype='string' name='product_name' ordinal='8' />
+                  <column datatype='string' name='brand' ordinal='9' />
+                  <column datatype='string' name='category' ordinal='10' />
+                  <column datatype='integer' name='transactions' ordinal='11' />
+                  <column datatype='integer' name='units' ordinal='12' />
+                  <column datatype='real' name='revenue' ordinal='13' />
+                  <column datatype='real' name='cost' ordinal='14' />
+                  <column datatype='real' name='profit' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='工作表 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='chocolate_tableau' name='federated.0j3ad5n1891zs41eb6che00l3fe0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0j3ad5n1891zs41eb6che00l3fe0'>
+            <column caption='Channel' datatype='string' name='[channel]' role='dimension' type='nominal' />
+            <column-instance column='[channel]' derivation='None' name='[none:channel:nk]' pivot='key' type='nominal' />
+            <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0j3ad5n1891zs41eb6che00l3fe0].[sum:revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0j3ad5n1891zs41eb6che00l3fe0].[none:channel:nk]</rows>
+        <cols>[federated.0j3ad5n1891zs41eb6che00l3fe0].[sum:revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{6942E631-B92F-42C4-A859-131568D1C0BD}' />
+    </worksheet>
+    <worksheet name='工作表 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E41128A1-755C-402D-966D-7788213B72F6}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='工作表 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0j3ad5n1891zs41eb6che00l3fe0].[none:channel:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EDDB5721-B953-4394-A7FF-9D7E433A6677}' />
+    </window>
+    <window class='worksheet' name='工作表 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FC879F3F-E67A-432C-82F1-172CBBF14E3D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='167' name='工作表 1' width='192'>
+      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
+      AKG0/wfcIfDC4K14pAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='工作表 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
