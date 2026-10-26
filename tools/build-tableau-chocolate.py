@@ -78,10 +78,12 @@ def build_data():
              .sort_values("revenue", ascending=False, kind="stable"))
     sku["sku_rank"] = range(1, len(sku) + 1)
     sku["sku_cum_share"] = (sku["revenue"].cumsum() / sku["revenue"].sum()).round(6)
-    agg = agg.merge(sku[["product_id", "sku_rank", "sku_cum_share"]], on="product_id")
+    first = (sku["sku_rank"] - 1) // 40 * 40 + 1
+    sku["sku_band"] = first.astype(str) + " – " + (first + 39).astype(str)
+    agg = agg.merge(sku[["product_id", "sku_rank", "sku_cum_share", "sku_band"]], on="product_id")
     cols = ["year", "month", "month_fr", "month_en", "channel", "country_fr",
             "country_en", "product_id", "product_name", "brand", "category",
-            "transactions", "units", "revenue", "cost", "profit", "sku_rank", "sku_cum_share"]
+            "transactions", "units", "revenue", "cost", "profit", "sku_rank", "sku_cum_share", "sku_band"]
     agg[cols].to_csv(OUT / "chocolate_tableau.csv", index=False, encoding="utf-8")
 
     # Figures shown on portfolio-data.html: fail loudly if they drift.
@@ -114,20 +116,29 @@ TEXT = {
             "ca": "KPI · CA", "trans": "KPI · Transactions", "marge": "KPI · Marge",
             "aov": "KPI · Panier Moyen",
             "canal": "Part du CA par Canal",
-            "ident": "Canaux Identiques",
+            "ident": "Panier, Unités et Marge par Canal",
             "saison": "Saisonnalité",
-            "pareto": "Courbe de Pareto",
+            "pareto": "Concentration des SKUs",
             "pays": "Part du CA par Pays",
             "cat": "Part du CA par Catégorie",
         },
         "titles": {
-            "canal": "Part du CA par canal",
-            "ident": "Panier, unités et marge : identiques sur les 4 canaux",
-            "saison": "Indice de saisonnalité (100 = mois moyen) : février et décembre sans pic",
-            "pareto": "Courbe de Pareto : 160 SKUs sur 200 pour atteindre 80 % du CA",
-            "pays": "Part du CA par pays",
-            "cat": "Part du CA par catégorie",
+            "canal": "Part du CA par Canal",
+            "ident": "Panier Moyen, Unités et Marge par Canal",
+            "saison": "Indice de Saisonnalité par Mois (100 = Mois Moyen)",
+            "pareto": "Part du CA par Tranche de 40 SKUs (Classés par CA)",
+            "pays": "Part du CA par Pays",
+            "cat": "Part du CA par Catégorie",
         },
+        # The three findings of the study (portfolio-data.html, #chocolat-fmcg).
+        "sections": [
+            ("1", "Saisonnalité Non Captée",
+             "Aucun pic en février ni en décembre : l'indice reste entre 93 et 102."),
+            ("2", "Portefeuille sans Produit Phare",
+             "160 SKUs sur 200 pour atteindre 80 % du CA, contre environ 20 % selon la règle de Pareto."),
+            ("3", "Canaux Indifférenciés",
+             "Même panier, mêmes unités et même marge sur les 4 canaux ; l'Allemagne pèse 12 % du CA."),
+        ],
         "fields": {
             "channel": "Canal", "country": "Pays", "category": "Catégorie",
             "brand": "Marque", "product_name": "Produit", "month": "Mois",
@@ -135,14 +146,14 @@ TEXT = {
             "units": "Unités", "profit": "Marge ($)", "cost": "Coût ($)",
             "share": "Part du CA", "upt": "Unités par transaction",
             "index": "Indice de saisonnalité", "gap": "Écart à la moyenne (pts)",
-            "sign": "Position", "above": "Au-dessus de la moyenne",
-            "below": "En dessous de la moyenne",
-            "rank": "Rang du SKU", "cum": "Part cumulée du CA",
+            "rank": "Rang du SKU", "cum": "Part cumulée du CA", "band": "SKUs (rang)",
         },
-        "note": ("Contrôle qualité : indicateurs identiques sur les 4 canaux, marges toutes à 40 %, "
-                 "aucun pic à Noël ni à la Saint-Valentin. Données vraisemblablement simulées : "
-                 "les constats décrivent le jeu de données, les recommandations restent des hypothèses. "
-                 "Les filtres s'appliquent à tous les graphiques sauf la courbe de Pareto (ensemble des données)."),
+        "note_title": "Contrôle Qualité des Données",
+        "note": ("Indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël "
+                 "ni à la Saint-Valentin, six groupes concurrents dans une seule entreprise : "
+                 "données vraisemblablement simulées. Les constats décrivent le jeu de données, "
+                 "les recommandations restent des hypothèses à tester. Les filtres s'appliquent "
+                 "à tous les graphiques ; le rang des SKUs est calculé sur l'ensemble des données."),
         "source": ("Source des données : Kaggle « Chocolate Sales Dataset 2023 - 2024 » (Nguyen, s.d.) · "
                    "Projet personnel · Yu-Ting Tseng"),
     },
@@ -160,20 +171,28 @@ TEXT = {
             "ca": "KPI · Revenue", "trans": "KPI · Transactions", "marge": "KPI · Margin",
             "aov": "KPI · AOV",
             "canal": "Revenue Share by Channel",
-            "ident": "Identical Channels",
+            "ident": "Basket, Units and Margin by Channel",
             "saison": "Seasonality",
-            "pareto": "Pareto Curve",
+            "pareto": "SKU Concentration",
             "pays": "Revenue Share by Country",
             "cat": "Revenue Share by Category",
         },
         "titles": {
-            "canal": "Revenue share by channel",
-            "ident": "Basket, units and margin: identical across the 4 channels",
-            "saison": "Seasonality index (100 = average month): no peak in February or December",
-            "pareto": "Pareto curve: 160 of 200 SKUs to reach 80% of revenue",
-            "pays": "Revenue share by country",
-            "cat": "Revenue share by category",
+            "canal": "Revenue Share by Channel",
+            "ident": "Average Order Value, Units and Margin by Channel",
+            "saison": "Seasonality Index by Month (100 = Average Month)",
+            "pareto": "Revenue Share by Band of 40 SKUs (Ranked by Revenue)",
+            "pays": "Revenue Share by Country",
+            "cat": "Revenue Share by Category",
         },
+        "sections": [
+            ("1", "Uncaptured Seasonality",
+             "No peak in February or December: the index stays between 93 and 102."),
+            ("2", "No Hero Product",
+             "160 of 200 SKUs to reach 80% of revenue, vs. about 20% under the Pareto rule."),
+            ("3", "Undifferentiated Channels",
+             "Same basket, units and margin across the 4 channels; Germany accounts for 12% of revenue."),
+        ],
         "fields": {
             "channel": "Channel", "country": "Country", "category": "Category",
             "brand": "Brand", "product_name": "Product", "month": "Month",
@@ -181,24 +200,26 @@ TEXT = {
             "units": "Units", "profit": "Margin ($)", "cost": "Cost ($)",
             "share": "Revenue share", "upt": "Units per transaction",
             "index": "Seasonality index", "gap": "Gap to average (pts)",
-            "sign": "Position", "above": "Above average",
-            "below": "Below average",
-            "rank": "SKU rank", "cum": "Cumulative revenue share",
+            "rank": "SKU rank", "cum": "Cumulative revenue share", "band": "SKUs (rank)",
         },
-        "note": ("Data quality check: identical indicators across all 4 channels, every margin at 40%, "
-                 "no peak at Christmas or Valentine's Day. Most likely simulated data: the findings "
-                 "describe the dataset, and the recommendations remain hypotheses. "
-                 "Filters apply to every chart except the Pareto curve (full dataset)."),
-        "source": ("Data source: Kaggle “Chocolate Sales Dataset 2023 - 2024” (Nguyen, n.d.) · "
+        "note_title": "Data Quality Check",
+        "note": ("Identical indicators across all 4 channels, every margin at 40%, no peak at "
+                 "Christmas or Valentine's Day, six competing groups under one roof: most likely "
+                 "simulated data. The findings describe the dataset, and the recommendations "
+                 "remain hypotheses to test. Filters apply to every chart; SKU ranks are computed "
+                 "on the full dataset."),
+        "source": ("Data source: Kaggle \u201cChocolate Sales Dataset 2023 - 2024\u201d (Nguyen, n.d.) · "
                    "Personal project · Yu-Ting Tseng"),
     },
 }
 
-# Palette of portfolio-data.html (CLAUDE.md § 3 and § 24).
-# Theme chosen by the user: "Champagne Rosewood Constantia" (Power BI theme
-# file), carried over to Tableau: colours, Constantia titles, Corbel text.
-INK, MUTED, RULE, CARD, PAPER = "#3A332C", "#8C8279", "#E6DDCF", "#FFFFFF", "#F5F1EA"
-ACCENT, ACCENT_SOFT, DARK = "#9A7650", "#C9A9A0", "#3A332C"
+# Palette designed for this dataset (request of the user): chocolate tones on
+# cream, raspberry only for the numbers of the three findings. Constantia for
+# titles and key figures, Corbel for text and axes.
+PAPER, CARD, RULE = "#F6EFE6", "#FFFDF9", "#E8DCCB"
+INK, MUTED = "#2B1A12", "#8A7462"
+ACCENT, ACCENT_SOFT, DARK = "#6B3E26", "#C9A27E", "#2B1A12"
+RASPBERRY = "#B23A48"
 TITLE_FONT, FONT = "Constantia", "Corbel"
 
 MAIN = "federated.choco_main"
@@ -243,6 +264,7 @@ MAIN_COLS = [  # (csv name, tableau datatype, role, type)
     ("profit", "real", "measure", "quantitative"),
     ("sku_rank", "integer", "dimension", "quantitative"),
     ("sku_cum_share", "real", "measure", "quantitative"),
+    ("sku_band", "string", "dimension", "nominal"),
 ]
 
 
@@ -264,6 +286,8 @@ def calcs(lang):
                            f"SUM([revenue]) / MIN({{EXCLUDE [{country}] : SUM([revenue])}})", pct),
         "Calc_Part_Cat": (t["share"] + " · " + t["category"],
                           "SUM([revenue]) / MIN({EXCLUDE [category] : SUM([revenue])})", pct),
+        "Calc_Part_Band": (t["share"] + " · " + t["band"],
+                           "SUM([revenue]) / MIN({EXCLUDE [sku_band] : SUM([revenue])})", pct),
         "Calc_Index": (t["index"],
                        f"SUM([revenue]) / (MIN({{EXCLUDE [{month}] : SUM([revenue])}}) / 12) * 100",
                        "n#,##0.0"),
@@ -385,6 +409,7 @@ def datasources_xml(lang):
         "profit": (t["profit"], "n#,##0", False),
         "sku_rank": (t["rank"], "n#,##0", False),
         "sku_cum_share": (t["cum"], "p0.0%", False),
+        "sku_band": (t["band"], None, False),
     }
     extra = ""
     for name, (cap, formula, fmt) in calcs(lang).items():
@@ -407,7 +432,7 @@ def inst(field, deriv="None", typ="nominal"):
 
 def worksheet_xml(lang, name, title, ds, deps, rows="", cols="", mark="Bar", encodings="",
                   sort="", pane_style="", table_style="", fit="", panes=None,
-                  title_font=TITLE_FONT, title_size=16, title_color=INK):
+                  title_font=TITLE_FONT, title_size=14, title_color=INK):
     """deps: list of (field, datatype, role, type, derivation, instance_type)."""
     dep_cols, dep_inst = [], []
     seen = set()
@@ -588,19 +613,18 @@ def worksheets_xml(lang):
                              encodings=enc, sort=msort, pane_style=mark_color(ACCENT),
                              table_style=base_table_style()))
 
-    # Pareto curve: rank and cumulative share computed on the full dataset.
-    rk = q(inst("sku_rank", "None", "quantitative"))
-    cum = q(inst("sku_cum_share", "Min", "quantitative"))
-    deps = [("sku_rank", "integer", "dimension", "quantitative", "None", "quantitative", None),
-            ("sku_cum_share", "real", "measure", "quantitative", "Min", "quantitative", None),
-            ("product_name", "string", "dimension", "nominal", "None", "nominal", None)]
-    enc = f"              <tooltip column={a(q(inst('product_name')))} />\n"
-    style = ("              <style-rule element='mark'>\n"
-             f"                <format attr='mark-color' value={a(ACCENT)} />\n"
-             "              </style-rule>\n")
-    out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=cum, cols=rk,
-                             mark="Line", encodings=enc, pane_style=style,
-                             table_style=base_table_style()))
+    # SKU concentration: revenue share of each band of 40 SKUs ranked by
+    # revenue. A Line mark on a continuous axis stayed blank in Tableau 2026.3;
+    # five flat bars (about 20 % each) tell the same story.
+    band = q(inst("sku_band"))
+    pb = q(inst("Calc_Part_Band", "User", "quantitative"))
+    deps = [dim("sku_band"), calc_dep("Calc_Part_Band"),
+            ("sku_rank", "integer", "dimension", "quantitative", "Min", "quantitative", None)]
+    bsort = (f"          <sort class='computed' column={a(band)} direction='ASC' "
+             f"using={a(q(inst('sku_rank', 'Min', 'quantitative')))} />\n")
+    out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=band, cols=pb,
+                             encodings=f"              <text column={a(pb)} />\n", sort=bsort,
+                             pane_style=mark_color(ACCENT), table_style=base_table_style()))
 
     out.append("  </worksheets>\n")
     return "".join(out)
@@ -634,7 +658,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1200, 1290
+W, H = 1200, 1600
 
 
 def px(v, total):
@@ -695,28 +719,43 @@ def dashboard_xml(lang):
     br = "              <run>Æ&#10;</run>\n"  # Tableau's line break inside formatted text
 
     inner = W - 2 * G
-    text(G, 10, inner, 80, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
+    half = inner / 2
+    text(G, 10, inner, 76, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
 
-    y = 96
+    y = 92
     kw = inner / 4
     for i, key in enumerate(("ca", "trans", "marge", "aov")):
         sheet(G + i * kw, y, kw, 130, S[key])
     y += 136
     fw = inner / 3
     for i, f in enumerate(("channel", T["country"], "category")):
-        flt(G + i * fw, y, fw, 56, f)
-    y += 62
-    half = inner / 2
-    sheet(G, y, half, 270, S["canal"])
-    sheet(G + half, y, half, 270, S["ident"])
-    y += 276
-    sheet(G, y, half, 270, S["saison"])
-    sheet(G + half, y, half, 270, S["pareto"])
-    y += 276
-    sheet(G, y, half, 290, S["pays"])
-    sheet(G + half, y, half, 290, S["cat"])
-    y += 296
-    text(G, y, inner, H - y - 8, run(T["note"], 9, MUTED) + br + run(T["source"], 9, MUTED))
+        flt(G + i * fw, y, fw, 52, f)
+    y += 58
+
+    # One block per finding of the study: numbered header, then its charts.
+    def section(y, n):
+        num, name, detail = T["sections"][n]
+        text(G, y, inner, 54, run(num, 20, RASPBERRY, font=TITLE_FONT)
+             + run("   " + name, 18, INK, font=TITLE_FONT) + br + run(detail, 11, MUTED))
+        return y + 58
+
+    y = section(y, 0)
+    sheet(G, y, inner, 260, S["saison"])
+    y += 270
+    y = section(y, 1)
+    sheet(G, y, half, 260, S["pareto"])
+    sheet(G + half, y, half, 260, S["cat"])
+    y += 270
+    y = section(y, 2)
+    sheet(G, y, half, 260, S["canal"])
+    sheet(G + half, y, half, 260, S["ident"])
+    y += 266
+    sheet(G, y, half, 260, S["pays"])
+    text(G + half, y, half, 260,
+         run(T["note_title"], 14, INK, font=TITLE_FONT) + br + br + run(T["note"], 11, MUTED),
+         bg=CARD, border=True)
+    y += 266
+    text(G, y, inner, H - y - 8, run(T["source"], 9, MUTED))
 
     zones = "".join(z.items)
     return ("  <dashboards>\n"

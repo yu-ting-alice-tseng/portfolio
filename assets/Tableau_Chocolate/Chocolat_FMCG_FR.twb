@@ -37,6 +37,7 @@
             <column datatype="real" name="profit" ordinal='15' />
             <column datatype="integer" name="sku_rank" ordinal='16' />
             <column datatype="real" name="sku_cum_share" ordinal='17' />
+            <column datatype="string" name="sku_band" ordinal='18' />
           </columns>
         </relation>
         <metadata-records>
@@ -301,6 +302,21 @@
             <contains-null>true</contains-null>
             <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
           </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sku_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sku_band]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>sku_band</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
@@ -323,6 +339,7 @@
       <column caption="Marge ($)" datatype="real" default-format="n#,##0" name="[profit]" role="measure" type="quantitative" />
       <column caption="Rang du SKU" datatype="integer" default-format="n#,##0" name="[sku_rank]" role="dimension" type="quantitative" />
       <column caption="Part cumulée du CA" datatype="real" default-format="p0.0%" name="[sku_cum_share]" role="measure" type="quantitative" />
+      <column caption="SKUs (rang)" datatype="string" name="[sku_band]" role="dimension" type="nominal" />
       <column caption="CA (M$)" datatype="real" default-format="n#,##0.0" name="[Calc_CA_M]" role="measure" type="quantitative">
         <calculation class='tableau' formula="SUM([revenue]) / 1000000" />
       </column>
@@ -343,6 +360,9 @@
       </column>
       <column caption="Part du CA · Catégorie" datatype="real" default-format="p0.0%" name="[Calc_Part_Cat]" role="measure" type="quantitative">
         <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [category] : SUM([revenue])})" />
+      </column>
+      <column caption="Part du CA · SKUs (rang)" datatype="real" default-format="p0.0%" name="[Calc_Part_Band]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [sku_band] : SUM([revenue])})" />
       </column>
       <column caption="Indice de saisonnalité" datatype="real" default-format="n#,##0.0" name="[Calc_Index]" role="measure" type="quantitative">
         <calculation class='tableau' formula="SUM([revenue]) / (MIN({EXCLUDE [month_fr] : SUM([revenue])}) / 12) * 100" />
@@ -374,6 +394,7 @@
                     <column datatype="real" name="profit" ordinal='15' />
                     <column datatype="integer" name="sku_rank" ordinal='16' />
                     <column datatype="real" name="sku_cum_share" ordinal='17' />
+                    <column datatype="string" name="sku_band" ordinal='18' />
                   </columns>
                 </relation>
             </properties>
@@ -411,7 +432,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize="12">CA (M$)</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">CA (M$)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -430,12 +451,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -443,7 +464,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -457,12 +478,12 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
               </style-rule>
               <style-rule element='cell'>
                 <format attr='font-family' value="Constantia" />
                 <format attr='font-size' value='34' />
-                <format attr='color' value="#9A7650" />
+                <format attr='color' value="#6B3E26" />
                 <format attr='text-align' value='center' />
               </style-rule>
             </style>
@@ -477,7 +498,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize="12">Transactions</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Transactions</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -494,12 +515,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -507,7 +528,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -521,12 +542,12 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
               </style-rule>
               <style-rule element='cell'>
                 <format attr='font-family' value="Constantia" />
                 <format attr='font-size' value='34' />
-                <format attr='color' value="#9A7650" />
+                <format attr='color' value="#6B3E26" />
                 <format attr='text-align' value='center' />
               </style-rule>
             </style>
@@ -541,7 +562,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize="12">Marge brute</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Marge brute</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -560,12 +581,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -573,7 +594,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -587,12 +608,12 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
               </style-rule>
               <style-rule element='cell'>
                 <format attr='font-family' value="Constantia" />
                 <format attr='font-size' value='34' />
-                <format attr='color' value="#9A7650" />
+                <format attr='color' value="#6B3E26" />
                 <format attr='text-align' value='center' />
               </style-rule>
             </style>
@@ -607,7 +628,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize="12">Panier moyen ($)</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Panier moyen ($)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -626,12 +647,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -639,7 +660,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -653,12 +674,12 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
               </style-rule>
               <style-rule element='cell'>
                 <format attr='font-family' value="Constantia" />
                 <format attr='font-size' value='34' />
-                <format attr='color' value="#9A7650" />
+                <format attr='color' value="#6B3E26" />
                 <format attr='text-align' value='center' />
               </style-rule>
             </style>
@@ -673,7 +694,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize="16">Part du CA par canal</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Canal</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -697,12 +718,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -710,7 +731,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -724,7 +745,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -739,7 +760,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize="16">Part du CA par pays</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Pays</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -763,12 +784,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -776,7 +797,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -790,7 +811,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -805,7 +826,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize="16">Part du CA par catégorie</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Catégorie</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -829,12 +850,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -842,7 +863,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -856,7 +877,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -867,11 +888,11 @@
       </table>
       <simple-id uuid="{7E992DDE-6D6E-5BB4-A5A0-FFB8DDBCA96A}" />
     </worksheet>
-    <worksheet name="Canaux Identiques">
+    <worksheet name="Panier, Unités et Marge par Canal">
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize="16">Panier, unités et marge : identiques sur les 4 canaux</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Panier Moyen, Unités et Marge par Canal</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -900,12 +921,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -913,7 +934,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -927,7 +948,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -942,7 +963,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -957,7 +978,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#C9A9A0" />
+                <format attr='mark-color' value="#C9A27E" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -972,7 +993,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#3A332C" />
+                <format attr='mark-color' value="#2B1A12" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -987,7 +1008,7 @@
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize="16">Indice de saisonnalité (100 = mois moyen) : février et décembre sans pic</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Indice de Saisonnalité par Mois (100 = Mois Moyen)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1015,12 +1036,12 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -1028,7 +1049,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -1042,7 +1063,7 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
@@ -1053,11 +1074,11 @@
       </table>
       <simple-id uuid="{84D4707D-81BF-5495-B24D-17DAD2CE6B17}" />
     </worksheet>
-    <worksheet name="Courbe de Pareto">
+    <worksheet name="Concentration des SKUs">
         <layout-options>
           <title>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize="16">Courbe de Pareto : 160 SKUs sur 200 pour atteindre 80 % du CA</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Part du CA par Tranche de 40 SKUs (Classés par CA)</run>
             </formatted-text>
           </title>
         </layout-options>
@@ -1067,23 +1088,26 @@
             <datasource caption="Chocolate Sales" name="federated.choco_main" />
           </datasources>
           <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[sku_band]" role="dimension" type="nominal" />
+            <column caption="Part du CA · SKUs (rang)" datatype="real" default-format="p0.0%" name="[Calc_Part_Band]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [sku_band] : SUM([revenue])})" />
+            </column>
             <column datatype="integer" name="[sku_rank]" role="dimension" type="quantitative" />
-            <column datatype="real" name="[sku_cum_share]" role="measure" type="quantitative" />
-            <column datatype="string" name="[product_name]" role="dimension" type="nominal" />
-            <column-instance column="[sku_rank]" derivation="None" name="[none:sku_rank:qk]" pivot='key' type="quantitative" />
-            <column-instance column="[sku_cum_share]" derivation="Min" name="[min:sku_cum_share:qk]" pivot='key' type="quantitative" />
-            <column-instance column="[product_name]" derivation="None" name="[none:product_name:nk]" pivot='key' type="nominal" />
+            <column-instance column="[sku_band]" derivation="None" name="[none:sku_band:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_Part_Band]" derivation="User" name="[usr:Calc_Part_Band:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[sku_rank]" derivation="Min" name="[min:sku_rank:qk]" pivot='key' type="quantitative" />
           </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:sku_band:nk]" direction='ASC' using="[federated.choco_main].[min:sku_rank:qk]" />
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='color' value="#8C8279" />
+            <format attr='color' value="#8A7462" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
           <style-rule element='label'>
-            <format attr='color' value="#3A332C" />
+            <format attr='color' value="#2B1A12" />
             <format attr='font-family' value="Corbel" />
             <format attr='font-size' value='11' />
           </style-rule>
@@ -1091,7 +1115,7 @@
             <format attr='line-visibility' value='off' />
           </style-rule>
           <style-rule element='table'>
-            <format attr='background-color' value="#FFFFFF" />
+            <format attr='background-color' value="#FFFDF9" />
           </style-rule>
         </style>
         <panes>
@@ -1099,19 +1123,20 @@
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class="Line" />
+            <mark class="Bar" />
             <encodings>
-              <tooltip column="[federated.choco_main].[none:product_name:nk]" />
+              <text column="[federated.choco_main].[usr:Calc_Part_Band:qk]" />
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value="#9A7650" />
+                <format attr='mark-color' value="#6B3E26" />
+                <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
           </pane>
         </panes>
-        <rows>[federated.choco_main].[min:sku_cum_share:qk]</rows>
-        <cols>[federated.choco_main].[none:sku_rank:qk]</cols>
+        <rows>[federated.choco_main].[none:sku_band:nk]</rows>
+        <cols>[federated.choco_main].[usr:Calc_Part_Band:qk]</cols>
       </table>
       <simple-id uuid="{AB8D5BC0-C394-5A88-BA0D-4D4024507699}" />
     </worksheet>
@@ -1120,155 +1145,208 @@
     <dashboard name="Diagnostic Commercial">
       <style>
         <style-rule element='table'>
-          <format attr='background-color' value="#F5F1EA" />
+          <format attr='background-color' value="#F6EFE6" />
         </style-rule>
       </style>
-      <size maxheight='1290' maxwidth='1200' minheight='1290' minwidth='1200' sizing-mode='fixed' />
+      <size maxheight='1600' maxwidth='1200' minheight='1600' minwidth='1200' sizing-mode='fixed' />
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='6202' id='3' w='97333' x='1333' y='775' type-v2='text'>
+          <zone h='4750' id='3' w='97333' x='1333' y='625' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#3A332C" fontname="Constantia" fontsize='24'>Chocolat FMCG — Diagnostic Commercial 2023 – 2024</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='24'>Chocolat FMCG — Diagnostic Commercial 2023 – 2024</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize='11'>990 236 transactions · 4 canaux · 6 pays · 200 SKUs · 6 marques</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>990 236 transactions · 4 canaux · 6 pays · 200 SKUs · 6 marques</run>
             </formatted-text>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#F5F1EA" />
+              <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='10078' id='4' w='24333' x='1333' y='7442' name="KPI · CA" show-title='true'>
+          <zone h='8125' id='4' w='24333' x='1333' y='5750' name="KPI · CA" show-title='true'>
             <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
+              <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
               <format attr='border-width' value='1' />
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
+              <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='10078' id='5' w='24333' x='25667' y='7442' name="KPI · Transactions" show-title='true'>
+          <zone h='8125' id='5' w='24333' x='25667' y='5750' name="KPI · Transactions" show-title='true'>
             <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
+              <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
               <format attr='border-width' value='1' />
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
+              <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='10078' id='6' w='24333' x='50000' y='7442' name="KPI · Marge" show-title='true'>
+          <zone h='8125' id='6' w='24333' x='50000' y='5750' name="KPI · Marge" show-title='true'>
             <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
+              <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
               <format attr='border-width' value='1' />
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
+              <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='10078' id='7' w='24333' x='74333' y='7442' name="KPI · Panier Moyen" show-title='true'>
+          <zone h='8125' id='7' w='24333' x='74333' y='5750' name="KPI · Panier Moyen" show-title='true'>
             <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
+              <format attr='border-color' value="#E8DCCB" />
               <format attr='border-style' value='solid' />
               <format attr='border-width' value='1' />
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
+              <format attr='background-color' value="#FFFDF9" />
             </zone-style>
           </zone>
-          <zone h='4341' id='8' w='32444' x='1333' y='17984' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
+          <zone h='3250' id='8' w='32444' x='1333' y='14250' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#F5F1EA" />
+              <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='4341' id='9' w='32444' x='33778' y='17984' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:country_fr:nk]" type-v2='filter' values='database'>
+          <zone h='3250' id='9' w='32444' x='33778' y='14250' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:country_fr:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#F5F1EA" />
+              <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='4341' id='10' w='32444' x='66222' y='17984' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
+          <zone h='3250' id='10' w='32444' x='66222' y='14250' mode='checkdropdown' name="Part du CA par Canal" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#F5F1EA" />
+              <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
-          <zone h='20930' id='11' w='48667' x='1333' y='22791' name="Part du CA par Canal" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
-            </zone-style>
-          </zone>
-          <zone h='20930' id='12' w='48667' x='50000' y='22791' name="Canaux Identiques" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
-            </zone-style>
-          </zone>
-          <zone h='20930' id='13' w='48667' x='1333' y='44186' name="Saisonnalité" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
-            </zone-style>
-          </zone>
-          <zone h='20930' id='14' w='48667' x='50000' y='44186' name="Courbe de Pareto" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
-            </zone-style>
-          </zone>
-          <zone h='22481' id='15' w='48667' x='1333' y='65581' name="Part du CA par Pays" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
-            </zone-style>
-          </zone>
-          <zone h='22481' id='16' w='48667' x='50000' y='65581' name="Part du CA par Catégorie" show-title='true'>
-            <zone-style>
-              <format attr='border-color' value="#E6DDCF" />
-              <format attr='border-style' value='solid' />
-              <format attr='border-width' value='1' />
-              <format attr='margin' value='6' />
-              <format attr='padding' value='8' />
-              <format attr='background-color' value="#FFFFFF" />
-            </zone-style>
-          </zone>
-          <zone h='10853' id='17' w='97333' x='1333' y='88527' type-v2='text'>
+          <zone h='3375' id='11' w='97333' x='1333' y='17875' type-v2='text'>
             <formatted-text>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize='9'>Contrôle qualité : indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël ni à la Saint-Valentin. Données vraisemblablement simulées : les constats décrivent le jeu de données, les recommandations restent des hypothèses. Les filtres s'appliquent à tous les graphiques sauf la courbe de Pareto (ensemble des données).</run>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>1</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Saisonnalité Non Captée</run>
               <run>Æ&#10;</run>
-              <run fontcolor="#8C8279" fontname="Corbel" fontsize='9'>Source des données : Kaggle « Chocolate Sales Dataset 2023 - 2024 » (Nguyen, s.d.) · Projet personnel · Yu-Ting Tseng</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Aucun pic en février ni en décembre : l'indice reste entre 93 et 102.</run>
             </formatted-text>
             <zone-style>
               <format attr='margin' value='6' />
               <format attr='padding' value='8' />
-              <format attr='background-color' value="#F5F1EA" />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='12' w='97333' x='1333' y='21500' name="Saisonnalité" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='3375' id='13' w='97333' x='1333' y='38375' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>2</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Portefeuille sans Produit Phare</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>160 SKUs sur 200 pour atteindre 80 % du CA, contre environ 20 % selon la règle de Pareto.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='14' w='48667' x='1333' y='42000' name="Concentration des SKUs" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='15' w='48667' x='50000' y='42000' name="Part du CA par Catégorie" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='3375' id='16' w='97333' x='1333' y='58875' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#B23A48" fontname="Constantia" fontsize='20'>3</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Canaux Indifférenciés</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Même panier, mêmes unités et même marge sur les 4 canaux ; l'Allemagne pèse 12 % du CA.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='17' w='48667' x='1333' y='62500' name="Part du CA par Canal" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='18' w='48667' x='50000' y='62500' name="Panier, Unités et Marge par Canal" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='19' w='48667' x='1333' y='79125' name="Part du CA par Pays" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='16250' id='20' w='48667' x='50000' y='79125' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='14'>Contrôle Qualité des Données</run>
+              <run>Æ&#10;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël ni à la Saint-Valentin, six groupes concurrents dans une seule entreprise : données vraisemblablement simulées. Les constats décrivent le jeu de données, les recommandations restent des hypothèses à tester. Les filtres s'appliquent à tous les graphiques ; le rang des SKUs est calculé sur l'ensemble des données.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='3750' id='21' w='97333' x='1333' y='95750' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='9'>Source des données : Kaggle « Chocolate Sales Dataset 2023 - 2024 » (Nguyen, s.d.) · Projet personnel · Yu-Ting Tseng</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
             </zone-style>
           </zone>
         </zone>
@@ -1294,13 +1372,13 @@
         <viewpoint name="Part du CA par Canal">
           <zoom type='entire-view' />
         </viewpoint>
-        <viewpoint name="Canaux Identiques">
+        <viewpoint name="Panier, Unités et Marge par Canal">
           <zoom type='entire-view' />
         </viewpoint>
         <viewpoint name="Saisonnalité">
           <zoom type='entire-view' />
         </viewpoint>
-        <viewpoint name="Courbe de Pareto">
+        <viewpoint name="Concentration des SKUs">
           <zoom type='entire-view' />
         </viewpoint>
         <viewpoint name="Part du CA par Pays">
@@ -1428,7 +1506,7 @@
       </cards>
       <simple-id uuid="{434C660B-2264-5272-9D8E-EF4C13489116}" />
     </window>
-    <window class='worksheet' hidden='true' name="Canaux Identiques">
+    <window class='worksheet' hidden='true' name="Panier, Unités et Marge par Canal">
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1474,7 +1552,7 @@
       </cards>
       <simple-id uuid="{7DE28E6E-2654-5221-8B9A-FC7FBA014ACE}" />
     </window>
-    <window class='worksheet' hidden='true' name="Courbe de Pareto">
+    <window class='worksheet' hidden='true' name="Concentration des SKUs">
       <cards>
         <edge name='left'>
           <strip size='160'>
