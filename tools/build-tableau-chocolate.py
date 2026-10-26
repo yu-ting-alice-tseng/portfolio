@@ -3,7 +3,6 @@
 Reads the raw Kaggle files in assets/SQL_Chocolate Sales/ and writes to
 assets/Tableau_Chocolate/:
   chocolate_tableau.csv   sales aggregated by month x channel x country x product
-  chocolate_pareto.csv    the 200 SKUs ranked by revenue, with cumulative share
   Chocolat_FMCG_FR.twb    French workbook
   Chocolate_FMCG_EN.twb   English workbook
 
@@ -72,26 +71,24 @@ def build_data():
     agg["month_en"] = agg["month"].map(lambda m: MONTH_EN[m - 1])
     for col in ("revenue", "cost", "profit"):
         agg[col] = agg[col].round(2)
+    # Pareto rank and cumulative revenue share of each SKU over the full
+    # dataset, repeated on its rows: Tableau 2026.3 showed no data for a
+    # second datasource, so the Pareto curve reads the main file.
+    sku = (df.groupby("product_id", as_index=False)["revenue"].sum()
+             .sort_values("revenue", ascending=False, kind="stable"))
+    sku["sku_rank"] = range(1, len(sku) + 1)
+    sku["sku_cum_share"] = (sku["revenue"].cumsum() / sku["revenue"].sum()).round(6)
+    agg = agg.merge(sku[["product_id", "sku_rank", "sku_cum_share"]], on="product_id")
     cols = ["year", "month", "month_fr", "month_en", "channel", "country_fr",
             "country_en", "product_id", "product_name", "brand", "category",
-            "transactions", "units", "revenue", "cost", "profit"]
+            "transactions", "units", "revenue", "cost", "profit", "sku_rank", "sku_cum_share"]
     agg[cols].to_csv(OUT / "chocolate_tableau.csv", index=False, encoding="utf-8")
-
-    sku = (df.groupby(["product_id", "product_name"], as_index=False)["revenue"].sum()
-             .sort_values("revenue", ascending=False, kind="stable"))
-    total = sku["revenue"].sum()
-    sku["rank"] = range(1, len(sku) + 1)
-    sku["share"] = (sku["revenue"] / total).round(6)
-    sku["cum_share"] = (sku["revenue"].cumsum() / total).round(6)
-    sku["revenue"] = sku["revenue"].round(2)
-    sku[["rank", "product_id", "product_name", "revenue", "share", "cum_share"]].to_csv(
-        OUT / "chocolate_pareto.csv", index=False, encoding="utf-8")
 
     # Figures shown on portfolio-data.html: fail loudly if they drift.
     R = df["revenue"].sum()
     assert round(R / 1e6, 1) == 25.2
     assert round(df["profit"].sum() / R * 100) == 40
-    assert int((sku["cum_share"] < 0.8).sum()) + 1 == 160
+    assert int((sku["sku_cum_share"] < 0.8).sum()) + 1 == 160
     share = df.groupby("store_type")["revenue"].sum() / R * 100
     assert [round(share[c], 1) for c in ("Airport", "Mall", "Online", "Retail")] == [29.9, 26.0, 25.1, 19.1]
     month = df.groupby("month")["revenue"].sum()
@@ -153,7 +150,7 @@ TEXT = {
         "file": "Chocolate_FMCG_EN.twb", "locale": "en_US",
         "country": "country_en", "month": "month_en",
         "dash": "Commercial Diagnostic",
-        "title": "Chocolate FMCG — Commercial Intelligence Diagnostic 2023 – 2024",
+        "title": "Chocolate FMCG — Commercial Diagnostic 2023 – 2024",
         "subtitle": "990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands",
         "kpi": {
             "ca": "Revenue ($M)", "trans": "Transactions", "marge": "Gross margin",
@@ -205,7 +202,6 @@ ACCENT, ACCENT_SOFT, DARK = "#9A7650", "#C9A9A0", "#3A332C"
 TITLE_FONT, FONT = "Constantia", "Corbel"
 
 MAIN = "federated.choco_main"
-PARETO = "federated.choco_pareto"
 
 
 def a(v):
@@ -245,15 +241,10 @@ MAIN_COLS = [  # (csv name, tableau datatype, role, type)
     ("revenue", "real", "measure", "quantitative"),
     ("cost", "real", "measure", "quantitative"),
     ("profit", "real", "measure", "quantitative"),
+    ("sku_rank", "integer", "dimension", "quantitative"),
+    ("sku_cum_share", "real", "measure", "quantitative"),
 ]
-PARETO_COLS = [
-    ("rank", "integer", "dimension", "quantitative"),
-    ("product_id", "string", "dimension", "nominal"),
-    ("product_name", "string", "dimension", "nominal"),
-    ("revenue", "real", "measure", "quantitative"),
-    ("share", "real", "measure", "quantitative"),
-    ("cum_share", "real", "measure", "quantitative"),
-]
+
 
 
 def calcs(lang):
@@ -277,8 +268,6 @@ def calcs(lang):
                        f"SUM([revenue]) / (MIN({{EXCLUDE [{month}] : SUM([revenue])}}) / 12) * 100",
                        "n#,##0.0"),
         "Calc_Ecart": (t["gap"], "[Calc_Index] - 100", "n+#,##0.0;-#,##0.0"),
-        "Calc_Sign": (t["sign"],
-                      f'IF [Calc_Ecart] >= 0 THEN "{t["above"]}" ELSE "{t["below"]}" END', None),
     }
 
 
@@ -394,35 +383,16 @@ def datasources_xml(lang):
         "revenue": (t["revenue"], "n#,##0", False),
         "cost": (t["cost"], "n#,##0", False),
         "profit": (t["profit"], "n#,##0", False),
+        "sku_rank": (t["rank"], "n#,##0", False),
+        "sku_cum_share": (t["cum"], "p0.0%", False),
     }
     extra = ""
     for name, (cap, formula, fmt) in calcs(lang).items():
-        dt = "string" if name == "Calc_Sign" else "real"
-        role = "dimension" if name == "Calc_Sign" else "measure"
-        typ = "nominal" if name == "Calc_Sign" else "quantitative"
+        dt, role, typ = "real", "measure", "quantitative"
         extra += column_xml(name, cap, dt, role, typ, fmt, formula)
-    style = ("      <style>\n"
-             "        <style-rule element='mark'>\n"
-             "          <encoding attr='color' field='[usr:Calc_Sign:nk]' type='palette'>\n"
-             f"            <map to={a(ACCENT)}>\n"
-             f"              <bucket>{escape(chr(34) + t['above'] + chr(34))}</bucket>\n"
-             "            </map>\n"
-             f"            <map to={a(ACCENT_SOFT)}>\n"
-             f"              <bucket>{escape(chr(34) + t['below'] + chr(34))}</bucket>\n"
-             "            </map>\n"
-             "          </encoding>\n"
-             "        </style-rule>\n"
-             "      </style>\n")
-    pareto_caps = {
-        "rank": (t["rank"], "n#,##0", False),
-        "product_name": (t["product_name"], None, False),
-        "revenue": (t["revenue"], "n#,##0", False),
-        "share": (t["share"], "p0.00%", False),
-        "cum_share": (t["cum"], "p0.0%", False),
-    }
+    style = ""
     return ("  <datasources>\n"
             + datasource_xml(MAIN, "Chocolate Sales", "chocolate_tableau.csv", MAIN_COLS, main_caps, extra, style)
-            + datasource_xml(PARETO, "Chocolate Pareto", "chocolate_pareto.csv", PARETO_COLS, pareto_caps)
             + "  </datasources>\n")
 
 
@@ -454,7 +424,7 @@ def worksheet_xml(lang, name, title, ds, deps, rows="", cols="", mark="Bar", enc
                 dep_cols.append(f"            <column datatype={a(dt)} name={a('[' + f + ']')} role={a(role)} type={a(typ)} />\n")
         dep_inst.append(f"            <column-instance column={a('[' + f + ']')} derivation={a(deriv)} "
                         f"name={a(inst(f, deriv, ityp))} pivot='key' type={a(ityp)} />\n")
-    ds_caption = "Chocolate Sales" if ds == MAIN else "Chocolate Pareto"
+    ds_caption = "Chocolate Sales"
     title_xml = ("        <layout-options>\n"
                  "          <title>\n"
                  "            <formatted-text>\n"
@@ -538,13 +508,10 @@ def worksheets_xml(lang):
     country, month = T["country"], T["month"]
     M = MAIN
     q = lambda f: f"[{M}].{f}"  # noqa: E731
-    p = lambda f: f"[{PARETO}].{f}"  # noqa: E731
 
     def calc_dep(name, ityp="quantitative"):
         cap, formula, fmt = C[name]
-        dt = "string" if name == "Calc_Sign" else "real"
-        role = "dimension" if name == "Calc_Sign" else "measure"
-        typ = "nominal" if name == "Calc_Sign" else "quantitative"
+        dt, role, typ = "real", "measure", "quantitative"
         return (name, dt, role, typ, "User", ityp, (cap, formula, fmt))
 
     def dim(f, typ="nominal"):
@@ -606,46 +573,32 @@ def worksheets_xml(lang):
                              cols=f"({aov} + {upt} + {mg})", panes=panes,
                              table_style=base_table_style()))
 
-    # Seasonality: gap of each month's index to 100, coloured by sign.
+    # Seasonality: gap of each month's index to 100. One colour: Tableau
+    # 2026.3 ignored the palette written for a sign dimension, and the bars
+    # already go up or down.
     mo = q(inst(month, "None", "nominal"))
     gap = q(inst("Calc_Ecart", "User", "quantitative"))
-    sign = q(inst("Calc_Sign", "User", "nominal"))
     idx = q(inst("Calc_Index", "User", "quantitative"))
-    deps = [dim(month), calc_dep("Calc_Index"), calc_dep("Calc_Ecart"), calc_dep("Calc_Sign", "nominal"),
+    deps = [dim(month), calc_dep("Calc_Index"), calc_dep("Calc_Ecart"),
             ("month", "integer", "dimension", "ordinal", "Min", "quantitative", None)]
     msort = (f"          <sort class='computed' column={a(mo)} direction='ASC' "
              f"using={a(q(inst('month', 'Min', 'quantitative')))} />\n")
-    t = T["fields"]
-    palette = ("          <style-rule element='mark'>\n"
-               f"            <encoding attr='color' field={a(sign)} type='palette'>\n"
-               f"              <map to={a(ACCENT)}>\n"
-               f"                <bucket>{escape(chr(34) + t['above'] + chr(34))}</bucket>\n"
-               "              </map>\n"
-               f"              <map to={a(ACCENT_SOFT)}>\n"
-               f"                <bucket>{escape(chr(34) + t['below'] + chr(34))}</bucket>\n"
-               "              </map>\n"
-               "            </encoding>\n"
-               "          </style-rule>\n")
-    enc = (f"              <color column={a(sign)} />\n"
-           f"              <text column={a(idx)} />\n")
-    style = ("              <style-rule element='mark'>\n"
-             "                <format attr='mark-labels-show' value='true' />\n"
-             "              </style-rule>\n")
+    enc = f"              <text column={a(idx)} />\n"
     out.append(worksheet_xml(lang, S["saison"], TT["saison"], M, deps, rows=gap, cols=mo,
-                             encodings=enc, sort=msort, pane_style=style,
-                             table_style=base_table_style() + palette))
+                             encodings=enc, sort=msort, pane_style=mark_color(ACCENT),
+                             table_style=base_table_style()))
 
-    # Pareto curve (static datasource, full dataset).
-    rk = p(inst("rank", "None", "quantitative"))
-    cum = p(inst("cum_share", "Sum", "quantitative"))
-    deps = [("rank", "integer", "dimension", "quantitative", "None", "quantitative", None),
-            ("cum_share", "real", "measure", "quantitative", "Sum", "quantitative", None),
+    # Pareto curve: rank and cumulative share computed on the full dataset.
+    rk = q(inst("sku_rank", "None", "quantitative"))
+    cum = q(inst("sku_cum_share", "Min", "quantitative"))
+    deps = [("sku_rank", "integer", "dimension", "quantitative", "None", "quantitative", None),
+            ("sku_cum_share", "real", "measure", "quantitative", "Min", "quantitative", None),
             ("product_name", "string", "dimension", "nominal", "None", "nominal", None)]
-    enc = f"              <tooltip column={a(p(inst('product_name')))} />\n"
+    enc = f"              <tooltip column={a(q(inst('product_name')))} />\n"
     style = ("              <style-rule element='mark'>\n"
              f"                <format attr='mark-color' value={a(ACCENT)} />\n"
              "              </style-rule>\n")
-    out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], PARETO, deps, rows=cum, cols=rk,
+    out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=cum, cols=rk,
                              mark="Line", encodings=enc, pane_style=style,
                              table_style=base_table_style()))
 
@@ -681,7 +634,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1200, 1250
+W, H = 1200, 1290
 
 
 def px(v, total):
@@ -742,13 +695,13 @@ def dashboard_xml(lang):
     br = "              <run>Æ&#10;</run>\n"  # Tableau's line break inside formatted text
 
     inner = W - 2 * G
-    text(G, 10, inner, 70, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
+    text(G, 10, inner, 80, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
 
-    y = 86
+    y = 96
     kw = inner / 4
     for i, key in enumerate(("ca", "trans", "marge", "aov")):
-        sheet(G + i * kw, y, kw, 110, S[key])
-    y += 116
+        sheet(G + i * kw, y, kw, 130, S[key])
+    y += 136
     fw = inner / 3
     for i, f in enumerate(("channel", T["country"], "category")):
         flt(G + i * fw, y, fw, 56, f)
