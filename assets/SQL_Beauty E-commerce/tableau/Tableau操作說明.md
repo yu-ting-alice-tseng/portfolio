@@ -1,5 +1,26 @@
 # Tableau Public：6 張圖與儀表板
 
+## 最快的方法：直接打開做好的活頁簿
+
+這個資料夾裡已經有產生好的活頁簿，6 張圖和儀表板都做好了：
+
+| 檔案 | 內容 |
+|---|---|
+| `Beauty_Ecommerce_EN_V1.twb` | 英文版 |
+| `Beaute_Ecommerce_FR_V1.twb` | 法文版 |
+| `beauty_tableau_V1.csv` | 兩個活頁簿共用的資料，**必須和 `.twb` 放在同一個資料夾** |
+
+1. 用 Tableau 打開 `.twb`，下方的「**Funnel and Retention**」（法文版是「**Tunnel et Rétention**」）就是儀表板。
+2. **品牌四象限的顏色要手動設定一次**：Tableau 會忽略寫在檔案裡的自訂配色，所以四個象限會先顯示 Tableau 的預設顏色。到「Brand Matrix」工作表，在右側的顏色圖例上按右鍵，選「Edit Colors」，設定 Stars `#0d9488`、Leaks `#eb6834`、Hidden gems `#2a78d6`、Long tail `#a8a8a2`。
+3. **請先檢查「Daily Revenue」這張圖**：巧克力專案裡，連續座標軸上的折線曾經顯示成空白。如果這張圖是空的，把 Marks 從 Line 改成 Bar，再告訴我，我會修正產生器，輸出 V2。
+4. 發布方法見本文最後的「發布」一節。
+
+這些檔案由 `tools/build-tableau-beauty.py` 產生。**要修改時不要直接改 `.twb`**，請告訴我要改什麼，我重新執行產生器，輸出下一個版本（V2、V3…），舊版本會保留。
+
+下面是手動製作的步驟，如果活頁簿打不開，或想自己從頭做，可以照著做。
+
+---
+
 `tableau/` 資料夾裡的 CSV 已經整理好，**不用再從 BigQuery 匯出**。`preview/` 裡的 PNG 是每張圖做好之後應該長的樣子，做的時候可以對照。
 
 Tableau 的介面是英文，下面的按鈕名稱都照原文寫。

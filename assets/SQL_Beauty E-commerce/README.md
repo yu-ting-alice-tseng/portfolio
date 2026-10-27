@@ -144,5 +144,5 @@ Among entry brands with 500+ first buyers, repeat ranges from 36.0% (smart) to 1
 | `bigquery/99_run_all.sql` | Runs everything and gathers all results in one table |
 | `split-csv.ps1` | Splits the source CSV files under the 100 MB upload limit |
 | `results/bigquery_results.csv` | Every result of `99_run_all.sql`, as exported from BigQuery |
-| `tableau/` | Chart-ready CSV files, chart previews and the Tableau build guide |
+| `tableau/` | Tableau workbooks (FR and EN, built by `tools/build-tableau-beauty.py`), chart-ready CSV files, chart previews and the build guide |
 | `duckdb/` | First local version in DuckDB (loose funnel only); the BigQuery files are the reference |
