@@ -226,6 +226,12 @@ PAPER, CARD, RULE = "#F6EFE6", "#FFFDF9", "#E8DCCB"
 INK, MUTED = "#2B1A12", "#8A7462"
 ACCENT, ACCENT_SOFT, DARK = "#6B3E26", "#C9A27E", "#2B1A12"
 RASPBERRY = "#B23A48"
+# "Box of chocolates" (request of the user: more colour). Tableau 2026.3
+# ignores palettes written in the file, but honours one colour per sheet or
+# pane and zone backgrounds: each finding gets its own colour and tint.
+MILK, CARAMEL, BERRY, PISTACHIO, MINT = "#7B4A2D", "#D08C3F", "#C0485A", "#7FA66B", "#4F9A8E"
+KPI_COLOR = {"ca": MILK, "trans": CARAMEL, "marge": PISTACHIO, "aov": BERRY}
+SECTION = [(CARAMEL, "#FBEBD8"), (BERRY, "#F8E1E4"), (MINT, "#E1EFEC")]  # colour, header tint
 TITLE_FONT, FONT = "Constantia", "Corbel"
 
 MAIN = "federated.choco_main"
@@ -570,12 +576,12 @@ def worksheets_xml(lang):
             fld = q(inst("transactions", "Sum", "quantitative"))
         enc = f"              <text column={a(fld)} />\n"
         style = ("              <style-rule element='mark'>\n"
-                 f"                <format attr='mark-color' value={a(ACCENT)} />\n"
+                 f"                <format attr='mark-color' value={a(KPI_COLOR[key])} />\n"
                  "              </style-rule>\n"
                  "              <style-rule element='cell'>\n"
                  f"                <format attr='font-family' value={a(TITLE_FONT)} />\n"
                  f"                <format attr='font-size' value='34' />\n"
-                 f"                <format attr='color' value={a(ACCENT)} />\n"
+                 f"                <format attr='color' value={a(KPI_COLOR[key])} />\n"
                  "                <format attr='text-align' value='center' />\n"
                  "              </style-rule>\n")
         out.append(worksheet_xml(lang, S[key], T["kpi"][key], M, deps, mark="Text",
@@ -597,18 +603,18 @@ def worksheets_xml(lang):
                              encodings=enc, sort=sort, pane_style=mark_color(color),
                              table_style=base_table_style())
 
-    out.append(share_sheet("canal", "channel", "Calc_Part_Canal", ACCENT))
-    out.append(share_sheet("pays", country, "Calc_Part_Pays", ACCENT))
-    out.append(share_sheet("cat", "category", "Calc_Part_Cat", ACCENT))
+    out.append(share_sheet("canal", "channel", "Calc_Part_Canal", MINT))
+    out.append(share_sheet("pays", country, "Calc_Part_Pays", MILK))
+    out.append(share_sheet("cat", "category", "Calc_Part_Cat", PISTACHIO))
 
     # Identical channels: AOV, UPT and margin side by side.
     ch = q(inst("channel"))
     aov, upt, mg = (q(inst(c, "User", "quantitative")) for c in ("Calc_AOV", "Calc_UPT", "Calc_Marge"))
     deps = [dim("channel"), calc_dep("Calc_AOV"), calc_dep("Calc_UPT"), calc_dep("Calc_Marge")]
-    panes = [(None, "Bar", f"              <text column={a(aov)} />\n", mark_color(ACCENT)),
-             (("1", aov), "Bar", f"              <text column={a(aov)} />\n", mark_color(ACCENT)),
-             (("2", upt), "Bar", f"              <text column={a(upt)} />\n", mark_color(ACCENT_SOFT)),
-             (("3", mg), "Bar", f"              <text column={a(mg)} />\n", mark_color(DARK))]
+    panes = [(None, "Bar", f"              <text column={a(aov)} />\n", mark_color(MILK)),
+             (("1", aov), "Bar", f"              <text column={a(aov)} />\n", mark_color(MILK)),
+             (("2", upt), "Bar", f"              <text column={a(upt)} />\n", mark_color(CARAMEL)),
+             (("3", mg), "Bar", f"              <text column={a(mg)} />\n", mark_color(BERRY))]
     out.append(worksheet_xml(lang, S["ident"], TT["ident"], M, deps, rows=ch,
                              cols=f"({aov} + {upt} + {mg})", panes=panes,
                              table_style=base_table_style()))
@@ -625,7 +631,7 @@ def worksheets_xml(lang):
              f"using={a(q(inst('month', 'Min', 'quantitative')))} />\n")
     enc = f"              <text column={a(idx)} />\n"
     out.append(worksheet_xml(lang, S["saison"], TT["saison"], M, deps, rows=gap, cols=mo,
-                             encodings=enc, sort=msort, pane_style=mark_color(ACCENT),
+                             encodings=enc, sort=msort, pane_style=mark_color(CARAMEL),
                              table_style=base_table_style()))
 
     # SKU concentration (vertical bars, so the five equal heights read at a
@@ -640,7 +646,7 @@ def worksheets_xml(lang):
              f"using={a(q(inst('sku_rank', 'Min', 'quantitative')))} />\n")
     out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=pb, cols=band,
                              encodings=f"              <text column={a(pb)} />\n", sort=bsort,
-                             pane_style=mark_color(ACCENT), table_style=base_table_style()))
+                             pane_style=mark_color(BERRY), table_style=base_table_style()))
 
     out.append("  </worksheets>\n")
     return "".join(out)
@@ -754,8 +760,10 @@ def dashboard_xml(lang):
 
     def section(y, n):
         num, name, detail = T["sections"][n]
-        text(G, y, inner, 90, run(num, 20, RASPBERRY, font=TITLE_FONT)
-             + run("   " + name, 18, INK, font=TITLE_FONT) + br + run(detail, 11, MUTED))
+        color, tint = SECTION[n]
+        text(G, y, inner, 90, run(num, 22, color, bold=True, font=TITLE_FONT)
+             + run("   " + name, 18, INK, font=TITLE_FONT) + br + run(detail, 11, MUTED),
+             bg=tint, margin=4, padding=10)
         return y + 94
 
     y = section(y, 0)
