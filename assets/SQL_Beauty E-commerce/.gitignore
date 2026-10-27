@@ -1,0 +1,5 @@
+data/
+upload/
+output/
+*.duckdb
+*.duckdb.wal

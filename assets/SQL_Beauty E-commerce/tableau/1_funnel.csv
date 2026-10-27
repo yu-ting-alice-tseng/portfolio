@@ -1,0 +1,7 @@
+funnel,step,sessions,pct_of_view
+Loose (step happens at all),1. View,4265922,100.0
+Loose (step happens at all),2. Cart,983953,23.07
+Loose (step happens at all),3. Purchase,155617,3.65
+"Strict (in order, same session)",1. View,4265922,100.0
+"Strict (in order, same session)",2. Cart,587282,13.77
+"Strict (in order, same session)",3. Purchase,71381,1.67

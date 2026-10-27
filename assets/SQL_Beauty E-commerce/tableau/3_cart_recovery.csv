@@ -1,0 +1,5 @@
+outcome,items,pct_of_abandoned,pct_of_recovered
+1. Bought back within 1 day,341992,8.2,52.6
+2. Bought back in 1 - 7 days,176120,4.2,27.1
+3. Bought back after 7 days,132528,3.2,20.4
+4. Never bought back (in the data),3526929,84.4,
