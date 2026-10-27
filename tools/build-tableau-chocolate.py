@@ -115,8 +115,8 @@ TEXT = {
         "title": "Chocolat FMCG — Diagnostic Commercial 2023 – 2024",
         "subtitle": "990 236 transactions · 4 canaux · 6 pays · 200 SKUs · 6 marques",
         "kpi": {
-            "ca": "CA (M$)", "trans": "Transactions", "marge": "Marge brute",
-            "aov": "Panier moyen ($)",
+            "ca": "CA", "trans": "Transactions", "marge": "Marge brute",
+            "aov": "Panier moyen",
         },
         "sheets": {
             "ca": "KPI · CA", "trans": "KPI · Transactions", "marge": "KPI · Marge",
@@ -170,8 +170,8 @@ TEXT = {
         "title": "Chocolate FMCG — Commercial Diagnostic 2023 – 2024",
         "subtitle": "990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands",
         "kpi": {
-            "ca": "Revenue ($M)", "trans": "Transactions", "marge": "Gross margin",
-            "aov": "Average order value ($)",
+            "ca": "Revenue", "trans": "Transactions", "marge": "Gross margin",
+            "aov": "Average order value",
         },
         "sheets": {
             "ca": "KPI · Revenue", "trans": "KPI · Transactions", "marge": "KPI · Margin",
@@ -275,6 +275,15 @@ MAIN_COLS = [  # (csv name, tableau datatype, role, type)
 
 
 
+# Revenue in millions and average order value, with the currency where the
+# site puts it: "$25.2M" / "$25.49" in English, "25,2 M$" / "25,49 $" in French
+# (non-breaking space before the unit, CLAUDE.md § 20).
+MONEY = {
+    "en": ('n"$"#,##0.0"M"', 'n"$"#,##0.00'),
+    "fr": ('n#,##0.0"\u00a0M$"', 'n#,##0.00"\u00a0$"'),
+}
+
+
 def calcs(lang):
     """Calculated fields of the main datasource: name -> (caption, formula, format)."""
     t = TEXT[lang]["fields"]
@@ -282,9 +291,9 @@ def calcs(lang):
     country, month = TEXT[lang]["country"], TEXT[lang]["month"]
     pct = "p0.0%"
     return {
-        "Calc_CA_M": (k["ca"], "SUM([revenue]) / 1000000", "n#,##0.0"),
+        "Calc_CA_M": (k["ca"], "SUM([revenue]) / 1000000", MONEY[lang][0]),
         "Calc_Marge": (k["marge"], "SUM([profit]) / SUM([revenue])", pct),
-        "Calc_AOV": (k["aov"], "SUM([revenue]) / SUM([transactions])", "n#,##0.00"),
+        "Calc_AOV": (k["aov"], "SUM([revenue]) / SUM([transactions])", MONEY[lang][1]),
         "Calc_UPT": (t["upt"], "SUM([units]) / SUM([transactions])", "n#,##0.00"),
         "Calc_Part_Canal": (t["share"] + " · " + t["channel"],
                             "SUM([revenue]) / MIN({EXCLUDE [channel] : SUM([revenue])})", pct),
