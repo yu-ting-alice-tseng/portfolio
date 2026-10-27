@@ -665,7 +665,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1200, 1720
+W, H = 1200, 1770
 
 
 def px(v, total):
@@ -729,13 +729,15 @@ def dashboard_xml(lang):
     # business analysis): header, KPIs, filters, then one block per finding.
     inner = W - 2 * G
     half = inner / 2
-    text(G, 8, inner, 80, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
+    # Constantia figures descend below the baseline: title and KPI cards get
+    # extra height so nothing is clipped.
+    text(G, 8, inner, 100, run(T["title"], 24, INK, font=TITLE_FONT) + br + run(T["subtitle"], 11, MUTED))
 
-    y = 94
+    y = 114
     kw = inner / 4
     for i, key in enumerate(("ca", "trans", "marge", "aov")):
-        sheet(G + i * kw, y, kw, 120, S[key])
-    y += 126
+        sheet(G + i * kw, y, kw, 150, S[key])
+    y += 156
     fw = inner / 3
     for i, f in enumerate(("channel", T["country"], "category")):
         flt(G + i * fw, y, fw, 52, f)
