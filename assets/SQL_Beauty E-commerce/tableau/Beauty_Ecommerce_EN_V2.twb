@@ -1,0 +1,1087 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook locale="en_US" original-version='18.1' source-build='2026.3.0 (20263.26.1022.1645)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <datasources>
+    <datasource caption="Beauty E-commerce" inline='true' name="federated.beauty_main" version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption="beauty_tableau_V2" name="textscan.beauty_main">
+            <connection class='textscan' directory='.' filename="beauty_tableau_V2.csv" password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.beauty_main" name="beauty_tableau_V2.csv" table="[beauty_tableau_V2#csv]" type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype="string" name="chart" ordinal='0' />
+            <column datatype="string" name="label_en" ordinal='1' />
+            <column datatype="string" name="label_fr" ordinal='2' />
+            <column datatype="string" name="series_en" ordinal='3' />
+            <column datatype="string" name="series_fr" ordinal='4' />
+            <column datatype="integer" name="sort_key" ordinal='5' />
+            <column datatype="date" name="day" ordinal='6' />
+            <column datatype="real" name="pct" ordinal='7' />
+            <column datatype="real" name="amount" ordinal='8' />
+            <column datatype="integer" name="views" ordinal='9' />
+            <column datatype="integer" name="purchases" ordinal='10' />
+            <column datatype="string" name="brand_tag" ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name="character-set">"UTF-8"</attribute>
+              <attribute datatype='string' name="collation">"en_US"</attribute>
+              <attribute datatype='string' name="currency">"$"</attribute>
+              <attribute datatype='string' name="decimal-char">"."</attribute>
+              <attribute datatype='string' name="header-row">"true"</attribute>
+              <attribute datatype='string' name="locale">"en_US"</attribute>
+              <attribute datatype='string' name="single-char">""</attribute>
+              <attribute datatype='string' name="thousands-char">","</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chart</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[chart]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>chart</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>label_en</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[label_en]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>label_en</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>label_fr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[label_fr]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>label_fr</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>series_en</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[series_en]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>series_en</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>series_fr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[series_fr]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>series_fr</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sort_key</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sort_key]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>sort_key</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[amount]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>amount</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>views</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[views]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>views</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>purchases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[purchases]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>purchases</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>brand_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[brand_tag]</local-name>
+            <parent-name>[beauty_tableau_V2.csv]</parent-name>
+            <remote-alias>brand_tag</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption="beauty_tableau_V2.csv" datatype='table' name="[__tableau_internal_object_id__].[beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55]" role='measure' type='quantitative' />
+      <column caption="Chart" datatype="string" name="[chart]" role="dimension" type="nominal" />
+      <column caption="Label" datatype="string" name="[label_en]" role="dimension" type="nominal" />
+      <column caption="label_fr" datatype="string" name="[label_fr]" role="dimension" type="nominal" hidden='true' />
+      <column caption="Series" datatype="string" name="[series_en]" role="dimension" type="nominal" />
+      <column caption="series_fr" datatype="string" name="[series_fr]" role="dimension" type="nominal" hidden='true' />
+      <column caption="Order" datatype="integer" name="[sort_key]" role="dimension" type="ordinal" />
+      <column caption="Day" datatype="date" name="[day]" role="dimension" type="ordinal" />
+      <column caption="Rate (%)" datatype="real" default-format='n#,##0.00"%"' name="[pct]" role="measure" type="quantitative" />
+      <column caption="Revenue" datatype="real" default-format="n#,##0" name="[amount]" role="measure" type="quantitative" />
+      <column caption="View sessions" datatype="integer" default-format="n#,##0" name="[views]" role="measure" type="quantitative" />
+      <column caption="Purchases" datatype="integer" default-format="n#,##0" name="[purchases]" role="measure" type="quantitative" />
+      <column caption="Named brand" datatype="string" name="[brand_tag]" role="dimension" type="nominal" />
+      <object-graph>
+        <objects>
+          <object caption="beauty_tableau_V2.csv" id="beauty_tableau_V2.csv_C9DB5A7D179E5F14B4B001ADEA875A55">
+            <properties context=''>
+              <relation connection="textscan.beauty_main" name="beauty_tableau_V2.csv" table="[beauty_tableau_V2#csv]" type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype="string" name="chart" ordinal='0' />
+                    <column datatype="string" name="label_en" ordinal='1' />
+                    <column datatype="string" name="label_fr" ordinal='2' />
+                    <column datatype="string" name="series_en" ordinal='3' />
+                    <column datatype="string" name="series_fr" ordinal='4' />
+                    <column datatype="integer" name="sort_key" ordinal='5' />
+                    <column datatype="date" name="day" ordinal='6' />
+                    <column datatype="real" name="pct" ordinal='7' />
+                    <column datatype="real" name="amount" ordinal='8' />
+                    <column datatype="integer" name="views" ordinal='9' />
+                    <column datatype="integer" name="purchases" ordinal='10' />
+                    <column datatype="string" name="brand_tag" ordinal='11' />
+                  </columns>
+                </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Funnel">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>Sessions Reaching Each Step (% of View Sessions)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Beauty E-commerce" name="federated.beauty_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.beauty_main">
+            <column datatype="string" name="[chart]" role="dimension" type="nominal" />
+            <column datatype="string" name="[label_en]" role="dimension" type="nominal" />
+            <column datatype="string" name="[series_en]" role="dimension" type="nominal" />
+            <column datatype="real" name="[pct]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[sort_key]" role="dimension" type="ordinal" />
+            <column-instance column="[chart]" derivation="None" name="[none:chart:nk]" pivot='key' type="nominal" />
+            <column-instance column="[label_en]" derivation="None" name="[none:label_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[series_en]" derivation="None" name="[none:series_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[pct]" derivation="Sum" name="[sum:pct:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[sort_key]" derivation="Min" name="[min:sort_key:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <filter class='categorical' column="[federated.beauty_main].[none:chart:nk]">
+            <groupfilter function='member' level="[none:chart:nk]" member='"funnel"' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='computed' column="[federated.beauty_main].[none:label_en:nk]" direction='ASC' using="[federated.beauty_main].[min:sort_key:qk]" />
+          <slices>
+            <column>[federated.beauty_main].[none:chart:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#44524F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#16211F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#F7FAF8" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.beauty_main].[sum:pct:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#0D9488" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.beauty_main].[none:label_en:nk]</rows>
+        <cols>([federated.beauty_main].[none:series_en:nk] / [federated.beauty_main].[sum:pct:qk])</cols>
+      </table>
+      <simple-id uuid="{56122A06-B3E6-5AAD-B5FA-2A02B4A8B9EF}" />
+    </worksheet>
+    <worksheet name="Cart Recovery">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>Delay Before Abandoned Items Are Bought Back (% of Items Bought Back)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Beauty E-commerce" name="federated.beauty_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.beauty_main">
+            <column datatype="string" name="[chart]" role="dimension" type="nominal" />
+            <column datatype="string" name="[label_en]" role="dimension" type="nominal" />
+            <column datatype="real" name="[pct]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[sort_key]" role="dimension" type="ordinal" />
+            <column-instance column="[chart]" derivation="None" name="[none:chart:nk]" pivot='key' type="nominal" />
+            <column-instance column="[label_en]" derivation="None" name="[none:label_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[pct]" derivation="Sum" name="[sum:pct:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[sort_key]" derivation="Min" name="[min:sort_key:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <filter class='categorical' column="[federated.beauty_main].[none:chart:nk]">
+            <groupfilter function='member' level="[none:chart:nk]" member='"recovery"' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='computed' column="[federated.beauty_main].[none:label_en:nk]" direction='ASC' using="[federated.beauty_main].[min:sort_key:qk]" />
+          <slices>
+            <column>[federated.beauty_main].[none:chart:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#44524F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#16211F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#F7FAF8" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.beauty_main].[sum:pct:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#0D9488" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.beauty_main].[none:label_en:nk]</rows>
+        <cols>[federated.beauty_main].[sum:pct:qk]</cols>
+      </table>
+      <simple-id uuid="{7997311E-BB50-53B3-AC7F-34AC21149C39}" />
+    </worksheet>
+    <worksheet name="Brand Matrix">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>Brands by Traffic (Log Scale) and Conversion</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Beauty E-commerce" name="federated.beauty_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.beauty_main">
+            <column datatype="string" name="[chart]" role="dimension" type="nominal" />
+            <column datatype="string" name="[label_en]" role="dimension" type="nominal" />
+            <column datatype="string" name="[series_en]" role="dimension" type="nominal" />
+            <column datatype="string" name="[brand_tag]" role="dimension" type="nominal" />
+            <column datatype="integer" name="[views]" role="measure" type="quantitative" />
+            <column datatype="real" name="[pct]" role="measure" type="quantitative" />
+            <column-instance column="[chart]" derivation="None" name="[none:chart:nk]" pivot='key' type="nominal" />
+            <column-instance column="[label_en]" derivation="None" name="[none:label_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[series_en]" derivation="None" name="[none:series_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[brand_tag]" derivation="None" name="[none:brand_tag:nk]" pivot='key' type="nominal" />
+            <column-instance column="[views]" derivation="Sum" name="[sum:views:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[pct]" derivation="Sum" name="[sum:pct:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <filter class='categorical' column="[federated.beauty_main].[none:chart:nk]">
+            <groupfilter function='member' level="[none:chart:nk]" member='"brand"' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.beauty_main].[none:chart:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field="[federated.beauty_main].[sum:views:qk]" field-type='quantitative' max='500000' min='1000' range-type='fixed' scale='log' type='space' />
+            <format attr='color' value="#44524F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#16211F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#F7FAF8" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Circle" />
+            <encodings>
+              <color column="[federated.beauty_main].[none:series_en:nk]" />
+              <lod column="[federated.beauty_main].[none:label_en:nk]" />
+              <text column="[federated.beauty_main].[none:brand_tag:nk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.beauty_main].[sum:pct:qk]</rows>
+        <cols>[federated.beauty_main].[sum:views:qk]</cols>
+      </table>
+      <simple-id uuid="{A1A74B7A-0643-56E0-862E-B339803A86EA}" />
+    </worksheet>
+    <worksheet name="Daily Revenue">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>Daily Revenue and 7-Day Average</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Beauty E-commerce" name="federated.beauty_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.beauty_main">
+            <column datatype="string" name="[chart]" role="dimension" type="nominal" />
+            <column datatype="string" name="[series_en]" role="dimension" type="nominal" />
+            <column datatype="date" name="[day]" role="dimension" type="ordinal" />
+            <column datatype="real" name="[amount]" role="measure" type="quantitative" />
+            <column-instance column="[chart]" derivation="None" name="[none:chart:nk]" pivot='key' type="nominal" />
+            <column-instance column="[series_en]" derivation="None" name="[none:series_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[day]" derivation="Day-Trunc" name="[tdy:day:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[amount]" derivation="Sum" name="[sum:amount:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <filter class='categorical' column="[federated.beauty_main].[none:chart:nk]">
+            <groupfilter function='member' level="[none:chart:nk]" member='"daily"' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.beauty_main].[none:chart:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#44524F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#16211F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#F7FAF8" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Line" />
+            <encodings>
+              <color column="[federated.beauty_main].[none:series_en:nk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.beauty_main].[sum:amount:qk]</rows>
+        <cols>[federated.beauty_main].[tdy:day:qk]</cols>
+      </table>
+      <simple-id uuid="{A991FAFE-2F41-57F3-819E-8761A9791101}" />
+    </worksheet>
+    <worksheet name="Cohorts">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>Repeat Purchase by First-Purchase Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Beauty E-commerce" name="federated.beauty_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.beauty_main">
+            <column datatype="string" name="[chart]" role="dimension" type="nominal" />
+            <column datatype="string" name="[label_en]" role="dimension" type="nominal" />
+            <column datatype="string" name="[series_en]" role="dimension" type="nominal" />
+            <column datatype="real" name="[pct]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[sort_key]" role="dimension" type="ordinal" />
+            <column-instance column="[chart]" derivation="None" name="[none:chart:nk]" pivot='key' type="nominal" />
+            <column-instance column="[label_en]" derivation="None" name="[none:label_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[series_en]" derivation="None" name="[none:series_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[pct]" derivation="Sum" name="[sum:pct:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[sort_key]" derivation="Min" name="[min:sort_key:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <filter class='categorical' column="[federated.beauty_main].[none:chart:nk]">
+            <groupfilter function='member' level="[none:chart:nk]" member='"cohort"' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='computed' column="[federated.beauty_main].[none:label_en:nk]" direction='ASC' using="[federated.beauty_main].[min:sort_key:qk]" />
+          <slices>
+            <column>[federated.beauty_main].[none:chart:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#44524F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#16211F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#F7FAF8" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Square" />
+            <encodings>
+              <color column="[federated.beauty_main].[sum:pct:qk]" />
+              <text column="[federated.beauty_main].[sum:pct:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.beauty_main].[none:series_en:nk]</rows>
+        <cols>[federated.beauty_main].[none:label_en:nk]</cols>
+      </table>
+      <simple-id uuid="{33319015-4748-51E8-B373-8E807EF69464}" />
+    </worksheet>
+    <worksheet name="First Basket">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>60-Day Repeat by Items in the First Order</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Beauty E-commerce" name="federated.beauty_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.beauty_main">
+            <column datatype="string" name="[chart]" role="dimension" type="nominal" />
+            <column datatype="string" name="[label_en]" role="dimension" type="nominal" />
+            <column datatype="real" name="[pct]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[sort_key]" role="dimension" type="ordinal" />
+            <column-instance column="[chart]" derivation="None" name="[none:chart:nk]" pivot='key' type="nominal" />
+            <column-instance column="[label_en]" derivation="None" name="[none:label_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[pct]" derivation="Sum" name="[sum:pct:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[sort_key]" derivation="Min" name="[min:sort_key:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <filter class='categorical' column="[federated.beauty_main].[none:chart:nk]">
+            <groupfilter function='member' level="[none:chart:nk]" member='"repeat"' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='computed' column="[federated.beauty_main].[none:label_en:nk]" direction='ASC' using="[federated.beauty_main].[min:sort_key:qk]" />
+          <slices>
+            <column>[federated.beauty_main].[none:chart:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#44524F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#16211F" />
+            <format attr='font-family' value="Segoe UI" />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#F7FAF8" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.beauty_main].[sum:pct:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#0D9488" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.beauty_main].[sum:pct:qk]</rows>
+        <cols>[federated.beauty_main].[none:label_en:nk]</cols>
+      </table>
+      <simple-id uuid="{14B022B7-8543-5485-9291-B69F44382AC7}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Funnel and Retention">
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value="#E4ECE7" />
+        </style-rule>
+      </style>
+      <size maxheight='2120' maxwidth='1200' minheight='2120' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='4528' id='3' w='97333' x='1333' y='377' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#16211F" fontname="Georgia" fontsize='22'>Beauty E-commerce: Conversion Funnel, Cart Abandonment and Retention</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>20.7M events · 10/2019 – 02/2020 · analysed in SQL on BigQuery</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#E4ECE7" />
+            </zone-style>
+          </zone>
+          <zone h='5660' id='4' w='24333' x='1333' y='5094' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='30'>1.67%</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>of visits buy in a single session</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='12' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='5660' id='5' w='24333' x='25667' y='5094' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='30'>15.6%</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>of abandoned items are bought back later</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='12' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='5660' id='6' w='24333' x='50000' y='5094' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='30'>43%</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>of brand traffic goes to “leak” brands</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='12' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='5660' id='7' w='24333' x='74333' y='5094' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='30'>21.0%</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>of new customers buy again within 60 days</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='12' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='4906' id='8' w='97333' x='1333' y='11132' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='18'>1</run>
+              <run fontcolor="#16211F" fontname="Georgia" fontsize='17'>   Most Purchases Take Several Visits</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>Only 46% of orders follow view, cart, purchase in the same session. Of the abandoned items bought back later, 52.6% come back within 24 hours: a cart reminder belongs in that window.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#E4ECE7" />
+            </zone-style>
+          </zone>
+          <zone h='13208' id='9' w='48667' x='1333' y='16226' name="Funnel" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='13208' id='10' w='48667' x='50000' y='16226' name="Cart Recovery" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='4906' id='11' w='97333' x='1333' y='29811' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='18'>2</run>
+              <run fontcolor="#16211F" fontname="Georgia" fontsize='17'>   Leak Brands: 43% of Traffic, 1.53% Conversion</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>180 brands split at the median traffic (5,146 sessions) and conversion (1.886%). If leaks converted like stars (2.40%), their purchases would go from about 23,900 to 37,400 (+56%, a what-if, not a forecast). grattol sits on the median.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#E4ECE7" />
+            </zone-style>
+          </zone>
+          <zone h='19811' id='12' w='97333' x='1333' y='34906' name="Brand Matrix" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='4906' id='13' w='97333' x='1333' y='55094' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='18'>3</run>
+              <run fontcolor="#16211F" fontname="Georgia" fontsize='17'>   Late-November Peak, New Year Low</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>6 of the 10 best days fall between 21 and 29/11/2019: traffic +32%, conversion +1.6 pts. 31/12 is the weakest day of the period.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#E4ECE7" />
+            </zone-style>
+          </zone>
+          <zone h='14151' id='14' w='97333' x='1333' y='60189' name="Daily Revenue" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='4906' id='15' w='97333' x='1333' y='74717' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#0D9488" fontname="Georgia" fontsize='18'>4</run>
+              <run fontcolor="#16211F" fontname="Georgia" fontsize='17'>   Retention and First Basket</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='11'>About 9% of new customers buy again the next month. A first basket of 5+ items goes with twice the repeat rate (25.4% vs 11.9%): a correlation, to be tested.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#E4ECE7" />
+            </zone-style>
+          </zone>
+          <zone h='13208' id='16' w='48667' x='1333' y='79811' name="Cohorts" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='13208' id='17' w='48667' x='50000' y='79811' name="First Basket" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='4340' id='18' w='97333' x='1333' y='93396' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#16211F" fontname="Georgia" fontsize='13'>Data Limits</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='10'>Brand known for about 57% of purchases, no categories (98% empty). No order id: one session with a purchase = one order. Times in UTC, currency not stated. Cohort 10/2019 (*) overstated: the data starts that month. Correlations only, no experiment.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#C3CFC9" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='10' />
+              <format attr='background-color' value="#F7FAF8" />
+            </zone-style>
+          </zone>
+          <zone h='1698' id='19' w='97333' x='1333' y='97925' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#44524F" fontname="Segoe UI" fontsize='9'>Data source: Kaggle “eCommerce Events History in Cosmetics Shop” (10/2019 – 02/2020) · Personal project · Yu-Ting Tseng</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#E4ECE7" />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid="{F6A66B0B-C981-5350-819D-97C57FFD6426}" />
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='dashboard' maximized='true' name="Funnel and Retention">
+      <viewpoints>
+        <viewpoint name="Funnel">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Cart Recovery">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Brand Matrix">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Daily Revenue">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Cohorts">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="First Basket">
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid="{FC7A624C-F560-5B26-8E65-66EA6EAEA985}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Funnel">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{0158DE64-8680-54E6-90D5-64F1851E8C28}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Cart Recovery">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{AED7F1C1-A5EC-5C06-ABF2-76D1685D15BF}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Brand Matrix">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{E7884269-253A-560B-85B4-3DEA7409A7AC}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Daily Revenue">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{9884F423-2A11-54D5-A1FD-CDF4B6B1579A}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Cohorts">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{7E336C96-423E-540F-9E86-1683EE67B59B}" />
+    </window>
+    <window class='worksheet' hidden='true' name="First Basket">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{C428181C-668D-5AA4-9EEC-430AB1A2D3E2}" />
+    </window>
+  </windows>
+</workbook>

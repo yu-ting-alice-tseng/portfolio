@@ -523,8 +523,11 @@ def worksheets_xml(lang):
     enc = (f"              <color column={a(q(inst(ser)))} />\n"
            f"              <lod column={a(q(inst(lab)))} />\n"
            f"              <text column={a(q(inst('brand_tag')))} />\n")
+    # Fixed range: every brand has 1,000+ view sessions and the largest
+    # (runail) 371,260. Left automatic, Tableau 2026.3 started the log axis at
+    # 1 and pushed the brands above 100,000 out of view (V1).
     log_axis = (f"            <encoding attr='space' class='0' field={a(views)} field-type='quantitative' "
-                "scale='log' type='space' />\n")
+                "max='500000' min='1000' range-type='fixed' scale='log' type='space' />\n")
     out.append(worksheet_xml(
         S["brand"], TT["brand"], "brand",
         [(lab, "None", "nominal"), (ser, "None", "nominal"), ("brand_tag", "None", "nominal"),
