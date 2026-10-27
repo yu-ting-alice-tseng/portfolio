@@ -619,7 +619,8 @@ def worksheets_xml(lang):
                              encodings=enc, sort=msort, pane_style=mark_color(ACCENT),
                              table_style=base_table_style()))
 
-    # SKU concentration: revenue share of each band of 40 SKUs ranked by
+    # SKU concentration (vertical bars, so the five equal heights read at a
+    # glance and the labels have room): revenue share of each band of 40 SKUs ranked by
     # revenue. A Line mark on a continuous axis stayed blank in Tableau 2026.3;
     # five flat bars (about 20 % each) tell the same story.
     band = q(inst("sku_band"))
@@ -628,7 +629,7 @@ def worksheets_xml(lang):
             ("sku_rank", "integer", "dimension", "quantitative", "Min", "quantitative", None)]
     bsort = (f"          <sort class='computed' column={a(band)} direction='ASC' "
              f"using={a(q(inst('sku_rank', 'Min', 'quantitative')))} />\n")
-    out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=band, cols=pb,
+    out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=pb, cols=band,
                              encodings=f"              <text column={a(pb)} />\n", sort=bsort,
                              pane_style=mark_color(ACCENT), table_style=base_table_style()))
 
@@ -664,7 +665,7 @@ def shared_views_xml(lang):
 
 # ---------------------------------------------------------------- dashboard
 
-W, H = 1200, 1640
+W, H = 1200, 1720
 
 
 def px(v, total):
@@ -742,9 +743,9 @@ def dashboard_xml(lang):
 
     def section(y, n):
         num, name, detail = T["sections"][n]
-        text(G, y, inner, 64, run(num, 20, RASPBERRY, font=TITLE_FONT)
+        text(G, y, inner, 90, run(num, 20, RASPBERRY, font=TITLE_FONT)
              + run("   " + name, 18, INK, font=TITLE_FONT) + br + run(detail, 11, MUTED))
-        return y + 68
+        return y + 94
 
     y = section(y, 0)
     sheet(G, y, inner, 260, S["saison"])
