@@ -168,8 +168,8 @@
     // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
       sephoraBI: {
-        cover: "assets/covers/sephora-dashboard.webp",
-        coverData: "assets/covers/sephora-dashboard-data.webp",
+        cover: "assets/covers/sephora-matrice.webp",
+        coverData: "assets/covers/sephora-matrice-data.webp",
         p1: "assets/PowerBI_Sephora/sephora-powerbi-1.webp",
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3.webp",
@@ -1242,8 +1242,8 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
       sephoraBI: {
-        cover: "assets/covers/sephora-dashboard-en.webp",
-        coverData: "assets/covers/sephora-dashboard-data-en.webp",
+        cover: "assets/covers/sephora-matrice-en.webp",
+        coverData: "assets/covers/sephora-matrice-data-en.webp",
         p1: "assets/PowerBI_Sephora/sephora-powerbi-1-en.webp",
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
@@ -2282,8 +2282,8 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
       sephoraBI: {
-        cover: "assets/covers/sephora-dashboard-en.webp",
-        coverData: "assets/covers/sephora-dashboard-data-en.webp",
+        cover: "assets/covers/sephora-matrice-en.webp",
+        coverData: "assets/covers/sephora-matrice-data-en.webp",
         p1: "assets/PowerBI_Sephora/sephora-powerbi-1-en.webp",
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
