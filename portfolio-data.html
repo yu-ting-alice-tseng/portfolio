@@ -827,6 +827,42 @@
       .ex .ex-scroll::after { left: -12px; right: -12px; }
       .ex .ex-salle { padding: 3rem 0; }
     }
+      /* Variantes du montage (aperçu) : classe posée sur l'article.
+       ex--hand : rouleau 手卷 déroulé à plat, sans accroche ;
+       ex--ce : feuille d'album 冊頁, pages empilées, pli de reliure ;
+       ex--kuang : cadre en bois sombre 鏡框 et passe-partout de soie. */
+    .ex--hand .ex-cord, .ex--ce .ex-cord, .ex--kuang .ex-cord { display: none; }
+    .ex--hand .ex-scroll { margin: 0 34px; padding: 30px 36px 32px; box-shadow: 0 14px 22px -14px rgba(22,33,31,0.4); }
+    .ex--hand .ex-scroll::before, .ex--hand .ex-scroll::after {
+      top: -10px; bottom: -10px; height: auto; border-radius: 8px; box-shadow: 0 6px 10px -4px rgba(22,33,31,0.35);
+      background: linear-gradient(180deg, var(--da-accent-hover) 0 14px, var(--da-text) 14px calc(100% - 14px), var(--da-accent-hover) calc(100% - 14px));
+    }
+    .ex--hand .ex-scroll::before { left: -12px; right: auto; width: 12px; }
+    .ex--hand .ex-scroll::after {
+      left: auto; right: -30px; width: 30px; border-radius: 12px;
+      background:
+        linear-gradient(90deg, rgba(22,33,31,0.18), transparent 35%, rgba(255,255,255,0.35) 55%, rgba(22,33,31,0.22)),
+        linear-gradient(180deg, var(--da-accent-hover) 0 14px, var(--da-bg-soft) 14px calc(100% - 14px), var(--da-accent-hover) calc(100% - 14px));
+    }
+    .ex--ce .ex-scroll {
+      margin: 6px 14px 14px 0; padding: 28px 30px 30px 40px;
+      box-shadow: 6px 6px 0 -1px var(--da-card), 6px 6px 0 0 var(--da-border), 12px 12px 0 -1px var(--da-card), 12px 12px 0 0 var(--da-border), 0 24px 40px -22px rgba(22,33,31,0.4);
+    }
+    .ex--ce .ex-scroll::before {
+      top: 0; bottom: 0; left: 0; right: auto; width: 22px; height: auto; border-radius: 0;
+      background: linear-gradient(90deg, rgba(22,33,31,0.14), rgba(22,33,31,0.03) 60%, transparent);
+    }
+    .ex--ce .ex-scroll::after { display: none; }
+    .ex--kuang .ex-scroll {
+      margin: 0; padding: 30px 30px 34px; border: 12px solid var(--da-text);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), inset 0 3px 8px rgba(22,33,31,0.25), 0 2px 4px rgba(22,33,31,0.1), 0 26px 48px -22px rgba(22,33,31,0.45);
+    }
+    .ex--kuang .ex-scroll::before, .ex--kuang .ex-scroll::after { display: none; }
+    @media (max-width: 960px) {
+      .ex--hand .ex-scroll { margin: 12px 30px 0 14px; padding: 18px 14px 20px; }
+      .ex--ce .ex-scroll { padding: 18px 14px 20px 26px; }
+      .ex--kuang .ex-scroll { border-width: 8px; padding: 16px; }
+    }
   </style>
 </head>
 <body class="page-portfolio-data musee">
