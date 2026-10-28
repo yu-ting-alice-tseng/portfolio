@@ -2104,31 +2104,5 @@
   <script src="ink-cursor.js"></script>
   <script src="guzheng.js"></script>
   <script src="lightbox.js"></script>
-<script>
-  /* Exposition : chaque rouleau se déroule la première fois que sa salle
-     entre à l'écran, puis reste ouvert. Il ne se réenroule qu'au
-     rechargement de la page ou quand on quitte le projet. */
-  (function () {
-    var rolls = document.querySelectorAll('.ex .ex-hand');
-    if (!rolls.length || !('IntersectionObserver' in window)) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.documentElement.classList.add('ex-anim');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.intersectionRatio >= 0.35) { e.target.classList.add('is-open'); io.unobserve(e.target); }
-      });
-    }, { threshold: [0, 0.35] });
-    rolls.forEach(function (r) { io.observe(r); });
-    /* Projet quitté : ses rouleaux se referment, prêts pour la prochaine visite. */
-    var mo = new MutationObserver(function (list) {
-      list.forEach(function (m) {
-        var art = m.target;
-        if (art.classList.contains('is-current')) return;
-        art.querySelectorAll('.ex-hand.is-open').forEach(function (r) { r.classList.remove('is-open'); io.observe(r); });
-      });
-    });
-    document.querySelectorAll('.pf-case.ex').forEach(function (a) { mo.observe(a, { attributes: true, attributeFilter: ['class'] }); });
-  })();
-</script>
 </body>
 </html>
