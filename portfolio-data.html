@@ -863,6 +863,34 @@
       .ex--ce .ex-scroll { padding: 18px 14px 20px 26px; }
       .ex--kuang .ex-scroll { border-width: 8px; padding: 16px; }
     }
+      /* Rouleau qui se déroule (variante ex--hand) : en entrant dans une
+       salle, le rouleau de droite part du bord gauche et déroule l'œuvre ;
+       il se réenroule quand la salle quitte l'écran, pour rejouer au retour.
+       Sans JavaScript ou en mouvement réduit, l'œuvre reste ouverte. */
+    .ex--hand .ex-hand { position: sticky; top: 140px; margin: 0 34px 0 14px; }
+    .ex--hand .ex-hand .ex-scroll { position: relative; top: auto; margin: 0; }
+    .ex--hand .ex-hand .ex-scroll::after { display: none; }
+    .ex-roll {
+      position: absolute; top: -10px; bottom: -10px; left: 100%; width: 30px; border-radius: 12px; z-index: 2;
+      background:
+        linear-gradient(90deg, rgba(22,33,31,0.18), transparent 35%, rgba(255,255,255,0.35) 55%, rgba(22,33,31,0.22)),
+        linear-gradient(180deg, var(--da-accent-hover) 0 14px, var(--da-bg-soft) 14px calc(100% - 14px), var(--da-accent-hover) calc(100% - 14px));
+      box-shadow: 0 6px 10px -4px rgba(22,33,31,0.35);
+    }
+    html.ex-anim .ex--hand .ex-hand .ex-scroll {
+      clip-path: inset(-16px 100% -32px -16px);
+      transition: clip-path 1.5s cubic-bezier(0.45, 0.05, 0.25, 1);
+    }
+    html.ex-anim .ex--hand .ex-roll {
+      left: 0; width: 44px;
+      transition: left 1.5s cubic-bezier(0.45, 0.05, 0.25, 1), width 1.5s cubic-bezier(0.45, 0.05, 0.25, 1);
+    }
+    html.ex-anim .ex--hand .ex-hand.is-open .ex-scroll { clip-path: inset(-16px 0 -32px -16px); }
+    html.ex-anim .ex--hand .ex-hand.is-open .ex-roll { left: 100%; width: 30px; }
+    @media (max-width: 960px) {
+      .ex--hand .ex-hand { position: relative; top: auto; order: -1; margin: 12px 30px 0 14px; }
+      .ex--hand .ex-hand .ex-scroll { order: 0; }
+    }
   </style>
 </head>
 <body class="page-portfolio-data musee">
@@ -1560,7 +1588,7 @@
 <section class="pf-refs"><p class="pf-refs-title"><span data-lang-show="fr">Références</span><span data-lang-show="en">References</span></p><ol class="pf-refs-list"><li><span data-lang-show="fr">Puri, P. (2025). <em>Retail Fashion Boutique Data Sales Analytics 2025</em> [Jeu de données]. Kaggle. <a href="https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025</a></span><span data-lang-show="en">Puri, P. (2025). <em>Retail Fashion Boutique Data Sales Analytics 2025</em> [Data set]. Kaggle. <a href="https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025</a></span></li></ol></section>
 </details></div></div>
       <div class="mk-sep" data-reveal aria-hidden="true"><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg><svg class="mk-sep-orn" width="240" height="56" viewBox="0 0 240 56" focusable="false"><use href="#da-guzheng" width="240" height="56" filter="url(#mk-encre)"/></svg><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg></div><a class="pf-next" data-target="sephora-powerbi" href="#sephora-powerbi"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name"><span data-lang-show="fr">Sephora · Modèle Power BI</span><span data-lang-show="en">Sephora · Power BI Model</span></span></span><span class="pf-next-cover"><img data-i18n-src="sephoraBI.coverData" src="assets/covers/sephora-dashboard-data.webp" alt="" loading="lazy"></span></a></article>
-<article class="pf-case ex" data-cat="dashboard analyse" id="sephora-powerbi">
+<article class="pf-case ex ex--hand" data-cat="dashboard analyse" id="sephora-powerbi">
   <div class="ex-expo">
     <header class="ex-preface">
       <p class="ex-preface-lbl"><span data-lang-show="fr">Préface</span><span data-lang-show="en">Preface</span></p>
@@ -1645,7 +1673,7 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> price gaps between categories make any overall average misleading; each following page is read filtered by category.</p>
         </div>
       </div>
-      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Product Overview" loading="lazy" data-i18n-src="sephoraBI.p1" src="assets/PowerBI_Sephora/sephora-powerbi-1.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 1 du dashboard · Product Overview</span><span data-lang-show="en">Dashboard page 1 · Product Overview</span></figcaption></figure>
+      <div class="ex-hand"><figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Product Overview" loading="lazy" data-i18n-src="sephoraBI.p1" src="assets/PowerBI_Sephora/sephora-powerbi-1.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 1 du dashboard · Product Overview</span><span data-lang-show="en">Dashboard page 1 · Product Overview</span></figcaption></figure><span class="ex-roll" aria-hidden="true"></span></div>
     </section>
     <section class="ex-salle">
       <div class="ex-cartel"><p class="ex-salle-n">2 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 2 · Quels Produits Défendre, Révéler ou Corriger ?</span><span data-lang-show="en">Question 2 · Which Products to Defend, Surface or Fix?</span></div><div data-lang-show="fr">
@@ -1667,7 +1695,7 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> the segment profile shows that the low traction of Hidden Gems also comes from distribution, and that Risk products are highly anticipated products that disappoint.</p>
         </div>
       </div>
-      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Portfolio Matrix" loading="lazy" data-i18n-src="sephoraBI.p2" src="assets/PowerBI_Sephora/sephora-powerbi-2.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 2 du dashboard · Portfolio Matrix</span><span data-lang-show="en">Dashboard page 2 · Portfolio Matrix</span></figcaption></figure>
+      <div class="ex-hand"><figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Portfolio Matrix" loading="lazy" data-i18n-src="sephoraBI.p2" src="assets/PowerBI_Sephora/sephora-powerbi-2.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 2 du dashboard · Portfolio Matrix</span><span data-lang-show="en">Dashboard page 2 · Portfolio Matrix</span></figcaption></figure><span class="ex-roll" aria-hidden="true"></span></div>
     </section>
     <section class="ex-salle">
       <div class="ex-cartel"><p class="ex-salle-n">3 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 3 · Où se Concentrent l'Attention et la Satisfaction ?</span><span data-lang-show="en">Question 3 · Where Do Attention and Satisfaction Concentrate?</span></div><div data-lang-show="fr">
@@ -1689,7 +1717,7 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> review volume does not follow each category's weight; in hair and fragrance, ratings based on few reviews are less reliable.</p>
         </div>
       </div>
-      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" data-i18n-src="sephoraBI.p3" src="assets/PowerBI_Sephora/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure>
+      <div class="ex-hand"><figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" data-i18n-src="sephoraBI.p3" src="assets/PowerBI_Sephora/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure><span class="ex-roll" aria-hidden="true"></span></div>
     </section>
     <section class="ex-salle">
       <div class="ex-cartel"><p class="ex-salle-n">4 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 4 · Que Disent les Clientes des Soins de la Peau ?</span><span data-lang-show="en">Question 4 · What Do Customers Say About Skincare?</span></div><div data-lang-show="fr">
@@ -1709,7 +1737,7 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> tolerance and price stand out in negative reviews. Keyword detection counts a mention, not a complaint: to be confirmed by reading a sample of reviews.</p>
         </div>
       </div>
-      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice - Skincare" loading="lazy" data-i18n-src="sephoraBI.p4" src="assets/PowerBI_Sephora/sephora-powerbi-4.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 4 du dashboard · Customer Voice - Skincare</span><span data-lang-show="en">Dashboard page 4 · Customer Voice - Skincare</span></figcaption></figure>
+      <div class="ex-hand"><figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice - Skincare" loading="lazy" data-i18n-src="sephoraBI.p4" src="assets/PowerBI_Sephora/sephora-powerbi-4.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 4 du dashboard · Customer Voice - Skincare</span><span data-lang-show="en">Dashboard page 4 · Customer Voice - Skincare</span></figcaption></figure><span class="ex-roll" aria-hidden="true"></span></div>
     </section>
     <section class="ex-epilogue">
       <div class="pf-star pf-star--insight">
@@ -2079,5 +2107,21 @@
   <script src="ink-cursor.js"></script>
   <script src="guzheng.js"></script>
   <script src="lightbox.js"></script>
+<script>
+  /* Exposition : chaque rouleau se déroule quand sa salle entre à l'écran. */
+  (function () {
+    var rolls = document.querySelectorAll('.ex--hand .ex-hand');
+    if (!rolls.length || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('ex-anim');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.intersectionRatio >= 0.35) e.target.classList.add('is-open');
+        else if (!e.isIntersecting) e.target.classList.remove('is-open');
+      });
+    }, { threshold: [0, 0.35] });
+    rolls.forEach(function (r) { io.observe(r); });
+  })();
+</script>
 </body>
 </html>
