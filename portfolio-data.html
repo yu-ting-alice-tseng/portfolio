@@ -745,6 +745,88 @@
       .musee .pf-case-cover, .musee .pf-case-main > .pf-slide { order: -1; margin-bottom: 1.6rem; }
       .musee .pf-case-figs { flex-direction: column; }
     }
+      /* ── Exposition (essai, Sephora) ──────────────────────
+       Un projet se visite comme une exposition : une préface, puis une
+       salle par page du dashboard (cartel à gauche, qui change d'une salle
+       à l'autre ; œuvre montée en rouleau à droite), puis un épilogue
+       (recommandations, limites, références). Montage façon 掛軸 :
+       soie céladon, bande intérieure (隔水), baguette haute et cordon,
+       rouleau bas à embouts de jade. */
+    .ex .ex-expo { max-width: 1120px; }
+    .ex .ex-preface { padding: 1rem 0 3.4rem; border-bottom: 1px solid var(--da-border); }
+    .ex .ex-preface-lbl {
+      font-size: 0.66rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--da-accent);
+      margin: 0 0 1.4rem; display: flex; align-items: center; gap: 0.8rem;
+    }
+    .ex .ex-preface-lbl::after { content: ""; width: 3rem; height: 1px; background: var(--da-accent); }
+    .ex .ex-preface .pf-card-title { font-size: clamp(2.2rem, 3.6vw, 3.1rem); line-height: 1.08; max-width: 18ch; margin: 0.2rem 0 2.2rem; }
+    .ex .ex-preface-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 3.4rem; align-items: start; }
+    .ex .ex-preface-txt .pf-case-lead { background: none; border: 0; padding: 0; }
+    .ex .ex-preface-txt .pf-case-lead p {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.32rem; line-height: 1.5; color: var(--da-text);
+      border: 0; padding: 0; margin: 0 0 1.4rem;
+    }
+    .ex .ex-preface-txt .pf-star-txt { font-size: 0.9rem; }
+    .ex .ex-preface-cartel {
+      background: var(--da-card); border: 1px solid var(--da-border); padding: 1.1rem 1.2rem;
+    }
+    .ex .ex-preface-cartel .pf-case-figs { border-top: 0 !important; padding-top: 0 !important; }
+    .ex .ex-preface-cartel .pf-case-figs > div { flex-direction: row; align-items: baseline; gap: 0.4rem; }
+    .ex .ex-preface-cartel .pf-stat-val { font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--da-text); flex: none; }
+    .ex .ex-preface-cartel .pf-stat-lbl { font-size: 0.78rem; letter-spacing: 0; text-transform: none; color: var(--da-text-soft); margin: 0; }
+    .ex .ex-preface-cartel .pf-tags { display: block; margin: 0 0 0.8rem; font-style: italic; line-height: 1.35; }
+    .ex .ex-preface-cartel .pf-tag { display: inline; padding: 0; border: 0; background: none; font-size: 0.78rem; color: var(--da-muted); line-height: inherit; }
+    .ex .ex-preface-cartel .pf-tag:not(:last-child)::after { content: ", "; }
+    .ex .ex-preface-cartel .pf-case-source { font-size: 0.74rem; margin: 0; padding-top: 0.7rem; border-top: 1px solid var(--da-border); }
+
+    .ex .ex-technique { max-width: 760px; margin: 0 auto; padding: 3rem 0; }
+    .ex .ex-technique .pf-star-lbl, .ex .ex-epilogue .pf-star-lbl { text-align: left; }
+
+    /* Une salle : cartel collant à gauche, rouleau à droite */
+    .ex .ex-salle {
+      display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 3.2rem; align-items: start;
+      padding: 4.2rem 0; border-top: 1px solid var(--da-border);
+    }
+    .ex .ex-cartel, .ex .ex-scroll { position: sticky; top: 140px; }
+    .ex .ex-cartel { border-left: 2px solid rgba(var(--da-accent-rgb),0.5); padding: 0.2rem 0 0.2rem 1.15rem; }
+    .ex .ex-salle-n { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; line-height: 1; color: var(--da-accent); margin: 0 0 0.6rem; }
+    .ex .ex-salle-titre { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; line-height: 1.2; color: var(--da-text); margin: 0 0 1rem; }
+    .ex .ex-cartel .pf-star-txt { font-size: 0.82rem; }
+
+    .ex .ex-scroll {
+      margin: 26px 18px 0; padding: 34px 30px 42px;
+      background-color: var(--da-card);
+      background-image: repeating-linear-gradient(45deg, rgba(22,33,31,0.022) 0 1px, transparent 1px 5px),
+                        repeating-linear-gradient(-45deg, rgba(22,33,31,0.018) 0 1px, transparent 1px 5px);
+      border: 1px solid var(--da-border);
+      box-shadow: 0 2px 4px rgba(22,33,31,0.06), 0 26px 48px -22px rgba(22,33,31,0.42);
+    }
+    .ex .ex-scroll::before, .ex .ex-scroll::after { content: ""; position: absolute; border-radius: 4px; }
+    .ex .ex-scroll::before { top: -5px; left: -6px; right: -6px; height: 9px; background: var(--da-text); }
+    .ex .ex-scroll::after {
+      bottom: -8px; left: -20px; right: -20px; height: 14px; border-radius: 7px;
+      background: linear-gradient(90deg, var(--da-accent-hover) 0 16px, var(--da-text) 16px calc(100% - 16px), var(--da-accent-hover) calc(100% - 16px));
+      box-shadow: 0 3px 6px rgba(22,33,31,0.25);
+    }
+    .ex .ex-cord { position: absolute; top: -34px; left: 50%; width: 120px; height: 34px; transform: translateX(-50%); overflow: visible; }
+    .ex .ex-cord path { fill: none; stroke: var(--da-text-soft); stroke-width: 1.2; }
+    .ex .ex-cord circle { fill: var(--da-text); }
+    .ex .ex-scroll .pf-img-wrap { padding: 7px; background: var(--da-bg-soft); border: 1px solid var(--da-border); }
+    .ex .ex-scroll .pf-img-wrap img { outline: 1px solid rgba(22,33,31,0.18); }
+    .ex .ex-scroll .pf-img-caption {
+      background: none; border: 0; padding: 0.7rem 0 0; text-align: center;
+      font-size: 0.72rem; letter-spacing: 0.08em; color: var(--da-muted);
+    }
+
+    .ex .ex-epilogue { max-width: 820px; margin: 0 auto; padding: 3.4rem 0 0; border-top: 1px solid var(--da-border); }
+
+    @media (max-width: 960px) {
+      .ex .ex-preface-grid, .ex .ex-salle { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+      .ex .ex-cartel { position: static; }
+      .ex .ex-scroll { position: relative; top: auto; order: -1; margin: 30px 10px 0; padding: 20px 16px 28px; }
+      .ex .ex-scroll::after { left: -12px; right: -12px; }
+      .ex .ex-salle { padding: 3rem 0; }
+    }
   </style>
 </head>
 <body class="page-portfolio-data musee">
@@ -1442,26 +1524,19 @@
 <section class="pf-refs"><p class="pf-refs-title"><span data-lang-show="fr">Références</span><span data-lang-show="en">References</span></p><ol class="pf-refs-list"><li><span data-lang-show="fr">Puri, P. (2025). <em>Retail Fashion Boutique Data Sales Analytics 2025</em> [Jeu de données]. Kaggle. <a href="https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025</a></span><span data-lang-show="en">Puri, P. (2025). <em>Retail Fashion Boutique Data Sales Analytics 2025</em> [Data set]. Kaggle. <a href="https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/pratyushpuri/retail-fashion-boutique-data-sales-analytics-2025</a></span></li></ol></section>
 </details></div></div>
       <div class="mk-sep" data-reveal aria-hidden="true"><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg><svg class="mk-sep-orn" width="240" height="56" viewBox="0 0 240 56" focusable="false"><use href="#da-guzheng" width="240" height="56" filter="url(#mk-encre)"/></svg><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg></div><a class="pf-next" data-target="sephora-powerbi" href="#sephora-powerbi"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name"><span data-lang-show="fr">Sephora · Modèle Power BI</span><span data-lang-show="en">Sephora · Power BI Model</span></span></span><span class="pf-next-cover"><img data-i18n-src="sephoraBI.coverData" src="assets/covers/sephora-dashboard-data.webp" alt="" loading="lazy"></span></a></article>
-<article class="pf-case" data-cat="dashboard analyse" id="sephora-powerbi">
-<div class="pf-case-grid"><aside class="pf-case-side"><p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-lang-show="fr">Projet personnel · Dashboard · Power BI</span><span data-lang-show="en">Personal project · Dashboard · Power BI</span></p>
-<h2 class="pf-card-title">
+<article class="pf-case ex" data-cat="dashboard analyse" id="sephora-powerbi">
+  <div class="ex-expo">
+    <header class="ex-preface">
+      <p class="ex-preface-lbl"><span data-lang-show="fr">Préface</span><span data-lang-show="en">Preface</span></p>
+      <p class="pf-case-kicker"><span class="pf-case-n">06</span> · <span data-lang-show="fr">Projet personnel · Dashboard · Power BI</span><span data-lang-show="en">Personal project · Dashboard · Power BI</span></p>
+      <h2 class="pf-card-title">
         <span data-lang-show="fr">Sephora — Modèle Power BI : Catalogue, Segments et Avis Clients</span>
         <span data-lang-show="en">Sephora — Power BI Model: Catalogue, Segments and Customer Reviews</span>
       </h2>
-<div class="pf-stats pf-case-figs"><div><span class="pf-stat-val"><span data-lang-show="fr">1 094 411</span><span data-lang-show="en">1,094,411</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Avis individuels modélisés</span><span data-lang-show="en">Individual reviews modelled</span></span></div><div><span class="pf-stat-val"><span data-lang-show="fr">8 494</span><span data-lang-show="en">8,494</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Fiches produits</span><span data-lang-show="en">Product records</span></span></div><div><span class="pf-stat-val">4</span><span class="pf-stat-lbl"><span data-lang-show="fr">Pages, une par question</span><span data-lang-show="en">Pages, one per question</span></span></div><div><span class="pf-stat-val">7</span><span class="pf-stat-lbl"><span data-lang-show="fr">Thèmes détectés dans les avis</span><span data-lang-show="en">Themes detected in reviews</span></span></div></div>
-<div class="pf-tags">
-        <span class="pf-tag">Power BI</span>
-        <span class="pf-tag">DAX</span>
-        <span class="pf-tag">Power Query</span>
-        <span class="pf-tag"><span data-lang-show="fr">Modélisation des Données</span><span data-lang-show="en">Data Modelling</span></span>
-        <span class="pf-tag"><span data-lang-show="fr">Analyse des Avis</span><span data-lang-show="en">Review Analytics</span></span>
-        <span class="pf-tag"><span data-lang-show="fr">Segmentation Produits</span><span data-lang-show="en">Product Segmentation</span></span>
-        <span class="pf-tag">Sephora</span>
-      </div>
-</aside><div class="pf-case-main"><figure class="pf-case-cover"><div class="pf-cover-wrap"><img data-land data-i18n-src="sephoraBI.coverData" src="assets/covers/sephora-dashboard-data.webp" alt="Dashboard Power BI Sephora – 4 pages" width="1200" height="800"><a class="pf-cover-hit" data-i18n-href="sephoraBI.p1" href="assets/PowerBI_Sephora/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer" aria-label="Product Overview" style="left:4%;top:10.5%;width:45%;height:38%"></a><a class="pf-cover-hit" data-i18n-href="sephoraBI.p2" href="assets/PowerBI_Sephora/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Matrix" style="left:51%;top:10.5%;width:45%;height:38%"></a><a class="pf-cover-hit" data-i18n-href="sephoraBI.p3" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer" aria-label="Customer Voice" style="left:4%;top:51.5%;width:45%;height:38%"></a><a class="pf-cover-hit" data-i18n-href="sephoraBI.p4" href="assets/PowerBI_Sephora/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer" aria-label="Customer Voice - Skincare" style="left:51%;top:51.5%;width:45%;height:38%"></a></div></figure><div class="pf-case-lead"><p data-lang-show="fr">Comment passer de deux jeux de données bruts (8 494 fiches produits et 1 094 411 avis) à un outil qui répond aux questions d'une équipe produit ? J'ai construit un modèle Power BI (préparation dans Power Query, modèle relationnel, mesures DAX) dont chaque page répond à une question, de la structure du catalogue aux thèmes des avis négatifs.</p><p data-lang-show="en">How do you turn two raw datasets (8,494 product records and 1,094,411 reviews) into a tool that answers a product team's questions? I built a Power BI model (preparation in Power Query, relational model, DAX measures) in which each page answers one question, from catalogue structure to the themes of negative reviews.</p></div><p class="pf-case-source"><span data-lang-show="fr">Projet personnel · Source des données : jeu de données public Kaggle « Sephora Products and Skincare Reviews » (Inky, 2023).</span><span data-lang-show="en">Personal project · Data source: public Kaggle dataset “Sephora Products and Skincare Reviews” (Inky, 2023).</span></p><details class="pf-case-more"><summary data-i18n="portfolio.mkt.board.readMore">Lire l'étude complète</summary>
-      <div class="pf-star">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Contexte &amp; Données</span><span data-lang-show="en">Context &amp; Data</span></div>
-        <div data-lang-show="fr">
+      <div class="ex-preface-grid">
+        <div class="ex-preface-txt">
+          <div class="pf-case-lead"><p data-lang-show="fr">Comment passer de deux jeux de données bruts (8 494 fiches produits et 1 094 411 avis) à un outil qui répond aux questions d'une équipe produit ? J'ai construit un modèle Power BI (préparation dans Power Query, modèle relationnel, mesures DAX) dont chaque page répond à une question, de la structure du catalogue aux thèmes des avis négatifs.</p><p data-lang-show="en">How do you turn two raw datasets (8,494 product records and 1,094,411 reviews) into a tool that answers a product team's questions? I built a Power BI model (preparation in Power Query, relational model, DAX measures) in which each page answers one question, from catalogue structure to the themes of negative reviews.</p></div>
+          <div data-lang-show="fr">
           <p class="pf-star-txt">Deux sources : une table produits (<strong>8 494 produits</strong>, 304 marques, prix, note, nombre d'avis, favoris, indicateurs d'exclusivité, de vente en ligne, d'édition limitée, de rupture et de nouveauté) et cinq fichiers d'avis sur les soins de la peau (<strong>1 094 411 avis</strong> : note, recommandation, type de peau, carnation, titre et texte). <strong>Question métier :</strong> comment piloter ce portefeuille ? Je l'ai découpée en quatre questions, une par page du dashboard, dans l'ordre de lecture :</p>
           <ol class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
             <li>Que vend Sephora ?</li>
@@ -1479,10 +1554,24 @@
             <li>What do customers say about skincare?</li>
           </ol>
         </div>
+        </div>
+        <aside class="ex-preface-cartel">
+          <div class="pf-stats pf-case-figs"><div><span class="pf-stat-val"><span data-lang-show="fr">1 094 411</span><span data-lang-show="en">1,094,411</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Avis individuels modélisés</span><span data-lang-show="en">Individual reviews modelled</span></span></div><div><span class="pf-stat-val"><span data-lang-show="fr">8 494</span><span data-lang-show="en">8,494</span></span><span class="pf-stat-lbl"><span data-lang-show="fr">Fiches produits</span><span data-lang-show="en">Product records</span></span></div><div><span class="pf-stat-val">4</span><span class="pf-stat-lbl"><span data-lang-show="fr">Pages, une par question</span><span data-lang-show="en">Pages, one per question</span></span></div><div><span class="pf-stat-val">7</span><span class="pf-stat-lbl"><span data-lang-show="fr">Thèmes détectés dans les avis</span><span data-lang-show="en">Themes detected in reviews</span></span></div></div>
+          <div class="pf-tags">
+        <span class="pf-tag">Power BI</span>
+        <span class="pf-tag">DAX</span>
+        <span class="pf-tag">Power Query</span>
+        <span class="pf-tag"><span data-lang-show="fr">Modélisation des Données</span><span data-lang-show="en">Data Modelling</span></span>
+        <span class="pf-tag"><span data-lang-show="fr">Analyse des Avis</span><span data-lang-show="en">Review Analytics</span></span>
+        <span class="pf-tag"><span data-lang-show="fr">Segmentation Produits</span><span data-lang-show="en">Product Segmentation</span></span>
+        <span class="pf-tag">Sephora</span>
       </div>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Préparation &amp; Modèle de Données</span><span data-lang-show="en">Preparation &amp; Data Model</span></div>
+          <p class="pf-case-source"><span data-lang-show="fr">Projet personnel · Source des données : jeu de données public Kaggle « Sephora Products and Skincare Reviews » (Inky, 2023).</span><span data-lang-show="en">Personal project · Data source: public Kaggle dataset “Sephora Products and Skincare Reviews” (Inky, 2023).</span></p>
+        </aside>
+      </div>
+    </header>
+    <section class="ex-technique">
+      <div class="pf-star-lbl"><span data-lang-show="fr">Préparation &amp; Modèle de Données</span><span data-lang-show="en">Preparation &amp; Data Model</span></div>
         <div data-lang-show="fr">
           <ul class="pf-star-txt" style="margin:0;padding-left:1.2rem;">
             <li><strong>Power Query :</strong> les cinq fichiers d'avis chargés depuis un dossier et réunis en une seule table, colonnes déjà présentes dans la table produits retirées, types fixés en paramètres régionaux en-US pour lire correctement décimales et dates.</li>
@@ -1499,12 +1588,9 @@
             <li><strong>DAX:</strong> calculated columns (segment, price tier, rating band) and measures (shares, medians, rating of new products, share of each theme in reviews below 4★), with category, brand and product filters on every page.</li>
           </ul>
         </div>
-      </div>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Question 1 · Que Vend Sephora ?</span><span data-lang-show="en">Question 1 · What Does Sephora Sell?</span></div>
-        <figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Product Overview" loading="lazy" data-i18n-src="sephoraBI.p1" src="assets/PowerBI_Sephora/sephora-powerbi-1.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 1 du dashboard · Product Overview</span><span data-lang-show="en">Dashboard page 1 · Product Overview</span></figcaption></figure>
-        <div data-lang-show="fr">
+    </section>
+    <section class="ex-salle">
+      <div class="ex-cartel"><p class="ex-salle-n">1 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 1 · Que Vend Sephora ?</span><span data-lang-show="en">Question 1 · What Does Sephora Sell?</span></div><div data-lang-show="fr">
           <p class="pf-star-txt"><strong>Méthode :</strong> parts calculées par mesure DAX et colonne « tranche de prix » en quatre niveaux (moins de 25 $, 25 – 50 $, 50 – 100 $, plus de 100 $).</p>
           <ul class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
             <li>Quatre catégories font l'essentiel du catalogue : soins de la peau 28,5 %, maquillage 27,9 %, cheveux 17,2 %, parfums 16,9 % des produits.</li>
@@ -1523,11 +1609,10 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> price gaps between categories make any overall average misleading; each following page is read filtered by category.</p>
         </div>
       </div>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Question 2 · Quels Produits Défendre, Révéler ou Corriger ?</span><span data-lang-show="en">Question 2 · Which Products to Defend, Surface or Fix?</span></div>
-        <figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Portfolio Matrix" loading="lazy" data-i18n-src="sephoraBI.p2" src="assets/PowerBI_Sephora/sephora-powerbi-2.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 2 du dashboard · Portfolio Matrix</span><span data-lang-show="en">Dashboard page 2 · Portfolio Matrix</span></figcaption></figure>
-        <div data-lang-show="fr">
+      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-1.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Product Overview" loading="lazy" data-i18n-src="sephoraBI.p1" src="assets/PowerBI_Sephora/sephora-powerbi-1.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 1 du dashboard · Product Overview</span><span data-lang-show="en">Dashboard page 1 · Product Overview</span></figcaption></figure>
+    </section>
+    <section class="ex-salle">
+      <div class="ex-cartel"><p class="ex-salle-n">2 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 2 · Quels Produits Défendre, Révéler ou Corriger ?</span><span data-lang-show="en">Question 2 · Which Products to Defend, Surface or Fix?</span></div><div data-lang-show="fr">
           <p class="pf-star-txt"><strong>Méthode :</strong> colonne calculée « Segment » qui compare chaque produit aux médianes du catalogue entier (122 avis et 4,29★, calculées avec ALL pour ne pas bouger avec les filtres), produits sans note mis à part. Nuage de points en échelle logarithmique, le nombre d'avis allant de quelques unités à plusieurs dizaines de milliers.</p>
           <ul class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
             <li>Hero 2 307 (27,2 %), Hidden Gems 1 801 (21,2 %), Risk 1 815 (21,4 %), Underperformers 2 293 (27,0 %), non notés 278.</li>
@@ -1546,11 +1631,10 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> the segment profile shows that the low traction of Hidden Gems also comes from distribution, and that Risk products are highly anticipated products that disappoint.</p>
         </div>
       </div>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Question 3 · Où se Concentrent l'Attention et la Satisfaction ?</span><span data-lang-show="en">Question 3 · Where Do Attention and Satisfaction Concentrate?</span></div>
-        <figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" data-i18n-src="sephoraBI.p3" src="assets/PowerBI_Sephora/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure>
-        <div data-lang-show="fr">
+      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-2.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Portfolio Matrix" loading="lazy" data-i18n-src="sephoraBI.p2" src="assets/PowerBI_Sephora/sephora-powerbi-2.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 2 du dashboard · Portfolio Matrix</span><span data-lang-show="en">Dashboard page 2 · Portfolio Matrix</span></figcaption></figure>
+    </section>
+    <section class="ex-salle">
+      <div class="ex-cartel"><p class="ex-salle-n">3 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 3 · Où se Concentrent l'Attention et la Satisfaction ?</span><span data-lang-show="en">Question 3 · Where Do Attention and Satisfaction Concentrate?</span></div><div data-lang-show="fr">
           <p class="pf-star-txt"><strong>Méthode :</strong> part des avis comparée à la part des produits pour chaque catégorie, sur les 3 685 250 avis comptés dans les fiches produits ; note moyenne par tranche de prix ; mesures séparées pour les nouveautés et les produits existants.</p>
           <ul class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
             <li>Maquillage : 43,1 % des avis pour 27,9 % des produits. Cheveux : 9,8 % des avis pour 17,2 % des produits ; parfums : 9,7 % pour 16,9 %.</li>
@@ -1569,11 +1653,10 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> review volume does not follow each category's weight; in hair and fragrance, ratings based on few reviews are less reliable.</p>
         </div>
       </div>
-
-      <div class="pf-star">
-        <div class="pf-star-lbl"><span data-lang-show="fr">Question 4 · Que Disent les Clientes des Soins de la Peau ?</span><span data-lang-show="en">Question 4 · What Do Customers Say About Skincare?</span></div>
-        <figure class="pf-star-fig"><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice - Skincare" loading="lazy" data-i18n-src="sephoraBI.p4" src="assets/PowerBI_Sephora/sephora-powerbi-4.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 4 du dashboard · Customer Voice - Skincare</span><span data-lang-show="en">Dashboard page 4 · Customer Voice - Skincare</span></figcaption></figure>
-        <div data-lang-show="fr">
+      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-3.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice" loading="lazy" data-i18n-src="sephoraBI.p3" src="assets/PowerBI_Sephora/sephora-powerbi-3.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 3 du dashboard · Customer Voice</span><span data-lang-show="en">Dashboard page 3 · Customer Voice</span></figcaption></figure>
+    </section>
+    <section class="ex-salle">
+      <div class="ex-cartel"><p class="ex-salle-n">4 / 4</p><div class="ex-salle-titre"><span data-lang-show="fr">Question 4 · Que Disent les Clientes des Soins de la Peau ?</span><span data-lang-show="en">Question 4 · What Do Customers Say About Skincare?</span></div><div data-lang-show="fr">
           <p class="pf-star-txt"><strong>Méthode :</strong> part de chaque thème calculée deux fois, sur l'ensemble des avis puis sur les seuls avis sous 4★ ; l'écart entre les deux montre ce qui pèse dans une mauvaise note.</p>
           <ul class="pf-star-txt" style="margin:0.45rem 0 0;padding-left:1.2rem;">
             <li>84,0 % des avis recommandent le produit, 17,9 % sont notés sous 4★.</li>
@@ -1590,7 +1673,9 @@
           <p class="pf-star-txt" style="margin-top:0.45rem;"><strong>Takeaway:</strong> tolerance and price stand out in negative reviews. Keyword detection counts a mention, not a complaint: to be confirmed by reading a sample of reviews.</p>
         </div>
       </div>
-
+      <figure class="ex-scroll"><svg class="ex-cord" viewBox="0 0 120 34" aria-hidden="true" focusable="false"><path d="M6,32 L60,4 L114,32"/><circle cx="60" cy="4" r="3"/></svg><a class="pf-img-wrap" href="assets/PowerBI_Sephora/sephora-powerbi-4.webp" target="_blank" rel="noopener noreferrer"><img alt="Dashboard Power BI Sephora – Customer Voice - Skincare" loading="lazy" data-i18n-src="sephoraBI.p4" src="assets/PowerBI_Sephora/sephora-powerbi-4.webp" width="1920" height="1080"/></a><figcaption class="pf-img-caption"><span data-lang-show="fr">Page 4 du dashboard · Customer Voice - Skincare</span><span data-lang-show="en">Dashboard page 4 · Customer Voice - Skincare</span></figcaption></figure>
+    </section>
+    <section class="ex-epilogue">
       <div class="pf-star pf-star--insight">
         <div class="pf-star-lbl"><span data-lang-show="fr">Recommandations Priorisées</span><span data-lang-show="en">Prioritised Recommendations</span></div>
         <div data-lang-show="fr">
@@ -1610,7 +1695,6 @@
           </ol>
         </div>
       </div>
-
       <div class="pf-star">
         <div class="pf-star-lbl"><span data-lang-show="fr">Limites &amp; Prochaine Étape</span><span data-lang-show="en">Limitations &amp; Next Step</span></div>
         <div data-lang-show="fr">
@@ -1632,8 +1716,9 @@
           <p class="pf-star-txt"><strong>Next step:</strong> link a sales and margin table by product to the existing model, then track the ratings of the Risk and Hidden Gem segments by quarter using the calendar table.</p>
         </div>
       </div>
-<section class="pf-refs"><p class="pf-refs-title"><span data-lang-show="fr">Références</span><span data-lang-show="en">References</span></p><ol class="pf-refs-list"><li><span data-lang-show="fr">Inky, N. (2023). <em>Sephora Products and Skincare Reviews</em> [Jeu de données]. Kaggle. <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews</a></span><span data-lang-show="en">Inky, N. (2023). <em>Sephora Products and Skincare Reviews</em> [Data set]. Kaggle. <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews</a></span></li></ol></section>
-</details></div></div>
+      <section class="pf-refs"><p class="pf-refs-title"><span data-lang-show="fr">Références</span><span data-lang-show="en">References</span></p><ol class="pf-refs-list"><li><span data-lang-show="fr">Inky, N. (2023). <em>Sephora Products and Skincare Reviews</em> [Jeu de données]. Kaggle. <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews</a></span><span data-lang-show="en">Inky, N. (2023). <em>Sephora Products and Skincare Reviews</em> [Data set]. Kaggle. <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews</a></span></li></ol></section>
+    </section>
+  </div>
       <div class="mk-sep" data-reveal aria-hidden="true"><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg><svg class="mk-sep-orn" width="240" height="56" viewBox="0 0 240 56" focusable="false"><use href="#da-guzheng" width="240" height="56" filter="url(#mk-encre)"/></svg><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg></div><a class="pf-next" data-target="xhs-dashboard" href="#xhs-dashboard"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name"><span data-lang-show="fr">Engoo · Dashboard Xiaohongshu</span><span data-lang-show="en">Engoo · Xiaohongshu Dashboard</span></span></span><span class="pf-next-cover"><img data-i18n-src="portfolio.data.coverDash" src="assets/covers/engoo-dashboard-data.webp" alt="" loading="lazy"></span></a></article>
     </main>
   </div>
