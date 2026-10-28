@@ -719,8 +719,8 @@
     .ex .ex-preface-lbl::after { content: ""; width: 3rem; height: 1px; background: var(--da-accent); }
     .ex .ex-preface .pf-card-title { font-size: clamp(2.1rem, 3.4vw, 3rem); line-height: 1.1; max-width: 20ch; margin: 0.2rem 0 2.2rem; }
     .ex .ex-preface-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; align-items: start; }
-    .ex .ex-preface--affiche .ex-preface-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
-    .ex:not(.ex--sans-affiche) .ex-preface-txt { max-width: 760px; }
+    .ex .ex-preface--affiche .ex-preface-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3.2rem; }
+    .ex .ex-preface:not(.ex-preface--affiche) .ex-preface-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
     .ex .ex-preface-txt .pf-case-lead { background: none; border: 0; padding: 0; margin: 0; }
     .ex .ex-preface-txt .pf-case-lead p, .ex .ex-preface-txt p.pf-case-lead {
       font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; line-height: 1.5; color: var(--da-text); margin: 0 0 1.3rem;
@@ -748,17 +748,31 @@
     .ex .ex-affiche .pf-cover-wrap, .ex .ex-affiche .pf-img-wrap { border: 0; }
 
     .ex .ex-affiche-note { font-size: 0.72rem; line-height: 1.55; margin: 0.9rem 0 0; padding: 0; color: var(--da-muted); }
-    .ex .ex-mur, .ex .ex-epilogue { max-width: 800px; margin: 0 auto; padding: 2.8rem 0; }
-    .ex .ex-epilogue { border-top: 1px solid var(--da-border); margin-top: 1rem; padding-top: 3.2rem; }
-    .ex .ex-mur > :first-child, .ex .ex-epilogue > :first-child { margin-top: 0; }
+    /* Murs et épilogue sur la même grille que les salles : titre à gauche
+       (même colonne et même liseré que le cartel), texte à droite. Toute
+       l'exposition garde ainsi la même largeur, du haut en bas. */
+    .ex .ex-mur, .ex .ex-epilogue { padding: 4rem 0; border-top: 1px solid var(--da-border); }
+    .ex .ex-mur > *, .ex .ex-epilogue > * {
+      display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: 3.2rem; align-items: start;
+      background: none !important; border: 0 !important; border-radius: 0 !important; padding: 0 !important; margin: 0 0 2.8rem;
+    }
+    .ex .ex-mur > :last-child, .ex .ex-epilogue > :last-child { margin-bottom: 0; }
+    .ex .ex-mur > * > *, .ex .ex-epilogue > * > * { grid-column: 2; min-width: 0; }
+    .ex .ex-mur > * > :is(.pf-star-lbl, .pf-result-callout-lbl, .pf-refs-title),
+    .ex .ex-epilogue > * > :is(.pf-star-lbl, .pf-result-callout-lbl, .pf-refs-title) {
+      grid-column: 1; grid-row: 1 / span 30; align-self: start;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; line-height: 1.2; font-weight: 500;
+      letter-spacing: 0; text-transform: none; color: var(--da-text) !important;
+      border-left: 2px solid rgba(var(--da-accent-rgb),0.5); padding: 0.2rem 0 0.2rem 1.15rem; margin: 0;
+    }
 
     /* Une salle : cartel collant à gauche, rouleau à droite */
     .ex .ex-salle {
-      display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 3.2rem; align-items: start;
+      display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3.2rem; align-items: center;
       padding: 4rem 0; border-top: 1px solid var(--da-border);
     }
     .ex .ex-salle--seule { grid-template-columns: minmax(0, 1fr); }
-    .ex .ex-cartel { position: sticky; top: 140px; border-left: 2px solid rgba(var(--da-accent-rgb),0.5); padding: 0.2rem 0 0.2rem 1.15rem; }
+    .ex .ex-cartel { border-left: 2px solid rgba(var(--da-accent-rgb),0.5); padding: 0.2rem 0 0.2rem 1.15rem; }
     .ex .ex-cartel .ex-salle-n { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; line-height: 1; color: var(--da-accent); margin: 0 0 0.6rem; }
     .ex .ex-salle-titre {
       font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; line-height: 1.2; color: var(--da-text);
@@ -768,7 +782,7 @@
     .ex .ex-cartel ul, .ex .ex-cartel ol { padding-left: 1.1rem; margin: 0.4rem 0 0; }
 
     /* Le rouleau 手卷 */
-    .ex .ex-hand { position: sticky; top: 140px; margin: 0 34px 0 14px; }
+    .ex .ex-hand { position: relative; margin: 0 34px 0 14px; }
     .ex .ex-scroll {
       position: relative; padding: 30px 36px 32px;
       background-color: var(--da-card);
@@ -809,6 +823,9 @@
 
     @media (max-width: 960px) {
       .ex .ex-preface--affiche .ex-preface-grid, .ex .ex-salle { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+      .ex .ex-mur > *, .ex .ex-epilogue > * { grid-template-columns: minmax(0, 1fr); row-gap: 0.9rem; }
+      .ex .ex-mur > * > *, .ex .ex-epilogue > * > * { grid-column: 1; grid-row: auto !important; }
+      .ex .ex-mur, .ex .ex-epilogue { padding: 3rem 0; }
       .ex .ex-affiche { order: -1; }
       .ex .ex-cartel { position: static; }
       .ex .ex-hand { position: relative; top: auto; order: -1; margin: 12px 30px 0 14px; }
