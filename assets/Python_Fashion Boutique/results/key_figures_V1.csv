@@ -1,0 +1,53 @@
+metric,value,site,match
+SKUs,2176.0,2176.0,yes
+Full-price value ($),211508.0,211508.0,yes
+Markdown loss ($),25461.0,25461.0,yes
+Markdown loss / full-price value (%),12.0,12.0,yes
+Discounted items,878.0,878.0,yes
+Discounted items (%),40.3,40.3,yes
+Average markdown of discounted items (%),30.1,30.1,yes
+Deepest markdown (%),59.9,59.9,yes
+Items with stock 0-5,244.0,244.0,yes
+Discounted among stock 0-5,94.0,94.0,yes
+"Discounted share, stock 0-5 (%)",38.5,38.5,yes
+Items with stock 36-50,633.0,633.0,yes
+Discounted among stock 36-50,271.0,271.0,yes
+"Discounted share, stock 36-50 (%)",42.8,42.8,yes
+Correlation stock - markdown (r),0.01,0.01,yes
+Items with stock >= 40,443.0,443.0,yes
+Full price among stock >= 40,252.0,252.0,yes
+Price threshold of the top quartile ($),127.63,127.63,yes
+Loss on the top price quartile ($),10598.0,10598.0,yes
+"Share of loss, top price quartile (%)",41.6,41.6,yes
+"Average markdown, Accessories (%)",11.7,,
+"Average markdown, Bottoms (%)",13.2,13.2,yes
+"Average markdown, Dresses (%)",13.2,13.2,yes
+"Average markdown, Outerwear (%)",10.8,10.8,yes
+"Average markdown, Shoes (%)",13.0,13.0,yes
+"Average markdown, Tops (%)",11.0,,
+Discounted with stock <= 15,270.0,270.0,yes
+Loss with stock <= 15 ($),7966.0,7966.0,yes
+"Share of loss, stock <= 15 (%)",31.3,31.3,yes
+Returned items,320.0,320.0,yes
+Return rate (%),14.7,14.7,yes
+Returned value ($),26544.0,26544.0,yes
+"Return rate, Accessories (%)",13.7,,
+"Return rate, Bottoms (%)",15.8,15.8,yes
+"Return rate, Dresses (%)",14.8,,
+"Return rate, Outerwear (%)",16.2,16.2,yes
+"Return rate, Shoes (%)",15.1,,
+"Return rate, Tops (%)",12.8,,
+"Return rate, Ann Taylor (%)",19.8,19.8,yes
+"Return rate, Banana Republic (%)",16.5,,
+"Return rate, Forever21 (%)",13.6,,
+"Return rate, Gap (%)",14.8,,
+"Return rate, H&M (%)",13.8,,
+"Return rate, Mango (%)",11.3,11.3,yes
+"Return rate, Uniqlo (%)",12.7,,
+"Return rate, Zara (%)",15.3,,
+'Changed Mind' + 'Size Issue' / reasons (%),40.0,40.0,yes
+Average rating (rated items),2.99,2.99,yes
+"Average rating, discounted",2.94,2.94,yes
+"Average rating, full price",3.02,3.02,yes
+"Return rate, discounted (%)",15.3,15.3,yes
+"Return rate, full price (%)",14.3,14.3,yes

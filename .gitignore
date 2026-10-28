@@ -37,3 +37,5 @@ assets/**/M&A_LatAm_Transactions_Dataset*.xlsx
 assets/**/RECAPSS_Group 2_Final Paper.pdf
 # Portfolio PDF d'origine avec le nom chinois (version publiée : _c_V1.pdf)
 assets/250508_作品集_社群經營與設計_c.pdf
+
+__pycache__/
