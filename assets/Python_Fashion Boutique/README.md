@@ -26,8 +26,8 @@ Every run writes the next version number (`_V1`, `_V2`...) and never overwrites 
 | `data/clean/fashion_boutique_clean_V{n}.csv` | Same 2,176 rows, 8 columns added |
 | `reports/cleaning_report_V{n}.md` | Every check, its result and the decision taken |
 | `results/key_figures_V{n}.csv` | Figures recomputed from the clean file, next to the value shown on the site |
-| `charts/V{n}/` | 4 charts x 2 languages, WEBP 1600 x 900 |
-| `fonts/` | Outfit (SIL Open Font License), the font of the site |
+| `charts/V{n}/` | 4 charts x 2 languages, WEBP 1600 x 900; boutique palette (ivory paper, one fabric colour per chart: burgundy, navy, blush, camel, sage) |
+| `fonts/` | Bodoni Moda for titles, Outfit for text (SIL Open Font License) |
 
 ## Data and Cleaning
 

@@ -3,8 +3,11 @@
 Reads  the latest data/clean/fashion_boutique_clean_V{n}.csv
 Writes charts/V{n}/{chart}_{fr|en}.webp (1600 x 900)
 
-Colours follow portfolio-data.html (--da-* variables): celadon card, ink text,
-teal accent. Font: Outfit (fonts/, SIL Open Font License), as on the site.
+Palette of the project itself, a fashion boutique (request of the user: not the
+colours of the site): ivory paper, charcoal ink, linen for the context bars and
+one fabric colour per chart (burgundy, navy, blush, camel, sage). Titles in
+Bodoni Moda, a fashion-magazine serif; text in Outfit (fonts/, SIL Open Font
+License).
 
 Usage: python 03_charts.py
 """
@@ -21,8 +24,11 @@ from PIL import Image
 
 from fashion_common import CHARTS, FONTS, STOCK_LABELS, latest_clean, next_version
 
-CARD, TEXT, MUTED, BORDER = "#eef3ef", "#16211f", "#5d6b66", "#c3cfc9"
-ACCENT, ACCENT2, SOFT = "#0d9488", "#0891b2", "#a9bdb6"
+CARD, TEXT, MUTED, BORDER = "#faf6f0", "#2b2a2e", "#7d746c", "#d8cfc4"
+SOFT = "#dccfc0"                       # linen: context bars and dots
+BURGUNDY, NAVY, BLUSH = "#8e2f3c", "#2f4a6d", "#c0627e"
+CAMEL, SAGE = "#b07a3c", "#6b8a6e"
+TITLE_FONT = "Bodoni Moda SemiBold"
 
 for f in FONTS.glob("*.ttf"):
     font_manager.fontManager.addfont(str(f))
@@ -49,7 +55,7 @@ def num(x, lang, dec=1, unit=""):
 
 
 def finish(fig, title, source, lang):
-    fig.suptitle(title, x=0.035, y=0.965, ha="left", fontsize=15, fontweight="medium")
+    fig.suptitle(title, x=0.035, y=0.965, ha="left", fontsize=17, fontfamily=TITLE_FONT, fontweight=600)
     fig.text(0.035, 0.03, source, fontsize=8, color=MUTED)
     buf = io.BytesIO()
     fig.savefig(buf, dpi=200, format="png")
@@ -71,7 +77,7 @@ def chart_quality(lang):
     fig, ax = plt.subplots(figsize=(8, 4.5))
     fig.subplots_adjust(left=0.08, right=0.97, top=0.78, bottom=0.17)
     ax.bar(others.index, others.values, width=1.2, color=SOFT)
-    ax.bar([top_day], [top_n], width=3, color=ACCENT)
+    ax.bar([top_day], [top_n], width=3, color=BURGUNDY)
     ax.set_yscale("log")
     ax.set_ylim(0.8, top_n * 2.2)
     ax.set_yticks([1, 10, 100, 1000])
@@ -93,7 +99,7 @@ def chart_quality(lang):
         title = "Purchase Date: a Default Value"
         ax.set_ylabel("Items (log scale)")
     ax.annotate(note, (top_day, top_n), xytext=(-12, -4), textcoords="offset points",
-                ha="right", va="top", fontsize=11, color=ACCENT, fontweight="medium")
+                ha="right", va="top", fontsize=11, color=BURGUNDY, fontweight="medium")
     ax.annotate(rest, (others.index[len(others) // 2], others.max()), xytext=(0, 22),
                 textcoords="offset points", ha="center", fontsize=9.5, color=MUTED)
     return finish(fig, title, SOURCE[lang], lang)
@@ -108,7 +114,7 @@ def chart_stock(lang):
     f = df[~df["is_discounted"]]
     full_lbl, disc_lbl = (("Plein prix", "Remisé") if lang == "fr" else ("Full price", "Discounted"))
     a1.scatter(d["stock_quantity"] + rng.uniform(-0.3, 0.3, len(d)), d["markdown_percentage"],
-               s=7, color=ACCENT, alpha=0.6, linewidths=0, label=disc_lbl)
+               s=7, color=NAVY, alpha=0.6, linewidths=0, label=disc_lbl)
     a1.scatter(f["stock_quantity"] + rng.uniform(-0.3, 0.3, len(f)), np.zeros(len(f)),
                s=5, color=SOFT, alpha=0.5, linewidths=0, label=full_lbl)
     a1.legend(loc="upper center", bbox_to_anchor=(0.5, 1.0), ncol=2, frameon=False, fontsize=8.5,
@@ -121,11 +127,11 @@ def chart_stock(lang):
 
     share = df.groupby("stock_band", observed=True)["is_discounted"].mean().reindex(STOCK_LABELS) * 100
     mean = df["is_discounted"].mean() * 100
-    bars = a2.bar(range(5), share.values, color=[ACCENT if i in (0, 4) else SOFT for i in range(5)],
+    bars = a2.bar(range(5), share.values, color=[NAVY if i in (0, 4) else SOFT for i in range(5)],
                   width=0.62, zorder=3)
-    for b, v in zip(bars, share.values):
+    for i, (b, v) in enumerate(zip(bars, share.values)):
         a2.text(b.get_x() + b.get_width() / 2, v - 2.5, num(v, lang, 1, "%"), ha="center",
-                va="top", fontsize=9, color="white", zorder=4)
+                va="top", fontsize=9, color="white" if i in (0, 4) else TEXT, zorder=4)
     avg = "Moyenne" if lang == "fr" else "Average"
     a2.axhline(mean, color=TEXT, lw=0.8, ls=(0, (4, 3)), zorder=1, label=f"{avg} {num(mean, lang, 1, '%')}")
     a2.legend(loc="upper left", frameon=False, fontsize=8.5, labelcolor=MUTED)
@@ -160,7 +166,7 @@ def chart_loss(lang):
     for name, row in q.iterrows():
         lo, hi = round(row["lo"]), round(row["hi"])
         labels.append(f"{name}\n{lo} – {hi} $" if lang == "fr" else f"{name}\n${lo} – {hi}")
-    bars = a1.bar(range(4), q["share"], color=[SOFT, SOFT, SOFT, ACCENT], width=0.62, zorder=3)
+    bars = a1.bar(range(4), q["share"], color=[SOFT, SOFT, SOFT, BLUSH], width=0.62, zorder=3)
     for b, v in zip(bars, q["share"]):
         a1.text(b.get_x() + b.get_width() / 2, v + 1, num(v, lang, 1, "%"), ha="center", fontsize=9)
     even = ("25\u00a0% : perte répartie à parts égales" if lang == "fr"
@@ -173,7 +179,7 @@ def chart_loss(lang):
 
     cat = df.groupby("category")["markdown_percentage"].mean().sort_values()
     top3 = set(cat.index[-3:])
-    a2.barh(cat.index, cat.values, color=[ACCENT if c in top3 else SOFT for c in cat.index], height=0.6)
+    a2.barh(cat.index, cat.values, color=[CAMEL if c in top3 else SOFT for c in cat.index], height=0.6)
     for i, v in enumerate(cat.values):
         a2.text(v + 0.2, i, num(-v, lang, 1, "%").replace("-", "−"), va="center", fontsize=9)
     a2.set_xlim(0, 16)
@@ -198,9 +204,10 @@ def chart_returns(lang):
     brand = df.groupby("brand")["is_returned"].mean().sort_values() * 100
     mean = df["is_returned"].mean() * 100
     a1.barh(brand.index, brand.values, height=0.6, zorder=3,
-            color=[ACCENT if b in (brand.index[0], brand.index[-1]) else SOFT for b in brand.index])
+            color=[CAMEL if b in (brand.index[0], brand.index[-1]) else SOFT for b in brand.index])
     for i, v in enumerate(brand.values):
-        a1.text(v - 0.4, i, num(v, lang, 1, "%"), va="center", ha="right", fontsize=9, color="white", zorder=4)
+        a1.text(v - 0.4, i, num(v, lang, 1, "%"), va="center", ha="right", fontsize=9, zorder=4,
+                color="white" if i in (0, len(brand) - 1) else TEXT)
     avg = "Moyenne" if lang == "fr" else "Average"
     a1.axvline(mean, color=TEXT, lw=0.8, ls=(0, (4, 3)), zorder=1, label=f"{avg} {num(mean, lang, 1, '%')}")
     a1.legend(loc="lower right", frameon=False, fontsize=8.5, labelcolor=MUTED)
@@ -210,7 +217,7 @@ def chart_returns(lang):
 
     reasons = df["return_reason"].value_counts().sort_values()
     a2.barh(reasons.index, reasons.values, height=0.6,
-            color=[ACCENT if r in ("Changed Mind", "Size Issue") else SOFT for r in reasons.index])
+            color=[SAGE if r in ("Changed Mind", "Size Issue") else SOFT for r in reasons.index])
     for i, v in enumerate(reasons.values):
         a2.text(v + 1, i, str(v), va="center", fontsize=9)
     a2.set_xlim(0, 80)
