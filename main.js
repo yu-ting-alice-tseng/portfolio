@@ -175,6 +175,10 @@
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3.webp",
         p4: "assets/PowerBI_Sephora/sephora-powerbi-4.webp",
       },
+      pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
+        boutique: "assets/covers/boutique-mode-data.webp",
+        beaute: "assets/covers/maison-beaute.webp",
+      },
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
         download: "Télécharger le CV (PDF)",
@@ -1245,6 +1249,10 @@
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
         p4: "assets/PowerBI_Sephora/sephora-powerbi-4-en.webp",
       },
+      pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
+        boutique: "assets/covers/boutique-mode-data-en.webp",
+        beaute: "assets/covers/maison-beaute-en.webp",
+      },
       brandName: "Yu‑Ting Tseng",
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
         download: "Download CV (PDF)",
@@ -2280,6 +2288,10 @@
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
         p4: "assets/PowerBI_Sephora/sephora-powerbi-4-en.webp",
+      },
+      pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
+        boutique: "assets/covers/boutique-mode-data-en.webp",
+        beaute: "assets/covers/maison-beaute-en.webp",
       },
       brandName: "Yu‑Ting Tseng",
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
