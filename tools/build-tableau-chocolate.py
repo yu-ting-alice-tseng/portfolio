@@ -139,7 +139,7 @@ TEXT = {
         # The three findings of the study (portfolio-data.html, #chocolat-fmcg).
         "sections": [
             ("1", "Saisonnalité Non Captée",
-             "Aucun pic en février ni en décembre : l'indice reste entre 93 et 102."),
+             "Aucun pic en février ni en décembre : l'indice reste entre 93 et 103."),
             ("2", "Portefeuille sans Produit Phare",
              "160 SKUs sur 200 pour atteindre 80 % du CA, contre environ 20 % selon la règle de Pareto."),
             ("3", "Canaux Indifférenciés",
@@ -193,7 +193,7 @@ TEXT = {
         },
         "sections": [
             ("1", "Uncaptured Seasonality",
-             "No peak in February or December: the index stays between 93 and 102."),
+             "No peak in February or December: the index stays between 93 and 103."),
             ("2", "No Hero Product",
              "160 of 200 SKUs to reach 80% of revenue, vs. about 20% under the Pareto rule."),
             ("3", "Undifferentiated Channels",
