@@ -1,0 +1,1666 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook locale="en_US" original-version='18.1' source-build='2026.3.0 (20263.26.1022.1645)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <datasources>
+    <datasource caption="Chocolate Sales" inline='true' name="federated.choco_main" version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption="chocolate_tableau" name="textscan.choco_main">
+            <connection class='textscan' directory='.' filename="chocolate_tableau.csv" password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.choco_main" name="chocolate_tableau.csv" table="[chocolate_tableau#csv]" type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype="integer" name="year" ordinal='0' />
+            <column datatype="integer" name="month" ordinal='1' />
+            <column datatype="string" name="month_fr" ordinal='2' />
+            <column datatype="string" name="month_en" ordinal='3' />
+            <column datatype="string" name="channel" ordinal='4' />
+            <column datatype="string" name="country_fr" ordinal='5' />
+            <column datatype="string" name="country_en" ordinal='6' />
+            <column datatype="string" name="product_id" ordinal='7' />
+            <column datatype="string" name="product_name" ordinal='8' />
+            <column datatype="string" name="brand" ordinal='9' />
+            <column datatype="string" name="category" ordinal='10' />
+            <column datatype="integer" name="transactions" ordinal='11' />
+            <column datatype="integer" name="units" ordinal='12' />
+            <column datatype="real" name="revenue" ordinal='13' />
+            <column datatype="real" name="cost" ordinal='14' />
+            <column datatype="real" name="profit" ordinal='15' />
+            <column datatype="integer" name="sku_rank" ordinal='16' />
+            <column datatype="real" name="sku_cum_share" ordinal='17' />
+            <column datatype="string" name="sku_band" ordinal='18' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name="character-set">"UTF-8"</attribute>
+              <attribute datatype='string' name="collation">"en_US"</attribute>
+              <attribute datatype='string' name="currency">"$"</attribute>
+              <attribute datatype='string' name="decimal-char">"."</attribute>
+              <attribute datatype='string' name="header-row">"true"</attribute>
+              <attribute datatype='string' name="locale">"en_US"</attribute>
+              <attribute datatype='string' name="single-char">""</attribute>
+              <attribute datatype='string' name="thousands-char">","</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_fr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_fr]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>month_fr</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_en</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_en]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>month_en</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>channel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[channel]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>channel</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_fr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_fr]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>country_fr</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_en</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_en]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>country_en</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_name]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>product_name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>brand</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[brand]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>brand</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transactions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[transactions]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>transactions</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>units</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[units]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>units</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>cost</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>profit</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sku_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sku_rank]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>sku_rank</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sku_cum_share</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sku_cum_share]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>sku_cum_share</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sku_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sku_band]</local-name>
+            <parent-name>[chocolate_tableau.csv]</parent-name>
+            <remote-alias>sku_band</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption="chocolate_tableau.csv" datatype='table' name="[__tableau_internal_object_id__].[chocolate_tableau.csv_AFB267B49211573594A14BC59139722A]" role='measure' type='quantitative' />
+      <column caption="Year" datatype="integer" name="[year]" role="dimension" type="ordinal" />
+      <column caption="month" datatype="integer" name="[month]" role="dimension" type="ordinal" hidden='true' />
+      <column caption="month_fr" datatype="string" name="[month_fr]" role="dimension" type="nominal" hidden='true' />
+      <column caption="Month" datatype="string" name="[month_en]" role="dimension" type="nominal" />
+      <column caption="Channel" datatype="string" name="[channel]" role="dimension" type="nominal" />
+      <column caption="country_fr" datatype="string" name="[country_fr]" role="dimension" type="nominal" hidden='true' />
+      <column caption="Country" datatype="string" name="[country_en]" role="dimension" type="nominal" />
+      <column caption="product_id" datatype="string" name="[product_id]" role="dimension" type="nominal" hidden='true' />
+      <column caption="Product" datatype="string" name="[product_name]" role="dimension" type="nominal" />
+      <column caption="Brand" datatype="string" name="[brand]" role="dimension" type="nominal" />
+      <column caption="Category" datatype="string" name="[category]" role="dimension" type="nominal" />
+      <column caption="Transactions" datatype="integer" default-format="n#,##0" name="[transactions]" role="measure" type="quantitative" />
+      <column caption="Units" datatype="integer" default-format="n#,##0" name="[units]" role="measure" type="quantitative" />
+      <column caption="Revenue ($)" datatype="real" default-format="n#,##0" name="[revenue]" role="measure" type="quantitative" />
+      <column caption="Cost ($)" datatype="real" default-format="n#,##0" name="[cost]" role="measure" type="quantitative" />
+      <column caption="Margin ($)" datatype="real" default-format="n#,##0" name="[profit]" role="measure" type="quantitative" />
+      <column caption="SKU rank" datatype="integer" default-format="n#,##0" name="[sku_rank]" role="dimension" type="quantitative" />
+      <column caption="Cumulative revenue share" datatype="real" default-format="p0.0%" name="[sku_cum_share]" role="measure" type="quantitative" />
+      <column caption="SKUs (rank)" datatype="string" name="[sku_band]" role="dimension" type="nominal" />
+      <column caption="Revenue" datatype="real" default-format='n"$"#,##0.0"M"' name="[Calc_CA_M]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / 1000000" />
+      </column>
+      <column caption="Gross margin" datatype="real" default-format="p0.0%" name="[Calc_Marge]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([profit]) / SUM([revenue])" />
+      </column>
+      <column caption="Average order value" datatype="real" default-format='n"$"#,##0.00' name="[Calc_AOV]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / SUM([transactions])" />
+      </column>
+      <column caption="Units per transaction" datatype="real" default-format="n#,##0.00" name="[Calc_UPT]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([units]) / SUM([transactions])" />
+      </column>
+      <column caption="Revenue share · Channel" datatype="real" default-format="p0.0%" name="[Calc_Part_Canal]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [channel] : SUM([revenue])})" />
+      </column>
+      <column caption="Revenue share · Country" datatype="real" default-format="p0.0%" name="[Calc_Part_Pays]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [country_en] : SUM([revenue])})" />
+      </column>
+      <column caption="Revenue share · Category" datatype="real" default-format="p0.0%" name="[Calc_Part_Cat]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [category] : SUM([revenue])})" />
+      </column>
+      <column caption="Revenue share · SKUs (rank)" datatype="real" default-format="p0.0%" name="[Calc_Part_Band]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [sku_band] : SUM([revenue])})" />
+      </column>
+      <column caption="Seasonality index" datatype="real" default-format="n#,##0.0" name="[Calc_Index]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="SUM([revenue]) / (MIN({EXCLUDE [month_en] : SUM([revenue])}) / 12) * 100" />
+      </column>
+      <column caption="Gap to average (pts)" datatype="real" default-format="n+#,##0.0;-#,##0.0" name="[Calc_Ecart]" role="measure" type="quantitative">
+        <calculation class='tableau' formula="[Calc_Index] - 100" />
+      </column>
+      <object-graph>
+        <objects>
+          <object caption="chocolate_tableau.csv" id="chocolate_tableau.csv_AFB267B49211573594A14BC59139722A">
+            <properties context=''>
+              <relation connection="textscan.choco_main" name="chocolate_tableau.csv" table="[chocolate_tableau#csv]" type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype="integer" name="year" ordinal='0' />
+                    <column datatype="integer" name="month" ordinal='1' />
+                    <column datatype="string" name="month_fr" ordinal='2' />
+                    <column datatype="string" name="month_en" ordinal='3' />
+                    <column datatype="string" name="channel" ordinal='4' />
+                    <column datatype="string" name="country_fr" ordinal='5' />
+                    <column datatype="string" name="country_en" ordinal='6' />
+                    <column datatype="string" name="product_id" ordinal='7' />
+                    <column datatype="string" name="product_name" ordinal='8' />
+                    <column datatype="string" name="brand" ordinal='9' />
+                    <column datatype="string" name="category" ordinal='10' />
+                    <column datatype="integer" name="transactions" ordinal='11' />
+                    <column datatype="integer" name="units" ordinal='12' />
+                    <column datatype="real" name="revenue" ordinal='13' />
+                    <column datatype="real" name="cost" ordinal='14' />
+                    <column datatype="real" name="profit" ordinal='15' />
+                    <column datatype="integer" name="sku_rank" ordinal='16' />
+                    <column datatype="real" name="sku_cum_share" ordinal='17' />
+                    <column datatype="string" name="sku_band" ordinal='18' />
+                  </columns>
+                </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name="federated.choco_main">
+      <datasources>
+        <datasource caption='Chocolate Sales' name="federated.choco_main" />
+      </datasources>
+      <datasource-dependencies datasource="federated.choco_main">
+        <column datatype='string' name="[channel]" role='dimension' type='nominal' />
+        <column datatype='string' name="[country_en]" role='dimension' type='nominal' />
+        <column datatype='string' name="[category]" role='dimension' type='nominal' />
+        <column-instance column="[channel]" derivation='None' name="[none:channel:nk]" pivot='key' type='nominal' />
+        <column-instance column="[country_en]" derivation='None' name="[none:country_en:nk]" pivot='key' type='nominal' />
+        <column-instance column="[category]" derivation='None' name="[none:category:nk]" pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column="[federated.choco_main].[none:channel:nk]">
+        <groupfilter function='level-members' level="[none:channel:nk]" user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='categorical' column="[federated.choco_main].[none:country_en:nk]">
+        <groupfilter function='level-members' level="[none:country_en:nk]" user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='categorical' column="[federated.choco_main].[none:category:nk]">
+        <groupfilter function='level-members' level="[none:category:nk]" user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name="KPI · Revenue">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Revenue</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column caption="Revenue" datatype="real" default-format='n"$"#,##0.0"M"' name="[Calc_CA_M]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / 1000000" />
+            </column>
+            <column-instance column="[Calc_CA_M]" derivation="User" name="[usr:Calc_CA_M:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_CA_M:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#7B4A2D" />
+              </style-rule>
+              <style-rule element='cell'>
+                <format attr='font-family' value="Constantia" />
+                <format attr='font-size' value='34' />
+                <format attr='color' value="#7B4A2D" />
+                <format attr='text-align' value='center' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+      <simple-id uuid="{BE6F2F7A-9D4D-541F-AE00-A7B539E2C4ED}" />
+    </worksheet>
+    <worksheet name="KPI · Transactions">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Transactions</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="integer" name="[transactions]" role="measure" type="quantitative" />
+            <column-instance column="[transactions]" derivation="Sum" name="[sum:transactions:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.choco_main].[sum:transactions:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#D08C3F" />
+              </style-rule>
+              <style-rule element='cell'>
+                <format attr='font-family' value="Constantia" />
+                <format attr='font-size' value='34' />
+                <format attr='color' value="#D08C3F" />
+                <format attr='text-align' value='center' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+      <simple-id uuid="{181DC3FC-15EA-5688-B5FB-098A40A03F00}" />
+    </worksheet>
+    <worksheet name="KPI · Margin">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Gross margin</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column caption="Gross margin" datatype="real" default-format="p0.0%" name="[Calc_Marge]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([profit]) / SUM([revenue])" />
+            </column>
+            <column-instance column="[Calc_Marge]" derivation="User" name="[usr:Calc_Marge:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_Marge:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#7FA66B" />
+              </style-rule>
+              <style-rule element='cell'>
+                <format attr='font-family' value="Constantia" />
+                <format attr='font-size' value='34' />
+                <format attr='color' value="#7FA66B" />
+                <format attr='text-align' value='center' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+      <simple-id uuid="{BAE166E9-71E1-589D-BEAE-F03E6BA9987C}" />
+    </worksheet>
+    <worksheet name="KPI · AOV">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize="12">Average order value</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column caption="Average order value" datatype="real" default-format='n"$"#,##0.00' name="[Calc_AOV]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / SUM([transactions])" />
+            </column>
+            <column-instance column="[Calc_AOV]" derivation="User" name="[usr:Calc_AOV:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_AOV:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#C0485A" />
+              </style-rule>
+              <style-rule element='cell'>
+                <format attr='font-family' value="Constantia" />
+                <format attr='font-size' value='34' />
+                <format attr='color' value="#C0485A" />
+                <format attr='text-align' value='center' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+      <simple-id uuid="{B05E310B-BBAF-5B96-AAFD-7FC476B07A8F}" />
+    </worksheet>
+    <worksheet name="Revenue Share by Channel">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Channel</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[channel]" role="dimension" type="nominal" />
+            <column caption="Revenue share · Channel" datatype="real" default-format="p0.0%" name="[Calc_Part_Canal]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [channel] : SUM([revenue])})" />
+            </column>
+            <column datatype="real" name="[revenue]" role="measure" type="quantitative" />
+            <column-instance column="[channel]" derivation="None" name="[none:channel:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_Part_Canal]" derivation="User" name="[usr:Calc_Part_Canal:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:channel:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' min='0' range-type='fixedmin' field="[federated.choco_main].[usr:Calc_Part_Canal:qk]" type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#CFE6E1</color>
+                <color>#2F6E64</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <color column="[federated.choco_main].[usr:Calc_Part_Canal:qk]" />
+              <text column="[federated.choco_main].[usr:Calc_Part_Canal:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.choco_main].[none:channel:nk]</rows>
+        <cols>[federated.choco_main].[usr:Calc_Part_Canal:qk]</cols>
+      </table>
+      <simple-id uuid="{260B90E6-BCEA-5E80-8EDD-8D3FFD600AE9}" />
+    </worksheet>
+    <worksheet name="Revenue Share by Country">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Country</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[country_en]" role="dimension" type="nominal" />
+            <column caption="Revenue share · Country" datatype="real" default-format="p0.0%" name="[Calc_Part_Pays]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [country_en] : SUM([revenue])})" />
+            </column>
+            <column datatype="real" name="[revenue]" role="measure" type="quantitative" />
+            <column-instance column="[country_en]" derivation="None" name="[none:country_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_Part_Pays]" derivation="User" name="[usr:Calc_Part_Pays:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:country_en:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' min='0' range-type='fixedmin' field="[federated.choco_main].[usr:Calc_Part_Pays:qk]" type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#E9D3C2</color>
+                <color>#5A321C</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <color column="[federated.choco_main].[usr:Calc_Part_Pays:qk]" />
+              <text column="[federated.choco_main].[usr:Calc_Part_Pays:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.choco_main].[none:country_en:nk]</rows>
+        <cols>[federated.choco_main].[usr:Calc_Part_Pays:qk]</cols>
+      </table>
+      <simple-id uuid="{B32B97F7-C794-5B99-A9C9-C5FE6C291124}" />
+    </worksheet>
+    <worksheet name="Revenue Share by Category">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Category</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[category]" role="dimension" type="nominal" />
+            <column caption="Revenue share · Category" datatype="real" default-format="p0.0%" name="[Calc_Part_Cat]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [category] : SUM([revenue])})" />
+            </column>
+            <column datatype="real" name="[revenue]" role="measure" type="quantitative" />
+            <column-instance column="[category]" derivation="None" name="[none:category:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_Part_Cat]" derivation="User" name="[usr:Calc_Part_Cat:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:category:nk]" direction='DESC' using="[federated.choco_main].[sum:revenue:qk]" />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' min='0' range-type='fixedmin' field="[federated.choco_main].[usr:Calc_Part_Cat:qk]" type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#DDEBD3</color>
+                <color>#4F7A3D</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <color column="[federated.choco_main].[usr:Calc_Part_Cat:qk]" />
+              <text column="[federated.choco_main].[usr:Calc_Part_Cat:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.choco_main].[none:category:nk]</rows>
+        <cols>[federated.choco_main].[usr:Calc_Part_Cat:qk]</cols>
+      </table>
+      <simple-id uuid="{7E992DDE-6D6E-5BB4-A5A0-FFB8DDBCA96A}" />
+    </worksheet>
+    <worksheet name="Basket, Units and Margin by Channel">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Average Order Value, Units and Margin by Channel</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[channel]" role="dimension" type="nominal" />
+            <column caption="Average order value" datatype="real" default-format='n"$"#,##0.00' name="[Calc_AOV]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / SUM([transactions])" />
+            </column>
+            <column caption="Units per transaction" datatype="real" default-format="n#,##0.00" name="[Calc_UPT]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([units]) / SUM([transactions])" />
+            </column>
+            <column caption="Gross margin" datatype="real" default-format="p0.0%" name="[Calc_Marge]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([profit]) / SUM([revenue])" />
+            </column>
+            <column-instance column="[channel]" derivation="None" name="[none:channel:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_AOV]" derivation="User" name="[usr:Calc_AOV:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[Calc_UPT]" derivation="User" name="[usr:Calc_UPT:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[Calc_Marge]" derivation="User" name="[usr:Calc_Marge:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_AOV:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#7B4A2D" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane selection-relaxation-option='selection-relaxation-allow' id='1' x-axis-name="[federated.choco_main].[usr:Calc_AOV:qk]">
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_AOV:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#7B4A2D" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane selection-relaxation-option='selection-relaxation-allow' id='2' x-axis-name="[federated.choco_main].[usr:Calc_UPT:qk]">
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_UPT:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#D08C3F" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane selection-relaxation-option='selection-relaxation-allow' id='3' x-axis-name="[federated.choco_main].[usr:Calc_Marge:qk]">
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.choco_main].[usr:Calc_Marge:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value="#C0485A" />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.choco_main].[none:channel:nk]</rows>
+        <cols>([federated.choco_main].[usr:Calc_AOV:qk] + [federated.choco_main].[usr:Calc_UPT:qk] + [federated.choco_main].[usr:Calc_Marge:qk])</cols>
+      </table>
+      <simple-id uuid="{71839C11-428D-5F2A-8A88-676F9149B875}" />
+    </worksheet>
+    <worksheet name="Seasonality">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Seasonality Index by Month (100 = Average Month)</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[month_en]" role="dimension" type="nominal" />
+            <column caption="Seasonality index" datatype="real" default-format="n#,##0.0" name="[Calc_Index]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / (MIN({EXCLUDE [month_en] : SUM([revenue])}) / 12) * 100" />
+            </column>
+            <column caption="Gap to average (pts)" datatype="real" default-format="n+#,##0.0;-#,##0.0" name="[Calc_Ecart]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="[Calc_Index] - 100" />
+            </column>
+            <column datatype="integer" name="[month]" role="dimension" type="ordinal" />
+            <column-instance column="[month_en]" derivation="None" name="[none:month_en:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_Index]" derivation="User" name="[usr:Calc_Index:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[Calc_Ecart]" derivation="User" name="[usr:Calc_Ecart:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[month]" derivation="Min" name="[min:month:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:month_en:nk]" direction='ASC' using="[federated.choco_main].[min:month:qk]" />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0' field="[federated.choco_main].[usr:Calc_Ecart:qk]" type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#C0485A</color>
+                <color>#F1E4D6</color>
+                <color>#D08C3F</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <color column="[federated.choco_main].[usr:Calc_Ecart:qk]" />
+              <text column="[federated.choco_main].[usr:Calc_Index:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.choco_main].[usr:Calc_Ecart:qk]</rows>
+        <cols>[federated.choco_main].[none:month_en:nk]</cols>
+      </table>
+      <simple-id uuid="{84D4707D-81BF-5495-B24D-17DAD2CE6B17}" />
+    </worksheet>
+    <worksheet name="SKU Concentration">
+        <layout-options>
+          <title>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize="14">Revenue Share by Band of 40 SKUs (Ranked by Revenue)</run>
+            </formatted-text>
+          </title>
+        </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="Chocolate Sales" name="federated.choco_main" />
+          </datasources>
+          <datasource-dependencies datasource="federated.choco_main">
+            <column datatype="string" name="[sku_band]" role="dimension" type="nominal" />
+            <column caption="Revenue share · SKUs (rank)" datatype="real" default-format="p0.0%" name="[Calc_Part_Band]" role="measure" type="quantitative">
+              <calculation class='tableau' formula="SUM([revenue]) / MIN({EXCLUDE [sku_band] : SUM([revenue])})" />
+            </column>
+            <column datatype="integer" name="[sku_rank]" role="dimension" type="quantitative" />
+            <column-instance column="[sku_band]" derivation="None" name="[none:sku_band:nk]" pivot='key' type="nominal" />
+            <column-instance column="[Calc_Part_Band]" derivation="User" name="[usr:Calc_Part_Band:qk]" pivot='key' type="quantitative" />
+            <column-instance column="[sku_rank]" derivation="Min" name="[min:sku_rank:qk]" pivot='key' type="quantitative" />
+          </datasource-dependencies>
+          <sort class='computed' column="[federated.choco_main].[none:sku_band:nk]" direction='ASC' using="[federated.choco_main].[min:sku_rank:qk]" />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='color' value="#8A7462" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' value="#2B1A12" />
+            <format attr='font-family' value="Corbel" />
+            <format attr='font-size' value='11' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value="#FFFDF9" />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' min='0' range-type='fixedmin' field="[federated.choco_main].[usr:Calc_Part_Band:qk]" type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#F3C9CF</color>
+                <color>#9C2F42</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <color column="[federated.choco_main].[usr:Calc_Part_Band:qk]" />
+              <text column="[federated.choco_main].[usr:Calc_Part_Band:qk]" />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.choco_main].[usr:Calc_Part_Band:qk]</rows>
+        <cols>[federated.choco_main].[none:sku_band:nk]</cols>
+      </table>
+      <simple-id uuid="{AB8D5BC0-C394-5A88-BA0D-4D4024507699}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Commercial Diagnostic">
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value="#F6EFE6" />
+        </style-rule>
+      </style>
+      <size maxheight='1770' maxwidth='1200' minheight='1770' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='5650' id='3' w='97333' x='1333' y='452' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='24'>Chocolate FMCG — Commercial Diagnostic 2023 – 2024</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='8475' id='4' w='24333' x='1333' y='6441' name="KPI · Revenue" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='8475' id='5' w='24333' x='25667' y='6441' name="KPI · Transactions" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='8475' id='6' w='24333' x='50000' y='6441' name="KPI · Margin" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='8475' id='7' w='24333' x='74333' y='6441' name="KPI · AOV" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='2938' id='8' w='32444' x='1333' y='15254' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:channel:nk]" type-v2='filter' values='database'>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='2938' id='9' w='32444' x='33778' y='15254' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:country_en:nk]" type-v2='filter' values='database'>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='2938' id='10' w='32444' x='66222' y='15254' mode='checkdropdown' name="Revenue Share by Channel" param="[federated.choco_main].[none:category:nk]" type-v2='filter' values='database'>
+            <zone-style>
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+          <zone h='5085' id='11' w='97333' x='1333' y='18644' type-v2='text'>
+            <formatted-text>
+              <run bold='true' fontcolor="#D08C3F" fontname="Constantia" fontsize='22'>1</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Uncaptured Seasonality</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>No peak in February or December: the index stays between 93 and 102.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='4' />
+              <format attr='padding' value='10' />
+              <format attr='background-color' value="#FBEBD8" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='12' w='97333' x='1333' y='23955' name="Seasonality" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='5085' id='13' w='97333' x='1333' y='39209' type-v2='text'>
+            <formatted-text>
+              <run bold='true' fontcolor="#C0485A" fontname="Constantia" fontsize='22'>2</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   No Hero Product</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>160 of 200 SKUs to reach 80% of revenue, vs. about 20% under the Pareto rule.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='4' />
+              <format attr='padding' value='10' />
+              <format attr='background-color' value="#F8E1E4" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='14' w='48667' x='1333' y='44520' name="SKU Concentration" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='15' w='48667' x='50000' y='44520' name="Revenue Share by Category" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='5085' id='16' w='97333' x='1333' y='59774' type-v2='text'>
+            <formatted-text>
+              <run bold='true' fontcolor="#4F9A8E" fontname="Constantia" fontsize='22'>3</run>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='18'>   Undifferentiated Channels</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Same basket, units and margin across the 4 channels; Germany accounts for 12% of revenue.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='4' />
+              <format attr='padding' value='10' />
+              <format attr='background-color' value="#E1EFEC" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='17' w='48667' x='1333' y='65085' name="Revenue Share by Channel" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='18' w='48667' x='50000' y='65085' name="Basket, Units and Margin by Channel" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='19' w='48667' x='1333' y='80113' name="Revenue Share by Country" show-title='true'>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='8' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='14689' id='20' w='48667' x='50000' y='80113' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#2B1A12" fontname="Constantia" fontsize='14'>Data Quality Check</run>
+              <run>Æ&#10;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='11'>Identical indicators across all 4 channels, every margin at 40%, no peak at Christmas or Valentine's Day, six competing groups under one roof: most likely simulated data. The findings describe the dataset, and the recommendations remain hypotheses to test. Filters apply to every chart; SKU ranks are computed on the full dataset.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value="#E8DCCB" />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='margin' value='6' />
+              <format attr='padding' value='12' />
+              <format attr='background-color' value="#FFFDF9" />
+            </zone-style>
+          </zone>
+          <zone h='4407' id='21' w='97333' x='1333' y='95141' type-v2='text'>
+            <formatted-text>
+              <run fontcolor="#8A7462" fontname="Corbel" fontsize='9'>Data source: Kaggle “Chocolate Sales Dataset 2023 - 2024” (Nguyen, n.d.) · Personal project · Yu-Ting Tseng</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='margin' value='2' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value="#F6EFE6" />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <simple-id uuid="{9DE7E241-4193-5573-BEBE-844F0D080D8C}" />
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='dashboard' maximized='true' name="Commercial Diagnostic">
+      <viewpoints>
+        <viewpoint name="KPI · Revenue">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Transactions">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · Margin">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="KPI · AOV">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Revenue Share by Channel">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Basket, Units and Margin by Channel">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Seasonality">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="SKU Concentration">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Revenue Share by Country">
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name="Revenue Share by Category">
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid="{6E15D119-C51D-5080-9829-49687628BC9C}" />
+    </window>
+    <window class='worksheet' hidden='true' name="KPI · Revenue">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{46682FF2-C016-5F04-9863-DDB6B26E8851}" />
+    </window>
+    <window class='worksheet' hidden='true' name="KPI · Transactions">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{30973010-9C4E-53AC-A4F9-A64B6413E051}" />
+    </window>
+    <window class='worksheet' hidden='true' name="KPI · Margin">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{139ADAC6-2FDF-5ADC-A562-FCB074E396B4}" />
+    </window>
+    <window class='worksheet' hidden='true' name="KPI · AOV">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{E0A7F367-F560-57F1-A4D9-3E4D67146FD7}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Revenue Share by Channel">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{434C660B-2264-5272-9D8E-EF4C13489116}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Basket, Units and Margin by Channel">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{55F0380F-8903-5E4A-9555-07E1DB0CABEC}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Seasonality">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{7DE28E6E-2654-5221-8B9A-FC7FBA014ACE}" />
+    </window>
+    <window class='worksheet' hidden='true' name="SKU Concentration">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{0BB59587-55F0-5D48-86C3-31EDF836D309}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Revenue Share by Country">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{41EE1938-1915-5726-BA56-DDAFB9DDEC4F}" />
+    </window>
+    <window class='worksheet' hidden='true' name="Revenue Share by Category">
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{6585C80C-272F-516D-BABF-885E6914CC0E}" />
+    </window>
+  </windows>
+</workbook>

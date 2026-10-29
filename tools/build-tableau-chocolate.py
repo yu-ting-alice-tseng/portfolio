@@ -522,6 +522,32 @@ def mark_color(color):
             "              </style-rule>\n")
 
 
+LABELS = ("              <style-rule element='mark'>\n"
+          "                <format attr='mark-labels-show' value='true' />\n"
+          "              </style-rule>\n")
+
+# Shades within a chart (request of the user): colour driven by the chart's
+# own value, light to dark of one hue (custom-interpolated palette, defined in
+# the worksheet itself, unlike the ignored categorical palettes).
+GRADIENT = {
+    "mint": ("#CFE6E1", "#2F6E64"), "milk": ("#E9D3C2", "#5A321C"),
+    "pistachio": ("#DDEBD3", "#4F7A3D"), "berry": ("#F3C9CF", "#9C2F42"),
+}
+
+
+def gradient_style(field, colors, kind="ordered-sequential", center=None):
+    # Sequential shades start at 0 so they stay proportional to the values:
+    # five SKU bands at 19.6 - 20.4 % must look alike, not light vs dark.
+    c = f" center='{center}'" if center is not None else " min='0' range-type='fixedmin'"
+    return ("          <style-rule element='mark'>\n"
+            f"            <encoding attr='color'{c} field={a(field)} type='custom-interpolated'>\n"
+            f"              <color-palette custom='true' name='' type='{kind}'>\n"
+            + "".join(f"                <color>{col}</color>\n" for col in colors) +
+            "              </color-palette>\n"
+            "            </encoding>\n"
+            "          </style-rule>\n")
+
+
 def text_style(size):
     return ("              <style-rule element='mark'>\n"
             f"                <format attr='mark-color' value={a(ACCENT)} />\n"
@@ -589,7 +615,7 @@ def worksheets_xml(lang):
                                  title_font=FONT, title_size=12, title_color=MUTED))
 
     # Bar charts of revenue share, sorted descending.
-    def share_sheet(key, field, calc, color):
+    def share_sheet(key, field, calc, shades):
         f_inst = q(inst(field))
         c_inst = q(inst(calc, "User", "quantitative"))
         # Tableau 2026.3 still reads <sort class='computed'>; the 2026.1 schema
@@ -598,14 +624,15 @@ def worksheets_xml(lang):
                 f"using={a(q(inst('revenue', 'Sum', 'quantitative')))} />\n")
         deps = [dim(field), calc_dep(calc),
                 ("revenue", "real", "measure", "quantitative", "Sum", "quantitative", None)]
-        enc = f"              <text column={a(c_inst)} />\n"
+        enc = (f"              <color column={a(c_inst)} />\n"
+               f"              <text column={a(c_inst)} />\n")
         return worksheet_xml(lang, S[key], TT[key], M, deps, rows=f_inst, cols=c_inst,
-                             encodings=enc, sort=sort, pane_style=mark_color(color),
-                             table_style=base_table_style())
+                             encodings=enc, sort=sort, pane_style=LABELS,
+                             table_style=base_table_style() + gradient_style(c_inst, GRADIENT[shades]))
 
-    out.append(share_sheet("canal", "channel", "Calc_Part_Canal", MINT))
-    out.append(share_sheet("pays", country, "Calc_Part_Pays", MILK))
-    out.append(share_sheet("cat", "category", "Calc_Part_Cat", PISTACHIO))
+    out.append(share_sheet("canal", "channel", "Calc_Part_Canal", "mint"))
+    out.append(share_sheet("pays", country, "Calc_Part_Pays", "milk"))
+    out.append(share_sheet("cat", "category", "Calc_Part_Cat", "pistachio"))
 
     # Identical channels: AOV, UPT and margin side by side.
     ch = q(inst("channel"))
@@ -629,10 +656,12 @@ def worksheets_xml(lang):
             ("month", "integer", "dimension", "ordinal", "Min", "quantitative", None)]
     msort = (f"          <sort class='computed' column={a(mo)} direction='ASC' "
              f"using={a(q(inst('month', 'Min', 'quantitative')))} />\n")
-    enc = f"              <text column={a(idx)} />\n"
+    enc = (f"              <color column={a(gap)} />\n"
+           f"              <text column={a(idx)} />\n")
     out.append(worksheet_xml(lang, S["saison"], TT["saison"], M, deps, rows=gap, cols=mo,
-                             encodings=enc, sort=msort, pane_style=mark_color(CARAMEL),
-                             table_style=base_table_style()))
+                             encodings=enc, sort=msort, pane_style=LABELS,
+                             table_style=base_table_style()
+                             + gradient_style(gap, (BERRY, "#F1E4D6", CARAMEL), "ordered-diverging", 0)))
 
     # SKU concentration (vertical bars, so the five equal heights read at a
     # glance and the labels have room): revenue share of each band of 40 SKUs ranked by
@@ -645,8 +674,10 @@ def worksheets_xml(lang):
     bsort = (f"          <sort class='computed' column={a(band)} direction='ASC' "
              f"using={a(q(inst('sku_rank', 'Min', 'quantitative')))} />\n")
     out.append(worksheet_xml(lang, S["pareto"], TT["pareto"], M, deps, rows=pb, cols=band,
-                             encodings=f"              <text column={a(pb)} />\n", sort=bsort,
-                             pane_style=mark_color(BERRY), table_style=base_table_style()))
+                             encodings=(f"              <color column={a(pb)} />\n"
+                                        f"              <text column={a(pb)} />\n"), sort=bsort,
+                             pane_style=LABELS,
+                             table_style=base_table_style() + gradient_style(pb, GRADIENT["berry"])))
 
     out.append("  </worksheets>\n")
     return "".join(out)
