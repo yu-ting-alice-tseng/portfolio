@@ -112,7 +112,7 @@ TEXT = {
         "file": "Chocolat_FMCG_FR", "locale": "fr_FR",
         "country": "country_fr", "month": "month_fr",
         "dash": "Diagnostic Commercial",
-        "title": "Chocolat FMCG — Diagnostic Commercial 2023 – 2024",
+        "title": "Ventes de Chocolat — Diagnostic Commercial 2023 – 2024",
         "subtitle": "990 236 transactions · 4 canaux · 6 pays · 200 SKUs · 6 marques",
         "kpi": {
             "ca": "CA", "trans": "Transactions", "marge": "Marge brute",
@@ -167,7 +167,7 @@ TEXT = {
         "file": "Chocolate_FMCG_EN", "locale": "en_US",
         "country": "country_en", "month": "month_en",
         "dash": "Commercial Diagnostic",
-        "title": "Chocolate FMCG — Commercial Diagnostic 2023 – 2024",
+        "title": "Chocolate Sales — Commercial Diagnostic 2023 – 2024",
         "subtitle": "990,236 transactions · 4 channels · 6 countries · 200 SKUs · 6 brands",
         "kpi": {
             "ca": "Revenue", "trans": "Transactions", "marge": "Gross margin",
