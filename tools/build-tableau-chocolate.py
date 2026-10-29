@@ -154,12 +154,12 @@ TEXT = {
             "index": "Indice de saisonnalité", "gap": "Écart à la moyenne (pts)",
             "rank": "Rang du SKU", "cum": "Part cumulée du CA", "band": "SKUs (rang)",
         },
-        "note_title": "Contrôle Qualité des Données",
-        "note": ("Indicateurs identiques sur les 4 canaux, marges toutes à 40 %, aucun pic à Noël "
-                 "ni à la Saint-Valentin, six groupes concurrents dans une seule entreprise : "
-                 "données vraisemblablement simulées. Les constats décrivent le jeu de données, "
-                 "les recommandations restent des hypothèses à tester. Les filtres s'appliquent "
-                 "à tous les graphiques ; le rang des SKUs est calculé sur l'ensemble des données."),
+        "note_title": "À Propos des Données",
+        "note": ("Jeu de données synthétique, présenté comme tel sur Kaggle : ce ne sont pas les "
+                 "ventes d'une entreprise réelle. Les constats décrivent le jeu de données, les "
+                 "recommandations restent des hypothèses à tester sur des données réelles. Les "
+                 "filtres s'appliquent à tous les graphiques ; le rang des SKUs est calculé sur "
+                 "l'ensemble des données."),
         "source": ("Source des données : Kaggle « Chocolate Sales Dataset 2023 - 2024 » (Nguyen, s.d.) · "
                    "Projet personnel · Yu-Ting Tseng"),
     },
@@ -208,12 +208,11 @@ TEXT = {
             "index": "Seasonality index", "gap": "Gap to average (pts)",
             "rank": "SKU rank", "cum": "Cumulative revenue share", "band": "SKUs (rank)",
         },
-        "note_title": "Data Quality Check",
-        "note": ("Identical indicators across all 4 channels, every margin at 40%, no peak at "
-                 "Christmas or Valentine's Day, six competing groups under one roof: most likely "
-                 "simulated data. The findings describe the dataset, and the recommendations "
-                 "remain hypotheses to test. Filters apply to every chart; SKU ranks are computed "
-                 "on the full dataset."),
+        "note_title": "About the Data",
+        "note": ("Synthetic dataset, described as such on Kaggle: these are not the sales of a "
+                 "real company. The findings describe the dataset, and the recommendations "
+                 "remain hypotheses to test on real data. Filters apply to every chart; SKU "
+                 "ranks are computed on the full dataset."),
         "source": ("Data source: Kaggle \u201cChocolate Sales Dataset 2023 - 2024\u201d (Nguyen, n.d.) · "
                    "Personal project · Yu-Ting Tseng"),
     },
