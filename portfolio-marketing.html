@@ -1087,37 +1087,51 @@
     .ex .ex-sommaire a:hover .ex-sommaire-t { color: var(--mk-accent); text-decoration: underline; text-underline-offset: 3px; }
     .ex .ex-sommaire-n { flex: none; font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--mk-accent); min-width: 3.4rem; white-space: nowrap; }
     .ex .ex-sommaire-t {  font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; text-transform: none; letter-spacing: 0; font-weight: 500; }
-    /* Sommaire flottant : une fois le sommaire de la préface dépassé, il
-       reparaît à droite et suit la lecture (section en cours soulignée).
-       Déplié quand la marge droite le permet, sinon replié en onglet
-       « Sommaire » qui s'ouvre au clic. */
+    /* Sommaire flottant, à la manière de Notion : une fois le sommaire de
+       la préface dépassé, une colonne de petits traits (un par section,
+       celui de la section en cours plus long et à l'encre) se tient au bord
+       droit de l'écran. Au survol (ou au toucher), le sommaire complet
+       s'ouvre par-dessus, sur une carte de la page. */
     .ex-toc {
-      position: fixed; top: 150px; right: 1.6rem; z-index: 60; width: 220px; max-height: calc(100vh - 190px); overflow: auto;
-      padding: 0.9rem 1.1rem 1rem; background: var(--mk-card); border: 1px solid var(--mk-border);
-      opacity: 0; visibility: hidden; transform: translateX(10px);
-      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s; scrollbar-width: thin;
+      position: fixed; top: 50%; right: 1.4rem; z-index: 60; transform: translate(10px, -50%);
+      opacity: 0; visibility: hidden; transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
     }
-    .ex-toc.is-on { opacity: 1; visibility: visible; transform: none; transition: opacity 0.25s ease, transform 0.25s ease; }
-    .ex-toc-btn {
-      display: flex; align-items: center; gap: 0.6rem; width: 100%; margin: 0; padding: 0; border: 0; background: none; cursor: default;
-      font: inherit; font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--mk-accent); text-align: left;
+    .ex-toc.is-on { opacity: 1; visibility: visible; transform: translate(0, -50%); transition: opacity 0.25s ease, transform 0.25s ease; }
+    .ex-toc-traits {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 9px; margin: 0; padding: 10px 2px 10px 14px;
+      border: 0; background: none; cursor: pointer;
     }
-    .ex-toc-ico { display: none; flex: none; width: 14px; height: 10px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; position: relative; }
-    .ex-toc-ico::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid currentColor; }
-    .ex-toc ol { list-style: none; margin: 0.8rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+    .ex-toc-traits i { display: block; width: 14px; height: 1.5px; border-radius: 1px; background: var(--mk-border); transition: width 0.2s ease, background-color 0.2s ease; }
+    .ex-toc-traits i.is-active { width: 22px; background: var(--mk-text); }
+    .ex-toc-panneau {
+      position: absolute; top: 50%; right: -0.4rem; width: 260px; max-height: min(70vh, 560px); overflow: auto;
+      padding: 1rem 0.6rem 1rem 0.6rem; background: var(--mk-card); border: 1px solid var(--mk-border); border-radius: 10px;
+      box-shadow: 0 14px 36px rgba(20, 24, 22, 0.10);
+      opacity: 0; visibility: hidden; transform: translate(6px, -50%);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s; scrollbar-width: thin;
+    }
+    .ex-toc:has(:focus-visible) .ex-toc-panneau, .ex-toc.is-deplie .ex-toc-panneau {
+      opacity: 1; visibility: visible; transform: translate(0, -50%); transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    /* Au toucher, pas de survol : le panneau s'ouvre au tap sur les traits. */
+    @media (hover: hover) { .ex-toc:hover .ex-toc-panneau {
+      opacity: 1; visibility: visible; transform: translate(0, -50%); transition: opacity 0.2s ease, transform 0.2s ease;
+    } }
+    .ex-toc-lbl { margin: 0 0 0.5rem; padding: 0 0.6rem; font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--mk-accent); }
+    .ex-toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.1rem; }
     .ex-toc li { margin: 0; }
     .ex-toc a {
-      display: block; padding-left: 0.7rem; border-left: 1px solid var(--mk-border); color: var(--mk-muted); text-decoration: none;
-      font-family: 'Cormorant Garamond', serif; font-size: 0.98rem; line-height: 1.3; font-weight: 500; transition: color 0.2s, border-color 0.2s;
+      display: block; padding: 0.3rem 0.6rem; border-radius: 6px; color: var(--mk-muted); text-decoration: none;
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem; line-height: 1.3; font-weight: 500; transition: color 0.2s, background-color 0.2s;
     }
-    .ex-toc a:hover { color: var(--mk-accent); }
-    .ex-toc a.is-active { color: var(--mk-text); border-left-color: var(--mk-accent); }
-    .ex-toc--plie { width: auto; max-width: min(260px, calc(100vw - 2.5rem)); padding: 0.6rem 0.9rem; }
-    .ex-toc--plie .ex-toc-btn { cursor: pointer; }
-    .ex-toc--plie .ex-toc-ico { display: block; }
-    .ex-toc--plie:not(.is-deplie) ol { display: none; }
+    .ex-toc a:hover { color: var(--mk-text); background: rgba(var(--mk-accent-rgb), 0.07); }
+    .ex-toc a.is-active { color: var(--mk-accent); }
     html.lb-ouvert .ex-toc { display: none; }
-    @media (max-width: 1100px) { .ex-toc { top: 170px; right: 1rem; max-height: calc(100vh - 210px); } }
+    @media (max-width: 640px) {
+      .ex-toc { right: 0.4rem; }
+      .ex-toc-traits { padding: 8px 6px 8px 10px; background: var(--mk-card); border: 1px solid var(--mk-border); border-radius: 6px; }
+      .ex-toc-panneau { width: min(260px, calc(100vw - 2rem)); }
+    }
     .ex .ex-cartel .ex-salle-n { font-size: 0.72rem !important; letter-spacing: 0.2em; font-family: 'Outfit', sans-serif !important; margin: 0 0 0.5rem !important; }
     .ex .ex-salle.ex-salle--avant { padding-bottom: 1.2rem; }
     .ex .ex-salle.ex-salle--suite { border-top: 0; padding-top: 1.2rem; }
@@ -2652,25 +2666,42 @@
       nav.innerHTML = '<p class="ex-sommaire-lbl">' + lbl + '</p>' + ol + '</ol>';
       pref.appendChild(nav);
       var toc = document.createElement('nav'); toc.className = 'ex-toc'; toc.setAttribute('aria-label', 'Sommaire');
-      toc.innerHTML = '<button type="button" class="ex-toc-btn" aria-expanded="false"><span class="ex-toc-ico" aria-hidden="true"></span>' + lbl + '</button>' + ol + '</ol>';
+      toc.innerHTML = '<button type="button" class="ex-toc-traits" aria-expanded="false" aria-label="Sommaire">' + items.map(function () { return '<i></i>'; }).join('') + '</button>'
+        + '<div class="ex-toc-panneau"><p class="ex-toc-lbl">' + lbl + '</p>' + ol + '</ol></div>';
       document.body.appendChild(toc);
       function go(e) {
         var a = e.target.closest('a[data-i]'); if (!a) return;
         e.preventDefault();
-        toc.classList.remove('is-deplie'); toc.querySelector('.ex-toc-btn').setAttribute('aria-expanded', 'false');
-        var y = items[+a.dataset.i].sec.getBoundingClientRect().top + window.scrollY - 130;
+        fermer(toc); if (toc.contains(a)) a.blur();
+        var y = items[+a.dataset.i].sec.getBoundingClientRect().top + window.scrollY - haut();
         window.scrollTo({ top: y, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
       }
       nav.addEventListener('click', go);
       toc.addEventListener('click', function (e) {
-        var b = e.target.closest('.ex-toc-btn');
-        if (b) { if (!toc.classList.contains('ex-toc--plie')) return; b.setAttribute('aria-expanded', String(toc.classList.toggle('is-deplie'))); return; }
+        var b = e.target.closest('.ex-toc-traits');
+        if (b) { b.setAttribute('aria-expanded', String(toc.classList.toggle('is-deplie'))); return; }
         go(e);
       });
-      tocs.push({ art: art, nav: nav, toc: toc, items: items, links: toc.querySelectorAll('a[data-i]') });
+      tocs.push({ art: art, nav: nav, toc: toc, items: items, links: toc.querySelectorAll('a[data-i]'), traits: toc.querySelectorAll('.ex-toc-traits i') });
+    });
+    /* Hauteur des bandeaux collés en haut (fil d'Ariane, et frise de
+       vignettes quand elle devient un bandeau horizontal). */
+    function haut() {
+      var h = 110;
+      document.querySelectorAll('.pf-crumb, .pf-rail').forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.width > 300 && r.top < 200 && r.bottom > 0) h = Math.max(h, r.bottom);
+      });
+      return h + 24;
+    }
+    function fermer(toc) {
+      toc.classList.remove('is-deplie'); toc.querySelector('.ex-toc-traits').setAttribute('aria-expanded', 'false');
+    }
+    document.addEventListener('click', function (e) {
+      tocs.forEach(function (t) { if (!t.toc.contains(e.target)) fermer(t.toc); });
     });
     function suivre() {
-      var vh = window.innerHeight;
+      var vh = window.innerHeight, seuil = haut() + 40;
       tocs.forEach(function (t) {
         var shown = t.art.getClientRects().length > 0, on = false;
         if (shown) {
@@ -2679,13 +2710,11 @@
           on = t.nav.getBoundingClientRect().bottom < 120 && endTop > vh * 0.55;
         }
         t.toc.classList.toggle('is-on', on);
-        if (!on) { t.toc.classList.remove('is-deplie'); return; }
-        var expo = t.art.querySelector('.ex-expo') || t.art;
-        var marge = window.innerWidth - expo.getBoundingClientRect().right;
-        t.toc.classList.toggle('ex-toc--plie', marge < 270);
+        if (!on) { fermer(t.toc); return; }
         var act = 0;
-        t.items.forEach(function (it, i) { if (it.sec.getBoundingClientRect().top <= 170) act = i; });
+        t.items.forEach(function (it, i) { if (it.sec.getBoundingClientRect().top <= seuil) act = i; });
         t.links.forEach(function (a, i) { a.classList.toggle('is-active', i === act); });
+        t.traits.forEach(function (el, i) { el.classList.toggle('is-active', i === act); });
       });
     }
     var raf = 0;
@@ -2693,7 +2722,7 @@
     window.addEventListener('scroll', planifier, { passive: true });
     window.addEventListener('resize', planifier);
     window.addEventListener('hashchange', function () { setTimeout(suivre, 60); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') tocs.forEach(function (t) { t.toc.classList.remove('is-deplie'); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') tocs.forEach(function (t) { fermer(t.toc); if (t.toc.contains(document.activeElement)) document.activeElement.blur(); }); });
     suivre();
     var cur = (function () { try { return localStorage.getItem('pf-lang') || 'fr'; } catch (e) { return 'fr'; } })();
     if (!document.querySelector('.lang-btn[data-lang="' + cur + '"]')) cur = 'fr';
