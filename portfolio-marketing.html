@@ -1219,6 +1219,23 @@
     }
       /* Diapositives du rapport hebdomadaire : une à la fois, pour qu'elles restent lisibles */
     #weeklyFR .ig-item, #weeklyEN .ig-item { flex: 0 0 100% !important; }
+      /* Montage allégé (demande de l'utilisatrice : le rouleau volait la vedette
+       aux œuvres) : plus de baguettes, de rouleau, de soie ni de bande ; l'œuvre
+       occupe toute sa colonne, avec un filet discret et une ombre douce. Deux
+       fins traits d'encre, au-dessus et au-dessous, rappellent seuls le
+       rouleau. Version précédente (rouleau 手卷) : commit 3700fce. */
+    .ex .ex-hand { margin: 0 !important; }
+    .ex .ex-roll { display: none !important; }
+    .ex .ex-scroll { background: none !important; border: 0 !important; box-shadow: none !important; padding: 16px 0 14px !important; clip-path: none !important; }
+    .ex .ex-hand .ex-scroll::before, .ex .ex-scroll::after, .ex .ex-affiche .ex-scroll::before {
+      content: "" !important; display: block !important; position: absolute !important; left: -12px !important; right: -12px !important;
+      width: auto !important; height: 2px !important; border-radius: 1px !important; background: rgba(26,24,21,0.55) !important; box-shadow: none !important;
+    }
+    .ex .ex-hand .ex-scroll::before, .ex .ex-affiche .ex-scroll::before { top: 0 !important; bottom: auto !important; }
+    .ex .ex-scroll::after { bottom: 0 !important; top: auto !important; }
+    .ex .ex-scroll .pf-img-wrap, .ex .ex-scroll .pf-cover-wrap { padding: 0 !important; background: none !important; border: 0 !important; }
+    .ex .ex-scroll .pf-img-wrap img, .ex .ex-scroll .pf-cover-wrap img { outline: 1px solid rgba(26,24,21,0.15) !important; box-shadow: 0 12px 26px -16px rgba(26,24,21,0.45); }
+    .ex .ex-scroll .pf-img-caption { padding-top: 0.6rem !important; }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -2598,32 +2615,6 @@
   <script src="ink-cursor.js"></script>
   <script src="guzheng.js"></script>
   <script src="lightbox.js"></script>
-<script>
-  /* Exposition : chaque rouleau se déroule la première fois que sa salle
-     entre à l'écran, puis reste ouvert. Il ne se réenroule qu'au
-     rechargement de la page ou quand on quitte le projet. */
-  (function () {
-    var rolls = document.querySelectorAll('.ex .ex-hand');
-    if (!rolls.length || !('IntersectionObserver' in window)) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.documentElement.classList.add('ex-anim');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.intersectionRatio >= 0.35) { e.target.classList.add('is-open'); io.unobserve(e.target); }
-      });
-    }, { threshold: [0, 0.35] });
-    rolls.forEach(function (r) { io.observe(r); });
-    /* Projet quitté : ses rouleaux se referment, prêts pour la prochaine visite. */
-    var mo = new MutationObserver(function (list) {
-      list.forEach(function (m) {
-        var art = m.target;
-        if (art.classList.contains('is-current')) return;
-        art.querySelectorAll('.ex-hand.is-open').forEach(function (r) { r.classList.remove('is-open'); io.observe(r); });
-      });
-    });
-    document.querySelectorAll('.pf-case.ex').forEach(function (a) { mo.observe(a, { attributes: true, attributeFilter: ['class'] }); });
-  })();
-</script>
 <script>
   /* Exposition : sommaire de chaque projet, construit à partir des titres
      des murs, des salles et de l'épilogue. Un clic fait défiler jusqu'à la
