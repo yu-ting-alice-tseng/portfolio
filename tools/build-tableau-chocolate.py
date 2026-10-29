@@ -127,6 +127,7 @@ TEXT = {
             "pareto": "Concentration des SKUs",
             "pays": "Part du CA par Pays",
             "cat": "Part du CA par Catégorie",
+            "mix": "Canaux par Pays",
         },
         "titles": {
             "canal": "Part du CA par Canal",
@@ -135,6 +136,7 @@ TEXT = {
             "pareto": "Part du CA par Tranche de 40 SKUs (Classés par CA)",
             "pays": "Part du CA par Pays",
             "cat": "Part du CA par Catégorie",
+            "mix": "Part de Chaque Canal dans le CA du Pays",
         },
         # The three findings of the study (portfolio-data.html, #chocolat-fmcg).
         "sections": [
@@ -154,12 +156,6 @@ TEXT = {
             "index": "Indice de saisonnalité", "gap": "Écart à la moyenne (pts)",
             "rank": "Rang du SKU", "cum": "Part cumulée du CA", "band": "SKUs (rang)",
         },
-        "note_title": "À Propos des Données",
-        "note": ("Jeu de données synthétique, présenté comme tel sur Kaggle : ce ne sont pas les "
-                 "ventes d'une entreprise réelle. Les constats décrivent le jeu de données, les "
-                 "recommandations restent des hypothèses à tester sur des données réelles. Les "
-                 "filtres s'appliquent à tous les graphiques ; le rang des SKUs est calculé sur "
-                 "l'ensemble des données."),
         "source": ("Source des données : Kaggle « Chocolate Sales Dataset 2023 - 2024 » (Nguyen, s.d.) · "
                    "Projet personnel · Yu-Ting Tseng"),
     },
@@ -182,6 +178,7 @@ TEXT = {
             "pareto": "SKU Concentration",
             "pays": "Revenue Share by Country",
             "cat": "Revenue Share by Category",
+            "mix": "Channels by Country",
         },
         "titles": {
             "canal": "Revenue Share by Channel",
@@ -190,6 +187,7 @@ TEXT = {
             "pareto": "Revenue Share by Band of 40 SKUs (Ranked by Revenue)",
             "pays": "Revenue Share by Country",
             "cat": "Revenue Share by Category",
+            "mix": "Share of Each Channel in the Country's Revenue",
         },
         "sections": [
             ("1", "Uncaptured Seasonality",
@@ -208,11 +206,6 @@ TEXT = {
             "index": "Seasonality index", "gap": "Gap to average (pts)",
             "rank": "SKU rank", "cum": "Cumulative revenue share", "band": "SKUs (rank)",
         },
-        "note_title": "About the Data",
-        "note": ("Synthetic dataset, described as such on Kaggle: these are not the sales of a "
-                 "real company. The findings describe the dataset, and the recommendations "
-                 "remain hypotheses to test on real data. Filters apply to every chart; SKU "
-                 "ranks are computed on the full dataset."),
         "source": ("Data source: Kaggle \u201cChocolate Sales Dataset 2023 - 2024\u201d (Nguyen, n.d.) · "
                    "Personal project · Yu-Ting Tseng"),
     },
@@ -633,6 +626,20 @@ def worksheets_xml(lang):
     out.append(share_sheet("pays", country, "Calc_Part_Pays", "milk"))
     out.append(share_sheet("cat", "category", "Calc_Part_Cat", "pistachio"))
 
+    # Channel mix inside each country (heatmap): the 4 channels share the same
+    # basket and margin, but not the same weight from one country to another.
+    # Calc_Part_Canal excludes the channel only, so it reads as a share of the
+    # country's revenue here.
+    c_inst = q(inst("Calc_Part_Canal", "User", "quantitative"))
+    deps = [dim(country), dim("channel"), calc_dep("Calc_Part_Canal"),
+            ("revenue", "real", "measure", "quantitative", "Sum", "quantitative", None)]
+    enc = (f"              <color column={a(c_inst)} />\n"
+           f"              <text column={a(c_inst)} />\n")
+    out.append(worksheet_xml(lang, S["mix"], TT["mix"], M, deps, rows=q(inst(country)),
+                             cols=q(inst("channel")), mark="Square", encodings=enc,
+                             pane_style=LABELS,
+                             table_style=base_table_style() + gradient_style(c_inst, GRADIENT["mint"])))
+
     # Identical channels: AOV, UPT and margin side by side.
     ch = q(inst("channel"))
     aov, upt, mg = (q(inst(c, "User", "quantitative")) for c in ("Calc_AOV", "Calc_UPT", "Calc_Marge"))
@@ -808,9 +815,7 @@ def dashboard_xml(lang):
     sheet(G + half, y, half, 260, S["ident"])
     y += 266
     sheet(G, y, half, 260, S["pays"])
-    text(G + half, y, half, 260,
-         run(T["note_title"], 14, INK, font=TITLE_FONT) + br + br + run(T["note"], 11, MUTED),
-         bg=CARD, border=True, margin=6, padding=12)
+    sheet(G + half, y, half, 260, S["mix"])
     y += 266
     text(G, y, inner, H - y - 8, run(T["source"], 9, MUTED))
 
