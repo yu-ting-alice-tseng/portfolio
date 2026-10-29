@@ -1169,6 +1169,8 @@
       .ex .ex-scroll { padding: 18px 14px 20px; }
       .ex .ex-salle { padding: 3rem 0; }
     }
+      /* Diapositives du rapport hebdomadaire : une à la fois, pour qu'elles restent lisibles */
+    #weeklyFR .ig-item, #weeklyEN .ig-item { flex: 0 0 100% !important; }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -2268,8 +2270,8 @@
     }
 
     initCarousel('yoloCarousel',  'yoloDots',    3);  // AIESEC: 3 per view
-    initCarousel('weeklyFR',      'weeklyDotsFR', 2);  // Weekly report FR: 2 per view
-    initCarousel('weeklyEN',      'weeklyDotsEN', 2);  // Weekly report EN: 2 per view
+    initCarousel('weeklyFR',      'weeklyDotsFR', 1);  // Weekly report FR: 1 per view
+    initCarousel('weeklyEN',      'weeklyDotsEN', 1);  // Weekly report EN: 1 per view
   </script>
 
   <!-- ── Éditorial interactif ────────────────────────── -->

@@ -843,6 +843,8 @@
       .ex .ex-scroll { padding: 18px 14px 20px; }
       .ex .ex-salle { padding: 3rem 0; }
     }
+      /* Diapositives du rapport hebdomadaire : une à la fois, pour qu'elles restent lisibles */
+    #weeklyFR .ig-item, #weeklyEN .ig-item { flex: 0 0 100% !important; }
   </style>
 </head>
 <body class="page-portfolio-data">
@@ -2052,8 +2054,8 @@
       carousel.addEventListener('mousemove', e => { if (Math.abs(e.clientX - startX) > 5) moved = true; });
       carousel.querySelectorAll('a').forEach(a => a.addEventListener('click', e => { if (moved) e.preventDefault(); }));
     }
-    initCarousel('weeklyFR', 'weeklyDotsFR', 2);
-    initCarousel('weeklyEN', 'weeklyDotsEN', 2);
+    initCarousel('weeklyFR', 'weeklyDotsFR', 1);
+    initCarousel('weeklyEN', 'weeklyDotsEN', 1);
   </script>
   <script src="ink-cursor.js"></script>
   <script src="guzheng.js"></script>
