@@ -910,6 +910,9 @@
     .ex .ex-scroll .pf-img-wrap, .ex .ex-scroll .pf-cover-wrap { padding: 0 !important; background: none !important; border: 0 !important; }
     .ex .ex-scroll .pf-img-wrap img, .ex .ex-scroll .pf-cover-wrap img { outline: 1px solid rgba(22,33,31,0.15) !important; box-shadow: 0 12px 26px -16px rgba(22,33,31,0.45); }
     .ex .ex-scroll .pf-img-caption { padding-top: 0.6rem !important; }
+      /* Salle pleine largeur (diapositives) : l'œuvre entière tient dans l'écran,
+       sous l'en-tête et le fil d'Ariane (diapositive 16:9, ~260 px réservés). */
+    .ex .ex-salle--seule .ex-hand { width: min(100%, calc((100vh - 260px) * 16 / 9)); margin-left: auto !important; margin-right: auto !important; }
   </style>
 </head>
 <body class="page-portfolio-data">
