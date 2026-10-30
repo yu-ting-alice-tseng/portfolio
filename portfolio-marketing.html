@@ -1239,6 +1239,30 @@
       /* Salle pleine largeur (diapositives) : l'œuvre entière tient dans l'écran,
        sous l'en-tête et le fil d'Ariane (diapositive 16:9, ~260 px réservés). */
     .ex .ex-salle--seule .ex-hand { width: min(100%, calc((100vh - 260px) * 16 / 9)); margin-left: auto !important; margin-right: auto !important; }
+      /* Montage en feuille d'album 冊頁 (demande de l'utilisatrice, remplace le
+       montage allégé) : chaque œuvre est une page d'album posée sur deux autres,
+       soie tissée, ombre de reliure à gauche, passe-partout autour de l'œuvre.
+       Aucune animation. */
+    .ex .ex-hand { margin: 6px 14px 14px 0 !important; }
+    .ex .ex-scroll {
+      background-color: var(--mk-card) !important;
+      background-image: repeating-linear-gradient(45deg, rgba(26,24,21,0.022) 0 1px, transparent 1px 5px),
+                        repeating-linear-gradient(-45deg, rgba(26,24,21,0.018) 0 1px, transparent 1px 5px) !important;
+      border: 1px solid var(--mk-border) !important;
+      padding: 28px 30px 30px 40px !important;
+      box-shadow: 6px 6px 0 -1px var(--mk-card), 6px 6px 0 0 var(--mk-border), 12px 12px 0 -1px var(--mk-card), 12px 12px 0 0 var(--mk-border),
+                  0 24px 40px -22px rgba(26,24,21,0.4) !important;
+    }
+    .ex .ex-hand .ex-scroll::before, .ex .ex-affiche .ex-scroll::before {
+      top: 0 !important; bottom: 0 !important; left: 0 !important; right: auto !important; width: 22px !important; height: auto !important;
+      border-radius: 0 !important; background: linear-gradient(90deg, rgba(26,24,21,0.14), rgba(26,24,21,0.03) 60%, transparent) !important;
+    }
+    .ex .ex-scroll::after { display: none !important; }
+    .ex .ex-scroll .pf-img-wrap, .ex .ex-scroll .pf-cover-wrap { padding: 7px !important; background: var(--mk-bg) !important; border: 1px solid var(--mk-border) !important; }
+    .ex .ex-scroll .pf-img-wrap img, .ex .ex-scroll .pf-cover-wrap img { outline: 1px solid rgba(26,24,21,0.16) !important; box-shadow: none !important; }
+    @media (max-width: 960px) {
+      .ex .ex-scroll { padding: 18px 14px 20px 26px !important; }
+    }
   </style>
 </head>
 <body class="page-portfolio-marketing">
