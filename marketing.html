@@ -129,7 +129,11 @@
       -->
 
       <!-- ── Hero ──────────────────────────────────── -->
-      <section class="hero" id="about">
+      <section class="hero rv-hero" id="about">
+        <div class="container rv-bandeau" aria-hidden="true">
+          <span data-i18n="marketingHero.cardRole">Marketing 360</span>
+          <span data-i18n="hero.locationValue">Paris, France</span>
+        </div>
         <div class="container hero-grid">
           <div class="hero-text">
             <p class="hero-kicker" data-i18n="marketingHero.kicker">
@@ -142,6 +146,21 @@
             <p class="hero-summary" data-i18n="marketingHero.summary">
               Étudiante en Master en Gestion (Programme Grande École) à emlyon, je relie l'analyse et la création : je lis les données d'audience pour orienter les contenus, je conçois des visuels et des campagnes adaptés à chaque canal et je mesure chaque action pour l'ajuster.
             </p>
+            <div class="hero-actions">
+              <a href="portfolio-marketing.html" class="btn btn-primary" data-i18n="marketingHero.ctaPrimary">
+                Voir mes créations
+              </a>
+              <a href="assets/cv/CV_Yu-Ting_Tseng_Marketing_FR.pdf" class="rv-lien" download data-i18n="cv.download" data-i18n-href="cv.marketing">Télécharger le CV (PDF)</a>
+              <a href="#contact" class="rv-lien" data-i18n="marketingHero.ctaSecondary">Me contacter</a>
+            </div>
+          </div>
+          <aside class="hero-card rv-feuille" aria-label="Informations principales">
+            <img class="avatar" src="assets/profile.webp" alt="Portrait de Yu-Ting Tseng"
+              width="240" height="280" loading="eager" decoding="async" />
+            <div class="rv-cartel">
+              <h2 data-i18n="hero.cardName">Yu‑Ting Tseng</h2>
+              <p class="hero-role" data-i18n="marketingHero.cardRole">Marketing 360</p>
+            </div>
             <div class="hero-meta">
               <div>
                 <span class="meta-label" data-i18n="hero.locationLabel">Basée à</span>
@@ -152,19 +171,6 @@
                 <span class="meta-value" data-i18n="hero.availabilityValue">janvier 2027 (stage de césure de 6 mois)</span>
               </div>
             </div>
-            <div class="hero-actions">
-              <a href="portfolio-marketing.html" class="btn btn-primary" data-i18n="marketingHero.ctaPrimary">
-                Voir mes créations
-              </a>
-              <a href="#contact" class="btn btn-ghost" data-i18n="marketingHero.ctaSecondary">Me contacter</a>
-              <a href="assets/cv/CV_Yu-Ting_Tseng_Marketing_FR.pdf" class="btn btn-ghost" download data-i18n="cv.download" data-i18n-href="cv.marketing">Télécharger le CV (PDF)</a>
-            </div>
-          </div>
-          <aside class="hero-card" aria-label="Informations principales">
-            <img class="avatar" src="assets/profile.webp" alt="Portrait de Yu-Ting Tseng"
-              width="240" height="280" loading="eager" decoding="async" />
-            <h2 data-i18n="hero.cardName">Yu‑Ting Tseng</h2>
-            <p class="hero-role" data-i18n="marketingHero.cardRole">Marketing 360</p>
             <ul class="hero-list">
               <li>
                 <span class="label" data-i18n="hero.cardEmailLabel">Email</span>
@@ -179,6 +185,59 @@
               </li>
             </ul>
           </aside>
+        </div>
+
+        <!-- Bandeau de résultats : un chiffre par expérience, chacun mène à sa source -->
+        <div class="container">
+          <ul class="rv-registre" data-reveal>
+            <li><a href="#exp-engoo">
+              <span class="rv-val stat-value" data-i18n="nums.views">+93,3 %</span>
+              <span class="rv-lbl" data-i18n="marketingHero.reg1Lbl">de vues sur REDnote</span>
+              <span class="rv-src" data-i18n="marketingHero.reg1Src">Engoo · Assistante Marketing</span>
+            </a></li>
+            <li><a href="#exp-leboncoin">
+              <span class="rv-val stat-value">20+</span>
+              <span class="rv-lbl" data-i18n="marketingHero.reg2Lbl">campagnes display simultanées</span>
+              <span class="rv-src" data-i18n="marketingHero.reg2Src">leboncoin · Traffic Manager</span>
+            </a></li>
+            <li><a href="#exp-kpn">
+              <span class="rv-val stat-value" data-i18n="nums.ctr">+9,5 %</span>
+              <span class="rv-lbl" data-i18n="marketingHero.reg3Lbl">de CTR sur Meta et Google</span>
+              <span class="rv-src" data-i18n="marketingHero.reg3Src">KPN · Tests A/B</span>
+            </a></li>
+            <li><a href="#extra-aiesec">
+              <span class="rv-val stat-value" data-i18n="nums.aiesecGoal">+53,7 %</span>
+              <span class="rv-lbl" data-i18n="marketingHero.reg4Lbl">au-delà de l'objectif budgétaire</span>
+              <span class="rv-src" data-i18n="marketingHero.reg4Src">AIESEC · Camp YOLO</span>
+            </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── Mur de créations : trois œuvres accrochées, chacune mène au portfolio ── -->
+      <section class="rv-mur" aria-labelledby="rv-mur-titre">
+        <div class="container">
+          <div class="rv-mur-tete">
+            <h2 id="rv-mur-titre" data-i18n="marketingHero.wallTitle">Quelques Créations</h2>
+            <a href="portfolio-marketing.html" data-i18n="marketingHero.wallAll">Tout le portfolio →</a>
+          </div>
+          <ul class="rv-mur-grille">
+            <li><a href="portfolio-marketing.html#aiesec-yolo">
+              <span class="rv-cadre"><img src="assets/yolo-camp-main-visual-en.webp" alt="AIESEC YOLO International Camp – Main Campaign Poster" loading="lazy" decoding="async"></span>
+              <span class="rv-mur-cat" data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique · Design</span>
+              <span class="rv-mur-nom" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span>
+            </a></li>
+            <li><a href="portfolio-marketing.html#guzheng-facebook">
+              <span class="rv-cadre"><img src="assets/guzheng-club-recruitment-poster.webp" alt="NCCU Guzheng Club – Recruitment Poster" loading="lazy" decoding="async"></span>
+              <span class="rv-mur-cat" data-i18n="portfolio.mkt.board.p6Cat">Community Management · Design</span>
+              <span class="rv-mur-nom" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span>
+            </a></li>
+            <li><a href="portfolio-marketing.html">
+              <span class="rv-cadre"><img src="assets/penwards-design-award.webp" alt="Penwards 2024 – Poster" loading="lazy" decoding="async"></span>
+              <span class="rv-mur-cat" data-i18n="marketingHero.wallPenCat">Affiche · Projet personnel</span>
+              <span class="rv-mur-nom" data-i18n="marketingHero.wallPenName">Affiche - Thème Penwards 2024</span>
+            </a></li>
+          </ul>
         </div>
       </section>
 
@@ -772,7 +831,7 @@
           </header>
           <div class="timeline">
 
-            <article class="timeline-item" data-reveal="slide-left">
+            <article class="timeline-item" id="extra-aiesec" data-reveal="slide-left">
               <div class="timeline-meta">
                 <span class="timeline-period" data-i18n="volunteer.aiesec.period">09/2024 – 06/2025</span>
                 <span class="timeline-location">Taipei · Taïwan</span>

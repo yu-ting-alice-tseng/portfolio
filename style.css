@@ -5722,3 +5722,458 @@ html[data-theme="dark"] .page-data .timeline-item:first-child::before { border-c
 .page-data .brand-mark--guzheng .logo-chevalet { fill: none; stroke: var(--surface); stroke-width: 0.7; }
 .page-data .brand-mark--guzheng .logo-chevalet.is-cle { stroke: var(--accent); stroke-width: 1.1; }
 .page-data .brand:hover .brand-mark--guzheng { transform: translateY(-1px); filter: none; }
+
+/* ════════════════════════════════════════════════════
+   § 47 Marketing : direction « revue »
+   ────────────────────────────────────────────────────
+   Demande de l'utilisatrice (direction A, choisie parmi
+   trois maquettes) : la page CV se lit comme une revue
+   d'art. Bandeau de tête, grand titre, lettrine, portrait
+   en feuille d'album, registre de quatre résultats, mur de
+   trois créations, expériences en chapitres numérotés.
+   Couleurs : variables de la page seulement (§ 41).
+   ════════════════════════════════════════════════════ */
+
+/* — Bandeau de tête, comme l'en-tête d'une revue — */
+.page-marketing .rv-bandeau {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 3.5rem;
+}
+html body.page-marketing .hero.rv-hero { padding: 1.6rem 0 1rem; overflow: visible; }
+html body.page-marketing .rv-hero .hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+/* — Grand titre : la seconde ligne en retrait, à l'italique vermillon,
+     soulignée d'un coup de pinceau — */
+html body.page-marketing .rv-hero h1 {
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin: 0.4rem 0 0;
+}
+.page-marketing .rv-hero h1 > span { display: block; }
+.page-marketing .rv-hero h1 > span { text-wrap: balance; }
+html body.page-marketing .rv-hero h1 .accent {
+  display: inline-block;
+  margin-left: clamp(1.5rem, 6vw, 5.5rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  position: relative;
+  padding-bottom: 0.18em;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+.page-marketing .rv-hero h1 .accent::after {
+  content: "";
+  position: absolute;
+  left: -1%;
+  bottom: 0;
+  width: min(102%, 4.8em);
+  height: 0.16em;
+  background: var(--accent);
+  opacity: 0.85;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 22' preserveAspectRatio='none'><path d='M4,14 C90,6 210,4 396,10 C300,12 160,15 10,19 Z'/></svg>") center / 100% 100% no-repeat;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 22' preserveAspectRatio='none'><path d='M4,14 C90,6 210,4 396,10 C300,12 160,15 10,19 Z'/></svg>") center / 100% 100% no-repeat;
+  transform-origin: left center;
+  animation: rv-pinceau 1.1s 0.35s cubic-bezier(0.25, 0.8, 0.3, 1) both;
+}
+@keyframes rv-pinceau { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* — Chapeau avec lettrine, sous un filet d'encre — */
+html body.page-marketing .rv-hero .hero-summary {
+  max-width: 40rem;
+  margin-top: 2.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--text);
+  font-size: 1.04rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: var(--text-soft);
+}
+.page-marketing .rv-hero .hero-summary::first-letter {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.7em;
+  float: left;
+  line-height: 0.74;
+  margin: 0.12em 0.12em 0 0;
+  color: var(--text);
+}
+.page-marketing .rv-hero .hero-actions { align-items: center; gap: 1.6rem; margin-top: 2rem; }
+.page-marketing .rv-lien {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 2px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.page-marketing .rv-lien:hover { color: var(--accent); border-color: var(--accent); }
+
+/* — Portrait en feuille d'album : deux feuilles décalées derrière — */
+html body.page-marketing .rv-feuille,
+html[data-theme="dark"] body.page-marketing .rv-feuille {
+  padding: 1.4rem 1.4rem 1.1rem !important;
+  border-radius: 0 !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow:
+    7px 7px 0 -1px var(--surface), 7px 7px 0 0 var(--border-subtle),
+    14px 14px 0 -1px var(--surface), 14px 14px 0 0 var(--border-subtle),
+    0 26px 44px -22px rgba(0, 0, 0, 0.35) !important;
+  transition: transform 0.3s ease;
+}
+html body.page-marketing .rv-feuille .avatar,
+html[data-theme="dark"] body.page-marketing .rv-feuille .avatar {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  object-position: 50% 22%;
+  border-radius: 0;
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--border-subtle);
+  margin: 0;
+}
+.page-marketing .rv-cartel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.2rem 1rem;
+  margin-top: 1rem;
+}
+html body.page-marketing .rv-cartel h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+html body.page-marketing .rv-cartel .hero-role {
+  margin: 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent) !important;
+  text-align: right;
+}
+.page-marketing .rv-feuille .hero-meta,
+.page-marketing .rv-feuille .hero-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border-subtle);
+}
+.page-marketing .rv-feuille .hero-meta { margin-top: 0.8rem; }
+.page-marketing .rv-feuille .hero-list { grid-template-columns: minmax(0, 1fr); }
+.page-marketing .rv-feuille .hero-list > li { flex-direction: row; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.55rem 0; }
+html body.page-marketing .rv-feuille .hero-list > li + li { border-left: 0; padding-left: 0; border-top: 1px solid var(--border-subtle); }
+.page-marketing .rv-feuille .hero-meta > div,
+.page-marketing .rv-feuille .hero-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.7rem 0;
+  min-width: 0;
+}
+.page-marketing .rv-feuille .hero-meta > div + div,
+.page-marketing .rv-feuille .hero-list > li + li { border-left: 1px solid var(--border-subtle); padding-left: 0.9rem; }
+.page-marketing .rv-feuille .meta-label,
+html body.page-marketing .rv-feuille .label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft) !important;
+}
+.page-marketing .rv-feuille .meta-value,
+html body.page-marketing .rv-feuille .value {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text) !important;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+/* — Registre de résultats : quatre chiffres, chacun mène à sa source — */
+.page-marketing .rv-registre {
+  list-style: none;
+  margin: 4rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 2px solid var(--text);
+  border-bottom: 1px solid var(--text);
+}
+.page-marketing .rv-registre li + li { border-left: 1px solid var(--border-subtle); }
+.page-marketing .rv-registre a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.6rem 1.4rem 1.3rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+.page-marketing .rv-registre a:hover { background: var(--accent-soft); }
+html body.page-marketing .rv-registre .rv-val {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.6rem, 4.6vw, 4.2rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums;
+  color: var(--text);
+  white-space: nowrap;
+}
+.page-marketing .rv-registre a:hover .rv-val { color: var(--accent); }
+.page-marketing .rv-lbl { margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.4; }
+.page-marketing .rv-src {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.page-marketing .rv-src::after { content: "→"; letter-spacing: 0; color: var(--accent); transition: transform 0.25s ease; }
+.page-marketing .rv-registre a:hover .rv-src::after { transform: translateX(4px); }
+
+/* — Mur de créations : trois œuvres accrochées par un fil — */
+.page-marketing .rv-mur { padding: 4.5rem 0 2rem; }
+.page-marketing .rv-mur-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 4.2rem;
+}
+html body.page-marketing .rv-mur-tete h2 {
+  margin: 0;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.page-marketing .rv-mur-tete a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+}
+.page-marketing .rv-mur-tete a:hover { color: var(--accent); }
+.page-marketing .rv-mur-grille {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  align-items: start;
+}
+.page-marketing .rv-mur-grille li:nth-child(2) { margin-top: 4rem; }
+.page-marketing .rv-mur-grille li:nth-child(3) { margin-top: 1.8rem; }
+.page-marketing .rv-mur-grille a { display: block; color: var(--text); text-decoration: none; }
+.page-marketing .rv-cadre {
+  display: block;
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  padding: 0.9rem;
+  box-shadow: 0 22px 40px -22px rgba(0, 0, 0, 0.45);
+  transform-origin: 50% -46px;
+  transition: transform 0.6s cubic-bezier(0.3, 1.4, 0.5, 1), box-shadow 0.4s ease;
+}
+.page-marketing .rv-cadre::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 1px;
+  height: 42px;
+  background: var(--text-soft);
+}
+.page-marketing .rv-cadre::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 3.5px);
+  bottom: calc(100% + 40px);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text);
+}
+.page-marketing .rv-cadre img { display: block; width: 100%; height: auto; }
+.page-marketing .rv-mur-grille a:hover .rv-cadre { transform: rotate(-1.2deg); box-shadow: 0 30px 50px -24px rgba(0, 0, 0, 0.5); }
+.page-marketing .rv-mur-grille li:nth-child(2) a:hover .rv-cadre { transform: rotate(1.2deg); }
+.page-marketing .rv-mur-cat {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.page-marketing .rv-mur-nom {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-variant-numeric: lining-nums;
+}
+
+/* — Expériences en chapitres : grand numéro au trait, résultats en marge — */
+.page-marketing #experience .timeline,
+.page-marketing #extracurricular .timeline { counter-reset: rv-chap; border: 0 !important; padding-left: 0 !important; }
+.page-marketing #experience .timeline::before,
+.page-marketing #extracurricular .timeline::before { display: none !important; }
+html body.page-marketing #experience .timeline-item,
+html body.page-marketing #extracurricular .timeline-item {
+  counter-increment: rv-chap;
+  grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
+  gap: 2.4rem;
+  margin: 0;
+  width: 100%;
+  padding: 2.2rem 0 2.4rem !important;
+  border: 0 !important;
+  border-top: 1px solid var(--text) !important;
+  background: none !important;
+}
+html body.page-marketing #experience .timeline-item::before,
+html body.page-marketing #extracurricular .timeline-item::before { display: none !important; }
+.page-marketing #experience .timeline-meta::before,
+.page-marketing #extracurricular .timeline-meta::before {
+  content: counter(rv-chap, decimal-leading-zero);
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.2rem, 7vw, 6.4rem);
+  line-height: 0.8;
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text);
+  margin-bottom: 1.3rem;
+  transition: color 0.4s ease, -webkit-text-stroke-color 0.4s ease;
+}
+.page-marketing #experience .timeline-item:hover .timeline-meta::before,
+.page-marketing #extracurricular .timeline-item:hover .timeline-meta::before { color: var(--accent); -webkit-text-stroke-color: var(--accent); }
+.page-marketing #experience .timeline-period,
+.page-marketing #extracurricular .timeline-period {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.page-marketing #experience .timeline-location,
+.page-marketing #extracurricular .timeline-location {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.page-marketing #experience .timeline-location::before,
+.page-marketing #extracurricular .timeline-location::before { display: none; }
+html body.page-marketing #experience .timeline-body h3,
+html body.page-marketing #extracurricular .timeline-body h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem) !important;
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+.page-marketing #experience .timeline-company,
+.page-marketing #extracurricular .timeline-company { color: var(--accent) !important; margin-bottom: 0.9rem; }
+/* Une expérience avec des résultats : les chiffres passent dans la marge droite */
+.page-marketing #experience .timeline-body:has(.exp-stats),
+.page-marketing #extracurricular .timeline-body:has(.exp-stats) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 200px);
+  column-gap: 2.4rem;
+  align-content: start;
+}
+.page-marketing #experience .timeline-body:has(.exp-stats) > *,
+.page-marketing #extracurricular .timeline-body:has(.exp-stats) > * { grid-column: 1; }
+html body.page-marketing #experience .timeline-body .exp-stats,
+html body.page-marketing #extracurricular .timeline-body .exp-stats {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+  align-self: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.4rem;
+  margin: 0;
+  padding: 0.2rem 0 0 1.8rem !important;
+  border: 0 !important;
+  border-left: 1px solid var(--border-subtle) !important;
+}
+html body.page-marketing #experience .exp-stats .stat-value,
+html body.page-marketing #extracurricular .exp-stats .stat-value {
+  font-size: 2.1rem;
+  line-height: 1;
+  font-variant-numeric: lining-nums;
+}
+.page-marketing #experience .exp-stat:first-child .stat-value,
+.page-marketing #extracurricular .exp-stat:last-child .stat-value { color: var(--accent); font-size: 2.8rem; }
+
+@media (max-width: 960px) {
+  html body.page-marketing .rv-hero .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.page-marketing .rv-feuille { max-width: 400px; order: 2; }
+  .page-marketing .rv-registre { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-marketing .rv-registre li:nth-child(3) { border-left: 0; }
+  .page-marketing .rv-registre li:nth-child(n+3) { border-top: 1px solid var(--border-subtle); }
+}
+@media (max-width: 720px) {
+  .page-marketing .rv-bandeau { margin-bottom: 2rem; letter-spacing: 0.16em; }
+  .page-marketing .rv-mur-grille { grid-template-columns: minmax(0, 1fr); gap: 4.2rem; }
+  .page-marketing .rv-mur-grille li:nth-child(n) { margin-top: 0; }
+  html body.page-marketing #experience .timeline-item,
+  html body.page-marketing #extracurricular .timeline-item { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; }
+  .page-marketing #experience .timeline-meta::before,
+  .page-marketing #extracurricular .timeline-meta::before { font-size: 3.6rem; margin-bottom: 0.8rem; }
+  .page-marketing #experience .timeline-body:has(.exp-stats),
+  .page-marketing #extracurricular .timeline-body:has(.exp-stats) { display: block; }
+  html body.page-marketing #experience .timeline-body .exp-stats,
+  html body.page-marketing #extracurricular .timeline-body .exp-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 1rem 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid var(--border-subtle) !important;
+  }
+}
+@media (max-width: 480px) {
+  .page-marketing .rv-registre { grid-template-columns: minmax(0, 1fr); }
+  .page-marketing .rv-registre li + li { border-left: 0; border-top: 1px solid var(--border-subtle); }
+  .page-marketing .rv-feuille .hero-meta,
+  .page-marketing .rv-feuille .hero-list { grid-template-columns: minmax(0, 1fr); }
+  .page-marketing .rv-feuille .hero-meta > div + div,
+  .page-marketing .rv-feuille .hero-list > li + li { border-left: 0; padding-left: 0; border-top: 1px solid var(--border-subtle); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-marketing .rv-hero h1 .accent::after { animation: none; }
+  .page-marketing .rv-cadre { transition: none; }
+}
