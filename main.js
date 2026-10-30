@@ -415,7 +415,7 @@
         rights: "Tous droits réservés.",
         overview: "Vue générale",
         marketing: "Marketing digital & Création",
-        data: "Data & Recherche de marché",
+        data: "Analyse de Données & Business Insights",
         finance: "Finance & Conseil",
       },
       education: {                         // → index.html (section Formation)
@@ -570,7 +570,7 @@
         finance: "Finance & Conseil",
         marketing: "Marketing",
         teaching: "Enseignement",
-        data: "Data & Recherche",
+        data: "Data & Insights",
       },
       financeHero: {                       // → finance.html (section héro)
         kicker: "Finance · Contrôle de Gestion · Analyse",
@@ -1471,7 +1471,7 @@
         rights: "All rights reserved.",
         overview: "Overview",
         marketing: "Digital Marketing & Design",
-        data: "Data & Market Research",
+        data: "Data Analytics & Business Insights",
         finance: "Finance & Consulting",
       },
       education: {
@@ -1626,7 +1626,7 @@
         finance: "Finance & Consulting",
         marketing: "Marketing",
         teaching: "Teaching",
-        data: "Data & Research",
+        data: "Data & Insights",
       },
       financeHero: {
         kicker: "Finance · Management Control · Analysis",
@@ -1669,7 +1669,7 @@
         summary: "A Master in Management student (Grande École Programme) at emlyon, I use Excel (TOSA 950/1000), Python, R, SQL, Power BI and Tableau to turn raw data into clear dashboards, test hypotheses with quantitative methods and translate the numbers into concrete recommendations.",
         ctaPrimary: "View portfolio",
         ctaSecondary: "View my experience",
-        cardRole: "Data Analysis & Market Research",
+        cardRole: "Data Analysis & Business Intelligence",
         caseStudyLabel: "Excel · PivotTables · Time Series · Analytics",
         caseStudyTitle: "Excel Dashboard – Xiaohongshu Performance",
         caseStudyDesc: "Built a comprehensive Excel dashboard to track 11 daily metrics for Engoo's Xiaohongshu account: KPIs overview, time-series trends and A/B period comparison.",
@@ -2494,7 +2494,7 @@
         rights: "版權所有。",
         overview: "總覽",
         marketing: "數位行銷與創意設計",
-        data: "數據分析與市場研究",
+        data: "數據分析與商業洞察",
         finance: "財務與顧問",
       },
       education: {
@@ -2648,7 +2648,7 @@
         finance: "財務與顧問",
         marketing: "行銷",
         teaching: "教學",
-        data: "數據與研究",
+        data: "數據與洞察",
       },
       financeHero: {
         kicker: "財務 · 管理會計 · 分析",
@@ -2691,7 +2691,7 @@
         summary: "我是 emlyon 商學院管理碩士（Grande École 課程）學生，運用 Excel（TOSA 950/1000）、Python、R、SQL、Power BI 與 Tableau，將原始數據整理成清晰的儀表板，以量化方法驗證假設，並把數字轉化為具體建議。",
         ctaPrimary: "查看作品集",
         ctaSecondary: "查看我的經歷",
-        cardRole: "數據分析 & 市場研究",
+        cardRole: "數據分析 & 商業智慧",
         caseStudyLabel: "案例研究 · 小紅書儀表板",
         caseStudyTitle: "Excel 儀表板 ── 小紅書績效分析",
         caseStudyDesc: "為 Engoo 小紅書帳號建立完整 Excel 儀表板，追蹤 11 項每日指標：KPI 概覽、時間序列趨勢及 A/B 期間比較。",
