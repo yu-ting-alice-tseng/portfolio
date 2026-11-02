@@ -28,10 +28,11 @@ PROJECTS = [
 ]
 
 W, H = 1200, 800
-CHART_W = 880
+MARGIN = 36   # little plain card around the charts (request of the user)
+CHART_W = 980
 CHART_H = CHART_W * 9 // 16
-BACK_XY = (W - CHART_W - 40, 40)
-FRONT_XY = (40, H - CHART_H - 40)
+BACK_XY = (W - CHART_W - MARGIN, MARGIN)
+FRONT_XY = (MARGIN, H - CHART_H - MARGIN)
 
 
 def place(canvas, chart, xy, border):

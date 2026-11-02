@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFilter
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'assets' / 'PowerBI_Sephora'
 OUT = ROOT / 'assets' / 'covers'
-W, H, PAGE_W = 1200, 800, 1078
+W, H, PAGE_W = 1200, 800, 1128   # 36 px de marge (demande : moins de fond uni)
 CARDS = {'': (243, 241, 234), '-data': (238, 243, 239)}   # marketing #f3f1ea, data #eef3ef
 INK = (26, 24, 21)
 

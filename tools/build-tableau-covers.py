@@ -70,9 +70,11 @@ def main():
                 img = img.resize((1800, round(img.height * 1800 / img.width)), Image.LANCZOS)
             img.save(out / f"constat-{n}-{lang}.webp", quality=88)
         cover = Image.new("RGB", (1200, 800), CARD)
-        place(cover, blocks[1], 50, 48, 860)
-        place(cover, blocks[2], 160, 236, 860)
-        place(cover, blocks[3], 380, 410, 760)
+        # little plain card around the blocks (request of the user): 36 px margins
+        place(cover, blocks[1], 36, 36, 980)
+        place(cover, blocks[2], 110, 232, 980)
+        h3 = round(blocks[3].height * 840 / blocks[3].width)
+        place(cover, blocks[3], 1200 - 36 - 840, 800 - 36 - h3, 840)
         suffix = "" if lang == "fr" else "-en"
         cover.save(COVERS / f"chocolat-data{suffix}.webp", quality=88)
         print(f"V{v} {lang}: 3 findings, cover chocolat-data{suffix}.webp")

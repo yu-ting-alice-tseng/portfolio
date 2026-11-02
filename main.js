@@ -168,17 +168,17 @@
     // Pour modifier une langue : descendez jusqu'au bloc fr / en / zh voulu.
     fr: {
       sephoraBI: {
-        cover: "assets/covers/sephora-matrice.webp",
-        coverData: "assets/covers/sephora-matrice-data.webp",
+        cover: "assets/covers/sephora-matrice.webp?v=20261102",
+        coverData: "assets/covers/sephora-matrice-data.webp?v=20261102",
         p1: "assets/PowerBI_Sephora/sephora-powerbi-1.webp",
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3.webp",
         p4: "assets/PowerBI_Sephora/sephora-powerbi-4.webp",
       },
       pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
-        boutique: "assets/covers/boutique-mode-data.webp",
-        chocolat: "assets/covers/chocolat-data.webp",          // tableau de bord Tableau (tools/build-tableau-covers.py)
-        beaute: "assets/covers/maison-beaute.webp",
+        boutique: "assets/covers/boutique-mode-data.webp?v=20261102",
+        chocolat: "assets/covers/chocolat-data.webp?v=20261102",          // tableau de bord Tableau (tools/build-tableau-covers.py)
+        beaute: "assets/covers/maison-beaute.webp?v=20261102",
       },
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
@@ -976,8 +976,8 @@
           weeklyCarouselLblFR: "Version française",
           weeklyCarouselLblEN: "Version anglaise",
           board: {
-            cover1: "assets/covers/engoo-dashboard.webp",
-            cover4: "assets/covers/engoo-weekly.webp",
+            cover1: "assets/covers/engoo-dashboard.webp?v=20261102",
+            cover4: "assets/covers/engoo-weekly.webp?v=20261102",
             readAll: "Tous les projets",
             readNext: "Projet suivant",
             readMore: "Lire l'étude complète",
@@ -1034,8 +1034,8 @@
           footerNext: "Portfolio Data & Business Insights →",
         },
         data: {                            // → portfolio-data.html
-          coverDash: "assets/covers/engoo-dashboard-data.webp",
-          coverWeekly: "assets/covers/engoo-weekly-data.webp",
+          coverDash: "assets/covers/engoo-dashboard-data.webp?v=20261102",
+          coverWeekly: "assets/covers/engoo-weekly-data.webp?v=20261102",
           heroTitle1: "Des Données",
           heroTitle2: "aux Décisions",
           heroEyebrow: "Yu-Ting Tseng · Analyse de Données & Business Insights",
@@ -1256,17 +1256,17 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     en: {
       sephoraBI: {
-        cover: "assets/covers/sephora-matrice-en.webp",
-        coverData: "assets/covers/sephora-matrice-data-en.webp",
+        cover: "assets/covers/sephora-matrice-en.webp?v=20261102",
+        coverData: "assets/covers/sephora-matrice-data-en.webp?v=20261102",
         p1: "assets/PowerBI_Sephora/sephora-powerbi-1-en.webp",
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
         p4: "assets/PowerBI_Sephora/sephora-powerbi-4-en.webp",
       },
       pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
-        boutique: "assets/covers/boutique-mode-data-en.webp",
-        chocolat: "assets/covers/chocolat-data-en.webp",       // tableau de bord Tableau (tools/build-tableau-covers.py)
-        beaute: "assets/covers/maison-beaute-en.webp",
+        boutique: "assets/covers/boutique-mode-data-en.webp?v=20261102",
+        chocolat: "assets/covers/chocolat-data-en.webp?v=20261102",       // tableau de bord Tableau (tools/build-tableau-covers.py)
+        beaute: "assets/covers/maison-beaute-en.webp?v=20261102",
       },
       brandName: "Yu‑Ting Tseng",
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
@@ -2030,8 +2030,8 @@
           weeklyCarouselLblFR: "French version",
           weeklyCarouselLblEN: "English version",
           board: {
-            cover1: "assets/covers/engoo-dashboard-en.webp",
-            cover4: "assets/covers/engoo-weekly-en.webp",
+            cover1: "assets/covers/engoo-dashboard-en.webp?v=20261102",
+            cover4: "assets/covers/engoo-weekly-en.webp?v=20261102",
             readAll: "All projects",
             readNext: "Next project",
             readMore: "Read the full case study",
@@ -2088,8 +2088,8 @@
           footerNext: "Data & Business Insights Portfolio →",
         },
         data: {
-          coverDash: "assets/covers/engoo-dashboard-data-en.webp",
-          coverWeekly: "assets/covers/engoo-weekly-data-en.webp",
+          coverDash: "assets/covers/engoo-dashboard-data-en.webp?v=20261102",
+          coverWeekly: "assets/covers/engoo-weekly-data-en.webp?v=20261102",
           heroTitle1: "From Data",
           heroTitle2: "to Decisions",
           heroEyebrow: "Yu-Ting Tseng · Data Analytics & Business Insights",
@@ -2310,17 +2310,17 @@
     // Structure identique à "fr" — les mêmes annotations de pages s'appliquent.
     zh: {
       sephoraBI: {
-        cover: "assets/covers/sephora-matrice-en.webp",
-        coverData: "assets/covers/sephora-matrice-data-en.webp",
+        cover: "assets/covers/sephora-matrice-en.webp?v=20261102",
+        coverData: "assets/covers/sephora-matrice-data-en.webp?v=20261102",
         p1: "assets/PowerBI_Sephora/sephora-powerbi-1-en.webp",
         p2: "assets/PowerBI_Sephora/sephora-powerbi-2-en.webp",
         p3: "assets/PowerBI_Sephora/sephora-powerbi-3-en.webp",
         p4: "assets/PowerBI_Sephora/sephora-powerbi-4-en.webp",
       },
       pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
-        boutique: "assets/covers/boutique-mode-data-en.webp",
-        chocolat: "assets/covers/chocolat-data-en.webp",       // tableau de bord Tableau (tools/build-tableau-covers.py)
-        beaute: "assets/covers/maison-beaute-en.webp",
+        boutique: "assets/covers/boutique-mode-data-en.webp?v=20261102",
+        chocolat: "assets/covers/chocolat-data-en.webp?v=20261102",       // tableau de bord Tableau (tools/build-tableau-covers.py)
+        beaute: "assets/covers/maison-beaute-en.webp?v=20261102",
       },
       brandName: "Yu‑Ting Tseng",
       cv: {                               // → bouton « Télécharger le CV » des pages CV (PDF générés par tools/build-cv.js)
@@ -3045,8 +3045,8 @@
           kyudoDesc: "為政治大學弓道社活動設計名牌——提供米色與藍色兩款配色，附實境模擬圖。",
           kyudoCap1: "名牌 – 模擬圖",
           board: {
-            cover1: "assets/covers/engoo-dashboard-en.webp",
-            cover4: "assets/covers/engoo-weekly-en.webp",
+            cover1: "assets/covers/engoo-dashboard-en.webp?v=20261102",
+            cover4: "assets/covers/engoo-weekly-en.webp?v=20261102",
             readAll: "所有專案",
             readNext: "下一個專案",
             readMore: "閱讀完整案例",
@@ -3103,8 +3103,8 @@
           footerNext: "數據分析與商業洞察作品集 →",
         },
         data: {
-          coverDash: "assets/covers/engoo-dashboard-data-en.webp",
-          coverWeekly: "assets/covers/engoo-weekly-data-en.webp",
+          coverDash: "assets/covers/engoo-dashboard-data-en.webp?v=20261102",
+          coverWeekly: "assets/covers/engoo-weekly-data-en.webp?v=20261102",
           heroTitle1: "從數據",
           heroTitle2: "到決策",
           heroEyebrow: "Yu-Ting Tseng · 數據分析 & 商業洞察",
