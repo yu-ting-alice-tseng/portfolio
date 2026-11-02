@@ -1331,6 +1331,19 @@
       .pf-cat-grid > li { transition: none; }
       .pt-lumiere { display: none; }
     }
+    /* YOLO : logo et publications Instagram sur une même page d'album
+       (demande de l'utilisatrice : les visuels purs restent de taille modeste,
+       seuls les dashboards et analyses à lire occupent toute la largeur). */
+    .ex .ex-salle--duo .ex-hand { width: min(100%, 1040px); }
+    .ex-duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem; align-items: center; }
+    .ex-duo-logo { margin: 0; }
+    .ex-duo-logo .pf-img-wrap { display: block; background: #000; }
+    .ex-duo-logo img { display: block; width: 100%; height: auto; }
+    .ex-duo-ig .pf-img-caption { text-align: center; }
+    @media (max-width: 760px) {
+      .ex-duo { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+      .ex-duo-logo { max-width: 360px; margin: 0 auto; }
+    }
   </style>
 </head>
 <body class="page-portfolio-marketing">
@@ -1764,17 +1777,18 @@
         </div>
       </div>-->
     </header>
-        <section class="ex-salle ex-salle--seule">
-      <div class="ex-hand"><div class="ex-scroll"><div class="pf-img-figure" style="margin: 0.5rem 0 1rem;">
-<a class="pf-img-wrap" href="assets/yolo-camp-tote-bag.webp" rel="noopener noreferrer" style="aspect-ratio:16/9; display:block; background:#000;" target="_blank">
-<img alt="AIESEC YOLO Camp – Official Tote Bag Visual Design" loading="lazy" src="assets/yolo-camp-tote-bag.webp" style="object-fit:contain;"/>
+    <!-- Une seule page pour les visuels (demande de l'utilisatrice : un travail purement visuel
+         n'a pas besoin d'être affiché en grand) : logo à gauche, publications Instagram à droite. -->
+    <section class="ex-salle ex-salle--seule ex-salle--duo">
+      <div class="ex-hand"><div class="ex-scroll"><div class="ex-duo">
+<figure class="ex-duo-logo">
+<a class="pf-img-wrap" href="assets/yolo-camp-tote-bag.webp" rel="noopener noreferrer" target="_blank">
+<img alt="AIESEC YOLO Camp – Official Tote Bag Visual Design" loading="lazy" src="assets/yolo-camp-tote-bag.webp"/>
 </a>
-<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap4">Identité visuelle – logo officiel</p>
-</div></div><span class="ex-roll" aria-hidden="true"></span></div>
-    </section>
-    <section class="ex-salle">
-      <div class="ex-cartel"><p class="ex-salle-n">2 / 2</p><p class="pf-star-txt" data-i18n="portfolio.mkt.aiesec.igLabel" style="margin: 1.25rem 0 0.4rem;">Posts Instagram – Campagne YOLO</p></div>
-      <div class="ex-hand"><div class="ex-scroll"><div class="ig-carousel-wrap">
+<figcaption class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.cap4">Identité visuelle – logo officiel</figcaption>
+</figure>
+<div class="ex-duo-ig">
+<div class="ig-carousel-wrap">
 <button aria-label="Previous" class="ig-nav ig-nav--prev">‹</button>
 <div class="ig-carousel" id="yoloCarousel">
 <div class="ig-item">
@@ -1820,6 +1834,8 @@
 </div>
 <button aria-label="Next" class="ig-nav ig-nav--next">›</button>
 <div class="ig-dots" id="yoloDots"></div>
+<p class="pf-img-caption" data-i18n="portfolio.mkt.aiesec.igLabel">Posts Instagram – Campagne YOLO</p>
+</div>
 </div></div><span class="ex-roll" aria-hidden="true"></span></div>
     </section>
   </div>      <div class="mk-sep" data-reveal aria-hidden="true"><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg><svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg><svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false"><path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/></svg></div><a class="pf-next" data-target="sora-education" href="#sora-education"><span class="pf-next-txt"><span class="pf-next-lbl" data-i18n="portfolio.mkt.board.readNext">Projet suivant</span><span class="pf-next-name" data-i18n="portfolio.mkt.board.p7Name">Sora Education · Étude de Marché</span></span><span class="pf-next-cover is-chart"><svg class="pf-slide-svg" viewBox="0 0 720 405" aria-hidden="true" focusable="false">
