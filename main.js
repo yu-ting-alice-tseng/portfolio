@@ -201,7 +201,7 @@
         gpaEmlyon: "4,0/4,0",
         profit: "3 250 €",
       },
-      a11y: { skipLink: "Aller au contenu" }, // → TOUTES les pages
+      a11y: { skipLink: "Aller au contenu", mainNav: "Navigation principale", langSwitch: "Choisir la langue", themeToggle: "Basculer entre thème clair et sombre", heroCard: "Informations principales", portrait: "Portrait de Yu-Ting Tseng" }, // → TOUTES les pages
       simpleNav: {                       // → TOUTES les pages (nav header)
         resume: "Résumé",
         viewPortfolioPdf: "Portfolio (PDF)",
@@ -417,6 +417,8 @@
         taipeiEdu: "Taipei, Taïwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
+        lyonDot: "Lyon · France",
+        parisDot: "Paris · France",
         onlineOnly: "En ligne",
         freelance: "Freelance",
       },
@@ -573,6 +575,38 @@
         bbcYt: "Courtes vidéos sur la grammaire, le vocabulaire et la prononciation.",
         duncan: "Cours en direct en format long – idéal pour les apprenants intermédiaires.",
         ted: "Écoute avancée sur des sujets passionnants – utilisez la fonction transcription.",
+        frTv5: "Cours, exercices et vidéos en FLE (Français Langue Étrangère) pour tous niveaux.",
+        frBescherelle: "La référence pour la conjugaison des verbes français, en accès libre.",
+        frPodcast: "Dialogues et exercices audio adaptés aux apprenants débutants et intermédiaires.",
+        frPointFle: "Portail gratuit regroupant des centaines d'exercices de grammaire et de vocabulaire.",
+        frTip1title: "Écoutez chaque jour",
+        frTip1: "Commencez par le « Journal en français facile » de RFI : actualités lentes, claires et transcrites.",
+        frTip2title: "Regardez les actualités",
+        frTip2: "TV5Monde ou Brut habituent votre oreille au français courant tout en enrichissant votre vocabulaire.",
+        frTip3title: "Tenez un journal en français",
+        frTip3: "Écrivez quelques lignes par jour sur n'importe quel sujet. Apportez-les en cours pour correction.",
+        frTip4title: "Consultez Bescherelle",
+        frTip4: "Vérifiez systématiquement conjugaisons et accords : c'est la clé pour écrire un français correct.",
+        frInner: "Français naturel et compréhensible pour les niveaux intermédiaires (B1 – B2).",
+        frAuthentique: "Méthodes concrètes pour parler français naturellement et gagner en confiance.",
+        frRfi: "Actualités mondiales en français simplifié, avec transcription disponible.",
+        zhHello: "Application ludique pour débutants et intermédiaires : prononciation, vocabulaire et grammaire.",
+        zhMdbgName: "MDBG Chinese Dictionary",
+        zhMdbg: "Dictionnaire chinois-anglais gratuit : caractères traditionnels et simplifiés, pinyin et ordre des traits.",
+        zhHsk: "Vocabulaire officiel et exercices du HSK pour chaque niveau, gratuits et bien classés.",
+        zhPurple: "Cartes de caractères, quiz de vocabulaire et animations de l'ordre des traits, pour tous niveaux.",
+        zhTip1title: "Travaillez les tons dès le premier jour",
+        zhTip1: "Le mandarin a quatre tons, et un ton différent change le sens du mot. Répétez des enregistrements chaque jour pour habituer votre oreille.",
+        zhTip2title: "Écrivez les caractères à la main",
+        zhTip2: "Écrire à la main aide à retenir les caractères. Entraînez-vous sur 5 à 10 nouveaux caractères par jour, avec les animations de l'ordre des traits.",
+        zhTip3title: "Regardez des séries et films en chinois",
+        zhTip3: "Regardez des séries ou des actualités en chinois avec sous-titres chinois pour travailler à la fois l'écoute et la lecture des caractères.",
+        zhTip4title: "Parlez avec des locuteurs natifs",
+        zhTip4: "Pratiquez avec des locuteurs natifs sur Tandem ou HelloTalk : la vraie conversation est le moyen le plus rapide de progresser à l'oral.",
+        zhCorner: "Le chinois expliqué en chinois, avec beaucoup de contenus compréhensibles, pour les niveaux intermédiaires.",
+        zhYoyo: "Explications de grammaire claires avec des exemples du quotidien, des débutants aux intermédiaires.",
+        zhCctvName: "CCTV – Actualités en Chinois (YouTube)",
+        zhCctv: "Journal télévisé officiel, pour les apprenants avancés qui veulent s'habituer au débit réel.",
       },
       pageNav: {
         home: "Accueil",
@@ -662,6 +696,7 @@
         desc: "Marketing, data, finance & enseignement : découvrez les projets par domaine.",
       },
       teachingHero: {                      // → teaching.html (section héro)
+        pageTitle: "Yu-Ting Tseng · Langues & Enseignement",
         kicker: "Langues & engagement international",
         title1: "Immersion linguistique &",
         title2: "échange interculturel",
@@ -681,8 +716,8 @@
         ielts: {
           title: "Préparation à l'IELTS",
           desc: "Coaching complet pour les 4 modules. Stratégies de test, entraînement intensif et simulations d'examen, avec un suivi personnalisé de la progression.",
-          tag1: "Reading & Writing",
-          tag2: "Speaking & Listening",
+          tag1: "Lecture & Écriture",
+          tag2: "Expression & Compréhension Orales",
           tag3: "Stratégies d'Examen",
           tag4: "Score Visé 6.0 – 8.0+",
         },
@@ -695,19 +730,19 @@
           tag4: "Renforcement Scolaire",
         },
         exams: {
-          title: "Certifications Cambridge & 英檢",
-          desc: "Préparation structurée aux examens officiels Cambridge et au GEPT (全民英檢). Entraînement sur annales et méthodes pour chaque épreuve.",
-          tag1: "YLE (Children)",
+          title: "Certifications Cambridge & GEPT",
+          desc: "Préparation structurée aux examens officiels Cambridge et au GEPT (test d'anglais taïwanais). Entraînement sur annales et méthodes pour chaque épreuve.",
+          tag1: "YLE (Enfants)",
           tag2: "A2 Key / B1 Preliminary",
           tag3: "B2 First",
-          tag4: "全民英檢 GEPT",
+          tag4: "GEPT",
         },
         skills: {
           title: "Renforcement d'une Compétence Ciblée",
           desc: "Travail ciblé sur une compétence spécifique : rédaction, lecture, expression orale, grammaire ou préparation aux rédactions scolaires.",
-          tag1: "Writing",
-          tag2: "Reading",
-          tag3: "Speaking",
+          tag1: "Écriture",
+          tag2: "Lecture",
+          tag3: "Expression Orale",
           tag4: "Grammaire & Vocabulaire",
         },
       },
@@ -1298,7 +1333,7 @@
         gpaEmlyon: "4.0/4.0",
         profit: "€3,250",
       },
-      a11y: { skipLink: "Skip to content" },
+      a11y: { skipLink: "Skip to content", mainNav: "Main navigation", langSwitch: "Choose language", themeToggle: "Toggle light and dark theme", heroCard: "Key information", portrait: "Portrait of Yu-Ting Tseng" },
       simpleNav: {
         resume: "Resume",
         viewPortfolioPdf: "Portfolio (PDF)",
@@ -1496,6 +1531,8 @@
         taipeiEdu: "Taipei, Taiwan",
         lyon: "Lyon, France",
         paris: "Paris, France",
+        lyonDot: "Lyon · France",
+        parisDot: "Paris · France",
         onlineOnly: "Online",
         freelance: "Freelance",
       },
@@ -1652,6 +1689,38 @@
         bbcYt: "Short, entertaining clips on grammar, vocabulary and pronunciation.",
         duncan: "Long-form live lessons – ideal for intermediate learners who want real conversation.",
         ted: "Advanced listening practice on fascinating topics – use the transcript feature.",
+        frTv5: "French-as-a-foreign-language lessons, exercises and videos for all levels.",
+        frBescherelle: "The go-to reference for French verb conjugation, free to use.",
+        frPodcast: "Audio dialogues and exercises for beginner and intermediate learners.",
+        frPointFle: "Free portal with hundreds of grammar and vocabulary exercises.",
+        frTip1title: "Listen every day",
+        frTip1: "Start with RFI's “Journal en français facile”: slow, clear news with transcripts.",
+        frTip2title: "Watch the news",
+        frTip2: "TV5Monde or Brut get your ear used to everyday French while building your vocabulary.",
+        frTip3title: "Keep a journal in French",
+        frTip3: "Write a few lines a day on any topic. Bring them to class for correction.",
+        frTip4title: "Check Bescherelle",
+        frTip4: "Always check conjugations and agreements: it is the key to writing correct French.",
+        frInner: "Natural, comprehensible French for intermediate learners (B1 – B2).",
+        frAuthentique: "Practical methods to speak French naturally and with confidence.",
+        frRfi: "World news in simplified French, with transcripts available.",
+        zhHello: "Gamified app for beginners and intermediate learners, covering pronunciation, vocabulary and grammar.",
+        zhMdbgName: "MDBG Chinese Dictionary",
+        zhMdbg: "Free Chinese-English dictionary with traditional and simplified characters, pinyin and stroke order.",
+        zhHsk: "Official HSK vocabulary and exercises for every level, free and clearly organised.",
+        zhPurple: "Character flashcards, vocabulary quizzes and stroke-order animations for all levels.",
+        zhTip1title: "Practise tones from day one",
+        zhTip1: "Mandarin has four tones, and a different tone changes the meaning. Repeat after recordings every day to train your ear.",
+        zhTip2title: "Write characters by hand",
+        zhTip2: "Writing by hand helps you remember characters. Practise 5 – 10 new characters a day, ideally with stroke-order animations.",
+        zhTip3title: "Watch Chinese shows and films",
+        zhTip3: "Watch Chinese dramas or news with Chinese subtitles to train both listening and character recognition.",
+        zhTip4title: "Talk with native speakers",
+        zhTip4: "Practise with native speakers on Tandem or HelloTalk: real conversation is the fastest way to improve your speaking.",
+        zhCorner: "Chinese explained in Chinese, with plenty of comprehensible input for intermediate learners.",
+        zhYoyo: "Clear grammar explanations with everyday examples, from beginner to intermediate.",
+        zhCctvName: "CCTV Chinese News (YouTube)",
+        zhCctv: "Official news broadcasts for advanced learners to practise listening at natural speed.",
       },
       pageNav: {
         home: "Home",
@@ -1741,6 +1810,7 @@
         desc: "Marketing, data, finance & teaching: explore projects by domain.",
       },
       teachingHero: {
+        pageTitle: "Yu-Ting Tseng · Languages & Teaching",
         kicker: "Languages & international engagement",
         title1: "Language immersion &",
         title2: "intercultural exchange",
@@ -1779,7 +1849,7 @@
           tag1: "YLE (Children)",
           tag2: "A2 Key / B1 Preliminary",
           tag3: "B2 First",
-          tag4: "GEPT 全民英檢",
+          tag4: "GEPT",
         },
         skills: {
           title: "Targeted Skill Reinforcement",
@@ -2365,7 +2435,7 @@
         gpaEmlyon: "4.0/4.0",
         profit: "€3,250",
       },
-      a11y: { skipLink: "跳至內容" },
+      a11y: { skipLink: "跳至內容", mainNav: "主選單", langSwitch: "選擇語言", themeToggle: "切換淺色與深色主題", heroCard: "基本資料", portrait: "Yu-Ting Tseng 的照片" },
       simpleNav: {
         resume: "履歷",
         viewPortfolioPdf: "作品集（PDF）",
@@ -2546,6 +2616,8 @@
         taipeiEdu: "台北，台灣",
         lyon: "里昂，法國",
         paris: "巴黎，法國",
+        lyonDot: "里昂･法國",
+        parisDot: "巴黎･法國",
         onlineOnly: "線上",
         freelance: "自由接案",
       },
@@ -2649,7 +2721,7 @@
         fieldNamePh: "陳小明",
         fieldContact: "偏好聯絡方式",
         contactHint: "請留下您的 Email 或 Line ID，我將在 24 小時內回覆。",
-        fieldEmail: "Email",
+        fieldEmail: "電子郵件",
         fieldEmailPh: "example@mail.com",
         fieldLine: "Line ID",
         fieldLinePh: "您的 Line ID",
@@ -2701,6 +2773,38 @@
         bbcYt: "短片介紹文法、詞彙與發音，生動有趣。",
         duncan: "長篇直播課，適合想進行真實對話的中級學習者。",
         ted: "針對迷人議題的進階聆聽練習，善用逐字稿功能。",
+        frTv5: "法語作為外語（FLE）的課程、練習與影片，適合所有程度。",
+        frBescherelle: "法語動詞變化的權威參考，免費使用。",
+        frPodcast: "適合初學與中級學習者的對話音檔與聽力練習。",
+        frPointFle: "免費入口網站，彙整數百則文法與詞彙練習。",
+        frTip1title: "每天聆聽",
+        frTip1: "從 RFI 的「簡易法語新聞」（Journal en français facile）開始：語速慢、發音清楚，並附逐字稿。",
+        frTip2title: "收看新聞",
+        frTip2: "TV5Monde 或 Brut 能讓耳朵習慣日常法語，同時累積詞彙。",
+        frTip3title: "用法語寫日記",
+        frTip3: "每天就任何主題寫幾行，帶到課堂上一起修改。",
+        frTip4title: "查閱 Bescherelle",
+        frTip4: "養成檢查動詞變化與性數配合的習慣，這是寫出正確法語的關鍵。",
+        frInner: "自然又易懂的法語，適合中級學習者（B1 – B2）。",
+        frAuthentique: "實用方法，幫助你自然、自信地說法語。",
+        frRfi: "以簡易法語播報的國際新聞，附逐字稿。",
+        zhHello: "遊戲化應用程式，適合初學者與中級學習者，涵蓋發音、詞彙與語法。",
+        zhMdbgName: "MDBG 中文字典",
+        zhMdbg: "免費中英字典，支援繁簡體、拼音及筆順查詢。",
+        zhHsk: "各等級 HSK 官方詞彙與練習題，免費且分級清晰。",
+        zhPurple: "漢字字卡、詞彙測驗與筆順動畫，適合所有程度。",
+        zhTip1title: "從第一天開始練習聲調",
+        zhTip1: "普通話有四個聲調，聲調不同意思迥異。每天跟讀錄音，讓耳朵建立正確語感。",
+        zhTip2title: "動手寫漢字",
+        zhTip2: "手寫漢字能加深記憶。每天練習5 – 10個新字，配合筆順動畫效果更佳。",
+        zhTip3title: "收看中文影視",
+        zhTip3: "搭配中文字幕觀看中文劇或新聞，同時強化聽力和認字能力。",
+        zhTip4title: "與母語者對話",
+        zhTip4: "使用 Tandem 或 HelloTalk 與母語者練習，真實對話是提升口語的最快方式。",
+        zhCorner: "以中文解說中文，提供豐富的可理解輸入內容，適合中級學習者。",
+        zhYoyo: "清晰的文法解說搭配生活實例，適合初學到中級學習者。",
+        zhCctvName: "CCTV 中文新聞 (YouTube)",
+        zhCctv: "官方新聞廣播，適合進階學習者練習真實語速的聽力。",
       },
       pageNav: {
         home: "首頁",
@@ -2790,6 +2894,7 @@
         desc: "行銷、數據、財務與教學 — 按領域探索專案。",
       },
       teachingHero: {
+        pageTitle: "Yu-Ting Tseng · 語言與教學",
         kicker: "語言 · 教學 · 國際交流",
         title1: "語言沉浸，",
         title2: "跨文化連結",
@@ -3397,6 +3502,13 @@
       if (val !== null && el.parentElement && el.parentElement.tagName === "A") {
         el.parentElement.setAttribute("href", val);
       }
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      if (!key) return;
+      const val = getTranslation(dict, key);
+      if (val !== null) el.setAttribute("aria-label", val);
     });
 
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
@@ -4318,7 +4430,7 @@
       ],
     },
     "lang-english": {
-      title: "English – IELTS 8.0 (C1)",
+      title: "Anglais – IELTS 8.0 (C1)",
       text:
         "Niveau C1 attesté par IELTS 8.0, utilisé au quotidien en contexte académique et professionnel.",
       proofs: [
@@ -4370,7 +4482,7 @@
     "lang-japanese": {
       title: "Japonais – JLPT N1",
       text:
-        "Niveau avancé de japonais (JLPT N1), utile pour comprendre la culture et les marchés d'sie de l'st.",
+        "Niveau avancé de japonais (JLPT N1), utile pour comprendre la culture et les marchés d'Asie de l'Est.",
       proofs: [
         {
           type: "Certificat",
@@ -5496,6 +5608,49 @@
     if (skillData[key]) skillData[key].en = { ...(skillData[key].en || {}), ...en };
   });
 
+  // ── Version chinoise (teaching.html, seule page avec le bouton CN) ──
+  // Fusionnée dans skillData[clé].zh : sans elle, le panneau resterait en français.
+  const skillDataZh = {
+    "lang-english": {
+      title: "英語 – IELTS 8.0（C1）",
+      text: "IELTS 8.0 認證的 C1 程度，日常用於學術與職場環境。",
+      proofs: [
+        { type: "證書", title: "IELTS 8.0（C1）", org: "IELTS", meta: ["英語"], points: ["C1 程度認證。"], actions: [{ label: "查看證書", href: "certificates/IELTS%208_20241215.pdf" }] },
+        { type: "學歷", title: "管理碩士（大學校課程）", org: "emlyon business school", meta: ["里昂･法國"], points: ["全英語授課課程。"], actions: [{ label: "查看學歷", href: "#edu-emlyon" }] },
+      ],
+    },
+    "lang-french": {
+      title: "法語 – DALF C1",
+      text: "法語 C1 程度認證，具備在法國求學與發表的經驗。",
+      proofs: [
+        { type: "證書", title: "DALF C1", org: "France Éducation international", meta: ["法語"], points: ["C1 程度認證。"], actions: [{ label: "查看證書", href: "certificates/DALF%20C1_Certificate.pdf" }] },
+        { type: "學歷", title: "政治學交換課程", org: "巴黎第一大學（Paris 1 Panthéon-Sorbonne）", meta: ["巴黎･法國", "01/2024 – 06/2024"], points: ["學術與文化沉浸於法國。"], actions: [{ label: "查看學歷", href: "#edu-paris1" }] },
+      ],
+    },
+    "lang-japanese": {
+      title: "日語 – JLPT N1",
+      text: "日語高級程度（JLPT N1），有助於理解東亞文化與市場。",
+      proofs: [
+        { type: "證書", title: "JLPT N1", org: "JLPT", meta: ["日語"], points: ["高級程度認證。"], actions: [{ label: "查看證書", href: "certificates/JLPT%20N1.webp" }] },
+        { type: "活動", title: "劍道 · 弓道 · 花道", org: "學生社團", meta: ["日本文化"], points: ["實際練習與文化沉浸。"], actions: [{ label: "查看活動", href: "#extracurricular" }] },
+      ],
+    },
+    "lang-mandarin": {
+      title: "中文 – 母語",
+      text: "中文為母語，運用於所有職場與生活情境。",
+    },
+    "lang-mandarin-teaching": {
+      title: "中文 – 母語",
+      text: "中文為母語，並曾擔任志工，陪伴多元文化家庭的學童。",
+      proofs: [
+        { type: "志工服務", title: "USR 大學社會責任計畫志工", org: "國立政治大學 大學社會責任推動中心", meta: [], points: ["協助新住民家庭孩童進行語言學習與文化融入。"], actions: [{ label: "查看參與活動", href: "#engagement" }] },
+      ],
+    },
+  };
+  Object.entries(skillDataZh).forEach(([key, zh]) => {
+    if (skillData[key]) skillData[key].zh = { ...(skillData[key].zh || {}), ...zh };
+  });
+
   const previewContainer = document.querySelector(".skill-preview");
   const previewTitle = previewContainer?.querySelector(".skill-preview-title");
   const previewText = previewContainer?.querySelector(".skill-preview-text");
@@ -5529,12 +5684,19 @@
       "Stage": "Internship", "Projet entrepreneurial": "Entrepreneurial Project",
       "Projet Personnel": "Personal Project", "Expérience Associative": "Student Association",
       "Extra-scolaire": "Extracurricular",
+    } : activeLang === "zh" ? {
+      "Cours": "課程", "Expérience": "經歷", "Certification": "證照", "Certificat": "證書",
+      "Portfolio": "作品集", "Activité": "活動", "Formation": "學歷", "Bénévolat": "志工服務",
+      "Projet": "專案", "Lien": "連結", "Preuve": "證明", "Stage": "實習",
     } : {};
     const actionMap = activeLang === "en" ? {
       "Voir l'expérience": "View experience", "Voir la formation": "View education",
       "Ouvrir le certificat": "Open certificate", "Voir le portfolio": "View portfolio",
       "Voir activités": "View activities", "Voir le rapport": "Read report", "Voir le projet": "View project",
       "Ouvrir": "Open", "Voir l'engagement": "View engagement",
+    } : activeLang === "zh" ? {
+      "Voir l'expérience": "查看經歷", "Voir la formation": "查看學歷",
+      "Ouvrir le certificat": "查看證書", "Ouvrir": "開啟", "Voir l'engagement": "查看參與活動",
     } : {};
 
     previewTitle.textContent = data.title;
@@ -5544,12 +5706,12 @@
       ? data.proofs
       : Array.isArray(data.links)
         ? data.links.map((l) => ({
-            type: activeLang === "en" ? "Link" : "Lien",
+            type: activeLang === "en" ? "Link" : activeLang === "zh" ? "連結" : "Lien",
             title: l.label,
             org: "",
             meta: [],
             points: [],
-            actions: [{ label: activeLang === "en" ? "Open" : "Ouvrir", href: l.href }],
+            actions: [{ label: activeLang === "en" ? "Open" : activeLang === "zh" ? "開啟" : "Ouvrir", href: l.href }],
           }))
         : [];
 
