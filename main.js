@@ -214,6 +214,13 @@
         deepDiveData: "→ Page Data",
         seePortfolio: "→ Voir dans le portfolio",
         seeVisuals: "→ Voir les visuels dans le portfolio",
+        seeDashVisuals: "→ Voir le dashboard et les visuels dans le portfolio",
+        seeCampaignVisuals: "→ Voir les visuels de campagne dans le portfolio",
+        seeDashboard: "→ Voir le dashboard dans le portfolio",
+        engooDashTag: "Dashboard Excel · Analytics",
+        engooDashTitle: "Engoo – Dashboard Rednote",
+        aiesecTag: "Campagne · Leadership",
+        aiesecTitle: "AIESEC – Camp International YOLO",
         deepDiveLabel: "Pages détaillées par domaine :",
         aiesecDesc: "Pilotage de l'équipe marketing (4 personnes) pour le camp international YOLO. Création des visuels principaux pour le recrutement de volontaires et de participants.",
         kpnDesc: "Optimisation SEO on-page et technique, suivi de KPIs (trafic, CTR, conversions) via Google Analytics et reporting de campagnes SEA.",
@@ -262,11 +269,11 @@
         kicker: "Marketing digital · Analyse de données",
         title1: "Étudiante en Master à emlyon, je travaille le marketing digital",
         title2: "côté chiffres.",
-        summary: "Trois stages en marketing digital : SEO et campagnes Meta et Google chez KPN, réseaux sociaux chez Engoo, et depuis juillet 2026 le trafic publicitaire (AdOps) chez leboncoin à Paris. Avant cela, une licence en langues et en diplomatie à Taïwan et un semestre à Paris 1. En année de césure avant mon M2, je cherche un second stage de six mois à partir de janvier 2027.",
+        summary: "Trois stages en marketing digital : SEO et campagnes Meta et Google chez KPN, réseaux sociaux chez Engoo, et depuis 07/2026 le trafic publicitaire (AdOps) chez leboncoin à Paris. Avant cela, une licence en langues et en diplomatie à Taïwan et un semestre à Paris 1. En année de césure avant mon M2, je cherche un second stage de six mois à partir de janvier 2027.",
         locationLabel: "Basée à",
         locationValue: "Paris, France",
         availabilityLabel: "Disponible à partir de",
-        availabilityValue: "janvier 2027 (stage de césure de 6 mois)",
+        availabilityValue: "01/2027 (stage de césure de 6 mois)",
         ctaPrimary: "Me contacter",
         ctaSecondary: "Voir mes expériences",
         cardName: "Yu‑Ting Tseng",
@@ -280,7 +287,7 @@
         subtitle:
           "Un socle structuré autour de l'analyse de données, du marketing digital et d'un profil international.",
         filterAll: "Tout",
-        previewTitle: "Détail d'une compétence",
+        previewTitle: "Détail d'une Compétence",
         previewText: "Survolez une compétence pour voir des preuves (projets, cours, expériences) avec le contexte, ce qui a été fait et les résultats.",
         chipEnglish: "Anglais – IELTS 8.0 (C1)",
         chipFrench: "Français – DALF C1",
@@ -348,7 +355,7 @@
         subContent2: "SMM (Marketing sur les Réseaux Sociaux)",
         filterEvents: "Événementiel",
         blockEvents: "Événementiel & Coordination",
-        chipEventManagement: "Organisation d'événements",
+        chipEventManagement: "Organisation d'Événements",
         chipEventHosting: "Présidence & Animation",
         chipVendorCoordination: "Coordination avec Prestataires",
         chipIntercultural: "Travail Interculturel",
@@ -415,6 +422,7 @@
       },
       footer: {                            // → TOUTES les pages (pied de page)
         rights: "Tous droits réservés.",
+        personal: "Site personnel conçu pour présenter mon parcours et mes projets.",
         overview: "Vue générale",
         marketing: "Marketing digital & Création",
         data: "Analyse de Données & Business Insights",
@@ -471,7 +479,7 @@
         },
         paris1: {
           period: "01/2024 – 06/2024",
-          title: "Programme d'échange en Science Politique",
+          title: "Programme d'Échange en Science Politique",
           school: "Université Paris 1 Panthéon-Sorbonne",
           point1: "Approfondissement des politiques européennes et internationales.",
           point2: "Immersion académique et culturelle en France.",
@@ -488,17 +496,17 @@
         teaching: "Enseignement",
       },
       chapters: {                          // → teaching.html (navigation chapitres)
-        aboutMe: "À propos de moi",
+        aboutMe: "À Propos de Moi",
         aboutMeDesc: "Mes qualifications, expériences et parcours pour vous aider à évaluer votre enseignante.",
-        teachingService: "Services d'enseignement",
+        teachingService: "Services d'Enseignement",
         teachingServiceDesc: "Ce que je propose et comment réserver votre premier cours.",
-        learningResources: "Ressources pédagogiques",
+        learningResources: "Ressources Pédagogiques",
         learningResourcesDesc: "Outils, conseils et supports sélectionnés pour progresser entre les cours.",
       },
       booking: {                           // → teaching.html (formulaire de réservation)
-        title: "Réserver un cours",
+        title: "Réserver un Cours",
         subtitle: "Remplissez ce formulaire pour me contacter. Je vous répondrai sous 24 h pour confirmer le créneau.",
-        navCta: "Réserver un cours",
+        navCta: "Réserver un Cours",
         durationLabel: "Durée",
         durationValue: "Personnalisable – 30 / 45 / 60 / 90 min selon vos besoins",
         materialsLabel: "Matériaux pédagogiques",
@@ -542,14 +550,14 @@
         formNote: "L'envoi ouvre votre application e-mail avec votre demande préremplie.",
       },
       resources: {                         // → teaching.html (ressources d'apprentissage)
-        title: "Ressources pédagogiques",
+        title: "Ressources Pédagogiques",
         subtitle: "Des outils gratuits et fiables pour pratiquer l'anglais, le français ou le mandarin entre les cours.",
         tabEn: "🇬🇧 Anglais",
         tabFr: "🇫🇷 Français",
         tabZh: "🇨🇳 Mandarin",
-        websitesTitle: "Sites web & applications",
-        tipsTitle: "Conseils d'apprentissage",
-        videosTitle: "Ressources vidéo",
+        websitesTitle: "Sites Web & Applications",
+        tipsTitle: "Conseils d'Apprentissage",
+        videosTitle: "Ressources Vidéo",
         bbc: "Leçons, vidéos et quiz gratuits pour tous les niveaux.",
         cambridge: "Matériaux officiels de préparation aux examens Cambridge.",
         ieltsOfficial: "Sujets d'entraînement et guides de préparation officiels de l'IELTS.",
@@ -583,7 +591,7 @@
         ctaSecondary: "Voir mes expériences",
         cardRole: "Finance & Comptabilité",
         caseStudyLabel: "Expérience clé - Finance & Enseignement",
-        caseStudyTitle: "Assistante d'enseignement - Finance & Risk Management",
+        caseStudyTitle: "Assistante d'Enseignement - Finance & Risk Management",
         caseStudyDesc: "Support pédagogique pour les cours de finance et gestion des risques au College of Global Banking and Finance, NCCU. Accompagnement des étudiants, préparation de supports et coordination sur deux mandats.",
       },
       marketingHero: {                     // → marketing.html (section héro)
@@ -596,7 +604,7 @@
         corde5: "+5,1 % de conversion · KPN",
         title1: "Je transforme les chiffres",
         title2: "en décisions de campagne.",
-        reg1Lbl: "de vues sur REDnote",
+        reg1Lbl: "de vues sur Rednote",
         reg1Src: "Engoo · Assistante Marketing",
         reg2Lbl: "campagnes display simultanées",
         reg2Src: "leboncoin · Traffic Manager",
@@ -612,9 +620,10 @@
         ctaPrimary: "Voir mes créations",
         ctaSecondary: "Me contacter",
         cardRole: "Marketing 360",
-        caseStudyLabel: "Étude de cas - Engoo XHS",
-        caseStudyTitle: "Dashboard Analytics & Croissance Xiaohongshu",
-        caseStudyS: "Situation : Engoo gérait son compte Xiaohongshu sans outil de mesure centralisé, rendant impossible la quantification de l'engagement et l'optimisation du ROI du contenu.",
+        caseStudyLabel: "Étude de cas - Engoo Rednote",
+        caseStudyTitle: "Dashboard Analytics & Croissance Rednote",
+        caseStudyDesc: "Reprise et développement du compte Rednote d'Engoo sur le marché chinois simplifié : stratégie de contenu STP, A/B testing visuel et textuel, ciblage par sous-segments.",
+        caseStudyS: "Situation : Engoo gérait son compte Rednote sans outil de mesure centralisé, rendant impossible la quantification de l'engagement et l'optimisation du ROI du contenu.",
         caseStudyA: "Action : Conception d'un dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) permettant une comparaison A/B automatique des périodes pour piloter la stratégie STP.",
         caseStudyR: "Résultat : temps quotidien de reporting réduit de 30 % et croissance de 89 % des interactions grâce à l'identification des formats visuels gagnants.",
         caseStudyInsight2: " – Le 'Golden Time' de publication pour le segment cible se situe entre 19 h et 21 h.",
@@ -629,8 +638,8 @@
         ctaSecondary: "Voir mes expériences",
         cardRole: "Analyse de Données & Informatique Décisionnelle",
         caseStudyLabel: "Excel · TCD · Séries temporelles · Analytics",
-        caseStudyTitle: "Dashboard Excel - Performance Xiaohongshu",
-        caseStudyDesc: "Construction d'un tableau de bord Excel complet pour suivre 11 métriques quotidiennes du compte Xiaohongshu d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.",
+        caseStudyTitle: "Dashboard Excel - Performance Rednote",
+        caseStudyDesc: "Construction d'un tableau de bord Excel complet pour suivre 11 métriques quotidiennes du compte Rednote d'Engoo : KPIs, évolution temporelle et comparaison A/B de périodes.",
       },
       portfolioTeaser: {                   // → finance.html / marketing.html / data.html (bloc CTA)
         label: "Portfolio",
@@ -638,18 +647,18 @@
       },
       marketingPortfolioTeaser: {         // → marketing.html (teaser portfolio)
         title: "Campagnes, Dashboards & Visuels de Marque",
-        desc: "Stratégies Xiaohongshu, Analyses de Performance et Créations Visuelles.",
+        desc: "Stratégies Rednote, Analyses de Performance et Créations Visuelles.",
       },
       financePortfolioTeaser: {           // → finance.html (teaser portfolio)
         title: "Analyses, Modèles & Études de Cas",
         desc: "Modélisations financières, analyses de données et livrables conseil.",
       },
       dataPortfolioTeaser: {              // → data.html (teaser portfolio)
-        title: "Dashboards, visualisations & analyses de données",
+        title: "Dashboards, Visualisations & Analyses de Données",
         desc: "Tableaux de bord Excel, rapports Power BI et analyses quantitatives appliquées.",
       },
       indexPortfolioTeaser: {             // → index.html (teaser portfolio sur page d'accueil)
-        title: "Réalisations & projets concrets",
+        title: "Réalisations & Projets Concrets",
         desc: "Marketing, data, finance & enseignement : découvrez les projets par domaine.",
       },
       teachingHero: {                      // → teaching.html (section héro)
@@ -662,7 +671,7 @@
         availabilityValue: "En ligne · Disponible",
       },
       teachingLanguages: {                 // → teaching.html (section Langues)
-        title: "Compétences linguistiques",
+        title: "Compétences Linguistiques",
         subtitle: "Certifications officielles et pratique quotidienne dans quatre langues.",
       },
       teachingServices: {                  // → teaching.html (section Services)
@@ -694,7 +703,7 @@
           tag4: "全民英檢 GEPT",
         },
         skills: {
-          title: "Renforcement D'Une Compétence Ciblée",
+          title: "Renforcement d'une Compétence Ciblée",
           desc: "Travail ciblé sur une compétence spécifique : rédaction, lecture, expression orale, grammaire ou préparation aux rédactions scolaires.",
           tag1: "Writing",
           tag2: "Reading",
@@ -703,7 +712,7 @@
         },
       },
       teachingExp: {                       // → teaching.html (section Expériences d'enseignement)
-        title: "Expériences D'Enseignement",
+        title: "Expériences d'Enseignement",
         subtitle: "Cours en ligne, préparation aux certifications et services de traduction.",
         translation: {
           period: "2022 – 2024",
@@ -714,7 +723,7 @@
         },
       },
       teachingEngagement: {                // → teaching.html (section Engagement)
-        title: "Engagement linguistique & international",
+        title: "Engagement Linguistique & International",
         subtitle: "Programmes de mentorat linguistique, immersion culturelle et échanges internationaux.",
       },
       // ─── experience ──────────────────────────────────────────────────────────
@@ -775,23 +784,23 @@
           period: "10/2024 – 02/2025",
           title: "Assistante Marketing",
           company: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
-          point1: "Stratégie de contenu Xiaohongshu fondée sur le modèle STP et l'A/B testing : +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
+          point1: "Stratégie de contenu Rednote fondée sur le modèle STP et l'A/B testing : +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
           point2: "Veille concurrentielle, analyse d'audience et adaptation des visuels par sous-segment cible.",
           point3: "Création de contenus Meta (Facebook & Instagram) alignés avec les tendances et la marque.",
           point4: "Traduction de 67 articles (anglais → chinois simplifié) couvrant des thèmes business, tech et culture.",
           dataPoint1: "Dashboard Excel dynamique : 11 métriques quotidiennes, comparaison A/B automatisée et visualisation des KPI, pour 30 % de temps de reporting quotidien en moins.",
-          dataPoint2: "Analyses de marché approfondies et veille concurrentielle pour optimiser la stratégie de contenu sur le segment du chinois simplifié (REDnote / Xiaohongshu).",
+          dataPoint2: "Analyses de marché approfondies et veille concurrentielle pour optimiser la stratégie de contenu sur le segment du chinois simplifié (Rednote).",
           dataPoint3: "Stratégie de contenu data-driven fondée sur le modèle STP : +93,3 % de vues, +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
           finTitle: "Assistante Marketing (Stage)",
           finCompany: "Engoo, DMM.com · Plateforme internationale d'apprentissage des langues en ligne",
           finPoint1: "Analyse de marché approfondie pour développer et affiner les stratégies marketing sur le segment du chinois simplifié.",
-          finPoint2: "Gestion des métriques de performance et de contenu sur Xiaohongshu : +93,3 % de vues, +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
+          finPoint2: "Gestion des métriques de performance et de contenu sur Rednote : +93,3 % de vues, +89,1 % d'interactions et +69,7 % d'abonnés en 3 mois.",
           mkPoint1: "Tableaux de bord dynamiques sur Excel pour piloter la performance marketing : temps de traitement des données réduit de 30 %.",
-          mkPoint2: "Contenus REDnote fondés sur une veille des tendances : visibilité +93,3 %, engagement +89,1 % et abonnés +69,7 %.",
+          mkPoint2: "Contenus Rednote fondés sur une veille des tendances : visibilité +93,3 %, engagement +89,1 % et abonnés +69,7 %.",
           mkPoint3: "Analyses de marché et veille concurrentielle pour optimiser la stratégie marketing sur le segment du chinois simplifié.",
           mkPoint4: "Coordination des flux de localisation avec le pôle contenu, pour une image de marque homogène à l'international.",
           portfolioLink: "Voir les créations (PDF)",
-          excelLink: "Télécharger le tableau de bord XHS (Excel)",
+          excelLink: "Télécharger le tableau de bord Rednote (Excel)",
           excelHref: "assets/Engoo_XHS Dashboard_FR.xlsx",   // fichier absent du depot : lien retire des pages
           weeklyReportLabel: "Rapport hebdomadaire",
           weeklyReportEN: "Télécharger – Version anglaise",
@@ -801,9 +810,9 @@
           stat3: "Interactions",
           screenshot1: "assets/Engoo_Excel/Engoo Dashboard_FR.webp",
           screenshot2: "assets/Engoo_Excel/Engoo Data_FR.png",
-          screenshotAlt1: "Tableau de bord de performance – Engoo XHS",
-          screenshotAlt2: "Données brutes – Engoo XHS",
-          showcaseLabel: "Livrables - Dashboard XHS",
+          screenshotAlt1: "Tableau de bord de performance – Engoo Rednote",
+          screenshotAlt2: "Données brutes – Engoo Rednote",
+          showcaseLabel: "Livrables - Dashboard Rednote",
           showcaseBadge1: "- Évaluation générale",
           showcaseTitle1: "Vue d'ensemble - 30 derniers jours",
           showcaseDesc1: "Section gauche : KPIs principaux (vues, abonnés, engagement, notoriété) et graphiques d'évolution sur la période sélectionnée.",
@@ -816,20 +825,20 @@
         },
         teaching: {                        // point1-2 → index.html | dataSupport/dataCoord → data.html | finTitle/finPoint → finance.html
           period: "07/2023 – 12/2023 · 07/2024 – 04/2025",
-          title: "Assistante d'enseignement",
+          title: "Assistante d'Enseignement",
           company: "Faculté de Banque et Finance Internationale, NCCU",
           point1: "Coordination de la logistique opérationnelle de 9 cours et interface entre des parties prenantes exigeantes.",
           point2: "Organisation d'événements (conférences thématiques, sessions de networking) : flux de communication et gestion des prestataires.",
           dataSupport: "Organisation d'événements (conférences thématiques, sessions de networking) : communication et accueil des intervenants externes.",
           dataCoord: "Coordination de la logistique de 9 cours et interface entre étudiants, enseignants et partenaires.",
-          finTitle: "Assistante de cours",
+          finTitle: "Assistante de Cours",
           finCompany: "Faculté de Banque et Finance Internationale, NCCU",
           finPoint1: "Coordination logistique de 9 cours de finance, en assurant l'interface entre les étudiants, les enseignants et les partenaires entreprise.",
           finPoint2: "Animation d'événements de networking et de briefings, dans le respect des réglementations universitaires et gestion de plannings multi-parties prenantes sous contrainte de temps.",
         },
         research: {                        // point1-2 → index.html | dataPoint → data.html | finCompany/finPoint → finance.html
           period: "06/2023 – 12/2023",
-          title: "Assistante de recherche",
+          title: "Assistante de Recherche",
           company: "Institut des Relations Internationales, NCCU",
           point1: "Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été.",
           point2: "Synthèse d'analyses complexes et visualisation des données sous PowerPoint pour formuler des recommandations stratégiques.",
@@ -841,7 +850,7 @@
         tutorABC: {                        // → teaching.html (section Expériences d'enseignement)
           period: "08/2024 – Présent",
           location: "En ligne",
-          title: "Professeure particulière d'anglais en ligne",
+          title: "Professeure Particulière d'Anglais en Ligne",
           point1: "Cours particuliers d'anglais en ligne pour apprenants de niveaux variés (primaire au lycée).",
           point2: "Préparation aux certifications IELTS et Cambridge English (YLE, A2 Key, B1 Preliminary, B2 First).",
           coursesLabel: "Cours dispensés",
@@ -882,8 +891,8 @@
         engooCard: { dashboardDesc: "11 métriques / jour · Séries temporelles · Comparaison A/B de périodes." },
         engoo: {
           tag: "Social Media",
-          title: "Engoo – Campagne Xiaohongshu",
-          desc: "Prise en charge et développement du compte Xiaohongshu d'Engoo sur le marché sinophone. Élaboration d'une stratégie de contenu fondée sur le modèle STP et ciblage de sous-segments selon leur profil comportemental.",
+          title: "Engoo – Campagne Rednote",
+          desc: "Prise en charge et développement du compte Rednote d'Engoo sur le marché sinophone. Élaboration d'une stratégie de contenu fondée sur le modèle STP et ciblage de sous-segments selon leur profil comportemental.",
           stat1: "Vues",
           stat2: "Abonnés",
           stat3: "Interactions",
@@ -906,11 +915,11 @@
         },
         design: {
           tag: "Photographie & Design",
-          title: "Photographie & supports promotionnels",
+          title: "Photographie & Supports Promotionnels",
           desc: "Photographie de paysages, portraits et architecture – recherche d'angles et d'éléments inattendus. Création de supports de communication pour événements : badges, affiches, publications pour le club de kyudo et d'autres activités.",
         },
         packaging: {
-          title: "Concours de design d'emballage – 18th Penwards",
+          title: "Concours de Design d'Emballage – 18th Penwards",
           desc: "Affiche réalisée à titre personnel en s'inspirant du thème de la 18e édition du concours de design d'emballage Penwards (2024) : exercice de style autour de la composition visuelle et de la typographie.",
         },
         insightLbl: "Défi",
@@ -919,7 +928,7 @@
           heroEyebrow: "Yu-Ting Tseng · Projets sélectionnés",
           heroDesc: "Campagnes orientées données, direction artistique et gestion de communauté, une approche conjuguant rigueur analytique et création visuelle au service de la performance.",
           heroStatProjets: "Projets",
-          heroStatGrowth: "Croissance XHS",
+          heroStatGrowth: "Croissance Rednote",
           heroStatPart: "Participants AIESEC",
           filterAll: "Tous",
           filterStrategie: "Analyse & Stratégie",
@@ -971,8 +980,8 @@
           kyudoCap1: "Badge nominatif – maquette",
           weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
-          weeklyTitle: "Engoo – Rapport hebdomadaire XHS",
-          weeklyDesc: "Rapport hebdomadaire produit dans le cadre du stage Engoo, synthétisant les performances du compte Xiaohongshu en diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.",
+          weeklyTitle: "Engoo – Rapport Hebdomadaire Rednote",
+          weeklyDesc: "Rapport hebdomadaire produit dans le cadre du stage Engoo, synthétisant les performances du compte Rednote en diapositives claires et actionnables : indicateurs clés, tendances hebdomadaires et recommandations éditoriales destinées à l'équipe de direction.",
           weeklyCarouselLblFR: "Version française",
           weeklyCarouselLblEN: "Version anglaise",
           board: {
@@ -984,7 +993,7 @@
             readProjects: "Projets",
             title: "Résultats des Projets",
             intro: "Chaque fiche donne le résultat obtenu avant le nom du projet. Cliquez sur une fiche pour ouvrir l'étude de cas correspondante.",
-            p1Name: "Engoo · Dashboard Xiaohongshu",
+            p1Name: "Engoo · Dashboard Rednote",
             p1Cat: "Dashboard · Social Analytics",
             p1Lbl: "Vues sur 3 mois",
             p1Bar1: "Vues",
@@ -1041,7 +1050,7 @@
           heroEyebrow: "Yu-Ting Tseng · Analyse de Données & Business Insights",
           heroDesc: "Structurer les données, suivre les indicateurs, tester les hypothèses, puis traduire chaque constat en recommandations business priorisées.",
           heroStatProjets: "Projets",
-          heroStatGrowth: "Croissance XHS",
+          heroStatGrowth: "Croissance Rednote",
           heroStatHypo: "Hypothèses M&A",
           filterAll: "Tous",
           filterPerformance: "Suivi de la Performance",
@@ -1070,17 +1079,17 @@
           weekly: {
             num: "Reporting · Data Storytelling",
             tag: "PowerPoint · Data Storytelling · Reporting",
-            title: "Engoo – Rapport Hebdomadaire XHS",
-            desc: "Rapport hebdomadaire synthétisant les performances du compte Xiaohongshu : indicateurs clés, tendances et recommandations éditoriales pour l'équipe de direction.",
+            title: "Engoo – Rapport Hebdomadaire Rednote",
+            desc: "Rapport hebdomadaire synthétisant les performances du compte Rednote : indicateurs clés, tendances et recommandations éditoriales pour l'équipe de direction.",
             sitLbl: "Contexte & Objectif",
-            sit: "Aucun format standardisé de reporting XHS au sein de l'équipe. Chaque semaine, la direction manquait de visibilité sur les tendances de performance. Objectif : produire un livrable hebdomadaire actionnable, lisible par un non-analyste, en moins d'une heure.",
+            sit: "Aucun format standardisé de reporting Rednote au sein de l'équipe. Chaque semaine, la direction manquait de visibilité sur les tendances de performance. Objectif : produire un livrable hebdomadaire actionnable, lisible par un non-analyste, en moins d'une heure.",
             actLbl: "Structure du Rapport",
-            act: "Diapositives : page de titre (semaine du 27/01/2025 au 02/02/2025, campagne du Nouvel An chinois), synthèse en quatre points, tableau des KPIs comparé à la semaine précédente avec un graphique jour par jour, aperçu des contenus, facteurs de la semaine, recommandations éditoriales et plan d'action de la semaine suivante (responsable, échéance, indicateur de réussite). Données issues du dashboard Excel XHS.",
+            act: "Diapositives : page de titre (semaine du 27/01/2025 au 02/02/2025, campagne du Nouvel An chinois), synthèse en quatre points, tableau des KPIs comparé à la semaine précédente avec un graphique jour par jour, aperçu des contenus, facteurs de la semaine, recommandations éditoriales et plan d'action de la semaine suivante (responsable, échéance, indicateur de réussite). Données issues du dashboard Excel Rednote.",
             resLbl: "Impact & Utilisation",
             res: "Rapport adopté comme outil de pilotage hebdomadaire par l'équipe. La semaine présentée est la meilleure depuis le début du suivi (10/2024) : 3 063 vues (+50 %), 47 nouveaux abonnés (+147 %), taux d'engagement de 5,5 % (+0,4 pt). Chaque recommandation devient une action de la semaine suivante, avec un responsable, une échéance et un indicateur de réussite.",
             btnFR: "Télécharger – Version française",
             btnEN: "Télécharger – Version anglaise",
-            skillDashboard: "Voir le Dashboard XHS",
+            skillDashboard: "Voir le Dashboard Rednote",
             statSlides: "Diapositives",
             statFreq: "Hebdomadaire",
           },
@@ -1135,7 +1144,7 @@
           portfolioLink: "Voir les créations (PDF)",
         },
         camps: {
-          title: "Co-fondatrice (Projet entrepreneurial)",
+          title: "Co-Fondatrice (Projet Entrepreneurial)",
           org: "Sora Education · Cours de langues étrangères et soft skills pour enfants pendant les vacances scolaires",
           text:
             "Organisation de cinq camps d'été d'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l'offre de cours et la stratégie marketing.",
@@ -1143,7 +1152,7 @@
           stat2: "Bénéfice net généré",
         },
         clubs: {
-          title: "Autres clubs étudiants",
+          title: "Autres Clubs Étudiants",
           text:
             "Participation à International College Exchange, Toastmasters, Kyudo, Kendo et Ikebana (art floral).",
         },
@@ -1302,6 +1311,13 @@
         deepDiveData: "→ Data page",
         seePortfolio: "→ See in the portfolio",
         seeVisuals: "→ See the visuals in the portfolio",
+        seeDashVisuals: "→ See the dashboard and visuals in the portfolio",
+        seeCampaignVisuals: "→ See the campaign visuals in the portfolio",
+        seeDashboard: "→ See the dashboard in the portfolio",
+        engooDashTag: "Excel Dashboard · Analytics",
+        engooDashTitle: "Engoo – Rednote Dashboard",
+        aiesecTag: "Campaign · Leadership",
+        aiesecTitle: "AIESEC – YOLO International Camp",
         deepDiveLabel: "Detailed pages by domain:",
         aiesecDesc: "Led a 4-person marketing team for the international YOLO camp. Created main campaign visuals (posters, posts) for volunteer and participant recruitment.",
         kpnDesc: "On-page & technical SEO optimisation, KPI tracking (traffic, CTR, conversions) via Google Analytics and SEA campaign reporting.",
@@ -1330,11 +1346,11 @@
         title1: "Master's student at emlyon, I work on digital marketing",
         title2: "from the numbers side.",
         summary:
-          "Three digital marketing internships: SEO and Meta and Google campaigns at KPN, social media at Engoo, and since July 2026 traffic management (AdOps) at leboncoin in Paris. Before that, a bachelor's degree in languages and diplomacy in Taiwan and a semester at Paris 1. Now on a gap year before my M2, I am looking for a second six-month internship from January 2027.",
+          "Three digital marketing internships: SEO and Meta and Google campaigns at KPN, social media at Engoo, and since 07/2026 traffic management (AdOps) at leboncoin in Paris. Before that, a bachelor's degree in languages and diplomacy in Taiwan and a semester at Paris 1. Now on a gap year before my M2, I am looking for a second six-month internship from January 2027.",
         locationLabel: "Based in",
         locationValue: "Paris, France",
         availabilityLabel: "Available from",
-        availabilityValue: "January 2027 (6-month gap year internship)",
+        availabilityValue: "01/2027 (6-month gap year internship)",
         ctaPrimary: "Contact me",
         ctaSecondary: "View my experience",
         cardName: "Yu‑Ting Tseng",
@@ -1485,6 +1501,7 @@
       },
       footer: {
         rights: "All rights reserved.",
+        personal: "Personal website presenting my background and projects.",
         overview: "Overview",
         marketing: "Digital Marketing & Design",
         data: "Data Analytics & Business Insights",
@@ -1666,7 +1683,7 @@
         corde5: "+5.1% conversion rate · KPN",
         title1: "I turn numbers",
         title2: "into campaign decisions.",
-        reg1Lbl: "REDnote views",
+        reg1Lbl: "Rednote views",
         reg1Src: "Engoo · Marketing Assistant",
         reg2Lbl: "concurrent display campaigns",
         reg2Src: "leboncoin · Traffic Manager",
@@ -1682,9 +1699,10 @@
         ctaPrimary: "View my portfolio",
         ctaSecondary: "Contact me",
         cardRole: "Digital Marketing & Content Creation",
-        caseStudyLabel: "Case Study · Engoo Xiaohongshu",
-        caseStudyTitle: "Analytics Dashboard & Xiaohongshu Growth",
-        caseStudyS: "Situation: Engoo lacked a centralized tool to track Xiaohongshu performance, making it difficult to quantify engagement and optimize content ROI.",
+        caseStudyLabel: "Case Study · Engoo Rednote",
+        caseStudyTitle: "Analytics Dashboard & Rednote Growth",
+        caseStudyDesc: "Took over and grew Engoo's Rednote account for the Simplified Chinese market: STP content strategy, visual and copy A/B testing, sub-segment targeting.",
+        caseStudyS: "Situation: Engoo lacked a centralized tool to track Rednote performance, making it difficult to quantify engagement and optimize content ROI.",
         caseStudyA: "Action: Developed a dynamic Excel dashboard (Pivot Tables, Nested Formulas) featuring automated A/B period comparison to drive the STP strategy.",
         caseStudyR: "Result: Daily reporting time cut by 30% and an 89% interaction increase by identifying winning visual styles.",
         caseStudyInsight2: " – The optimal posting 'Golden Time' for the target segment is 7:00 PM – 9:00 PM.",
@@ -1699,28 +1717,28 @@
         ctaSecondary: "View my experience",
         cardRole: "Data Analysis & Business Intelligence",
         caseStudyLabel: "Excel · PivotTables · Time Series · Analytics",
-        caseStudyTitle: "Excel Dashboard – Xiaohongshu Performance",
-        caseStudyDesc: "Built a comprehensive Excel dashboard to track 11 daily metrics for Engoo's Xiaohongshu account: KPIs overview, time-series trends and A/B period comparison.",
+        caseStudyTitle: "Excel Dashboard – Rednote Performance",
+        caseStudyDesc: "Built a comprehensive Excel dashboard to track 11 daily metrics for Engoo's Rednote account: KPIs overview, time-series trends and A/B period comparison.",
       },
       portfolioTeaser: {
         label: "Portfolio",
         cta: "Explore the portfolio →",
       },
       marketingPortfolioTeaser: {
-        title: "Campaigns, dashboards & brand visuals",
-        desc: "Xiaohongshu strategies, performance analytics and visual creations.",
+        title: "Campaigns, Dashboards & Brand Visuals",
+        desc: "Rednote strategies, performance analytics and visual creations.",
       },
       financePortfolioTeaser: {
-        title: "Analyses, models & case studies",
+        title: "Analyses, Models & Case Studies",
         desc: "Financial modelling, data analysis and consulting deliverables.",
       },
       dataPortfolioTeaser: {
-        title: "Dashboards, visualisations & data analyses",
+        title: "Dashboards, Visualisations & Data Analyses",
         desc: "Excel dashboards, Power BI reports and applied quantitative analyses.",
       },
       indexPortfolioTeaser: {
-        title: "Projects & concrete achievements",
-        desc: "Marketing, data, finance & teaching — explore projects by domain.",
+        title: "Projects & Concrete Achievements",
+        desc: "Marketing, data, finance & teaching: explore projects by domain.",
       },
       teachingHero: {
         kicker: "Languages & international engagement",
@@ -1748,7 +1766,7 @@
           tag4: "Target Band 6.0 – 8.0+",
         },
         grades: {
-          title: "English For All Levels",
+          title: "English for All Levels",
           desc: "Lessons aligned with the Taiwanese school curriculum from primary to high school. Grammar, vocabulary, comprehension and expression.",
           tag1: "Primary School",
           tag2: "Middle School",
@@ -1839,19 +1857,23 @@
           period: "10/2024 – 02/2025",
           title: "Marketing Assistant",
           company: "Engoo, DMM.com Group",
-          point1: "Xiaohongshu content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
+          point1: "Rednote content strategy using STP model and A/B testing – +89.1% interactions and +69.7% followers in 3 months.",
+          mkPoint1: "Built dynamic Excel dashboards to steer marketing performance, cutting data processing time by 30%.",   // → marketing.html
+          mkPoint2: "Created trend-driven Rednote content: +93.3% visibility, +89.1% engagement and +69.7% followers.",
+          mkPoint3: "Conducted market analyses and competitive monitoring to optimise the marketing strategy for the Simplified Chinese segment.",
+          mkPoint4: "Coordinated localisation workflows with the content team to keep the brand image consistent internationally.",
           point2: "Competitive monitoring, audience analysis and visual adaptation by target sub-segment.",
           point3: "Created Meta content (Facebook & Instagram) aligned with trends and brand identity.",
           point4: "Translated 67 English articles on business, technology and culture into Simplified Chinese.",
           dataPoint1: "Built a dynamic Excel dashboard – 11 daily metrics, automated A/B comparison and KPI visualisation – cutting daily reporting time by 30%.",
-          dataPoint2: "Conducted in-depth market analyses and competitive monitoring to optimise the content strategy for the simplified Chinese market (REDnote / Xiaohongshu).",
+          dataPoint2: "Conducted in-depth market analyses and competitive monitoring to optimise the content strategy for the simplified Chinese market (Rednote).",
           dataPoint3: "Deployed a data-driven content strategy based on the STP model – +93.3% views, +89.1% interactions and +69.7% followers in 3 months.",
           finTitle: "Marketing Assistant (Internship)",
           finCompany: "Engoo, DMM.com · International Online Language Learning Platform",
           finPoint1: "Performed market analysis to develop and refine marketing strategies for the Simplified Chinese market.",
-          finPoint2: "Managed channel performance and content metrics for Xiaohongshu, boosting views by 93.3%, engagement by 89.1% and followers by 69.7% within 3 months.",
+          finPoint2: "Managed channel performance and content metrics for Rednote, boosting views by 93.3%, engagement by 89.1% and followers by 69.7% within 3 months.",
           portfolioLink: "View creations (PDF)",
-          excelLink: "Download XHS Dashboard (Excel)",
+          excelLink: "Download Rednote Dashboard (Excel)",
           excelHref: "assets/Engoo_XHS Dashboard_EN.xlsx",   // fichier absent du depot : lien retire des pages
           weeklyReportLabel: "Weekly Report",
           weeklyReportEN: "Download – English version",
@@ -1861,9 +1883,9 @@
           stat3: "Interactions",
           screenshot1: "assets/Engoo_Excel/Engoo Dashboard_EN.webp",
           screenshot2: "assets/Engoo_Excel/Engoo Data_EN.png",
-          screenshotAlt1: "Performance Dashboard – Engoo XHS",
-          screenshotAlt2: "Raw Data – Engoo XHS",
-          showcaseLabel: "Work output · XHS Dashboard",
+          screenshotAlt1: "Performance Dashboard – Engoo Rednote",
+          screenshotAlt2: "Raw Data – Engoo Rednote",
+          showcaseLabel: "Work output · Rednote Dashboard",
           showcaseBadge1: " – General Performance",
           showcaseTitle1: "Overview · Last 30 Days",
           showcaseDesc1: "Left panel: core KPIs (views, followers, engagement, brand awareness) and trend charts for the selected period.",
@@ -1936,8 +1958,8 @@
         engooCard: { dashboardDesc: "11 metrics / day · Time series · A/B period comparison." },
         engoo: {
           tag: "Social Media",
-          title: "Engoo – Xiaohongshu Campaign",
-          desc: "Assumed responsibility for and developed Engoo's Xiaohongshu account for the Sinophone market. Developed a content strategy grounded in the STP model and implemented sub-segment targeting based on behavioural profiles.",
+          title: "Engoo – Rednote Campaign",
+          desc: "Assumed responsibility for and developed Engoo's Rednote account for the Sinophone market. Developed a content strategy grounded in the STP model and implemented sub-segment targeting based on behavioural profiles.",
           stat1: "Views",
           stat2: "Followers",
           stat3: "Interactions",
@@ -1973,7 +1995,7 @@
           heroEyebrow: "Yu-Ting Tseng · Selected Projects",
           heroDesc: "Data-driven campaigns, art direction and community management, an approach combining analytical rigour with visual creativity in service of measurable performance.",
           heroStatProjets: "Projects",
-          heroStatGrowth: "XHS Growth",
+          heroStatGrowth: "Rednote Growth",
           heroStatPart: "AIESEC Participants",
           filterAll: "All",
           filterStrategie: "Analytics & Strategy",
@@ -2025,8 +2047,8 @@
           kyudoCap1: "Name badge – mockup",
           weeklyNum: "Reporting",
           weeklyTag: "PowerPoint · Data Storytelling · Reporting",
-          weeklyTitle: "Engoo – XHS Weekly Report",
-          weeklyDesc: "Weekly report produced during the Engoo internship, distilling Xiaohongshu account performance into clear, actionable slides: key metrics, weekly trends and editorial recommendations for the management team.",
+          weeklyTitle: "Engoo – Rednote Weekly Report",
+          weeklyDesc: "Weekly report produced during the Engoo internship, distilling Rednote account performance into clear, actionable slides: key metrics, weekly trends and editorial recommendations for the management team.",
           weeklyCarouselLblFR: "French version",
           weeklyCarouselLblEN: "English version",
           board: {
@@ -2038,7 +2060,7 @@
             readProjects: "Projects",
             title: "Project Results",
             intro: "Each card leads with the result before the project name. Click a card to open the matching case study.",
-            p1Name: "Engoo · Xiaohongshu Dashboard",
+            p1Name: "Engoo · Rednote Dashboard",
             p1Cat: "Dashboard · Social Analytics",
             p1Lbl: "Views over 3 months",
             p1Bar1: "Views",
@@ -2095,7 +2117,7 @@
           heroEyebrow: "Yu-Ting Tseng · Data Analytics & Business Insights",
           heroDesc: "Structuring data, tracking KPIs, testing hypotheses, then turning every finding into prioritised business recommendations.",
           heroStatProjets: "Projects",
-          heroStatGrowth: "XHS Growth",
+          heroStatGrowth: "Rednote Growth",
           heroStatHypo: "M&A Hypotheses",
           filterAll: "All",
           filterPerformance: "Performance Tracking",
@@ -2124,17 +2146,17 @@
           weekly: {
             num: "Reporting · Data Storytelling",
             tag: "PowerPoint · Data Storytelling · Reporting",
-            title: "Engoo – XHS Weekly Report",
-            desc: "Weekly report distilling Xiaohongshu account performance: key metrics, trends and editorial recommendations for the management team.",
+            title: "Engoo – Rednote Weekly Report",
+            desc: "Weekly report distilling Rednote account performance: key metrics, trends and editorial recommendations for the management team.",
             sitLbl: "Context & Objective",
-            sit: "No standardised XHS reporting format within the team. Each week, management lacked visibility into performance trends. Objective: produce a weekly deliverable, readable by a non-analyst, in under one hour.",
+            sit: "No standardised Rednote reporting format within the team. Each week, management lacked visibility into performance trends. Objective: produce a weekly deliverable, readable by a non-analyst, in under one hour.",
             actLbl: "Report Structure",
-            act: "Slides: title page (week of 27/01/2025 – 02/02/2025, Chinese New Year campaign), four-point executive summary, KPI scorecard against the previous week with a day-by-day chart, content highlights, what drove the week, editorial recommendations and next week's action plan (owner, timing, success metric). Data sourced from the XHS Excel dashboard.",
+            act: "Slides: title page (week of 27/01/2025 – 02/02/2025, Chinese New Year campaign), four-point executive summary, KPI scorecard against the previous week with a day-by-day chart, content highlights, what drove the week, editorial recommendations and next week's action plan (owner, timing, success metric). Data sourced from the Rednote Excel dashboard.",
             resLbl: "Impact & Usage",
             res: "Report adopted as the team's weekly management tool. The week presented is the best since tracking began (10/2024): 3,063 views (+50%), 47 new followers (+147%), 5.5% engagement rate (+0.4 pt). Each recommendation becomes an action for the following week, with an owner, a deadline and a success metric.",
             btnFR: "Download – French version",
             btnEN: "Download – English version",
-            skillDashboard: "View XHS Dashboard",
+            skillDashboard: "View Rednote Dashboard",
             statSlides: "Slides",
             statFreq: "Weekly",
           },
@@ -2257,7 +2279,7 @@
         },
         nuit: {
           period: "12/2023",
-          title: "Delegate – Nuit des Idées (French-Mandarin debates)",
+          title: "Delegate – Nuit des Idées (French-Mandarin Debates)",
           org:
             "French Office in Taipei, Institut Français & Taipei Department of Cultural Affairs",
           point1:
@@ -2289,7 +2311,7 @@
         },
       },
       contact: {
-        heading: "Let's connect",
+        heading: "Let's Connect",
         intro:
           "Interested in an internship, a project or a collaboration? Send me a message and I'll be happy to reply.",
         labelEmail: "Email",
@@ -2356,6 +2378,13 @@
         deepDiveData: "→ 數據專頁",
         seePortfolio: "→ 前往作品集",
         seeVisuals: "→ 前往作品集查看視覺作品",
+        seeDashVisuals: "→ 前往作品集查看儀表板與視覺作品",
+        seeCampaignVisuals: "→ 前往作品集查看活動視覺",
+        seeDashboard: "→ 前往作品集查看儀表板",
+        engooDashTag: "Excel 儀表板 · 數據分析",
+        engooDashTitle: "Engoo – 小紅書儀表板",
+        aiesecTag: "活動 · 領導",
+        aiesecTitle: "AIESEC – YOLO 國際營隊",
         deepDiveLabel: "各領域詳細頁面：",
         aiesecDesc: "帶領 AIESEC NCCU YOLO 國際營隊行銷小組（4 人），製作主視覺海報及社群貼文，招募志工與學員。",
         kpnDesc: "執行 SEO 優化，透過 Google Analytics 追蹤 KPI（流量、CTR、轉換率），並進行 SEA 廣告活動管理。",
@@ -2384,11 +2413,11 @@
         title1: "emlyon 商學院碩士生，做數位行銷，",
         title2: "從數字那一端。",
         summary:
-          "三段數位行銷實習：KPN 的 SEO 與 Meta、Google 廣告投放，Engoo 的社群經營，以及 2026 年 7 月起在巴黎 leboncoin 擔任 Traffic Manager / AdOps。在此之前於台灣完成語言與外交雙主修學士，並於巴黎第一大學交換一學期。目前處於 M2 前的間隔年，正在尋找 2027 年 1 月起、為期六個月的第二段實習。",
+          "三段數位行銷實習：KPN 的 SEO 與 Meta、Google 廣告投放，Engoo 的社群經營，以及 07/2026 起在巴黎 leboncoin 擔任 Traffic Manager / AdOps。在此之前於台灣完成語言與外交雙主修學士，並於巴黎第一大學交換一學期。目前處於 M2 前的間隔年，正在尋找 2027 年 1 月起、為期六個月的第二段實習。",
         locationLabel: "現居地",
         locationValue: "法國巴黎",
         availabilityLabel: "可實習起始日",
-        availabilityValue: "2027 年 1 月（6 個月間隔年實習）",
+        availabilityValue: "01/2027（6 個月間隔年實習）",
         ctaPrimary: "聯絡我",
         ctaSecondary: "查看我的經歷",
         cardName: "Yu‑Ting Tseng",
@@ -2522,6 +2551,7 @@
       },
       footer: {
         rights: "版權所有。",
+        personal: "個人網站，介紹我的經歷與專案。",
         overview: "總覽",
         marketing: "數位行銷與創意設計",
         data: "數據分析與商業洞察",
@@ -2720,6 +2750,7 @@
         cardRole: "數位行銷 & 內容創作",
         caseStudyLabel: "案例研究 · Engoo 小紅書",
         caseStudyTitle: "分析儀表板與小紅書成長策略 | Excel Analytics",
+        caseStudyDesc: "接手並經營 Engoo 的小紅書簡體中文市場帳號：STP 內容策略、視覺與文案 A/B 測試、子客群精準鎖定。",
         caseStudyS: "情境（Situation）：Engoo 缺乏集中追蹤小紅書表現的工具，導致難以量化互動成效並優化內容 ROI。",
         caseStudyA: "行動（Action）：設計動態 Excel 儀表板（樞紐分析表、巢狀公式），具備自動 A/B 期間比較功能，驅動 STP 策略執行。",
         caseStudyR: "結果（Result）：每日報告時間減少 30%，並透過識別最佳視覺風格，推動互動量增長 89%。",
@@ -2878,7 +2909,7 @@
           point3: "創作符合趨勢與品牌調性的 Meta（Facebook & Instagram）內容。",
           point4: "翻譯 67 篇英文文章（英文→簡體中文），主題涵蓋商業、科技與文化。",
           dataPoint1: "建立動態 Excel 儀表板，追蹤 11 項每日指標，具備自動 A/B 比較及 KPI 視覺化功能，每日報告時間減少 30%。",
-          dataPoint2: "執行深入市場分析與競爭監測，針對簡體中文市場（小紅書 / REDnote）優化內容策略。",
+          dataPoint2: "執行深入市場分析與競爭監測，針對簡體中文市場（小紅書）優化內容策略。",
           dataPoint3: "部署基於 STP 模型的數據驅動內容策略，3 個月內瀏覽量 +93.3%、互動量 +89.1%、追蹤者 +69.7%。",
           finTitle: "行銷助理（實習）",
           finCompany: "Engoo, DMM.com · 國際線上語言學習平台",
@@ -2892,8 +2923,8 @@
           stat3: "互動量",
           screenshot1: "assets/Engoo_Excel/Engoo Dashboard_EN.webp",
           screenshot2: "assets/Engoo_Excel/Engoo Data_EN.png",
-          screenshotAlt1: "Performance Dashboard – Engoo XHS",
-          screenshotAlt2: "Raw Data – Engoo XHS",
+          screenshotAlt1: "Performance Dashboard – Engoo Rednote",
+          screenshotAlt2: "Raw Data – Engoo 小紅書",
           showcaseLabel: "作品展示 · 小紅書儀表板",
           showcaseBadge1: "📊 整體表現",
           showcaseTitle1: "總覽 · 最近 30 天",
@@ -3448,7 +3479,7 @@
         },
         {
           type: "Expérience",
-          title: "Assistante de recherche",
+          title: "Assistante de Recherche",
           org: "Institut des Relations Internationales, NCCU",
           meta: [],
           points: ["Analyse statistique et visualisation pour des travaux de recherche."],
@@ -3493,7 +3524,7 @@
         },
         {
           type: "Outil Personnel",
-          title: "Auto-Push – Synchronisation automatique GitHub",
+          title: "Auto-Push – Synchronisation Automatique GitHub",
           org: "Git CLI · Batch Script",
           meta: ["Surveillance fichiers · git commit + push · toutes les 100s"],
           points: [
@@ -3511,7 +3542,7 @@
         },
         {
           type: "Expérience",
-          title: "Assistante de recherche",
+          title: "Assistante de Recherche",
           org: "Institut des Relations Internationales, NCCU",
           meta: [],
           points: ["Collecte, nettoyage et traitement de données pour la recherche."],
@@ -3544,12 +3575,12 @@
       ],
     },
     "data-powerbi": {
-      title: "Power BI – Tableaux De Bord",
+      title: "Power BI – Tableaux de Bord",
       text: "Construction de tableaux de bord interactifs pour suivre les performances marketing et financières.",
       proofs: [],
     },
     "data-tableau": {
-      title: "Tableau – Visualisation De Données",
+      title: "Tableau – Visualisation de Données",
       text: "Création de visualisations interactives pour explorer et communiquer des indicateurs clés.",
       proofs: [],
     },
@@ -3559,7 +3590,7 @@
       byPage: {
         finance:   { text: "Régressions OLS et Logit sur données LSEG/Refinitiv (2000 – 2024) pour tester l'impact du risque politique sur les opérations M&A." },
         data:      { text: "Méthodes quantitatives appliquées : régressions multivariées, analyse de corrélation et tests d'hypothèses pour la recherche et l'analyse de marché." },
-        marketing: { text: "A/B testing statistique et segmentation d'audience pour mesurer l'impact des créas et identifier les leviers de croissance sur Xiaohongshu." },
+        marketing: { text: "A/B testing statistique et segmentation d'audience pour mesurer l'impact des créas et identifier les leviers de croissance sur Rednote." },
       },
       en: {
         title: "Statistics & Quantitative Methods",
@@ -3567,7 +3598,7 @@
         byPage: {
           finance:   { text: "OLS and logit regressions on LSEG/Refinitiv data (2000 – 2024) to test the impact of political risk on M&A transactions." },
           data:      { text: "Applied quantitative methods: multivariate regressions, correlation analysis and hypothesis testing for research and market analysis." },
-          marketing: { text: "Statistical A/B testing and audience segmentation to measure creative impact and identify growth drivers on Xiaohongshu." },
+          marketing: { text: "Statistical A/B testing and audience segmentation to measure creative impact and identify growth drivers on Rednote." },
         },
       },
       proofs: [
@@ -3637,14 +3668,14 @@
         },
       ],
       portfolioLink: {
-        fr: { label: "Voir le portfolio – Dashboard Engoo XHS", href: "portfolio-data.html" },
-        en: { label: "View portfolio – Engoo XHS Dashboard",    href: "portfolio-data.html" },
-        zh: { label: "查看作品集 – Engoo XHS 儀表板",             href: "portfolio-data.html" },
+        fr: { label: "Voir le portfolio – Dashboard Engoo Rednote", href: "portfolio-data.html" },
+        en: { label: "View portfolio – Engoo Rednote Dashboard",    href: "portfolio-data.html" },
+        zh: { label: "查看作品集 – Engoo 小紅書 儀表板",             href: "portfolio-data.html" },
       },
       byPage: {
         finance:   { text: "Modèles Excel avancés pour le reporting financier, le suivi de KPIs (CTR, CVR, ROI) et la gestion de budgets publicitaires mensuels." },
         data:      { text: "Dashboard Excel dynamique (Tableaux Croisés, Formules imbriquées) pour suivre 11 métriques quotidiennes et comparer des périodes A/B." },
-        marketing: { text: "Suivi de la performance des campagnes : conception du tableau de bord XHS (11 KPIs/jour, comparaison A/B de périodes)." },
+        marketing: { text: "Suivi de la performance des campagnes : conception du tableau de bord Rednote (11 KPIs/jour, comparaison A/B de périodes)." },
       },
       en: {
         title: "Excel - TOSA 950/1000",
@@ -3652,7 +3683,7 @@
         byPage: {
           finance:   { text: "Advanced Excel models for financial reporting, KPI tracking (CTR, CVR, ROI) and monthly ad-budget management." },
           data:      { text: "Dynamic Excel dashboard (Pivot Tables, nested formulas) tracking 11 daily metrics with automated A/B period comparison." },
-          marketing: { text: "Campaign performance tracking: built the XHS dashboard (11 KPIs/day, A/B period comparison) to optimise content strategy." },
+          marketing: { text: "Campaign performance tracking: built the Rednote dashboard (11 KPIs/day, A/B period comparison) to optimise content strategy." },
         },
       },
     },
@@ -3716,7 +3747,7 @@
       },
     },
     "mkt-seo-keyword": {
-      title: "Recherche De Mots-Clés & Stratégie De Contenu",
+      title: "Recherche de Mots-Clés & Stratégie de Contenu",
       text: "Identifier ce que les prospects recherchent et créer du contenu qui répond à leurs besoins : analyse de l'intention de recherche (informationnelle, transactionnelle, navigationnelle), évaluation de la difficulté et du volume des mots-clés, architecture Topic Clusters et planification Pillar-Cluster.",
       proofs: [
         {
@@ -3849,7 +3880,7 @@
         },
         {
           type: "Certification",
-          title: "Publicité efficace assistée par l'IA",
+          title: "Publicité Efficace Assistée par l'IA",
           org: "Google",
           meta: ["IA"],
           points: ["Certification Google Ads – exploitation de l'IA pour la performance publicitaire."],
@@ -3858,7 +3889,7 @@
       ],
     },
     "mkt-social": {
-      title: "Social Media (Xiaohongshu, Meta)",
+      title: "Social Media (Rednote, Meta)",
       text: "Création de contenu et optimisation de la visibilité.",
       proofs: [
         {
@@ -3923,31 +3954,31 @@
       ]},
     },
     "mkt-xhs": {
-      title: "Xiaohongshu (REDnote)",
-      text: "Stratégie de contenu et gestion de communauté sur Xiaohongshu (REDnote) : veille des tendances, formats adaptés à la plateforme et optimisation de l'engagement.",
+      title: "Rednote",
+      text: "Stratégie de contenu et gestion de communauté sur Rednote : veille des tendances, formats adaptés à la plateforme et optimisation de l'engagement.",
       proofs: [
         {
           type: "Stage",
-          title: "Assistante Marketing – Contenu REDnote",
+          title: "Assistante Marketing – Contenu Rednote",
           org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
-          meta: ["Xiaohongshu"],
+          meta: [],
           points: ["Stratégie de contenu basée sur la veille des tendances, générant +93,3 % de visibilité, +89,1 % d'engagement et +69,7 % d'abonnés."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
       ],
-      en: { title: "Xiaohongshu (REDnote)", text: "Content strategy and community management on Xiaohongshu (REDnote): trend monitoring, platform-native formats and engagement optimisation.", proofs: [
-        { type: "Internship", title: "Marketing Assistant – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Trend-driven content strategy delivering +93.3% visibility, +89.1% engagement and +69.7% follower growth."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+      en: { title: "Rednote", text: "Content strategy and community management on Rednote: trend monitoring, platform-native formats and engagement optimisation.", proofs: [
+        { type: "Internship", title: "Marketing Assistant – Rednote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Trend-driven content strategy delivering +93.3% visibility, +89.1% engagement and +69.7% follower growth."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
       ]},
     },
     "mkt-content-strategy": {
       title: "Stratégie de Contenu",
       text: "Veille des tendances, positionnement de marque et optimisation de la performance éditoriale.",
       proofs: [
-        { type: "Stage", title: "Assistante Marketing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3 %), l'engagement (89,1 %) et le nombre d'abonnés (69,7 %)."] },
+        { type: "Stage", title: "Assistante Marketing – Contenu Rednote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Rednote"], points: ["Conception de contenus basée sur une veille des tendances, permettant d'accroître la visibilité (93,3 %), l'engagement (89,1 %) et le nombre d'abonnés (69,7 %)."] },
         { type: "Stage", title: "Assistante Marketing Digital – Contenu Web & SEO", org: "KPN · Agence de marketing digital", meta: [], points: ["Analyse des tendances et benchmarks sectoriels pour guider la création de contenus web, positionnant 10+ articles dans le Top 10 Google."] },
       ],
       en: { title: "Content Strategy", text: "Defining and managing editorial strategies tailored to target audiences, combining trend monitoring, brand positioning and performance optimisation.", proofs: [
-        { type: "Internship", title: "Marketing Assistant – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
+        { type: "Internship", title: "Marketing Assistant – Rednote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Rednote"], points: ["Designed content based on trend monitoring, growing visibility (93.3%), engagement (89.1%) and followers (69.7%)."] },
         { type: "Internship", title: "Digital Marketing Assistant – Web & SEO Content", org: "KPN · Digital Marketing Agency", meta: [], points: ["Analysed trends and conducted sectoral benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."] },
       ]},
     },
@@ -3956,20 +3987,20 @@
       text: "Conception et analyse de tests A/B pour optimiser les performances des contenus, campagnes et tunnels de conversion.",
       proofs: [
         { type: "Stage", title: "Assistante Marketing Digital – Campagnes Meta & Google", org: "KPN · Agence de marketing digital", meta: [], points: ["Optimisation du CTR (+9,5 %) et du taux de conversion (+5,1 %) via des tests A/B sur les campagnes publicitaires Meta et Google."] },
-        { type: "Stage", title: "Assistante Marketing – Contenu REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
+        { type: "Stage", title: "Assistante Marketing – Contenu Rednote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Rednote"], points: ["Stratégie de contenu fondée sur le modèle STP et A/B testing, optimisant systématiquement les formats et messages par sous-segment cible."] },
       ],
       en: { title: "A/B Testing", text: "Designing and analysing A/B tests to optimise content, campaign and conversion funnel performance.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant – Meta & Google Campaigns", org: "KPN · Digital Marketing Agency", meta: [], points: ["Improved CTR (+9.5%) and conversion rate (+5.1%) through A/B testing across Meta and Google ad campaigns."] },
-        { type: "Internship", title: "Marketing Assistant – REDnote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
+        { type: "Internship", title: "Marketing Assistant – Rednote Content", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Rednote"], points: ["Content strategy built on STP model and A/B testing, systematically optimising formats and messages per sub-segment."] },
       ]},
     },
     "mkt-research": {
-      title: "Études De Marché",
+      title: "Études de Marché",
       text: "Segmentation d'audience et veille concurrentielle pour orienter la stratégie de contenu.",
       proofs: [
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice",
+          title: "Co-Fondatrice",
           org: "Sora Education",
           meta: [],
           points: ["Études de marché et ajustement de l'offre et de la stratégie marketing."],
@@ -4000,12 +4031,12 @@
       ],
     },
     "mkt-design": {
-      title: "Rédaction De Contenu & Design Visuel",
+      title: "Rédaction de Contenu & Design Visuel",
       text: "Conception de visuels pour les réseaux sociaux, événements et supports de communication.",
       proofs: [
         {
           type: "Portfolio",
-          title: "Photographie & supports promotionnels",
+          title: "Photographie & Supports Promotionnels",
           org: "",
           meta: ["Canva · Photoshop"],
           points: ["Affiches, badges et publications pour des clubs et événements."],
@@ -4021,7 +4052,7 @@
         },
         {
           type: "Certification",
-          title: "Google Ads – Créations publicitaires",
+          title: "Google Ads – Créations Publicitaires",
           org: "Google",
           meta: [],
           points: ["Certification Google Ads sur la conception de créas publicitaires performantes."],
@@ -4030,7 +4061,7 @@
       ],
     },
     "prog-python": {
-      title: "Python Pour L'nalyse De Données",
+      title: "Python pour l'Analyse de Données",
       text:
         "Scripts Python pour nettoyer les données, produire des indicateurs et automatiser certaines analyses.",
       links: [
@@ -4041,7 +4072,7 @@
       ],
     },
     "prog-r": {
-      title: "R pour la recherche appliquée",
+      title: "R pour la Recherche Appliquée",
       text:
         "Utilisation de R pour l'analyse statistique, la visualisation et les études académiques.",
       links: [
@@ -4068,7 +4099,7 @@
       ],
     },
     "prog-sql": {
-      title: "SQL (requêtes de base)",
+      title: "SQL (Requêtes de Base)",
       text:
         "Écriture de requêtes SQL de base pour interroger et agréger des données.",
       links: [
@@ -4231,7 +4262,7 @@
     },
 
     "soft-communication": {
-      title: "Communication & Prise De Parole",
+      title: "Communication & Prise de Parole",
       text:
         "Prise de parole en public en français, anglais et mandarin pour des événements académiques et culturels.",
       links: [
@@ -4240,18 +4271,18 @@
           href: "#volunteer",
         },
         {
-          label: "Clubs Toastmasters & activités de présentation",
+          label: "Clubs Toastmasters & Activités de Présentation",
           href: "#extracurricular",
         },
       ],
     },
     "soft-leadership": {
-      title: "Leadership & Gestion D'é'uipe",
+      title: "Leadership & Gestion d'Équipe",
       text:
         "Encadrement de petites équipes marketing et animation de groupes d'étudiants.",
       links: [
         {
-          label: "Responsable marketing AIESEC – équipe de 4",
+          label: "Responsable Marketing AIESEC – Équipe de 4",
           href: "#volunteer",
         },
         {
@@ -4261,16 +4292,16 @@
       ],
     },
     "soft-project": {
-      title: "Gestion De Projet & Organisation",
+      title: "Gestion de Projet & Organisation",
       text:
         "Planification, coordination et suivi de projets académiques, d'événements et de camps.",
       links: [
         {
-          label: "Sora Education – organisation de 5 camps d'été",
+          label: "Sora Education – Organisation de 5 Camps d'Été",
           href: "#extracurricular",
         },
         {
-          label: "Organisation de séminaires et conférences (RA & TA)",
+          label: "Organisation de Séminaires et Conférences (RA & TA)",
           href: "#exp-research",
         },
       ],
@@ -4328,7 +4359,7 @@
         },
         {
           type: "Formation",
-          title: "Programme d'échange",
+          title: "Programme d'Échange",
           org: "Université Paris 1 Panthéon-Sorbonne",
           meta: ["Paris · France", "01/2024 – 06/2024"],
           points: ["Immersion académique et culturelle en France."],
@@ -4413,7 +4444,7 @@
       proofs: [
         {
           type: "Projet",
-          title: "Étude De Marché – Marque Lifestyle",
+          title: "Étude de Marché – Marque Lifestyle",
           org: "Projet académique",
           meta: ["Europe · Asie"],
           points: [
@@ -4459,11 +4490,11 @@
       text: "Surveillance continue des tendances du marché et des actions concurrentes pour anticiper les évolutions et ajuster la stratégie marketing.",
       proofs: [
         { type: "Stage", title: "Assistante Marketing Digital – Veille Sectorielle", org: "KPN · Agence de marketing digital", meta: [], points: ["Analyse des tendances sectorielles et benchmarks concurrentiels pour orienter la création de contenus web, positionnant 10+ articles dans le Top 10 Google."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
-        { type: "Stage", title: "Assistante Marketing – Veille REDnote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Xiaohongshu"], points: ["Veille des tendances Xiaohongshu pour orienter la stratégie de contenu, générant +93,3% de visibilité."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+        { type: "Stage", title: "Assistante Marketing – Veille Rednote", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: ["Rednote"], points: ["Veille des tendances Rednote pour orienter la stratégie de contenu, générant +93,3% de visibilité."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
       ],
       en: { title: "Competitive Intelligence", text: "Continuous monitoring of market trends and competitor activities to anticipate shifts and refine marketing strategy.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant – Sector Monitoring", org: "KPN · Digital Marketing Agency", meta: [], points: ["Analysed industry trends and competitive benchmarks to guide web content creation, ranking 10+ articles in Google Top 10."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
-        { type: "Internship", title: "Marketing Assistant – REDnote Trend Monitoring", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Xiaohongshu"], points: ["Monitored Xiaohongshu trends to guide content strategy, achieving +93.3% visibility growth."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+        { type: "Internship", title: "Marketing Assistant – Rednote Trend Monitoring", org: "Engoo, DMM.com · Global Language Learning Platform", meta: ["Rednote"], points: ["Monitored Rednote trends to guide content strategy, achieving +93.3% visibility growth."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
       ]},
     },
     "mkt-benchmarking": {
@@ -4471,29 +4502,29 @@
       text: "Analyse comparative des performances et pratiques des concurrents pour identifier les écarts et opportunités d'amélioration.",
       proofs: [
         { type: "Stage", title: "Assistante Marketing Digital – Benchmarks Sectoriels", org: "KPN · Agence de marketing digital", meta: [], points: ["Réalisation de benchmarks sectoriels approfondis pour identifier les meilleures pratiques et affiner la stratégie de contenu des clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
-        { type: "Stage", title: "Assistante Marketing – Analyse Concurrentielle", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Benchmarking des comptes concurrents sur Xiaohongshu pour identifier les formats et thématiques les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+        { type: "Stage", title: "Assistante Marketing – Analyse Concurrentielle", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Benchmarking des comptes concurrents sur Rednote pour identifier les formats et thématiques les plus performants."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
       ],
       en: { title: "Benchmarking", text: "Comparative analysis of competitor performance and practices to identify gaps and improvement opportunities.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant – Sector Benchmarks", org: "KPN · Digital Marketing Agency", meta: [], points: ["Conducted in-depth sector benchmarks to identify best practices and refine client content strategy."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
-        { type: "Internship", title: "Marketing Assistant – Competitive Analysis", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Benchmarked competitor accounts on Xiaohongshu to identify top-performing formats and topics."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+        { type: "Internship", title: "Marketing Assistant – Competitive Analysis", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Benchmarked competitor accounts on Rednote to identify top-performing formats and topics."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
       ]},
     },
     "mkt-positionnement": {
       title: "Positionnement",
       text: "Définition du positionnement de marque ou d'offre : segmentation cible, différenciation concurrentielle et proposition de valeur.",
       proofs: [
-        { type: "Stage", title: "Assistante Marketing – Modèle STP", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Application du modèle STP (Segmentation, Ciblage, Positionnement) pour adapter le contenu à chaque sous-segment cible sur Xiaohongshu."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
-        { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: [], points: ["Études de marché et ajustement de l'offre pour différencier les camps d'été sur un marché concurrentiel."], actions: [{ label: "Voir activités", href: "#extracurricular" }] },
+        { type: "Stage", title: "Assistante Marketing – Modèle STP", org: "Engoo, DMM.com · Plateforme mondiale de cours de langue", meta: [], points: ["Application du modèle STP (Segmentation, Ciblage, Positionnement) pour adapter le contenu à chaque sous-segment cible sur Rednote."], actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }] },
+        { type: "Projet entrepreneurial", title: "Co-Fondatrice", org: "Sora Education", meta: [], points: ["Études de marché et ajustement de l'offre pour différencier les camps d'été sur un marché concurrentiel."], actions: [{ label: "Voir activités", href: "#extracurricular" }] },
         { type: "Certification", title: "INSIDE LVMH – Track 3", org: "LVMH", meta: [], points: ["Programme INSIDE LVMH consacré aux marques et aux métiers du luxe."], actions: [{ label: "Ouvrir le certificat", href: "certificates/Yu-Ting%20Tseng%20-%20INSIDE%20LVMH%20CERTIFICATE%20-%20Track%203.pdf" }] },
       ],
       en: { title: "Positioning", text: "Defining brand or offer positioning: target segmentation, competitive differentiation and value proposition.", proofs: [
-        { type: "Internship", title: "Marketing Assistant – STP Model", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Applied the STP model (Segmentation, Targeting, Positioning) to tailor content for each sub-segment on Xiaohongshu."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
+        { type: "Internship", title: "Marketing Assistant – STP Model", org: "Engoo, DMM.com · Global Language Learning Platform", meta: [], points: ["Applied the STP model (Segmentation, Targeting, Positioning) to tailor content for each sub-segment on Rednote."], actions: [{ label: "View experience", href: "#exp-engoo" }] },
         { type: "Entrepreneurial Project", title: "Co-founder", org: "Sora Education", meta: [], points: ["Conducted market research and offer adjustments to differentiate summer camps in a competitive market."], actions: [{ label: "View activities", href: "#extracurricular" }] },
         { type: "Certificate", title: "INSIDE LVMH – Track 3", org: "LVMH", meta: [], points: ["INSIDE LVMH programme on luxury brands and professions."], actions: [{ label: "Open certificate", href: "certificates/Yu-Ting%20Tseng%20-%20INSIDE%20LVMH%20CERTIFICATE%20-%20Track%203.pdf" }] },
       ]},
     },
     "mkt-campaign": {
-      title: "Planification De Campagnes",
+      title: "Planification de Campagnes",
       text: "Planification, coordination et suivi de campagnes marketing multicanal (SEO, SEA, social media, emailing).",
       proofs: [
         {
@@ -4509,7 +4540,7 @@
         },
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice",
+          title: "Co-Fondatrice",
           org: "Sora Education",
           meta: [],
           points: ["Planification et exécution de campagnes de recrutement pour 5 camps d'été."],
@@ -4527,12 +4558,12 @@
           title: "Assistante Marketing",
           org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
-          points: ["Analyse de marché et positionnement concurrentiel pour la stratégie de contenu REDnote."],
+          points: ["Analyse de marché et positionnement concurrentiel pour la stratégie de contenu Rednote."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice",
+          title: "Co-Fondatrice",
           org: "Sora Education",
           meta: [],
           points: ["Études de marché, segmentation et positionnement de l'offre de cours."],
@@ -4568,7 +4599,7 @@
       proofs: [
         {
           type: "Projet entrepreneurial",
-          title: "Co-fondatrice",
+          title: "Co-Fondatrice",
           org: "Sora Education",
           meta: [],
           points: ["Business plan, modèle économique et pitch pour 5 camps d'été."],
@@ -4582,7 +4613,7 @@
       proofs: [
         {
           type: "Activité",
-          title: "Toastmasters – Prise De Parole",
+          title: "Toastmasters – Prise de Parole",
           org: "Clubs étudiants, NCCU",
           meta: ["Anglais · Mandarin"],
           points: ["Prise de parole structurée et storytelling en anglais et mandarin."],
@@ -4590,7 +4621,7 @@
         },
         {
           type: "Expérience",
-          title: "Déléguée – Nuit Des Idées",
+          title: "Déléguée – Nuit des Idées",
           org: "Institut Français de Taïwan",
           meta: ["2022"],
           points: ["Présentation et animation en contexte interculturel franco-taïwanais."],
@@ -4604,8 +4635,8 @@
       proofs: [
         {
           type: "Pratique",
-          title: "Utilisation quotidienne – Production & Analyse",
-          org: "Usage professionnel & académique",
+          title: "Utilisation Quotidienne – Production & Analyse",
+          org: "Usage Professionnel & Académique",
           meta: ["ChatGPT · Claude · Gemini · Perplexity"],
           points: [
             "Génération et optimisation de contenus marketing.",
@@ -4621,7 +4652,7 @@
       proofs: [
         {
           type: "Certification",
-          title: "Publicité efficace assistée par l'IA",
+          title: "Publicité Efficace Assistée par l'IA",
           org: "Google",
           meta: ["IA"],
           points: ["Certification Google Ads – exploitation de l'IA pour la performance publicitaire."],
@@ -4638,7 +4669,7 @@
       ],
     },
     "ai-business": {
-      title: "IA Pour Les Affaires",
+      title: "IA pour les Affaires",
       text: "Compréhension des enjeux stratégiques de l'IA pour les entreprises : transformation digitale, automatisation et nouveaux modèles de valeur.",
       proofs: [
         {
@@ -4653,7 +4684,7 @@
         },
         {
           type: "Certification",
-          title: "Publicité efficace assistée par l'IA",
+          title: "Publicité Efficace Assistée par l'IA",
           org: "Google",
           meta: ["IA"],
           points: ["Mise en pratique de l'IA pour la performance marketing."],
@@ -4667,7 +4698,7 @@
       title: "ChatGPT",
       text: "Utilisation quotidienne de ChatGPT pour la rédaction, la synthèse, l'analyse et la génération de code.",
       proofs: [
-        { type: "Pratique", title: "Usage professionnel & académique", org: "OpenAI", meta: [], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] },
+        { type: "Pratique", title: "Usage Professionnel & Académique", org: "OpenAI", meta: [], points: ["Rédaction de contenus marketing, synthèse de documents, assistance au code."] },
         { type: "Certification", title: "AI Literacy", org: " – ", meta: ["05/2026"], points: ["Compréhension des fondamentaux de l'IA, lecture critique des résultats et utilisation responsable des outils d'intelligence artificielle."], actions: [{ label: "Ouvrir le certificat", href: "certificates/Data%20Liyeracy_TSENG%20Yu-Ting%20-%202026-05-16.pdf" }] },
       ],
       en: { title: "ChatGPT", text: "Daily use of ChatGPT for writing, summarisation, analysis and code generation.", proofs: [
@@ -4678,20 +4709,20 @@
     "ai-claude": {
       title: "Claude",
       text: "Utilisation de Claude pour des analyses approfondies, la rédaction professionnelle et la gestion de longs contextes.",
-      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Anthropic", meta: [], points: ["Rédaction avancée, analyse de données textuelles, synthèse de recherches."] }],
+      proofs: [{ type: "Pratique", title: "Usage Professionnel & Académique", org: "Anthropic", meta: [], points: ["Rédaction avancée, analyse de données textuelles, synthèse de recherches."] }],
       en: { title: "Claude", text: "Using Claude for in-depth analysis, professional writing and long-context document handling.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "Anthropic", meta: [], points: ["Advanced writing, text data analysis, research synthesis."] }] },
     },
     "ai-gemini": {
       title: "Gemini",
       text: "Utilisation de Gemini pour la recherche multimodale, la veille et l'intégration avec les outils Google Workspace.",
-      proofs: [{ type: "Pratique", title: "Recherche & productivité", org: "Google", meta: [], points: ["Recherche multimodale, résumé de sources, intégration Google Docs/Sheets."] }],
+      proofs: [{ type: "Pratique", title: "Recherche & Productivité", org: "Google", meta: [], points: ["Recherche multimodale, résumé de sources, intégration Google Docs/Sheets."] }],
       en: { title: "Gemini", text: "Using Gemini for multimodal research, market intelligence and Google Workspace integration.", proofs: [{ type: "Practice", title: "Research & Productivity", org: "Google", meta: [], points: ["Multimodal research, source summarisation, Google Docs/Sheets integration."] }] },
     },
     "data-marketing-automation": {
       title: "Marketing Automation",
       text: "Automatisation de processus marketing répétitifs via des scripts Python, pour optimiser le reporting et la consolidation de données.",
       proofs: [
-        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
+        { type: "Stage", title: "Automatisation du Reporting Client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
       ],
       en: { title: "Marketing Automation", text: "Automating repetitive marketing processes via Python scripts to optimise reporting and data consolidation.", proofs: [
         { type: "Internship", title: "Client Reporting Automation", org: "KPN · Digital Marketing Agency", meta: ["Python"], points: ["Automated reporting workflows via Python scripts, eliminating repetitive tasks and saving 5 to 10 minutes per client each week."] },
@@ -4701,8 +4732,8 @@
       title: "Vibe Coding",
       text: "Développement assisté par l'IA – utilisation de modèles génératifs pour prototyper, déboguer et produire du code de manière interactive.",
       proofs: [
-        { type: "Projet Personnel", title: "Portfolio & outils d'automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] },
-        { type: "Stage", title: "Automatisation du reporting client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
+        { type: "Projet Personnel", title: "Portfolio & Outils d'Automatisation", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Construction de ce portfolio et de scripts d'automatisation via des workflows de vibe coding."] },
+        { type: "Stage", title: "Automatisation du Reporting Client", org: "KPN · Agence de marketing digital", meta: ["Python"], points: ["Automatiser les processus de reporting via des scripts Python, pour éliminer des tâches répétitives et gain de temps de 5 à 10 minutes par client chaque semaine."] },
       ],
       en: { title: "Vibe Coding", text: "AI-assisted development – using generative models to prototype, debug and produce code interactively.", proofs: [
         { type: "Personal Project", title: "Portfolio & Automation Tools", org: "Claude Code · Cursor", meta: ["Python · HTML/CSS · JS"], points: ["Built this portfolio and automation scripts via vibe coding workflows."] },
@@ -4730,7 +4761,7 @@
     "office-google-suite": {
       title: "Google Suite",
       text: "Utilisation quotidienne de Google Workspace (Docs, Sheets, Slides, Drive, Gmail) pour la collaboration et la productivité.",
-      proofs: [{ type: "Pratique", title: "Usage professionnel & académique", org: "Google Workspace", meta: [], points: ["Rédaction collaborative, suivi de données sur Sheets, présentations Slides."] }],
+      proofs: [{ type: "Pratique", title: "Usage Professionnel & Académique", org: "Google Workspace", meta: [], points: ["Rédaction collaborative, suivi de données sur Sheets, présentations Slides."] }],
       en: { title: "Google Suite", text: "Daily use of Google Workspace (Docs, Sheets, Slides, Drive, Gmail) for collaboration and productivity.", proofs: [{ type: "Practice", title: "Professional & Academic Use", org: "Google Workspace", meta: [], points: ["Collaborative writing, data tracking on Sheets, Slides presentations."] }] },
     },
     "mkt-xandr": {
@@ -4743,7 +4774,7 @@
       proofs: [
         {
           type: "Stage",
-          title: "Traffic Manager / AdOps – Mise en ligne des campagnes display",
+          title: "Traffic Manager / AdOps – Mise en Ligne des Campagnes Display",
           org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Mise en ligne des campagnes display et suivi opérationnel de leur diffusion sur un portefeuille de campagnes."],
@@ -4772,7 +4803,7 @@
       proofs: [
         {
           type: "Stage",
-          title: "Traffic Manager / AdOps – Diffusion & reporting des campagnes",
+          title: "Traffic Manager / AdOps – Diffusion & Reporting des Campagnes",
           org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Suivi de la diffusion des campagnes display et production des rapports de mise en ligne et des bilans de campagnes."],
@@ -4802,7 +4833,7 @@
       proofs: [
         {
           type: "Stage",
-          title: "Traffic Manager / AdOps – Suivi d'un portefeuille de campagnes",
+          title: "Traffic Manager / AdOps – Suivi d'un Portefeuille de Campagnes",
           org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Suivi de l'avancement et des échéances des campagnes display en lien avec les équipes commerciales."],
@@ -4833,7 +4864,7 @@
       proofs: [
         {
           type: "Stage",
-          title: "Traffic Manager / AdOps – Coordination avec les équipes commerciales",
+          title: "Traffic Manager / AdOps – Coordination avec les Équipes Commerciales",
           org: "leboncoin, Adevinta · Régie publicitaire",
           meta: [],
           points: ["Échanges quotidiens avec les équipes commerciales pour assurer la fluidité de la communication entre l'annonceur et la régie."],
@@ -4856,19 +4887,19 @@
     "office-notion": {
       title: "Notion",
       text: "Organisation des projets, prise de notes structurée et gestion de bases de données de travail via Notion.",
-      proofs: [{ type: "Pratique", title: "Gestion de projets & notes", org: "Notion", meta: [], points: ["Planification de projets académiques et personnels, bases de données de contenus."] }],
+      proofs: [{ type: "Pratique", title: "Gestion de Projets & Notes", org: "Notion", meta: [], points: ["Planification de projets académiques et personnels, bases de données de contenus."] }],
       en: { title: "Notion", text: "Project organisation, structured note-taking and work database management via Notion.", proofs: [{ type: "Practice", title: "Project Management & Notes", org: "Notion", meta: [], points: ["Planning academic and personal projects, content databases."] }] },
     },
 
     // ── Creative Tools ───────────────────────────────────────────────
     // Events & Coordination
     "mkt-event-management": {
-      title: "Organisation d'événements",
+      title: "Organisation d'Événements",
       text: "Planification et coordination logistique d'événements (camps, conférences, séminaires) : définition du programme, gestion des participants et suivi opérationnel.",
       proofs: [
-        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Événementiel"], points: ["Organisation de conférences thématiques et sessions de networking, gestion du flux de communication et coordination des prestataires."] },
-        { type: "Expérience", title: "Assistante de recherche", org: "Institut des Relations Internationales, NCCU", meta: ["Événementiel"], points: ["Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été."] },
-        { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: ["Événementiel"], points: ["Organisation de 5 camps d'été d'une semaine, coordination logistique complète avec deux partenaires."] },
+        { type: "Expérience", title: "Assistante d'Enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Événementiel"], points: ["Organisation de conférences thématiques et sessions de networking, gestion du flux de communication et coordination des prestataires."] },
+        { type: "Expérience", title: "Assistante de Recherche", org: "Institut des Relations Internationales, NCCU", meta: ["Événementiel"], points: ["Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été."] },
+        { type: "Projet entrepreneurial", title: "Co-Fondatrice", org: "Sora Education", meta: ["Événementiel"], points: ["Organisation de 5 camps d'été d'une semaine, coordination logistique complète avec deux partenaires."] },
         { type: "Expérience Associative", title: "Membre – AIESEC in NCCU", org: "AIESEC", meta: ["Événementiel"], points: ["Coordination de l'organisation d'un camp d'anglais accueillant 60+ participants et 15 volontaires internationaux."] },
       ],
       en: { title: "Event Management", text: "Planning and logistical coordination of events (camps, conferences, seminars): programme design, participant management and operational follow-up.", proofs: [
@@ -4882,7 +4913,7 @@
       title: "Présidence & Animation",
       text: "Animation et présidence d'événements : accueil des intervenants, modération des échanges et assurance du bon déroulement du programme.",
       proofs: [
-        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Animation"], points: ["Présidence et animation des conférences et sessions de networking, assurant le cadre et la fluidité des échanges."] },
+        { type: "Expérience", title: "Assistante d'Enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Animation"], points: ["Présidence et animation des conférences et sessions de networking, assurant le cadre et la fluidité des échanges."] },
         { type: "Extra-scolaire", title: "Directrice Marketing & Adhésions", org: "Club de Guzheng, NCCU", meta: ["Animation"], points: ["Organisation et animation d'activités et de performances musicales pour les membres du club."] },
       ],
       en: { title: "Hosting & Facilitation", text: "Hosting and chairing events: welcoming speakers, moderating exchanges and ensuring smooth programme delivery.", proofs: [
@@ -4894,8 +4925,8 @@
       title: "Coordination avec Prestataires",
       text: "Identification, contact et suivi des prestataires externes (lieux, traiteurs, intervenants) pour assurer le bon déroulement des événements.",
       proofs: [
-        { type: "Expérience", title: "Assistante d'enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Coordination"], points: ["Gestion de la relation avec les prestataires et intervenants externes lors de l'organisation de conférences et sessions événementielles."] },
-        { type: "Projet entrepreneurial", title: "Co-fondatrice", org: "Sora Education", meta: ["Coordination"], points: ["Contact et négociation avec les prestataires (lieux, matériaux pédagogiques) pour l'organisation des camps d'été."] },
+        { type: "Expérience", title: "Assistante d'Enseignement", org: "Faculté de Banque et Finance Internationale, NCCU", meta: ["Coordination"], points: ["Gestion de la relation avec les prestataires et intervenants externes lors de l'organisation de conférences et sessions événementielles."] },
+        { type: "Projet entrepreneurial", title: "Co-Fondatrice", org: "Sora Education", meta: ["Coordination"], points: ["Contact et négociation avec les prestataires (lieux, matériaux pédagogiques) pour l'organisation des camps d'été."] },
       ],
       en: { title: "Vendor Coordination", text: "Identifying, contacting and managing external service providers (venues, caterers, speakers) to ensure smooth event delivery.", proofs: [
         { type: "Experience", title: "Teaching Assistant", org: "Faculty of Banking and International Finance, NCCU", meta: ["Coordination"], points: ["Managed relationships with external providers and guest speakers when organising conferences and networking events."] },
@@ -4941,7 +4972,7 @@
       text: "Structuration de pages web et intégration de contenu pour le développement de sites marketing et de portfolio.",
       proofs: [
         { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["HTML"], points: ["Édition et structuration de contenus HTML pour l'optimisation on-page et la mise à jour des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
-        { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Construction de ce portfolio multi-pages en HTML/CSS/JS avec système i18n (FR/EN/ZH) et animations."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
+        { type: "Projet Personnel", title: "Portfolio Professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Construction de ce portfolio multi-pages en HTML/CSS/JS avec système i18n (FR/EN/ZH) et animations."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
       en: { title: "HTML", text: "Web page structuring and content integration for marketing websites and portfolio development.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["HTML"], points: ["Edited and structured HTML content for on-page optimisation and client website updates."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -4953,7 +4984,7 @@
       text: "Mise en forme, design responsive et animations pour des interfaces web professionnelles et des pages marketing.",
       proofs: [
         { type: "Stage", title: "Assistante Marketing Digital", org: "KPN · Agence de marketing digital", meta: ["CSS"], points: ["Application de styles CSS pour la mise en forme et l'amélioration visuelle des pages web clients."], actions: [{ label: "Voir l'expérience", href: "#exp-kpn" }] },
-        { type: "Projet Personnel", title: "Portfolio professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Design visuel complet, système de variables CSS, responsive et animations pour ce portfolio."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
+        { type: "Projet Personnel", title: "Portfolio Professionnel", org: "Claude Code · Cursor", meta: ["HTML · CSS · JS"], points: ["Design visuel complet, système de variables CSS, responsive et animations pour ce portfolio."], actions: [{ label: "Voir le portfolio", href: "index.html" }] },
       ],
       en: { title: "CSS", text: "Styling, responsive design and animations for professional web interfaces and marketing pages.", proofs: [
         { type: "Internship", title: "Digital Marketing Assistant", org: "KPN · Digital Marketing Agency", meta: ["CSS"], points: ["Applied CSS styling to improve the visual presentation and layout of client web pages."], actions: [{ label: "View experience", href: "#exp-kpn" }] },
@@ -4969,7 +5000,7 @@
           title: "Assistante Marketing",
           org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
           meta: [],
-          points: ["Création de templates et visuels A/B testés pour Xiaohongshu et Meta."],
+          points: ["Création de templates et visuels A/B testés pour Rednote et Meta."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
         {
@@ -4990,7 +5021,7 @@
             title: "Marketing Assistant",
             org: "Engoo, DMM.com · Global Language Learning Platform",
             meta: [],
-            points: ["Designed and A/B tested visual templates for Xiaohongshu and Meta."],
+            points: ["Designed and A/B tested visual templates for Rednote and Meta."],
             actions: [{ label: "View experience", href: "#exp-engoo" }],
           },
           {
@@ -5036,26 +5067,26 @@
     },
     "creative-capcut": {
       title: "CapCut",
-      text: "Montage vidéo court pour réseaux sociaux (Xiaohongshu, Instagram Reels, TikTok).",
+      text: "Montage vidéo court pour réseaux sociaux (Rednote, Instagram Reels, TikTok).",
       proofs: [
         {
           type: "Stage",
           title: "Assistante Marketing",
           org: "Engoo, DMM.com · Plateforme mondiale de cours de langue",
-          meta: ["Xiaohongshu"],
+          meta: ["Rednote"],
           points: ["Montage de vidéos courtes pour les campagnes de contenu."],
           actions: [{ label: "Voir l'expérience", href: "#exp-engoo" }],
         },
       ],
       en: {
         title: "CapCut",
-        text: "Short-form video editing for social media (Xiaohongshu, Instagram Reels, TikTok).",
+        text: "Short-form video editing for social media (Rednote, Instagram Reels, TikTok).",
         proofs: [
           {
             type: "Experience",
             title: "Marketing Assistant",
             org: "Engoo, DMM.com · Global Language Learning Platform",
-            meta: ["Xiaohongshu"],
+            meta: ["Rednote"],
             points: ["Edited short-form videos for content campaigns."],
             actions: [{ label: "View experience", href: "#exp-engoo" }],
           },
@@ -5080,7 +5111,7 @@
       proofs: [
         {
           type: "Expérience",
-          title: "Assistante de recherche",
+          title: "Assistante de Recherche",
           org: "Institut des Relations Internationales, NCCU",
           meta: [],
           points: ["Rédaction de synthèses quantitatives et supports pour séminaires."],
@@ -5108,7 +5139,7 @@
       proofs: [
         {
           type: "Expérience",
-          title: "Assistante d'enseignement",
+          title: "Assistante d'Enseignement",
           org: "College of Global Banking and Finance, NCCU",
           meta: [],
           points: ["Préparation de supports de cours et présentations de briefings."],
@@ -5131,6 +5162,339 @@
       },
     },
   };
+
+  // ── English layer for skills written in French only ─────────────────
+  // Merged into skillData[key].en below (an existing en block keeps its
+  // own fields; only the missing ones are added).
+  const NCCU_EN = "National Chengchi University (NCCU)";
+  const KPN_EN = "KPN · Digital Marketing Agency";
+  const ENGOO_EN = "Engoo, DMM.com · Global Language Learning Platform";
+  const RIIR_EN = "Institute of International Relations, NCCU";
+  const SPEC_EN = "Finance & Accounting Specialisation";
+  const viewExp = (href) => [{ label: "View experience", href }];
+  const viewEdu = (href) => [{ label: "View education", href }];
+  const viewAct = (href) => [{ label: "View activities", href }];
+  const openCert = (href) => [{ label: "Open certificate", href }];
+  const skillDataEn = {
+    "data-r": {
+      proofs: [
+        { type: "Course", title: "Marketing Research & Research Methods (R)", org: NCCU_EN, meta: ["Academic course"], points: ["Quantitative methods, regressions and applied visualisation."], actions: viewEdu("#edu-nccu") },
+        { type: "Experience", title: "Research Assistant", org: RIIR_EN, meta: [], points: ["Statistical analysis and visualisation for research papers."], actions: viewExp("#exp-research") },
+      ],
+    },
+    "data-sql": {
+      title: "SQL – Queries & Databases",
+      text: "Writing SQL queries to retrieve, filter, aggregate and join data. Main environment: Microsoft Access (built-in SQL) and analytical queries.",
+      proofs: [
+        { type: "Course", title: "Introduction to Data Analysis & Programming (VBA & Access)", org: NCCU_EN, meta: ["Academic course"], points: ["SELECT, WHERE, JOIN, GROUP BY queries and aggregations on relational databases.", "Built and managed tables, forms and automated reports."], actions: viewEdu("#edu-nccu") },
+      ],
+    },
+    "data-powerbi": {
+      title: "Power BI – Dashboards",
+      text: "Building interactive dashboards to track marketing and financial performance.",
+    },
+    "data-tableau": {
+      title: "Tableau – Data Visualisation",
+      text: "Creating interactive visualisations to explore and communicate key indicators.",
+    },
+    "data-statistics": {
+      proofs: [
+        { type: "Course", title: "Research Methods (R & Statistics)", org: NCCU_EN, meta: ["Academic course", "R Studio"], points: ["Linear and logistic regression, ANOVA, correlation tests.", "Statistical visualisation and interpretation of results for decision-making."], actions: viewEdu("#edu-nccu") },
+        { type: "Academic Project", title: "Risky Deals – M&A & Political Risk (Latin America)", org: "emlyon business school", meta: ["R · Pearson · OLS · Logit"], points: ["3 hypotheses tested on 2000 – 2024 data (LSEG / Refinitiv, WGI, POLCON III, FSI): H1 partially confirmed, H2 confirmed by FSI and POLCON III, H3 inconclusive.", "Pearson correlations and linear regressions (H1 M&A volume, H3 acquisition premium), binomial logistic regression (H2 deal withdrawal)."], actions: [{ label: "View project", href: "portfolio-data.html#ma-risque-politique" }] },
+      ],
+    },
+    "data-excel": {
+      proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["Excel dashboard tracking marketing performance, with A/B period comparison."], actions: viewExp("#exp-engoo") },
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Monthly tracking of SEO/SEA KPIs (traffic, CTR, conversions) and consolidation of client reports in Excel."], actions: viewExp("#exp-kpn") },
+        { type: "Course", title: "Introduction to Data Analysis and Programming (VBA & Access)", org: NCCU_EN, meta: ["Academic course"], points: ["Advanced modelling, complex functions and handling of large datasets."], actions: viewEdu("#edu-nccu") },
+        { type: "Certification", title: "TOSA 950/1000", meta: ["10/2025"], points: ["Score of 950/1000 – expert level in modelling, pivot tables and automation."], actions: openCert("certificates/TOSA%20Certificate.pdf") },
+      ],
+    },
+    "data-access": {
+      title: "Microsoft Access – Databases",
+      text: "Creating and managing relational databases, SQL queries and automated reports in Access.",
+      proofs: [
+        { type: "Course", title: "Introduction to Data Analysis and Programming (VBA & Access)", org: NCCU_EN, meta: ["Academic course"], points: ["Relational database modelling and SQL queries in Access.", "Built forms and automated reports."], actions: viewEdu("#edu-nccu") },
+      ],
+    },
+    "mkt-sea": {
+      title: "Google Ads",
+      text: "Managing performance-driven campaigns (CTR, CVR) and optimising budgets.",
+      proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Google Ads campaigns, CTR and conversion tracking."], actions: viewExp("#exp-kpn") },
+        { type: "Certification", title: "Google Ads – Search Ads", org: "Google", meta: [], points: ["Official Google Ads Search certification."], actions: openCert("certificates/Google%20Ads%20%E6%90%9C%E5%B0%8B%E5%BB%A3%E5%91%8A%E8%AA%8D%E8%AD%89.webp") },
+        { type: "Certification", title: "Google Ads – Video Ads", org: "Google", meta: [], points: ["Official Google Ads Video certification."], actions: openCert("certificates/Google%20Ads%20%E5%BD%B1%E7%89%87%E5%BB%A3%E5%91%8A%E8%AA%8D%E8%AD%89.webp") },
+        { type: "Certification", title: "AI-Powered Performance Ads", org: "Google", meta: ["AI"], points: ["Google Ads certification on using AI for advertising performance."], actions: openCert("certificates/AI%20技術輔助高效廣告認證.webp") },
+      ],
+    },
+    "mkt-social": {
+      title: "Social Media (Rednote, Meta)",
+      text: "Content creation and visibility optimisation.",
+      proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["Content and visibility optimisation on social media platforms."], actions: viewExp("#exp-engoo") },
+      ],
+    },
+    "mkt-research": {
+      title: "Market Research",
+      text: "Audience segmentation and competitive monitoring to guide content strategy.",
+      proofs: [
+        { type: "Entrepreneurial Project", title: "Co-Founder", org: "Sora Education", meta: [], points: ["Market research and adjustment of the offer and marketing strategy."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "mkt-analytics": {
+      title: "Google Analytics",
+      text: "Web traffic analysis, audience segmentation and conversion tracking.",
+      proofs: [
+        { type: "Certification", title: "Google Analytics", org: "Google", meta: [], points: ["Official Google Analytics certification – audience analysis and performance tracking."], actions: openCert("certificates/Google%20Analytics%20Certificate.pdf") },
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Performance tracking and web traffic analysis (Google Analytics + Search Console)."], actions: viewExp("#exp-kpn") },
+      ],
+    },
+    "mkt-design": {
+      title: "Content Writing & Visual Design",
+      text: "Designing visuals for social media, events and communication materials.",
+      proofs: [
+        { type: "Portfolio", title: "Photography & Promotional Materials", org: "", meta: ["Canva · Photoshop"], points: ["Posters, badges and posts for clubs and events."], actions: [{ label: "View portfolio", href: "#portfolio" }] },
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["A/B testing of visuals and adaptation of creatives to each target sub-segment."], actions: viewExp("#exp-engoo") },
+        { type: "Certification", title: "Google Ads – Creative", org: "Google", meta: [], points: ["Google Ads certification on designing high-performing ad creatives."], actions: openCert("certificates/Google%20Ads%20%E5%BB%A3%E5%91%8A%E7%B4%A0%E6%9D%90%E8%AA%8D%E8%AD%89.webp") },
+      ],
+    },
+    "prog-python": {
+      title: "Python for Data Analysis",
+      text: "Python scripts to clean data, compute indicators and automate parts of the analysis.",
+      links: [{ label: "Programming 101 (Python) Course – NCCU", href: "#edu-nccu" }],
+    },
+    "prog-r": {
+      title: "R for Applied Research",
+      text: "Using R for statistical analysis, visualisation and academic research.",
+      links: [{ label: "Marketing Research & Research Methods (R) Course", href: "#edu-nccu" }],
+    },
+    "prog-vba": {
+      title: "VBA – Macros & Automation",
+      text: "VBA macros to automate data processing and reporting, practised in coursework at NCCU.",
+      proofs: [
+        { type: "Course", title: "Introduction to Data Analysis and Programming (VBA & Access)", org: NCCU_EN, meta: ["Academic course"], points: ["Designed and ran VBA macros to automate data analysis and reporting."], actions: viewEdu("#edu-nccu") },
+      ],
+    },
+    "prog-sql": {
+      title: "SQL (Basic Queries)",
+      text: "Writing basic SQL queries to retrieve and aggregate data.",
+      links: [{ label: "Academic Data Analysis Projects", href: "#edu-nccu" }],
+    },
+    "fin-green": {
+      title: "Green Finance & Risk Management",
+      text: "Understanding of green finance, risk management and regulatory issues.",
+      links: [{ label: "“Green Finance and Risk Management” Course", href: "#exp-teaching" }],
+    },
+    "fin-decision": {
+      title: "Operational Decision Analysis",
+      text: "Decision analysis for financial institutions, with risk and performance modelling.",
+      links: [{ label: "“Operational Decision Analysis and Management of Financial Institutions” Course", href: "#exp-teaching" }],
+    },
+    "fin-international": {
+      title: "International Finance",
+      text: "Fundamentals of international finance and capital markets.",
+      links: [{ label: "International Finance Course – NCCU", href: "#edu-nccu" }],
+    },
+    "fin-accounting": {
+      title: "Financial Accounting",
+      text: "Command of financial statements (balance sheet, income statement, cash flow), accounting standards and double-entry bookkeeping.",
+      proofs: [
+        { type: "Education", title: SPEC_EN, org: "emlyon business school", meta: ["Lyon · France", "09/2025 – Present"], points: ["Financial Accounting: financial statements, consolidation, analysis of annual accounts."], actions: viewEdu("#education") },
+      ],
+    },
+    "fin-pnl": {
+      title: "P&L Analysis",
+      text: "Analysing the income statement to identify profitability levers, break down margins and steer performance.",
+      proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Tracked the financial performance of campaigns: ROI, cost per acquisition, conversion rate (+5.1% CVR)."], actions: viewExp("#experience") },
+        { type: "Activity", title: "Co-Founder – Sora Education", org: "Sora Education", meta: ["Youth camps"], points: ["Tracked the P&L of 5 summer camps: revenue, variable and fixed costs, and reaching profitability."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "fin-modeling": {
+      title: "Financial Modelling",
+      text: "Building financial models for budget forecasting, valuation and scenario analysis.",
+      proofs: [
+        { type: "Education", title: SPEC_EN, org: "emlyon business school", meta: ["Lyon · France", "09/2025 – Present"], points: ["Financial modelling: projections, valuation and sensitivity analysis."], actions: viewEdu("#education") },
+      ],
+    },
+    "fin-variance": {
+      title: "Variance Analysis",
+      text: "Analysing gaps between forecasts and actuals to identify the causes of over- or under-performance and recommend corrective actions.",
+      proofs: [
+        { type: "Education", title: SPEC_EN, org: "emlyon business school", meta: ["Lyon · France", "09/2025 – Present"], points: ["Budget variance analysis (price, volume, mix) and identification of levers for action."], actions: viewEdu("#education") },
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Analysed marketing performance gaps (CTR, CVR) against monthly benchmarks and made recommendations."], actions: viewExp("#experience") },
+      ],
+    },
+    "fin-cost-control": {
+      title: "Channel & Cost Control",
+      text: "Managing costs by channel and optimising cost structures to maximise profitability.",
+      proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Managed monthly Facebook & Google Ads budgets and optimised cost per acquisition (conversion rate +5.1%)."], actions: viewExp("#experience") },
+        { type: "Activity", title: "Member – AIESEC in NCCU", org: "AIESEC", meta: [], points: ["Budget management of a summer camp: optimised cost structure, exceeded the profitability target by 53.7%."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "fin-management": {
+      title: "Management Accounting",
+      text: "Using accounting data for internal decision-making: budgeting, management reporting and performance control.",
+      proofs: [
+        { type: "Education", title: SPEC_EN, org: "emlyon business school", meta: ["Lyon · France", "09/2025 – Present"], points: ["Management Accounting: budgeting, cost allocation, performance measurement and management reporting."], actions: viewEdu("#education") },
+        { type: "Activity", title: "Co-Founder – Sora Education", org: "Sora Education", meta: ["Youth camps"], points: ["Monthly financial reporting for 5 summer camps: budget tracking, cost analysis and profitability management."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "soft-communication": {
+      title: "Communication & Public Speaking",
+      text: "Public speaking in French, English and Mandarin at academic and cultural events.",
+      links: [
+        { label: "Delegate – Nuit des Idées", href: "#volunteer" },
+        { label: "Toastmasters Clubs & Presentation Activities", href: "#extracurricular" },
+      ],
+    },
+    "soft-leadership": {
+      title: "Leadership & Team Management",
+      text: "Leading small marketing teams and running student groups.",
+      links: [
+        { label: "AIESEC Marketing Lead – Team of 4", href: "#volunteer" },
+        { label: "Marketing & Membership Director – Guzheng Club", href: "#extracurricular" },
+      ],
+    },
+    "soft-project": {
+      title: "Project Management & Organisation",
+      text: "Planning, coordinating and following up academic projects, events and camps.",
+      links: [
+        { label: "Sora Education – Organising 5 Summer Camps", href: "#extracurricular" },
+        { label: "Organising Seminars and Conferences (RA & TA)", href: "#exp-research" },
+      ],
+    },
+    "soft-intercultural": {
+      title: "Intercultural Teamwork",
+      text: "Working in multicultural teams and environments in France and Taiwan.",
+      links: [{ label: "Buddy Programme & Flagship Center", href: "#volunteer" }],
+    },
+    "lang-english": {
+      title: "English – IELTS 8.0 (C1)",
+      text: "C1 level certified by IELTS 8.0, used daily in academic and professional settings.",
+      proofs: [
+        { type: "Certificate", title: "IELTS 8.0 (C1)", org: "IELTS", meta: ["English"], points: ["C1 certification."], actions: openCert("certificates/IELTS%208_20241215.pdf") },
+        { type: "Education", title: "Master in Management", org: "emlyon business school", meta: ["Lyon · France"], points: ["Programme taught entirely in English."], actions: viewEdu("#edu-emlyon") },
+      ],
+    },
+    "lang-french": {
+      title: "French – DALF C1",
+      text: "Certified C1 level in French, with study and presentation experience in France.",
+      proofs: [
+        { type: "Certificate", title: "DALF C1", org: "France Éducation international", meta: ["French"], points: ["C1 certification."], actions: openCert("certificates/DALF%20C1_Certificate.pdf") },
+        { type: "Education", title: "Exchange Programme", org: "Université Paris 1 Panthéon-Sorbonne", meta: ["Paris · France", "01/2024 – 06/2024"], points: ["Academic and cultural immersion in France."], actions: viewEdu("#edu-paris1") },
+      ],
+    },
+    "lang-japanese": {
+      title: "Japanese – JLPT N1",
+      text: "Advanced Japanese (JLPT N1), useful for understanding East Asian cultures and markets.",
+      proofs: [
+        { type: "Certificate", title: "JLPT N1", org: "JLPT", meta: ["Japanese"], points: ["Advanced-level certification."], actions: openCert("certificates/JLPT%20N1.webp") },
+        { type: "Activity", title: "Kendo · Kyudo · Ikebana", org: "Student clubs", meta: ["Japanese culture"], points: ["Practice and cultural immersion."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "lang-mandarin": {
+      title: "Mandarin – Native Language",
+      text: "Native Mandarin speaker, used in every professional and personal context.",
+    },
+    "lang-mandarin-teaching": {
+      title: "Mandarin – Native Language",
+      text: "Native Mandarin speaker, with volunteer experience supporting pupils from multicultural families.",
+      proofs: [
+        { type: "Volunteering", title: "Volunteer – University Social Responsibility Project", org: "Office of University Responsibility, NCCU", meta: [], points: ["Language and cultural support for pupils from transnational families (new immigrants / children of migrants)."], actions: [{ label: "View engagement", href: "#engagement" }] },
+      ],
+    },
+    "data-kpi": {
+      title: "KPI Tracking & Reporting",
+      text: "Tracking marketing and business KPIs, building dashboards and periodic reporting.",
+      proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["Built and tracked KPI dashboards (acquisition, engagement, retention).", "Weekly reporting and analysis of performance trends."], actions: viewExp("#exp-engoo") },
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Monthly tracking of SEO/SEA KPIs (traffic, CTR, conversions) and client reporting."], actions: viewExp("#exp-kpn") },
+      ],
+    },
+    "data-segmentation": {
+      title: "Customer Segmentation",
+      text: "Segmenting audiences and markets to guide marketing and business decisions.",
+      proofs: [
+        { type: "Project", title: "Market Study – Lifestyle Brand", org: "Academic project", meta: ["Europe · Asia"], points: ["Target segmentation and persona definition.", "Strategic recommendations tailored to each segment."] },
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["A/B testing of creatives by target sub-segment.", "Behavioural analysis of audiences on social platforms."], actions: viewExp("#exp-engoo") },
+      ],
+    },
+    "data-ab": {
+      title: "A/B Testing",
+      text: "Designing and analysing A/B tests to optimise creatives, messages and user journeys.",
+      proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["A/B tests on ad visuals and copy by sub-segment.", "Analysis of results and optimisation recommendations."], actions: viewExp("#exp-engoo") },
+      ],
+    },
+    "mkt-campaign": {
+      title: "Campaign Planning",
+      text: "Planning, coordinating and tracking multichannel marketing campaigns (SEO, SEA, social media, emailing).",
+      proofs: [
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Planned and coordinated multichannel digital campaigns.", "Budget tracking and performance reporting."], actions: viewExp("#exp-kpn") },
+        { type: "Entrepreneurial Project", title: "Co-Founder", org: "Sora Education", meta: [], points: ["Planned and ran recruitment campaigns for 5 summer camps."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "cons-strategy": {
+      title: "Strategic Analysis (SWOT, PESTEL, Porter)",
+      text: "Analysing companies and markets with SWOT, PESTEL and Porter's five forces.",
+      proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["Market analysis and competitive positioning for the Rednote content strategy."], actions: viewExp("#exp-engoo") },
+        { type: "Entrepreneurial Project", title: "Co-Founder", org: "Sora Education", meta: [], points: ["Market research, segmentation and positioning of the course offer."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "cons-benchmark": {
+      title: "Competitive Benchmarking",
+      text: "Comparative analysis of market players to identify positioning and differentiation opportunities.",
+      proofs: [
+        { type: "Internship", title: "Marketing Assistant", org: ENGOO_EN, meta: [], points: ["In-depth competitive monitoring to optimise the content strategy for the Simplified Chinese segment."], actions: viewExp("#exp-engoo") },
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["In-depth competitive benchmarks and SEO/SEA positioning analysis."], actions: viewExp("#exp-kpn") },
+      ],
+    },
+    "cons-business-case": {
+      title: "Business Case & Recommendations",
+      text: "Structuring and presenting business cases with actionable, costed recommendations.",
+      proofs: [
+        { type: "Entrepreneurial Project", title: "Co-Founder", org: "Sora Education", meta: [], points: ["Business plan, business model and pitch for 5 summer camps."], actions: viewAct("#extracurricular") },
+      ],
+    },
+    "cons-storytelling": {
+      title: "Storytelling & Presentations",
+      text: "Designing impactful presentations (slides, pitch, defence) to convince professional audiences.",
+      proofs: [
+        { type: "Activity", title: "Toastmasters – Public Speaking", org: "Student clubs, NCCU", meta: ["English · Mandarin"], points: ["Structured public speaking and storytelling in English and Mandarin."], actions: viewAct("#extracurricular") },
+        { type: "Experience", title: "Delegate – Nuit des Idées", org: "French Institute of Taiwan", meta: ["2022"], points: ["Presenting and hosting in a French-Taiwanese intercultural setting."], actions: viewAct("#volunteer") },
+      ],
+    },
+    "ai-tools": {
+      title: "AI Tools (ChatGPT, Claude, Gemini)",
+      text: "Daily use of the main generative AI models for writing, analysis, code generation and productivity.",
+      proofs: [
+        { type: "Practice", title: "Daily Use – Production & Analysis", org: "Professional & academic use", meta: ["ChatGPT · Claude · Gemini · Perplexity"], points: ["Generating and optimising marketing content.", "Data analysis and research synthesis.", "Automating repetitive tasks."] },
+      ],
+    },
+    "ai-ads": {
+      title: "AI-Powered Advertising",
+      text: "Using Google Ads AI features to optimise ad campaigns (Performance Max, Smart Bidding).",
+      proofs: [
+        { type: "Certification", title: "AI-Powered Performance Ads", org: "Google", meta: ["AI"], points: ["Google Ads certification on using AI for advertising performance."], actions: openCert("certificates/AI%20技術輔助高效廣告認證.webp") },
+        { type: "Internship", title: "Digital Marketing Assistant", org: KPN_EN, meta: [], points: ["Google Ads campaigns with automated optimisation (Smart Bidding, Performance Max)."], actions: viewExp("#exp-kpn") },
+      ],
+    },
+    "ai-business": {
+      title: "AI for Business",
+      text: "Understanding the strategic stakes of AI for companies: digital transformation, automation and new value models.",
+      proofs: [
+        { type: "Course", title: "Transformations", org: "emlyon business school", meta: ["Lyon · France"], points: ["Core course of the Programme Grande École on how companies and their business models are transforming."], actions: viewEdu("#edu-emlyon") },
+        { type: "Certification", title: "AI-Powered Performance Ads", org: "Google", meta: ["AI"], points: ["Applying AI to marketing performance."], actions: openCert("certificates/AI%20技術輔助高效廣告認證.webp") },
+      ],
+    },
+  };
+  Object.entries(skillDataEn).forEach(([key, en]) => {
+    if (skillData[key]) skillData[key].en = { ...(skillData[key].en || {}), ...en };
+  });
 
   const previewContainer = document.querySelector(".skill-preview");
   const previewTitle = previewContainer?.querySelector(".skill-preview-title");
@@ -5162,6 +5526,9 @@
       "Projet académique": "Academic Project", "Formation": "Education",
       "Bénévolat": "Volunteering", "Projet": "Project", "Certificat": "Certificate",
       "Lien": "Link", "Outil Personnel": "Personal Tool", "Preuve": "Proof",
+      "Stage": "Internship", "Projet entrepreneurial": "Entrepreneurial Project",
+      "Projet Personnel": "Personal Project", "Expérience Associative": "Student Association",
+      "Extra-scolaire": "Extracurricular",
     } : {};
     const actionMap = activeLang === "en" ? {
       "Voir l'expérience": "View experience", "Voir la formation": "View education",
@@ -5330,7 +5697,7 @@
     if (!previewContainer || !previewTitle || !previewText || !previewProofs) return;
     const lang = document.querySelector(".lang-btn.is-active")?.getAttribute("data-lang") || "fr";
     const dict = translations[lang];
-    previewTitle.textContent = getTranslation(dict, "skills.previewTitle") || "Détail d'une compétence";
+    previewTitle.textContent = getTranslation(dict, "skills.previewTitle") || "Détail d'une Compétence";
     previewText.textContent = getTranslation(dict, "skills.previewText") || "";
     previewProofs.innerHTML = "";
     skillChips.forEach((c) => c.classList.remove("is-skill-active"));

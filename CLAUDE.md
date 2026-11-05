@@ -79,6 +79,8 @@ Proofread every piece of new content for:
 - Match the language of the page — do not place English content on a French page or vice versa.
 - **Version chinoise invisible en ligne** : seule `teaching` garde le bouton CN. Sur toutes les autres pages (CV et portfolios), une langue enregistrée sans bouton visible sur la page (`pf-lang = zh` venu de `teaching`) revient au français à l'ouverture ; aucun texte chinois ne doit s'afficher (`main.js` et scripts `applyLang` des portfolios).
 - **Étiquettes des projets (`.pf-tag`, tous les portfolios) traduites aussi** (demande de l'utilisatrice) : paire `data-lang-show` FR / EN (« Tableaux Croisés Dynamiques » / « Pivot Tables », « Suivi des KPI » / « KPI Tracking »…). Restent identiques dans les deux langues les noms d'outils, de marques et d'organisations (Excel, Python, R, PowerPoint, Canva, Adobe Illustrator, Facebook, Xiaohongshu, Sephora, AIESEC, LSEG · Refinitiv), les sigles (FMCG, M&A, Logit) et les termes déjà employés tels quels dans le texte français des pages (Dashboard, Reporting, Community Management).
+- **Nom de la plateforme : « Rednote »** (demande de l'utilisatrice, 11/2026) : en français et en anglais, tout texte visible écrit « Rednote » (jamais Xiaohongshu, REDnote, RedNote ni XHS) ; en chinois, « 小紅書 ». Les identifiants, ancres (`#xhs-dashboard`, `#xhs-weekly`), clés, classes et noms de fichiers gardent `xhs` / `XHS` pour ne pas casser les liens.
+- **Tout texte visible change avec la langue** (demande de l'utilisatrice) : aucun texte écrit en dur dans une seule langue (pied de page, liens « → Voir… », étiquettes des cartes, titres des ressources de `teaching`). Les cartes de compétences ont leur version anglaise dans `skillDataEn` (`main.js`, juste après `skillData`), fusionnée dans `skillData[clé].en` ; toute nouvelle compétence ou preuve s'écrit en FR et EN. Le sommaire des expositions reprend la clé `data-i18n` du titre qu'il copie.
 - **Exception:** some terms are intentionally kept in their original language (e.g. "SEO", specific tool names the user has chosen to keep). When in doubt about whether a term should be translated, **ask the user**.
 
 ---
@@ -86,6 +88,7 @@ Proofread every piece of new content for:
 ## 9. Experience Reframing — Never Delete Entries
 
 - **Never remove** an experience or education entry from the site as a whole.
+- **Traduction freelance (confirmé par l'utilisatrice, 11/2026)** : sur `teaching`, l'entrée affichée « Traductrice & Correctrice (Freelance), 2022 – 2024 » est la bonne (mois non fournis, d'où les seules années). L'entrée `experience.weber` de `main.js` (« Correctrice (Freelance), 08/2023 – Présent ») n'est affichée sur aucune page ; ne pas la réafficher sans demande.
 - **Exception (demande de l'utilisatrice) :** chaque page CV se concentre sur les expériences et compétences liées à son domaine. Une expérience sans rapport avec le domaine peut quitter une page à condition de rester sur la page de son propre domaine (ex. TutorABC, Weber et la traduction freelance ne figurent plus sur `index`, ils restent sur `teaching`).
 - Instead, **reframe the description** to highlight the transferable skills relevant to that page's domain (finance, marketing, data, teaching, etc.).
 - Do not invent fictional tasks — only reframe or emphasize real aspects of the experience from a different angle.

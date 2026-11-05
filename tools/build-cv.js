@@ -168,7 +168,7 @@ function scrape() {
         title: txt(a.querySelector('.timeline-body h3')),
         org: txt(a.querySelector('.timeline-company')),
         rows: [...a.querySelectorAll('.edu-degree-row')].map((r) =>
-          txt(r.querySelector('.edu-degree-label')) + ' : ' +
+          txt(r.querySelector('.edu-degree-label')) + (document.documentElement.lang === 'en' ? ': ' : '\u00a0: ') +
           [...r.querySelectorAll('.edu-degree-chip')].map(txt).join(', ')),
         gpa: [...a.querySelectorAll('.portfolio-stat')].map((st) =>
           txt(st.querySelector('.stat-value')) + ' ' + txt(st.querySelector('.stat-label'))).join(' · '),
@@ -266,7 +266,7 @@ function render(d, pal, photo) {
     <h1>${esc(d.name)}</h1>
     <div class="kicker">${esc(d.kicker)}</div>
     <div class="contact">${[
-      ...d.meta.map((m) => `${esc(m.label)} : ${esc(m.value)}`),
+      ...d.meta.map((m) => `${esc(m.label)}${d.lang === 'fr' ? '\u00a0:' : ':'} ${esc(m.value)}`),
     ].map((s) => `<span>${s}</span>`).join('')}</div>
     <div class="contact"><span>${esc(d.email.trim())}</span>${d.linkedin ? `<span>${esc(d.linkedin)}</span>` : ''}</div>
   </div>
