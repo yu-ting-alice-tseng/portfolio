@@ -21,6 +21,8 @@ const PAGES = {
   data:      { accent: '#0d9488', soft: '#e7f6f4', name: 'Data' },
   finance:   { accent: '#1e3a5f', soft: '#eaf0f6', name: 'Finance' },
 };
+// marketing.html est devenu la page « univers » : le contenu du CV vit dans marketing-cv.html
+const FICHIERS = { marketing: 'marketing-cv' };
 const LANGS = ['fr', 'en'];
 
 // Compétences du CV, rangées par importance pour le métier de chaque page (le plus utile en haut).
@@ -289,7 +291,7 @@ ${block(d.extra, true)}
       const ctx = await browser.newContext();
       await ctx.addInitScript((l) => { try { localStorage.setItem('pf-lang', l); } catch (e) {} }, lang);
       const p = await ctx.newPage();
-      await p.goto(`${BASE}/${page}.html`, { waitUntil: 'load' });
+      await p.goto(`${BASE}/${FICHIERS[page] || page}.html`, { waitUntil: 'load' });
       scraped[page] = await p.evaluate(scrape);
       await ctx.close();
     }

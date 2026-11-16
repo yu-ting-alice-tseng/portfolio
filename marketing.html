@@ -1,1076 +1,689 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K4HC6D6D');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <script>
-      (function () {
-        try {
-          var t = localStorage.getItem("theme");
-          if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-          document.documentElement.setAttribute("data-theme", t);
-        } catch (e) {}
-      })();
-    </script>
-    <title>Yu-Ting Tseng · Marketing</title>
-    <meta name="description" content="Portfolio Marketing de Yu-Ting Tseng – social media, content, performance et créativité." />
-    <link rel="stylesheet" href="style.css?v=20261105" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  </head>
-  <body class="page-marketing">
-  <div class="mk-grain" aria-hidden="true"></div>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <filter id="mk-bavure">
-      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="11" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="mk-flou" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter><symbol id="mk-guzheng" viewBox="-142.8 -37.8 285.9 84.1"><path d="M-128.9 -17.3 L-118 -16.2 L-107 -15.1 L-96.1 -14.1 L-85.2 -13 L-74.2 -11.9 L-63.3 -10.9 L-52.4 -9.8 L-41.4 -8.8 L-30.5 -7.8 L-19.6 -6.7 L-8.6 -5.7 L2.3 -4.7 L13.2 -3.6 L24.2 -2.6 L35.1 -1.6 L46.1 -0.6 L57 0.4 L67.9 1.4 L78.9 2.4 L89.8 3.4 L100.8 4.4 L111.7 5.4 L122.7 6.4 L133.6 7.4 L135.5 8.6 L137.1 10.5 L138.3 13.5 L139 17.1 L139.1 21.3 L138.6 25.8 L137.6 30.2 L136.2 34.2 L134.3 37.6 L132.2 40.1 L130 41.6 L127.8 42.3 L117 40.7 L106.1 39.1 L95.3 37.5 L84.5 35.9 L73.6 34.3 L62.8 32.7 L51.9 31.1 L41.1 29.5 L30.2 27.9 L19.4 26.4 L8.5 24.8 L-2.3 23.2 L-13.2 21.6 L-24 20.1 L-34.9 18.5 L-45.7 17 L-56.6 15.4 L-67.4 13.9 L-78.3 12.3 L-89.1 10.8 L-100 9.2 L-110.8 7.7 L-121.7 6.2 L-132.5 4.7 L-134.5 3.9 L-136.2 2.6 L-137.6 0.7 L-138.5 -1.7 L-138.8 -4.4 L-138.6 -7.2 L-137.9 -10 L-136.7 -12.5 L-135.1 -14.6 L-133.1 -16.1 L-131 -17 Z" class="q-ombre" filter="url(#mk-flou)"/><path d="M-101.5 -21.3 L-101.5 -12.3" class="q-pied is-loin"/><path d="M-104.5 -3.2 L-104.5 5.8" class="q-pied"/><path d="M101.4 -2.2 L101.4 6.8" class="q-pied is-loin"/><path d="M96.7 25.8 L96.7 34.8" class="q-pied"/><path d="M-138.6 -23.4 L-138.8 -20.5 L-138.5 -17.5 L-137.6 -14.8 L-136.2 -12.5 L-134.5 -11 L-132.5 -10.1 L-121.7 -8.9 L-110.8 -7.7 L-100 -6.4 L-89.1 -5.1 L-78.3 -3.8 L-67.4 -2.5 L-56.6 -1.1 L-45.7 0.2 L-34.9 1.6 L-24 3 L-13.2 4.5 L-2.3 5.9 L8.5 7.4 L19.4 8.9 L30.2 10.4 L41.1 12 L51.9 13.5 L62.8 15.1 L73.6 16.7 L84.5 18.3 L95.3 20 L106.1 21.6 L117 23.3 L127.8 25 L130 24.1 L132.2 22.4 L134.3 19.5 L136.2 15.8 L137.6 11.5 L138.6 7 L138.6 16.5 L137.6 20.9 L136.2 24.9 L134.3 28.3 L132.2 30.8 L130 32.3 L127.8 33 L117 31.4 L106.1 29.8 L95.3 28.2 L84.5 26.6 L73.6 25 L62.8 23.4 L51.9 21.8 L41.1 20.3 L30.2 18.7 L19.4 17.1 L8.5 15.5 L-2.3 13.9 L-13.2 12.4 L-24 10.8 L-34.9 9.2 L-45.7 7.7 L-56.6 6.1 L-67.4 4.6 L-78.3 3 L-89.1 1.5 L-100 -0 L-110.8 -1.6 L-121.7 -3.1 L-132.5 -4.5 L-134.5 -5.4 L-136.2 -6.7 L-137.6 -8.6 L-138.5 -11 L-138.8 -13.7 L-138.6 -16.5 Z" class="q-flanc"/><path d="M-126.6 -6.7 L-111.1 -4.6 L-95.5 -2.5 L-80 -0.4 L-64.4 1.7 L-48.9 3.8 L-33.4 6 L-17.8 8.1 L-2.3 10.3 L13.2 12.5 L28.7 14.7 L44.3 16.8 L59.8 19 L75.3 21.2 L90.9 23.4 L106.4 25.6 L121.9 27.8" class="q-filet"/><path d="M-128.9 -32.1 L-118 -31.3 L-107 -30.5 L-96.1 -29.7 L-85.2 -28.9 L-74.2 -28.1 L-63.3 -27.2 L-52.4 -26.4 L-41.4 -25.5 L-30.5 -24.6 L-19.6 -23.8 L-8.6 -22.9 L2.3 -21.9 L13.2 -21 L24.2 -20.1 L35.1 -19.1 L46.1 -18.2 L57 -17.2 L67.9 -16.2 L78.9 -15.2 L89.8 -14.1 L100.8 -13.1 L111.7 -12 L122.7 -11 L133.6 -9.9 L135.5 -8.8 L137.1 -7.2 L138.3 -4.6 L139 -1.3 L139.1 2.6 L138.6 7 L137.6 11.5 L136.2 15.8 L134.3 19.5 L132.2 22.4 L130 24.1 L127.8 25 L117 23.3 L106.1 21.6 L95.3 20 L84.5 18.3 L73.6 16.7 L62.8 15.1 L51.9 13.5 L41.1 12 L30.2 10.4 L19.4 8.9 L8.5 7.4 L-2.3 5.9 L-13.2 4.5 L-24 3 L-34.9 1.6 L-45.7 0.2 L-56.6 -1.1 L-67.4 -2.5 L-78.3 -3.8 L-89.1 -5.1 L-100 -6.4 L-110.8 -7.7 L-121.7 -8.9 L-132.5 -10.1 L-134.5 -11 L-136.2 -12.5 L-137.6 -14.8 L-138.5 -17.5 L-138.8 -20.5 L-138.6 -23.4 L-137.9 -26.1 L-136.7 -28.3 L-135.1 -30.1 L-133.1 -31.3 L-131 -31.9 Z" class="q-table"/><path d="M-108.3 -24.5 L-90.1 -22.9 L-71.9 -21.3 L-53.7 -19.6 L-35.6 -17.9 L-17.4 -16.1 L0.8 -14.3 L19 -12.4 L37.2 -10.5 L55.4 -8.6 L73.5 -6.6 L91.7 -4.6 L109.9 -2.5" class="q-reflet"/><path d="M122.7 -11.1 L133.6 -10 L135.5 -9 L137.1 -7.3 L138.3 -4.8 L139 -1.5 L139.1 2.5 L138.6 6.8 L137.6 11.3 L136.2 15.6 L134.3 19.3 L132.2 22.2 L130 24 L127.8 24.8 L117 23.1 Z" class="q-tete"/><path d="M113.5 -14.1 L113.1 -11.9 L112.6 -9.7 L112.2 -7.4 L111.8 -5 L111.3 -2.5 L110.9 0.1 L110.5 2.7 L110.1 5.4 L109.6 8.2 L109.2 11 L108.8 13.9 L108.3 16.9" class="q-sillet"/><path d="M-119.2 -33.8 L-119.5 -32.5 L-119.7 -31.2 L-120 -29.8 L-120.3 -28.3 L-120.5 -26.8 L-120.8 -25.2 L-121.1 -23.5 L-121.4 -21.8 L-121.6 -19.9 L-121.9 -18.1 L-122.2 -16.1 L-122.4 -14.1" class="q-sillet"/><path d="M113.3 -13.6 L-119.3 -33.4" class="q-corde"/><path d="M113 -11.9 L-119.5 -32.4" class="q-corde"/><path d="M112.6 -10 L-119.7 -31.3" class="q-corde"/><path d="M112.3 -8.2 L-120 -30.2" class="q-corde"/><path d="M112 -6.2 L-120.2 -29.1" class="q-corde"/><path d="M111.6 -4.3 L-120.4 -27.9" class="q-corde"/><path d="M111.3 -2.2 L-120.6 -26.7" class="q-corde"/><path d="M110.9 -0.2 L-120.8 -25.4" class="q-corde"/><path d="M110.6 2 L-121 -24.1" class="q-corde"/><path d="M110.2 4.1 L-121.2 -22.7" class="q-corde"/><path d="M109.9 6.4 L-121.5 -21.3" class="q-corde"/><path d="M109.5 8.6 L-121.7 -19.9" class="q-corde"/><path d="M109.2 11 L-121.9 -18.4" class="q-corde"/><path d="M108.8 13.3 L-122.1 -16.9" class="q-corde"/><path d="M108.5 15.7 L-122.3 -15.3" class="q-corde"/><path d="M-84.7 -27.3 L-81.6 -30 L-78.4 -26.6" class="q-chevalet"/><path d="M-71.9 -25.2 L-68.8 -27.7 L-65.6 -24.4" class="q-chevalet"/><path d="M-59.3 -22.9 L-56.1 -25.3 L-53 -22.1" class="q-chevalet"/><path d="M-47 -20.5 L-43.8 -22.9 L-40.7 -19.7" class="q-chevalet"/><path d="M-35.1 -18 L-32 -20.3 L-28.8 -17.2" class="q-chevalet"/><path d="M-23.8 -15.4 L-20.6 -17.7 L-17.5 -14.6" class="q-chevalet"/><path d="M-13.1 -12.7 L-10 -15 L-6.8 -12" class="q-chevalet"/><path d="M-3.2 -10 L0 -12.2 L3.2 -9.2" class="q-chevalet is-mid"/><path d="M6.1 -7.2 L9.3 -9.5 L12.4 -6.4" class="q-chevalet"/><path d="M14.7 -4.3 L17.9 -6.6 L21 -3.6" class="q-chevalet"/><path d="M22.6 -1.4 L25.8 -3.8 L29 -0.7" class="q-chevalet"/><path d="M30 1.5 L33.2 -0.9 L36.4 2.2" class="q-chevalet"/><path d="M37 4.5 L40.1 2.1 L43.3 5.2" class="q-chevalet"/><path d="M43.6 7.5 L46.8 5.1 L50 8.3" class="q-chevalet"/><path d="M50.1 10.7 L53.3 8.2 L56.4 11.4" class="q-chevalet"/></symbol>
-    <filter id="mk-encre">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6"/>
-    </filter>
-  </svg>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4HC6D6D"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-    <a class="skip-link" href="#about" data-i18n="a11y.skipLink">Aller au contenu</a>
-
-    <!-- ── Site Header ─────────────────────────────── -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <span class="brand-mark brand-mark--cordes">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <text class="logo-lettres" x="18" y="17" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="14" font-weight="700">YT</text>
-              <path class="logo-qin" d="M3.5 23.2 L31 21.6 C33.6 21.5 34.4 22.6 34.4 24.4 C34.4 26.2 33.6 27.3 31 27.2 L3.5 25.8 C2.2 25.7 1.8 25.1 1.8 24.5 C1.8 23.9 2.2 23.3 3.5 23.2 Z"/>
-              <path class="logo-cordes" d="M5 24 L30 23 M5 24.9 L30 25.4"/>
-              <circle class="logo-chevalet" cx="17.5" cy="24.4" r=".9"/>
-            </svg>
-          </span>
-          <span class="brand-text" data-i18n="brandName">Yu‑Ting Tseng</span>
-        </div>
-        <nav class="site-nav" aria-label="Navigation principale">
-          <div class="nav-item--has-dropdown">
-            <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">
-              <span data-i18n="nav.about">À propos</span>
-              <span class="nav-chevron" aria-hidden="true">›</span>
-            </button>
-            <div class="nav-dropdown" role="menu">
-              <a href="#about"           role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav.about">À propos</span></a>
-              <a href="#skills"          role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span data-i18n="nav.skills">Compétences</span></a>
-              <a href="#education"       role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg></span><span data-i18n="nav.education">Formation</span></a>
-              <a href="#experience"      role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span data-i18n="nav.experience">Expériences Professionnelles</span></a>
-              <a href="#extracurricular" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><span data-i18n="nav.extracurricular">Expériences Extra-scolaires</span></a>
-              <a href="#volunteer" role="menuitem"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><span data-i18n="nav.volunteer">Bénévolat</span></a>
-            </div>
-          </div>
-          <a href="portfolio-marketing.html" data-i18n="nav.portfolio">Portfolio</a>
-          <a href="#contact"   data-i18n="nav.contact">Contact</a>
-        </nav>
-        <div class="lang-switch" aria-label="Choisir la langue">
-          <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
-          <button class="lang-btn" data-lang="en" type="button">EN</button>
-          <!-- HIDDEN – CN button (uncomment to re-enable)
-          <button class="lang-btn" data-lang="zh" type="button">CN</button>
-          -->
-        </div>
-        <div class="mk-outils">
-          <button class="mk-son" type="button" aria-pressed="false" hidden>
-            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="tige" d="M6 12.2V3.2l7-1.6v9"/><circle cx="4.3" cy="12.4" r="1.9"/><circle cx="11.3" cy="11" r="1.9"/><path class="barre" d="M2 14.2 14.4 1.8"/></svg>
-          </button>
-          <button class="theme-toggle" type="button" aria-label="Basculer entre thème clair et sombre">
-            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          </button>
-        </div>
-      </div>
-    </header>
-
-
-    <main>
-
-      <!-- HIDDEN – Page-type bar (pages are now standalone; uncomment to re-enable cross-navigation)
-      <nav class="page-type-bar" aria-label="Navigation entre pages">
-        <div class="container page-type-inner">
-          <a href="index.html" class="page-type-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span data-i18n="pageNav.home">Accueil</span>
-          </a>
-          <a href="marketing.html" class="page-type-link is-current">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span data-i18n="pageNav.marketing">Marketing</span>
-          </a>
-          <a href="data.html" class="page-type-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            <span data-i18n="pageNav.data">Data &amp; Insights</span>
-          </a>
-          <a href="finance.html" class="page-type-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            <span data-i18n="pageNav.finance">Finance &amp; Conseil</span>
-          </a>
-          <a href="teaching.html" class="page-type-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg>
-            <span data-i18n="pageNav.teaching">Enseignement</span>
-          </a>
-        </div>
-      </nav>
-      -->
-
-      <!-- ── Hero ──────────────────────────────────── -->
-      <section class="hero rv-hero" id="about">
-        <div class="container rv-bandeau" aria-hidden="true">
-          <span data-i18n="marketingHero.cardRole">Marketing 360</span>
-          <span data-i18n="hero.locationValue">Paris, France</span>
-        </div>
-        <div class="container hero-grid">
-          <div class="hero-text">
-            <p class="hero-kicker" data-i18n="marketingHero.kicker">
-              Analyse · Contenu · Diffusion
-            </p>
-            <h1>
-              <span data-i18n="marketingHero.title1">Je transforme les chiffres</span>
-              <span class="accent" data-i18n="marketingHero.title2">en décisions de campagne.</span>
-            </h1>
-            <p class="hero-summary" data-i18n="marketingHero.summary">
-              Étudiante en Master en Gestion (Programme Grande École) à emlyon, je relie l'analyse et la création : je lis les données d'audience pour orienter les contenus, je conçois des visuels et des campagnes adaptés à chaque canal et je mesure chaque action pour l'ajuster.
-            </p>
-            <div class="hero-actions">
-              <a href="portfolio-marketing.html" class="btn btn-primary" data-i18n="marketingHero.ctaPrimary">
-                Voir mes créations
-              </a>
-              <a href="assets/cv/CV_Yu-Ting_Tseng_Marketing_FR.pdf" class="rv-lien" download data-i18n="cv.download" data-i18n-href="cv.marketing">Télécharger le CV (PDF)</a>
-              <a href="#contact" class="rv-lien" data-i18n="marketingHero.ctaSecondary">Me contacter</a>
-            </div>
-          </div>
-          <aside class="hero-card rv-feuille" aria-label="Informations principales">
-            <img class="avatar" src="assets/profile.webp" alt="Portrait de Yu-Ting Tseng"
-              width="240" height="280" loading="eager" decoding="async" />
-            <div class="rv-cartel">
-              <h2 data-i18n="hero.cardName">Yu‑Ting Tseng</h2>
-              <p class="hero-role" data-i18n="marketingHero.cardRole">Marketing 360</p>
-            </div>
-            <div class="hero-meta">
-              <div>
-                <span class="meta-label" data-i18n="hero.locationLabel">Basée à</span>
-                <span class="meta-value" data-i18n="hero.locationValue">Paris, France</span>
-              </div>
-              <div>
-                <span class="meta-label" data-i18n="hero.availabilityLabel">Disponible à partir de</span>
-                <span class="meta-value" data-i18n="hero.availabilityValue">01/2027 (stage de césure de 6 mois)</span>
-              </div>
-            </div>
-            <ul class="hero-list">
-              <li>
-                <span class="label" data-i18n="hero.cardEmailLabel">Email</span>
-                <span class="value">yuting.alice.tseng@gmail.com</span>
-              </li>
-              <li>
-                <span class="label">LinkedIn</span>
-                <span class="value">
-                  <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
-                    target="_blank" rel="noopener noreferrer">Yu-Ting Tseng</a>
-                </span>
-              </li>
-            </ul>
-          </aside>
-        </div>
-
-        <!-- Bandeau de résultats : un chiffre par expérience, chacun mène à sa source -->
-        <div class="container">
-          <ul class="rv-registre" data-reveal>
-            <li><a href="#exp-engoo">
-              <span class="rv-val stat-value" data-i18n="nums.views">+93,3 %</span>
-              <span class="rv-lbl" data-i18n="marketingHero.reg1Lbl">de vues sur Rednote</span>
-              <span class="rv-src" data-i18n="marketingHero.reg1Src">Engoo · Assistante Marketing</span>
-            </a></li>
-            <li><a href="#exp-leboncoin">
-              <span class="rv-val stat-value">20+</span>
-              <span class="rv-lbl" data-i18n="marketingHero.reg2Lbl">campagnes display simultanées</span>
-              <span class="rv-src" data-i18n="marketingHero.reg2Src">leboncoin · Traffic Manager</span>
-            </a></li>
-            <li><a href="#exp-kpn">
-              <span class="rv-val stat-value" data-i18n="nums.ctr">+9,5 %</span>
-              <span class="rv-lbl" data-i18n="marketingHero.reg3Lbl">de CTR sur Meta et Google</span>
-              <span class="rv-src" data-i18n="marketingHero.reg3Src">KPN · Tests A/B</span>
-            </a></li>
-            <li><a href="#extra-aiesec">
-              <span class="rv-val stat-value" data-i18n="nums.aiesecGoal">+53,7 %</span>
-              <span class="rv-lbl" data-i18n="marketingHero.reg4Lbl">au-delà de l'objectif budgétaire</span>
-              <span class="rv-src" data-i18n="marketingHero.reg4Src">AIESEC · Camp YOLO</span>
-            </a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ── Mur de créations : trois œuvres accrochées, chacune mène au portfolio ── -->
-      <section class="rv-mur" aria-labelledby="rv-mur-titre">
-        <div class="container">
-          <div class="rv-mur-tete">
-            <h2 id="rv-mur-titre" data-i18n="marketingHero.wallTitle">Quelques Créations</h2>
-            <a href="portfolio-marketing.html" data-i18n="marketingHero.wallAll">Tout le portfolio →</a>
-          </div>
-          <ul class="rv-mur-grille">
-            <li><a href="portfolio-marketing.html#aiesec-yolo">
-              <span class="rv-cadre"><img src="assets/yolo-camp-main-visual-en.webp" alt="AIESEC YOLO International Camp – Main Campaign Poster" loading="lazy" decoding="async"></span>
-              <span class="rv-mur-cat" data-i18n="portfolio.mkt.board.p5Cat">Campagne · Direction Artistique · Design</span>
-              <span class="rv-mur-nom" data-i18n="portfolio.mkt.board.p5Name">AIESEC · Camp International YOLO</span>
-            </a></li>
-            <li><a href="portfolio-marketing.html#guzheng-facebook">
-              <span class="rv-cadre"><img src="assets/guzheng-club-recruitment-poster.webp" alt="NCCU Guzheng Club – Recruitment Poster" loading="lazy" decoding="async"></span>
-              <span class="rv-mur-cat" data-i18n="portfolio.mkt.board.p6Cat">Community Management · Design</span>
-              <span class="rv-mur-nom" data-i18n="portfolio.mkt.board.p6Name">Club de Guzheng · Page Facebook</span>
-            </a></li>
-            <li><a href="portfolio-marketing.html">
-              <span class="rv-cadre"><img src="assets/penwards-design-award.webp" alt="Penwards 2024 – Poster" loading="lazy" decoding="async"></span>
-              <span class="rv-mur-cat" data-i18n="marketingHero.wallPenCat">Affiche · Projet personnel</span>
-              <span class="rv-mur-nom" data-i18n="marketingHero.wallPenName">Affiche - Thème Penwards 2024</span>
-            </a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ── Skills ────────────────────────────────── -->
-      <div class="mk-sep" data-reveal aria-hidden="true">
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-        <svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg>
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-      </div>
-
-      <section class="section" id="skills">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="skills.title">Compétences</h2>
-            <p data-i18n="skills.subtitleMarketing">Marketing digital, création de contenu, outils data et IA pour le marketing.</p>
-          </header>
-
-          <div class="experience-toolbar skills-toolbar">
-            <div class="experience-filters skills-filters" aria-label="Filtrer les compétences">
-              <button type="button" class="experience-filter is-active" data-skill-area="all">
-                <span data-i18n="skills.filterAll">Tout</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="marketing">
-                <span data-i18n="skills.filterMarketing">Marketing</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="data">
-                <span data-i18n="skills.filterData">Data &amp; Analytics</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="creative">
-                <span data-i18n="skills.blockCreative">Outils Créatifs</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="ai">
-                <span data-i18n="skills.filterAI">IA &amp; Digital</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="office">
-                <span data-i18n="skills.filterOffice">Bureautique</span>
-              </button>
-              <button type="button" class="experience-filter" data-skill-area="languages">
-                <span data-i18n="skills.filterLanguages">Langues</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="skills-layout">
-          <div class="skills-left">
-          <div class="skills-grid">
-
-            <!-- Marketing -->
-            <div class="skills-block" data-skill-area="marketing" data-reveal>
-              <h3 data-i18n="skills.blockMarketing">Marketing</h3>
-
-              <!-- 1. STRATÉGIE -->
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMktStrategie">Stratégie</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-veille" data-i18n="skills.chipVeille">Veille Concurrentielle</button>
-                  <button type="button" class="skill-card" data-skill="mkt-benchmarking" data-i18n="skills.chipBenchmarking">Benchmarking</button>
-                  <button type="button" class="skill-card" data-skill="mkt-research" data-i18n="skills.chipResearch">Études de Marché</button>
-                  <button type="button" class="skill-card" data-skill="mkt-positionnement" data-i18n="skills.chipPositionnement">Positionnement</button>
-                  <button type="button" class="skill-card" data-skill="mkt-campaign" data-i18n="skills.chipCampaign">Planification de Campagnes</button>
-                </div>
-              </div>
-
-              <!-- 1b. CONTENU -->
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMktContenu">Contenu</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-content-strategy" data-i18n="skills.chipContentStrategy">Stratégie de Contenu</button>
-                  <button type="button" class="skill-card" data-skill="mkt-design" data-i18n="skills.chipDesign">Rédaction de Contenu &amp; Design Visuel</button>
-                </div>
-              </div>
-
-              <!-- 2. RÉFÉRENCEMENT NATUREL (SEO) -->
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMkt1">Référencement Naturel (SEO)</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-seo-technical" data-i18n="skills.chipSeoTechnical">SEO Technique</button>
-                  <button type="button" class="skill-card" data-skill="mkt-seo-onpage" data-i18n="skills.chipSeoOnpage">SEO On-Page</button>
-                  <button type="button" class="skill-card" data-skill="mkt-seo-offpage" data-i18n="skills.chipSeoOffpage">SEO Off-Page</button>
-                  <button type="button" class="skill-card" data-skill="mkt-seo-keyword" data-i18n="skills.chipSeoKeyword">Recherche de Mots-Clés</button>
-                </div>
-                <div class="skills-tools-group">
-                  <span class="skills-tools-label" data-i18n="skills.toolsLabel">Outils</span>
-                  <div class="skills-cards">
-                    <button type="button" class="skill-card skill-card--tool" data-skill="mkt-semrush">Semrush</button>
-                    <button type="button" class="skill-card skill-card--tool" data-skill="mkt-ahrefs">Ahrefs</button>
-                    <button type="button" class="skill-card skill-card--tool" data-skill="mkt-screaming-frog">Screaming Frog</button>
-                    <button type="button" class="skill-card skill-card--tool" data-skill="mkt-similarweb">Similarweb</button>
-                    <button type="button" class="skill-card skill-card--tool" data-skill="mkt-gtrends">Google Trends</button>
-                    <button type="button" class="skill-card skill-card--tool" data-skill="mkt-gsc">Google Search Console</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 3. MARKETING PERFORMANCE -->
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMktPerf">Marketing Performance</p>
-                <p class="skills-subtitle--sub" data-i18n="skills.subMkt2">SEA (Search Engine Advertising)</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-sea">Google Ads</button>
-                  <button type="button" class="skill-card" data-skill="mkt-gkp">Google Keyword Planner</button>
-                </div>
-                <p class="skills-subtitle--sub" data-i18n="skills.subContent2">SMM (Marketing sur les Réseaux Sociaux)</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-meta">Meta Ads</button>
-                  <button type="button" class="skill-card" data-skill="mkt-mbs">Meta Business Suite</button>
-                  <button type="button" class="skill-card" data-skill="mkt-xhs">Rednote</button>
-                </div>
-                <p class="skills-subtitle--sub" data-i18n="skills.subMktDisplay">Display &amp; AdOps</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-xandr">Xandr</button>
-                  <button type="button" class="skill-card" data-skill="mkt-gam">Google Ad Manager</button>
-                </div>
-              </div>
-
-              <!-- 4. DATA ANALYTICS & MARKETING TECH -->
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subMktDataTech">Data Analytics &amp; Marketing Tech</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-analytics">Google Analytics 4</button>
-                  <button type="button" class="skill-card" data-skill="data-marketing-automation" data-i18n="skills.chipMarketingAutomation">Marketing Automation</button>
-                  <button type="button" class="skill-card" data-skill="data-python">Python</button>
-                  <button type="button" class="skill-card" data-skill="mkt-ab-testing" data-i18n="skills.chipABTesting">A/B Testing</button>
-                </div>
-              </div>
-
-              <!-- 5. ÉVÉNEMENTIEL & COORDINATION -->
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.blockEvents">Événementiel &amp; Coordination</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="mkt-event-management" data-i18n="skills.chipEventManagement">Organisation d'Événements</button>
-                  <button type="button" class="skill-card" data-skill="mkt-event-hosting" data-i18n="skills.chipEventHosting">Présidence &amp; Animation</button>
-                  <button type="button" class="skill-card" data-skill="mkt-vendor-coordination" data-i18n="skills.chipVendorCoordination">Coordination avec Prestataires</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Data, Reporting & Automation -->
-            <div class="skills-block" data-skill-area="data" data-reveal>
-              <h3 data-i18n="skills.blockDataMarketing">Data, Reporting & Automation</h3>
-              <div class="skills-cards">
-                <button type="button" class="skill-card" data-skill="data-excel">Excel - TOSA 950/1000</button>
-                <button type="button" class="skill-card" data-skill="data-powerbi">Power BI</button>
-                <button type="button" class="skill-card" data-skill="data-statistics" data-i18n="skills.chipStatistics">Statistiques &amp; Méthodes Quantitatives</button>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subData1">Langages &amp; Requêtes</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="data-python">Python</button>
-                  <button type="button" class="skill-card" data-skill="data-r">R</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Outils Créatifs -->
-            <div class="skills-block" data-skill-area="creative" data-reveal>
-              <h3 data-i18n="skills.blockCreative">Outils Créatifs</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subCreativeGraphic">Design Graphique</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="creative-canva">Canva</button>
-                  <button type="button" class="skill-card" data-skill="creative-figma">Figma</button>
-                  <button type="button" class="skill-card" data-skill="creative-illustrator">Adobe Illustrator</button>
-                  <button type="button" class="skill-card" data-skill="creative-acrobat">Adobe Photoshop</button>
-                  <button type="button" class="skill-card" data-skill="creative-blender">Blender</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subCreativeVideo">Montage Vidéo</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="creative-capcut">CapCut</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Outils IA -->
-            <div class="skills-block" data-skill-area="ai" data-reveal>
-              <h3 data-i18n="skills.blockAI">Outils IA</h3>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subAITools">Intelligence Artificielle</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="ai-chatgpt" data-i18n="skills.chipChatGPT">ChatGPT</button>
-                  <button type="button" class="skill-card" data-skill="ai-claude" data-i18n="skills.chipClaude">Claude</button>
-                  <button type="button" class="skill-card" data-skill="ai-gemini" data-i18n="skills.chipGemini">Gemini</button>
-                  <button type="button" class="skill-card" data-skill="ai-vibe-coding" data-i18n="skills.chipVibeCoding">Vibe Coding</button>
-                </div>
-              </div>
-              <div class="skills-subgroup">
-                <p class="skills-subtitle" data-i18n="skills.subDevWeb">Développement Web</p>
-                <div class="skills-cards">
-                  <button type="button" class="skill-card" data-skill="dev-html">HTML</button>
-                  <button type="button" class="skill-card" data-skill="dev-css">CSS</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Suite Bureautique -->
-            <div class="skills-block" data-skill-area="office" data-reveal>
-              <h3 data-i18n="skills.blockOffice">Suite Bureautique</h3>
-              <div class="skills-cards">
-                <button type="button" class="skill-card" data-skill="office-microsoft" data-i18n="skills.chipMicrosoftOffice">Microsoft Office (Word · Excel · PowerPoint)</button>
-                <button type="button" class="skill-card" data-skill="office-google-suite" data-i18n="skills.chipGoogleSuite">Google Suite</button>
-                <button type="button" class="skill-card" data-skill="office-notion" data-i18n="skills.chipNotion">Notion</button>
-                <button type="button" class="skill-card" data-skill="office-slack">Slack</button>
-                <button type="button" class="skill-card" data-skill="office-monday">Monday</button>
-              </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="skills-block" data-skill-area="languages" data-reveal>
-              <h3 data-i18n="skills.blockLanguages">Langues</h3>
-              <div class="skills-cards">
-                <button type="button" class="skill-card" data-skill="lang-mandarin" data-i18n="skills.chipMandarin">Mandarin – Langue Maternelle</button>
-                <button type="button" class="skill-card" data-skill="lang-french" data-i18n="skills.chipFrench">Français – DALF C1</button>
-                <button type="button" class="skill-card" data-skill="lang-english" data-i18n="skills.chipEnglish">Anglais – IELTS 8.0 (C1)</button>
-                <button type="button" class="skill-card" data-skill="lang-japanese" data-i18n="skills.chipJapanese">Japonais – JLPT N1</button>
-              </div>
-            </div>
-
-          </div><!-- /.skills-grid -->
-          </div><!-- /.skills-left -->
-          <div class="skills-right">
-            <div class="skill-preview" aria-live="polite">
-              <h3 class="skill-preview-title" data-i18n="skills.previewTitle">Détail d'une Compétence</h3>
-              <p class="skill-preview-text" data-i18n="skills.previewText">Survolez une compétence pour voir des preuves (projets, cours, expériences) avec le contexte, ce qui a été fait et les résultats.</p>
-              <div class="skill-preview-proofs"></div>
-            </div>
-          </div><!-- /.skills-right -->
-          </div><!-- /.skills-layout -->
-
-          <!-- Certifications — hidden: certificates are now shown inside each skill's information card -->
-          <!-- HIDDEN-START
-          <div class="cert-section-label" data-reveal style="margin-top:2.5rem;display:none"><span>Certifications</span></div>
-          <div class="cert-grid" data-reveal style="display:none">
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot" style="background:#e0f2fe;color:#0284c7;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
-              </div>
-              <div class="cert-info">
-                <strong>TOSA Excel - 950 / 1000</strong>
-                <span>TOSA · Certification internationale</span>
-              </div>
-            </div>
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot cert-issuer-dot--google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-              </div>
-              <div class="cert-info"><strong>Google Analytics 4</strong><span>Google · Certification</span></div>
-            </div>
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot cert-issuer-dot--google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              </div>
-              <div class="cert-info"><strong>Google Ads &#x2013;Recherche</strong><span>Google · Certification</span></div>
-            </div>
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot cert-issuer-dot--google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-              </div>
-              <div class="cert-info"><strong>Google Ads &#x2013;Vid&#xe9;o</strong><span>Google · Certification</span></div>
-            </div>
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot cert-issuer-dot--google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
-              </div>
-              <div class="cert-info"><strong>Google Ads &#x2013;Cr&#xe9;atifs</strong><span>Google · Certification</span></div>
-            </div>
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot cert-issuer-dot--google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-              </div>
-              <div class="cert-info"><strong>Google Ads &#x2013;IA &amp; Performance</strong><span>Google · Certification</span></div>
-            </div>
-
-            <div class="cert-card" style="cursor:default;">
-              <div class="cert-issuer-dot cert-issuer-dot--google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/></svg>
-              </div>
-              <div class="cert-info"><strong>Google Digital Marketing</strong><span>Google · Certification</span></div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ── Education ─────────────────────────────── -->
-      <div class="mk-sep" data-reveal aria-hidden="true">
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-        <svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg>
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-      </div>
-
-      <section class="section section-alt" id="education">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="education.title">Formation Académique</h2>
-          </header>
-          <div class="timeline">
-
-            <article class="timeline-item" id="edu-emlyon" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="education.emlyon.period">09/2025 – Présent</span>
-                <span class="timeline-location">Lyon, France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="education.emlyon.title">Master en Gestion (Programme Grande École)</h3>
-                <p class="timeline-company" data-i18n="education.emlyon.school">emlyon business school</p>
-                <div class="edu-degree-section">
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.emlyon.gapLabel">Statut</span>
-                    <span class="edu-degree-chip" data-i18n="education.emlyon.gap">Année de césure (2026 – 2027), puis M2</span>
-                  </div>
-                </div>
-                <ul class="timeline-points">
-                </ul>
-                <div class="portfolio-stats">
-                  <div class="portfolio-stat">
-                    <span class="stat-value" data-i18n="nums.gpaEmlyon">4,0/4,0</span>
-                    <span class="stat-label">GPA</span>
-                  </div>
-                </div>
-                <div class="edu-info">
-                  <div class="edu-info-row">
-                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
-                    <div class="course-chips course-chips--white">
-                      <span class="course-chip" data-i18n="education.emlyon.courseMarketing">Marketing</span>
-                      <span class="course-chip" data-i18n="education.emlyon.courseStrategy">Management Stratégique</span>
-                      <span class="course-chip" data-i18n="education.emlyon.courseNegotiation">Négociation &amp; Ventes</span>
-                      <span class="course-chip" data-i18n="education.emlyon.courseCsr">Responsabilité Sociale des Entreprises</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="edu-nccu" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="education.nccu.period">09/2020 – 06/2025</span>
-                <span class="timeline-location">Taipei, Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="education.nccu.title">Bachelor en Français &amp; Diplomatie</h3>
-                <p class="timeline-company" data-i18n="education.nccu.school">Université Nationale Chengchi (NCCU)</p>
-                <div class="edu-degree-section">
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.nccu.majorLabel">Majeure</span>
-                    <span class="edu-degree-chip" data-i18n="education.nccu.major1">Langues et Cultures Européennes : Parcours Français</span>
-                    <span class="edu-degree-chip" data-i18n="education.nccu.major2">Diplomatie</span>
-                  </div>
-                  <div class="edu-degree-row">
-                    <span class="edu-degree-label" data-i18n="education.nccu.minorLabel">Mineure</span>
-                    <span class="edu-degree-chip edu-degree-chip--minor" data-i18n="education.nccu.minor1">Économie</span>
-                  </div>
-                </div>
-                <ul class="timeline-points">
-                  <li data-i18n="education.nccu.point1">Certificate of Excellence (Top 5 % GPA) – 2021, 2023.</li>
-                </ul>
-                <div class="portfolio-stats">
-                  <div class="portfolio-stat">
-                    <span class="stat-value" data-i18n="nums.gpaNccu">3,99/4,0</span>
-                    <span class="stat-label">GPA</span>
-                  </div>
-                  <div class="portfolio-stat">
-                    <span class="stat-value" data-i18n="nums.top7">Top 7 %</span>
-                    <span class="stat-label" data-i18n="education.nccu.statRanking">Classement</span>
-                  </div>
-                </div>
-                <div class="edu-info">
-                  <div class="edu-info-row">
-                    <span class="edu-info-key" data-i18n="education.coursesLabel">Cours pertinents</span>
-                    <div class="course-chips course-chips--white">
-                      <span class="course-chip" data-i18n="education.nccu.courseMarketing">Études de marché (R, Decanter AI)</span>
-                      <span class="course-chip" data-i18n="education.nccu.courseManagement">Management</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="edu-paris1" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="education.paris1.period">01/2024 – 06/2024</span>
-                <span class="timeline-location">Paris, France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="education.paris1.title">Programme d'Échange en Science Politique</h3>
-                <p class="timeline-company" data-i18n="education.paris1.school">Université Paris 1 Panthéon-Sorbonne</p>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Experience ─────────────────────────────── -->
-      <div class="mk-sep" data-reveal aria-hidden="true">
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-        <svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg>
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-      </div>
-
-      <section class="section" id="experience">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="experience.title">Expériences Professionnelles</h2>
-            <p data-i18n="experience.subtitleMarketing">Social media, performance marketing, création de contenu et engagement communautaire.</p>
-          </header>
-          <div class="timeline">
-
-            <article class="timeline-item" id="exp-leboncoin" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.leboncoin.period">07/2026 – 01/2027</span>
-                <span class="timeline-location">Paris · France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.leboncoin.title">Traffic Manager / AdOps</h3>
-                <p class="timeline-company" data-i18n="experience.leboncoin.company">leboncoin, Adevinta · Régie publicitaire</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.leboncoin.mkPoint1">Mise en ligne de plus de 20 campagnes display multiformats dans les outils d'ad serving.</li>
-                  <li data-i18n="experience.leboncoin.mkPoint2">Optimisation de la diffusion de plus de 20 campagnes simultanées pour atteindre et dépasser les objectifs contractuels.</li>
-                  <li data-i18n="experience.leboncoin.mkPoint3">Élaboration des rapports de diffusion dès le lancement et rédaction de bilans détaillés intégrant l'analyse des KPI.</li>
-                  <li data-i18n="experience.leboncoin.mkPoint4">Interface opérationnelle entre le pôle commercial, les clients et la régie, au service de la fluidité des flux de travail.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-kpn" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.kpn.period">01/2025 – 06/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.kpn.title">Assistante Marketing Digital</h3>
-                <p class="timeline-company" data-i18n="experience.kpn.company">KPN · Agence de marketing digital</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.kpn.mkPoint1">Analyse des tendances et benchmarks sectoriels pour orienter la création de contenus web : plus de 10 articles positionnés dans le Top 10 Google et cités dans les réponses des IA génératives.</li>
-                  <li data-i18n="experience.kpn.point2">Pilotage de la performance des campagnes Meta et Google par des reportings et des tests A/B : CTR +9,5 % et taux de conversion +5,1 %.</li>
-                  <li data-i18n="experience.kpn.point3">Collaboration transversale avec les pôles CRM et technique pour aligner la production de contenu sur les objectifs de visibilité de la marque.</li>
-                  <li data-i18n="experience.kpn.point4">Projet de recherche sur les facteurs de positionnement Google par régressions statistiques, pour affiner la stratégie SEO de l'agence.</li>
-                  <li data-i18n="experience.kpn.mkPythonPoint">Automatisation des reportings de campagne destinés aux clients grâce à des scripts Python : 5 à 10 minutes économisées par client et par semaine.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-engoo" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.engoo.period">10/2024 – 02/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.engoo.title">Assistante Marketing</h3>
-                <p class="timeline-company" data-i18n="experience.engoo.company">Engoo, DMM.com · Plateforme mondiale de cours de langue</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.engoo.mkPoint1">Tableaux de bord dynamiques sur Excel pour piloter la performance marketing : temps de traitement des données réduit de 30 %.</li>
-                  <li data-i18n="experience.engoo.mkPoint2">Contenus Rednote fondés sur une veille des tendances : visibilité +93,3 %, engagement +89,1 % et abonnés +69,7 %.</li>
-                  <li data-i18n="experience.engoo.mkPoint3">Analyses de marché et veille concurrentielle pour optimiser la stratégie marketing sur le segment du chinois simplifié.</li>
-                  <li data-i18n="experience.engoo.mkPoint4">Coordination des flux de localisation avec le pôle contenu, pour une image de marque homogène à l'international.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat exp-stat--corde" style="--val:93.3">
-                    <span class="stat-value" data-i18n="nums.views">+93,3 %</span>
-                    <span class="stat-label" data-i18n="experience.engoo.stat1">Vues</span>
-                  </div>
-                  <div class="exp-stat exp-stat--corde" style="--val:69.7">
-                    <span class="stat-value" data-i18n="nums.subs">+69,7 %</span>
-                    <span class="stat-label" data-i18n="experience.engoo.stat2">Abonnés</span>
-                  </div>
-                  <div class="exp-stat exp-stat--corde" style="--val:89.1">
-                    <span class="stat-value" data-i18n="nums.inter">+89,1 %</span>
-                    <span class="stat-label" data-i18n="experience.engoo.stat3">Interactions</span>
-                  </div>
-                </div>
-                <p style="margin-top:0.5rem;font-size:0.83rem;">
-                  <a href="portfolio-marketing.html#engoo-dashboard" style="color:var(--accent);text-decoration:none;font-weight:500;" data-i18n="simpleNav.seeDashVisuals">→ Voir le dashboard et les visuels dans le portfolio</a>
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-teaching" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.teaching.period">07/2023 – 12/2023 · 07/2024 – 04/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.teaching.title">Assistante d'Enseignement</h3>
-                <p class="timeline-company" data-i18n="experience.teaching.company">Faculté de Banque et Finance Internationale, NCCU</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.teaching.point1">Coordination de la logistique opérationnelle de 9 cours et interface entre des parties prenantes exigeantes.</li>
-                  <li data-i18n="experience.teaching.point2">Organisation d'événements (conférences thématiques, sessions de networking) : flux de communication et gestion des prestataires.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" id="exp-research" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="experience.research.period">06/2023 – 12/2023</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="experience.research.title">Assistante de Recherche</h3>
-                <p class="timeline-company" data-i18n="experience.research.company">Institut des Relations Internationales, NCCU</p>
-                <ul class="timeline-points">
-                  <li data-i18n="experience.research.point1">Encadrement d'équipes de 3 à 4 personnes pour l'organisation de séminaires, conférences et camps d'été.</li>
-                  <li data-i18n="experience.research.point2">Synthèse d'analyses complexes et visualisation des données sous PowerPoint pour formuler des recommandations stratégiques.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period">02/2022 – 08/2022</span>
-                <span class="timeline-location">Hsinchu &amp; Taichung · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.camps.title">Co-Fondatrice (Projet Entrepreneurial)</h3>
-                <p class="timeline-company" data-i18n="extracurricular.camps.org">Sora Education · Cours de langues étrangères et soft skills pour enfants pendant les vacances scolaires</p>
-                <ul class="timeline-points">
-                  <li data-i18n="extracurricular.camps.text">Organisation de cinq camps d'été d'une semaine avec deux partenaires, élaboration du business plan, suivi financier et études de marché pour ajuster l'offre de cours et la stratégie marketing.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat">
-                    <span class="stat-value">5</span>
-                    <span class="stat-label" data-i18n="extracurricular.camps.stat1">Camps organisés</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value" data-i18n="nums.profit">3 250 €</span>
-                    <span class="stat-label" data-i18n="extracurricular.camps.stat2">Bénéfice net généré</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-          </div>
-          <div class="portfolio-teaser" data-reveal>
-            <div class="portfolio-teaser-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="5" y="5" width="17" height="17" rx="3" stroke="currentColor" stroke-width="2.5"/>
-                <rect x="26" y="5" width="17" height="17" rx="3" stroke="currentColor" stroke-width="2.5"/>
-                <rect x="5" y="26" width="17" height="17" rx="3" stroke="currentColor" stroke-width="2.5"/>
-                <rect x="26" y="26" width="17" height="17" rx="3" stroke="currentColor" stroke-width="2.5"/>
-              </svg>
-            </div>
-            <div class="portfolio-teaser-body">
-              <p class="portfolio-teaser-label" data-i18n="portfolioTeaser.label">Portfolio</p>
-              <h3 class="portfolio-teaser-title" data-i18n="marketingPortfolioTeaser.title">Campagnes, Dashboards & Visuels de Marque</h3>
-              <p class="portfolio-teaser-desc" data-i18n="marketingPortfolioTeaser.desc">Stratégies Rednote, Analyses de Performance et Créations Visuelles.</p>
-            </div>
-            <a href="portfolio-marketing.html" class="portfolio-teaser-cta" data-i18n="portfolioTeaser.cta">
-              Explorer le portfolio
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Expériences Extra-scolaires ──────────────── -->
-      <div class="mk-sep" data-reveal aria-hidden="true">
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-        <svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg>
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-      </div>
-
-      <section class="section section-alt" id="extracurricular">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="extracurricular.title">Expériences Extra-Scolaires</h2>
-            <p data-i18n="extracurricular.subtitle">Engagements dans des clubs et associations qui complètent mon parcours académique.</p>
-          </header>
-          <div class="timeline">
-
-            <article class="timeline-item" id="extra-aiesec" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.aiesec.period">09/2024 – 06/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.aiesec.title">Responsabilités du Pôle Marketing &amp; Membre du Pôle de Bénévolat International Entrant</h3>
-                <p class="timeline-company" data-i18n="volunteer.aiesec.org">AIESEC in NCCU · Organisation internationale de développement du leadership</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.aiesec.point1">Pilotage d'une équipe marketing de 4 personnes pour recruter 15 volontaires et plus de 60 participants à un camp d'anglais, dépassant l'objectif budgétaire de 53,7 %.</li>
-                  <li data-i18n="volunteer.aiesec.point2">Collaboration avec des partenaires locaux et internationaux sur des programmes de volontariat.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat">
-                    <span class="stat-value">15</span>
-                    <span class="stat-label" data-i18n="volunteer.aiesec.stat1">Volontaires recrutés</span>
-                  </div>
-                  <div class="exp-stat">
-                    <span class="stat-value">60+</span>
-                    <span class="stat-label" data-i18n="volunteer.aiesec.stat2">Participants</span>
-                  </div>
-                  <div class="exp-stat exp-stat--corde" style="--val:53.7">
-                    <span class="stat-value" data-i18n="nums.aiesecGoal">+53,7 %</span>
-                    <span class="stat-label" data-i18n="volunteer.aiesec.stat3">Objectif dépassé</span>
-                  </div>
-                </div>
-                <p style="margin-top:0.5rem;font-size:0.83rem;">
-                  <a href="portfolio-marketing.html" style="color:var(--accent);text-decoration:none;font-weight:500;" data-i18n="simpleNav.seeCampaignVisuals">→ Voir les visuels de campagne dans le portfolio</a>
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="extracurricular.guzheng.period">02/2023 – 01/2024</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.guzheng.title">Directrice Marketing &amp; Adhésions</h3>
-                <p class="timeline-company" data-i18n="extracurricular.guzheng.org">Club de Guzheng, NCCU</p>
-                <ul class="timeline-points">
-                  <li data-i18n="extracurricular.guzheng.point1">Pilotage des campagnes de recrutement et des événements d'orientation, atteignant le plein effectif les deux semestres.</li>
-                  <li data-i18n="extracurricular.guzheng.point2">Fidélisation de 80 % des membres via la gestion de la page Facebook, l'adaptation des cours et l'organisation d'activités et de performances.</li>
-                </ul>
-                <div class="exp-stats">
-                  <div class="exp-stat exp-stat--corde" style="--val:100">
-                    <span class="stat-value" data-i18n="nums.pct100">100 %</span>
-                    <span class="stat-label" data-i18n="extracurricular.guzheng.stat1">Places pourvues à chaque recrutement</span>
-                  </div>
-                  <div class="exp-stat exp-stat--corde" style="--val:80">
-                    <span class="stat-value" data-i18n="nums.pct80">80 %</span>
-                    <span class="stat-label" data-i18n="extracurricular.guzheng.stat2">Fidélisation des membres</span>
-                  </div>
-                </div>
-                <p style="margin-top:0.5rem;font-size:0.83rem;">
-                  <a href="portfolio-marketing.html" style="color:var(--accent);text-decoration:none;font-weight:500;" data-i18n="simpleNav.seeVisuals">→ Voir les visuels dans le portfolio</a>
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Bénévolat ─────────────────────────────── -->
-      <div class="mk-sep" data-reveal aria-hidden="true">
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-        <svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg>
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-      </div>
-
-      <section class="section" id="volunteer">
-        <div class="container">
-          <header class="section-header" data-reveal>
-            <h2 data-i18n="volunteer.title">Bénévolat &amp; Engagement</h2>
-            <p data-i18n="volunteer.subtitle">Des initiatives centrées sur l'éducation, l'international et l'impact social.</p>
-          </header>
-          <div class="timeline">
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="extracurricular.restoCoeur.period">10/2025 – 06/2026</span>
-                <span class="timeline-location">Lyon, France</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="extracurricular.restoCoeur.title">Bénévole – Restos du Cœur</h3>
-                <p class="timeline-company" data-i18n="extracurricular.restoCoeur.org">Les Restos du Cœur · Association humanitaire</p>
-                <ul class="timeline-points">
-                  <li data-i18n="extracurricular.restoCoeur.point1">Distribution alimentaire et accueil de bénéficiaires en situation de précarité.</li>
-                  <li data-i18n="extracurricular.restoCoeur.point2">Tri et conditionnement des denrées alimentaires.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.usr.period">09/2024 – 06/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.usr.title">Volontaire – Projet University Social Responsibility</h3>
-                <p class="timeline-company" data-i18n="volunteer.usr.org">Office of University Responsibility, NCCU</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.usr.point1">Accompagnement d'élèves issus de familles transnationales dans l'apprentissage de la langue et l'intégration culturelle.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.nuit.period">12/2023</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.nuit.title">Déléguée – Nuit des Idées 2023</h3>
-                <p class="timeline-company" data-i18n="volunteer.nuit.org">Bureau Français de Taipei, Institut Français &amp; Département de la Culture de Taipei</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.nuit.point1">Présentation de points de vue sur des sujets de durabilité devant plus de 350 participants, en français et en chinois.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.flagship.period">09/2023 – 06/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.flagship.title">Volontaire – Programme de Compagnonnage Linguistique</h3>
-                <p class="timeline-company" data-i18n="volunteer.flagship.org">Centre d'excellence de Chinois à Taïwan</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.flagship.point1">Facilitation de l'immersion linguistique et culturelle d'étudiants américains via des événements et visites.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-reveal="slide-left">
-              <div class="timeline-meta">
-                <span class="timeline-period" data-i18n="volunteer.buddy.period">09/2023 – 01/2025</span>
-                <span class="timeline-location">Taipei · Taïwan</span>
-              </div>
-              <div class="timeline-body">
-                <h3 data-i18n="volunteer.buddy.title">Étudiante-Référente – Buddy Program</h3>
-                <p class="timeline-company" data-i18n="volunteer.buddy.org">Direction des Relations Internationales, NCCU</p>
-                <ul class="timeline-points">
-                  <li data-i18n="volunteer.buddy.point1">Accompagnement de 3 étudiants en échange (France, États-Unis, Corée du Sud) dans leur vie quotidienne à Taïwan.</li>
-                </ul>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ── Contact ────────────────────────────────── -->
-      <div class="mk-sep" data-reveal aria-hidden="true">
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-        <svg class="mk-sep-orn" width="200" height="59" viewBox="0 0 285.9 84.1" focusable="false"><use href="#mk-guzheng" width="285.9" height="84.1"/></svg>
-        <svg class="mk-sep-filet" viewBox="0 0 600 6" preserveAspectRatio="none" focusable="false">
-          <path filter="url(#mk-encre)" d="M4,2.2 C120,1.5 300,1.9 470,2.4 C560,2.7 580,2.6 596,2.2 C598,2.15 598,3.6 596,3.7 C580,4.1 560,4 470,3.7 C300,3.2 120,3.4 4,4 C1.5,4.1 1.5,2.3 4,2.2 Z"/>
-        </svg>
-      </div>
-
-      <section class="section section-alt" id="contact">
-        <div class="container contact-grid">
-          <div data-reveal>
-            <header class="section-header">
-              <h2 data-i18n="contact.heading">Entrons en Contact</h2>
-              <p data-i18n="contact.intro">Intéressé·e par un stage, un projet ou une collaboration ? Envoyez-moi un message, je vous répondrai avec plaisir.</p>
-            </header>
-            <ul class="contact-list">
-              <li>
-                <span class="label" data-i18n="contact.labelEmail">Email</span>
-                <a href="mailto:yuting.alice.tseng@gmail.com">yuting.alice.tseng@gmail.com</a>
-              </li>
-              <li>
-                <span class="label" data-i18n="contact.labelLocation">Localisation</span>
-                <span data-i18n="hero.locationValue">Paris, France</span>
-              </li>
-              <li>
-                <span class="label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/yu-ting-tseng-emlyon"
-                  target="_blank" rel="noopener noreferrer">yu-ting-tseng-emlyon</a>
-              </li>
-            </ul>
-          </div>
-          <form class="contact-form" autocomplete="on" data-reveal>
-            <div class="field">
-              <label for="name" data-i18n="contact.formName">Nom</label>
-              <input id="name" name="name" type="text"
-                placeholder="Votre nom" data-i18n-placeholder="contact.namePlaceholder" required />
-            </div>
-            <div class="field">
-              <label for="email" data-i18n="contact.formEmail">Email</label>
-              <input id="email" name="email" type="email"
-                placeholder="vous@exemple.com" data-i18n-placeholder="contact.emailPlaceholder" required />
-            </div>
-            <div class="field">
-              <label for="message" data-i18n="contact.formMessage">Message</label>
-              <textarea id="message" name="message" rows="4"
-                placeholder="Expliquez brièvement votre besoin ou votre projet."
-                data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary full-width" data-i18n="contact.submit">
-              Envoyer le message
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Yu‑Ting Tseng. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
-        <p class="footer-extra"><span data-i18n="footer.marketing">Marketing digital &amp; Création</span> · <a href="index.html" style="color:inherit;opacity:0.7" data-i18n="footer.overview">Vue générale</a></p>
-      </div>
-    </footer>
-
-    <script src="main.js?v=20261105"></script>
-    <script>
-      // Page exit fade transition when navigating to portfolio page
-      document.querySelectorAll('a[href^="portfolio-"]').forEach(link => {
-        link.addEventListener('click', e => {
-          const href = link.getAttribute('href');
-          if (!href || href.startsWith('#')) return;
-          e.preventDefault();
-          document.body.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-          document.body.style.opacity = '0';
-          document.body.style.transform = 'translateY(-8px)';
-          setTimeout(() => { window.location.href = href; }, 310);
-        });
-      });
-    </script>
-    <script src="ink-cursor.js"></script>
-    <script src="guzheng.js"></script>
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K4HC6D6D');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Yu-Ting Tseng · Marketing</title>
+<meta name="description" content="Portfolio Marketing de Yu-Ting Tseng – social media, content, performance et créativité.">
+<meta name="theme-color" content="#14130f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#14130f;--carte:#1d1b16;--papier:#ece9e0;--gris:#a8a294;--filet:#3a372f;--accent:#cb5842;--accent-clair:#e8836c}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden}
+body{background:var(--nuit);color:var(--papier);font-family:Outfit,system-ui,sans-serif;font-weight:300}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.tete{position:fixed;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:18px clamp(16px,4vw,48px);z-index:12;font-size:12px;letter-spacing:.18em;text-transform:uppercase;pointer-events:none}
+.tete>*{pointer-events:auto}
+.tete b{font-weight:500}
+.tete nav{display:flex;gap:6px}
+.btn{font:inherit;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--papier);background:rgba(20,19,15,.6);border:1px solid var(--filet);padding:8px 12px;cursor:pointer;border-radius:2px;white-space:nowrap}
+.btn:hover,.btn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent-clair)}
+.btn:focus-visible{outline:1px solid var(--accent-clair);outline-offset:2px}
+.titre{position:fixed;left:clamp(16px,4vw,48px);top:clamp(64px,11vh,110px);z-index:2;pointer-events:none;max-width:min(640px,92vw);transition:opacity .7s}
+.titre p{margin:0 0 10px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gris)}
+.titre h1{margin:0;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(30px,4.2vw,58px);line-height:1.04;position:relative}
+.titre h1 em{display:block;padding-left:1.4em;color:var(--accent-clair);font-weight:400}
+.titre h1 span{display:block;transition:opacity 1.2s,filter 1.2s}
+.titre h1 .ordre{position:absolute;top:0;left:0;right:0}
+.e-chaos .titre .ordre,.e-univers .titre .chaos{opacity:0;filter:blur(6px)}
+.e-galaxie .titre,.e-chapitre .titre{opacity:0}
+.appel{position:fixed;left:50%;bottom:clamp(18px,5vh,48px);transform:translateX(-50%);z-index:3;text-align:center;transition:opacity .6s}
+.appel button{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;color:var(--papier);background:none;border:none;border-bottom:1px solid var(--accent);padding:4px 2px;cursor:pointer}
+.appel button:hover{color:var(--accent-clair)}
+.appel p{margin:8px 0 0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
+body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
+.aide{position:fixed;left:50%;bottom:clamp(12px,2.6vh,26px);transform:translateX(-50%);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:var(--gris);z-index:2;text-align:center;width:max-content;max-width:92vw;opacity:0;transition:opacity .8s;pointer-events:none;margin:0}
+.e-univers .aide,.e-galaxie .aide{opacity:1}
+.ariane{position:fixed;left:clamp(16px,4vw,48px);top:clamp(70px,10vh,96px);z-index:7;max-width:min(720px,92vw);opacity:0;transform:translateY(8px);transition:opacity .7s,transform .7s;pointer-events:none}
+.e-galaxie .ariane,.e-chapitre .ariane{opacity:1;transform:none;pointer-events:auto}
+.ariane button{all:unset;cursor:pointer;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
+.ariane button:hover,.ariane button:focus-visible{color:var(--accent-clair)}
+.ariane h2{margin:8px 0 6px;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.05;transition:font-size .6s}
+.ariane p{margin:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--gris)}
+.e-chapitre .ariane p{display:none}.e-chapitre .ariane h2{font-size:clamp(20px,1.9vw,26px);color:var(--gris)}
+.etq{position:fixed;z-index:2;pointer-events:none;transform:translate(-50%,0);text-align:center;transition:opacity .5s,transform .4s;opacity:0;animation:parait .9s .5s forwards}
+.etq b{display:block;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:21px;line-height:1.1}
+.etq i{display:block;font-family:"Cormorant Garamond",serif;font-size:21px;color:var(--accent-clair);line-height:1;min-height:.2em}
+.etq em{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;line-height:1.15;color:var(--papier);opacity:.85;max-width:240px;margin:2px auto 3px}
+.etq small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);max-width:210px;margin:4px auto 0}
+.etq.soleil b{font-size:23px}
+.etq.vive{transform:translate(-50%,-4px)}.etq.vive b{color:var(--accent-clair)}
+.etq.terne{opacity:.35!important}
+#etiquettes{transition:opacity .5s}
+.e-chapitre #etiquettes{opacity:0}
+.leg{position:fixed;z-index:4;pointer-events:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);white-space:nowrap;transform:translate(-50%,-50%);opacity:0;animation:parait 1s 1.1s forwards;text-shadow:0 0 8px var(--nuit),0 0 3px var(--nuit)}
+.leg.g{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;letter-spacing:0;text-transform:none;color:var(--papier)}
+.leg.v{color:var(--accent-clair)}
+.leg.w{white-space:normal;width:120px;text-align:center;line-height:1.35;font-size:10px;letter-spacing:.1em}
+@keyframes parait{to{opacity:1}}
+
+/* Le récit : le texte s'écrit dans le ciel, sans cadre */
+.voile{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity 1.2s;background:radial-gradient(55% 85% at 82% 52%,rgba(20,19,15,.92),rgba(20,19,15,.55) 55%,rgba(20,19,15,0) 80%)}
+.e-chapitre .voile{opacity:1}
+.recit{position:fixed;right:clamp(20px,4vw,64px);top:clamp(96px,13vh,128px);bottom:78px;width:min(500px,40vw);z-index:6;overflow:auto;scrollbar-width:none;padding:14px 8px 48px 30px;opacity:0;pointer-events:none;transition:opacity .5s;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 56px),transparent)}
+.recit::-webkit-scrollbar{display:none}
+.recit.ouvert{opacity:1;pointer-events:auto}
+.r-bloc{opacity:0;filter:blur(6px);transform:translateY(10px);animation:eclot 1s var(--d) cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes eclot{to{opacity:1;filter:blur(0);transform:none}}
+.r-sur{margin:0 0 10px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
+.r-titre{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(28px,2.6vw,38px);line-height:1.08;margin:0 0 10px}
+.r-titre .mot{display:inline-block;white-space:nowrap}
+.r-titre .l{opacity:0;animation:allume 1.4s calc(var(--i) * 14ms + 150ms) forwards}
+@keyframes allume{0%{opacity:0;color:var(--accent-clair);text-shadow:0 0 16px var(--accent)}35%{opacity:1;color:var(--accent-clair);text-shadow:0 0 10px var(--accent)}100%{opacity:1;color:var(--papier);text-shadow:none}}
+.r-org{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;margin:0 0 22px;color:var(--gris)}
+.r-texte{font-size:15px;line-height:1.7;margin:0 0 22px}
+.r-stats{display:flex;flex-wrap:wrap;gap:12px 30px;margin:0 0 24px}
+.r-stats b{display:block;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:40px;color:var(--accent-clair);line-height:1;font-variant-numeric:tabular-nums}
+.r-stats span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.r-puces{padding:0;margin:0 0 22px;list-style:none}
+.r-puces li{position:relative;padding-left:22px;margin:0 0 12px;line-height:1.65;font-size:15px;cursor:default;transition:color .3s}
+.r-etoile{position:absolute;left:0;top:.62em;width:7px;height:7px;transform:rotate(45deg);background:var(--papier);box-shadow:0 0 8px rgba(236,233,224,.6);transition:background .3s,box-shadow .3s}
+[data-a]:hover .r-etoile,[data-a]:hover>.r-etoile{background:var(--accent-clair);box-shadow:0 0 12px var(--accent)}
+.r-puces li:hover{color:#fff}
+.r-groupes{display:grid;grid-template-columns:minmax(0,max-content) 1fr;gap:12px 18px;margin:0 0 22px}
+.r-groupes dt{position:relative;padding-left:20px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-clair);padding-top:3px;max-width:170px}
+.r-groupes dt .r-etoile{top:.7em}
+.r-groupes dd{margin:0;line-height:1.55;font-size:15px}
+.r-groupes a,.r-voir a{color:var(--papier);text-decoration-color:var(--accent);text-underline-offset:3px}
+.r-voir{font-family:"Cormorant Garamond",serif;font-size:20px;margin:6px 0 0}
+.r-photo{width:92px;height:116px;object-fit:cover;display:block;margin:0 0 18px;border-radius:46px 46px 4px 4px;box-shadow:0 0 0 1px var(--filet),0 0 40px -6px var(--accent)}
+.r-oeuvres{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 18px}
+.r-oeuvres a{display:block;color:inherit;text-decoration:none}
+.r-oeuvres img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#f3f1ea;display:block;transition:transform .4s,box-shadow .4s}
+.r-oeuvres a:hover img{transform:translateY(-3px);box-shadow:0 10px 30px -10px var(--accent)}
+.r-oeuvres span{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;margin-top:6px}
+.r-section{margin:26px 0 8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-clair);padding-left:20px;position:relative}
+.r-section .r-etoile{top:.55em}
+.r-h{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:23px;line-height:1.15;margin:18px 0 8px}
+.r-p{font-size:14.5px;line-height:1.7;margin:0 0 10px;color:var(--papier)}
+.r-p+.r-p{margin-top:-2px}
+.r-img{display:block;width:100%;height:auto;margin:14px 0 6px;cursor:zoom-in;box-shadow:0 0 0 1px rgba(236,233,224,.14),0 24px 50px -24px rgba(0,0,0,.9);transition:transform .4s,box-shadow .4s;background:#f3f1ea}
+.r-img:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(232,131,108,.5),0 0 40px -8px var(--accent)}
+.r-leg{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;color:var(--gris);margin:0 0 14px}
+.r-diapo{position:relative;margin:14px 0 6px}
+.r-diapo .r-img{margin:0}
+.r-diapo nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gris)}
+.r-diapo button{all:unset;cursor:pointer;font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--papier);padding:0 8px}
+.r-diapo button:hover{color:var(--accent-clair)}
+.r-tags{display:flex;flex-wrap:wrap;gap:6px 10px;margin:0 0 18px}
+.r-tags span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);border:1px solid var(--filet);padding:3px 8px;border-radius:2px}
+.r-source{font-size:12px;color:var(--gris);line-height:1.5;margin:0 0 16px}
+.r-fin{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:var(--gris);margin:26px 0 0}
+.r-fin a{color:var(--gris);text-decoration-color:var(--filet);text-underline-offset:3px}.r-fin a:hover{color:var(--accent-clair)}
+.lb{position:fixed;inset:0;z-index:30;background:rgba(20,19,15,.96);display:none;align-items:center;justify-content:center;cursor:zoom-out}
+.lb.ouvert{display:flex}
+.lb img{max-width:92vw;max-height:88vh;box-shadow:0 0 0 1px rgba(236,233,224,.2),0 40px 90px -30px #000;animation:parait .4s forwards}
+.lb span{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:var(--gris)}
+.r-nav{position:fixed;right:clamp(20px,4vw,64px);bottom:22px;width:min(500px,40vw);z-index:7;display:flex;justify-content:space-between;align-items:baseline;gap:12px;opacity:0;pointer-events:none;transition:opacity .6s .6s;padding-left:30px}
+.r-nav.ouvert{opacity:1;pointer-events:auto}
+.r-nav button{all:unset;cursor:pointer;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--gris);max-width:44%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r-nav button:hover,.r-nav button:focus-visible{color:var(--accent-clair)}
+.r-nav .ferme{font-family:Outfit,sans-serif;font-style:normal;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.r-nav [hidden]{visibility:hidden;display:block}
+
+.sommaire{position:fixed;inset:0;background:rgba(20,19,15,.96);z-index:11;display:none;overflow:auto;padding:90px clamp(16px,6vw,80px) 40px}
+.sommaire.ouvert{display:block}
+.sommaire section{max-width:760px;margin:0 auto 26px}
+.sommaire h3{margin:0;border-bottom:1px solid var(--filet)}
+.sommaire h3 button{all:unset;cursor:pointer;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-clair);padding:8px 0;display:block}
+.sommaire ol{list-style:none;margin:0;padding:0}
+.sommaire li button{all:unset;cursor:pointer;display:flex;gap:18px;align-items:baseline;width:100%;padding:9px 0;font-family:"Cormorant Garamond",serif;font-size:21px;border-bottom:1px solid rgba(58,55,47,.5)}
+.sommaire li button:hover,.sommaire li button:focus-visible{color:var(--accent-clair)}
+.sommaire li button i{color:var(--accent-clair);margin-left:auto;font-size:18px;white-space:nowrap}
+@media (max-width:700px){
+  .titre h1 em{padding-left:.6em}
+  .leg.g{font-size:15px}.leg{font-size:9px;letter-spacing:.08em}.leg.w{width:84px;font-size:8px}
+  .tete{flex-wrap:wrap}
+  .etq b{font-size:16px}.etq i{font-size:16px}.etq em{font-size:13.5px;max-width:160px}.etq small{font-size:9px;letter-spacing:.1em}
+  .e-galaxie .etq small{display:none}
+  .e-chapitre .ariane{opacity:0;pointer-events:none}
+  .ariane{top:96px}.ariane p{font-size:15px}
+  .aide{display:none}
+  .voile{background:linear-gradient(to bottom,rgba(20,19,15,0) 34%,rgba(20,19,15,.94) 44%)}
+  .recit{left:12px;right:12px;width:auto;top:41vh;bottom:58px;padding-left:24px}
+  .r-nav{left:16px;right:16px;width:auto;bottom:14px;padding-left:0}.r-nav .esc{display:none}
+  .r-oeuvres{grid-template-columns:1fr}.r-stats b{font-size:32px}
+}
+@media (prefers-reduced-motion:reduce){.r-bloc,.r-titre .l{animation:none;opacity:1;filter:none;transform:none}}
+</style>
+</head>
+<body class="e-chaos">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4HC6D6D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><p style="position:fixed;inset:auto 0 40px 0;text-align:center;z-index:99;font-family:Georgia,serif"><a href="marketing-cv.html" style="color:#ece9e0">Cette page a besoin de JavaScript : voir la version classique →</a></p></noscript>
+<canvas id="ciel" aria-hidden="true"></canvas>
+<header class="tete">
+  <span><b>Yu‑Ting Tseng</b> · Marketing 360</span>
+  <nav>
+    <button class="btn" id="son" aria-pressed="false" title="Son coupé par défaut">♪ Son</button>
+    <button class="btn" id="voirListe">Sommaire</button>
+    <a class="btn" href="marketing-cv.html" title="Version classique de la page, en français et en anglais">Version classique · EN</a>
+  </nav>
+</header>
+<div class="titre">
+  <p>Analyse · Contenu · Diffusion</p>
+  <h1><span class="chaos">Des milliers de données. <em>Aucun sens, pour l'instant.</em></span><span class="ordre">Je transforme les chiffres <em>en décisions de campagne.</em></span></h1>
+</div>
+<div class="ariane" id="ariane"><button id="retour">← Univers</button><h2 id="aNom"></h2><p id="aDesc"></p></div>
+<div class="appel"><button id="ordonner">Mettre de l'ordre</button><p>ou faites défiler</p></div>
+<p class="aide" id="aide"></p>
+<div id="etiquettes"></div><div id="legendes"></div>
+<div class="voile"></div>
+<article class="recit" id="recit" aria-live="polite"></article>
+<nav class="r-nav" id="rNav"><button id="prec"></button><button class="ferme" id="fermer">Retour au ciel<span class="esc"> · Échap</span></button><button id="suiv"></button></nav>
+<div class="sommaire" id="sommaire"></div>
+<div class="lb" id="lb"><img alt=""><span></span></div>
+
+<script src="univers/univers.js?v=20261116"></script>
+<script src="univers/expos.js?v=20261116"></script>
+<script>
+(() => {
+const U=window.UNIVERS, G=U.galaxies, SOL=U.soleil;
+const cv=document.getElementById('ciel'), g=cv.getContext('2d');
+const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const PAPIER='236,233,224', VERM='232,131,108';
+let W,H,mob,P=[],etat='chaos',gal=-1,act=-1,survol=-1,souris={x:-999,y:-999};
+let lieux=[],aretes=[],figure=null,soleil=null,derniere=[];
+
+/* Son : pentatonique en ré, coupé par défaut */
+const FREQ=[146.83,164.81,185.00,220.00,246.94,293.66,329.63,369.99,440.00,493.88,587.33];
+let actx=null,son=false;
+function pince(f,force=.5){
+  if(!son)return;
+  actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+  const t=actx.currentTime,o=actx.createOscillator(),o2=actx.createOscillator(),gn=actx.createGain(),fl=actx.createBiquadFilter(),g2=actx.createGain();
+  o.type='triangle';o2.type='sine';o.frequency.setValueAtTime(f*1.012,t);o.frequency.exponentialRampToValueAtTime(f,t+.08);o2.frequency.setValueAtTime(f*2,t);
+  fl.type='lowpass';fl.frequency.setValueAtTime(4200,t);fl.frequency.exponentialRampToValueAtTime(900,t+1.2);
+  gn.gain.setValueAtTime(0,t);gn.gain.linearRampToValueAtTime(.08+.12*force,t+.006);gn.gain.exponentialRampToValueAtTime(.0008,t+2.2);g2.gain.value=.25;
+  o.connect(fl);o2.connect(g2);g2.connect(fl);fl.connect(gn);gn.connect(actx.destination);o.start(t);o2.start(t);o.stop(t+2.3);o2.stop(t+2.3);
+}
+
+/* ---------- Formes : chaque constellation est une figure liée à son contenu, tracée avec ses propres chiffres ----------
+   Étoiles : 'v' vermillon, 'b' brillante, 'n' normale, 'f' faible, 'sync' qui bat (phase). Coordonnées 0 – 1. */
+const q=(a,c,b,t)=>[(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1]];
+const decouper=s=>s.split(/ · (?![^(]*\))/);
+function forme(c0,asp,dens){
+  const c=c0;
+  const pts=[],ar=[],lg=[];let img=null,an=null,sd=97;
+  const rnd=()=>{sd=(sd*16807)%2147483647;return(sd-1)/2147483646};
+  const P_=(x,y,v,ph)=>{pts.push([x,y,v||'n',ph||0]);return pts.length-1};
+  const L_=(x,y,t,cls)=>lg.push([x,y,t,cls||'']);
+  const E=(a,b,col)=>ar.push([a,b,col||'']);
+  const lier=(ii,ferme,col)=>{for(let k=0;k<ii.length-1;k++)E(ii[k],ii[k+1],col);if(ferme)E(ii[ii.length-1],ii[0],col)};
+  const ligne=(a,b,n,v,l,col)=>{const ii=[];for(let k=0;k<=n;k++)ii.push(P_(a[0]+(b[0]-a[0])*k/n,a[1]+(b[1]-a[1])*k/n,v));if(l)lier(ii,false,col);return ii};
+  const courbe=(a,c2,b,n,v,l,col)=>{const ii=[];for(let k=0;k<=n;k++){const p=q(a,c2,b,k/n);ii.push(P_(p[0],p[1],v))}if(l)lier(ii,false,col);return ii};
+  const arc=(cx,cy,rx,ry,a0,a1,n,v,l,col,rot=0)=>{const ii=[];for(let k=0;k<n;k++){const t=(a0+(a1-a0)*(n===1?.5:k/(n-1)))*Math.PI/180;let x=Math.cos(t)*rx,y=Math.sin(t)*ry;if(rot){const r=rot*Math.PI/180;[x,y]=[x*Math.cos(r)-y*Math.sin(r),x*Math.sin(r)+y*Math.cos(r)]}ii.push(P_(cx+x/asp,cy+y,v))}if(l)lier(ii,false,col);return ii};
+  const anneau=(cx,cy,rx,ry,n,v,l,col,rot=0)=>{const ii=arc(cx,cy,rx,ry,-90,270-360/n,n,v,false,'',rot);if(l)lier(ii,true,col);return ii};
+  const X=dx=>dx/asp; // écart horizontal exprimé en hauteur
+
+  /* Icônes dessinées dans un carré (−1 … 1), sans déformation quelle que soit la zone */
+  const S=.44,M=(x,y)=>[.5+x*S/asp,.5+y*S];
+  const Pm=(x,y,v,ph)=>{const m=M(x,y);return P_(m[0],m[1],v,ph)};
+  const Lm=(x,y,t,cls)=>{const m=M(x,y);L_(m[0],m[1],t,cls)};
+  const chemin=(c2,ferme,pas0,v,col,ph)=>{let P2=c2;
+    if(c2.length>8){let L=0;for(let i=1;i<c2.length;i++)L+=Math.hypot(c2[i][0]-c2[i-1][0],c2[i][1]-c2[i-1][1]);
+      const n=Math.max(ferme?6:3,Math.min(ferme?12:9,Math.round(L/(.32*(dens||1))))),len=c2.length;P2=[];
+      for(let k=0;k<n;k++)P2.push(c2[ferme?Math.floor(k*len/n):Math.round(k*(len-1)/(n-1))])}
+    const out=P2.map(([x,y])=>Pm(x,y,v,ph));lier(out,ferme,col);return out};
+  const poly=(c2,ferme,v,col)=>{const ii=c2.map(([x,y,w])=>Pm(x,y,w||v));lier(ii,ferme,col);return ii};
+  const rr=(x0,y0,x1,y1,c)=>c?[[x0+c,y0],[x1-c,y0],[x1,y0+c],[x1,y1-c],[x1-c,y1],[x0+c,y1],[x0,y1-c],[x0,y0+c]]:[[x0,y0],[x1,y0],[x1,y1],[x0,y1]];
+  const arcS=(cx,cy,rx,ry,a0,a1,n)=>{const o=[];for(let k=0;k<=n;k++){const t=(a0+(a1-a0)*k/n)*Math.PI/180;o.push([cx+Math.cos(t)*rx,cy+Math.sin(t)*ry])}return o};
+  const ell=(cx,cy,rx,ry)=>arcS(cx,cy,rx,ry,0,360,36).slice(0,-1);
+  const qS=(a,c2,b)=>{const o=[];for(let k=0;k<=12;k++)o.push(q(a,c2,b,k/12));return o};
+  const coeur=(cx,cy,s)=>[[0,.95],[-.95,-.05],[-.9,-.6],[-.5,-.9],[0,-.5],[.5,-.9],[.9,-.6],[.95,-.05]].map(([x,y])=>[cx+x*s,cy+y*s]);
+  const silhouette=(cx,cy,s,v)=>{const c=v==='v'?'v':'',t=Pm(cx,cy-.3*s,v==='v'?'v':'b');poly([[cx-.34*s,cy+.3*s],[cx-.2*s,cy],[cx+.2*s,cy],[cx+.34*s,cy+.3*s]],false,v,c);E(t,Pm(cx,cy-.12*s,'f'),c);return t};
+  switch(c.forme){
+  case 'leboncoin':{ // un cadran de diffusion : l'aiguille dépasse l'objectif contractuel
+    chemin(arcS(0,.25,.95,.95,180,360,30),false,.1,'n');chemin(arcS(0,.25,.72,.72,180,360,22),false,.12,'f');
+    for(let k=0;k<=10;k++){const a=(180+18*k)*Math.PI/180,r1=k%5?.82:.78;chemin([[Math.cos(a)*r1,.25+Math.sin(a)*r1],[Math.cos(a)*.95,.25+Math.sin(a)*.95]],false,.08,k>=8?'v':'b',k>=8?'v':'')}
+    const ob=(180+18*8)*Math.PI/180;Pm(Math.cos(ob)*1.08,.25+Math.sin(ob)*1.08,'v');
+    const ai=(180+18*9.2)*Math.PI/180,aig=chemin([[0,.25],[Math.cos(ai)*.68,.25+Math.sin(ai)*.68]],false,.1,'v','v');chemin(ell(0,.25,.08,.08),true,.07,'b');
+    chemin(arcS(0,.25,.5,.5,180,180+18*9.2,14),false,.1,'sync','',0);
+    Lm(Math.cos(ob)*1.3,.25+Math.sin(ob)*1.3-.04,'Objectif','v');Lm(0,.62,'Diffusion de plus de 20 campagnes','v');Lm(0,1.0,'Objectifs contractuels atteints et dépassés','g');an=[aig[aig.length-1],aig[0],aig[Math.floor(aig.length/2)]];break}
+  case 'kpn':{ // une loupe sur le classement : les articles montent au premier rang
+    const len=chemin(ell(-.18,-.18,.62,.62),true,.1,'n');chemin(ell(-.18,-.18,.5,.5),true,.14,'f');chemin([[.28,.28],[.9,.9]],false,.1,'b');chemin([[.36,.2],[.98,.82]],false,.1,'b');chemin([[.9,.9],[.98,.82]],false,.06,'b');
+    const bars=[[-.5,.1],[-.34,-.08],[-.18,-.26],[-.02,-.5]].map(([x,y],k)=>{chemin(rr(x-.06,y,x+.06,.22),true,.08,k===3?'v':'n',k===3?'v':'');return Pm(x,y,k===3?'v':'b')});
+    const st=[];for(let k=0;k<10;k++){const a=-Math.PI/2+k*Math.PI/5,r=k%2?.045:.1;st.push([-.02+Math.cos(a)*r,-.66+Math.sin(a)*r])}const et=chemin(st,true,.05,'v','v');
+    Lm(-.18,-1.0,'Top 10 Google · tests A/B','v');Lm(0,1.08,'Plus de 10 articles en première page · CTR +9,5 %','g');an=[et[0],bars[3],bars[1],bars[0],bars[2]];break}
+  case 'engoo':{ // la courbe des vues qui s'envole de l'écran, un cœur au sommet
+    chemin(rr(-.95,-.3,.55,.95,.08),true,.13,'n');chemin([[-.95,-.08],[.55,-.08]],false,.16,'f');[-.84,-.74].forEach(x=>Pm(x,-.19,'b'));
+    [[-.75,.25],[-.75,.45],[-.75,.65]].forEach(([x,y],k)=>chemin([[x,y],[x+.5+k*.1,y]],false,.14,'f'));
+    const cur=chemin(qS([-.3,.78],[.15,.7],[.95,-.72]),false,.1,'v','v');const co=chemin(coeur(.95,-.92,.17),true,.05,'v','v');
+    [[.0,.5],[.4,.1],[.7,-.3]].forEach(([x,y])=>Pm(x,y,'b'));
+    Lm(.5,-1.18,'+93,3 % de vues','v');Lm(0,1.12,'Contenus Rednote et tableaux de bord Excel','g');an=[co[0],cur[Math.floor(cur.length*.6)],cur[2],cur[cur.length-1]];break}
+  case 'enseignement':{ // une liste de contrôle : 9 cours coordonnés, tous cochés
+    chemin(rr(-.78,-.92,.78,.95,.07),true,.13,'n');chemin(rr(-.25,-1.02,.25,-.82,.05),true,.09,'b');
+    const co=[];[-.62,-.3,.02,.34,.66].forEach((y,k)=>{if(k<3){co.push(chemin([[-.58,y+.02],[-.5,y+.1],[-.36,y-.1]],false,.07,'v','v')[1]);chemin([[-.2,y],[.55,y]],false,.14,'n')}else{chemin(rr(-.58,y-.1,-.38,y+.1),true,.09,'f');chemin([[-.2,y],[.55,y]],false,.14,'f')}});
+    [.34,.66].forEach(y=>co.push(chemin([[-.58,y+.02],[-.5,y+.1],[-.36,y-.1]],false,.07,'v','v')[1]));
+    Lm(0,1.12,'Coordination de 9 cours et de leurs événements','g');an=[co[0],co[1],co[2]];break}
+  case 'recherche':{ // un tableau de présentation sur chevalet : synthèses et visualisations
+    chemin(rr(-.85,-.8,.85,.35,.04),true,.13,'n');chemin([[-.4,.35],[-.6,.98]],false,.12,'f');chemin([[.4,.35],[.6,.98]],false,.12,'f');chemin([[0,.35],[0,.98]],false,.12,'f');
+    const bars=[[-.55,-.05],[-.32,-.35],[-.09,-.2]].map(([x,y],k)=>{chemin(rr(x-.08,y,x+.08,.2),true,.09,'n');return Pm(x,y,'b')});
+    const pie=chemin(ell(.45,-.22,.3,.3),true,.1,'n');chemin([[.45,-.22],[.45,-.52]],false,.1,'v','v');chemin([[.45,-.22],[.73,-.12]],false,.1,'v','v');const sec=chemin(arcS(.45,-.22,.3,.3,-90,20,6),false,.09,'v','v');
+    Lm(0,-1.02,'Synthèses et visualisation des données','v');Lm(0,1.15,'Équipes de 3 à 4 personnes · séminaires, conférences, camps','g');an=[sec[3],bars[1],pie[0]];break}
+  case 'sora':{ // une fusée : le lancement d'une entreprise, 5 étoiles dans la traînée pour 5 camps
+    chemin([[0,-1],[.3,-.5],[.3,.25],[-.3,.25],[-.3,-.5]],true,.12,'n');chemin(ell(0,-.42,.12,.12),true,.07,'b');
+    chemin([[-.3,-.05],[-.62,.4],[-.3,.3]],false,.11,'n');chemin([[.3,-.05],[.62,.4],[.3,.3]],false,.11,'n');chemin([[-.14,.25],[0,.45],[.14,.25]],false,.08,'v','v');
+    const tr=[0,1,2,3,4].map(k=>Pm((k%2?-.09:.09)*(1+k*.3),.62+k*.14,'v'));
+    Lm(0,-1.18,'Business plan · étude de marché · suivi financier','v');Lm(0,1.4,"5 camps d'été · 3 250 € de bénéfice net",'g');an=tr;break}
+  case 'aiesec':{ // un mégaphone : la campagne de recrutement, et ses ondes
+    chemin([[-.55,-.18],[.25,-.55]],false,.13,'n');chemin([[-.55,.18],[.25,.55]],false,.13,'n');const bo=chemin(ell(.25,0,.11,.55),true,.12,'v','v');
+    chemin(rr(-.78,-.18,-.55,.18),true,.12,'b');chemin([[-.35,.13],[-.42,.52],[-.26,.52],[-.2,.2]],false,.1,'n');
+    [.5,.7,.9].forEach((r,k)=>chemin(arcS(.25,0,r,r,-38,38,8),false,.13,'sync','',k));
+    Lm(.25,-.82,"+53,7 % au-delà de l'objectif budgétaire",'v');Lm(0,1.0,'15 volontaires · plus de 60 participants','g');an=[bo[0],bo[8],bo[16]];break}
+  case 'guzheng':{ // un guzheng : 10 cordes, 8 allumées pour 80 % de membres fidélisés
+    poly([[-.95,-.62,'b'],[.9,-.36,'b'],[.98,0],[.9,.36,'b'],[-.95,.62,'b'],[-1.02,0]],true,'n');const br=[];
+    for(let k2=0;k2<10;k2++){const t=(k2+.5)/10,ya=-.5+1.0*t,yb=-.28+.56*t,u=.6-.28*Math.sin(Math.PI*t),on=k2<8;
+      const b=Pm(-.85+1.65*u,ya+(yb-ya)*u-.02,on?'v':'b');E(Pm(-.85,ya,'f'),b,on?'v':'');E(b,Pm(.8,yb,'f'),on?'v':'');br.push(b)}
+    Lm(0,-.9,'100 % des places pourvues à chaque recrutement','g');Lm(0,.92,'8 cordes sur 10 allumées : 80 % des membres fidélisés','v');an=[br[2],br[6]];break}
+  case 'restos':{ // un cœur
+    const ii=chemin(coeur(0,0,.9),true,0,'v','v');Pm(0,.05,'b');
+    Lm(0,1.2,'Distribution alimentaire et accueil · Lyon','g');an=[ii[0],ii[4]];break}
+  case 'usr':{ // un livre ouvert : la langue partagée
+    chemin([[0,-.45],[-.45,-.62],[-.95,-.55],[-.95,.62],[-.45,.55],[0,.7]],false,.13,'n');chemin([[0,-.45],[.45,-.62],[.95,-.55],[.95,.62],[.45,.55],[0,.7]],false,.13,'n');
+    const dos=chemin([[0,-.45],[0,.7]],false,.15,'b');const li=[];[-.3,-.1,.1,.3].forEach((y,k)=>{li.push(chemin([[-.82,y],[-.15,y+.04]],false,.14,k?'f':'v',k?'':'v')[0]);chemin([[.15,y+.04],[.82,y]],false,.14,k?'f':'v',k?'':'v')});
+    Lm(0,-.86,'Élèves de familles transnationales');Lm(0,1.0,'Langue et intégration culturelle','g');an=[dos[0],li[0]];break}
+  case 'nuit':{ // une ampoule : une nuit pour les idées
+    chemin(arcS(0,-.3,.55,.55,140,400,28),false,.12,'n');chemin([[-.42,.05],[-.22,.4]],false,.12,'n');chemin([[.42,.05],[.22,.4]],false,.12,'n');
+    [.45,.56,.67].forEach(y=>chemin([[-.22,y],[.22,y]],false,.11,'b'));Pm(0,.78,'b');
+    const fil=chemin([[-.18,.28],[-.12,-.25],[-.04,-.05],[.04,-.25],[.12,-.05],[.18,.28]],false,.09,'v','v');
+    for(let k=0;k<7;k++){const a=(200+k*23.3)*Math.PI/180;chemin([[Math.cos(a)*.72,-.3+Math.sin(a)*.72],[Math.cos(a)*.88,-.3+Math.sin(a)*.88]],false,.08,'f')}
+    Lm(0,-1.13,'Durabilité · en français et en chinois','v');Lm(0,1.02,'Plus de 350 participants','g');an=[fil[Math.floor(fil.length/2)]];break}
+  case 'compagnonnage':{ // deux bulles de conversation
+    chemin([...rr(-.95,-.82,.15,-.18,.15)],true,.13,'n');chemin([[-.62,-.18],[-.75,.04],[-.45,-.18]],false,.1,'n');const da=[-.6,-.4,-.2].map(x=>Pm(x,-.5,'b'));
+    chemin([...rr(-.15,.08,.95,.72,.15)],true,.13,'v','v');chemin([[.45,.72],[.75,.94],[.62,.72]],false,.1,'v','v');const db=[.2,.4,.6].map(x=>Pm(x,.4,'v'));
+    Lm(-.4,-1.02,'Étudiants américains');Lm(0,1.12,'Immersion linguistique et culturelle','g');an=[da[1],db[1]];break}
+  case 'buddy':{ // trois étudiants en échange, et celle qui les accompagne
+    const t=[[-.62,-.1,'France'],[0,-.36,'États-Unis'],[.62,-.1,'Corée du Sud']].map(([x,y,n])=>{const h=silhouette(x,y,.72,'n');Lm(x,n==='États-Unis'?y-.5:y+.42,n,'v');return h});
+    const moi=silhouette(0,.46,1,'v');
+    Lm(0,1.08,'3 étudiants en échange accompagnés','g');an=[moi,...t];break}
+  case 'emlyon':{ // un lion de face, couronné : crinière en pointes, sourcils froncés, peu d'étoiles
+    const k=.76,dy=.16,T=p=>p.map(([x,y,w])=>[x*k,y*k+dy,w]),mir=p=>p.map(([x,y,w])=>[-x,y,w]);
+    const dr=[[0,-1,'b'],[.34,-.8],[.64,-.92,'b'],[.76,-.5],[1,-.16,'b'],[.82,.28],[.92,.64,'b'],[.52,.7],[.3,1.0],[0,1.12,'b']];
+    const cri=poly(T([...dr,...mir(dr.slice(1,-1)).reverse()]),true,'n');
+    const fd=[[0,-.56],[.42,-.44],[.52,.04],[.32,.5],[0,.7]],vis=poly(T([...fd,...mir(fd.slice(1,-1)).reverse()]),true,'f');
+    // facettes de la crinière
+    [[1,2],[1,3],[2,4],[2,5],[3,6],[3,7],[4,8],[4,9]].forEach(([a,b])=>{E(vis[a],cri[b]);E(vis[vis.length-a],cri[cri.length-b])});E(vis[0],cri[0]);
+    // regard : sourcils inclinés vers le museau, yeux vermillon
+    poly(T([[-.44,-.28],[-.12,-.14],[-.1,.2]]),false,'n');poly(T([[.44,-.28],[.12,-.14],[.1,.2]]),false,'n');
+    const og=Pm(-.27*k,-.06*k+dy,'v'),od=Pm(.27*k,-.06*k+dy,'v');
+    const nez=poly(T([[-.14,.2],[.14,.2],[0,.36]]),true,'v','v');poly(T([[0,.36],[0,.46]]),false,'n');poly(T([[-.2,.5],[0,.46],[.2,.5]]),false,'n');
+    const cour=poly(T([[-.26,-1.1],[-.2,-1.36],[-.07,-1.18],[0,-1.4],[.07,-1.18],[.2,-1.36],[.26,-1.1]]),false,'v','v');
+    Lm(0,1.2,'Master en Gestion (Programme Grande École)','g');Lm(0,1.4,'GPA 4,0/4,0 · Lyon','v');an=[og,od,cour[3]];break}
+  case 'nccu':{ // la fleur de prunier : cinq pétales, cinq étamines
+    const D=Math.PI/180,et=[];
+    for(let k=0;k<5;k++){const t=k*72-90,cx=Math.cos(t*D)*.5,cy=Math.sin(t*D)*.5;chemin(arcS(cx,cy,.42,.42,t-108,t+108,14),false,.2,'b')}
+    const ctr=Pm(0,0,'v');for(let k=0;k<5;k++){const t=(k*72-90)*D,e=Pm(Math.cos(t)*.3,Math.sin(t)*.3,'v');E(ctr,e,'v');et.push(e)}
+    Lm(0,1.18,'Bachelor en Français & Diplomatie','g');Lm(0,1.38,'GPA 3,99/4,0 · Top 7 %','v');an=[ctr,et[0],et[2],et[3]];break}
+  case 'paris1':{ // le Panthéon : dôme, fronton, colonnes
+    poly([[-.9,.9],[.9,.9]],false,'n');poly([[-.7,.32,'b'],[.7,.32,'b']],false,'n');
+    [-.54,-.18,.18,.54].forEach(x=>poly([[x,.32],[x,.9]],false,'n'));
+    poly([[-.7,.32],[0,.02,'b'],[.7,.32]],false,'n');
+    poly([[-.34,.14],[-.34,-.3],[.34,-.3],[.34,.14]],false,'n');
+    const dome=chemin(arcS(0,-.3,.34,.42,180,360,14),false,.17,'v','v');const fl=Pm(0,-.95,'v');E(dome[Math.floor(dome.length/2)],fl,'v');
+    Lm(0,1.14,"Programme d'Échange en Science Politique",'g');Lm(0,1.34,'01/2024 – 06/2024 · Paris','v');an=[fl,dome[2]];break}
+  case 'grappes':{ // un objet par domaine ; autour, une étoile par sous-catégorie, reliée à ses compétences
+    const gr=c.groupes,n=gr.length,tips=[];
+    if(c.id==='c-mkt'){ // une cible : la stratégie marketing
+      chemin(ell(0,0,.62,.62),true,.13,'n');chemin(ell(0,0,.38,.38),true,.12,'f');chemin(ell(0,0,.15,.15),true,.1,'v','v');const cen=Pm(0,0,'v');
+      chemin([[.55,-.55],[.02,-.02]],false,.12,'b');chemin([[.55,-.55],[.5,-.78]],false,.1,'b');chemin([[.55,-.55],[.78,-.5]],false,.1,'b');tips.push(cen)}
+    else if(c.id==='c-data'){ // un graphique en barres
+      chemin([[-.8,.7],[.8,.7]],false,.14,'n');chemin([[-.8,.7],[-.8,-.7]],false,.14,'n');
+      [[-.55,.15],[-.2,-.1],[.15,.3],[.5,-.55]].forEach(([x,y],k)=>{chemin(rr(x-.11,y,x+.11,.7),true,.11,k===3?'v':'n',k===3?'v':'');tips.push(Pm(x,y,k===3?'v':'b'))})}
+    else if(c.id==='c-crea'){ // un pinceau
+      chemin([[.2,-.9],[.75,-.35]],false,.12,'n');chemin([[.75,-.35],[.2,-.9]],false,.3,'f');chemin([[.2,-.9],[.05,-.75],[.6,-.2],[.75,-.35]],true,.12,'n');
+      chemin([[.05,-.75],[.6,-.2],[.15,.25],[-.3,.1],[-.5,-.2]],false,.12,'b');const po=chemin([[-.5,-.2],[-.7,.3],[-.35,.55],[.1,.45],[.15,.25]],false,.1,'v','v');tips.push(po[2])}
+    else if(c.id==='c-ia'){ // une étincelle à quatre branches, et le curseur de code
+      const sp=chemin([[0,-.8],[.14,-.14],[.8,0],[.14,.14],[0,.8],[-.14,.14],[-.8,0],[-.14,-.14]],true,.11,'v','v');tips.push(sp[0]);
+      chemin([[.45,.55],[.65,.72],[.45,.89]],false,.1,'b');chemin([[.72,.89],[.92,.89]],false,.1,'b')}
+    else if(c.id==='c-bur'){ // un classeur
+      chemin(rr(-.7,-.55,.7,.75,.05),true,.13,'n');chemin([[-.7,-.3],[.7,-.3]],false,.14,'f');[-.35,0,.35].forEach(x=>chemin([[x,-.65],[x,-.4]],false,.1,'b'));
+      [-.05,.2,.45].forEach((y,k)=>chemin([[-.5,y],[k?.3:.5,y]],false,.14,k?'f':'v',k?'':'v'));tips.push(Pm(-.5,-.05,'v'))}
+    gr.forEach(([nom,liste],k)=>{const it=decouper(liste),a=(-90+360*k/n)*Math.PI/180,R=1.02,sx=Math.cos(a),sy=Math.sin(a);
+      const t=Pm(sx*R,sy*R,'b');tips.push(t);
+      it.forEach((_,j)=>{const b=a+(it.length===1?0:(-.7+1.4*j/(it.length-1))),r=.2+(j%2)*.07;E(t,Pm(sx*R+Math.cos(b)*r,sy*R+Math.sin(b)*r,'f'))});
+      Lm(sx*1.42,sy*1.42,nom,'w')});
+    Lm(0,1.26,`${c.chiffre} ${c.legende}`,'g');break}
+  case 'langues':{ // quatre bulles, quatre langues
+    const ctr=[[-.5,-.45],[.5,-.45],[-.5,.45],[.5,.45]];const tips=c.groupes.map((gq,k)=>{const[cx,cy]=ctr[k],v=k?'n':'v';
+      const b=chemin(rr(cx-.42,cy-.27,cx+.42,cy+.22,.1),true,.12,v,v==='v'?'v':'');chemin([[cx-.12,cy+.22],[cx-.22,cy+.38],[cx+.02,cy+.22]],false,.09,v,v==='v'?'v':'');
+      Lm(cx,cy-.03,gq[0]+' · '+gq[1],(k?'':'v ')+'w');return b[0]});
+    Lm(0,1.08,'4 langues de travail','g');an=tips;break}
+  case 'logo':{ // le logo de l'école, étoile par étoile (tracé depuis l'emblème officiel)
+    const Lg=LOGOS[c.logo],k=.96,ids=[];
+    Lg.pts.forEach(([x,y,v])=>ids.push(Pm(x*k,y*k,v)));
+    if(Lg.cadre)chemin(rr(-1,-1,1,1,.04),true,.11,'v','v');
+    Lm(0,(Lg.asp>1?1/Lg.asp:1)+.22,c.legende_logo||'','g');
+    const vs=ids.filter(i=>pts[i][2]==='v'||pts[i][2]==='b');an=[vs[0]||ids[0],vs[Math.floor(vs.length/2)]||ids[0],vs[vs.length-1]||ids[0]];break}
+  case 'oeuvre':{ // un cadre : quatre étoiles aux angles, l'œuvre au centre
+    let h=.74,w=h*c.ratio/asp;if(w>.88){w=.88;h=w*asp/c.ratio}
+    const x=.5-w/2,y=.48-h/2,ii=[[x,y],[x+w,y],[x+w,y+h],[x,y+h]].map(([a,b])=>P_(a,b,'v'));lier(ii,true);
+    [[x,y,-1,-1],[x+w,y,1,-1],[x+w,y+h,1,1],[x,y+h,-1,1]].forEach(([cx,cy,sx,sy],q)=>E(ii[q],P_(cx+X(sx*.05),cy+sy*.05,'b')));
+    img={x,y,w,h,src:c.image};
+    if(c.chiffre)L_(.5,y-.1,`${c.chiffre} ${c.legende}`,'v');L_(.5,y+h+.12,c.titre,'g');an=ii;break}
+  case 'sephora':{ // matrice de portefeuille : un point pour 100 produits
+    const o=P_(.12,.9,'b');E(o,P_(.92,.9,'f'));E(o,P_(.12,.04,'f'));
+    const cen=[];[['Hidden Gems',1801,.32,.28,'n'],['Hero',2307,.72,.28,'v'],['Underperformers',2293,.32,.64,'f'],['Risk',1815,.72,.64,'n']].forEach(([n,k2,cx,cy,v])=>{
+      const m=Math.round(k2/100);for(let j=0;j<m;j++){const a=j*2.4,r=.022*Math.sqrt(j)*1.8;const i2=P_(cx+X(Math.cos(a)*r),cy+Math.sin(a)*r,v);if(!j)cen.push(i2)}
+      L_(cx,cy+.16,`${n} · ${nb(k2.toLocaleString('fr-FR'))}`,v==='v'?'v':'')});
+    L_(.52,.98,'Traction (avis) →');L_(.04,.47,'Note ↑');L_(.5,-.08,'8 494 produits, un point pour 100','g');an=cen;break}
+  case 'contact':{ // un avion de papier qui prend son envol
+    const s=[[.58,.36],[.9,.12],[.7,.6],[.64,.46]],ii=s.map(p=>P_(p[0],p[1],'v'));E(ii[0],ii[1],'v');E(ii[1],ii[2],'v');E(ii[2],ii[3],'v');E(ii[3],ii[0],'v');E(ii[3],ii[1],'v');
+    for(let j=0;j<18;j++){const t=j/18;P_(.06+t*.5,.84-Math.sin(t*Math.PI)*.18-t*.3,'f')}
+    L_(.5,1.04,'Disponible à partir de 01/2027 · Paris','g');an=[ii[1],ii[0],ii[2],ii[3],ii[1]];break}
+  }
+  if(an)an=an.filter(q=>q!==undefined);
+  if(!an||!an.length)an=pts.map((p,i)=>p[2]==='v'||p[2]==='b'?i:-1).filter(i=>i>=0);
+  return{pts,ar,lg,img,an};
+}
+
+/* ---------- Mises en page ---------- */
+const POS_L=[[.3,.5],[.87,.68],[.66,.8],[.8,.31],[.36,.8],[.11,.64]], SOL_L=[.56,.58];
+const POS_M=[[.25,.47],[.76,.415],[.6,.6],[.2,.675],[.73,.815],[.31,.895]], SOL_M=[.47,.295];
+const FORMES_G=[{bras:2,fl:.5,tl:-.4},{bras:2,fl:.62,tl:.6},{bras:3,fl:.55,tl:.2},{bras:2,fl:.45,tl:.9},{bras:3,fl:.6,tl:-.8},{bras:2,fl:.58,tl:.3}];
+function rng(s){return()=>{s=(s*16807)%2147483647;return(s-1)/2147483646}}
+function cibleUnivers(){
+  const T=[],pos=mob?POS_M:POS_L,sp=mob?SOL_M:SOL_L,R=mob?W*.11:Math.min(W,H)*.088,n=mob?70:115;
+  const R0=R;lieux=G.map((ga,i)=>{const R=R0*(.72+.045*ga.items.length),cx=pos[i][0]*W,cy=pos[i][1]*H,f=FORMES_G[i],r=rng(i*131+7);
+    for(let k=0;k<n;k++){let rad,ang,v='n';
+      if(k<n*.28){rad=Math.abs(r()+r()-1)*R*.32;ang=r()*6.283;v=k<n*.1?'c':'n'}
+      else{const t=r(),b=k%f.bras;rad=R*(.18+.9*t);ang=b*2*Math.PI/f.bras+t*3.3+(r()-.5)*.5}
+      T.push({orb:1,cx,cy,rad,ang,fl:f.fl,tl:f.tl,sp:(.00005+.00003*(i%3))*(i%2?1:-1),v,g:i})}
+    return{cx,cy,r:R*1.1}});
+  const cx=sp[0]*W,cy=sp[1]*H,r=rng(99),Rs=R0*.42;
+  for(let k=0;k<(mob?36:50);k++){const rad=Math.abs(r()+r()-1)*Rs,ang=r()*6.283;T.push({orb:1,cx,cy,rad,ang,fl:1,tl:0,sp:.00012,v:k<14?'v':'c',g:'s'})}
+  soleil={cx,cy,r:Rs*1.8};
+  return{T,A:[]};
+}
+function grille(n){
+  const top=H*.3,bas=H*(mob?.98:.94),cols=mob?2:(n<=4?n:Math.ceil(n/2)),rows=Math.ceil(n/cols);
+  const larg=mob?W*.94:Math.min(W*.9,cols*360),x0=(W-larg)/2,cw=larg/cols,ch=(bas-top)/rows;
+  return Array.from({length:n},(_,k)=>{const r=Math.floor(k/cols),col=k%cols,dans=Math.min(cols,n-r*cols),dec=(cols-dans)*cw/2;return{x:x0+dec+col*cw,y:top+r*ch,w:cw,h:ch}});
+}
+function cibleGalaxie(i){
+  const items=G[i].items,cel=grille(items.length),T=[],A=[];
+  lieux=cel.map((c,k)=>{const marge=G[i].id==='competences'?.26:.12,z={x:c.x+c.w*marge,y:c.y+c.h*.07,w:c.w*(1-2*marge),h:c.h*(mob?.5:.52)};
+    const petit=z.h<170,f=forme(items[k],z.w/z.h,petit?1.7:1.15),b=T.length,sc=Math.max(.5,Math.min(.82,z.h/260));
+    f.pts.forEach(p=>T.push({x:z.x+p[0]*z.w,y:z.y+p[1]*z.h,v:p[2],ph:p[3],c:k,sc}));
+    f.ar.forEach(([u,v,col])=>A.push([b+u,b+v,k,col]));
+    const img=f.img?{x:z.x+f.img.x*z.w,y:z.y+f.img.y*z.h,w:f.img.w*z.w,h:f.img.h*z.h,src:f.img.src,rond:f.img.rond}:null;
+    return{...c,z,img,t0:performance.now(),cx:c.x+c.w/2,cy:z.y+z.h/2}});
+  return{T,A};
+}
+function largeurRecit(){return Math.min(500,W*.4)+38}
+function zoneFigure(){
+  if(mob)return{x:W*.12,y:H*.15,w:W*.76,h:H*.19};
+  const droite=W-largeurRecit()-Math.max(20,W*.04),libre=droite-W*.04,h=H*.5,w=Math.min(libre*.7,h*1.25);return{x:W*.04+(libre-w)/2,y:H*.25,w,h};
+}
+function cibleChapitre(c){
+  const z=zoneFigure(),f=forme(c,z.w/z.h),T=f.pts.map(p=>({x:z.x+p[0]*z.w,y:z.y+p[1]*z.h,v:p[2],ph:p[3],big:1})),A=f.ar.map(([u,v,col])=>[u,v,0,col]);
+  figure={lg:f.lg.map(l=>[z.x+l[0]*z.w,z.y+l[1]*z.h,l[2],l[3]]),img:f.img?{x:z.x+f.img.x*z.w,y:z.y+f.img.y*z.h,w:f.img.w*z.w,h:f.img.h*z.h,src:f.img.src,rond:f.img.rond}:null,an:f.an,trace:-.4,hl:-1};
+  return{T,A};
+}
+function posCible(t,now){if(!t.orb)return[t.x,t.y];const a=t.ang+now*t.sp,x=Math.cos(a)*t.rad,y=Math.sin(a)*t.rad*t.fl;return[t.cx+x*Math.cos(t.tl)-y*Math.sin(t.tl),t.cy+x*Math.sin(t.tl)+y*Math.cos(t.tl)]}
+
+/* Attribution : les points les plus proches du foyer prennent les premières places */
+function attribuer({T,A},foyer,pousse){
+  const now=performance.now(),cx=foyer?foyer[0]:W/2,cy=foyer?foyer[1]:H/2;
+  const besoin=T.length+(mob?140:260);
+  while(P.length<besoin)P.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,r:Math.random()*1.2+.4,ph:Math.random()*6.28});
+  const cle=foyer?(x,y)=>Math.hypot(x-cx,y-cy):(x,y)=>Math.atan2(y-cy,x-cx);
+  const ps=P.map(p=>[cle(p.x,p.y),p]).sort((a,b)=>a[0]-b[0]);
+  const ts=T.map((t,k)=>{const q2=posCible(t,now);return[cle(q2[0],q2[1]),k]}).sort((a,b)=>a[0]-b[0]);
+  P.forEach(p=>p.t=null);const part=[];
+  ts.forEach(([_,k],j)=>{const p=ps[j][1];p.t=T[k];part[k]=p});
+  aretes=A.map(([u,v,c,col])=>[part[u],part[v],c,col]);derniere=part;
+  if(pousse&&!reduit)P.forEach(p=>{if(!p.t){const dx=p.x-cx,dy=p.y-cy,d=Math.hypot(dx,dy)+1;p.vx+=dx/d*7;p.vy+=dy/d*7}});
+  if(reduit)P.forEach(p=>{if(p.t){const q2=posCible(p.t,now);p.x=q2[0];p.y=q2[1]}});
+}
+
+/* ---------- Étiquettes ---------- */
+const zE=document.getElementById('etiquettes'),zL=document.getElementById('legendes');
+function etiquettes(){
+  zE.innerHTML='';
+  const ajoute=(x,y,html,cls)=>{const d=document.createElement('div');d.className='etq '+(cls||'');d.innerHTML=html;d.style.left=x+'px';d.style.top=y+'px';zE.appendChild(d);return d};
+  if(etat==='univers'){
+    lieux.forEach((l,i)=>{l.el=ajoute(l.cx,l.cy+l.r*.78,`<b>${G[i].court}</b><small>${G[i].items.length} constellations</small>`)});
+    soleil.el=ajoute(soleil.cx,soleil.cy+soleil.r*.95,`<b>${SOL.court}</b><small>Contact · ${SOL.chiffre}</small>`,'soleil');
+  }else if(etat==='galaxie'||etat==='chapitre'){
+    lieux.forEach((l,k)=>{const c=G[gal].items[k];l.el=ajoute(l.cx,l.z.y+l.z.h+(mob?8:16),`<b>${nb(c.court)}</b>${c.apercu?`<em>${nb(c.apercu)}</em>`:''}${c.chiffre?`<i>${nb(c.chiffre)}</i>`:''}<small>${nb(c.legende)}</small>`)});
+  }
+}
+function legendes(){
+  zL.innerHTML='';if(!figure)return;
+  figure.lg.forEach(([x,y,t,cls])=>{if(!t)return;const d=document.createElement('div');d.className=('leg '+cls).trim();d.textContent=nb(t);d.style.left=x+'px';d.style.top=y+'px';zL.appendChild(d)});
+}
+const AIDE_U='Chaque galaxie est une partie du parcours : cliquez pour y entrer. Au centre, le contact.';
+const AIDE_G={experiences:'une expérience',associations:'un engagement',benevolat:'un engagement',portfolio:'une œuvre : elle s\'ouvre ici, dans le ciel',formation:'une école',competences:'un domaine'};
+
+/* ---------- Le récit : le texte s'allume dans le ciel ---------- */
+const recitEl=document.getElementById('recit'),nav=document.getElementById('rNav');
+let ancres=[];
+function recit(c){
+  const esc=s=>nb(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const lien=h=>/^(https?:|mailto:|assets\/)/.test(h)?h:SITE+h;
+  let n=0;const lettres=[...nb(c.titre)].length,base=320+Math.min(lettres,60)*14;
+  const B=(html,tag='div',cls='')=>`<${tag} class="r-bloc ${cls}" style="--d:${base+(n++)*120}ms">${html}</${tag}>`;
+  let h='';
+  if(c.photo)h+=`<img class="r-photo r-bloc" style="--d:0ms" src="${c.photo}" alt="Portrait de Yu-Ting Tseng">`;
+  const sur=c.dates?c.dates+' · '+c.lieu:(c.sur||'');
+  if(sur)h+=`<p class="r-sur r-bloc" style="--d:80ms">${esc(sur)}</p>`;
+  let i=0;h+=`<h2 class="r-titre">${nb(c.titre).split(' ').map(m=>`<span class="mot">${[...m].map(ch=>`<span class="l" style="--i:${i++}">${ch.replace(/&/,'&amp;').replace(/</,'&lt;')}</span>`).join('')}</span>`).join(' ')}</h2>`;
+  if(c.org)h+=B(esc(c.org),'p','r-org');
+  if(c.texte)h+=B(esc(c.texte),'p','r-texte');
+  const stats=c.stats||(c.chiffre&&c.forme!=='contact'?[[c.chiffre,c.legende]]:null);
+  if(stats)h+=B(stats.map(s=>`<div><b data-compte="${esc(s[0])}">${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join(''),'div','r-stats');
+  let a=0;
+  if(c.puces)h+=`<ul class="r-puces">${c.puces.map(p=>B(`<span class="r-etoile"></span>${esc(p)}`,'li').replace('<li class','<li data-a="'+(a++)+'" class')).join('')}</ul>`;
+  if(c.groupes)h+=`<dl class="r-groupes">${c.groupes.map(gq=>B(`<span class="r-etoile"></span>${esc(gq[0])}`,'dt').replace('<dt class','<dt data-a="'+(a++)+'" class')+B(esc(gq[1]),'dd')).join('')}</dl>`;
+  if(c.contact)h+=`<dl class="r-groupes">${c.contact.map(gq=>B(`<span class="r-etoile"></span>${esc(gq[0])}`,'dt').replace('<dt class','<dt data-a="'+(a++)+'" class')+B(gq[2]?`<a href="${lien(gq[2])}" target="_blank" rel="noopener">${esc(gq[1])}</a>`:esc(gq[1]),'dd')).join('')}</dl>`;
+  if(window.EXPO_DE&&EXPO_DE[c.id]){h+=recitExpo(EXPO_DE[c.id],B,esc,lien,a);return h}
+  if(c.image)h+=B(`<a href="${lien(c.lien[1])}" target="_blank" rel="noopener"><img src="${c.image}" alt=""></a>`,'div','r-oeuvres');
+  if(c.oeuvres)h+=B(c.oeuvres.map(o=>`<a href="${lien(o[2])}" target="_blank" rel="noopener"><img src="${o[0]}" alt=""><span>${esc(o[1])}</span></a>`).join(''),'div','r-oeuvres');
+  if(c.lien)h+=B(`<a href="${lien(c.lien[1])}" target="_blank" rel="noopener">→ ${esc(c.lien[0])}</a>`,'p','r-voir');
+  return h;
+}
+/* Une œuvre du portfolio se lit entièrement dans le ciel : préface, murs, salles, épilogue */
+function recitExpo(id,B,esc,lien,a0){
+  const e=(window.EXPOS||[]).find(x=>x.id===id);if(!e)return'';let h='',a=a0;
+  const blocs=[...(window.EXPO_EXTRA&&EXPO_EXTRA[id]||[]),...e.blocs];
+  if(e.resume)h+=B(esc(e.resume),'p','r-texte');
+  const st=e.stats.filter(x=>/\d/.test(x[0]));
+  if(st.length)h+=B(st.slice(0,4).map(x=>`<div><b data-compte="${esc(x[0])}">${esc(x[0])}</b><span>${esc(x[1])}</span></div>`).join(''),'div','r-stats');
+  if(e.tags.length)h+=B(e.tags.map(t=>`<span>${esc(t)}</span>`).join(''),'div','r-tags');
+  if(e.source)h+=B(esc(e.source),'p','r-source');
+  if(e.note)h+=B(esc(e.note),'p','r-source');
+  let d=0;
+  blocs.forEach(bk=>{
+    bk.parts.forEach((pt,k)=>{if(pt.t&&!(bk.type==='salle'&&k>0))h+=B(`<span class="r-etoile"></span>${esc(pt.t)}`,'p','r-section').replace('<p class','<p data-a="'+(a++)+'" class');
+      if(bk.type==='salle'&&k===0&&bk.imgs.length){
+        if(bk.imgs.length>1){d++;h+=B(`<img class="r-img" src="${bk.imgs[0]}" alt="" data-diapo="${d}" data-i="0"><nav><button data-d="${d}" data-s="-1" aria-label="Précédente">←</button><span data-cpt="${d}">1 / ${bk.imgs.length}</span><button data-d="${d}" data-s="1" aria-label="Suivante">→</button></nav>`,'div','r-diapo').replace('<div class','<div data-liste="'+bk.imgs.join('|')+'" class')}
+        else h+=B(`<img class="r-img" src="${bk.imgs[0]}" alt="" loading="lazy">`,'div');
+      }
+      pt.p.forEach(p=>h+=B(esc(p),'p','r-p'))});
+  });
+  const it=G.find(ga=>ga.id==='portfolio').items.find(x=>x.id===Object.keys(EXPO_DE).find(k=>EXPO_DE[k]===id));
+  if(it&&it.lien)h+=B(`<a href="${lien(it.lien[1])}" target="_blank" rel="noopener">Exposition complète sur le portfolio →</a>`,'p','r-fin');
+  return h;
+}
+/* Les chiffres se comptent en s'allumant */
+function compter(el,delai){
+  const t=el.dataset.compte;if(t.includes('/'))return;
+  const m=t.match(/^(\D*?)(\d[\d  ]*(?:,\d+)?)(.*)$/);if(!m)return;
+  const brut=m[2].replace(/[  ]/g,''),dec=(brut.split(',')[1]||'').length,val=parseFloat(brut.replace(',','.'));
+  const fmt=v=>nb(m[1]+v.toFixed(dec).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,' ')+m[3]);
+  el.textContent=fmt(0);
+  setTimeout(()=>{const t0=performance.now();const pas=now=>{const k=Math.min(1,(now-t0)/1300),e=1-Math.pow(1-k,3);el.textContent=fmt(val*e);if(k<1)requestAnimationFrame(pas);else el.textContent=t};requestAnimationFrame(pas)},delai);
+}
+function ouvrirRecit(c){
+  recitEl.innerHTML=recit(c);
+  recitEl.querySelectorAll('.r-diapo').forEach(dv=>{const L=dv.dataset.liste.split('|'),im=dv.querySelector('img'),cpt=dv.querySelector('[data-cpt]');let i=0;dv.querySelectorAll('button').forEach(b=>b.onclick=ev=>{ev.stopPropagation();i=(i+ +b.dataset.s+L.length)%L.length;im.src=L[i];cpt.textContent=`${i+1} / ${L.length}`})});
+  recitEl.querySelectorAll('.r-img').forEach(im=>im.onclick=()=>{const lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.querySelector('span').textContent=(im.closest('.r-bloc')&&im.closest('.r-bloc').previousElementSibling&&im.closest('.r-bloc').previousElementSibling.classList.contains('r-section'))?im.closest('.r-bloc').previousElementSibling.textContent:'';lb.classList.add('ouvert')});recitEl.scrollTop=0;recitEl.classList.add('ouvert');nav.classList.add('ouvert');
+  ancres=[...recitEl.querySelectorAll('[data-a]')];
+  ancres.forEach(el=>{el.addEventListener('mouseenter',()=>{figure&&(figure.hl=+el.dataset.a)});el.addEventListener('mouseleave',()=>{figure&&(figure.hl=-1)})});
+  if(!reduit)recitEl.querySelectorAll('[data-compte]').forEach(el=>compter(el,parseInt(el.closest('.r-bloc').style.getPropertyValue('--d'))||600));
+  const n=gal>=0?G[gal].items.length:0,pr=document.getElementById('prec'),sv=document.getElementById('suiv');
+  pr.hidden=sv.hidden=gal<0;
+  if(gal>=0){pr.textContent='← '+nb(G[gal].items[(act-1+n)%n].court);sv.textContent=nb(G[gal].items[(act+1)%n].court)+' →'}
+}
+function fermerRecit(){recitEl.classList.remove('ouvert');nav.classList.remove('ouvert');ancres=[]}
+
+/* ---------- États ---------- */
+function mettre(s){etat=s;document.body.className='e-'+s;document.getElementById('aide').textContent=s==='univers'?AIDE_U:s==='galaxie'&&gal>=0?`Chaque constellation est ${AIDE_G[G[gal].id]} : cliquez pour la lire. Échap pour revenir à l'univers.`:''}
+function versUnivers(){
+  fermerRecit();gal=-1;act=-1;survol=-1;figure=null;zL.innerHTML='';mettre('univers');
+  attribuer(cibleUnivers(),null,false);etiquettes();
+}
+function versGalaxie(i,depuis){
+  fermerRecit();act=-1;survol=-1;figure=null;zL.innerHTML='';
+  const foyer=depuis||(lieux[i]&&etat==='univers'?[lieux[i].cx,lieux[i].cy]:[W/2,H/2]);
+  gal=i;mettre('galaxie');
+  document.getElementById('aNom').textContent=G[i].nom;document.getElementById('aDesc').textContent=nb(G[i].desc);
+  attribuer(cibleGalaxie(i),foyer,true);etiquettes();
+  pince(FREQ[i*2%FREQ.length],.7);
+}
+function ouvrir(k,c){
+  const foyer=k>=0&&lieux[k]&&etat==='galaxie'?[lieux[k].cx,lieux[k].cy]:k<0&&soleil?[soleil.cx,soleil.cy]:[W/2,H/2];
+  act=k;mettre('chapitre');
+  attribuer(cibleChapitre(c),foyer,true);figure.part=derniere;legendes();
+  document.getElementById('sommaire').classList.remove('ouvert');
+  ouvrirRecit(c);
+  pince(FREQ[(k+3+FREQ.length)%FREQ.length],.8);
+}
+function ouvrirSoleil(){gal=-1;document.getElementById('aNom').textContent='Contact';ouvrir(-1,SOL)}
+function remonter(){
+  if(document.getElementById('sommaire').classList.contains('ouvert')){document.getElementById('sommaire').classList.remove('ouvert');return}
+  if(etat==='chapitre'){gal>=0?versGalaxie(gal,figure&&figure.part&&figure.part[0]?[figure.part[0].x,figure.part[0].y]:null):versUnivers()}
+  else if(etat==='galaxie')versUnivers();
+}
+
+/* ---------- Rendu ---------- */
+const images={};
+function image(src){if(!images[src]){const im=new Image();im.src=src;images[src]=im}return images[src]}
+function boucle(now){
+  g.clearRect(0,0,W,H);
+  if(souris.x>-1&&etat!=='chapitre'){const rg=g.createRadialGradient(souris.x,souris.y,0,souris.x,souris.y,220);rg.addColorStop(0,'rgba(203,88,66,.08)');rg.addColorStop(1,'rgba(203,88,66,0)');g.fillStyle=rg;g.fillRect(0,0,W,H)}
+  if(etat==='univers'&&soleil){const rg=g.createRadialGradient(soleil.cx,soleil.cy,0,soleil.cx,soleil.cy,soleil.r*2.6);rg.addColorStop(0,`rgba(203,88,66,${survol==='s'?.32:.2})`);rg.addColorStop(1,'rgba(203,88,66,0)');g.fillStyle=rg;g.fillRect(0,0,W,H)}
+  const peindre=(i,a)=>{const im=image(i.src);if(!(im.complete&&im.naturalWidth)||a<=0)return;g.save();g.globalAlpha=a;if(i.rond){g.beginPath();g.arc(i.x+i.w/2,i.y+i.h/2,Math.min(i.w,i.h)/2,0,6.283);g.clip()}const r=Math.min(i.w/im.naturalWidth,i.h/im.naturalHeight),w=im.naturalWidth*r,h=im.naturalHeight*r;g.drawImage(im,i.x+(i.w-w)/2,i.y+(i.h-h)/2,w,h);g.restore()};
+  if(etat==='galaxie')lieux.forEach((l,k)=>{if(l.img)peindre(l.img,Math.min(1,Math.max(0,(now-l.t0-1400)/900))*(l.img.rond?(survol===k?1:survol===-1?.85:.3):(survol===k?.95:survol===-1?.42:.18)))});
+  if(etat==='chapitre'&&figure){figure.trace=Math.min(2,figure.trace+.012);if(figure.img)peindre(figure.img,Math.max(0,Math.min(1,(figure.trace-.7)*1.6))*.95)}
+  // traits des constellations, tracés peu à peu à l'ouverture
+  if(aretes.length&&(etat==='galaxie'||etat==='chapitre')){
+    const n=etat==='chapitre'?Math.floor(aretes.length*Math.max(0,Math.min(1,figure?figure.trace:1))):aretes.length;
+    for(let k=0;k<n;k++){const[a,b,c,col]=aretes[k];if(!a||!b)continue;const vif=etat==='galaxie'&&survol===c,terne=etat==='galaxie'&&survol>=0&&!vif;
+      const rouge=col==='v'||vif;g.lineWidth=etat==='chapitre'?(rouge?1.1:.8):.8;
+      g.strokeStyle=`rgba(${rouge?VERM:PAPIER},${terne?.1:vif?.75:rouge?.6:etat==='galaxie'?.42:.3})`;g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);g.stroke()}
+  }
+  // fils de lumière entre chaque ligne du récit et son étoile
+  if(etat==='chapitre'&&figure&&figure.part&&!mob&&figure.trace>1&&ancres.length&&figure.an.length){
+    const rc=recitEl.getBoundingClientRect(),fade=Math.min(1,(figure.trace-1)*2);
+    ancres.forEach(el=>{const i=+el.dataset.a,p=figure.part[figure.an[i%figure.an.length]];if(!p)return;const r=el.getBoundingClientRect();
+      if(r.bottom<rc.top+24||r.top>rc.bottom-40)return;const x2=r.left+3,y2=r.top+(el.tagName==='DT'?13:12),vif=figure.hl===i;
+      g.strokeStyle=`rgba(${vif?VERM:PAPIER},${(vif?.65:.09)*fade})`;g.lineWidth=vif?1:.6;g.beginPath();g.moveTo(p.x,p.y);
+      g.bezierCurveTo(p.x+(x2-p.x)*.5,p.y,p.x+(x2-p.x)*.5,y2,x2,y2);g.stroke()});
+  }
+  const hlP=etat==='chapitre'&&figure&&figure.part&&figure.hl>=0?figure.part[figure.an[figure.hl%figure.an.length]]:null;
+  for(const p of P){
+    const t=p.t;let col=PAPIER,a=1,r=p.r,halo=0;
+    if(t){const[tx,ty]=posCible(t,now);p.vx=p.vx*.8+(tx-p.x)*.017;p.vy=p.vy*.8+(ty-p.y)*.017;
+      if(t.orb){const vif=survol===t.g;
+        if(t.v==='v'){col=VERM;r=1.9;halo=.25}else if(t.v==='c'){r=1.7;a=.95;halo=.12;if(vif)col=VERM}else{r=1.1;a=vif?.95:.55;if(vif)col=VERM}}
+      else{const vif=etat==='galaxie'&&survol===t.c,terne=etat==='galaxie'&&survol>=0&&!vif,s=t.big?1:(t.sc||.8),pt=!t.big;
+        if(t.v==='v'){col=VERM;r=2.2*s;halo=.22}
+        else if(t.v==='b'){r=2.3*s;halo=pt?.06:.2}
+        else if(t.v==='f'){r=1.05*s;a=.6}
+        else if(t.v==='sync'){col=VERM;r=1.9*s;a=.25+.75*Math.max(0,Math.sin(now*.0035-t.ph*1.1));halo=.25*a}
+        else{r=1.6*s;halo=pt?0:.08}
+        a*=.85+.15*Math.sin(now*.003+p.ph);
+        if(vif){r*=1.25;halo+=.15}if(terne)a*=.45}
+      if(p===hlP){r*=2;halo=.55;col=VERM}}
+    else{const dx=p.x-souris.x,dy=p.y-souris.y,d2=dx*dx+dy*dy;
+      if(d2<16000){const f=(16000-d2)/16000*.35;p.vx+=dx/Math.sqrt(d2+1)*f;p.vy+=dy/Math.sqrt(d2+1)*f}
+      p.vx=p.vx*.985+(Math.random()-.5)*.05;p.vy=p.vy*.985+(Math.random()-.5)*.05;
+      if(etat!=='chaos'){p.vx*=.97;p.vy*=.97}
+      if(p.x<0)p.x+=W;if(p.x>W)p.x-=W;if(p.y<0)p.y+=H;if(p.y>H)p.y-=H;
+      a=(etat==='chaos'?.55:.16)*(.55+.45*Math.sin(now*.002+p.ph))}
+    p.x+=p.vx;p.y+=p.vy;
+    if(halo){g.beginPath();g.fillStyle=`rgba(${col},${halo*a})`;g.arc(p.x,p.y,r*3.6,0,6.283);g.fill()}
+    g.beginPath();g.fillStyle=`rgba(${col},${a})`;g.arc(p.x,p.y,r,0,6.283);g.fill();
+  }
+  requestAnimationFrame(boucle);
+}
+
+/* ---------- Gestes ---------- */
+function sous(x,y){
+  if(etat==='univers'){if(soleil&&Math.hypot(x-soleil.cx,y-soleil.cy)<soleil.r*1.2)return's';
+    let b=-1,bd=1e9;lieux.forEach((l,i)=>{const d=Math.hypot(x-l.cx,y-l.cy);if(d<l.r*1.25&&d<bd){bd=d;b=i}});return b}
+  if(etat==='galaxie')return lieux.findIndex(l=>x>=l.x&&x<=l.x+l.w&&y>=l.y&&y<=l.y+l.h);
+  return -1;
+}
+function marquer(s){
+  if(s===survol)return;survol=s;cv.style.cursor=(s===-1)?(etat==='chapitre'?'zoom-out':'default'):'pointer';
+  lieux.forEach((l,i)=>{if(l.el){l.el.classList.toggle('vive',i===s);l.el.classList.toggle('terne',s!==-1&&i!==s)}});
+  if(soleil&&soleil.el&&etat==='univers'){soleil.el.classList.toggle('vive',s==='s');soleil.el.classList.toggle('terne',s!==-1&&s!=='s')}
+  if(s!==-1)pince(s==='s'?293.66:FREQ[(etat==='univers'?s*2:s+3)%FREQ.length],.4);
+}
+cv.addEventListener('pointermove',e=>{souris={x:e.clientX,y:e.clientY};marquer(sous(e.clientX,e.clientY))});
+cv.addEventListener('pointerleave',()=>{souris={x:-999,y:-999};marquer(-1)});
+cv.addEventListener('click',e=>{
+  if(etat==='chaos'){versUnivers();return}
+  if(etat==='chapitre'){remonter();return}
+  const s=sous(e.clientX,e.clientY);
+  if(etat==='univers'){if(s==='s')ouvrirSoleil();else if(s>=0)versGalaxie(s)}
+  else if(etat==='galaxie'){if(s>=0)ouvrir(s,G[gal].items[s]);else versUnivers()}
+});
+addEventListener('wheel',e=>{if(etat==='chaos'&&e.deltaY>0)versUnivers()},{passive:true});
+let ty0=null;addEventListener('touchstart',e=>ty0=e.touches[0].clientY,{passive:true});
+addEventListener('touchmove',e=>{if(etat==='chaos'&&ty0!==null&&ty0-e.touches[0].clientY>40)versUnivers()},{passive:true});
+document.getElementById('ordonner').onclick=e=>{e.stopPropagation();versUnivers()};
+document.getElementById('retour').onclick=()=>versUnivers();
+document.getElementById('fermer').onclick=remonter;
+document.getElementById('lb').onclick=()=>document.getElementById('lb').classList.remove('ouvert');
+const pas=d=>{if(gal<0)return;const n=G[gal].items.length,k=(act+d+n)%n;ouvrir(k,G[gal].items[k])};
+document.getElementById('prec').onclick=()=>pas(-1);
+document.getElementById('suiv').onclick=()=>pas(1);
+const bS=document.getElementById('son');bS.onclick=()=>{son=!son;bS.setAttribute('aria-pressed',son);if(son)pince(293.66,.6)};
+addEventListener('keydown',e=>{
+  if(e.key==='Escape'){const lb=document.getElementById('lb');if(lb.classList.contains('ouvert')){lb.classList.remove('ouvert');return}remonter()}
+  if(etat==='chapitre'&&e.key==='ArrowRight')pas(1);
+  if(etat==='chapitre'&&e.key==='ArrowLeft')pas(-1);
+  if(etat==='chaos'&&(e.key==='ArrowDown'||e.key===' '||e.key==='Enter')){e.preventDefault();versUnivers()}
+});
+const som=document.getElementById('sommaire');
+som.innerHTML=`<section><h3><button data-s="1">Contact</button></h3><ol><li><button data-s="1">${SOL.court}<i>${SOL.chiffre}</i></button></li></ol></section>`+
+  G.map((ga,i)=>`<section><h3><button data-g="${i}">${ga.nom}</button></h3><ol>${ga.items.map((c,k)=>`<li><button data-g="${i}" data-k="${k}">${nb(c.titre)}<i>${nb(c.chiffre)}</i></button></li>`).join('')}</ol></section>`).join('');
+som.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;som.classList.remove('ouvert');if(etat==='chaos')versUnivers();
+  if(b.dataset.s){ouvrirSoleil();return}
+  const i=+b.dataset.g;versGalaxie(i);if(b.dataset.k!==undefined)ouvrir(+b.dataset.k,G[i].items[+b.dataset.k])});
+document.getElementById('voirListe').onclick=()=>som.classList.toggle('ouvert');
+
+/* ---------- Mise en route ---------- */
+function taille(){
+  const dpr=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;mob=W<700;
+  cv.width=W*dpr;cv.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0);
+  if(!P.length)for(let k=0;k<(mob?600:900);k++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6,r:Math.random()*1.2+.4,ph:Math.random()*6.28});
+  if(etat==='univers')versUnivers();
+  else if(etat==='galaxie')versGalaxie(gal,[W/2,H/2]);
+  else if(etat==='chapitre'){const k=act,i=gal;if(i>=0){versGalaxie(i,[W/2,H/2]);ouvrir(k,G[i].items[k])}else{versUnivers();ouvrirSoleil()}}
+}
+taille();
+/* Liens profonds : marketing.html#experience ouvre directement la galaxie */
+{const H2={experience:0,extracurricular:1,volunteer:2,portfolio:3,education:4,skills:5},h=location.hash.slice(1);
+ if(h==='contact'||h==='about'){versUnivers();if(h==='contact')ouvrirSoleil()}else if(h in H2){versUnivers();versGalaxie(H2[h],[W/2,H/2])}}
+addEventListener('resize',()=>{clearTimeout(window._r);window._r=setTimeout(taille,200)});
+requestAnimationFrame(boucle);
+})();
+</script>
 </body>
 </html>
-
-

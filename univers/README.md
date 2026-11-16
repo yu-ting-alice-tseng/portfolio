@@ -1,12 +1,9 @@
-# Maquette « Univers » de la page marketing
+# Page marketing « Univers »
 
-Prototype interactif (11/2026), pas encore en production : `marketing.html` n'a pas été modifié.
+En ligne depuis le 16/11/2026 : `marketing.html` (moteur, formes des constellations, récit dans le ciel). L'ancienne page est `marketing-cv.html`.
 
-- `index.html` : la maquette (moteur, formes des constellations, récit dans le ciel)
 - `univers.js` : contenu des galaxies, repris de `marketing.html` (français)
 - `expos.js` : contenu des projets, extrait de `portfolio-marketing.html` par script
-
-Aperçu en ligne : /maquette-univers/ (page non référencée, `noindex`).
 
 ## Retrouver la version d'origine de marketing.html
 

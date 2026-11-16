@@ -1,5 +1,5 @@
 /* Contenu réel de marketing.html et du catalogue de portfolio-marketing.html (français), sans ajout. */
-window.SITE = 'https://yu-ting-alice-tseng.github.io/portfolio/';
+window.SITE = '';
 (() => {
 const pf = h => 'portfolio-marketing.html' + h;
 
