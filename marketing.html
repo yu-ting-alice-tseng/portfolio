@@ -25,12 +25,10 @@ canvas{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:
 #scene{position:fixed;inset:0;transform-origin:50% 50%}
 #scene.aspire{animation:aspire .6s cubic-bezier(.7,0,.84,0) forwards}
 @keyframes aspire{0%{transform:scale(1) rotate(0deg);filter:blur(0)}55%{filter:blur(1px)}72%{opacity:1}100%{transform:scale(9) rotate(14deg);opacity:0;filter:blur(7px)}}
-#warp,#rais{position:fixed;inset:0;z-index:9;pointer-events:none;opacity:0;mix-blend-mode:screen}
+#warp{position:fixed;inset:0;z-index:9;pointer-events:none;opacity:0;mix-blend-mode:screen}
 #warp.actif{animation:warp .66s cubic-bezier(.3,0,.4,1) forwards}
 @keyframes warp{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
-#rais.actif{animation:rais .58s cubic-bezier(.65,0,.85,.25) forwards}
-@keyframes rais{0%{opacity:0;transform:scale(.1) rotate(0deg)}28%{opacity:.9}100%{opacity:0;transform:scale(3.2) rotate(30deg)}}
-@media (prefers-reduced-motion:reduce){#scene.aspire{animation:none}#warp.actif,#rais.actif{animation:none}}
+@media (prefers-reduced-motion:reduce){#scene.aspire{animation:none}#warp.actif{animation:none}}
 .tete{position:fixed;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:18px clamp(16px,4vw,48px);z-index:12;font-size:12px;letter-spacing:.18em;text-transform:uppercase;pointer-events:none}
 .tete>*{pointer-events:auto}
 .tete b{font-weight:500}
@@ -181,7 +179,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 <div id="scene"><canvas id="ciel" aria-hidden="true"></canvas>
 <div id="etiquettes"></div><div id="legendes"></div></div>
 <div id="warp" aria-hidden="true"></div>
-<div id="rais" aria-hidden="true"></div>
 <header class="tete">
   <span><b>Yu‑Ting Tseng</b> · Marketing 360</span>
   <nav>
@@ -579,18 +576,15 @@ function versUnivers(){
   fermerRecit();gal=-1;act=-1;survol=-1;figure=null;zL.innerHTML='';mettre('univers');
   attribuer(cibleUnivers(),null,false);etiquettes();
 }
-const scene=document.getElementById('scene'),warpEl=document.getElementById('warp'),raisEl=document.getElementById('rais');
+const scene=document.getElementById('scene'),warpEl=document.getElementById('warp');
 /* Entrer dans une galaxie : on y est aspiré, comme un plongeon vers un nouveau territoire */
 function aspirer(x,y,suite){
   if(reduit){suite();return}
-  const o=x+'px '+y+'px';
-  scene.style.transformOrigin=o;raisEl.style.transformOrigin=o;
+  scene.style.transformOrigin=x+'px '+y+'px';
   warpEl.style.background=`radial-gradient(circle at ${x}px ${y}px,rgba(236,233,224,1),rgba(${VERM},.6) 30%,rgba(${VERM},0) 60%)`;
-  raisEl.style.background=`repeating-conic-gradient(from 0deg at ${x}px ${y}px,rgba(236,233,224,.9) 0deg 1deg,transparent 1deg 7deg)`;
-  raisEl.style.webkitMaskImage=raisEl.style.maskImage=`radial-gradient(circle at ${x}px ${y}px,rgba(0,0,0,1) 0%,rgba(0,0,0,.85) 35%,rgba(0,0,0,0) 78%)`;
-  scene.classList.add('aspire');warpEl.classList.add('actif');raisEl.classList.add('actif');
+  scene.classList.add('aspire');warpEl.classList.add('actif');
   setTimeout(()=>{suite();scene.classList.remove('aspire');scene.style.transformOrigin='';},460);
-  setTimeout(()=>{warpEl.classList.remove('actif');raisEl.classList.remove('actif')},680);
+  setTimeout(()=>warpEl.classList.remove('actif'),680);
 }
 function versGalaxie(i,depuis){
   fermerRecit();act=-1;survol=-1;figure=null;zL.innerHTML='';
