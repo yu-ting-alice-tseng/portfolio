@@ -61,6 +61,8 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 .etq.terne{opacity:.35!important}
 #etiquettes{transition:opacity .5s}
 .e-chapitre #etiquettes{opacity:0}
+#legendes{transition:opacity .6s}
+body.profond #legendes{opacity:0}
 .leg{position:fixed;z-index:4;pointer-events:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);white-space:nowrap;transform:translate(-50%,-50%);opacity:0;animation:parait 1s 1.1s forwards;text-shadow:0 0 8px var(--nuit),0 0 3px var(--nuit)}
 .leg.g{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;letter-spacing:0;text-transform:none;color:var(--papier)}
 .leg.v{color:var(--accent-clair)}
@@ -68,10 +70,14 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 @keyframes parait{to{opacity:1}}
 
 /* Le récit : le texte s'écrit dans le ciel, sans cadre */
-.voile{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity 1.2s;background:radial-gradient(55% 85% at 82% 52%,rgba(20,19,15,.92),rgba(20,19,15,.55) 55%,rgba(20,19,15,0) 80%)}
+:root{--rw:min(500px,40vw)}
+body.profond{--rw:min(880px,78vw)}
+.voile{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity 1.2s,background .6s;background:radial-gradient(55% 85% at 82% 52%,rgba(20,19,15,.92),rgba(20,19,15,.55) 55%,rgba(20,19,15,0) 80%)}
 .e-chapitre .voile{opacity:1}
-.recit{position:fixed;right:clamp(20px,4vw,64px);top:clamp(96px,13vh,128px);bottom:78px;width:min(500px,40vw);z-index:6;overflow:auto;scrollbar-width:none;padding:14px 8px 48px 30px;opacity:0;pointer-events:none;transition:opacity .5s;
+body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,.94),rgba(20,19,15,.68) 55%,rgba(20,19,15,0) 85%)}
+.recit{position:fixed;right:clamp(20px,4vw,64px);top:clamp(96px,13vh,128px);bottom:78px;width:var(--rw);z-index:6;overflow:auto;scrollbar-width:none;padding:14px 8px 48px 30px;opacity:0;pointer-events:none;transition:opacity .5s,width .6s cubic-bezier(.4,0,.2,1);
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 56px),transparent)}
+#r-detail{height:0;margin:0;padding:0}
 .recit::-webkit-scrollbar{display:none}
 .recit.ouvert{opacity:1;pointer-events:auto}
 .r-bloc{opacity:0;filter:blur(6px);transform:translateY(10px);animation:eclot 1s var(--d) cubic-bezier(.2,.7,.2,1) forwards}
@@ -110,8 +116,9 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 .r-h{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:23px;line-height:1.15;margin:18px 0 8px}
 .r-p{font-size:14.5px;line-height:1.7;margin:0 0 10px;color:var(--papier)}
 .r-p+.r-p{margin-top:-2px}
-.r-img{display:block;width:100%;height:auto;margin:14px 0 6px;cursor:zoom-in;box-shadow:0 0 0 1px rgba(236,233,224,.14),0 24px 50px -24px rgba(0,0,0,.9);transition:transform .4s,box-shadow .4s;background:#f3f1ea}
+.r-img{display:block;width:100%;max-width:620px;height:auto;margin:14px auto 6px;cursor:zoom-in;box-shadow:0 0 0 1px rgba(236,233,224,.14),0 24px 50px -24px rgba(0,0,0,.9);transition:transform .4s,box-shadow .4s,max-width .6s cubic-bezier(.4,0,.2,1);background:#f3f1ea}
 .r-img:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(232,131,108,.5),0 0 40px -8px var(--accent)}
+.r-diapo .r-img{max-width:none}
 .r-leg{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;color:var(--gris);margin:0 0 14px}
 .r-diapo{position:relative;margin:14px 0 6px}
 .r-diapo .r-img{margin:0}
@@ -125,7 +132,7 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 .lb.ouvert{display:flex}
 .lb img{max-width:92vw;max-height:88vh;box-shadow:0 0 0 1px rgba(236,233,224,.2),0 40px 90px -30px #000;animation:parait .4s forwards}
 .lb span{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:var(--gris)}
-.r-nav{position:fixed;right:clamp(20px,4vw,64px);bottom:22px;width:min(500px,40vw);z-index:7;display:flex;justify-content:space-between;align-items:baseline;gap:12px;opacity:0;pointer-events:none;transition:opacity .6s .6s;padding-left:30px}
+.r-nav{position:fixed;right:clamp(20px,4vw,64px);bottom:22px;width:var(--rw);z-index:7;display:flex;justify-content:space-between;align-items:baseline;gap:12px;opacity:0;pointer-events:none;transition:opacity .6s .6s,width .6s cubic-bezier(.4,0,.2,1);padding-left:30px}
 .r-nav.ouvert{opacity:1;pointer-events:auto}
 .r-nav button{all:unset;cursor:pointer;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--gris);max-width:44%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .r-nav button:hover,.r-nav button:focus-visible{color:var(--accent-clair)}
@@ -194,7 +201,7 @@ const cv=document.getElementById('ciel'), g=cv.getContext('2d');
 const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const PAPIER='236,233,224', VERM='232,131,108';
 let W,H,mob,P=[],etat='chaos',gal=-1,act=-1,survol=-1,souris={x:-999,y:-999};
-let lieux=[],aretes=[],figure=null,soleil=null,derniere=[];
+let lieux=[],aretes=[],figure=null,soleil=null,derniere=[],profondQ=0;
 
 /* Son : pentatonique en ré, coupé par défaut */
 const FREQ=[146.83,164.81,185.00,220.00,246.94,293.66,329.63,369.99,440.00,493.88,587.33];
@@ -515,6 +522,7 @@ function recitExpo(id,B,esc,lien,a0){
   if(e.tags.length)h+=B(e.tags.map(t=>`<span>${esc(t)}</span>`).join(''),'div','r-tags');
   if(e.source)h+=B(esc(e.source),'p','r-source');
   if(e.note)h+=B(esc(e.note),'p','r-source');
+  h+='<div id="r-detail" aria-hidden="true"></div>';
   let d=0;
   blocs.forEach(bk=>{
     bk.parts.forEach((pt,k)=>{if(pt.t&&!(bk.type==='salle'&&k>0))h+=B(`<span class="r-etoile"></span>${esc(pt.t)}`,'p','r-section').replace('<p class','<p data-a="'+(a++)+'" class');
@@ -540,6 +548,10 @@ function ouvrirRecit(c){
   recitEl.querySelectorAll('.r-diapo').forEach(dv=>{const L=dv.dataset.liste.split('|'),im=dv.querySelector('img'),cpt=dv.querySelector('[data-cpt]');let i=0;dv.querySelectorAll('button').forEach(b=>b.onclick=ev=>{ev.stopPropagation();i=(i+ +b.dataset.s+L.length)%L.length;im.src=L[i];cpt.textContent=`${i+1} / ${L.length}`})});
   recitEl.querySelectorAll('.r-img').forEach(im=>im.onclick=()=>{const lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.querySelector('span').textContent=(im.closest('.r-bloc')&&im.closest('.r-bloc').previousElementSibling&&im.closest('.r-bloc').previousElementSibling.classList.contains('r-section'))?im.closest('.r-bloc').previousElementSibling.textContent:'';lb.classList.add('ouvert')});
   recitEl.querySelectorAll('[data-ancre]').forEach(el=>el.onclick=()=>ouvrirAncre(el.dataset.ancre));
+  /* Dès qu'on lit les détails (murs, salles), le panneau s'élargit : le texte respire, les images deviennent des graphiques d'appoint */
+  document.body.classList.remove('profond');
+  const marqueur=recitEl.querySelector('#r-detail');
+  recitEl.onscroll=marqueur?(()=>{const seuil=Math.max(0,marqueur.offsetTop-recitEl.clientHeight*.5);document.body.classList.toggle('profond',recitEl.scrollTop>seuil)}):null;
   recitEl.scrollTop=0;recitEl.classList.add('ouvert');nav.classList.add('ouvert');
   ancres=[...recitEl.querySelectorAll('[data-a]')];
   ancres.forEach(el=>{el.addEventListener('mouseenter',()=>{figure&&(figure.hl=+el.dataset.a)});el.addEventListener('mouseleave',()=>{figure&&(figure.hl=-1)})});
@@ -548,7 +560,7 @@ function ouvrirRecit(c){
   pr.hidden=sv.hidden=gal<0;
   if(gal>=0){pr.textContent='← '+nb(G[gal].items[(act-1+n)%n].court);sv.textContent=nb(G[gal].items[(act+1)%n].court)+' →'}
 }
-function fermerRecit(){recitEl.classList.remove('ouvert');nav.classList.remove('ouvert');ancres=[]}
+function fermerRecit(){recitEl.classList.remove('ouvert');nav.classList.remove('ouvert');ancres=[];document.body.classList.remove('profond');recitEl.onscroll=null}
 
 /* ---------- États ---------- */
 function mettre(s){etat=s;document.body.className='e-'+s;document.getElementById('aide').textContent=s==='univers'?AIDE_U:s==='galaxie'&&gal>=0?`Chaque constellation est ${AIDE_G[G[gal].id]} : cliquez pour la lire. Échap pour revenir à l'univers.`:''}
@@ -584,21 +596,23 @@ const images={};
 function image(src){if(!images[src]){const im=new Image();im.src=src;images[src]=im}return images[src]}
 function boucle(now){
   g.clearRect(0,0,W,H);
+  profondQ+=((document.body.classList.contains('profond')?1:0)-profondQ)*.08;
   if(souris.x>-1&&etat!=='chapitre'){const rg=g.createRadialGradient(souris.x,souris.y,0,souris.x,souris.y,220);rg.addColorStop(0,'rgba(203,88,66,.08)');rg.addColorStop(1,'rgba(203,88,66,0)');g.fillStyle=rg;g.fillRect(0,0,W,H)}
   if(etat==='univers'&&soleil){const rg=g.createRadialGradient(soleil.cx,soleil.cy,0,soleil.cx,soleil.cy,soleil.r*2.6);rg.addColorStop(0,`rgba(203,88,66,${survol==='s'?.32:.2})`);rg.addColorStop(1,'rgba(203,88,66,0)');g.fillStyle=rg;g.fillRect(0,0,W,H)}
   const peindre=(i,a)=>{const im=image(i.src);if(!(im.complete&&im.naturalWidth)||a<=0)return;g.save();g.globalAlpha=a;if(i.rond){g.beginPath();g.arc(i.x+i.w/2,i.y+i.h/2,Math.min(i.w,i.h)/2,0,6.283);g.clip()}const r=Math.min(i.w/im.naturalWidth,i.h/im.naturalHeight),w=im.naturalWidth*r,h=im.naturalHeight*r;g.drawImage(im,i.x+(i.w-w)/2,i.y+(i.h-h)/2,w,h);g.restore()};
   if(etat==='galaxie')lieux.forEach((l,k)=>{if(l.img)peindre(l.img,Math.min(1,Math.max(0,(now-l.t0-1400)/900))*(l.img.rond?(survol===k?1:survol===-1?.85:.3):(survol===k?.95:survol===-1?.42:.18)))});
-  if(etat==='chapitre'&&figure){figure.trace=Math.min(2,figure.trace+.012);if(figure.img)peindre(figure.img,Math.max(0,Math.min(1,(figure.trace-.7)*1.6))*.95)}
-  // traits des constellations, tracés peu à peu à l'ouverture
+  if(etat==='chapitre'&&figure){figure.trace=Math.min(2,figure.trace+.012);if(figure.img)peindre(figure.img,Math.max(0,Math.min(1,(figure.trace-.7)*1.6))*.95*(1-profondQ))}
+  // traits des constellations, tracés peu à peu à l'ouverture ; ils s'effacent quand le récit s'élargit
   if(aretes.length&&(etat==='galaxie'||etat==='chapitre')){
     const n=etat==='chapitre'?Math.floor(aretes.length*Math.max(0,Math.min(1,figure?figure.trace:1))):aretes.length;
     for(let k=0;k<n;k++){const[a,b,c,col]=aretes[k];if(!a||!b)continue;const vif=etat==='galaxie'&&survol===c,terne=etat==='galaxie'&&survol>=0&&!vif;
-      const rouge=col==='v'||vif;g.lineWidth=etat==='chapitre'?(rouge?1.1:.8):.8;
-      g.strokeStyle=`rgba(${rouge?VERM:PAPIER},${terne?.1:vif?.75:rouge?.6:etat==='galaxie'?.42:.3})`;g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);g.stroke()}
+      const rouge=col==='v'||vif,baseA=terne?.1:vif?.75:rouge?.6:etat==='galaxie'?.42:.3,aLigne=etat==='chapitre'?baseA*(1-profondQ):baseA;
+      g.lineWidth=etat==='chapitre'?(rouge?1.1:.8):.8;
+      g.strokeStyle=`rgba(${rouge?VERM:PAPIER},${aLigne})`;g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);g.stroke()}
   }
   // fils de lumière entre chaque ligne du récit et son étoile
   if(etat==='chapitre'&&figure&&figure.part&&!mob&&figure.trace>1&&ancres.length&&figure.an.length){
-    const rc=recitEl.getBoundingClientRect(),fade=Math.min(1,(figure.trace-1)*2);
+    const rc=recitEl.getBoundingClientRect(),fade=Math.min(1,(figure.trace-1)*2)*(1-profondQ);
     ancres.forEach(el=>{const i=+el.dataset.a,p=figure.part[figure.an[i%figure.an.length]];if(!p)return;const r=el.getBoundingClientRect();
       if(r.bottom<rc.top+24||r.top>rc.bottom-40)return;const x2=r.left+3,y2=r.top+(el.tagName==='DT'?13:12),vif=figure.hl===i;
       g.strokeStyle=`rgba(${vif?VERM:PAPIER},${(vif?.65:.09)*fade})`;g.lineWidth=vif?1:.6;g.beginPath();g.moveTo(p.x,p.y);
@@ -617,7 +631,8 @@ function boucle(now){
         else if(t.v==='sync'){col=VERM;r=1.9*s;a=.25+.75*Math.max(0,Math.sin(now*.0035-t.ph*1.1));halo=.25*a}
         else{r=1.6*s;halo=pt?0:.08}
         a*=.85+.15*Math.sin(now*.003+p.ph);
-        if(vif){r*=1.25;halo+=.15}if(terne)a*=.45}
+        if(vif){r*=1.25;halo+=.15}if(terne)a*=.45
+        if(!pt){a*=(1-profondQ);halo*=(1-profondQ)}}
       if(p===hlP){r*=2;halo=.55;col=VERM}}
     else{const dx=p.x-souris.x,dy=p.y-souris.y,d2=dx*dx+dy*dy;
       if(d2<16000){const f=(16000-d2)/16000*.35;p.vx+=dx/Math.sqrt(d2+1)*f;p.vy+=dy/Math.sqrt(d2+1)*f}
