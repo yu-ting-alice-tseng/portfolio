@@ -95,13 +95,15 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 .r-groupes dt{position:relative;padding-left:20px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-clair);padding-top:3px;max-width:170px}
 .r-groupes dt .r-etoile{top:.7em}
 .r-groupes dd{margin:0;line-height:1.55;font-size:15px}
-.r-groupes a,.r-voir a{color:var(--papier);text-decoration-color:var(--accent);text-underline-offset:3px}
+.r-groupes a{color:var(--papier);text-decoration-color:var(--accent);text-underline-offset:3px}
 .r-voir{font-family:"Cormorant Garamond",serif;font-size:20px;margin:6px 0 0}
+.r-voir button{all:unset;cursor:pointer;font:inherit;color:var(--papier);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+.r-voir button:hover{color:var(--accent-clair)}
 .r-photo{width:92px;height:116px;object-fit:cover;display:block;margin:0 0 18px;border-radius:46px 46px 4px 4px;box-shadow:0 0 0 1px var(--filet),0 0 40px -6px var(--accent)}
 .r-oeuvres{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 18px}
-.r-oeuvres a{display:block;color:inherit;text-decoration:none}
+.r-oeuvres button{all:unset;display:block;width:100%;color:inherit;cursor:pointer}
 .r-oeuvres img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#f3f1ea;display:block;transition:transform .4s,box-shadow .4s}
-.r-oeuvres a:hover img{transform:translateY(-3px);box-shadow:0 10px 30px -10px var(--accent)}
+.r-oeuvres button:hover img{transform:translateY(-3px);box-shadow:0 10px 30px -10px var(--accent)}
 .r-oeuvres span{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;margin-top:6px}
 .r-section{margin:26px 0 8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-clair);padding-left:20px;position:relative}
 .r-section .r-etoile{top:.55em}
@@ -119,8 +121,6 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 .r-tags{display:flex;flex-wrap:wrap;gap:6px 10px;margin:0 0 18px}
 .r-tags span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);border:1px solid var(--filet);padding:3px 8px;border-radius:2px}
 .r-source{font-size:12px;color:var(--gris);line-height:1.5;margin:0 0 16px}
-.r-fin{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:var(--gris);margin:26px 0 0}
-.r-fin a{color:var(--gris);text-decoration-color:var(--filet);text-underline-offset:3px}.r-fin a:hover{color:var(--accent-clair)}
 .lb{position:fixed;inset:0;z-index:30;background:rgba(20,19,15,.96);display:none;align-items:center;justify-content:center;cursor:zoom-out}
 .lb.ouvert{display:flex}
 .lb img{max-width:92vw;max-height:88vh;box-shadow:0 0 0 1px rgba(236,233,224,.2),0 40px 90px -30px #000;animation:parait .4s forwards}
@@ -470,6 +470,15 @@ const AIDE_G={experiences:'une expérience',associations:'un engagement',benevol
 /* ---------- Le récit : le texte s'allume dans le ciel ---------- */
 const recitEl=document.getElementById('recit'),nav=document.getElementById('rNav');
 let ancres=[];
+/* Tout le site est au même endroit : pas de lien vers une autre page.
+   Un lien pf('#xxx') (hérité des données) ne sert plus qu'à retrouver la constellation
+   correspondante dans la galaxie Portfolio et à l'ouvrir ici même. */
+const ANCRE_PORTFOLIO={};Object.entries(window.EXPO_DE||{}).forEach(([pid,anc])=>ANCRE_PORTFOLIO[anc]=pid);
+const ancreDe=h=>{const i=h.indexOf('#');return i>=0?h.slice(i+1):''};
+function ouvrirAncre(anc){
+  const gi=G.findIndex(g=>g.id==='portfolio'),pid=ANCRE_PORTFOLIO[anc],k=pid?G[gi].items.findIndex(x=>x.id===pid):-1;
+  if(gi<0||k<0)return;versGalaxie(gi,[W/2,H/2]);ouvrir(k,G[gi].items[k]);
+}
 function recit(c){
   const esc=s=>nb(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
   const lien=h=>/^(https?:|mailto:|assets\/)/.test(h)?h:SITE+h;
@@ -489,9 +498,11 @@ function recit(c){
   if(c.groupes)h+=`<dl class="r-groupes">${c.groupes.map(gq=>B(`<span class="r-etoile"></span>${esc(gq[0])}`,'dt').replace('<dt class','<dt data-a="'+(a++)+'" class')+B(esc(gq[1]),'dd')).join('')}</dl>`;
   if(c.contact)h+=`<dl class="r-groupes">${c.contact.map(gq=>B(`<span class="r-etoile"></span>${esc(gq[0])}`,'dt').replace('<dt class','<dt data-a="'+(a++)+'" class')+B(gq[2]?`<a href="${lien(gq[2])}" target="_blank" rel="noopener">${esc(gq[1])}</a>`:esc(gq[1]),'dd')).join('')}</dl>`;
   if(window.EXPO_DE&&EXPO_DE[c.id]){h+=recitExpo(EXPO_DE[c.id],B,esc,lien,a);return h}
-  if(c.image)h+=B(`<a href="${lien(c.lien[1])}" target="_blank" rel="noopener"><img src="${c.image}" alt=""></a>`,'div','r-oeuvres');
-  if(c.oeuvres)h+=B(c.oeuvres.map(o=>`<a href="${lien(o[2])}" target="_blank" rel="noopener"><img src="${o[0]}" alt=""><span>${esc(o[1])}</span></a>`).join(''),'div','r-oeuvres');
-  if(c.lien)h+=B(`<a href="${lien(c.lien[1])}" target="_blank" rel="noopener">→ ${esc(c.lien[0])}</a>`,'p','r-voir');
+  const ancImg=c.lien?ancreDe(c.lien[1]):'';
+  if(c.image)h+=B(ANCRE_PORTFOLIO[ancImg]?`<button class="r-figure" data-ancre="${ancImg}"><img src="${c.image}" alt=""></button>`:`<img class="r-img" src="${c.image}" alt="" loading="lazy">`,'div','r-oeuvres');
+  if(c.oeuvres)h+=B(c.oeuvres.map(o=>{const anc=ancreDe(o[2]);
+    return ANCRE_PORTFOLIO[anc]?`<button class="r-figure" data-ancre="${anc}"><img src="${o[0]}" alt=""><span>${esc(o[1])}</span></button>`:`<span><img src="${o[0]}" alt=""><span>${esc(o[1])}</span></span>`}).join(''),'div','r-oeuvres');
+  if(!c.image&&c.lien&&ANCRE_PORTFOLIO[ancImg])h+=B(`<button data-ancre="${ancImg}">→ ${esc(c.lien[0])}</button>`,'p','r-voir');
   return h;
 }
 /* Une œuvre du portfolio se lit entièrement dans le ciel : préface, murs, salles, épilogue */
@@ -513,8 +524,6 @@ function recitExpo(id,B,esc,lien,a0){
       }
       pt.p.forEach(p=>h+=B(esc(p),'p','r-p'))});
   });
-  const it=G.find(ga=>ga.id==='portfolio').items.find(x=>x.id===Object.keys(EXPO_DE).find(k=>EXPO_DE[k]===id));
-  if(it&&it.lien)h+=B(`<a href="${lien(it.lien[1])}" target="_blank" rel="noopener">Exposition complète sur le portfolio →</a>`,'p','r-fin');
   return h;
 }
 /* Les chiffres se comptent en s'allumant */
@@ -529,7 +538,9 @@ function compter(el,delai){
 function ouvrirRecit(c){
   recitEl.innerHTML=recit(c);
   recitEl.querySelectorAll('.r-diapo').forEach(dv=>{const L=dv.dataset.liste.split('|'),im=dv.querySelector('img'),cpt=dv.querySelector('[data-cpt]');let i=0;dv.querySelectorAll('button').forEach(b=>b.onclick=ev=>{ev.stopPropagation();i=(i+ +b.dataset.s+L.length)%L.length;im.src=L[i];cpt.textContent=`${i+1} / ${L.length}`})});
-  recitEl.querySelectorAll('.r-img').forEach(im=>im.onclick=()=>{const lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.querySelector('span').textContent=(im.closest('.r-bloc')&&im.closest('.r-bloc').previousElementSibling&&im.closest('.r-bloc').previousElementSibling.classList.contains('r-section'))?im.closest('.r-bloc').previousElementSibling.textContent:'';lb.classList.add('ouvert')});recitEl.scrollTop=0;recitEl.classList.add('ouvert');nav.classList.add('ouvert');
+  recitEl.querySelectorAll('.r-img').forEach(im=>im.onclick=()=>{const lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.querySelector('span').textContent=(im.closest('.r-bloc')&&im.closest('.r-bloc').previousElementSibling&&im.closest('.r-bloc').previousElementSibling.classList.contains('r-section'))?im.closest('.r-bloc').previousElementSibling.textContent:'';lb.classList.add('ouvert')});
+  recitEl.querySelectorAll('[data-ancre]').forEach(el=>el.onclick=()=>ouvrirAncre(el.dataset.ancre));
+  recitEl.scrollTop=0;recitEl.classList.add('ouvert');nav.classList.add('ouvert');
   ancres=[...recitEl.querySelectorAll('[data-a]')];
   ancres.forEach(el=>{el.addEventListener('mouseenter',()=>{figure&&(figure.hl=+el.dataset.a)});el.addEventListener('mouseleave',()=>{figure&&(figure.hl=-1)})});
   if(!reduit)recitEl.querySelectorAll('[data-compte]').forEach(el=>compter(el,parseInt(el.closest('.r-bloc').style.getPropertyValue('--d'))||600));
