@@ -84,6 +84,7 @@ body.profond{--rw:min(880px,78vw)}
 body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,.94),rgba(20,19,15,.68) 55%,rgba(20,19,15,0) 85%)}
 .recit{position:fixed;right:clamp(20px,4vw,64px);top:clamp(96px,13vh,128px);bottom:78px;width:var(--rw);z-index:6;overflow:auto;scrollbar-width:none;padding:14px 8px 48px 30px;opacity:0;pointer-events:none;transition:opacity .5s,width .6s cubic-bezier(.4,0,.2,1);
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 56px),transparent)}
+.recit.fin{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18px);mask-image:linear-gradient(to bottom,transparent 0,#000 18px)}
 #r-detail{height:0;margin:0;padding:0}
 .recit::-webkit-scrollbar{display:none}
 .recit.ouvert{opacity:1;pointer-events:auto}
@@ -559,8 +560,11 @@ function ouvrirRecit(c){
   /* Dès qu'on lit les détails (murs, salles), le panneau s'élargit : le texte respire, les images deviennent des graphiques d'appoint */
   document.body.classList.remove('profond');
   const marqueur=recitEl.querySelector('#r-detail');
-  recitEl.onscroll=marqueur?(()=>{const seuil=Math.max(0,marqueur.offsetTop-recitEl.clientHeight*.5);document.body.classList.toggle('profond',recitEl.scrollTop>seuil)}):null;
+  /* Le voile du bas s'efface en fin de défilement : sinon il masque en permanence la toute fin du texte ou d'une image */
+  const finDuDefilement=()=>recitEl.classList.toggle('fin',recitEl.scrollTop+recitEl.clientHeight>=recitEl.scrollHeight-2);
+  recitEl.onscroll=()=>{if(marqueur){const seuil=Math.max(0,marqueur.offsetTop-recitEl.clientHeight*.5);document.body.classList.toggle('profond',recitEl.scrollTop>seuil)}finDuDefilement()};
   recitEl.scrollTop=0;recitEl.classList.add('ouvert');nav.classList.add('ouvert');
+  requestAnimationFrame(finDuDefilement);
   ancres=[...recitEl.querySelectorAll('[data-a]')];
   ancres.forEach(el=>{el.addEventListener('mouseenter',()=>{figure&&(figure.hl=+el.dataset.a)});el.addEventListener('mouseleave',()=>{figure&&(figure.hl=-1)})});
   if(!reduit)recitEl.querySelectorAll('[data-compte]').forEach(el=>compter(el,parseInt(el.closest('.r-bloc').style.getPropertyValue('--d'))||600));
