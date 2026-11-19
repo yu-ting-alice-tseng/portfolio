@@ -183,7 +183,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 <header class="tete">
   <span><b>Yu‑Ting Tseng</b> · Marketing 360</span>
   <nav>
-    <button class="btn" id="son" aria-pressed="false" title="Son coupé par défaut">♪ Son</button>
     <button class="btn" id="voirListe">Sommaire</button>
     <a class="btn" href="marketing-cv.html" title="Version classique de la page, en français et en anglais">Version classique · EN</a>
   </nav>
@@ -211,19 +210,6 @@ const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const PAPIER='236,233,224', VERM='232,131,108';
 let W,H,mob,P=[],etat='chaos',gal=-1,act=-1,survol=-1,souris={x:-999,y:-999};
 let lieux=[],aretes=[],figure=null,soleil=null,derniere=[],profondQ=0;
-
-/* Son : pentatonique en ré, coupé par défaut */
-const FREQ=[146.83,164.81,185.00,220.00,246.94,293.66,329.63,369.99,440.00,493.88,587.33];
-let actx=null,son=false;
-function pince(f,force=.5){
-  if(!son)return;
-  actx=actx||new (window.AudioContext||window.webkitAudioContext)();
-  const t=actx.currentTime,o=actx.createOscillator(),o2=actx.createOscillator(),gn=actx.createGain(),fl=actx.createBiquadFilter(),g2=actx.createGain();
-  o.type='triangle';o2.type='sine';o.frequency.setValueAtTime(f*1.012,t);o.frequency.exponentialRampToValueAtTime(f,t+.08);o2.frequency.setValueAtTime(f*2,t);
-  fl.type='lowpass';fl.frequency.setValueAtTime(4200,t);fl.frequency.exponentialRampToValueAtTime(900,t+1.2);
-  gn.gain.setValueAtTime(0,t);gn.gain.linearRampToValueAtTime(.08+.12*force,t+.006);gn.gain.exponentialRampToValueAtTime(.0008,t+2.2);g2.gain.value=.25;
-  o.connect(fl);o2.connect(g2);g2.connect(fl);fl.connect(gn);gn.connect(actx.destination);o.start(t);o2.start(t);o.stop(t+2.3);o2.stop(t+2.3);
-}
 
 /* ---------- Formes : chaque constellation est une figure liée à son contenu, tracée avec ses propres chiffres ----------
    Étoiles : 'v' vermillon, 'b' brillante, 'n' normale, 'f' faible, 'sync' qui bat (phase). Coordonnées 0 – 1. */
@@ -596,7 +582,6 @@ function versGalaxie(i,depuis){
   gal=i;mettre('galaxie');
   document.getElementById('aNom').textContent=G[i].nom;document.getElementById('aDesc').textContent=nb(G[i].desc);
   attribuer(cibleGalaxie(i),foyer,true);etiquettes();
-  pince(FREQ[i*2%FREQ.length],.7);
 }
 function ouvrir(k,c){
   const foyer=k>=0&&lieux[k]&&etat==='galaxie'?[lieux[k].cx,lieux[k].cy]:k<0&&soleil?[soleil.cx,soleil.cy]:[W/2,H/2];
@@ -604,7 +589,6 @@ function ouvrir(k,c){
   attribuer(cibleChapitre(c),foyer,true);figure.part=derniere;legendes();
   document.getElementById('sommaire').classList.remove('ouvert');
   ouvrirRecit(c);
-  pince(FREQ[(k+3+FREQ.length)%FREQ.length],.8);
 }
 function ouvrirSoleil(){gal=-1;document.getElementById('aNom').textContent='Contact';ouvrir(-1,SOL)}
 function remonter(){
@@ -680,7 +664,6 @@ function marquer(s){
   if(s===survol)return;survol=s;cv.style.cursor=(s===-1)?(etat==='chapitre'?'zoom-out':'default'):'pointer';
   lieux.forEach((l,i)=>{if(l.el){l.el.classList.toggle('vive',i===s);l.el.classList.toggle('terne',s!==-1&&i!==s)}});
   if(soleil&&soleil.el&&etat==='univers'){soleil.el.classList.toggle('vive',s==='s');soleil.el.classList.toggle('terne',s!==-1&&s!=='s')}
-  if(s!==-1)pince(s==='s'?293.66:FREQ[(etat==='univers'?s*2:s+3)%FREQ.length],.4);
 }
 cv.addEventListener('pointermove',e=>{souris={x:e.clientX,y:e.clientY};marquer(sous(e.clientX,e.clientY))});
 cv.addEventListener('pointerleave',()=>{souris={x:-999,y:-999};marquer(-1)});
@@ -701,7 +684,6 @@ document.getElementById('lb').onclick=()=>document.getElementById('lb').classLis
 const pas=d=>{if(gal<0)return;const n=G[gal].items.length,k=(act+d+n)%n;ouvrir(k,G[gal].items[k])};
 document.getElementById('prec').onclick=()=>pas(-1);
 document.getElementById('suiv').onclick=()=>pas(1);
-const bS=document.getElementById('son');bS.onclick=()=>{son=!son;bS.setAttribute('aria-pressed',son);if(son)pince(293.66,.6)};
 addEventListener('keydown',e=>{
   if(e.key==='Escape'){const lb=document.getElementById('lb');if(lb.classList.contains('ouvert')){lb.classList.remove('ouvert');return}remonter()}
   if(etat==='chapitre'&&e.key==='ArrowRight')pas(1);
