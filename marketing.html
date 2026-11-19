@@ -76,21 +76,6 @@ body.profond #legendes{opacity:0}
 .leg.w{white-space:normal;width:120px;text-align:center;line-height:1.35;font-size:10px;letter-spacing:.1em}
 @keyframes parait{to{opacity:1}}
 #voute{z-index:0}
-/* Visite guidée, comme la voix du planétarium */
-.guide{position:fixed;left:clamp(16px,4vw,48px);top:clamp(70px,10vh,96px);transform:translateY(10px);z-index:8;width:min(520px,92vw);opacity:0;pointer-events:none;transition:opacity .7s,transform .7s}
-.guide.ouvert{opacity:1;transform:none;pointer-events:auto}
-.guide .g-sur{margin:0 0 6px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-clair)}
-.guide h3{margin:0 0 6px;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(24px,2.4vw,32px);line-height:1.1;text-shadow:0 0 18px var(--nuit),0 0 6px var(--nuit)}
-.guide .g-txt{margin:0;max-width:480px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;line-height:1.35;color:var(--papier);opacity:.9;text-shadow:0 0 14px var(--nuit),0 0 4px var(--nuit)}
-.guide .g-txt,.guide h3{animation:parait .9s both}
-.guide .g-act{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px}
-.guide .g-act button{all:unset;cursor:pointer;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);border-bottom:1px solid transparent;padding:2px 0}
-.guide .g-act button:hover,.guide .g-act button:focus-visible{color:var(--accent-clair);border-color:var(--accent)}
-.guide .g-act .g-go{color:var(--papier);border-color:var(--accent)}
-.guide .g-barre{height:1px;width:120px;margin:12px 0 0;background:var(--filet);overflow:hidden}
-.guide .g-barre i{display:block;height:100%;background:var(--accent-clair);transform-origin:left;animation:barre var(--dur) linear forwards}
-@keyframes barre{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-body.en-visite .aide,body.en-visite .titre{opacity:0}
 
 /* Le récit : le texte s'écrit dans le ciel, sans cadre */
 :root{--rw:min(500px,40vw)}
@@ -185,8 +170,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
   .recit{left:12px;right:12px;width:auto;top:41vh;bottom:58px;padding-left:24px}
   .r-nav{left:16px;right:16px;width:auto;bottom:14px;padding-left:0}.r-nav .esc{display:none}
   .r-oeuvres{grid-template-columns:1fr}.r-stats b{font-size:32px}
-  .tete .pc{display:none}.tete .btn{padding:7px 9px;letter-spacing:.1em}
-  .guide{top:92px}.guide h3{font-size:24px}.guide .g-txt{font-size:17px}
 }
 @media (prefers-reduced-motion:reduce){.r-bloc,.r-titre .l{animation:none;opacity:1;filter:none;transform:none}}
 </style>
@@ -202,9 +185,8 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 <header class="tete">
   <span><b>Yu‑Ting Tseng</b> · Marketing 360</span>
   <nav>
-    <button class="btn" id="visite" aria-pressed="false">Visite<span class="pc"> guidée</span></button>
     <button class="btn" id="voirListe">Sommaire</button>
-    <a class="btn" href="marketing-cv.html" title="Version classique de la page, en français et en anglais"><span class="pc">Version classique · </span>EN</a>
+    <a class="btn" href="marketing-cv.html" title="Version classique de la page, en français et en anglais">Version classique · EN</a>
   </nav>
 </header>
 <div class="titre">
@@ -214,7 +196,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 <div class="ariane" id="ariane"><button id="retour">← Univers</button><h2 id="aNom"></h2><p id="aDesc"></p></div>
 <div class="appel"><button id="ordonner">Mettre de l'ordre</button><p>ou faites défiler</p></div>
 <p class="aide" id="aide"></p>
-<div class="guide" id="guide" aria-live="polite"></div>
 <div class="voile"></div>
 <article class="recit" id="recit" aria-live="polite"></article>
 <nav class="r-nav" id="rNav"><button id="prec"></button><button class="ferme" id="fermer">Retour au ciel<span class="esc"> · Échap</span></button><button id="suiv"></button></nav>
@@ -583,7 +564,7 @@ function ouvrirRecit(c){
 function fermerRecit(){recitEl.classList.remove('ouvert');nav.classList.remove('ouvert');ancres=[];document.body.classList.remove('profond');recitEl.onscroll=null}
 
 /* ---------- États ---------- */
-function mettre(s){etat=s;document.body.className='e-'+s+(visite?' en-visite':'');document.getElementById('aide').textContent=s==='univers'?AIDE_U:s==='galaxie'&&gal>=0?`Chaque constellation est ${AIDE_G[G[gal].id]} : cliquez pour la lire. Échap pour revenir à l'univers.`:''}
+function mettre(s){etat=s;document.body.className='e-'+s;document.getElementById('aide').textContent=s==='univers'?AIDE_U:s==='galaxie'&&gal>=0?`Chaque constellation est ${AIDE_G[G[gal].id]} : cliquez pour la lire. Échap pour revenir à l'univers.`:''}
 function versUnivers(){
   fermerRecit();gal=-1;act=-1;survol=-1;figure=null;zL.innerHTML='';mettre('univers');
   attribuer(cibleUnivers(),null,false);etiquettes();
@@ -599,14 +580,13 @@ function aspirer(x,y,suite){
   setTimeout(()=>warpEl.classList.remove('actif'),765);
 }
 function versGalaxie(i,depuis){
-  arreterVisite();fermerRecit();act=-1;survol=-1;figure=null;zL.innerHTML='';
+  fermerRecit();act=-1;survol=-1;figure=null;zL.innerHTML='';
   const foyer=depuis||(lieux[i]&&etat==='univers'?[lieux[i].cx,lieux[i].cy]:[W/2,H/2]);
   gal=i;mettre('galaxie');
   document.getElementById('aNom').textContent=G[i].nom;document.getElementById('aDesc').textContent=nb(G[i].desc);
   attribuer(cibleGalaxie(i),foyer,true);etiquettes();
 }
 function ouvrir(k,c){
-  arreterVisite();
   const foyer=k>=0&&lieux[k]&&etat==='galaxie'?[lieux[k].cx,lieux[k].cy]:k<0&&soleil?[soleil.cx,soleil.cy]:[W/2,H/2];
   act=k;mettre('chapitre');
   attribuer(cibleChapitre(c),foyer,true);figure.part=derniere;legendes();
@@ -647,11 +627,6 @@ function boucle(now){
       g.strokeStyle=`rgba(${vif?VERM:PAPIER},${(vif?.65:.09)*fade})`;g.lineWidth=vif?1:.6;g.beginPath();g.moveTo(p.x,p.y);
       g.bezierCurveTo(p.x+(x2-p.x)*.5,p.y,p.x+(x2-p.x)*.5,y2,x2,y2);g.stroke()});
   }
-  // pointeur du guide : un cercle qui tourne autour de l'objet commenté, comme la flèche lumineuse du planétarium
-  if(visite&&etat==='univers'&&visite.cible){const c=visite.cible(),k=Math.min(1,(now-visite.t)/900),R=c.r*(1.9-.6*(1-Math.pow(1-k,3)))*.82;
-    g.save();g.translate(c.x,c.y);g.rotate(reduit?0:now*.0004);g.strokeStyle=`rgba(${VERM},${.55*k})`;g.lineWidth=1;g.setLineDash([3,7]);
-    g.beginPath();g.arc(0,0,R,0,6.283);g.stroke();g.setLineDash([]);g.strokeStyle=`rgba(${VERM},${.8*k})`;
-    for(let j=0;j<4;j++){g.rotate(Math.PI/2);g.beginPath();g.moveTo(R+5,0);g.lineTo(R+14,0);g.stroke()}g.restore()}
   const hlP=etat==='chapitre'&&figure&&figure.part&&figure.hl>=0?figure.part[figure.an[figure.hl%figure.an.length]]:null;
   for(const p of P){
     const t=p.t;let col=PAPIER,a=1,r=p.r,halo=0;
@@ -693,10 +668,9 @@ function marquer(s){
   lieux.forEach((l,i)=>{if(l.el){l.el.classList.toggle('vive',i===s);l.el.classList.toggle('terne',s!==-1&&i!==s)}});
   if(soleil&&soleil.el&&etat==='univers'){soleil.el.classList.toggle('vive',s==='s');soleil.el.classList.toggle('terne',s!==-1&&s!=='s')}
 }
-cv.addEventListener('pointermove',e=>{souris={x:e.clientX,y:e.clientY};if(!visite)marquer(sous(e.clientX,e.clientY))});
-cv.addEventListener('pointerleave',()=>{souris={x:-999,y:-999};if(!visite)marquer(-1)});
+cv.addEventListener('pointermove',e=>{souris={x:e.clientX,y:e.clientY};marquer(sous(e.clientX,e.clientY))});
+cv.addEventListener('pointerleave',()=>{souris={x:-999,y:-999};marquer(-1)});
 cv.addEventListener('click',e=>{
-  if(visite){arreterVisite();marquer(sous(e.clientX,e.clientY))}
   if(etat==='chaos'){versUnivers();return}
   if(etat==='chapitre'){remonter();return}
   const s=sous(e.clientX,e.clientY);
@@ -714,7 +688,6 @@ const pas=d=>{if(gal<0)return;const n=G[gal].items.length,k=(act+d+n)%n;ouvrir(k
 document.getElementById('prec').onclick=()=>pas(-1);
 document.getElementById('suiv').onclick=()=>pas(1);
 addEventListener('keydown',e=>{
-  if(e.key==='Escape'&&visite){arreterVisite();return}
   if(e.key==='Escape'){const lb=document.getElementById('lb');if(lb.classList.contains('ouvert')){lb.classList.remove('ouvert');return}remonter()}
   if(etat==='chapitre'&&e.key==='ArrowRight')pas(1);
   if(etat==='chapitre'&&e.key==='ArrowLeft')pas(-1);
@@ -727,41 +700,6 @@ som.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return
   if(b.dataset.s){ouvrirSoleil();return}
   const i=+b.dataset.g;versGalaxie(i);if(b.dataset.k!==undefined)ouvrir(+b.dataset.k,G[i].items[+b.dataset.k])});
 document.getElementById('voirListe').onclick=()=>som.classList.toggle('ouvert');
-
-/* ---------- Visite guidée ---------- */
-let visite=null;
-const guideEl=document.getElementById('guide'),btnVisite=document.getElementById('visite');
-function etapes(){
-  const L=[{titre:'Bienvenue sous la Coupole',texte:`Six galaxies, une par partie du parcours, tournent autour d'une étoile centrale. Suivez le guide.`,cible:null}];
-  G.forEach((ga,i)=>L.push({sur:`${ga.items.length} constellations`,titre:ga.nom,texte:nb(ga.desc),i,cible:()=>({x:lieux[i].cx,y:lieux[i].cy,r:lieux[i].r})}));
-  L.push({sur:'Étoile centrale',titre:SOL.titre,texte:`Au centre, le contact : ${SOL.contact[1][0].toLowerCase()} ${nb(SOL.contact[1][1])}.`,i:'s',cible:()=>({x:soleil.cx,y:soleil.cy,r:soleil.r*.8})});
-  return L;
-}
-function etapeVisite(k){
-  if(!visite)return;const L=visite.L;
-  if(k>=L.length){guideEl.innerHTML=`<p class="g-sur">Fin de la visite</p><h3>À Vous d'Explorer</h3><p class="g-txt">Cliquez sur une galaxie pour y entrer, ou sur l'étoile centrale pour le contact.</p>`;
-    visite.cible=null;marquer(-1);visite.to=setTimeout(arreterVisite,6000);return}
-  const e=L[k],dur=e.cible?7500:6000;visite.k=k;visite.t=performance.now();visite.cible=e.cible;marquer(e.i===undefined?-1:e.i);
-  guideEl.innerHTML=`<p class="g-sur">Visite guidée · ${k+1} / ${L.length}${e.sur?' · '+e.sur:''}</p><h3>${e.titre}</h3><p class="g-txt">${e.texte}</p>
-    <div class="g-act">${e.i!==undefined?`<button class="g-go" data-g="go">${e.i==='s'?'Ouvrir le contact':'Entrer dans la galaxie'} →</button>`:''}<button data-g="suite">Suivant</button><button data-g="stop">Arrêter</button></div>
-    <div class="g-barre" style="--dur:${dur}ms"><i></i></div>`;
-  guideEl.querySelectorAll('button').forEach(b=>b.onclick=ev=>{ev.stopPropagation();const a=b.dataset.g;clearTimeout(visite.to);
-    if(a==='suite')etapeVisite(k+1);else if(a==='stop')arreterVisite();
-    else{arreterVisite();if(e.i==='s')ouvrirSoleil();else{const x=lieux[e.i].cx,y=lieux[e.i].cy;aspirer(x,y,()=>versGalaxie(e.i,[x,y]))}}});
-  visite.to=setTimeout(()=>etapeVisite(k+1),dur);
-}
-function lancerVisite(){
-  document.getElementById('sommaire').classList.remove('ouvert');
-  if(etat!=='univers')versUnivers();
-  visite={L:etapes(),k:0,t:0,cible:null,to:0};document.body.classList.add('en-visite');
-  guideEl.classList.add('ouvert');btnVisite.setAttribute('aria-pressed','true');btnVisite.innerHTML='Arrêter<span class="pc"> la visite</span>';
-  etapeVisite(0);
-}
-function arreterVisite(){
-  if(!visite)return;clearTimeout(visite.to);visite=null;document.body.classList.remove('en-visite');
-  guideEl.classList.remove('ouvert');btnVisite.setAttribute('aria-pressed','false');btnVisite.innerHTML='Visite<span class="pc"> guidée</span>';marquer(-1);
-}
-btnVisite.onclick=e=>{e.stopPropagation();visite?arreterVisite():lancerVisite()};
 
 /* ---------- Mise en route ---------- */
 function taille(){
