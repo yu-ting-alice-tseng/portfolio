@@ -1,6 +1,6 @@
 /* Voûte du planétarium : ciel de fond de marketing.html
    Étoiles fixes qui tournent lentement autour du pôle, Voie lactée, grille céleste,
-   horizon avec points cardinaux, étoiles filantes. Dessiné sous le ciel interactif (#ciel). */
+   étoiles filantes. Dessiné sous le ciel interactif (#ciel). */
 (() => {
 const cv = document.getElementById('voute');
 if (!cv) return;
@@ -60,14 +60,13 @@ function faireVoie(L) {
 
 function etat() { const b = document.body; return b.classList.contains('e-chapitre') ? 'chapitre' : b.classList.contains('e-galaxie') ? 'galaxie' : b.classList.contains('e-univers') ? 'univers' : 'chaos'; }
 
-let lum = 0, grilleA = 0, horizA = 0, voieA = .75;
+let lum = 0, grilleA = 0, voieA = .75;
 function boucle(now) {
   const t = now - t0, e = etat(), rot = reduit ? 0 : t * OMEGA;
   // extinction des lumières de la salle à l'ouverture : le ciel apparaît en trois secondes
   const cible = e === 'chapitre' ? .55 : 1;
   lum += ((reduit ? cible : Math.min(cible, t / 3000)) - lum) * .06;
   grilleA += ((e === 'univers' ? 1 : e === 'galaxie' ? .55 : 0) - grilleA) * .04;
-  horizA += ((e === 'chapitre' ? (mob ? 0 : .5) : 1) - horizA) * .05;
   g.clearRect(0, 0, W, H);
 
   // Voie lactée, qui tourne avec le ciel
@@ -121,23 +120,6 @@ function boucle(now) {
     g.strokeStyle = gr; g.lineWidth = 1.2; g.beginPath(); g.moveTo(f.x, f.y); g.lineTo(f.x - f.vx * L, f.y - f.vy * L); g.stroke();
   }
 
-  // horizon de la coupole : lueur crépusculaire, silhouette et points cardinaux
-  if (horizA > .01) {
-    const hy = H - Math.max(mob ? 30 : 40, H * .05), A = horizA * lum;
-    const lueur = g.createLinearGradient(0, hy - H * .22, 0, hy);
-    const vesp = reduit ? 0 : Math.max(0, 1 - t / 9000);          // le couchant s'éteint au début du spectacle
-    lueur.addColorStop(0, `rgba(${VERM},0)`); lueur.addColorStop(1, `rgba(${VERM},${(.07 + .12 * vesp) * A})`);
-    g.fillStyle = lueur; g.fillRect(0, hy - H * .22, W, H * .22);
-    g.beginPath(); g.moveTo(0, H); g.lineTo(0, hy + 6);
-    g.quadraticCurveTo(W / 2, hy - 12, W, hy + 6); g.lineTo(W, H); g.closePath();
-    g.fillStyle = 'rgba(12,11,9,.96)'; g.fill();
-    g.beginPath(); g.moveTo(0, hy + 6); g.quadraticCurveTo(W / 2, hy - 12, W, hy + 6);
-    g.strokeStyle = `rgba(${VERM},${.35 * A})`; g.lineWidth = 1; g.stroke();
-    g.font = `500 ${mob ? 9 : 10}px Outfit, system-ui, sans-serif`; g.textAlign = 'center'; g.fillStyle = `rgba(168,162,148,${.75 * A})`;
-    const pts = mob ? [['E', .06], ['O', .94]] : [['E', .04], ['SE', .22], ['SO', .78], ['O', .96]];
-    pts.forEach(([n, f]) => { const x = W * f, y = (1 - f) * (1 - f) * (hy + 6) + 2 * f * (1 - f) * (hy - 12) + f * f * (hy + 6);
-      g.fillText(n, x, y + (mob ? 14 : 17)); g.fillRect(x - .5, y - 5, 1, 4); });
-  }
   requestAnimationFrame(boucle);
 }
 

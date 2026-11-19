@@ -49,8 +49,6 @@ canvas{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:
 .appel button:hover{color:var(--accent-clair)}
 .appel p{margin:8px 0 0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
 body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
-.aide{position:fixed;left:50%;bottom:clamp(12px,2.6vh,26px);transform:translateX(-50%);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;color:var(--gris);z-index:2;text-align:center;width:max-content;max-width:92vw;opacity:0;transition:opacity .8s;pointer-events:none;margin:0}
-.e-univers .aide,.e-galaxie .aide{opacity:1}
 .ariane{position:fixed;left:clamp(16px,4vw,48px);top:clamp(70px,10vh,96px);z-index:7;max-width:min(720px,92vw);opacity:0;transform:translateY(8px);transition:opacity .7s,transform .7s;pointer-events:none}
 .e-galaxie .ariane,.e-chapitre .ariane{opacity:1;transform:none;pointer-events:auto}
 .ariane button{all:unset;cursor:pointer;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
@@ -164,7 +162,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
   .e-galaxie .etq small{display:none}
   .e-chapitre .ariane h2{display:none}
   .ariane{top:96px}.ariane p{font-size:15px}
-  .aide{display:none}
   .voile{background:linear-gradient(to bottom,rgba(20,19,15,0) 34%,rgba(20,19,15,.94) 44%)}
   .recit{left:12px;right:12px;width:auto;top:41vh;bottom:58px;padding-left:24px}
   .r-nav{left:16px;right:16px;width:auto;bottom:14px;padding-left:0}
@@ -194,7 +191,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 </div>
 <div class="ariane" id="ariane"><button id="retour">← Retour</button><h2 id="aNom"></h2><p id="aDesc"></p></div>
 <div class="appel"><button id="ordonner">Mettre de l'ordre</button><p>ou faites défiler</p></div>
-<p class="aide" id="aide"></p>
 <div class="voile"></div>
 <article class="recit" id="recit" aria-live="polite"></article>
 <nav class="r-nav" id="rNav"><button id="prec"></button><button id="suiv"></button></nav>
@@ -203,7 +199,7 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 
 <script src="univers/univers.js?v=20261116"></script>
 <script src="univers/expos.js?v=20261116"></script>
-<script src="univers/voute.js?v=20261119"></script>
+<script src="univers/voute.js?v=20261120"></script>
 <script>
 (() => {
 const U=window.UNIVERS, G=U.galaxies, SOL=U.soleil;
@@ -468,8 +464,6 @@ function legendes(){
   zL.innerHTML='';if(!figure)return;
   figure.lg.forEach(([x,y,t,cls])=>{if(!t)return;const d=document.createElement('div');d.className=('leg '+cls).trim();d.textContent=nb(t);d.style.left=x+'px';d.style.top=y+'px';zL.appendChild(d)});
 }
-const AIDE_U='Chaque galaxie est une partie du parcours : cliquez pour y entrer. Au centre, le contact.';
-const AIDE_G={experiences:'une expérience',associations:'un engagement',benevolat:'un engagement',portfolio:'une œuvre : elle s\'ouvre ici, dans le ciel',formation:'une école',competences:'un domaine'};
 
 /* ---------- Le récit : le texte s'allume dans le ciel ---------- */
 const recitEl=document.getElementById('recit'),nav=document.getElementById('rNav');
@@ -563,7 +557,7 @@ function ouvrirRecit(c){
 function fermerRecit(){recitEl.classList.remove('ouvert');nav.classList.remove('ouvert');ancres=[];document.body.classList.remove('profond');recitEl.onscroll=null}
 
 /* ---------- États ---------- */
-function mettre(s){etat=s;document.body.className='e-'+s;document.getElementById('aide').textContent=s==='univers'?AIDE_U:s==='galaxie'&&gal>=0?`Chaque constellation est ${AIDE_G[G[gal].id]} : cliquez pour la lire. Échap pour revenir à l'univers.`:''}
+function mettre(s){etat=s;document.body.className='e-'+s}
 function versUnivers(){
   fermerRecit();gal=-1;act=-1;survol=-1;figure=null;zL.innerHTML='';mettre('univers');
   attribuer(cibleUnivers(),null,false);etiquettes();
