@@ -4,6 +4,7 @@ En ligne depuis le 16/11/2026 : `marketing.html` (moteur, formes des constellati
 
 - `univers.js` : contenu des galaxies, repris de `marketing.html` (français)
 - `expos.js` : contenu des projets, extrait de `portfolio-marketing.html` par script
+- `voute.js` : voûte du planétarium (étoiles fixes, Voie lactée, grille céleste, horizon, étoiles filantes) dessinée sous le ciel interactif
 
 ## Retrouver la version d'origine de marketing.html
 
