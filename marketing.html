@@ -145,7 +145,6 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 .r-nav.ouvert{opacity:1;pointer-events:auto}
 .r-nav button{all:unset;cursor:pointer;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--gris);max-width:44%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .r-nav button:hover,.r-nav button:focus-visible{color:var(--accent-clair)}
-.r-nav .ferme{font-family:Outfit,sans-serif;font-style:normal;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
 .r-nav [hidden]{visibility:hidden;display:block}
 
 .sommaire{position:fixed;inset:0;background:rgba(20,19,15,.96);z-index:11;display:none;overflow:auto;padding:90px clamp(16px,6vw,80px) 40px}
@@ -163,12 +162,12 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
   .tete{flex-wrap:wrap}
   .etq b{font-size:16px}.etq i{font-size:16px}.etq em{font-size:13.5px;max-width:160px}.etq small{font-size:9px;letter-spacing:.1em}
   .e-galaxie .etq small{display:none}
-  .e-chapitre .ariane{opacity:0;pointer-events:none}
+  .e-chapitre .ariane h2{display:none}
   .ariane{top:96px}.ariane p{font-size:15px}
   .aide{display:none}
   .voile{background:linear-gradient(to bottom,rgba(20,19,15,0) 34%,rgba(20,19,15,.94) 44%)}
   .recit{left:12px;right:12px;width:auto;top:41vh;bottom:58px;padding-left:24px}
-  .r-nav{left:16px;right:16px;width:auto;bottom:14px;padding-left:0}.r-nav .esc{display:none}
+  .r-nav{left:16px;right:16px;width:auto;bottom:14px;padding-left:0}
   .r-oeuvres{grid-template-columns:1fr}.r-stats b{font-size:32px}
 }
 @media (prefers-reduced-motion:reduce){.r-bloc,.r-titre .l{animation:none;opacity:1;filter:none;transform:none}}
@@ -193,12 +192,12 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
   <p>Analyse · Contenu · Diffusion</p>
   <h1><span class="chaos">Des milliers de données. <em>Aucun sens, pour l'instant.</em></span><span class="ordre">Je transforme les chiffres <em>en décisions de campagne.</em></span></h1>
 </div>
-<div class="ariane" id="ariane"><button id="retour">← Univers</button><h2 id="aNom"></h2><p id="aDesc"></p></div>
+<div class="ariane" id="ariane"><button id="retour">← Retour</button><h2 id="aNom"></h2><p id="aDesc"></p></div>
 <div class="appel"><button id="ordonner">Mettre de l'ordre</button><p>ou faites défiler</p></div>
 <p class="aide" id="aide"></p>
 <div class="voile"></div>
 <article class="recit" id="recit" aria-live="polite"></article>
-<nav class="r-nav" id="rNav"><button id="prec"></button><button class="ferme" id="fermer">Retour au ciel<span class="esc"> · Échap</span></button><button id="suiv"></button></nav>
+<nav class="r-nav" id="rNav"><button id="prec"></button><button id="suiv"></button></nav>
 <div class="sommaire" id="sommaire"></div>
 <div class="lb" id="lb"><img alt=""><span></span></div>
 
@@ -681,8 +680,7 @@ addEventListener('wheel',e=>{if(etat==='chaos'&&e.deltaY>0)versUnivers()},{passi
 let ty0=null;addEventListener('touchstart',e=>ty0=e.touches[0].clientY,{passive:true});
 addEventListener('touchmove',e=>{if(etat==='chaos'&&ty0!==null&&ty0-e.touches[0].clientY>40)versUnivers()},{passive:true});
 document.getElementById('ordonner').onclick=e=>{e.stopPropagation();versUnivers()};
-document.getElementById('retour').onclick=()=>versUnivers();
-document.getElementById('fermer').onclick=remonter;
+document.getElementById('retour').onclick=remonter;
 document.getElementById('lb').onclick=()=>document.getElementById('lb').classList.remove('ouvert');
 const pas=d=>{if(gal<0)return;const n=G[gal].items.length,k=(act+d+n)%n;ouvrir(k,G[gal].items[k])};
 document.getElementById('prec').onclick=()=>pas(-1);
