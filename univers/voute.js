@@ -25,7 +25,7 @@ function preparer() {
     // répartition uniforme sur le disque qui couvre l'écran pendant la rotation
     const rad = Math.sqrt(r()) * R, ang = r() * 6.2832, m = Math.pow(r(), 5);   // la plupart sont faibles, quelques-unes brillent
     const c = r(), col = c < .05 ? VERM : c < .22 ? CHAUD : PAPIER;
-    etoiles.push({ rad, ang, r: .35 + m * 1.6, a: .18 + m * .75, ph: r() * 6.28, f: .0008 + r() * .0025, col, vive: m > .55 });
+    etoiles.push({ rad, ang, r: .35 + m * 1.6, a: .18 + m * .75, ph: r() * 6.28, f: .0008 + r() * .0025, col, vive: m > .7 });
   }
   voie = faireVoie(Math.round(Math.max(W, H) * 1.5));
 }
@@ -60,13 +60,15 @@ function faireVoie(L) {
 
 function etat() { const b = document.body; return b.classList.contains('e-chapitre') ? 'chapitre' : b.classList.contains('e-galaxie') ? 'galaxie' : b.classList.contains('e-univers') ? 'univers' : 'chaos'; }
 
-let lum = 0, grilleA = 0, voieA = .75;
+let lum = 0, grilleA = 0, voieA = .75, eclatA = 1;
 function boucle(now) {
   const t = now - t0, e = etat(), rot = reduit ? 0 : t * OMEGA;
   // extinction des lumières de la salle à l'ouverture : le ciel apparaît en trois secondes
   const cible = e === 'chapitre' ? .55 : 1;
   lum += ((reduit ? cible : Math.min(cible, t / 3000)) - lum) * .06;
   grilleA += ((e === 'univers' ? 1 : e === 'galaxie' ? .55 : 0) - grilleA) * .04;
+  // dans une galaxie ou une fiche, les grosses étoiles s'effacent pour laisser la vedette aux constellations
+  eclatA += ((e === 'galaxie' || e === 'chapitre' ? .12 : 1) - eclatA) * .04;
   g.clearRect(0, 0, W, H);
 
   // Voie lactée, qui tourne avec le ciel
@@ -90,15 +92,15 @@ function boucle(now) {
   for (const s of etoiles) {
     const a = s.ang + rot, x = pole[0] + Math.cos(a) * s.rad, y = pole[1] + Math.sin(a) * s.rad;
     if (x < -4 || x > W + 4 || y < -4 || y > H + 4) continue;
-    const tw = reduit ? 1 : .7 + .3 * Math.sin(t * s.f + s.ph), al = s.a * tw * lum;
+    const tw = reduit ? 1 : .7 + .3 * Math.sin(t * s.f + s.ph), al = s.a * tw * lum * (s.r > 1.1 ? .35 + .65 * eclatA : 1);
     g.fillStyle = `rgba(${s.col},${al})`;
     if (s.r < .8) { g.fillRect(x, y, s.r * 1.6, s.r * 1.6); continue; }
     g.beginPath(); g.arc(x, y, s.r, 0, 6.2832); g.fill();
-    if (s.vive) {
+    if (s.vive && eclatA > .02) {
       const gr = g.createRadialGradient(x, y, 0, x, y, s.r * 6);
-      gr.addColorStop(0, `rgba(${s.col},${al * .35})`); gr.addColorStop(1, `rgba(${s.col},0)`);
+      gr.addColorStop(0, `rgba(${s.col},${al * .35 * eclatA})`); gr.addColorStop(1, `rgba(${s.col},0)`);
       g.fillStyle = gr; g.fillRect(x - s.r * 6, y - s.r * 6, s.r * 12, s.r * 12);
-      g.strokeStyle = `rgba(${s.col},${al * .35})`; g.lineWidth = .6; const L = s.r * 7 * tw;
+      g.strokeStyle = `rgba(${s.col},${al * .35 * eclatA})`; g.lineWidth = .6; const L = s.r * 7 * tw;
       g.beginPath(); g.moveTo(x - L, y); g.lineTo(x + L, y); g.moveTo(x, y - L); g.lineTo(x, y + L); g.stroke();
     }
   }
