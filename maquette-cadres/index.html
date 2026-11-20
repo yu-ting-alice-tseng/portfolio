@@ -1,0 +1,56 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Cadres des Œuvres</title>
+<base href="../">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#14130f;--papier:#ece9e0;--gris:#a8a294;--accent:#cb5842;--accent-clair:#e8836c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(120% 90% at 50% 0,#0c0b09,#12110d 50%,var(--nuit));color:var(--papier);font-family:Outfit,sans-serif;font-weight:300;padding:28px 40px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 12% 18%,#fff8 50%,transparent),radial-gradient(1px 1px at 72% 34%,#fff6 50%,transparent),radial-gradient(1px 1px at 40% 72%,#fff5 50%,transparent),radial-gradient(1px 1px at 88% 82%,#fff6 50%,transparent),radial-gradient(1px 1px at 22% 58%,#fff4 50%,transparent),radial-gradient(1px 1px at 58% 12%,#fff5 50%,transparent)}
+h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:30px;margin:0 0 2px}h2 b{color:var(--accent-clair);font-weight:500;margin-right:10px}
+p.d{margin:0 0 18px;color:var(--gris);font-size:13px;max-width:900px}
+.rang{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:46px}
+.c{text-align:center}.c .t{font-family:"Cormorant Garamond",serif;font-size:20px;margin-top:16px}.c .n{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--accent-clair);font-size:19px}
+.c .etat{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);margin-top:4px}
+.fig{position:relative;width:240px;height:160px;margin:0 auto}
+.fig img{width:100%;height:100%;object-fit:contain;display:block}
+/* A : plaque photographique */
+.A .fig{padding:0}.A img{filter:grayscale(1) sepia(.25) brightness(.78) contrast(1.05);outline:1px solid rgba(236,233,224,.28);outline-offset:6px;transition:.5s}
+.A .fig::after{content:"";position:absolute;left:-6px;right:-6px;bottom:-14px;height:1px;background:linear-gradient(90deg,transparent,rgba(236,233,224,.35),transparent)}
+.A .on img{filter:none;outline-color:var(--accent-clair);box-shadow:0 18px 40px -18px var(--accent)}
+.A .tick{position:absolute;font-size:8.5px;letter-spacing:.2em;color:var(--gris);top:-22px;left:-6px}
+/* B : oculaire */
+.B .fig{width:180px;height:180px;border-radius:50%;overflow:visible}
+.B .fig .rond{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#f3f1ea}
+.B .fig .rond img{object-fit:cover;filter:grayscale(.85) brightness(.75);transition:.5s;transform:scale(1.05)}
+.B .on .rond img{filter:none;transform:scale(1.12)}
+.B .fig svg{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px)}
+/* C : nébuleuse */
+.C img{-webkit-mask:radial-gradient(closest-side,#000 55%,transparent 100%);mask:radial-gradient(closest-side,#000 55%,transparent 100%);opacity:.7;filter:saturate(.7);transition:.5s;transform:scale(1.25)}
+.C .on img{opacity:1;filter:none;-webkit-mask:radial-gradient(closest-side,#000 75%,transparent 100%);mask:radial-gradient(closest-side,#000 75%,transparent 100%)}
+.C .fig::before{content:"";position:absolute;inset:-30px;background:radial-gradient(closest-side,rgba(203,88,66,.16),transparent);pointer-events:none}
+/* D : tirage suspendu */
+.D .fig{transform:rotate(-1.4deg)}.D .c:nth-child(2) .fig{transform:rotate(1.2deg)}
+.D img{background:#f3f1ea;padding:8px;box-shadow:0 22px 44px -18px #000,0 0 0 1px rgba(236,233,224,.12);filter:brightness(.82);transition:.5s}
+.D .fig::before{content:"";position:absolute;left:50%;top:-34px;width:1px;height:34px;background:linear-gradient(rgba(236,233,224,0),rgba(236,233,224,.5))}
+.D .fig::after{content:"";position:absolute;left:calc(50% - 3px);top:-38px;width:6px;height:6px;border-radius:50%;background:var(--papier);box-shadow:0 0 10px var(--papier)}
+.D .on img{filter:none;box-shadow:0 26px 50px -16px rgba(203,88,66,.55),0 0 0 1px rgba(232,131,108,.5)}
+.D .on{transform:translateY(-4px)}
+/* actuel */
+.Z img{opacity:.42}.Z .fig::after{content:"";position:absolute;inset:0;border:1px solid rgba(236,233,224,.25)}
+.Z .s{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+</style></head><body>
+<script>
+const CV=[['assets/covers/engoo-dashboard.webp','Engoo · Dashboard Rednote','+93,3 %'],['assets/covers/aiesec-yolo.webp','AIESEC · Camp YOLO','+53,7 %'],['assets/covers/maison-beaute.webp','Maison Beauté · Diagnostic Client','2 058']];
+const V=[
+['Z','Actuel','Couverture à 42 % d\'opacité sur le ciel (le papier clair devient gris), quatre étoiles vermillon aux angles.'],
+['A','Plaque Photographique','Comme les plaques de verre des observatoires : œuvre nette et entière mais en monochrome chaud, filet fin décalé autour. Au survol, la couleur revient et le filet passe au vermillon.'],
+['B','Oculaire de Télescope','On regarde l\'œuvre à travers l\'oculaire : vue ronde, anneau gradué très fin, une seule étoile vermillon sur l\'anneau. Au survol, la couleur revient et l\'image se rapproche. Recadre les œuvres (vue partielle), l\'œuvre entière reste dans la fiche.'],
+['C','Nébuleuse','Plus aucun cadre : l\'œuvre se fond dans le ciel par des bords flous, avec une lueur vermillon très douce derrière. Au survol, elle s\'éclaircit et s\'élargit.'],
+['D','Tirage Suspendu','Un tirage sur papier (le papier de la page), accroché à une étoile par un fil de lumière, légèrement penché. Au survol, il se redresse et prend un halo vermillon. Rappelle le mur d\'exposition du portfolio.']];
+const oc=`<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="rgba(236,233,224,.3)" stroke-width=".5"/>${Array.from({length:60},(_,i)=>{const a=i*6*Math.PI/180,l=i%5?1.5:3.5;return`<line x1="${50+48*Math.cos(a)}" y1="${50+48*Math.sin(a)}" x2="${50+(48-l)*Math.cos(a)}" y2="${50+(48-l)*Math.sin(a)}" stroke="rgba(236,233,224,.35)" stroke-width=".35"/>`}).join('')}<circle cx="50" cy="2" r="1.4" fill="#cb5842"/></svg>`;
+document.write(V.map(([k,t,d])=>`<h2><b>${k==='Z'?'0':k}</b>${t}</h2><p class="d">${d}</p><div class="rang ${k}">`+CV.map(([s,ti,n],i)=>{const on=i===1?' on':'';
+ let fig=`<img src="${s}" alt="">`;
+ if(k==='B')fig=`<div class="rond"><img src="${s}" alt=""></div>${oc}`;
+ if(k==='Z')fig+=['0;0','0;100%','100%;0','100%;100%'].map(p=>{const[l,tp]=p.split(';');return`<i class="s" style="left:calc(${l} - 2px);top:calc(${tp} - 2px)"></i>`}).join('');
+ if(k==='A')fig+=`<span class="tick">PL. 0${i+1}</span>`;
+ return`<div class="c"><div class="fig${on}">${fig}</div><div class="t">${ti}</div><div class="n">${n}</div><div class="etat">${i===1&&k!=='Z'?'au survol':''}</div></div>`}).join('')+'</div>').join(''));
+</script></body></html>
