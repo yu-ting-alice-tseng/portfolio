@@ -178,6 +178,7 @@
       pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
         boutique: "assets/covers/boutique-mode-data.webp?v=20261102",
         chocolat: "assets/covers/chocolat-data.webp?v=20261102",          // tableau de bord Tableau (tools/build-tableau-covers.py)
+        beauteEcom: "assets/covers/beaute-ecommerce-data.webp?v=20261120",   // tableau de bord Tableau (en attente des PDF)
         beaute: "assets/covers/maison-beaute.webp?v=20261102",
       },
       brandName: "Yu‑Ting Tseng",       // → TOUTES les pages
@@ -1310,6 +1311,7 @@
       pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
         boutique: "assets/covers/boutique-mode-data-en.webp?v=20261102",
         chocolat: "assets/covers/chocolat-data-en.webp?v=20261102",       // tableau de bord Tableau (tools/build-tableau-covers.py)
+        beauteEcom: "assets/covers/beaute-ecommerce-data-en.webp?v=20261120",   // tableau de bord Tableau (en attente des PDF)
         beaute: "assets/covers/maison-beaute-en.webp?v=20261102",
       },
       brandName: "Yu‑Ting Tseng",
@@ -2412,6 +2414,7 @@
       pyCovers: {                         // → couvertures des projets Python (tools/build-python-covers.py)
         boutique: "assets/covers/boutique-mode-data-en.webp?v=20261102",
         chocolat: "assets/covers/chocolat-data-en.webp?v=20261102",       // tableau de bord Tableau (tools/build-tableau-covers.py)
+        beauteEcom: "assets/covers/beaute-ecommerce-data-en.webp?v=20261120",   // tableau de bord Tableau (en attente des PDF)
         beaute: "assets/covers/maison-beaute-en.webp?v=20261102",
       },
       brandName: "Yu‑Ting Tseng",
