@@ -63,6 +63,11 @@ body:not(.e-chaos) .appel{opacity:0;pointer-events:none}
 .etq.soleil b{font-size:23px}
 .etq.vive{transform:translate(-50%,-4px)}.etq.vive b{color:var(--accent-clair)}
 .etq.terne{opacity:.35!important}
+.etq-cat{display:inline-flex;align-items:center;gap:6px;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-clair);margin-bottom:5px}
+.etq-cat::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent-clair)}
+.etq-cat.cr{color:var(--papier);opacity:.8}.etq-cat.cr::before{background:transparent;border:1px solid var(--papier)}
+.etq-outils{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;width:max-content;max-width:340px;margin:7px auto 0}
+.etq-outils span{font-size:10.5px;line-height:1;padding:4px 8px;border:1px solid rgba(236,233,224,.22);border-radius:999px;color:var(--papier);opacity:.85;white-space:nowrap}
 #etiquettes{transition:opacity .5s}
 .e-chapitre #etiquettes{opacity:0}
 #legendes{transition:opacity .6s}
@@ -159,6 +164,7 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
   .tete{flex-wrap:wrap}
   .etq b{font-size:16px}.etq i{font-size:16px}.etq em{font-size:13.5px;max-width:160px}.etq small{font-size:9px;letter-spacing:.1em}
   .e-galaxie .etq small{display:none}
+  .etq-cat{font-size:7.5px;letter-spacing:.08em;margin-bottom:2px;white-space:nowrap;gap:4px}.etq-cat::before{width:4px;height:4px}.etq-outils{display:none}
   .e-chapitre .ariane h2{display:none}
   .ariane{top:96px}.ariane p{font-size:15px}
   .voile{background:linear-gradient(to bottom,rgba(20,19,15,0) 34%,rgba(20,19,15,.94) 44%)}
@@ -195,7 +201,7 @@ body.profond .voile{background:radial-gradient(68% 92% at 76% 52%,rgba(20,19,15,
 <div class="sommaire" id="sommaire"></div>
 <div class="lb" id="lb"><img alt=""><span></span></div>
 
-<script src="univers/univers.js?v=20261116"></script>
+<script src="univers/univers.js?v=20261120"></script>
 <script src="univers/expos.js?v=20261116"></script>
 <script src="univers/voute.js?v=20261120"></script>
 <script>
@@ -455,7 +461,7 @@ function etiquettes(){
     lieux.forEach((l,i)=>{l.el=ajoute(l.cx,l.cy+l.r*.78,`<b>${G[i].court}</b><small>${G[i].items.length} constellations</small>`)});
     soleil.el=ajoute(soleil.cx,soleil.cy+soleil.r*.95,`<b>${SOL.court}</b><small>Contact · ${SOL.chiffre}</small>`,'soleil');
   }else if(etat==='galaxie'||etat==='chapitre'){
-    lieux.forEach((l,k)=>{const c=G[gal].items[k];l.el=ajoute(l.cx,l.z.y+l.z.h+(mob?8:16),`<b>${nb(c.court)}</b>${c.apercu?`<em>${nb(c.apercu)}</em>`:''}${c.chiffre?`<i>${nb(c.chiffre)}</i>`:''}<small>${nb(c.legende)}</small>`)});
+    lieux.forEach((l,k)=>{const c=G[gal].items[k];l.el=ajoute(l.cx,l.z.y+l.z.h+(mob?8:16),`${c.cat?`<span class="etq-cat${c.cat.startsWith('Cr')?' cr':''}">${nb(c.cat)}</span>`:''}<b>${nb(c.court)}</b>${c.apercu?`<em>${nb(c.apercu)}</em>`:''}${c.chiffre?`<i>${nb(c.chiffre)}</i>`:''}<small>${nb(c.legende)}</small>${c.outils?`<span class="etq-outils">${c.outils.map(t=>`<span>${nb(t)}</span>`).join('')}</span>`:''}`)});
   }
 }
 function legendes(){
